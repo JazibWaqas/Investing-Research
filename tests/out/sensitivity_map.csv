@@ -1,0 +1,113 @@
+sector,factor,unit,prior,contemp_beta,contemp_t,contemp_placebo_p,contemp_n,contemp_r2,k1_beta,k1_t,k1_placebo_p,k1_n,k1_r2,status_contemp,status_k1,status
+E&P,brent,pts monthly excess per +10% factor log move,+,0.9369,4.0381,0.0080,115,0.0598,-0.3561,-1.3711,0.2880,116,0.0072,SUPPORTED,"pre-registered, not supported",supported
+Refinery,brent,pts monthly excess per +10% factor log move,+,0.7436,1.4168,0.2230,115,0.0169,0.3055,0.7303,0.6270,116,0.0032,"pre-registered, not supported","pre-registered, not supported",none
+OMC,brent,pts monthly excess per +10% factor log move,+,0.5720,2.0535,0.1290,104,0.0237,-0.0523,-0.2391,0.8530,106,0.0002,"pre-registered, not supported","pre-registered, not supported",none
+Gas utilities,brent,pts monthly excess per +10% factor log move,,0.0073,0.0120,0.9870,101,0.0000,-0.2054,-0.6737,0.5170,102,0.0014,,,none
+Fertilizer,brent,pts monthly excess per +10% factor log move,,-0.6851,-2.1799,0.1320,115,0.0261,0.0955,0.3100,0.8020,116,0.0005,,,none
+Cement,brent,pts monthly excess per +10% factor log move,,-1.0803,-4.8830,0.0000,115,0.0983,-1.0822,-3.4352,0.0620,116,0.0946,"exploratory, needs out-of-sample check",,exploratory
+Power,brent,pts monthly excess per +10% factor log move,,-0.2427,-1.0049,0.3530,114,0.0053,0.6326,1.6651,0.1920,115,0.0360,,,none
+Autos,brent,pts monthly excess per +10% factor log move,,0.5031,2.4403,0.0530,115,0.0177,0.5442,1.1470,0.4310,116,0.0190,,,none
+Pharma,brent,pts monthly excess per +10% factor log move,,-0.4085,-1.0288,0.3800,111,0.0176,-0.0046,-0.0215,0.9860,112,0.0000,,,none
+Textiles,brent,pts monthly excess per +10% factor log move,,0.5986,1.8915,0.0920,114,0.0265,0.2839,1.4290,0.2330,115,0.0063,,,none
+Tech,brent,pts monthly excess per +10% factor log move,,1.0370,2.7026,0.0310,115,0.0859,0.0372,0.1605,0.8750,116,0.0001,"exploratory, needs out-of-sample check",,exploratory
+Chemicals,brent,pts monthly excess per +10% factor log move,,-0.0850,-0.5127,0.6330,115,0.0006,0.1683,0.8257,0.5270,116,0.0021,,,none
+Food,brent,pts monthly excess per +10% factor log move,,0.0937,0.5183,0.5970,115,0.0009,-0.1776,-0.6546,0.5360,116,0.0030,,,none
+Banks,brent,pts monthly excess per +10% factor log move,,0.1351,0.5039,0.6770,115,0.0018,0.6581,1.4763,0.2270,116,0.0451,,,none
+Steel/engineering,brent,pts monthly excess per +10% factor log move,,-0.2509,-1.6460,0.1680,115,0.0060,-0.4713,-1.9179,0.1430,116,0.0216,,,none
+Glass/packaging,brent,pts monthly excess per +10% factor log move,,-0.2455,-1.1904,0.3530,99,0.0073,-0.1055,-0.5348,0.6440,100,0.0014,,,none
+E&P,coal,pts monthly excess per +10% factor log move,,0.2303,0.4870,0.6400,115,0.0013,0.2953,0.4617,0.6970,116,0.0020,,,none
+Refinery,coal,pts monthly excess per +10% factor log move,,0.3422,0.5141,0.6380,115,0.0013,0.1930,0.1916,0.9030,116,0.0005,,,none
+OMC,coal,pts monthly excess per +10% factor log move,,0.7811,2.0460,0.0980,104,0.0156,0.3251,0.5325,0.6880,106,0.0046,,,none
+Gas utilities,coal,pts monthly excess per +10% factor log move,,-0.8005,-1.0382,0.2860,101,0.0044,-0.4602,-0.4585,0.6830,102,0.0015,,,none
+Fertilizer,coal,pts monthly excess per +10% factor log move,,-0.8387,-1.1591,0.3330,115,0.0140,0.2563,0.4280,0.7490,116,0.0014,,,none
+Cement,coal,pts monthly excess per +10% factor log move,-,-0.4655,-0.6262,0.6010,115,0.0065,-0.6650,-1.7907,0.1520,116,0.0161,"pre-registered, not supported","pre-registered, not supported",none
+Power,coal,pts monthly excess per +10% factor log move,,0.3749,0.6786,0.5550,114,0.0044,0.0225,0.0361,0.9240,115,0.0000,,,none
+Autos,coal,pts monthly excess per +10% factor log move,,0.5520,1.1723,0.3190,115,0.0076,0.4989,1.1134,0.3570,116,0.0061,,,none
+Pharma,coal,pts monthly excess per +10% factor log move,,0.5969,1.3822,0.2320,111,0.0128,-0.0170,-0.0536,0.9510,112,0.0000,,,none
+Textiles,coal,pts monthly excess per +10% factor log move,,-0.1668,-0.2937,0.8550,114,0.0007,0.2332,0.6928,0.5630,114,0.0018,,,none
+Tech,coal,pts monthly excess per +10% factor log move,,0.0891,0.1525,0.8790,115,0.0002,-0.1972,-0.2977,0.7860,116,0.0011,,,none
+Chemicals,coal,pts monthly excess per +10% factor log move,,-0.4334,-0.9743,0.3690,115,0.0052,1.5328,1.5325,0.1910,116,0.0717,,,none
+Food,coal,pts monthly excess per +10% factor log move,,0.2149,0.4954,0.6290,115,0.0016,-0.2902,-0.7617,0.4330,116,0.0042,,,none
+Banks,coal,pts monthly excess per +10% factor log move,,0.3757,0.6910,0.5500,115,0.0050,0.5958,0.8830,0.4070,116,0.0123,,,none
+Steel/engineering,coal,pts monthly excess per +10% factor log move,,0.2114,0.4639,0.6770,115,0.0015,-0.5135,-1.2462,0.2980,116,0.0098,,,none
+Glass/packaging,coal,pts monthly excess per +10% factor log move,,-0.1095,-0.2544,0.7990,99,0.0004,-0.1296,-0.3419,0.8230,98,0.0006,,,none
+E&P,urea,pts monthly excess per +10% factor log move,,-0.2458,-0.4813,0.6590,114,0.0021,-0.0223,-0.0465,0.9860,115,0.0000,,,none
+Refinery,urea,pts monthly excess per +10% factor log move,,0.8987,1.2876,0.2520,114,0.0128,-1.5125,-1.4454,0.1900,115,0.0479,,,none
+OMC,urea,pts monthly excess per +10% factor log move,,-0.5763,-1.0874,0.3580,103,0.0119,-0.1066,-0.2934,0.7310,105,0.0007,,,none
+Gas utilities,urea,pts monthly excess per +10% factor log move,,-1.2018,-2.5053,0.0230,101,0.0198,0.5709,0.9786,0.4610,102,0.0048,"exploratory, needs out-of-sample check",,exploratory
+Fertilizer,urea,pts monthly excess per +10% factor log move,+,0.2337,0.5118,0.7260,114,0.0016,0.0204,0.0386,0.9850,115,0.0000,"pre-registered, not supported","pre-registered, not supported",none
+Cement,urea,pts monthly excess per +10% factor log move,,-0.0839,-0.1712,0.8530,114,0.0003,-0.4822,-2.0933,0.0490,115,0.0127,,"exploratory, needs out-of-sample check",exploratory
+Power,urea,pts monthly excess per +10% factor log move,,0.1586,0.3321,0.8070,113,0.0012,1.1230,1.6305,0.1360,114,0.0510,,,none
+Autos,urea,pts monthly excess per +10% factor log move,,0.4202,1.1848,0.3400,114,0.0064,-0.0450,-0.1301,0.9180,115,0.0001,,,none
+Pharma,urea,pts monthly excess per +10% factor log move,,0.2500,0.9265,0.3370,110,0.0034,-0.1736,-0.6091,0.5880,111,0.0018,,,none
+Textiles,urea,pts monthly excess per +10% factor log move,,0.1169,0.3177,0.7050,113,0.0005,0.3471,1.2499,0.2340,113,0.0063,,,none
+Tech,urea,pts monthly excess per +10% factor log move,,-0.3964,-0.9263,0.3900,114,0.0066,0.2991,0.7373,0.5200,115,0.0037,,,none
+Chemicals,urea,pts monthly excess per +10% factor log move,,0.1086,0.3853,0.7980,114,0.0005,0.1174,0.4488,0.7020,115,0.0008,,,none
+Food,urea,pts monthly excess per +10% factor log move,,-0.0499,-0.1667,0.7800,114,0.0001,-0.2193,-0.8244,0.4680,115,0.0035,,,none
+Banks,urea,pts monthly excess per +10% factor log move,,0.3019,0.8674,0.4800,114,0.0047,0.1879,0.4340,0.7150,115,0.0018,,,none
+Steel/engineering,urea,pts monthly excess per +10% factor log move,,0.0589,0.2118,0.8380,114,0.0002,-0.0558,-0.2824,0.8530,115,0.0002,,,none
+Glass/packaging,urea,pts monthly excess per +10% factor log move,,-0.0986,-0.3126,0.7900,98,0.0006,0.7631,1.8029,0.1410,97,0.0355,,,none
+E&P,cotton,pts monthly excess per +10% factor log move,,0.3073,0.3026,0.7650,115,0.0005,-0.2258,-0.2018,0.7960,116,0.0002,,,none
+Refinery,cotton,pts monthly excess per +10% factor log move,,3.7479,1.6161,0.1430,115,0.0324,1.6876,0.9462,0.4350,116,0.0083,,,none
+OMC,cotton,pts monthly excess per +10% factor log move,,1.5943,1.3824,0.2460,104,0.0131,0.0983,0.1042,0.9250,106,0.0001,,,none
+Gas utilities,cotton,pts monthly excess per +10% factor log move,,-0.8350,-0.4497,0.7320,101,0.0012,1.0178,0.4356,0.7700,102,0.0017,,,none
+Fertilizer,cotton,pts monthly excess per +10% factor log move,,-2.5188,-2.3012,0.0760,115,0.0267,-0.6567,-0.5002,0.5780,116,0.0019,,,none
+Cement,cotton,pts monthly excess per +10% factor log move,,-1.6896,-1.2519,0.2530,115,0.0182,-0.5598,-0.6210,0.5190,116,0.0024,,,none
+Power,cotton,pts monthly excess per +10% factor log move,,-0.4996,-0.4005,0.6630,114,0.0015,0.9352,0.7198,0.5500,115,0.0050,,,none
+Autos,cotton,pts monthly excess per +10% factor log move,,0.3174,0.2640,0.8240,115,0.0005,0.5521,0.6132,0.6080,116,0.0016,,,none
+Pharma,cotton,pts monthly excess per +10% factor log move,,-1.1870,-1.0525,0.3210,111,0.0098,-0.1322,-0.1930,0.9390,112,0.0001,,,none
+Textiles,cotton,pts monthly excess per +10% factor log move,-,0.6293,0.5950,0.5540,114,0.0022,-0.3860,-0.4548,0.7020,114,0.0011,"pre-registered, not supported","pre-registered, not supported",none
+Tech,cotton,pts monthly excess per +10% factor log move,,0.0333,0.0309,0.9770,115,0.0000,-1.0385,-0.9003,0.3910,116,0.0063,,,none
+Chemicals,cotton,pts monthly excess per +10% factor log move,,1.4421,1.0020,0.3590,115,0.0121,1.4659,1.6460,0.1050,116,0.0139,,,none
+Food,cotton,pts monthly excess per +10% factor log move,,1.9944,2.1030,0.0590,115,0.0300,-0.5329,-0.7292,0.4680,116,0.0030,,,none
+Banks,cotton,pts monthly excess per +10% factor log move,,0.4593,0.3791,0.7080,115,0.0016,-0.0665,-0.0536,0.9750,116,0.0000,,,none
+Steel/engineering,cotton,pts monthly excess per +10% factor log move,,-0.7206,-0.7778,0.4770,115,0.0037,1.5208,1.6573,0.1310,116,0.0183,,,none
+Glass/packaging,cotton,pts monthly excess per +10% factor log move,,0.8518,0.8140,0.5290,99,0.0055,-0.0905,-0.0786,0.9890,98,0.0001,,,none
+E&P,palm,pts monthly excess per +10% factor log move,,-0.0234,-0.0257,0.9900,114,0.0000,1.0232,1.2940,0.2630,115,0.0106,,,none
+Refinery,palm,pts monthly excess per +10% factor log move,,1.1425,1.0608,0.3370,114,0.0063,1.1913,1.0245,0.3390,115,0.0086,,,none
+OMC,palm,pts monthly excess per +10% factor log move,,-0.3882,-0.3401,0.8010,103,0.0017,0.0195,0.0267,0.9950,105,0.0000,,,none
+Gas utilities,palm,pts monthly excess per +10% factor log move,,1.4669,0.6033,0.6060,100,0.0074,-0.5729,-0.2781,0.7910,101,0.0012,,,none
+Fertilizer,palm,pts monthly excess per +10% factor log move,,-0.8066,-0.7173,0.5650,114,0.0058,0.0671,0.0658,0.9580,115,0.0000,,,none
+Cement,palm,pts monthly excess per +10% factor log move,,-0.5482,-0.5650,0.6380,114,0.0041,-0.0767,-0.1201,0.8990,115,0.0001,,,none
+Power,palm,pts monthly excess per +10% factor log move,,-1.4829,-2.0991,0.0650,113,0.0317,1.3260,1.2093,0.2380,114,0.0206,,,none
+Autos,palm,pts monthly excess per +10% factor log move,,0.8067,0.9669,0.4160,114,0.0073,0.7416,0.8248,0.4340,115,0.0060,,,none
+Pharma,palm,pts monthly excess per +10% factor log move,,-0.1265,-0.1455,0.8750,110,0.0003,-0.5933,-0.7784,0.3940,111,0.0061,,,none
+Textiles,palm,pts monthly excess per +10% factor log move,,0.6881,1.1012,0.2910,113,0.0056,-0.2158,-0.2677,0.8670,113,0.0007,,,none
+Tech,palm,pts monthly excess per +10% factor log move,,0.7211,0.8089,0.4450,114,0.0066,0.4733,0.6482,0.4700,115,0.0028,,,none
+Chemicals,palm,pts monthly excess per +10% factor log move,,-0.8554,-1.6023,0.1130,114,0.0090,0.7376,0.6419,0.5650,115,0.0074,,,none
+Food,palm,pts monthly excess per +10% factor log move,-,0.4092,0.6936,0.5630,114,0.0027,-0.7041,-1.1825,0.2340,115,0.0109,"pre-registered, not supported","pre-registered, not supported",none
+Banks,palm,pts monthly excess per +10% factor log move,,0.1076,0.1437,0.8680,114,0.0002,-0.1752,-0.1989,0.8480,115,0.0005,,,none
+Steel/engineering,palm,pts monthly excess per +10% factor log move,,0.1672,0.2280,0.8440,114,0.0004,-0.1081,-0.1760,0.9000,115,0.0002,,,none
+Glass/packaging,palm,pts monthly excess per +10% factor log move,,-0.2236,-0.3824,0.7700,98,0.0009,-1.1926,-1.6524,0.1570,97,0.0259,,,none
+E&P,pkr,pts monthly excess per +5% PKR depreciation,+,1.1648,1.4324,0.2370,115,0.0126,-0.7781,-0.9683,0.4390,116,0.0048,"pre-registered, not supported","pre-registered, not supported",none
+Refinery,pkr,pts monthly excess per +5% PKR depreciation,,-2.4679,-1.8788,0.1110,115,0.0254,-0.6499,-0.5433,0.6090,116,0.0020,,,none
+OMC,pkr,pts monthly excess per +5% PKR depreciation,,0.1460,0.2030,0.8930,104,0.0002,-1.5050,-2.2754,0.0150,106,0.0203,,"exploratory, needs out-of-sample check",exploratory
+Gas utilities,pkr,pts monthly excess per +5% PKR depreciation,,0.7596,0.4432,0.6770,101,0.0018,0.6969,0.8193,0.4530,102,0.0018,,,none
+Fertilizer,pkr,pts monthly excess per +5% PKR depreciation,,1.6468,2.0534,0.0290,115,0.0206,0.2533,0.2840,0.7530,116,0.0005,"exploratory, needs out-of-sample check",,exploratory
+Cement,pkr,pts monthly excess per +5% PKR depreciation,,-1.3644,-1.8992,0.1040,115,0.0214,1.6016,1.8474,0.1470,116,0.0288,,,none
+Power,pkr,pts monthly excess per +5% PKR depreciation,,0.5217,0.7925,0.5100,114,0.0033,0.0970,0.1311,0.9330,115,0.0001,,,none
+Autos,pkr,pts monthly excess per +5% PKR depreciation,-,-1.6993,-3.3240,0.0080,115,0.0276,-1.0037,-1.2507,0.2930,116,0.0090,SUPPORTED,"pre-registered, not supported",supported
+Pharma,pkr,pts monthly excess per +5% PKR depreciation,-,-0.1098,-0.1634,0.8420,111,0.0002,0.7239,1.0514,0.4060,112,0.0076,"pre-registered, not supported","pre-registered, not supported",none
+Textiles,pkr,pts monthly excess per +5% PKR depreciation,+,-0.4277,-0.6512,0.6410,114,0.0018,-0.2714,-0.5896,0.6300,115,0.0008,"pre-registered, not supported","pre-registered, not supported",none
+Tech,pkr,pts monthly excess per +5% PKR depreciation,+,0.2554,0.3160,0.7320,115,0.0007,-1.6024,-3.2404,0.0100,116,0.0296,"pre-registered, not supported","pre-registered, placebo-significant but OPPOSITE sign",exploratory
+Chemicals,pkr,pts monthly excess per +5% PKR depreciation,,2.3941,2.9333,0.0090,115,0.0602,0.7807,0.6319,0.6650,116,0.0063,"exploratory, needs out-of-sample check",,exploratory
+Food,pkr,pts monthly excess per +5% PKR depreciation,,0.5337,0.7618,0.4960,115,0.0039,0.3048,0.4374,0.7500,116,0.0012,,,none
+Banks,pkr,pts monthly excess per +5% PKR depreciation,,0.8532,1.4094,0.2930,115,0.0098,0.0440,0.0511,0.9750,116,0.0000,,,none
+Steel/engineering,pkr,pts monthly excess per +5% PKR depreciation,,-1.6182,-2.9257,0.0100,115,0.0339,0.6716,0.8452,0.4070,116,0.0061,"exploratory, needs out-of-sample check",,exploratory
+Glass/packaging,pkr,pts monthly excess per +5% PKR depreciation,,-0.5463,-0.8016,0.5070,99,0.0042,0.7286,0.9434,0.4880,100,0.0074,,,none
+E&P,kse100,raw beta (contemp.); pts per +10% (lead),,1.1590,10.8309,0.0000,115,0.6167,-0.6343,-0.7859,0.5030,116,0.0031,"exploratory, needs out-of-sample check",,exploratory
+Refinery,kse100,raw beta (contemp.); pts per +10% (lead),,1.5739,8.5471,0.0000,115,0.4506,-0.9131,-0.7974,0.4270,116,0.0038,"exploratory, needs out-of-sample check",,exploratory
+OMC,kse100,raw beta (contemp.); pts per +10% (lead),,1.4141,10.3366,0.0000,104,0.5897,0.6489,0.8473,0.5350,106,0.0037,"exploratory, needs out-of-sample check",,exploratory
+Gas utilities,kse100,raw beta (contemp.); pts per +10% (lead),,1.5791,6.0544,0.0000,101,0.5344,0.4068,0.2499,0.7750,102,0.0007,"exploratory, needs out-of-sample check",,exploratory
+Fertilizer,kse100,raw beta (contemp.); pts per +10% (lead),,0.7112,6.6321,0.0000,115,0.3933,-0.0713,-0.0663,0.9650,116,0.0000,"exploratory, needs out-of-sample check",,exploratory
+Cement,kse100,raw beta (contemp.); pts per +10% (lead),,1.3293,9.2939,0.0000,115,0.5786,-0.8642,-0.5536,0.5020,116,0.0081,"exploratory, needs out-of-sample check",,exploratory
+Power,kse100,raw beta (contemp.); pts per +10% (lead),,1.0980,11.7416,0.0000,114,0.5753,-0.8678,-0.6730,0.5510,115,0.0090,"exploratory, needs out-of-sample check",,exploratory
+Autos,kse100,raw beta (contemp.); pts per +10% (lead),,1.4746,9.7099,0.0000,115,0.6018,0.1790,0.2682,0.8100,116,0.0003,"exploratory, needs out-of-sample check",,exploratory
+Pharma,kse100,raw beta (contemp.); pts per +10% (lead),,1.1144,6.4856,0.0000,111,0.5742,-0.0481,-0.0709,0.9400,112,0.0000,"exploratory, needs out-of-sample check",,exploratory
+Textiles,kse100,raw beta (contemp.); pts per +10% (lead),,1.2201,10.9848,0.0000,114,0.5152,-1.2137,-1.2514,0.3230,115,0.0153,"exploratory, needs out-of-sample check",,exploratory
+Tech,kse100,raw beta (contemp.); pts per +10% (lead),,1.3603,14.1750,0.0000,115,0.5471,0.6187,0.9298,0.3820,116,0.0042,"exploratory, needs out-of-sample check",,exploratory
+Chemicals,kse100,raw beta (contemp.); pts per +10% (lead),,1.0910,12.3959,0.0000,115,0.5016,-1.1595,-1.9761,0.0600,116,0.0133,"exploratory, needs out-of-sample check",,exploratory
+Food,kse100,raw beta (contemp.); pts per +10% (lead),,1.3293,9.8319,0.0000,115,0.5800,0.0285,0.0314,0.9920,116,0.0000,"exploratory, needs out-of-sample check",,exploratory
+Banks,kse100,raw beta (contemp.); pts per +10% (lead),,1.0596,14.1228,0.0000,115,0.7517,1.5196,1.3636,0.2420,116,0.0322,"exploratory, needs out-of-sample check",,exploratory
+Steel/engineering,kse100,raw beta (contemp.); pts per +10% (lead),,1.3618,10.9997,0.0000,115,0.5685,-1.0368,-1.3529,0.1330,116,0.0140,"exploratory, needs out-of-sample check",,exploratory
+Glass/packaging,kse100,raw beta (contemp.); pts per +10% (lead),,1.1794,10.8188,0.0000,99,0.5213,-0.7400,-0.7818,0.4250,100,0.0080,"exploratory, needs out-of-sample check",,exploratory

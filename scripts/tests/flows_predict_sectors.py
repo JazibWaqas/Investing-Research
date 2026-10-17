@@ -85,7 +85,8 @@ susp = pd.read_csv(prices.SUSPECTS, parse_dates=["date"])
 out(f"suspected_corporate_actions.csv rows used: {len(susp)}")
 gs = subprocess.run(["git", "status", "--short", "data/suspected_corporate_actions.csv"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
 gd = subprocess.run(["git", "diff", "--numstat", "data/suspected_corporate_actions.csv"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-out(f"git status of data/suspected_corporate_actions.csv: '{gs}' (modified in working tree, uncommitted); numstat added/removed: {gd}")
+gl_ = subprocess.run(["git", "log", "--oneline", "-1", "--", "data/suspected_corporate_actions.csv"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+out(f"git state of data/suspected_corporate_actions.csv at run time: status '{gs or 'clean'}', uncommitted diff '{gd or 'none'}', last commit touching it: {gl_}")
 
 symbols = pd.read_csv(ROOT / "data" / "symbols.csv").set_index("symbol").sectorName
 col_idx = {s: np.array([j for j, c in enumerate(close.columns) if symbols.get(c) == SECMAP[s]], dtype=int) for s in SECS}

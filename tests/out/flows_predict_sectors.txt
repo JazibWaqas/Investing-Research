@@ -2,7 +2,7 @@
 === data and git state ===
 panel: 2480 dates x 456 symbols, 2016-10-17 to 2026-10-16
 suspected_corporate_actions.csv rows used: 801
-git status of data/suspected_corporate_actions.csv: 'M data/suspected_corporate_actions.csv' (modified in working tree, uncommitted); numstat added/removed: 308	0	data/suspected_corporate_actions.csv
+git state of data/suspected_corporate_actions.csv at run time: status 'clean', uncommitted diff 'none', last commit touching it: b1e0b42 Codex: index recomposition and calendar tests; practitioner signals rewrite; gap resolutions in all sector notes
 symbols per sector in panel (listed 2026-10-16): Cement 17, Banks 19, Fertilizer 5, Food 25, E&P 3, OMC 8, Power 14, Tech 21, Textile 34
 flows by sector: 2415 flow dates, 2017-01-02 to 2026-10-16; groups 9, sectors 11
 
@@ -247,6 +247,7 @@ first possible trigger date 2018-03-30; trigger days 155
 |---|---|---|---|---|---|---|---|---|
 | 2018-05-25 | 2018-05-28 | -0.0159 | -0.7% | -3.0% | -2.8% | -5.7% | -13.0% | no |
 | 2020-04-07 | 2020-04-08 | -0.0389 | +15.3% | +29.4% | +20.2% | +34.3% | +0.0% | yes |
+trigger clusters (episode first trigger -> last trigger in the same cluster, trigger days): 2018-05-25 -> 2018-12-26, 100 days; 2020-04-07 -> 2020-06-29, 55 days
 episodes: 2. Where the rule fires: 2017-2019: 2018-05-25; 2021-2022: none
 
 === H4 summary vs random-entry placebo and unconditional windows ===

@@ -1,0 +1,998 @@
+method=crude; panel 2480 dates x 456 symbols, 2016-10-17 to 2026-10-16; suspect-flagged stock-days used for dropping: 801
+cross-check, ew_market (daily-rebalanced, prices.py) compounded 2017-02 to end: +36.7% (survivor-biased, price only)
+Tech name-picked robustness excludes (those in panel): ['PTC', 'TELE', 'AIRLINK']
+Symbols in panel by basket (all years, liquid or not): {'E&P': 3, 'Refinery': 4, 'OMC': 6, 'Gas utilities': 2, 'Fertilizer': 5, 'Cement': 17, 'Power': 14, 'Autos': 18, 'Pharma': 14, 'Textiles': 76, 'Tech': 21, 'Chemicals': 23, 'Food': 27, 'Banks': 19, 'Steel/engineering': 15, 'Glass/packaging': 20}
+
+Factor months 2017-01 to 2026-09 (T=117); NaN changes: palm 2026-01, urea 2022-03; usdpkr last obs 2026-09-30 (no PKR signal for 2026-10); brent last obs 2026-10-14
+Pink Sheet monthly AVERAGES: F(t)=5th PSX trading day of month t+1 (release timing ASSUMED, not recorded). Richards Bay coal has World Bank estimates for some 2022-24 months.
+
+==============================================================================================================
+SECTION 3  BASKET COVERAGE (monthly windows, first PSX day of month u to first day of u+1, u = 2017-02 .. 2026-09)
+==============================================================================================================
+months in sample = 116
+           basket  months_with_basket  median_liquid_n  min_liquid_n  n_2017-02  n_2026-09  drop_suspect_flag  drop_gap>5  drop_no_obs
+              E&P                 116                3             3          3          3                  3           0            0
+         Refinery                 116                4             2          4          4                  2           0            0
+              OMC                 106                3             1          3          5                  5           0            0
+    Gas utilities                 102                2             1          2          2                  2           0            0
+       Fertilizer                 116                3             2          5          5                  0           0            0
+           Cement                 116               10             6         13         14                  3           1            0
+            Power                 115                3             3          5          5                 13           0            0
+            Autos                 116                8             2          9         12                 15           0            0
+           Pharma                 112                4             1          5          9                  6           0            0
+         Textiles                 115                4             1          7         16                  2           0            0
+             Tech                 116                8             2          9         17                  6           0            0
+        Chemicals                 116                6             2          9          9                 10           0            0
+             Food                 116                7             2          5         17                  8           0            0
+            Banks                 116               10             7         14         17                 14           0            0
+Steel/engineering                 116                7             3          7         11                  2           0            0
+  Glass/packaging                 100                5             0          7         10                 10           0            0
+        Tech-lite                 116                6             2          7         14                  6           0            0
+        Exporters                 116               12             3         16         33                  8           0            0
+        Importers                 116               12             4         14         21                 21           0            0
+E&P, Refinery, Fertilizer and Gas utilities are close to single-stock bets; one unflagged sub-threshold bonus can move a window by 3-5 pts.
+
+==============================================================================================================
+SECTION 4  H3  MONTHLY REGRESSIONS (sector excess on factor change; HAC maxlags=3; non-overlapping 1-month windows)
+==============================================================================================================
+448 cells; numpy Newey-West vs statsmodels HAC(maxlags=3): max abs difference in beta/t = 1.60e-14
+
+Circular-shift placebo: 1000 draws, one random offset in [12, 105] months per draw applied to all 7 factors.
+
+beta units: pts of monthly sector excess return per +10% factor log move (PKR per +5%; KSE100 contemporaneous = raw beta of sector return)
+           sector factor            spec prior   beta      t   n    r2  placebo_p                                                  flag
+              E&P  brent contemporaneous     +  0.937  4.038 115 0.060      0.008                                             SUPPORTED
+              E&P  brent        lead k=1     + -0.356 -1.371 116 0.007      0.288                         pre-registered, not supported
+              E&P  brent        lead k=2     + -0.574 -1.818 115 0.019      0.143                         pre-registered, not supported
+              E&P  brent        lead k=3     + -0.535 -1.299 114 0.016      0.272                         pre-registered, not supported
+         Refinery  brent contemporaneous     +  0.744  1.417 115 0.017      0.223                         pre-registered, not supported
+         Refinery  brent        lead k=1     +  0.306  0.730 116 0.003      0.627                         pre-registered, not supported
+         Refinery  brent        lead k=2     +  0.104  0.113 115 0.000      0.909                         pre-registered, not supported
+         Refinery  brent        lead k=3     +  0.180  0.261 114 0.001      0.777                         pre-registered, not supported
+              OMC  brent contemporaneous     +  0.572  2.053 104 0.024      0.129                         pre-registered, not supported
+              OMC  brent        lead k=1     + -0.052 -0.239 106 0.000      0.853                         pre-registered, not supported
+              OMC  brent        lead k=2     + -0.037 -0.094 105 0.000      0.933                         pre-registered, not supported
+              OMC  brent        lead k=3     + -0.275 -1.352 104 0.005      0.273                         pre-registered, not supported
+    Gas utilities  brent contemporaneous        0.007  0.012 101 0.000      0.987                                                      
+    Gas utilities  brent        lead k=1       -0.205 -0.674 102 0.001      0.517                                                      
+    Gas utilities  brent        lead k=2       -0.657 -1.656 101 0.015      0.145                                                      
+    Gas utilities  brent        lead k=3        0.459  1.576 100 0.007      0.218                                                      
+       Fertilizer  brent contemporaneous       -0.685 -2.180 115 0.026      0.132                                                      
+       Fertilizer  brent        lead k=1        0.096  0.310 116 0.000      0.802                                                      
+       Fertilizer  brent        lead k=2       -0.147 -0.385 115 0.001      0.755                                                      
+       Fertilizer  brent        lead k=3       -0.374 -1.043 114 0.007      0.360                                                      
+           Cement  brent contemporaneous       -1.080 -4.883 115 0.098      0.000                exploratory, needs out-of-sample check
+           Cement  brent        lead k=1       -1.082 -3.435 116 0.095      0.062                                                      
+           Cement  brent        lead k=2        0.226  1.406 115 0.004      0.355                                                      
+           Cement  brent        lead k=3       -0.027 -0.113 114 0.000      0.893                                                      
+            Power  brent contemporaneous       -0.243 -1.005 114 0.005      0.353                                                      
+            Power  brent        lead k=1        0.633  1.665 115 0.036      0.192                                                      
+            Power  brent        lead k=2        0.032  0.134 114 0.000      0.856                                                      
+            Power  brent        lead k=3        0.629  2.408 113 0.035      0.079                                                      
+            Autos  brent contemporaneous        0.503  2.440 115 0.018      0.053                                                      
+            Autos  brent        lead k=1        0.544  1.147 116 0.019      0.431                                                      
+            Autos  brent        lead k=2        0.375  0.854 115 0.009      0.523                                                      
+            Autos  brent        lead k=3       -0.297 -1.581 114 0.005      0.185                                                      
+           Pharma  brent contemporaneous       -0.409 -1.029 111 0.018      0.380                                                      
+           Pharma  brent        lead k=1       -0.005 -0.021 112 0.000      0.986                                                      
+           Pharma  brent        lead k=2       -0.580 -3.060 111 0.036      0.048                exploratory, needs out-of-sample check
+           Pharma  brent        lead k=3       -0.059 -0.335 110 0.000      0.828                                                      
+         Textiles  brent contemporaneous        0.599  1.892 114 0.027      0.092                                                      
+         Textiles  brent        lead k=1        0.284  1.429 115 0.006      0.233                                                      
+         Textiles  brent        lead k=2        0.336  1.491 114 0.009      0.206                                                      
+         Textiles  brent        lead k=3       -0.203 -0.756 113 0.003      0.520                                                      
+             Tech  brent contemporaneous        1.037  2.703 115 0.086      0.031                exploratory, needs out-of-sample check
+             Tech  brent        lead k=1        0.037  0.160 116 0.000      0.875                                                      
+             Tech  brent        lead k=2       -0.614 -1.199 115 0.031      0.273                                                      
+             Tech  brent        lead k=3       -0.399 -2.398 114 0.013      0.068                                                      
+        Chemicals  brent contemporaneous       -0.085 -0.513 115 0.001      0.633                                                      
+        Chemicals  brent        lead k=1        0.168  0.826 116 0.002      0.527                                                      
+        Chemicals  brent        lead k=2        0.323  1.225 115 0.008      0.346                                                      
+        Chemicals  brent        lead k=3       -0.143 -0.334 114 0.001      0.786                                                      
+             Food  brent contemporaneous        0.094  0.518 115 0.001      0.597                                                      
+             Food  brent        lead k=1       -0.178 -0.655 116 0.003      0.536                                                      
+             Food  brent        lead k=2       -0.404 -1.361 115 0.016      0.274                                                      
+             Food  brent        lead k=3        0.410  1.690 114 0.016      0.171                                                      
+            Banks  brent contemporaneous        0.135  0.504 115 0.002      0.677                                                      
+            Banks  brent        lead k=1        0.658  1.476 116 0.045      0.227                                                      
+            Banks  brent        lead k=2        0.066  0.181 115 0.000      0.857                                                      
+            Banks  brent        lead k=3        0.032  0.135 114 0.000      0.873                                                      
+Steel/engineering  brent contemporaneous       -0.251 -1.646 115 0.006      0.168                                                      
+Steel/engineering  brent        lead k=1       -0.471 -1.918 116 0.022      0.143                                                      
+Steel/engineering  brent        lead k=2        0.482  1.711 115 0.023      0.158                                                      
+Steel/engineering  brent        lead k=3        0.155  0.744 114 0.002      0.596                                                      
+  Glass/packaging  brent contemporaneous       -0.246 -1.190  99 0.007      0.353                                                      
+  Glass/packaging  brent        lead k=1       -0.106 -0.535 100 0.001      0.644                                                      
+  Glass/packaging  brent        lead k=2        0.134  0.342  99 0.002      0.778                                                      
+  Glass/packaging  brent        lead k=3        0.121  0.350  98 0.002      0.796                                                      
+              E&P   coal contemporaneous        0.230  0.487 115 0.001      0.640                                                      
+              E&P   coal        lead k=1        0.295  0.462 116 0.002      0.697                                                      
+              E&P   coal        lead k=2       -0.653 -1.026 115 0.010      0.452                                                      
+              E&P   coal        lead k=3        0.067  0.082 114 0.000      0.926                                                      
+         Refinery   coal contemporaneous        0.342  0.514 115 0.001      0.638                                                      
+         Refinery   coal        lead k=1        0.193  0.192 116 0.001      0.903                                                      
+         Refinery   coal        lead k=2        0.893  1.561 115 0.011      0.228                                                      
+         Refinery   coal        lead k=3       -0.368 -0.524 114 0.002      0.747                                                      
+              OMC   coal contemporaneous        0.781  2.046 104 0.016      0.098                                                      
+              OMC   coal        lead k=1        0.325  0.533 106 0.005      0.688                                                      
+              OMC   coal        lead k=2       -0.427 -1.060 105 0.008      0.465                                                      
+              OMC   coal        lead k=3        0.110  0.210 104 0.001      0.855                                                      
+    Gas utilities   coal contemporaneous       -0.801 -1.038 101 0.004      0.286                                                      
+    Gas utilities   coal        lead k=1       -0.460 -0.458 102 0.001      0.683                                                      
+    Gas utilities   coal        lead k=2       -1.019 -1.305 101 0.008      0.265                                                      
+    Gas utilities   coal        lead k=3       -0.469 -0.442 100 0.002      0.718                                                      
+       Fertilizer   coal contemporaneous       -0.839 -1.159 115 0.014      0.333                                                      
+       Fertilizer   coal        lead k=1        0.256  0.428 116 0.001      0.749                                                      
+       Fertilizer   coal        lead k=2        0.565  1.181 115 0.007      0.330                                                      
+       Fertilizer   coal        lead k=3        0.278  0.417 114 0.002      0.709                                                      
+           Cement   coal contemporaneous     - -0.466 -0.626 115 0.007      0.601                         pre-registered, not supported
+           Cement   coal        lead k=1     - -0.665 -1.791 116 0.016      0.152                         pre-registered, not supported
+           Cement   coal        lead k=2     -  0.156  0.324 115 0.001      0.809                         pre-registered, not supported
+           Cement   coal        lead k=3     - -0.063 -0.156 114 0.000      0.893                         pre-registered, not supported
+            Power   coal contemporaneous        0.375  0.679 114 0.004      0.555                                                      
+            Power   coal        lead k=1        0.023  0.036 115 0.000      0.924                                                      
+            Power   coal        lead k=2        0.493  1.364 114 0.007      0.259                                                      
+            Power   coal        lead k=3        0.150  0.289 113 0.001      0.799                                                      
+            Autos   coal contemporaneous        0.552  1.172 115 0.008      0.319                                                      
+            Autos   coal        lead k=1        0.499  1.113 116 0.006      0.357                                                      
+            Autos   coal        lead k=2       -0.258 -0.521 115 0.002      0.704                                                      
+            Autos   coal        lead k=3       -0.664 -0.997 114 0.011      0.471                                                      
+           Pharma   coal contemporaneous        0.597  1.382 111 0.013      0.232                                                      
+           Pharma   coal        lead k=1       -0.017 -0.054 112 0.000      0.951                                                      
+           Pharma   coal        lead k=2       -0.041 -0.110 111 0.000      0.948                                                      
+           Pharma   coal        lead k=3        1.159  2.825 110 0.055      0.000                exploratory, needs out-of-sample check
+         Textiles   coal contemporaneous       -0.167 -0.294 114 0.001      0.855                                                      
+         Textiles   coal        lead k=1        0.233  0.693 114 0.002      0.563                                                      
+         Textiles   coal        lead k=2       -0.023 -0.078 113 0.000      0.977                                                      
+         Textiles   coal        lead k=3       -0.615 -1.565 112 0.014      0.194                                                      
+             Tech   coal contemporaneous        0.089  0.153 115 0.000      0.879                                                      
+             Tech   coal        lead k=1       -0.197 -0.298 116 0.001      0.786                                                      
+             Tech   coal        lead k=2        0.503  0.928 115 0.007      0.365                                                      
+             Tech   coal        lead k=3        0.148  0.446 114 0.001      0.751                                                      
+        Chemicals   coal contemporaneous       -0.433 -0.974 115 0.005      0.369                                                      
+        Chemicals   coal        lead k=1        1.533  1.533 116 0.072      0.191                                                      
+        Chemicals   coal        lead k=2        0.826  1.394 115 0.021      0.220                                                      
+        Chemicals   coal        lead k=3        1.115  2.572 114 0.038      0.010                exploratory, needs out-of-sample check
+             Food   coal contemporaneous        0.215  0.495 115 0.002      0.629                                                      
+             Food   coal        lead k=1       -0.290 -0.762 116 0.004      0.433                                                      
+             Food   coal        lead k=2       -0.706 -2.201 115 0.025      0.071                                                      
+             Food   coal        lead k=3       -0.025 -0.075 114 0.000      0.959                                                      
+            Banks   coal contemporaneous        0.376  0.691 115 0.005      0.550                                                      
+            Banks   coal        lead k=1        0.596  0.883 116 0.012      0.407                                                      
+            Banks   coal        lead k=2       -0.674 -1.684 115 0.016      0.182                                                      
+            Banks   coal        lead k=3       -0.396 -0.808 114 0.005      0.436                                                      
+Steel/engineering   coal contemporaneous        0.211  0.464 115 0.002      0.677                                                      
+Steel/engineering   coal        lead k=1       -0.513 -1.246 116 0.010      0.298                                                      
+Steel/engineering   coal        lead k=2        0.326  0.855 115 0.004      0.448                                                      
+Steel/engineering   coal        lead k=3       -0.323 -0.745 114 0.004      0.534                                                      
+  Glass/packaging   coal contemporaneous       -0.110 -0.254  99 0.000      0.799                                                      
+  Glass/packaging   coal        lead k=1       -0.130 -0.342  98 0.001      0.823                                                      
+  Glass/packaging   coal        lead k=2       -0.003 -0.008  97 0.000      1.000                                                      
+  Glass/packaging   coal        lead k=3        0.067  0.138  96 0.000      0.915                                                      
+              E&P   urea contemporaneous       -0.246 -0.481 114 0.002      0.659                                                      
+              E&P   urea        lead k=1       -0.022 -0.046 115 0.000      0.986                                                      
+              E&P   urea        lead k=2        0.194  0.440 114 0.001      0.761                                                      
+              E&P   urea        lead k=3        0.121  0.243 113 0.000      0.862                                                      
+         Refinery   urea contemporaneous        0.899  1.288 114 0.013      0.252                                                      
+         Refinery   urea        lead k=1       -1.513 -1.445 115 0.048      0.190                                                      
+         Refinery   urea        lead k=2       -1.343 -1.439 114 0.037      0.179                                                      
+         Refinery   urea        lead k=3       -0.933 -1.718 113 0.018      0.133                                                      
+              OMC   urea contemporaneous       -0.576 -1.087 103 0.012      0.358                                                      
+              OMC   urea        lead k=1       -0.107 -0.293 105 0.001      0.731                                                      
+              OMC   urea        lead k=2        0.261  0.774 104 0.004      0.458                                                      
+              OMC   urea        lead k=3       -0.164 -0.459 103 0.002      0.591                                                      
+    Gas utilities   urea contemporaneous       -1.202 -2.505 101 0.020      0.023                exploratory, needs out-of-sample check
+    Gas utilities   urea        lead k=1        0.571  0.979 102 0.005      0.461                                                      
+    Gas utilities   urea        lead k=2        0.254  0.770 101 0.001      0.579                                                      
+    Gas utilities   urea        lead k=3        0.115  0.199 100 0.000      0.882                                                      
+       Fertilizer   urea contemporaneous     +  0.234  0.512 114 0.002      0.726                         pre-registered, not supported
+       Fertilizer   urea        lead k=1     +  0.020  0.039 115 0.000      0.985                         pre-registered, not supported
+       Fertilizer   urea        lead k=2     +  0.125  0.373 114 0.000      0.662                         pre-registered, not supported
+       Fertilizer   urea        lead k=3     + -0.075 -0.161 113 0.000      0.830                         pre-registered, not supported
+           Cement   urea contemporaneous       -0.084 -0.171 114 0.000      0.853                                                      
+           Cement   urea        lead k=1       -0.482 -2.093 115 0.013      0.049                exploratory, needs out-of-sample check
+           Cement   urea        lead k=2       -0.248 -0.867 114 0.003      0.430                                                      
+           Cement   urea        lead k=3        0.187  0.652 113 0.002      0.528                                                      
+            Power   urea contemporaneous        0.159  0.332 113 0.001      0.807                                                      
+            Power   urea        lead k=1        1.123  1.631 114 0.051      0.136                                                      
+            Power   urea        lead k=2        0.539  1.423 113 0.012      0.180                                                      
+            Power   urea        lead k=3        0.399  0.805 112 0.006      0.462                                                      
+            Autos   urea contemporaneous        0.420  1.185 114 0.006      0.340                                                      
+            Autos   urea        lead k=1       -0.045 -0.130 115 0.000      0.918                                                      
+            Autos   urea        lead k=2       -0.466 -1.026 114 0.008      0.457                                                      
+            Autos   urea        lead k=3        0.104  0.269 113 0.000      0.847                                                      
+           Pharma   urea contemporaneous        0.250  0.927 110 0.003      0.337                                                      
+           Pharma   urea        lead k=1       -0.174 -0.609 111 0.002      0.588                                                      
+           Pharma   urea        lead k=2        0.583  1.537 110 0.021      0.149                                                      
+           Pharma   urea        lead k=3        0.240  0.748 109 0.003      0.490                                                      
+         Textiles   urea contemporaneous        0.117  0.318 113 0.001      0.705                                                      
+         Textiles   urea        lead k=1        0.347  1.250 113 0.006      0.234                                                      
+         Textiles   urea        lead k=2       -0.082 -0.232 112 0.000      0.838                                                      
+         Textiles   urea        lead k=3       -0.218 -0.520 111 0.002      0.683                                                      
+             Tech   urea contemporaneous       -0.396 -0.926 114 0.007      0.390                                                      
+             Tech   urea        lead k=1        0.299  0.737 115 0.004      0.520                                                      
+             Tech   urea        lead k=2        0.429  1.092 114 0.008      0.304                                                      
+             Tech   urea        lead k=3       -0.029 -0.089 113 0.000      0.910                                                      
+        Chemicals   urea contemporaneous        0.109  0.385 114 0.000      0.798                                                      
+        Chemicals   urea        lead k=1        0.117  0.449 115 0.001      0.702                                                      
+        Chemicals   urea        lead k=2       -0.280 -0.790 114 0.004      0.522                                                      
+        Chemicals   urea        lead k=3       -0.038 -0.111 113 0.000      0.933                                                      
+             Food   urea contemporaneous       -0.050 -0.167 114 0.000      0.780                                                      
+             Food   urea        lead k=1       -0.219 -0.824 115 0.004      0.468                                                      
+             Food   urea        lead k=2        0.081  0.305 114 0.000      0.732                                                      
+             Food   urea        lead k=3       -0.436 -1.388 113 0.014      0.221                                                      
+            Banks   urea contemporaneous        0.302  0.867 114 0.005      0.480                                                      
+            Banks   urea        lead k=1        0.188  0.434 115 0.002      0.715                                                      
+            Banks   urea        lead k=2       -0.228 -0.710 114 0.003      0.549                                                      
+            Banks   urea        lead k=3        0.472  1.301 113 0.012      0.251                                                      
+Steel/engineering   urea contemporaneous        0.059  0.212 114 0.000      0.838                                                      
+Steel/engineering   urea        lead k=1       -0.056 -0.282 115 0.000      0.853                                                      
+Steel/engineering   urea        lead k=2        0.004  0.012 114 0.000      0.992                                                      
+Steel/engineering   urea        lead k=3       -0.116 -0.328 113 0.001      0.809                                                      
+  Glass/packaging   urea contemporaneous       -0.099 -0.313  98 0.001      0.790                                                      
+  Glass/packaging   urea        lead k=1        0.763  1.803  97 0.036      0.141                                                      
+  Glass/packaging   urea        lead k=2        0.742  1.951  96 0.035      0.114                                                      
+  Glass/packaging   urea        lead k=3       -0.380 -0.735  95 0.009      0.567                                                      
+              E&P cotton contemporaneous        0.307  0.303 115 0.000      0.765                                                      
+              E&P cotton        lead k=1       -0.226 -0.202 116 0.000      0.796                                                      
+              E&P cotton        lead k=2       -3.932 -2.591 115 0.073      0.027                exploratory, needs out-of-sample check
+              E&P cotton        lead k=3        0.791  0.430 114 0.003      0.664                                                      
+         Refinery cotton contemporaneous        3.748  1.616 115 0.032      0.143                                                      
+         Refinery cotton        lead k=1        1.688  0.946 116 0.008      0.435                                                      
+         Refinery cotton        lead k=2        2.760  2.483 115 0.022      0.034                exploratory, needs out-of-sample check
+         Refinery cotton        lead k=3        0.677  0.307 114 0.001      0.805                                                      
+              OMC cotton contemporaneous        1.594  1.382 104 0.013      0.246                                                      
+              OMC cotton        lead k=1        0.098  0.104 106 0.000      0.925                                                      
+              OMC cotton        lead k=2        0.707  0.926 105 0.004      0.506                                                      
+              OMC cotton        lead k=3        1.859  2.642 104 0.031      0.021                exploratory, needs out-of-sample check
+    Gas utilities cotton contemporaneous       -0.835 -0.450 101 0.001      0.732                                                      
+    Gas utilities cotton        lead k=1        1.018  0.436 102 0.002      0.770                                                      
+    Gas utilities cotton        lead k=2       -1.505 -0.888 101 0.005      0.472                                                      
+    Gas utilities cotton        lead k=3       -1.977 -0.761 100 0.009      0.570                                                      
+       Fertilizer cotton contemporaneous       -2.519 -2.301 115 0.027      0.076                                                      
+       Fertilizer cotton        lead k=1       -0.657 -0.500 116 0.002      0.578                                                      
+       Fertilizer cotton        lead k=2       -2.161 -1.940 115 0.021      0.079                                                      
+       Fertilizer cotton        lead k=3        0.532  0.365 114 0.001      0.603                                                      
+           Cement cotton contemporaneous       -1.690 -1.252 115 0.018      0.253                                                      
+           Cement cotton        lead k=1       -0.560 -0.621 116 0.002      0.519                                                      
+           Cement cotton        lead k=2       -0.504 -0.689 115 0.002      0.507                                                      
+           Cement cotton        lead k=3       -0.380 -0.422 114 0.001      0.603                                                      
+            Power cotton contemporaneous       -0.500 -0.400 114 0.002      0.663                                                      
+            Power cotton        lead k=1        0.935  0.720 115 0.005      0.550                                                      
+            Power cotton        lead k=2        0.741  0.643 114 0.003      0.585                                                      
+            Power cotton        lead k=3        1.554  1.205 113 0.012      0.308                                                      
+            Autos cotton contemporaneous        0.317  0.264 115 0.001      0.824                                                      
+            Autos cotton        lead k=1        0.552  0.613 116 0.002      0.608                                                      
+            Autos cotton        lead k=2        0.989  0.882 115 0.005      0.441                                                      
+            Autos cotton        lead k=3       -1.892 -1.103 114 0.018      0.319                                                      
+           Pharma cotton contemporaneous       -1.187 -1.052 111 0.010      0.321                                                      
+           Pharma cotton        lead k=1       -0.132 -0.193 112 0.000      0.939                                                      
+           Pharma cotton        lead k=2       -0.429 -0.367 111 0.002      0.755                                                      
+           Pharma cotton        lead k=3       -1.120 -1.161 110 0.009      0.395                                                      
+         Textiles cotton contemporaneous     -  0.629  0.595 114 0.002      0.554                         pre-registered, not supported
+         Textiles cotton        lead k=1     - -0.386 -0.455 114 0.001      0.702                         pre-registered, not supported
+         Textiles cotton        lead k=2     -  0.329  0.338 113 0.001      0.774                         pre-registered, not supported
+         Textiles cotton        lead k=3     - -1.235 -1.429 112 0.011      0.165                         pre-registered, not supported
+             Tech cotton contemporaneous        0.033  0.031 115 0.000      0.977                                                      
+             Tech cotton        lead k=1       -1.039 -0.900 116 0.006      0.391                                                      
+             Tech cotton        lead k=2       -0.366 -0.237 115 0.001      0.784                                                      
+             Tech cotton        lead k=3       -0.341 -0.225 114 0.001      0.803                                                      
+        Chemicals cotton contemporaneous        1.442  1.002 115 0.012      0.359                                                      
+        Chemicals cotton        lead k=1        1.466  1.646 116 0.014      0.105                                                      
+        Chemicals cotton        lead k=2        2.367  2.150 115 0.036      0.054                                                      
+        Chemicals cotton        lead k=3        3.111  2.403 114 0.061      0.043                exploratory, needs out-of-sample check
+             Food cotton contemporaneous        1.994  2.103 115 0.030      0.059                                                      
+             Food cotton        lead k=1       -0.533 -0.729 116 0.003      0.468                                                      
+             Food cotton        lead k=2        1.180  1.404 115 0.014      0.136                                                      
+             Food cotton        lead k=3        0.256  0.280 114 0.001      0.805                                                      
+            Banks cotton contemporaneous        0.459  0.379 115 0.002      0.708                                                      
+            Banks cotton        lead k=1       -0.066 -0.054 116 0.000      0.975                                                      
+            Banks cotton        lead k=2       -1.103 -1.024 115 0.009      0.284                                                      
+            Banks cotton        lead k=3        0.914  0.889 114 0.006      0.395                                                      
+Steel/engineering cotton contemporaneous       -0.721 -0.778 115 0.004      0.477                                                      
+Steel/engineering cotton        lead k=1        1.521  1.657 116 0.018      0.131                                                      
+Steel/engineering cotton        lead k=2        1.364  2.115 115 0.014      0.067                                                      
+Steel/engineering cotton        lead k=3       -0.940 -0.632 114 0.007      0.546                                                      
+  Glass/packaging cotton contemporaneous        0.852  0.814  99 0.006      0.529                                                      
+  Glass/packaging cotton        lead k=1       -0.091 -0.079  98 0.000      0.989                                                      
+  Glass/packaging cotton        lead k=2        2.023  2.196  97 0.036      0.039                exploratory, needs out-of-sample check
+  Glass/packaging cotton        lead k=3        3.059  2.950  96 0.074      0.012                exploratory, needs out-of-sample check
+              E&P   palm contemporaneous       -0.023 -0.026 114 0.000      0.990                                                      
+              E&P   palm        lead k=1        1.023  1.294 115 0.011      0.263                                                      
+              E&P   palm        lead k=2       -0.609 -0.729 114 0.004      0.637                                                      
+              E&P   palm        lead k=3       -0.840 -0.880 113 0.007      0.557                                                      
+         Refinery   palm contemporaneous        1.142  1.061 114 0.006      0.337                                                      
+         Refinery   palm        lead k=1        1.191  1.025 115 0.009      0.339                                                      
+         Refinery   palm        lead k=2        0.924  0.889 114 0.005      0.440                                                      
+         Refinery   palm        lead k=3        0.823  0.908 113 0.004      0.431                                                      
+              OMC   palm contemporaneous       -0.388 -0.340 103 0.002      0.801                                                      
+              OMC   palm        lead k=1        0.019  0.027 105 0.000      0.995                                                      
+              OMC   palm        lead k=2        0.552  0.887 104 0.006      0.489                                                      
+              OMC   palm        lead k=3        1.224  2.487 103 0.030      0.015                exploratory, needs out-of-sample check
+    Gas utilities   palm contemporaneous        1.467  0.603 100 0.007      0.606                                                      
+    Gas utilities   palm        lead k=1       -0.573 -0.278 101 0.001      0.791                                                      
+    Gas utilities   palm        lead k=2        0.482  0.342 100 0.001      0.819                                                      
+    Gas utilities   palm        lead k=3       -1.723 -0.998  99 0.016      0.379                                                      
+       Fertilizer   palm contemporaneous       -0.807 -0.717 114 0.006      0.565                                                      
+       Fertilizer   palm        lead k=1        0.067  0.066 115 0.000      0.958                                                      
+       Fertilizer   palm        lead k=2       -0.716 -1.116 114 0.005      0.353                                                      
+       Fertilizer   palm        lead k=3        0.319  0.383 113 0.001      0.649                                                      
+           Cement   palm contemporaneous       -0.548 -0.565 114 0.004      0.638                                                      
+           Cement   palm        lead k=1       -0.077 -0.120 115 0.000      0.899                                                      
+           Cement   palm        lead k=2        0.854  0.862 114 0.012      0.442                                                      
+           Cement   palm        lead k=3        0.542  0.563 113 0.005      0.580                                                      
+            Power   palm contemporaneous       -1.483 -2.099 113 0.032      0.065                                                      
+            Power   palm        lead k=1        1.326  1.209 114 0.021      0.238                                                      
+            Power   palm        lead k=2       -0.992 -1.620 113 0.012      0.156                                                      
+            Power   palm        lead k=3       -0.002 -0.003 112 0.000      1.000                                                      
+            Autos   palm contemporaneous        0.807  0.967 114 0.007      0.416                                                      
+            Autos   palm        lead k=1        0.742  0.825 115 0.006      0.434                                                      
+            Autos   palm        lead k=2       -1.938 -1.707 114 0.041      0.130                                                      
+            Autos   palm        lead k=3        0.200  0.242 113 0.000      0.880                                                      
+           Pharma   palm contemporaneous       -0.126 -0.146 110 0.000      0.875                                                      
+           Pharma   palm        lead k=1       -0.593 -0.778 111 0.006      0.394                                                      
+           Pharma   palm        lead k=2        0.857  1.389 110 0.013      0.216                                                      
+           Pharma   palm        lead k=3        0.882  1.130 109 0.011      0.302                                                      
+         Textiles   palm contemporaneous        0.688  1.101 113 0.006      0.291                                                      
+         Textiles   palm        lead k=1       -0.216 -0.268 113 0.001      0.867                                                      
+         Textiles   palm        lead k=2       -0.488 -0.667 112 0.004      0.523                                                      
+         Textiles   palm        lead k=3       -0.998 -1.429 111 0.016      0.227                                                      
+             Tech   palm contemporaneous        0.721  0.809 114 0.007      0.445                                                      
+             Tech   palm        lead k=1        0.473  0.648 115 0.003      0.470                                                      
+             Tech   palm        lead k=2       -1.001 -0.939 114 0.012      0.306                                                      
+             Tech   palm        lead k=3       -1.145 -1.468 113 0.016      0.156                                                      
+        Chemicals   palm contemporaneous       -0.855 -1.602 114 0.009      0.113                                                      
+        Chemicals   palm        lead k=1        0.738  0.642 115 0.007      0.565                                                      
+        Chemicals   palm        lead k=2        2.057  2.081 114 0.057      0.045                exploratory, needs out-of-sample check
+        Chemicals   palm        lead k=3        0.308  0.520 113 0.001      0.675                                                      
+             Food   palm contemporaneous     -  0.409  0.694 114 0.003      0.563                         pre-registered, not supported
+             Food   palm        lead k=1     - -0.704 -1.183 115 0.011      0.234                         pre-registered, not supported
+             Food   palm        lead k=2     - -0.126 -0.254 114 0.000      0.796                         pre-registered, not supported
+             Food   palm        lead k=3     -  0.029  0.047 113 0.000      0.969                         pre-registered, not supported
+            Banks   palm contemporaneous        0.108  0.144 114 0.000      0.868                                                      
+            Banks   palm        lead k=1       -0.175 -0.199 115 0.000      0.848                                                      
+            Banks   palm        lead k=2        0.028  0.038 114 0.000      0.984                                                      
+            Banks   palm        lead k=3       -0.192 -0.254 113 0.001      0.792                                                      
+Steel/engineering   palm contemporaneous        0.167  0.228 114 0.000      0.844                                                      
+Steel/engineering   palm        lead k=1       -0.108 -0.176 115 0.000      0.900                                                      
+Steel/engineering   palm        lead k=2        0.308  0.522 114 0.002      0.671                                                      
+Steel/engineering   palm        lead k=3        0.477  0.729 113 0.004      0.597                                                      
+  Glass/packaging   palm contemporaneous       -0.224 -0.382  98 0.001      0.770                                                      
+  Glass/packaging   palm        lead k=1       -1.193 -1.652  97 0.026      0.157                                                      
+  Glass/packaging   palm        lead k=2        0.530  0.694  96 0.005      0.591                                                      
+  Glass/packaging   palm        lead k=3        0.109  0.127  95 0.000      0.923                                                      
+              E&P    pkr contemporaneous     +  1.165  1.432 115 0.013      0.237                         pre-registered, not supported
+              E&P    pkr        lead k=1     + -0.778 -0.968 116 0.005      0.439                         pre-registered, not supported
+              E&P    pkr        lead k=2     + -0.363 -0.482 115 0.001      0.734                         pre-registered, not supported
+              E&P    pkr        lead k=3     + -0.238 -0.230 114 0.000      0.821                         pre-registered, not supported
+         Refinery    pkr contemporaneous       -2.468 -1.879 115 0.025      0.111                                                      
+         Refinery    pkr        lead k=1       -0.650 -0.543 116 0.002      0.609                                                      
+         Refinery    pkr        lead k=2       -0.947 -1.096 115 0.004      0.392                                                      
+         Refinery    pkr        lead k=3       -1.100 -0.923 114 0.006      0.418                                                      
+              OMC    pkr contemporaneous        0.146  0.203 104 0.000      0.893                                                      
+              OMC    pkr        lead k=1       -1.505 -2.275 106 0.020      0.015                exploratory, needs out-of-sample check
+              OMC    pkr        lead k=2       -0.213 -0.248 105 0.000      0.822                                                      
+              OMC    pkr        lead k=3        0.848  0.517 104 0.006      0.657                                                      
+    Gas utilities    pkr contemporaneous        0.760  0.443 101 0.002      0.677                                                      
+    Gas utilities    pkr        lead k=1        0.697  0.819 102 0.002      0.453                                                      
+    Gas utilities    pkr        lead k=2       -0.629 -0.768 101 0.002      0.492                                                      
+    Gas utilities    pkr        lead k=3        0.533  0.705 100 0.001      0.558                                                      
+       Fertilizer    pkr contemporaneous        1.647  2.053 115 0.021      0.029                exploratory, needs out-of-sample check
+       Fertilizer    pkr        lead k=1        0.253  0.284 116 0.000      0.753                                                      
+       Fertilizer    pkr        lead k=2       -0.442 -0.464 115 0.001      0.678                                                      
+       Fertilizer    pkr        lead k=3        0.646  0.726 114 0.003      0.508                                                      
+           Cement    pkr contemporaneous       -1.364 -1.899 115 0.021      0.104                                                      
+           Cement    pkr        lead k=1        1.602  1.847 116 0.029      0.147                                                      
+           Cement    pkr        lead k=2       -0.054 -0.074 115 0.000      0.976                                                      
+           Cement    pkr        lead k=3        0.765  1.133 114 0.007      0.420                                                      
+            Power    pkr contemporaneous        0.522  0.792 114 0.003      0.510                                                      
+            Power    pkr        lead k=1        0.097  0.131 115 0.000      0.933                                                      
+            Power    pkr        lead k=2        1.304  1.387 114 0.020      0.273                                                      
+            Power    pkr        lead k=3       -0.221 -0.269 113 0.000      0.840                                                      
+            Autos    pkr contemporaneous     - -1.699 -3.324 115 0.028      0.008                                             SUPPORTED
+            Autos    pkr        lead k=1     - -1.004 -1.251 116 0.009      0.293                         pre-registered, not supported
+            Autos    pkr        lead k=2     -  0.156  0.232 115 0.000      0.775                         pre-registered, not supported
+            Autos    pkr        lead k=3     - -0.938 -1.095 114 0.008      0.303                         pre-registered, not supported
+           Pharma    pkr contemporaneous     - -0.110 -0.163 111 0.000      0.842                         pre-registered, not supported
+           Pharma    pkr        lead k=1     -  0.724  1.051 112 0.008      0.406                         pre-registered, not supported
+           Pharma    pkr        lead k=2     - -0.021 -0.026 111 0.000      0.966                         pre-registered, not supported
+           Pharma    pkr        lead k=3     -  0.921  1.609 110 0.009      0.170                         pre-registered, not supported
+         Textiles    pkr contemporaneous     + -0.428 -0.651 114 0.002      0.641                         pre-registered, not supported
+         Textiles    pkr        lead k=1     + -0.271 -0.590 115 0.001      0.630                         pre-registered, not supported
+         Textiles    pkr        lead k=2     + -0.235 -0.338 114 0.001      0.765                         pre-registered, not supported
+         Textiles    pkr        lead k=3     +  0.442  0.495 113 0.002      0.695                         pre-registered, not supported
+             Tech    pkr contemporaneous     +  0.255  0.316 115 0.001      0.732                         pre-registered, not supported
+             Tech    pkr        lead k=1     + -1.602 -3.240 116 0.030      0.010 pre-registered, placebo-significant but OPPOSITE sign
+             Tech    pkr        lead k=2     + -0.510 -0.532 115 0.003      0.686                         pre-registered, not supported
+             Tech    pkr        lead k=3     + -0.455 -0.811 114 0.002      0.449                         pre-registered, not supported
+        Chemicals    pkr contemporaneous        2.394  2.933 115 0.060      0.009                exploratory, needs out-of-sample check
+        Chemicals    pkr        lead k=1        0.781  0.632 116 0.006      0.665                                                      
+        Chemicals    pkr        lead k=2        0.144  0.232 115 0.000      0.867                                                      
+        Chemicals    pkr        lead k=3       -0.786 -1.167 114 0.006      0.357                                                      
+             Food    pkr contemporaneous        0.534  0.762 115 0.004      0.496                                                      
+             Food    pkr        lead k=1        0.305  0.437 116 0.001      0.750                                                      
+             Food    pkr        lead k=2        1.136  1.752 115 0.017      0.131                                                      
+             Food    pkr        lead k=3        0.389  0.435 114 0.002      0.675                                                      
+            Banks    pkr contemporaneous        0.853  1.409 115 0.010      0.293                                                      
+            Banks    pkr        lead k=1        0.044  0.051 116 0.000      0.975                                                      
+            Banks    pkr        lead k=2       -0.303 -0.462 115 0.001      0.657                                                      
+            Banks    pkr        lead k=3        0.623  0.878 114 0.006      0.527                                                      
+Steel/engineering    pkr contemporaneous       -1.618 -2.926 115 0.034      0.010                exploratory, needs out-of-sample check
+Steel/engineering    pkr        lead k=1        0.672  0.845 116 0.006      0.407                                                      
+Steel/engineering    pkr        lead k=2        0.723  1.081 115 0.007      0.294                                                      
+Steel/engineering    pkr        lead k=3       -0.576 -0.881 114 0.005      0.401                                                      
+  Glass/packaging    pkr contemporaneous       -0.546 -0.802  99 0.004      0.507                                                      
+  Glass/packaging    pkr        lead k=1        0.729  0.943 100 0.007      0.488                                                      
+  Glass/packaging    pkr        lead k=2        0.748  1.012  99 0.007      0.441                                                      
+  Glass/packaging    pkr        lead k=3        1.827  1.253  98 0.024      0.307                                                      
+              E&P kse100 contemporaneous        1.159 10.831 115 0.617      0.000                exploratory, needs out-of-sample check
+              E&P kse100        lead k=1       -0.634 -0.786 116 0.003      0.503                                                      
+              E&P kse100        lead k=2       -0.081 -0.069 115 0.000      0.970                                                      
+              E&P kse100        lead k=3       -0.115 -0.122 114 0.000      0.953                                                      
+         Refinery kse100 contemporaneous        1.574  8.547 115 0.451      0.000                exploratory, needs out-of-sample check
+         Refinery kse100        lead k=1       -0.913 -0.797 116 0.004      0.427                                                      
+         Refinery kse100        lead k=2        1.477  1.521 115 0.010      0.079                                                      
+         Refinery kse100        lead k=3        3.362  2.237 114 0.053      0.034                exploratory, needs out-of-sample check
+              OMC kse100 contemporaneous        1.414 10.337 104 0.590      0.000                exploratory, needs out-of-sample check
+              OMC kse100        lead k=1        0.649  0.847 106 0.004      0.535                                                      
+              OMC kse100        lead k=2       -0.868 -1.083 105 0.006      0.309                                                      
+              OMC kse100        lead k=3       -0.741 -1.012 104 0.005      0.396                                                      
+    Gas utilities kse100 contemporaneous        1.579  6.054 101 0.534      0.000                exploratory, needs out-of-sample check
+    Gas utilities kse100        lead k=1        0.407  0.250 102 0.001      0.775                                                      
+    Gas utilities kse100        lead k=2        0.099  0.117 101 0.000      0.874                                                      
+    Gas utilities kse100        lead k=3       -1.804 -1.665 100 0.016      0.095                                                      
+       Fertilizer kse100 contemporaneous        0.711  6.632 115 0.393      0.000                exploratory, needs out-of-sample check
+       Fertilizer kse100        lead k=1       -0.071 -0.066 116 0.000      0.965                                                      
+       Fertilizer kse100        lead k=2        0.811  0.803 115 0.005      0.507                                                      
+       Fertilizer kse100        lead k=3        0.324  0.271 114 0.001      0.828                                                      
+           Cement kse100 contemporaneous        1.329  9.294 115 0.579      0.000                exploratory, needs out-of-sample check
+           Cement kse100        lead k=1       -0.864 -0.554 116 0.008      0.502                                                      
+           Cement kse100        lead k=2        0.309  0.549 115 0.001      0.554                                                      
+           Cement kse100        lead k=3        0.017  0.021 114 0.000      0.988                                                      
+            Power kse100 contemporaneous        1.098 11.742 114 0.575      0.000                exploratory, needs out-of-sample check
+            Power kse100        lead k=1       -0.868 -0.673 115 0.009      0.551                                                      
+            Power kse100        lead k=2       -0.566 -0.876 114 0.004      0.431                                                      
+            Power kse100        lead k=3        0.350  0.447 113 0.001      0.710                                                      
+            Autos kse100 contemporaneous        1.475  9.710 115 0.602      0.000                exploratory, needs out-of-sample check
+            Autos kse100        lead k=1        0.179  0.268 116 0.000      0.810                                                      
+            Autos kse100        lead k=2        0.021  0.024 115 0.000      0.986                                                      
+            Autos kse100        lead k=3        0.641  0.608 114 0.004      0.581                                                      
+           Pharma kse100 contemporaneous        1.114  6.486 111 0.574      0.000                exploratory, needs out-of-sample check
+           Pharma kse100        lead k=1       -0.048 -0.071 112 0.000      0.940                                                      
+           Pharma kse100        lead k=2       -0.007 -0.010 111 0.000      0.987                                                      
+           Pharma kse100        lead k=3       -0.312 -0.479 110 0.001      0.635                                                      
+         Textiles kse100 contemporaneous        1.220 10.985 114 0.515      0.000                exploratory, needs out-of-sample check
+         Textiles kse100        lead k=1       -1.214 -1.251 115 0.015      0.323                                                      
+         Textiles kse100        lead k=2       -0.760 -0.898 114 0.006      0.388                                                      
+         Textiles kse100        lead k=3       -0.897 -1.034 113 0.009      0.339                                                      
+             Tech kse100 contemporaneous        1.360 14.175 115 0.547      0.000                exploratory, needs out-of-sample check
+             Tech kse100        lead k=1        0.619  0.930 116 0.004      0.382                                                      
+             Tech kse100        lead k=2       -1.305 -1.027 115 0.019      0.317                                                      
+             Tech kse100        lead k=3       -0.785 -0.953 114 0.007      0.327                                                      
+        Chemicals kse100 contemporaneous        1.091 12.396 115 0.502      0.000                exploratory, needs out-of-sample check
+        Chemicals kse100        lead k=1       -1.159 -1.976 116 0.013      0.060                                                      
+        Chemicals kse100        lead k=2        0.635  0.802 115 0.004      0.517                                                      
+        Chemicals kse100        lead k=3       -1.026 -1.280 114 0.010      0.204                                                      
+             Food kse100 contemporaneous        1.329  9.832 115 0.580      0.000                exploratory, needs out-of-sample check
+             Food kse100        lead k=1        0.028  0.031 116 0.000      0.992                                                      
+             Food kse100        lead k=2       -0.329 -0.321 115 0.001      0.805                                                      
+             Food kse100        lead k=3       -0.200 -0.325 114 0.001      0.783                                                      
+            Banks kse100 contemporaneous        1.060 14.123 115 0.752      0.000                exploratory, needs out-of-sample check
+            Banks kse100        lead k=1        1.520  1.364 116 0.032      0.242                                                      
+            Banks kse100        lead k=2        1.172  1.320 115 0.019      0.273                                                      
+            Banks kse100        lead k=3        0.897  1.791 114 0.011      0.091                                                      
+Steel/engineering kse100 contemporaneous        1.362 11.000 115 0.569      0.000                exploratory, needs out-of-sample check
+Steel/engineering kse100        lead k=1       -1.037 -1.353 116 0.014      0.133                                                      
+Steel/engineering kse100        lead k=2       -0.861 -1.214 115 0.010      0.201                                                      
+Steel/engineering kse100        lead k=3       -0.050 -0.050 114 0.000      0.966                                                      
+  Glass/packaging kse100 contemporaneous        1.179 10.819  99 0.521      0.000                exploratory, needs out-of-sample check
+  Glass/packaging kse100        lead k=1       -0.740 -0.782 100 0.008      0.425                                                      
+  Glass/packaging kse100        lead k=2       -1.581 -1.973  99 0.038      0.148                                                      
+  Glass/packaging kse100        lead k=3       -2.002 -2.972  98 0.061      0.019                exploratory, needs out-of-sample check
+
+MULTIPLE TESTING: actual |t|>=2 cells = 53 of 448; placebo median = 37, 95th percentile = 51, share of draws >= actual = 0.047
+   spec c: actual 31 of 112; placebo median 8, p95 17
+   spec k1: actual 4 of 112; placebo median 9, p95 15
+   spec k2: actual 8 of 112; placebo median 10, p95 16
+   spec k3: actual 10 of 112; placebo median 10, p95 16
+   excluding the KSE100 factor (its contemporaneous cells are market betas): actual 35 of 384; placebo median 33, p95 45
+
+SUPPORTED pre-registered cells (placebo p<0.05 and sign matches prior):
+sector factor            spec prior   beta      t   n    r2  placebo_p      flag
+   E&P  brent contemporaneous     +  0.937  4.038 115 0.060      0.008 SUPPORTED
+ Autos    pkr contemporaneous     - -1.699 -3.324 115 0.028      0.008 SUPPORTED
+
+Pre-registered cells, all specs:
+    sector factor            spec prior   beta      t   n    r2  placebo_p                                                  flag
+       E&P  brent contemporaneous     +  0.937  4.038 115 0.060      0.008                                             SUPPORTED
+       E&P  brent        lead k=1     + -0.356 -1.371 116 0.007      0.288                         pre-registered, not supported
+       E&P  brent        lead k=2     + -0.574 -1.818 115 0.019      0.143                         pre-registered, not supported
+       E&P  brent        lead k=3     + -0.535 -1.299 114 0.016      0.272                         pre-registered, not supported
+  Refinery  brent contemporaneous     +  0.744  1.417 115 0.017      0.223                         pre-registered, not supported
+  Refinery  brent        lead k=1     +  0.306  0.730 116 0.003      0.627                         pre-registered, not supported
+  Refinery  brent        lead k=2     +  0.104  0.113 115 0.000      0.909                         pre-registered, not supported
+  Refinery  brent        lead k=3     +  0.180  0.261 114 0.001      0.777                         pre-registered, not supported
+       OMC  brent contemporaneous     +  0.572  2.053 104 0.024      0.129                         pre-registered, not supported
+       OMC  brent        lead k=1     + -0.052 -0.239 106 0.000      0.853                         pre-registered, not supported
+       OMC  brent        lead k=2     + -0.037 -0.094 105 0.000      0.933                         pre-registered, not supported
+       OMC  brent        lead k=3     + -0.275 -1.352 104 0.005      0.273                         pre-registered, not supported
+    Cement   coal contemporaneous     - -0.466 -0.626 115 0.007      0.601                         pre-registered, not supported
+    Cement   coal        lead k=1     - -0.665 -1.791 116 0.016      0.152                         pre-registered, not supported
+    Cement   coal        lead k=2     -  0.156  0.324 115 0.001      0.809                         pre-registered, not supported
+    Cement   coal        lead k=3     - -0.063 -0.156 114 0.000      0.893                         pre-registered, not supported
+Fertilizer   urea contemporaneous     +  0.234  0.512 114 0.002      0.726                         pre-registered, not supported
+Fertilizer   urea        lead k=1     +  0.020  0.039 115 0.000      0.985                         pre-registered, not supported
+Fertilizer   urea        lead k=2     +  0.125  0.373 114 0.000      0.662                         pre-registered, not supported
+Fertilizer   urea        lead k=3     + -0.075 -0.161 113 0.000      0.830                         pre-registered, not supported
+  Textiles cotton contemporaneous     -  0.629  0.595 114 0.002      0.554                         pre-registered, not supported
+  Textiles cotton        lead k=1     - -0.386 -0.455 114 0.001      0.702                         pre-registered, not supported
+  Textiles cotton        lead k=2     -  0.329  0.338 113 0.001      0.774                         pre-registered, not supported
+  Textiles cotton        lead k=3     - -1.235 -1.429 112 0.011      0.165                         pre-registered, not supported
+      Food   palm contemporaneous     -  0.409  0.694 114 0.003      0.563                         pre-registered, not supported
+      Food   palm        lead k=1     - -0.704 -1.183 115 0.011      0.234                         pre-registered, not supported
+      Food   palm        lead k=2     - -0.126 -0.254 114 0.000      0.796                         pre-registered, not supported
+      Food   palm        lead k=3     -  0.029  0.047 113 0.000      0.969                         pre-registered, not supported
+       E&P    pkr contemporaneous     +  1.165  1.432 115 0.013      0.237                         pre-registered, not supported
+       E&P    pkr        lead k=1     + -0.778 -0.968 116 0.005      0.439                         pre-registered, not supported
+       E&P    pkr        lead k=2     + -0.363 -0.482 115 0.001      0.734                         pre-registered, not supported
+       E&P    pkr        lead k=3     + -0.238 -0.230 114 0.000      0.821                         pre-registered, not supported
+     Autos    pkr contemporaneous     - -1.699 -3.324 115 0.028      0.008                                             SUPPORTED
+     Autos    pkr        lead k=1     - -1.004 -1.251 116 0.009      0.293                         pre-registered, not supported
+     Autos    pkr        lead k=2     -  0.156  0.232 115 0.000      0.775                         pre-registered, not supported
+     Autos    pkr        lead k=3     - -0.938 -1.095 114 0.008      0.303                         pre-registered, not supported
+    Pharma    pkr contemporaneous     - -0.110 -0.163 111 0.000      0.842                         pre-registered, not supported
+    Pharma    pkr        lead k=1     -  0.724  1.051 112 0.008      0.406                         pre-registered, not supported
+    Pharma    pkr        lead k=2     - -0.021 -0.026 111 0.000      0.966                         pre-registered, not supported
+    Pharma    pkr        lead k=3     -  0.921  1.609 110 0.009      0.170                         pre-registered, not supported
+  Textiles    pkr contemporaneous     + -0.428 -0.651 114 0.002      0.641                         pre-registered, not supported
+  Textiles    pkr        lead k=1     + -0.271 -0.590 115 0.001      0.630                         pre-registered, not supported
+  Textiles    pkr        lead k=2     + -0.235 -0.338 114 0.001      0.765                         pre-registered, not supported
+  Textiles    pkr        lead k=3     +  0.442  0.495 113 0.002      0.695                         pre-registered, not supported
+      Tech    pkr contemporaneous     +  0.255  0.316 115 0.001      0.732                         pre-registered, not supported
+      Tech    pkr        lead k=1     + -1.602 -3.240 116 0.030      0.010 pre-registered, placebo-significant but OPPOSITE sign
+      Tech    pkr        lead k=2     + -0.510 -0.532 115 0.003      0.686                         pre-registered, not supported
+      Tech    pkr        lead k=3     + -0.455 -0.811 114 0.002      0.449                         pre-registered, not supported
+
+Significant exploratory cells (placebo p<0.05, not pre-registered): exploratory, needs out-of-sample check
+           sector factor            spec prior   beta      t   n    r2  placebo_p                                   flag
+           Cement  brent contemporaneous       -1.080 -4.883 115 0.098      0.000 exploratory, needs out-of-sample check
+           Pharma  brent        lead k=2       -0.580 -3.060 111 0.036      0.048 exploratory, needs out-of-sample check
+             Tech  brent contemporaneous        1.037  2.703 115 0.086      0.031 exploratory, needs out-of-sample check
+           Pharma   coal        lead k=3        1.159  2.825 110 0.055      0.000 exploratory, needs out-of-sample check
+        Chemicals   coal        lead k=3        1.115  2.572 114 0.038      0.010 exploratory, needs out-of-sample check
+    Gas utilities   urea contemporaneous       -1.202 -2.505 101 0.020      0.023 exploratory, needs out-of-sample check
+           Cement   urea        lead k=1       -0.482 -2.093 115 0.013      0.049 exploratory, needs out-of-sample check
+              E&P cotton        lead k=2       -3.932 -2.591 115 0.073      0.027 exploratory, needs out-of-sample check
+         Refinery cotton        lead k=2        2.760  2.483 115 0.022      0.034 exploratory, needs out-of-sample check
+              OMC cotton        lead k=3        1.859  2.642 104 0.031      0.021 exploratory, needs out-of-sample check
+        Chemicals cotton        lead k=3        3.111  2.403 114 0.061      0.043 exploratory, needs out-of-sample check
+  Glass/packaging cotton        lead k=2        2.023  2.196  97 0.036      0.039 exploratory, needs out-of-sample check
+  Glass/packaging cotton        lead k=3        3.059  2.950  96 0.074      0.012 exploratory, needs out-of-sample check
+              OMC   palm        lead k=3        1.224  2.487 103 0.030      0.015 exploratory, needs out-of-sample check
+        Chemicals   palm        lead k=2        2.057  2.081 114 0.057      0.045 exploratory, needs out-of-sample check
+              OMC    pkr        lead k=1       -1.505 -2.275 106 0.020      0.015 exploratory, needs out-of-sample check
+       Fertilizer    pkr contemporaneous        1.647  2.053 115 0.021      0.029 exploratory, needs out-of-sample check
+        Chemicals    pkr contemporaneous        2.394  2.933 115 0.060      0.009 exploratory, needs out-of-sample check
+Steel/engineering    pkr contemporaneous       -1.618 -2.926 115 0.034      0.010 exploratory, needs out-of-sample check
+              E&P kse100 contemporaneous        1.159 10.831 115 0.617      0.000 exploratory, needs out-of-sample check
+         Refinery kse100 contemporaneous        1.574  8.547 115 0.451      0.000 exploratory, needs out-of-sample check
+         Refinery kse100        lead k=3        3.362  2.237 114 0.053      0.034 exploratory, needs out-of-sample check
+              OMC kse100 contemporaneous        1.414 10.337 104 0.590      0.000 exploratory, needs out-of-sample check
+    Gas utilities kse100 contemporaneous        1.579  6.054 101 0.534      0.000 exploratory, needs out-of-sample check
+       Fertilizer kse100 contemporaneous        0.711  6.632 115 0.393      0.000 exploratory, needs out-of-sample check
+           Cement kse100 contemporaneous        1.329  9.294 115 0.579      0.000 exploratory, needs out-of-sample check
+            Power kse100 contemporaneous        1.098 11.742 114 0.575      0.000 exploratory, needs out-of-sample check
+            Autos kse100 contemporaneous        1.475  9.710 115 0.602      0.000 exploratory, needs out-of-sample check
+           Pharma kse100 contemporaneous        1.114  6.486 111 0.574      0.000 exploratory, needs out-of-sample check
+         Textiles kse100 contemporaneous        1.220 10.985 114 0.515      0.000 exploratory, needs out-of-sample check
+             Tech kse100 contemporaneous        1.360 14.175 115 0.547      0.000 exploratory, needs out-of-sample check
+        Chemicals kse100 contemporaneous        1.091 12.396 115 0.502      0.000 exploratory, needs out-of-sample check
+             Food kse100 contemporaneous        1.329  9.832 115 0.580      0.000 exploratory, needs out-of-sample check
+            Banks kse100 contemporaneous        1.060 14.123 115 0.752      0.000 exploratory, needs out-of-sample check
+Steel/engineering kse100 contemporaneous        1.362 11.000 115 0.569      0.000 exploratory, needs out-of-sample check
+  Glass/packaging kse100 contemporaneous        1.179 10.819  99 0.521      0.000 exploratory, needs out-of-sample check
+  Glass/packaging kse100        lead k=3       -2.002 -2.972  98 0.061      0.019 exploratory, needs out-of-sample check
+
+wrote C:\Users\JazibWaqas\Documents\GitHub\Investing-Research\tests\out\sensitivity_map.csv (112 rows)
+
+ROBUSTNESS (name-picked, labelled): Tech vs Tech-lite (excluding ['PTC', 'TELE', 'WTL', 'AIRLINK'] ) on PKR; beta pts per +5% depreciation
+   Tech       c   beta   0.255 pts/+5%  NW t   0.32  n 115  placebo p 0.732
+   Tech       k1  beta  -1.602 pts/+5%  NW t  -3.24  n 116  placebo p 0.010
+   Tech       k2  beta  -0.510 pts/+5%  NW t  -0.53  n 115  placebo p 0.686
+   Tech       k3  beta  -0.455 pts/+5%  NW t  -0.81  n 114  placebo p 0.449
+   Tech-lite  c   beta   0.560 pts/+5%  NW t   0.57  n 115  placebo p 0.646
+   Tech-lite  k1  beta  -0.904 pts/+5%  NW t  -1.30  n 116  placebo p 0.312
+   Tech-lite  k2  beta  -0.619 pts/+5%  NW t  -0.61  n 115  placebo p 0.656
+   Tech-lite  k3  beta  -0.206 pts/+5%  NW t  -0.29  n 114  placebo p 0.749
+
+==============================================================================================================
+SECTION 5  H1  BRENT 3-MONTH RISE >= 20%
+==============================================================================================================
+Signal months (all, from data): ['2015-04', '2016-04', '2016-05', '2016-06', '2017-09', '2017-11', '2019-03', '2020-06', '2020-07', '2020-08', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04', '2021-06', '2022-02', '2022-03', '2022-05', '2023-08', '2023-09', '2026-03', '2026-04', '2026-05', '2026-09']
+Episode onsets (first signal month after >=3 non-signal months): ['2015-04', '2016-04', '2017-09', '2019-03', '2020-06', '2020-12', '2022-02', '2023-08', '2026-03', '2026-09']
+Kept (formation on/after 2017-02-01): ['2017-09', '2019-03', '2020-06', '2020-12', '2022-02', '2023-08', '2026-03', '2026-09'] | dropped as pre-sample: ['2015-04', '2016-04']
+2020-06 is a rebound off the COVID crash; 2026-03 is in-sample (the hypothesis came from the 2026 refiner setup).
+
+Per-episode table (excess vs same-universe EW market, % points; net = gross - 0.5)
+onset     Brent3m sector     k1 gross  k1 net  k2 gross  k2 net  k3 gross  k3 net  members / ex-dates in window (3m)
+2017-09     21.1% Refinery      -3.64   -4.14     -9.71  -10.21    -21.32  -21.82  ['ATRL', 'CNERGY', 'NRL', 'PRL'] | none found
+2017-09     21.1% E&P           11.75   11.25     14.96   14.46     18.49   17.99  ['MARI', 'OGDC', 'PPL'] | none found
+2019-03     34.3% Refinery       0.94    0.44      0.39   -0.11     -8.02   -8.52  ['ATRL', 'NRL', 'PRL'] | none found
+2019-03     34.3% E&P            3.57    3.07      5.75    5.25      4.40    3.90  ['MARI', 'OGDC', 'PPL'] | none found
+2020-06    180.4% Refinery      27.92   27.42     46.81   46.31     28.66   28.16  ['ATRL', 'NRL', 'PRL'] | none found
+2020-06    180.4% E&P          -15.36  -15.86    -24.06  -24.56    -26.03  -26.53  ['MARI', 'OGDC', 'PPL'] | none found
+2020-12     27.1% Refinery       8.80    8.30     24.44   23.94     28.21   27.71  ['ATRL', 'CNERGY', 'NRL', 'PRL'] | none found
+2020-12     27.1% E&P           -8.95   -9.45     -3.85   -4.35     -0.42   -0.92  ['MARI', 'OGDC', 'PPL'] | none found
+2022-02     45.5% Refinery      -1.26   -1.76     17.16   16.66     25.15   24.65  ['ATRL', 'CNERGY', 'NRL', 'PRL'] | none found
+2022-02     45.5% E&P           -4.35   -4.85     -2.74   -3.24     -1.72   -2.22  ['MARI', 'OGDC', 'PPL'] | OGDC cash 2022-03-07; OGDC cash 2022-05-11
+2023-08     21.3% Refinery       8.49    7.99     18.51   18.01     13.16   12.66  ['ATRL', 'CNERGY', 'NRL', 'PRL'] | none found
+2023-08     21.3% E&P           -1.34   -1.84    -14.21  -14.71    -25.91  -26.41  ['MARI', 'OGDC', 'PPL'] | OGDC cash 2023-10-17; OGDC cash 2023-11-10
+2026-03    106.5% Refinery       5.92    5.42      0.26   -0.24    -11.24  -11.74  ['ATRL', 'CNERGY', 'NRL', 'PRL'] | none found
+2026-03    106.5% E&P           -6.20   -6.70     -6.31   -6.81    -12.67  -13.17  ['MARI', 'OGDC', 'PPL'] | OGDC cash 2026-05-11; PPL cash 2026-05-12
+2026-09     64.5% Refinery        nan     nan       nan     nan       nan     nan  ['ATRL', 'CNERGY', 'NRL', 'PRL'] | ATRL cash 2026-10-09
+2026-09     64.5% E&P             nan     nan       nan     nan       nan     nan  ['MARI', 'OGDC', 'PPL'] | OGDC cash 2026-10-08; PPL cash 2026-10-15
+
+PENDING (window ends after 2026-10-16; excluded from every statistic):
+   onset 2026-09 horizon 1m: entry 2026-10-01, 11 trading days elapsed, gross excess so far Refinery   9.30%, E&P   0.14%
+   onset 2026-09 horizon 2m: entry 2026-10-01, 11 trading days elapsed, gross excess so far Refinery   9.30%, E&P   0.14%
+   onset 2026-09 horizon 3m: entry 2026-10-01, 11 trading days elapsed, gross excess so far Refinery   9.30%, E&P   0.14%
+
+H1 summary. Headline = first month of each episode (non-overlapping). Placebo = same n random month-start entries, same names/period, net of 0.5; pctile = share of placebo medians at or below the actual median.
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H1 Refinery 1m [full]                          7   7 |   6.74   5.92    71  -3.64 |   6.24    5.42     71 |    -0.02   -1.79      43  -5.40..  4.03      97
+H1 Refinery 2m [full]                          7   7 |  13.98  17.16    86  -9.71 |  13.48   16.66     57 |     0.45   -1.42      43  -8.42..  4.83     100
+H1 Refinery 3m [full]                          7   7 |   7.80  13.16    57 -21.32 |   7.30   12.66     57 |     1.02   -2.32      43 -10.89.. 10.57      98
+H1 E&P 1m [full]                               7   7 |  -2.98  -4.35    29 -15.36 |  -3.48   -4.85     29 |    -0.02    0.49      57  -5.55..  4.91       8
+H1 E&P 2m [full]                               7   7 |  -4.35  -3.85    29 -24.06 |  -4.85   -4.35     29 |     0.36    0.69      57  -6.03..  7.10      15
+H1 E&P 3m [full]                               7   7 |  -6.26  -1.72    29 -26.03 |  -6.76   -2.22     29 |     0.65    1.33      57  -8.45..  8.50      28
+
+H1 Refinery 1m [excl 2026]                     6   6 |   6.87   4.71    67  -3.64 |   6.37    4.21     67 |    -0.65   -1.65      33  -5.92..  3.94      95
+H1 Refinery 2m [excl 2026]                     6   6 |  16.27  17.83    83  -9.71 |  15.77   17.33     67 |    -0.60   -2.11      33  -8.30..  4.68     100
+H1 Refinery 3m [excl 2026]                     6   6 |  10.97  19.15    67 -21.32 |  10.47   18.65     67 |    -1.02   -3.11      33 -10.54..  7.28     100
+H1 E&P 1m [excl 2026]                          6   6 |  -2.45  -2.85    33 -15.36 |  -2.95   -3.35     33 |     0.16    0.51      50  -5.74..  5.00      14
+H1 E&P 2m [excl 2026]                          6   6 |  -4.03  -3.30    33 -24.06 |  -4.53   -3.80     33 |     0.51    0.40      50  -6.35..  7.10      14
+H1 E&P 3m [excl 2026]                          6   6 |  -5.20  -1.07    33 -26.03 |  -5.70   -1.57     33 |     0.70    0.82      50  -8.06..  8.33      34
+
+H1 Refinery 1m [excl 2026 & 2020-06]           5   5 |   2.66   0.94    60  -3.64 |   2.16    0.44     60 |    -0.66   -1.83      40  -6.27..  4.03      72
+H1 Refinery 2m [excl 2026 & 2020-06]           5   5 |  10.16  17.16    80  -9.71 |   9.66   16.66     60 |    -1.03   -2.08      40  -9.47..  5.13      99
+H1 Refinery 3m [excl 2026 & 2020-06]           5   5 |   7.44  13.16    60 -21.32 |   6.94   12.66     60 |    -1.30   -2.66      40 -13.01..  8.77      98
+H1 E&P 1m [excl 2026 & 2020-06]                5   5 |   0.14  -1.34    40  -8.95 |  -0.36   -1.84     40 |     0.16    0.85      60  -6.62..  5.49      28
+H1 E&P 2m [excl 2026 & 2020-06]                5   5 |  -0.02  -2.74    40 -14.21 |  -0.52   -3.24     40 |     0.48    0.69      60  -8.49..  8.03      21
+H1 E&P 3m [excl 2026 & 2020-06]                5   5 |  -1.03  -0.42    40 -25.91 |  -1.53   -0.92     40 |     0.83    1.62      60  -9.21..  9.73      35
+
+Verdict per cell (rule: median net >= placebo p95 of median, >=2/3 episodes positive net, survives excl. 2026):
+   Refinery  1m: full pass=True, excl-2026 pass=True -> supported
+   Refinery  2m: full pass=False, excl-2026 pass=True -> inconclusive, n episodes = 7
+   Refinery  3m: full pass=False, excl-2026 pass=True -> inconclusive, n episodes = 7
+   E&P       1m: full pass=False, excl-2026 pass=False -> not supported
+   E&P       2m: full pass=False, excl-2026 pass=False -> not supported
+   E&P       3m: full pass=False, excl-2026 pass=False -> not supported
+   H1 overall: not supported or inconclusive (low power)
+
+Secondary: ALL signal months (OVERLAPPING 3m rises, not headline), net of 0.5:
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H1 Refinery 1m [all signal months]            20   8 |   2.88   1.27    55 -14.07 |   2.38    0.77     55 |     0.19   -1.78      40  -3.89..  1.28      90
+H1 Refinery 2m [all signal months]            20   8 |   5.29   0.32    60 -20.12 |   4.79   -0.18     45 |     1.03   -1.51      40  -5.71..  2.29      74
+H1 Refinery 3m [all signal months]            20   8 |   7.48  -0.12    50 -21.32 |   6.98   -0.62     50 |     1.25   -2.40      40  -7.01..  2.20      80
+H1 E&P 1m [all signal months]                 20   8 |  -2.11  -2.72    40 -15.36 |  -2.61   -3.22     40 |     0.11    0.60      55  -2.79..  2.97       3
+H1 E&P 2m [all signal months]                 20   8 |  -5.11  -5.17    30 -24.06 |  -5.61   -5.67     30 |     0.50    0.54      55  -3.17..  4.49       0
+H1 E&P 3m [all signal months]                 20   8 |  -5.94  -5.56    30 -26.03 |  -6.44   -6.06     30 |     0.67    1.12      55  -4.93..  5.26       3
+
+Secondary: every signal month as 0/1 dummy; y = 1-month excess F(t)->F(t+1); HAC(3); beta in pts:
+   Refinery  beta   2.48 pts, NW t  0.89, n 116, signal months in sample 20
+   E&P       beta  -3.29 pts, NW t -2.18, n 116, signal months in sample 20
+
+Robustness: excess vs KSE100 (log sector return minus KSE100 log change), headline onsets, gross:
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H1 Refinery 1m vs KSE100 [full]                7   7 |   5.54   8.59    57  -9.63 |       -      -      - |    -0.66   -1.55      43  -6.97..  4.59      98
+H1 Refinery 2m vs KSE100 [full]                7   7 |  10.53  10.58    71 -16.48 |       -      -      - |    -1.38   -3.17      43 -11.31..  6.49      99
+H1 Refinery 3m vs KSE100 [full]                7   7 |   3.88  16.27    57 -35.06 |       -      -      - |    -2.53   -3.99      43 -14.84..  7.54      99
+H1 E&P 1m vs KSE100 [full]                     7   7 |  -2.31  -2.56    29  -8.58 |       -      -      - |    -0.27   -0.51      43  -4.40..  3.78      20
+H1 E&P 2m vs KSE100 [full]                     7   7 |  -2.81  -4.50    14  -9.13 |       -      -      - |    -0.51   -1.01      43  -5.71..  4.38      11
+H1 E&P 3m vs KSE100 [full]                     7   7 |  -5.09  -5.72    14 -13.44 |       -      -      - |    -0.95   -2.20      43  -6.27..  4.44       8
+
+==============================================================================================================
+SECTION 6  H2  PKR DEVALUATION: EXPORTERS (textiles + tech) MINUS IMPORTERS (autos + pharma)
+==============================================================================================================
+Trigger = first day the trailing 20-row log change of USDPKR crosses up through 4%; 60-trading-day lockout; entry = next PSX close.
+   signal 2017-12-13  20d change  4.26%  entry 2017-12-14  ok
+   signal 2018-03-26  20d change  4.08%  entry 2018-03-27  ok
+   signal 2018-07-16  20d change  4.23%  entry 2018-07-17  ok
+   signal 2018-11-30  20d change  4.36%  entry 2018-12-03  ok
+   signal 2019-05-20  20d change  4.49%  entry 2019-05-21  ok
+   signal 2020-03-26  20d change  5.59%  entry 2020-03-27  ok
+   signal 2022-04-06  20d change  4.28%  entry 2022-04-07  ok
+   signal 2022-07-14  20d change  4.08%  entry 2022-07-15  ok
+   signal 2023-01-26  20d change  7.49%  entry 2023-01-27  ok
+   signal 2023-08-02  20d change  4.18%  entry 2023-08-03  ok
+   signal 2023-11-15  20d change  4.28%  entry 2023-11-16  ok
+
+n triggers (in sample) = 11; macro episodes (merge triggers <120 trading days apart) = 5:
+    ['2017-12-13', '2018-03-26', '2018-07-16', '2018-11-30', '2019-05-20']
+    ['2020-03-26']
+    ['2022-04-06', '2022-07-14']
+    ['2023-01-26']
+    ['2023-08-02', '2023-11-15']
+
+Per-trigger table (gross, % points). Pending windows are listed below and excluded.
+entry         h    spread   exp-mkt  Textiles      Tech     Autos    Pharma
+2017-12-14   20      1.22     -5.27     -6.60     -3.28     -7.06     -4.81
+2017-12-14   60     -8.15     -9.71    -11.83     -6.53     -0.83     -3.76
+2018-03-27   20     -1.70     -0.18      1.92     -1.22      1.59      1.37
+2018-03-27   60     10.64      7.76      2.65     10.32     -5.90      3.93
+2018-07-17   20      2.64     -1.23     -3.96      1.50     -7.18      2.76
+2018-07-17   60     19.52     10.17     11.25      9.10    -12.17     -4.66
+2018-12-03   20     -4.63     -3.71      1.81     -7.02     -2.50      7.76
+2018-12-03   60     -1.09      0.14     12.47     -7.27     -5.20     14.09
+2019-05-21   20     -7.21      0.83     -9.43     11.09      9.21      4.53
+2019-05-21   60     -5.71     -2.07     -3.78     -0.35      2.76      6.28
+2020-03-27   20      3.75      1.60     -5.90     10.98      2.82     -9.61
+2020-03-27   60      5.15     20.27      3.08     48.91     24.15      1.59
+2022-04-07   20     -2.39     -2.90     -3.66     -2.52      0.44     -3.39
+2022-04-07   60     -1.33     -1.44    -10.20      2.94     -0.96      2.00
+2022-07-15   20      4.14      0.62      1.43      0.22     -4.34     -1.05
+2022-07-15   60      9.19      2.82     -8.71      8.59     -6.80     -5.07
+2023-01-27   20     -2.38     -2.11     -1.20     -2.34     -2.21      3.99
+2023-01-27   60     -0.00     -1.92     -4.27     -1.33    -11.30      7.47
+2023-08-03   20      1.84     -0.29      3.16     -1.77      2.68    -10.15
+2023-08-03   60    -22.65     -7.40     -3.52     -9.06     32.20    -12.99
+2023-11-16   20      4.75     -0.18     -3.75      1.40     -2.86     -9.08
+2023-11-16   60     -6.84     -7.06     -2.97     -8.87      4.24     -9.13
+PENDING H2 triggers:
+   none
+Small-basket ex-dates: the H2 baskets (textiles, tech, autos, pharma) are not 2-3 name baskets; none listed.
+
+H2 headline: n = triggers, eps = macro episodes represented. Costs: spread 1.0, others 0.5. Placebo = same n random trading-day entries.
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H2 spread 20d [triggers]                      11   5 |   0.00   1.22    55  -7.21 |  -1.00    0.22     55 |    -0.07    0.08      55  -3.40..  3.26      53
+H2 exp-mkt 20d [triggers]                     11   5 |  -1.17  -0.29    27  -5.27 |  -1.67   -0.79     27 |     0.05   -0.15      45  -2.43..  2.01      35
+H2 Textiles 20d [triggers]                    11   5 |  -2.38  -3.66    36  -9.43 |  -2.88   -4.16     36 |    -0.61   -0.79      45  -3.91..  2.32       3
+H2 Tech 20d [triggers]                        11   5 |   0.64  -1.22    45  -7.02 |   0.14   -1.72     36 |     0.54   -0.08      45  -2.98..  3.23      19
+H2 Autos 20d [triggers]                       11   5 |  -0.86  -2.21    45  -7.18 |  -1.36   -2.71     36 |    -0.66   -1.16      36  -4.10..  1.85      17
+H2 Pharma 20d [triggers]                      11   5 |  -1.61  -1.05    45 -10.15 |  -2.11   -1.55     45 |    -1.18   -1.71      36  -4.40..  1.40      54
+H2 spread-lite 20d [triggers]                 11   5 |  -0.44  -1.06    45  -7.21 |  -1.44   -2.06     45 |    -0.33   -0.35      45  -3.81..  3.20      21
+   episode-level spread 20d net: episodes 5, mean  -0.28, median  -0.12, positive 40%, worst  -3.38  values [-2.94, 2.75, -0.12, -3.38, 2.3]
+   episode-level exp-mkt 20d net: episodes 5, mean  -1.26, median  -1.64, positive 20%, worst  -2.61  values [-2.41, 1.1, -1.64, -2.61, -0.74]
+
+H2 spread 60d [triggers]                      11   5 |  -0.12  -1.09    36 -22.65 |  -1.12   -2.09     36 |     0.82    1.06      55  -4.90..  7.31      19
+H2 exp-mkt 60d [triggers]                     11   5 |   1.05  -1.44    45  -9.71 |   0.55   -1.94     36 |     0.80   -0.51      45  -3.66..  4.40      24
+H2 Textiles 60d [triggers]                    11   5 |  -1.44  -3.52    36 -11.83 |  -1.94   -4.02     36 |    -0.79   -1.40      45  -6.75..  4.83      21
+H2 Tech 60d [triggers]                        11   5 |   4.22  -0.35    45  -9.06 |   3.72   -0.85     45 |     2.29    0.27      55  -5.47..  7.33      39
+H2 Autos 60d [triggers]                       11   5 |   1.84  -0.96    36 -12.17 |   1.34   -1.46     36 |    -0.72   -3.06      36  -6.94..  1.81      71
+H2 Pharma 60d [triggers]                      11   5 |  -0.02   1.59    55 -12.99 |  -0.52    1.09     55 |    -2.34   -3.05      36  -8.16..  1.81      92
+H2 spread-lite 60d [triggers]                 11   5 |  -1.03  -0.88    45 -27.59 |  -2.03   -1.88     36 |     0.44    0.52      55  -5.74..  6.88      27
+   episode-level spread 60d net: episodes 5, mean  -1.53, median   2.04, positive 60%, worst -15.74  values [2.04, 4.15, 2.93, -1.0, -15.74]
+   episode-level exp-mkt 60d net: episodes 5, mean   2.12, median   0.19, positive 60%, worst  -7.73  values [0.76, 19.77, 0.19, -2.42, -7.73]
+
+H2 verdict (rule: actual median net >= placebo p95 of median, >=2/3 macro episodes positive net):
+   20d: median net   0.22 vs placebo p95   3.26 -> False; macro episodes positive net 40% of 5 -> not supported
+   60d: median net  -2.09 vs placebo p95   7.31 -> False; macro episodes positive net 60% of 5 -> not supported
+
+Lens: 5 largest calendar-month PKR depreciations, de-clustered (>=3 months between picks), entry first PSX day of next month.
+   picks: [('2023-01', '16.88%'), ('2022-07', '15.92%'), ('2019-06', '9.21%'), ('2020-03', '7.37%'), ('2018-10', '6.37%')] | expected 2023-01, 2022-07, 2019-06, 2020-03, 2018-10
+   2020-03 is COVID-confounded (global risk-off, emergency rate cuts).
+month    entry         h    spread   exp-mkt  Textiles      Tech     Autos    Pharma
+2023-01  2023-02-01   20     -3.04     -1.99     -2.39     -1.89     -1.03      4.16
+2023-01  2023-02-01   60      3.93     -3.22     -3.08     -3.26    -12.63     -1.67
+2022-07  2022-08-01   20     -3.81     -4.04     -3.08     -4.53     -1.03      1.77
+2022-07  2022-08-01   60      4.95     -0.18     -6.25      2.85     -4.79       nan
+2019-06  2019-07-01   20      2.58     -1.53      2.69     -7.15     -6.07      1.77
+2019-06  2019-07-01   60     -1.56     -1.84      4.83    -10.72     -5.02     13.95
+2020-03  2020-04-01   20      6.47      3.27     -2.13      8.68     -1.44     -5.82
+2020-03  2020-04-01   60      5.75     17.07     -7.77     50.18     18.04      1.25
+2018-10  2018-11-01   20      6.21      3.15      3.35      3.00     -0.92     -8.07
+2018-10  2018-11-01   60      5.72      2.59      8.43     -1.79     -4.95      1.09
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H2 lens spread 20d                             5   5 |   1.68   2.58    60  -3.81 |   0.68    1.58     60 |     0.01   -0.10      40  -4.56..  4.68      66
+H2 lens exp-mkt 20d                            5   5 |  -0.23  -1.53    40  -4.04 |  -0.73   -2.03     40 |    -0.04   -0.12      40  -3.21..  2.69      23
+H2 lens Textiles 20d                           5   5 |  -0.31  -2.13    40  -3.08 |  -0.81   -2.63     40 |    -0.75   -0.98      40  -4.85..  2.85      26
+H2 lens Tech 20d                               5   5 |  -0.38  -1.89    40  -7.15 |  -0.88   -2.39     40 |     0.36   -0.20      40  -4.50..  3.70      17
+H2 lens Autos 20d                              5   5 |  -2.10  -1.03     0  -6.07 |  -2.60   -1.53      0 |    -0.89   -1.42      40  -5.45..  3.31      46
+H2 lens Pharma 20d                             5   5 |  -1.24   1.77    60  -8.07 |  -1.74    1.27     60 |    -1.68   -1.75      20  -5.65..  1.27      94
+H2 lens spread 20d excl 2020-03                4   4 |   0.49  -0.23    50  -3.81 |  -0.51   -1.23     50 |     0.16    0.26      50  -4.64..  4.61      32
+H2 lens spread 60d                             5   5 |   3.76   4.95    80  -1.56 |   2.76    3.95     80 |     0.98    0.99      60  -6.49..  7.80      75
+H2 lens exp-mkt 60d                            5   5 |   2.88  -0.18    40  -3.22 |   2.38   -0.68     40 |     0.58   -0.68      40  -4.45..  5.86      52
+H2 lens Textiles 60d                           5   5 |  -0.77  -3.08    40  -7.77 |  -1.27   -3.58     40 |    -1.01   -1.18      40 -10.09..  7.44      38
+H2 lens Tech 60d                               5   5 |   7.45  -1.79    40 -10.72 |   6.95   -2.29     40 |     1.48   -0.14      40  -7.47..  9.08      31
+H2 lens Autos 60d                              5   5 |  -1.87  -4.95    20 -12.63 |  -2.37   -5.45     20 |    -1.11   -3.53      40  -8.25..  6.22      29
+H2 lens Pharma 60d                             4   5 |   3.66   1.17    75  -1.67 |   3.16    0.67     75 |    -2.91   -3.98      25 -10.37..  5.35      83
+H2 lens spread 60d excl 2020-03                4   4 |   3.26   4.44    75  -1.56 |   2.26    3.44     75 |     0.92    1.36      50  -7.33..  8.90      71
+
+Robustness: triggers excluding entries in 2020 (COVID), spread net of 1.0:
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H2 spread 20d excl 2020                       10  10 |  -0.37  -0.24    50  -7.21 |  -1.37   -1.24     50 |    -0.05    0.04      50  -3.40..  3.34      26
+H2 spread 60d excl 2020                       10  10 |  -0.64  -1.21    30 -22.65 |  -1.64   -2.21     30 |     0.80    0.78      50  -5.12..  6.50      19
+
+Robustness (name-picked Tech-lite in exporters): rows 'spread-lite' above. Tech excluded: ['PTC', 'TELE', 'WTL', 'AIRLINK']
+
+Robustness: exporters / importers vs KSE100 (log sector return minus KSE100 log change), triggers, gross:
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+H2 Exporters 20d vs KSE100                    11   - |  -0.25  -0.94    45  -7.70 |       -      -      - |    -0.21   -0.62      45  -3.81..  2.89      44
+H2 Importers 20d vs KSE100                    11   - |  -0.13  -1.33    36  -9.85 |       -      -      - |    -1.14   -1.52      36  -4.45..  1.92      55
+H2 Exporters 60d vs KSE100                    11   - |   0.17  -2.20    36 -10.70 |       -      -      - |    -1.10   -2.90      36  -7.60..  3.58      58
+H2 Importers 60d vs KSE100                    11   - |  -0.04  -2.17    36 -17.22 |       -      -      - |    -3.21   -4.49      36  -9.37..  2.63      72
+
+==============================================================================================================
+SECTION 7  TOP BRENT MONTHS EVENT STUDY (de-clustered, ex post ranking; NOT tradable)
+==============================================================================================================
+(Brent monthly changes below are LOG changes)
+UP picks:   [('2019-01', '+21.1%', 'REBOUND'), ('2020-05', '+63.4%', 'REBOUND'), ('2020-11', '+25.4%', 'REBOUND'), ('2021-02', '+17.6%', ''), ('2021-06', '+10.4%', ''), ('2022-01', '+17.9%', 'REBOUND'), ('2022-05', '+14.7%', ''), ('2023-07', '+13.4%', 'REBOUND'), ('2026-03', '+57.5%', ''), ('2026-07', '+31.9%', 'REBOUND')]
+DOWN picks: [('2018-11', '-26.0%'), ('2020-03', '-124.0%'), ('2020-09', '-11.5%'), ('2021-11', '-15.9%'), ('2022-08', '-14.4%'), ('2023-05', '-12.2%'), ('2024-05', '-10.5%'), ('2024-09', '-10.3%'), ('2025-04', '-19.8%'), ('2026-05', '-29.1%')]
+n picks = 20; episodes (all picks chronologically merged if <6 months apart) = 6; up-picks flagged rebound = 6 (rebound = a down pick in the 3 months up to and including the up month)
+These events SHARE episodes with H1 and with the H3 regressions (2020, 2022, 2026): they are NOT independent confirmations.
+
+Per-event sector excess at 20 trading days (% points, gross); PENDING events excluded
+dir  month    entry           E&P Refiner     OMC Gas uti Fertili  Cement   Power   Autos  Pharma Textile    Tech Chemica    Food   Banks Steel/e Glass/p
+down 2018-11  2018-12-03    -3.47   -3.95     nan    8.07    1.34    0.82    5.97   -2.50    7.76    1.81   -7.02    1.54    1.83   -2.85    0.81    4.02
+up   2019-01  2019-02-01     6.28   -6.69    1.01   -4.62    6.75    3.49   -0.08    0.78    2.09    6.75   -4.64   -6.28   -7.37    3.91   -3.30    2.90
+down 2020-03  2020-04-01     1.11   -2.27   -5.31    1.01   -6.63   22.15   -7.30   -1.44   -5.82   -2.13    8.68   -0.51   -2.88  -17.64   11.26   10.55
+up   2020-05  2020-06-01    -4.08   -3.68    1.22   -5.04   -1.49    1.91  -10.62    7.43   -1.02    2.42    0.00    8.30  -10.09    1.44   -3.39    5.44
+down 2020-09  2020-10-01    -9.34   -3.95   -3.42  -10.32    0.50    6.88    1.35    6.71   -5.15   -3.21   -0.21    0.13    2.55   -2.65   -2.94    4.61
+up   2020-11  2020-12-01   -11.37   21.83   -1.32  -11.15   -7.62   -4.90  -12.55    5.39   -7.61    5.19   18.90   -1.69    0.26   -6.20    7.32   -2.00
+up   2021-02  2021-03-01     2.68   10.85   -5.12    5.78    1.14   -4.79    9.73    0.53   -0.45   -4.05   -0.50    6.75    2.24   -0.64   -4.20   -4.25
+up   2021-06  2021-07-01    -3.59  -10.49   -0.40    1.12   -0.85   -4.54   -7.33    5.31    1.68    2.70    5.32   -0.68    2.63    2.12   -1.47    2.37
+down 2021-11  2021-12-01     5.11    4.86    0.88     nan    3.74   -3.90    4.00    2.00    1.30   -0.46    5.37   -1.06   -0.38   -0.32    1.02    0.63
+up   2022-01  2022-02-01     9.15   -6.25    2.81     nan    8.96   -2.89    4.55    2.80    0.78    5.87   -1.91    5.07   -7.46    2.79   -6.82    3.25
+up   2022-05  2022-06-01     2.07    4.79    5.87     nan    0.27   -1.28    9.81    2.61    7.54   -4.48    1.39   -4.49   -2.59   -7.64   -2.89   -1.42
+down 2022-08  2022-09-01    -4.93   -2.12    1.35    2.86   -0.74    2.75    3.29    1.59   -3.62   -0.65    3.12    1.20   -3.47   -1.88   -2.16   -4.24
+down 2023-05  2023-06-01     2.38    4.19   37.75   -2.08   -8.69   -0.12   -1.57   -8.46   -5.84  -11.28   -0.63   -4.37    6.64    2.11   -3.73     nan
+up   2023-07  2023-08-01     7.05   -2.46    0.02   -0.48    5.26    0.69    2.46    4.01   -5.75    4.28   -4.45   -3.58   -5.51    4.19   -2.51     nan
+down 2024-05  2024-06-03    -0.43   -8.30    0.70   -0.75   13.20   -0.67    2.18   -5.47    9.82   -9.96   -5.23    4.52   -4.83   12.46   -4.65   -3.39
+down 2024-09  2024-10-01     5.40    0.81    8.79   30.21    1.70   11.56   -8.38   -9.04    5.32   -9.94    0.30   -5.72    3.78    1.61   -3.42   -9.77
+down 2025-04  2025-05-02    -2.46   11.88   -0.19  -15.31   -5.08    6.61   -0.77   -8.09    0.38   -1.93  -10.20   10.88   -4.54   -1.64   15.15    7.79
+up   2026-03  2026-04-01    -5.68    9.38    4.86    7.00   -7.76   -6.05   25.17    6.41   -6.25   10.43   -2.40   -1.49   -3.90   -4.30   -0.52    2.62
+down 2026-05  2026-06-01    -4.22   -8.87   -2.43   10.52   -0.39    4.72   10.94   -8.22   -1.25    8.37   -0.73   -1.89   -3.60   -0.18   -2.08    3.70
+up   2026-07  2026-08-03     6.22   37.81    1.20    3.71    1.91    1.59   -0.92    1.52   -1.55    0.38   -3.72    4.93   -1.35   -0.94    0.34   -2.09
+
+Small-basket ex-dates (bonus/cash; provisional table, ~2024-26 only) inside the 20d windows:
+   down 2018-11: none found
+   up   2019-01: none found
+   down 2020-03: none found
+   up   2020-05: none found
+   down 2020-09: none found
+   up   2020-11: none found
+   up   2021-02: FFC cash 2021-03-10
+   up   2021-06: none found
+   down 2021-11: none found
+   up   2022-01: none found
+   up   2022-05: none found
+   down 2022-08: none found
+   down 2023-05: none found
+   up   2023-07: FFC cash 2023-08-03
+   down 2024-05: none found
+   down 2024-09: OGDC cash 2024-10-16
+   down 2025-04: OGDC cash 2025-05-09; PPL cash 2025-05-09; FFC cash 2025-05-08; SNGP cash 2025-05-13
+   up   2026-03: FATIMA cash 2026-04-08
+   down 2026-05: none found
+   up   2026-07: EFERT cash 2026-08-07; FFC cash 2026-08-10
+
+Sector excess summary at 20 days. n = complete events; placebo = same n random month-start entries, same baskets, gross:
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+Brent up E&P 20d                              10   - |   0.87   2.38    60 -11.37 |       -      -      - |     0.49    1.04      60  -3.76..  4.30      75
+Brent up Refinery 20d                         10   - |   5.51   1.17    50 -10.49 |       -      -      - |     0.68   -1.14      40  -4.50..  3.80      78
+Brent up OMC 20d                              10   - |   1.01   1.10    70  -5.12 |       -      -      - |    -0.48   -0.56      50  -3.65..  1.96      86
+Brent up Gas utilities 20d                     8   - |  -0.46   0.32    50 -11.15 |       -      -      - |    -0.57   -1.32      38  -5.01..  3.44      73
+Brent up Fertilizer 20d                       10   - |   0.66   0.71    60  -7.76 |       -      -      - |     0.67    0.71      50  -2.64..  4.38      50
+Brent up Cement 20d                           10   - |  -1.68  -2.08    40  -6.05 |       -      -      - |     0.26   -0.71      50  -3.62..  3.52      27
+Brent up Power 20d                            10   - |   2.02   1.19    50 -12.55 |       -      -      - |    -0.25   -0.53      40  -3.62..  2.85      80
+Brent up Autos 20d                            10   - |   3.68   3.41   100   0.53 |       -      -      - |    -0.20   -0.92      40  -3.90..  2.27      99
+Brent up Pharma 20d                           10   - |  -1.05  -0.73    40  -7.61 |       -      -      - |    -1.26   -1.61      30  -4.35..  0.51      75
+Brent up Textiles 20d                         10   - |   2.95   3.49    80  -4.48 |       -      -      - |    -0.10   -0.39      50  -3.02..  2.55      99
+Brent up Tech 20d                             10   - |   0.80  -1.20    40  -4.64 |       -      -      - |     1.11    0.59      50  -2.38..  3.42      15
+Brent up Chemicals 20d                        10   - |   0.69  -1.08    40  -6.28 |       -      -      - |     0.09   -0.24      50  -3.07..  2.23      31
+Brent up Food 20d                             10   - |  -3.31  -3.24    30 -10.09 |       -      -      - |    -0.42   -1.07      40  -3.94..  2.33      10
+Brent up Banks 20d                            10   - |  -0.53   0.40    50  -7.64 |       -      -      - |     0.74    0.94      60  -1.93..  3.32      37
+Brent up Steel/engineering 20d                10   - |  -1.74  -2.70    20  -6.82 |       -      -      - |    -0.98   -1.27      40  -3.99..  1.30      22
+Brent up Glass/packaging 20d                   9   - |   0.76   2.37    56  -4.25 |       -      -      - |     0.19    0.11      56  -3.16..  2.91      89
+Brent down E&P 20d                            10   - |  -1.09  -1.45    40  -9.34 |       -      -      - |     0.55    1.05      60  -3.69..  4.45      21
+Brent down Refinery 20d                       10   - |  -0.77  -2.20    40  -8.87 |       -      -      - |     0.61   -1.23      40  -4.41..  3.57      35
+Brent down OMC 20d                             9   - |   4.24   0.70    56  -5.31 |       -      -      - |    -0.58   -0.64      44  -3.93..  1.79      76
+Brent down Gas utilities 20d                   9   - |   2.69   1.01    56 -15.31 |       -      -      - |    -0.43   -1.24      44  -4.96..  3.71      80
+Brent down Fertilizer 20d                     10   - |  -0.10   0.06    50  -8.69 |       -      -      - |     0.58    0.61      50  -2.88..  4.33      39
+Brent down Cement 20d                         10   - |   5.08   3.73    70  -3.90 |       -      -      - |     0.24   -0.82      50  -3.60..  3.34      96
+Brent down Power 20d                          10   - |   0.97   1.77    60  -8.38 |       -      -      - |    -0.33   -0.59      40  -3.60..  2.75      88
+Brent down Autos 20d                          10   - |  -3.29  -3.99    30  -9.04 |       -      -      - |    -0.27   -0.90      40  -3.57..  2.17       4
+Brent down Pharma 20d                         10   - |   0.29  -0.43    50  -5.84 |       -      -      - |    -1.13   -1.55      30  -4.19..  0.72      81
+Brent down Textiles 20d                       10   - |  -2.94  -2.03    20 -11.28 |       -      -      - |    -0.14   -0.34      50  -3.14..  2.60      16
+Brent down Tech 20d                           10   - |  -0.65  -0.42    40 -10.20 |       -      -      - |     1.02    0.49      50  -2.61..  3.42      31
+Brent down Chemicals 20d                      10   - |   0.47  -0.19    50  -5.72 |       -      -      - |    -0.06   -0.33      40  -2.91..  2.28      55
+Brent down Food 20d                           10   - |  -0.49  -1.63    40  -4.83 |       -      -      - |    -0.37   -0.98      40  -3.75..  2.48      38
+Brent down Banks 20d                          10   - |  -1.10  -0.98    30 -17.64 |       -      -      - |     0.64    0.88      60  -1.89..  3.47      13
+Brent down Steel/engineering 20d              10   - |   0.93  -2.12    40  -4.65 |       -      -      - |    -0.93   -1.28      40  -4.18..  1.61      30
+Brent down Glass/packaging 20d                 9   - |   1.55   3.70    67  -9.77 |       -      -      - |     0.26    0.25      56  -3.17..  3.03      99
+   Up picks excluding rebounds:
+Brent up-nonrebound Refinery 20d               4   - |   3.63   7.09    75 -10.49 |       -      -      - |     0.37   -0.84      50  -6.23..  7.28      94
+Brent up-nonrebound E&P 20d                    4   - |  -1.13  -0.76    50  -5.68 |       -      -      - |     0.63    0.75      50  -5.24..  6.25      35
+Brent up-nonrebound OMC 20d                    4   - |   1.30   2.23    50  -5.12 |       -      -      - |    -0.65   -0.56      50  -4.83..  3.55      88
+
+Per-event sector excess at 60 trading days (% points, gross); PENDING events excluded
+dir  month    entry           E&P Refiner     OMC Gas uti Fertili  Cement   Power   Autos  Pharma Textile    Tech Chemica    Food   Banks Steel/e Glass/p
+down 2018-11  2018-12-03     9.96  -16.44     nan    1.51    8.26    1.21    5.36   -5.20   14.09   12.47   -7.27   -6.72   -0.66    3.50   -4.49    4.38
+up   2019-01  2019-02-01     9.58   -8.37   -2.96    1.66   12.55   -4.87   -3.28   -3.93   -4.84   10.34   -6.97   -2.57   -6.26    9.47   -8.91    4.45
+down 2020-03  2020-04-01     3.46   -9.70    8.83   -4.28  -17.08   19.45  -20.31   18.04    1.25   -7.77   50.18    7.98   -1.89  -30.29   -1.14    8.39
+up   2020-05  2020-06-01   -29.35   34.05   -4.66  -13.36  -35.82    0.60  -17.98   39.97  -17.30    3.95   22.37   -7.92  -18.58  -10.13   14.78   14.87
+down 2020-09  2020-10-01   -14.65   14.81   -5.37  -35.63  -11.14   -0.51  -14.29   10.01   -8.99   10.80   36.03   -4.68    0.89   -6.89    0.50    3.85
+up   2020-11  2020-12-01   -13.22   65.30   39.97  -27.95  -14.90    5.78    0.63   -5.52  -15.81   16.45   47.74   -3.93  -13.69  -18.51    7.04  -16.89
+up   2021-02  2021-03-01    -8.10   -0.61  -11.39    8.53   -2.85   -9.21   -3.05    1.79  -11.95   -8.73   19.63   22.64   13.06   -6.12   -2.19    0.66
+up   2021-06  2021-07-01     7.04  -17.77   -0.53    3.48    3.24   -9.31    4.52   -4.42    8.35    4.81   11.56   -2.64    1.72   12.87   -1.39    0.17
+down 2021-11  2021-12-01    11.85   -2.88    5.65     nan   18.11   -4.75    4.51    1.79    1.40    2.57    3.72    2.85    0.99    6.96   -5.15    2.03
+up   2022-01  2022-02-01     5.22   13.86    0.41     nan   22.21   -5.58    0.36   -3.03   -2.50    4.67   -5.55   34.38  -12.70    0.39  -12.10    7.48
+up   2022-05  2022-06-01     1.98   -0.78    5.80     nan    2.59    4.50    9.83   -5.35    6.45   -6.28    2.59   -7.36   -2.45   -6.52    3.02    7.20
+down 2022-08  2022-09-01    -3.06    0.07   -4.24   16.43   -0.35    3.75    1.36   -6.67     nan   -8.10   14.04    4.32   -6.68    0.18   -9.38   -7.54
+down 2023-05  2023-06-01     9.19    6.33   44.08   -6.99  -13.06   -9.49    4.71    5.60  -16.65  -12.25   -5.07  -13.68   10.73   13.03   -7.12     nan
+up   2023-07  2023-08-01    -1.22    3.03    1.61    3.54   -0.05   -0.55   21.81   36.91   -7.70   -3.58   -7.12  -15.22  -12.43   -0.99    2.28     nan
+down 2024-05  2024-06-03     2.98  -16.48   -0.60  -13.71   21.73   -2.27   -4.77   -1.73   16.18   22.49   22.47  -10.60  -10.11    2.88  -10.55   -7.09
+down 2024-09  2024-10-01    25.27   33.03   49.25  212.67  -13.53    5.83  -25.18  -15.88   26.27  -24.43   -5.38    0.41    2.67  -16.72  -19.10  -25.08
+down 2025-04  2025-05-02    -9.24   -7.09   -5.03  -15.72    6.06   -4.68   -4.80   -9.41   -0.37   18.24  -17.13   -1.20  -14.56   24.39    5.10    7.00
+up   2026-03  2026-04-01   -12.69  -11.59   10.99   13.97  -12.82    0.37   57.20   -1.96  -13.08    7.94    2.75   -3.17  -10.28  -10.95   -6.55   32.54
+down 2026-05  2026-06-01    -2.19   71.90   -2.99   -2.60   -1.97    3.88   -7.73   -4.96   -6.33   -4.02   -2.26   -1.16   -5.53   -0.60   -0.11   -1.54
+up   2026-07  2026-08-03  PENDING: 52 days elapsed; excess so far Refinery  48.46, E&P   5.33, OMC  -0.74
+
+Small-basket ex-dates (bonus/cash; provisional table, ~2024-26 only) inside the 60d windows:
+   down 2018-11: none found
+   up   2019-01: none found
+   down 2020-03: none found
+   up   2020-05: none found
+   down 2020-09: none found
+   up   2020-11: none found
+   up   2021-02: OGDC cash 2021-04-09; FFC cash 2021-03-10
+   up   2021-06: FFC cash 2021-09-20
+   down 2021-11: none found
+   up   2022-01: OGDC cash 2022-03-07; FFC cash 2022-03-17
+   up   2022-05: FFC cash 2022-08-04
+   down 2022-08: OGDC cash 2022-10-14; OGDC cash 2022-11-04; FFC cash 2022-11-04
+   down 2023-05: FFC cash 2023-08-03
+   up   2023-07: OGDC cash 2023-10-17; FFC cash 2023-08-03
+   down 2024-05: FFC cash 2024-08-08
+   down 2024-09: OGDC cash 2024-10-16; OGDC cash 2024-11-06
+   down 2025-04: OGDC cash 2025-05-09; PPL cash 2025-05-09; FFC cash 2025-05-08; SNGP cash 2025-05-13
+   up   2026-03: OGDC cash 2026-05-11; PPL cash 2026-05-12; EFERT cash 2026-04-30; FATIMA cash 2026-04-08; FFC cash 2026-05-11
+   down 2026-05: EFERT cash 2026-08-07; FFC cash 2026-08-10
+   up   2026-07: MARI cash 2026-09-18; OGDC cash 2026-10-08; PPL cash 2026-10-15; ATRL cash 2026-10-09; EFERT cash 2026-08-07; FFC cash 2026-08-10
+
+Sector excess summary at 60 days. n = complete events; placebo = same n random month-start entries, same baskets, gross:
+row                                            n eps |   mean median  win%  worst | netmean netmed netwin | plc_mean plc_med plc_win   plc5-95 of median pctile
+Brent up E&P 60d                               9   - |  -4.53  -1.22    44 -29.35 |       -      -      - |     1.23    0.59      56  -5.97..  7.94      37
+Brent up Refinery 60d                          9   - |   8.57  -0.61    44 -17.77 |       -      -      - |     1.25   -0.97      44  -9.81..  8.26      56
+Brent up OMC 60d                               9   - |   4.36   0.41    56 -11.39 |       -      -      - |    -0.63   -1.84      44  -6.40..  3.27      66
+Brent up Gas utilities 60d                     7   - |  -1.45   3.48    71 -27.95 |       -      -      - |    -3.72   -5.64      29 -13.32..  2.60      96
+Brent up Fertilizer 60d                        9   - |  -2.87  -0.05    44 -35.82 |       -      -      - |     2.46    3.22      67  -5.86.. 11.56      23
+Brent up Cement 60d                            9   - |  -2.03  -0.55    44  -9.31 |       -      -      - |     0.50   -0.55      44  -6.29..  5.48      52
+Brent up Power 60d                             9   - |   7.78   0.63    67 -17.98 |       -      -      - |    -0.99   -1.84      44  -7.28..  5.36      70
+Brent up Autos 60d                             9   - |   6.05  -3.03    33  -5.52 |       -      -      - |    -0.09   -2.74      33  -5.78..  2.84      49
+Brent up Pharma 60d                            9   - |  -6.49  -7.70    22 -17.30 |       -      -      - |    -2.05   -3.28      33  -8.09..  1.87       6
+Brent up Textiles 60d                          9   - |   3.29   4.67    67  -8.73 |       -      -      - |    -0.59   -0.80      44  -6.91..  4.83      93
+Brent up Tech 60d                              9   - |   9.67   2.75    67  -7.12 |       -      -      - |     2.85    0.36      56  -3.92..  7.55      74
+Brent up Chemicals 60d                         9   - |   1.58  -3.17    22 -15.22 |       -      -      - |    -0.20   -0.95      44  -5.23..  3.69      17
+Brent up Food 60d                              9   - |  -6.85 -10.28    22 -18.58 |       -      -      - |    -0.51   -3.72      33  -7.59..  4.10       1
+Brent up Banks 60d                             9   - |  -3.39  -6.12    33 -18.51 |       -      -      - |     1.47    1.83      56  -4.63..  7.73       4
+Brent up Steel/engineering 60d                 9   - |  -0.45  -1.39    44 -12.10 |       -      -      - |    -2.77   -2.69      33  -8.91..  2.61      73
+Brent up Glass/packaging 60d                   8   - |   6.31   5.82    88 -16.89 |       -      -      - |    -0.60   -0.77      50  -7.27..  4.82      98
+Brent down E&P 60d                            10   - |   3.36   3.22    60 -14.65 |       -      -      - |     1.10    0.82      50  -5.96..  7.38      71
+Brent down Refinery 60d                       10   - |   7.35  -1.40    50 -16.48 |       -      -      - |     1.13   -1.80      40  -9.10..  6.06      54
+Brent down OMC 60d                             9   - |   9.95  -0.60    44  -5.37 |       -      -      - |    -0.61   -2.12      44  -5.97..  3.27      56
+Brent down Gas utilities 60d                   9   - |  16.85  -4.28    33 -35.63 |       -      -      - |    -3.64   -5.64      33 -12.22..  2.06      59
+Brent down Fertilizer 60d                     10   - |  -0.30  -1.16    40 -17.08 |       -      -      - |     2.44    3.02      60  -5.05.. 10.86      15
+Brent down Cement 60d                         10   - |   1.24   0.35    50  -9.49 |       -      -      - |     0.65   -0.90      40  -5.67..  5.26      64
+Brent down Power 60d                          10   - |  -6.11  -4.79    40 -25.18 |       -      -      - |    -1.19   -1.76      40  -6.33..  4.76      15
+Brent down Autos 60d                          10   - |  -0.84  -3.35    40 -15.88 |       -      -      - |    -0.06   -2.94      40  -5.97..  2.71      42
+Brent down Pharma 60d                          9   - |   2.98   1.25    56 -16.65 |       -      -      - |    -2.11   -3.28      33  -8.23..  1.44      94
+Brent down Textiles 60d                       10   - |   1.00  -0.73    50 -24.43 |       -      -      - |    -0.51   -0.93      40  -6.92..  4.83      53
+Brent down Tech 60d                           10   - |   8.93   0.73    50 -17.13 |       -      -      - |     2.90    0.56      50  -3.95..  6.47      51
+Brent down Chemicals 60d                      10   - |  -2.25  -1.18    40 -13.68 |       -      -      - |    -0.05   -0.95      40  -5.67..  3.21      43
+Brent down Food 60d                           10   - |  -2.42  -1.27    40 -14.56 |       -      -      - |    -0.71   -3.75      30  -7.21..  3.00      75
+Brent down Banks 60d                          10   - |  -0.36   1.53    60 -30.29 |       -      -      - |     1.31    1.83      60  -3.47..  6.99      46
+Brent down Steel/engineering 60d              10   - |  -5.14  -4.82    20 -19.10 |       -      -      - |    -2.75   -3.07      30  -8.39..  1.57      27
+Brent down Glass/packaging 60d                 9   - |  -1.73   2.03    56 -25.08 |       -      -      - |    -0.50   -1.34      44  -7.00..  5.04      75
+   Up picks excluding rebounds:
+Brent up-nonrebound Refinery 60d               4   - |  -7.69  -6.19     0 -17.77 |       -      -      - |     0.34   -1.78      50 -12.26.. 15.17      25
+Brent up-nonrebound E&P 60d                    4   - |  -2.94  -3.06    50 -12.69 |       -      -      - |     1.03    0.80      50  -8.50.. 11.61      25
+Brent up-nonrebound OMC 60d                    4   - |   1.22   2.64    50 -11.39 |       -      -      - |    -1.06   -1.52      50  -8.74..  6.21      83
+
+==============================================================================================================
+SECTION 9  DATA HANDLING NOTES
+==============================================================================================================
+method=crude. data/corporate_actions.csv present: False (prices.returns falls back to crude if absent).
+Returns are price-only; the crude method zeroes large ex-dividend drops and keeps small ones, so high-yield sectors (E&P, fertilizer, power, OMC) are understated. Dividends NOT added back (lesson 19).
+Sub-threshold bonus issues (e.g. 10% bonus = -9.1%) remain as fake losses; ex-dates listed above where found; returns not altered.
+Done.
