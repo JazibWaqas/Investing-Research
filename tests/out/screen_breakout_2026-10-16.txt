@@ -1,0 +1,41 @@
+raw panel last date 2026-10-16; adjusted panel last date 2026-10-16
+As of 2026-10-16  (eligible names: 124)
+
+(a) S3 entry: close above prior 252-session high (ranked by 63-session return)
+      close  high252   r63  r126  medTV_Rs_m  stop20 above
+PRL   107.0    105.4 1.399 2.145      2165.1    85.6   yes
+NRL   665.7    661.3 0.679 0.963      1256.0   532.6   yes
+ATRL 1219.1   1209.4 0.371 0.492       572.3   975.3   yes
+
+(b) HIGH52 entry: within 2% of the 252-session high (or above), 63-session return > 0, ranked by 63-session return
+      close  high252   r63  r126  medTV_Rs_m  stop20 above
+PRL   107.0    105.4 1.399 2.145      2165.1    85.6   yes
+NRL   665.7    661.3 0.679 0.963      1256.0   532.6   yes
+ATRL 1219.1   1209.4 0.371 0.492       572.3   975.3   yes
+
+Names fired per session (S3 / HIGH52 candidates), last 20 sessions
+  2026-09-21  S3   1  HIGH52   1
+  2026-09-22  S3   1  HIGH52   1
+  2026-09-23  S3   2  HIGH52   3
+  2026-09-24  S3   0  HIGH52   0
+  2026-09-25  S3   0  HIGH52   0
+  2026-09-28  S3   1  HIGH52   2
+  2026-09-29  S3   1  HIGH52   2
+  2026-09-30  S3   1  HIGH52   2
+  2026-10-01  S3   1  HIGH52   2
+  2026-10-02  S3   0  HIGH52   2
+  2026-10-05  S3   0  HIGH52   1
+  2026-10-06  S3   2  HIGH52   2
+  2026-10-07  S3   2  HIGH52   2
+  2026-10-08  S3   0  HIGH52   1
+  2026-10-09  S3   2  HIGH52   3
+  2026-10-12  S3   2  HIGH52   3
+  2026-10-13  S3   1  HIGH52   3
+  2026-10-14  S3   3  HIGH52   3
+  2026-10-15  S3   2  HIGH52   3
+  2026-10-16  S3   3  HIGH52   3
+
+For scale
+  2024-10-01  S3   6  HIGH52  11  eligible 94
+  2025-07-01  S3  11  HIGH52  16  eligible 114
+  2026-03-02  S3   0  HIGH52   0  eligible 130

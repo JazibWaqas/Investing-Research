@@ -38,7 +38,7 @@ UNIV = list(pd.read_csv(ROOT / "data" / "insider_universe.csv").symbol)
 drawn = UNIV   # the backtest universe (name kept from run 1, where it was a 22-symbol random draw)
 CONF = ("high", "medium")   # primary: price-checked or fully-read rows; robustness (b) uses "high" only
 
-TITLES = {"MR", "MRS", "MS", "DR", "MISS", "M", "MST", "SYED", "SHEIKH", "HAJI", "HAFIZ", "MIAN", "MIRZA", "SARDAR", "RAJA", "CH", "KHAWAJA"}
+TITLES = {"CEO", "CFO", "DIRECTOR", "EXECUTIVE", "CHAIRMAN", "MR", "MRS", "MS", "DR", "MISS", "M", "MST", "SYED", "SHEIKH", "HAJI", "HAFIZ", "MIAN", "MIRZA", "SARDAR", "RAJA", "CH", "KHAWAJA"}
 def norm(h):
     s = re.sub(r"[^A-Z ]", " ", str(h).upper().replace("-", " "))
     toks = [t for t in s.split() if t not in TITLES and len(t) > 1]
@@ -55,6 +55,15 @@ T = pd.DataFrame(dict(doc_id=R.document_id, line=R.groupby("document_id").cumcou
                       trade_date=pd.to_datetime(R.trade_date), shares=R.shares, price=R.price, value_rs=R.value_rs,
                       source=R.extraction_method, confidence=R.confidence, dup_of=R.duplicate_of.fillna(""), note=""))
 T["holder_norm"] = T.holder_name.map(norm)
+# OCR and spelling variants of one person: inside a symbol, a name whose tokens are a subset of a longer name's tokens (2+ tokens, or 1 token with a single longer match) is that longer name
+for sym, g in T.groupby("symbol"):
+    names = sorted(set(g.holder_norm) - {""}, key=lambda x: -len(x.split()))
+    canon = {}
+    for n in names:
+        tk = set(n.split())
+        sup = [m for m in names if len(m.split()) > len(tk) and tk <= set(m.split())]
+        canon[n] = canon.get(sup[0], sup[0]) if sup and (len(tk) >= 2 or len(sup) == 1) else n
+    T.loc[g.index, "holder_norm"] = g.holder_norm.map(lambda x: canon.get(x, x))
 # role fill: a person's role is a fact about the person; fill 'unknown' from the same holder's stated role in the same symbol
 known = T[T.role != "unknown"].groupby(["symbol", "holder_norm"]).role.agg(lambda s: s.value_counts().index[0])
 fill = [(s, h) in known.index for s, h in zip(T.symbol, T.holder_norm)]

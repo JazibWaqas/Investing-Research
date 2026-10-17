@@ -1,91 +1,91 @@
-# Insider cluster buying (PSX, disclosed insider trades)
+# Insider cluster buying (PSX, disclosed insider trades) - run 2, full universe
 
-Evidence date 2026-10-17 (data to 2026-10-16). Script `scripts/tests/insider_cluster_buying.py`, raw output `tests/out/insider_cluster_buying.txt` (every number below is from it), trade table `data/insider_trades.csv`, sample and parse notes `data/INSIDER_TRADES_NOTES.md`. Not committed.
+Evidence date 2026-10-18 (data to 2026-10-16). Script `scripts/tests/insider_cluster_buying.py`, raw output `tests/out/insider_cluster_buying.txt` (every number below is from it), trade table `data/insider_trades.csv` (built by `scripts/insider_run.py`), extraction rates and failure modes in `data/INSIDER_TRADES_NOTES.md`. Run 1 (22 random symbols, 497 hand-read PDFs, verdict "untestable at this size") is kept in `data/insider_trades_run1.csv`. Not committed.
 
-## Hypothesis
+## Hypothesis (pre-registered in run 1, unchanged)
 
 H1: when a second distinct insider buys in the open market within 30 days, the stock beats the market over the next 21, 63 and 126 sessions (comparisons: single buys; clusters net of insider sales). H2: sponsor and 10%-holder buys do better than director and CEO buys, which do better than executive buys. H3: a buy by someone who sold in the prior 180 days does worse than a clean buy. H4: insider sales, single and clustered, are followed by underperformance (one-sided).
 
+## What changed from run 1
+
+- Universe: 195 symbols (the 129 in `quarterly_eps.csv` plus KMI names whose trailing 60-session median traded value was above Rs5m at any time since 2019; the EPS file holds 129 symbols, not 136) instead of 22 random ones.
+- Document-id fix: `fetch_announcements.py` matched `.pdf` case-sensitively. After the fix and a re-fetch of every month from 2019-01 to 2026-10, 231 insider_trade rows (2019 on) gained a document id (2019: 10, 2020: 55, 2021: 73, 2022: 23, 2023: 16, 2024: 29, 2025: 25, 2026: 0); 119 of them are in the universe. The portal is also case-sensitive on download: `.PDF` links only resolve with the capital extension.
+- Every PDF was read by a program, not by eye: pdfplumber for a text layer, Windows OCR for scans, then a row parser. Hand reading is replaced by a measured, imperfect extractor (see Caveats).
+- Rules unchanged: event time is the announcement stamp, entry at the first tradable close, Rs5m liquidity screen at entry, bonus/split-adjusted price returns, excess over the equal-weight Rs5m market, 0.5% round trip, 21/63/126 sessions, overlap removal, 1,000-sample same-symbol placebo, IS 2019-2023 and OOS 2024 on. New: a confidence flag on every parsed row (high, medium, low); the tests use high and medium, a robustness row uses high only. Holder names are matched order-free, and a name that is a token subset of a longer name in the same symbol is merged with it (OCR and spelling variants).
+
 ## Data
 
-- Announcements: 13,120 insider_trade rows, 50.8% with a PDF; titles carry no direction (12,946 untagged), so everything comes from the PDF.
-- Sample fixed in advance: 22 whole symbols drawn at random (HCAR, ISL, BIPL, CNERGY, FECTC, WASL, KOHC, GGL, CRTM, BFAGRO, SPL, TELE, EFERT, FFC, NETSOL, GLAXO, SSGC, WAVES, GCWL, RPL, CEPB, CPPL; 609 rows, 62.9% with a PDF) plus every KMI-list filing with a PDF from 2026-06-18 (block a). 497 PDFs read: 113 from a text layer, 384 by eye (373 scans, 11 garbled), 0 unreadable, 9 without trade lines.
-- 973 trade lines, 96 duplicate copies removed, 877 unique. Qualifying (market or unstated mode): 473 buys, 202 sells; 88 distinct buyers and 60 distinct sellers. Excluded buys: rights 24, other 28 (preference shares, REIT futures, scheme allotments), gifts 22, off-market 20, ESOP 10, bonus 5, tender 2.
-- All 672 priced qualifying lines fall inside the raw close range of the stock around the trade date, so the transcription is price-consistent.
-- Filing lag (announcement minus trade date): median 2 days, 90th percentile 10. 5.4% of the sample filings are stamped at or after 15:30 (5.1% of all 6,169 filings with a PDF since 2019).
-- Title tags (174) cannot be cross-checked: one tagged row is on a sampled PDF and it has no trade lines.
-- Spot check of 5 rows with no PDF on the portal: 4 have none, 1 (CEPB 2019-07-31) has a PDF. Cause: the scraper matched `.pdf` case-sensitively. A re-fetch of the 22 symbols finds 23 hidden insider PDFs (ISL 18); the 2026 window has none. They are outside the fixed 500 cap.
-
-## Method
-
-Event time is the announcement stamp. Entry is the close of the first tradable session (before 15:30 on a trading day with a close: that day; otherwise the next observation; dropped if none within 5 rows). Names below Rs5m trailing median traded value at entry are dropped. Returns are bonus and split adjusted price returns, excess over the equal-weight Rs5m market, minus 0.5% round trip. Horizons are 21, 63 and 126 rows. Overlapping events in a symbol are removed per horizon. Placebo: 1,000 samples with one random same-symbol day within +-365 days per event (liquid, full horizon, same cost). Insider-announcement units fold repeats by the same holder within 30 days. Split: in-sample entry 2019-2023, out-of-sample 2024 to 2026-10-16. Backtest uses the 22 drawn symbols only.
-
-Events before drops: H1 cluster 16 (illiquid at entry 7, usable 9), net-of-sales 15 (6, 9), singles 82 (32, 50), H2 sponsor 30 (21, 9), director 53 (15, 38), executive 17 (3, 14), H3 round-trip 9 (0, 9), clean 98 (41, 57), H4 single 60 (5, 55), H4 cluster 8 (0, 8). Overlap removal and horizon drops are in the raw output; none were lost to missing prices.
+- 13,120 insider_trade announcements; 6,892 (52.5%) have a PDF. In the universe since 2019: 5,445 rows, 2,549 with a PDF (46.8%; by year 2019 200/582, 2020 313/682, 2021 347/759, 2022 268/585, 2023 236/611, 2024 368/613, 2025 537/899, 2026 280/714). Rows without a PDF are title-only on the portal and cannot be recovered.
+- 2,548 of the 2,549 PDFs were read (1 is a 404 on the portal, 1 failed to open): 730 text layer, 1,817 OCR. 1,602 (63%) gave at least one trade row; 946 gave none (notices, rights certificates, broker statements, layouts the parser misses).
+- 4,617 trade rows, 471 of them copies of a trade already filed (flagged, not counted). Confidence: high 1,482, medium 2,129, low 1,006. Qualifying lines (market or unstated nature, buy or sell, unique, high or medium): 1,169 buys, 1,496 sells; 311 distinct buyers and 178 distinct sellers (symbol, holder). By announcement year buys/sells: 2019 71/16, 2020 77/135, 2021 141/619, 2022 95/15, 2023 76/330, 2024 272/134, 2025 319/187, 2026 118/60.
+- Roles: sells are 1,043 of 1,496 "unknown" role (the 2021 and 2023 sells are dominated by long broker-style listings with no role), so H2 and role-based reading rest on buys.
+- Extraction accuracy against the 497 hand-read PDFs of run 1 (match on trade date and share count): 479 of 840 hand-read lines recovered (57%); 406 of 672 open-market lines (60%); in a random 50-PDF sample 46 of 80 lines (26 of 48 PDFs with every line). Precision of parsed rows against the hand reads: high 93%, medium 85%, low 48%. Extra rows beyond the hand reads are mostly broker-list lines and column-order errors. 2,658 of 2,665 qualifying priced lines sit inside the raw close range of the stock around the trade date.
+- Filing lag (announcement minus trade date): median 2 days, 90th percentile 10. 5.7% of read filings are stamped at or after 15:30.
 
 ## Results (63 sessions, net of 0.5%; p = share of placebo medians at least the event median, at most for H4)
 
-Rows with n below 20 or fewer than 8 entry months are labelled insufficient to conclude in the raw output. In this table only H1 singles (all, IS), H2 director (all), H3 clean (all) and H4 single (all) escape that label; every other row carries it.
+Rows with n below 20 or fewer than 8 entry months are labelled insufficient to conclude in the raw output.
 
-| Row | Split | n | Symbols | Months | Mean | Median | Win | Worst (symbol, entry) | Month-clustered median / win | Placebo median / win | p |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| H1 cluster | all | 7 | 6 | 6 | -1.0% | +1.1% | 57% | -33.2% (GGL, 2021-12-02) | -1.2% / 50% | -2.9% / 43% | 0.264 |
-| H1 cluster | IS | 3 | 3 | 3 | -14.5% | -6.9% | 0% | -33.2% (GGL, 2021-12-02) | -6.9% / 0% | -3.0% / 36% | 0.669 |
-| H1 cluster | OOS | 4 | 4 | 3 | +9.2% | +8.0% | 100% | +1.1% (SPL, 2026-01-12) | +8.6% / 100% | -0.6% / 49% | 0.150 |
-| H1 net-of-sales | all | 7 | 5 | 6 | -1.7% | -3.6% | 43% | -33.2% (GGL, 2021-12-02) | -3.8% / 33% | -2.8% / 44% | 0.565 |
-| H1 net-of-sales | OOS | 3 | 3 | 2 | +11.9% | +8.6% | 100% | +7.4% (KOHC, 2026-03-13) | +11.1% / 100% | -1.9% / 48% | 0.170 |
-| H1 singles | all | 40 | 15 | 35 | -2.3% | -4.3% | 35% | -33.2% (RPL, 2021-01-06) | -1.6% / 40% | -3.8% / 39% | 0.576 |
-| H1 singles | IS | 23 | 12 | 21 | -2.8% | -1.8% | 30% | -33.2% (RPL, 2021-01-06) | -1.6% / 33% | -3.1% / 39% | 0.261 |
-| H1 singles | OOS | 17 | 10 | 14 | -1.7% | -5.2% | 41% | -26.9% (BFAGRO, 2026-03-18) | -2.5% / 50% | -4.8% / 38% | 0.523 |
-| H2 sponsor_substantial | all | 6 | 4 | 6 | -0.7% | -2.4% | 50% | -26.9% (BFAGRO, 2026-03-18) | -2.4% / 50% | -2.3% / 42% | 0.501 |
-| H2 director_ceo | all | 24 | 12 | 21 | -1.1% | -2.6% | 38% | -33.2% (RPL, 2021-01-06) | -1.6% / 38% | -4.6% / 38% | 0.258 |
-| H2 director_ceo | OOS | 9 | 6 | 7 | +2.2% | +5.3% | 56% | -16.4% (NETSOL, 2024-09-27) | +3.1% / 57% | -5.0% / 38% | 0.055 |
-| H2 executive | all | 13 | 8 | 12 | -1.3% | -1.0% | 46% | -29.8% (GGL, 2021-12-13) | +0.6% / 50% | -1.3% / 45% | 0.481 |
-| H3 round-trip | all | 6 | 3 | 6 | +2.6% | -1.0% | 50% | -16.4% (NETSOL, 2024-09-27) | -1.0% / 50% | -4.4% / 40% | 0.285 |
-| H3 clean | all | 38 | 16 | 31 | -2.4% | -3.9% | 37% | -33.2% (RPL, 2021-01-06) | -1.8% / 39% | -3.8% / 40% | 0.510 |
-| H4 single | all | 35 | 15 | 26 | -0.5% | -2.5% | 43% | -33.2% (RPL, 2021-01-06) | -2.6% / 38% | -5.2% / 36% | 0.814 |
-| H4 single | OOS | 16 | 10 | 11 | -2.8% | -6.3% | 44% | -20.2% (HCAR, 2024-05-17) | -6.1% / 27% | -5.0% / 37% | 0.389 |
-| H4 cluster | all | 7 | 3 | 5 | +5.6% | +2.8% | 71% | -15.7% (NETSOL, 2025-09-24) | +1.6% / 60% | -6.4% / 33% | 0.891 |
+| Row | Split | n | Symbols | Mean | Median | Win | Worst (symbol, entry) | Month-clustered median / win | Placebo median / win | p |
+|---|---|---|---|---|---|---|---|---|---|---|
+| H1 cluster | all | 37 | 17 | +2.6% | -0.4% | 46% | -33.2% (GGL, 2021-12-02) | -0.1% / 48% | -0.6% / 49% | 0.473 |
+| H1 cluster | IS | 20 | 9 | -2.7% | -3.9% | 35% | -33.2% (GGL, 2021-12-02) | -3.1% / 38% | -1.4% / 46% | 0.811 |
+| H1 cluster | OOS | 17 | 11 | +8.8% | +5.0% | 59% | -19.8% (SYM, 2025-01-27) | +2.2% / 62% | +0.4% / 51% | 0.137 |
+| H1 net-of-sales | all | 28 | 13 | +2.6% | -2.2% | 43% | -33.2% (GGL, 2021-12-02) | -3.6% / 37% | -0.1% / 49% | 0.799 |
+| H1 net-of-sales | OOS | 13 | 7 | +8.8% | +5.0% | 54% | -21.3% (MARI, 2025-04-17) | -4.2% / 38% | +1.8% / 55% | 0.210 |
+| H1 singles | all | 97 | 38 | +5.6% | +2.3% | 57% | -33.2% (RPL, 2021-01-06) | +0.4% / 51% | -1.6% / 46% | 0.021 |
+| H1 singles | OOS | 38 | 24 | +6.5% | +0.5% | 50% | -26.9% (BFAGRO, 2026-03-18) | -3.3% / 39% | -0.4% / 48% | 0.381 |
+| H2 sponsor_substantial | all | 5 | 5 | -5.7% | -8.7% | 20% | -13.3% (POWER, 2020-10-13) | -8.7% / 20% | -2.2% / 42% | 0.793 |
+| H2 director_ceo | all | 42 | 15 | +8.2% | +2.5% | 57% | -33.2% (GGL, 2021-12-02) | +2.0% / 54% | -1.3% / 47% | 0.099 |
+| H2 director_ceo | OOS | 16 | 8 | +16.8% | +8.3% | 62% | -20.0% (SHFA, 2026-03-09) | +8.5% / 58% | -0.0% / 50% | 0.029 |
+| H2 executive | all | 59 | 17 | +6.4% | +1.8% | 54% | -22.7% (SPEL, 2024-09-20) | +2.8% / 62% | +0.9% / 52% | 0.341 |
+| H3 round-trip | all | 23 | 9 | +1.4% | -0.6% | 48% | -22.7% (SPEL, 2024-09-20) | +0.5% / 53% | +1.2% / 53% | 0.682 |
+| H3 clean | all | 113 | 38 | +5.3% | +1.8% | 55% | -33.2% (RPL, 2021-01-06) | +1.1% / 52% | -1.5% / 46% | 0.033 |
+| H4 single | all | 102 | 40 | +5.3% | -2.7% | 46% | -63.6% (PICT, 2023-10-13) | -2.1% / 46% | -0.8% / 48% | 0.119 |
+| H4 single | OOS | 58 | 31 | +6.3% | -5.2% | 40% | -31.3% (TRSM, 2025-12-17) | -5.4% / 42% | -0.6% / 48% | 0.010 |
+| H4 cluster | all | 33 | 15 | -3.1% | -3.4% | 39% | -45.5% (PICT, 2023-10-26) | -4.2% / 35% | -0.5% / 48% | 0.077 |
 
-The full grid (21, 63 and 126 sessions, all, IS and OOS, 96 rows) is in the raw output. All-period medians and p at the other horizons:
+The full grid (all, IS and OOS at 21, 63 and 126 sessions) is in the raw output. All-period medians and p at the other horizons:
 
 | Row | 21: n, median, p | 126: n, median, p |
 |---|---|---|
-| H1 cluster | 8, +3.2%, 0.045 | 7, -4.4%, 0.333 |
-| H1 singles | 50, -1.3%, 0.308 | 31, -13.7%, 0.909 |
-| H2 sponsor / director / executive | 9, -4.2%, 0.714 / 31, -0.3%, 0.151 / 14, +0.1%, 0.315 | 5, -4.4%, 0.397 / 20, -7.8%, 0.431 / 11, -4.3%, 0.715 |
-| H3 round-trip / clean | 8, -2.4%, 0.618 / 48, -0.2%, 0.049 | 5, +5.1%, 0.208 / 30, -11.7%, 0.891 |
-| H4 single / cluster | 42, -3.2%, 0.296 / 8, -3.3%, 0.449 | 29, -7.3%, 0.469 / 5, -12.9%, 0.112 |
+| H1 cluster | 44, -0.9%, 0.621 | 33, -5.3%, 0.932 |
+| H1 singles | 117, -0.5%, 0.303 | 83, -0.0%, 0.521 |
+| H2 sponsor / director / executive | 7, -3.2%, 0.722 / 51, -1.4%, 0.603 / 81, +0.4%, 0.197 | 4, -12.8%, 0.851 / 33, +2.7%, 0.270 / 45, +2.5%, 0.295 |
+| H3 round-trip / clean | 34, -1.1%, 0.748 / 149, -0.5%, 0.246 | 18, -1.8%, 0.846 / 92, -0.3%, 0.397 |
+| H4 single / cluster | 137, -3.1%, 0.006 / 40, -2.4%, 0.047 | 83, -4.2%, 0.019 / 27, -2.6%, 0.173 |
 
-H2 difference in medians, sponsor minus director (1,000 label shuffles, one-sided): 21 sessions -3.9%, p 0.912 (n 9 and 31); 63 sessions +0.3%, p 0.501 (n 6 and 24); 126 sessions +3.4%, p 0.405 (n 5 and 20). With and without ASL and AHCL the numbers are identical because neither was drawn into the backtest.
+H2 difference in medians, sponsor minus director (1,000 label shuffles, one-sided): 21 sessions -1.8%, p 0.586 (n 7 and 51); 63 sessions -11.2%, p 0.841 (n 5 and 42); 126 sessions -15.5%, p 0.888 (n 4 and 33). Dropping ASL and AHCL changes nothing.
 
-Concentration at 63 sessions: H1 cluster events by year 2021: 2, 2022: 1, 2025: 1, 2026: 3, largest month (2026-03) 29%; the top 3 events sum +35.6% against a negative total (-6.9%), so the sum is carried by a few winners. H4 cluster top 3 events are 158% of the total.
+Concentration at 63 sessions: H1 cluster events by year 2019: 2, 2020: 5, 2021: 9, 2022: 4, 2024: 4, 2025: 8, 2026: 5; the top 3 events sum +192% against a total of +95%, so the cluster mean is carried by three winners (the median is negative). H2 director_ceo and H4 single are in the same position (top 3 are 105% and 114% of the total).
 
 ## Robustness (H1 cluster, 63 sessions)
 
 | Variant | n | Median | Win | p | OOS n, median |
 |---|---|---|---|---|---|
-| Entry at the D+1 close | 7 | +0.8% | 57% | 0.187 | 4, +5.7% |
-| Market-mode buys only | 7 | +1.1% | 57% | 0.221 | 4, +8.0% |
-| Excluding entries within 10 trading days after a result | 4 | -2.9% | 50% | 0.326 | 1, +1.1% |
+| Entry at the D+1 close | 37 | -3.2% | 43% | 0.869 | 17, +4.9% |
+| Market-mode buys only | 31 | +1.1% | 52% | 0.376 | 15, +5.0% |
+| Excluding entries within 10 trading days after a result | 28 | -0.2% | 46% | 0.541 | 11, +5.0% |
+| High-confidence rows only | 23 | +1.8% | 61% | 0.534 | 10, +6.0% |
 
-5 of the 9 usable H1 cluster events (56%) entered within 10 trading days after a result in the same name, so post-results timing is a real confound. Removing them leaves 4 events.
+15 of 47 usable H1 cluster events (32%) entered within 10 trading days after a result in the same name.
 
 ## Current list (completing announcement 2026-07-18 to 2026-10-16, KMI names)
 
-- H1 buy cluster: one. SHFA, completed 2026-08-06 15:11. Members: Zeeshan Bin Ishtiaque (CEO, director_ceo) bought on 07-10, 07-13, 07-14, 07-15 and 07-16 (1,850 at 530.91, 1,800 at 536, 1,850 at 525.27, 1,929 at 522.36, 1,900 at 532; about Rs1.0m a day); Hubert (executive) bought 200 at 516 on 08-04 (Rs103,200). No qualifying sales in the 30 days. Entry close 2026-08-06; net excess to the 2026-10-16 close -1.8%. It was liquid at entry but is not at Rs5m on the trailing 60 days now.
-- H4 sell clusters: two. FCL, completed 2026-08-21: Muhammad Shahzad Mian (executive) sold 881,000 at 28.02 (Rs24.7m) and a second executive sold 5 shares; net excess -4.5%, liquid. MEBL, completed 2026-09-22: Shahzad Abdullah (executive) sold 23,334 at 550.68 (Rs12.8m) after Irfan Siddiqui's spouse sold 10 shares (Rs5,648); net excess +2.5%, liquid.
-
-The count rule makes these clusters of one real insider plus a token trade each time.
+- H1 buy clusters: two, both illiquid at Rs5m on the trailing 60 days. EMCO, completed 2026-08-07 10:28: Ahsan Suhail and Bushra Ahsan bought on 08-05 (71,500 and 217,500 shares at 52.43, Rs3.7m and Rs11.4m), roles not read; net excess to 2026-10-16 -25.8%. SHFA, completed 2026-09-17 14:07: director/CEO-level buyers on 09-14 (Zeeshan Bin Ishtiaque 22,160 at 449.47, Rs10.0m; Taimoor Shah 6,624; Aamer Nazir Ahmad 4,016) plus an executive on 08-27/28 and 09-15; two director sells in the window (Manzoor Ul Haq Qazi, 1,620 shares); net excess to date +5.6%; liquid at entry, not now.
+- H4 sell cluster: one. MEBL, completed 2026-09-22: Shahzad Abdullah (executive) sold 23,334 at 550.68 (Rs12.8m) after a spouse-level sale of 10 shares (Rs5,648); net excess +2.5%.
+- Run 1's hand-read SHFA cluster of 2026-08-06 (Zeeshan Bin Ishtiaque's five July buys plus an executive) is not reproduced by the parser: the July PDFs were read as no-trade or low-confidence. The current list is therefore a floor, not a census.
 
 ## Verdict
 
-Not supported, and untestable at this sample size. H1 had 16 clusters in 22 symbols, 9 usable after the liquidity screen and 7 after overlap removal. Every H1 row is "insufficient to conclude". The out-of-sample half (4 events: median +8.0%, win 100%) is the only encouraging number, against in-sample -6.9% and 0% (3 events) and a placebo median of -0.6%; p is 0.150 and 0.264 for the whole period. At 21 sessions the cluster p is 0.045 on 8 events, but a clean-buy row at the same horizon also gives p 0.049 on 48 events, so a low p there looks like placebo drift in these names, not insiders. H2, H3 and H4 show no ordering: sponsors do not beat directors (p 0.501 at 63 sessions), round-trip buyers are not worse than clean buyers, and sales are not followed by underperformance (H4 single p 0.814). The current SHFA cluster is not an act-on signal: the out-of-sample H1 result is four events, the placebo test does not reject, and the cluster is one repeat buyer plus a Rs103,200 purchase.
+Still not supported. n is now 37 H1 cluster events (47 usable, 37 after overlap removal) in 17 symbols, up from 7 in 6, and the result is flat: median -0.4%, win 46%, p 0.473 at 63 sessions, with -3.9% in sample and +5.0% out of sample (17 events, p 0.137). The mean (+2.6%) comes from three winners. Clusters are no better than single buys (H1 singles median +2.3%, p 0.021, but clean buys read the same, +1.8%, p 0.033, which says the placebo drift of these names, not the cluster, is what is being measured). At 21 sessions the cluster p is 0.621 (run 1's 0.045 did not survive). H2: sponsors have only 5 events and did worse than directors; directors and CEOs show the one encouraging row (OOS median +8.3%, p 0.029, 16 events, insufficient to conclude, and the all-period p is 0.099). H3: round trips are no worse than clean buys. H4 is the only one with a signal: single sales are followed by underperformance (21 sessions median -3.1%, p 0.006, 137 events; OOS 63 sessions -5.2%, p 0.010), which fits the hypothesis but sits next to a +5.3% mean driven by outliers (PICT -63.6%). Not an act-on rule for buys; the sell side is worth a follow-up with better role and name data.
 
 ## Caveats
 
-- Missing filings: 49.2% of insider rows have no PDF, and 23 more in the drawn symbols were hidden by a scraper bug (ISL 2020 is the worst case). Clusters are undercounted and singles misclassified when the second filing is invisible. Whether filings are missing at random by year or filer is unknown.
-- Sample and parse: 22 symbols drive the result, 77% of the PDFs were read by eye, and the eye-read share varies by year (2019 48%, 2024 100%). The price check catches wrong prices, not wrong names.
-- Survivorship: prices exist only for names still listed on 2026-10-16, which inflates buys and hides sales before collapses; the equal-weight market is flattered.
-- Price-only returns: bonus and split adjusted, no dividends (cash dividends are complete only from Nov 2024), so high-yield names look worse than on total return.
-- Regime and overlap: 2023-2025 was a market rerating; events share market paths; month-clustered figures are shown. One repeat buyer pair (Ahmad Shafi with Khalid Bashir or Muhammad Anwar at CRTM, 2021 to 2025) supplies 7 of the 16 clusters.
-- Hypothesis H2 came from ASL and AHCL in 2026; both sit outside the backtest.
+- Extraction recall is about 60%, and 37% of PDFs give no row. Clusters are undercounted wherever a filing was missed or misread, and singles are misclassified when the second filing was lost. The loss is not random: it concentrates in wrapped-date tables, multi-line cells, REIT-unit futures notices and broker statements.
+- Names come from OCR and are matched by token sets; spelling variants that are not subsets still split one person into two (hiding a cluster) and two people sharing tokens can merge. 1,043 of 1,496 qualifying sells have no role, so H2 and H4 role cuts are thin.
+- Missing filings: 53% of insider announcements carry no PDF at all.
+- Survivorship: prices exist only for names still listed on 2026-10-16.
+- Price-only returns: bonus and split adjusted, no dividends (cash dividends are complete only from Nov 2024).
+- Regime and overlap: 2023-2025 was a market rerating; events share market paths; month-clustered figures are shown. One repeat buyer pair (Ahmad Shafi with Khalid Bashir at CRTM) still supplies several clusters.
+- Multiple comparisons: about 100 rows are printed; with p cut-offs near 0.05, two or three of them will look good by chance. The 21-session H4 single (p 0.006) is the only one that clears that bar comfortably.

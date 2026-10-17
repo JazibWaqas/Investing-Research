@@ -1,4 +1,6 @@
-# PICKS.md — positions, limits and triggers (version 2, frozen 18 Oct 2026, 13:00 PKT; prices are 16 Oct closes)
+# PICKS.md — positions, limits and triggers (version 3, frozen 18 Oct 2026, 16:30 PKT; prices are 16 Oct closes)
+
+> Version 3 change: the discretionary catalyst satellite is replaced by a mechanical 52-week-high breakout sleeve, after the active-trading study (tests/fixed_capital_runs.md, oracle_and_good_case.md, winners_case_control.md, active_trading_codex.md; synthesis in knowledge/playbooks/active_trading.md). Two independent implementations found it the only active rule that held up across windows: 2.5x to 3.3x on a fixed Rs50k in the three bull windows, 0.8x to 1.1x in the two hike-regime windows, against 1.8x for the index in 2024 to 2026. Stock-level prediction of winners failed (out-of-sample precision 5.8% vs a 4.5% base rate, same as a shuffled placebo). The catalyst triggers become paper trades, scored.
 
 Rests on: Phase 1 sector map, Phase 2 tests, Phase 3 walk-forward and rebenchmark, thirteen underwriting cards with red team (knowledge/companies/), the deals playbook with the complete 2018 to 2026 opportunity set, and two independent reviews of version 1 (knowledge/playbooks/picks_redteam_codex.md, consultant_review.md). Not yet in: the full insider-trade extraction (running); it changes the sponsor-buying trigger's base rate, nothing else.
 
@@ -6,7 +8,7 @@ Capital: Rs50,000 now, Rs50,000 in about 15 days, then Rs50,000 a month. Finqala
 
 ## The decision in five lines
 
-Buy three large, cheap, dividend-paying KMI names on Monday with 75% of the money and keep buying them every month. Hold them through a 40 to 50% fall. Keep 25% for one dated bet a month, bought only on a written trigger at a price you will not chase; if nothing triggers in four weeks it goes into the core. Nothing we tested makes 30% a year; the one thing that reliably loses is stopping the deposits. The honest expectation is the index's 11 to 14% a year, with the upside coming from holding a concentrated book through the next sector move, not from timing it.
+Buy three large, cheap, dividend-paying KMI names on Monday with 75% of the money and keep buying them every month. Hold them through a 40 to 50% fall. Keep 25% for the breakout sleeve: each month's Rs12,500 buys the top-ranked KMI name making a new 52-week high, held with a 20% trailing stop, at most three names; if nothing fires, it goes into the core. Nothing we tested makes 30% a year; the one thing that reliably loses is stopping the deposits. The honest expectation is the index's 11 to 14% a year, with the upside coming from holding a concentrated book through the next sector move, not from timing it.
 
 ## How the book is built, and why
 
@@ -38,9 +40,17 @@ Total Rs37,467; Rs12,533 stays for the satellite. The Codex review would rather 
 
 **Paper position, frozen, scored monthly against FABL:** MEBL, Meezan Bank, 23 shares at Rs545.82 (Rs12,554). ROE 34%, P/B 3.3x, Q3 on 22 Oct 11:00 (our call EPS Rs12.5 to 15, Rs8 interim). If FABL's Q3 fires a killer and MEBL's does not, MEBL replaces FABL as the bank on the next deposit.
 
-## Satellite: Rs12,500 reserved, deployed only on these triggers
+## Satellite: the breakout sleeve (25%, mechanical, frozen rules)
 
-Buy the first that triggers; the rest wait for next month's ticket. Each buy gets a frozen row first.
+**Rule (from tests/oracle_and_good_case.md system S3 and the Codex HIGH52 variant; no parameter may change until 10 trades are scored).** Universe: KMI All Share names with trailing 60-session median traded value above Rs5m. Entry signal: close above the prior 252-session high (adjusted closes, scripts/screen_breakout.py); among names that fire, rank by 63-session return. Each month the Rs12,500 ticket buys the top-ranked name not already held, at the next session's close, up to three names; a fourth signal waits. Exit: a close 20% below the highest close since entry, sold the next session; no other exit, no target, no opinion. If no name fires on the deposit day, the ticket goes to the core. Costs 0.5% round trip. The sleeve's rupee path is logged monthly against the KMI All Share total-return index.
+
+**What to expect.** In the two windows that resemble today (a hike regime, few names at highs: three fired on 16 Oct against 11 to 16 in mid-2025), the rule returned 0.8x to 1.1x with 18 to 44% drawdowns. It earned its 2.5x to 3.3x in windows where the 6-month T-bill sat below the policy rate and the fire count was in double digits. We run it now anyway, at bounded size, because an out-of-sample record is the only thing that will tell us whether it is real; the fire count and the regime are logged with every trade so the record can be split later.
+
+**Today's screen (16 Oct close): PRL Rs107.0 (prior high 105.4, 63-session return +140%, stop 85.6), NRL Rs665.7 (high 661.3, +68%, stop 532.6), ATRL Rs1,219.1 (high 1,209.4, +37%, stop 975.3).** The rule's first buy is PRL: 116 shares at about Rs107, Rs12,400, stop at a close below Rs85.60. My own cards say avoid PRL (normalised EPS about Rs10, a large rights issue likely, Q1 result Tuesday 20 Oct after the close) and ATRL (+0.5% expected). That disagreement is the point: the sleeve follows the rule, the dissent is logged in DECISIONS.md, and both are scored. If PRL closes below Rs85.60 the position is sold without discussion.
+
+## Catalyst triggers, now PAPER (scored, not bought)
+
+These four were version 2's live triggers. They are kept as paper trades: when a trigger fires, a frozen row is added and the outcome scored, but no money moves unless the breakout sleeve has no signal that month and the trigger has fired, in which case the ticket may go to the triggered name instead of the core (log the choice).
 
 **1. GHGL, Ghani Glass, Rs39.22.** Trigger: a Q1 FY27 board notice appears on PSX (none as of 18 Oct; the 28 Oct date in the calendar is the AGM), the result shows EPS at or above Rs1.60 with gross margin at or above 27% and tax at or below 25%, and the price is at or below Rs37 (the Rs1.00 final goes ex 21 Oct, so a post-result buyer misses it). Buy 330 shares, about Rs12,200. Net cash about Rs3.9bn after declared dividends, 5.4x earnings, the only debt-free glass name in a sector down 30% in a year. Red team: the base case is a re-rating to 6x without a driver, the final dividend was cut from Rs1.50 to Rs1.00, the stock fell 15% in two days after last October's result. Outcomes on 330 shares at Rs37: bear Rs29 (0.25) −Rs2,640; base Rs44 (0.50) +Rs2,310; bull Rs52 (0.25) +Rs4,950; dividends about Rs2.1 net a share after the missed final. Card +15%, red team +8 to 10% at Rs39, more at Rs37. Killer: EPS below Rs1.3; trade debts rising again.
 
@@ -56,11 +66,11 @@ Buy the first that triggers; the rest wait for next month's ticket. Each buy get
 
 ## Orders and the next deposits
 
-Monday 19 Oct: FABL 137 at limit Rs93, OGDC 42 at limit Rs305, FFC 23 at limit Rs548. If a limit does not fill in the first two sessions, raise it to the ask on Wednesday; the entry price of one deposit does not matter, the position does. Rs12,500 stays for triggers 1 to 4. Anything not triggered by 16 Nov goes into the core name furthest below one third.
+Monday 19 Oct: FABL 137 at limit Rs93, OGDC 42 at limit Rs305, FFC 23 at limit Rs548. If a limit does not fill in the first two sessions, raise it to the ask on Wednesday; the entry price of one deposit does not matter, the position does. Sleeve: PRL 116 shares at market on Monday's close (the rule trades the session after the signal), stop Rs85.60 on a closing basis. If PRL gaps above Rs115 at the open, the rule still buys; it does not negotiate.
 
-Second Rs50,000 (about 1 Nov): Rs37,500 into the core, to the names furthest below one third, with limits tightened to the add prices (FABL Rs86, OGDC Rs265, FFC Rs510) only if that name's Q3 print fired a killer; otherwise at market. Rs12,500 to the satellite by the same triggers. If the MPC cuts on 26 Oct (we put 2% on it), the regime flips to EASING: stop adding banks, start the EASING list (autos, cement, steel, glass, textiles, OMC, tech by six-month momentum, cheapest sound name in each).
+Second Rs50,000 (about 1 Nov): Rs37,500 into the core, to the names furthest below one third, with limits tightened to the add prices (FABL Rs86, OGDC Rs265, FFC Rs510) only if that name's Q3 print fired a killer; otherwise at market. Rs12,500 to the breakout sleeve: run scripts/screen_breakout.py on the deposit day and buy the top-ranked name not already held (NRL or ATRL if they still fire and PRL is held), else the core. If the MPC cuts on 26 Oct (we put 2% on it), the regime flips to EASING: stop adding banks, start the EASING list (autos, cement, steel, glass, textiles, OMC, tech by six-month momentum, cheapest sound name in each).
 
-Every month after: Rs37,500 core to the name furthest below target, Rs12,500 satellite or core by the four-week rule. Review the satellite's size at the six-month mark against the scorecard.
+Every month after: Rs37,500 core to the name furthest below target, Rs12,500 to the breakout sleeve or the core. Review the sleeve at 10 scored trades: keep it at 25% if its hit rate and median beat the random-rotation placebo in tests/oracle_and_good_case.md, cut it to 10% if not.
 
 ## Watchlist with entry triggers
 

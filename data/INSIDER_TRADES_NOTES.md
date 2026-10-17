@@ -1,4 +1,49 @@
-# Insider trades table: sample, coverage, parse rates
+# Insider trades table (run 2, full universe) and run 1 notes
+
+Built 2026-10-18 for `tests/insider_cluster_buying.md`. Not committed.
+
+## Run 2: files and pipeline
+
+- `data/insider_trades.csv`: 4,617 rows, one per parsed trade line. Columns: symbol, filing_datetime (Asia/Karachi, naive), trade_date, insider_name, role (sponsor, substantial_shareholder, ceo, director, executive, associate, or blank), direction (buy, sell, unknown), shares, price, value_rs, nature (open_market, unstated, rights, esop, gift, transfer, ipo, buyback, bonus), document_id, extraction_method (pdf_text or ocr), confidence (high, medium, low), duplicate_of (document that filed the same trade first; blank if first). The table also keeps copies flagged by duplicate_of; the test excludes them.
+- `data/insider_docs.csv`: one row per PDF read (2,548): method, characters extracted, rows parsed, error.
+- `data/insider_universe.csv`: the 195 symbols (129 in `quarterly_eps.csv` plus KMI names ever above Rs5m trailing 60-session median traded value since 2019-01-01; a name that was liquid only in earlier years is included).
+- `data/insider_trades_run1.csv`: the run-1 hand-read table (22 random symbols), unchanged.
+- `scripts/fetch_announcements.py` (regex fixed), `scripts/refetch_ids.py` (one-off re-fetch of every month 2019-01 to 2026-10), `scripts/fetch_insider_pdfs.py` (downloads to `data/raw/filings/insider/`, 1 request per second per process, resumes, falls back to `.PDF`), `scripts/insider_text.py` (pdfplumber, else Windows OCR via `winocr` at 200 dpi), `scripts/insider_extract.py` (row parser), `scripts/insider_run.py` (builds the two CSVs; extracted text is cached in `data/raw/insider_text/`). OCR: tesseract is not installed; `rapidocr-onnxruntime` was installed first and worked but took 12 to 20 seconds a page on this machine, so Windows' built-in OCR (0.4 seconds a page) is used. Poppler is absent; pages are rendered with pdfplumber. The rapidocr and pdf2image packages stay installed in the venv, unused.
+
+## Coverage by year (universe, insider_trade announcements since 2019-01-01)
+
+| Year | Rows | With PDF | PDFs read | PDFs with at least one trade row | Table rows | Buy | Sell | Direction unknown |
+|---|---|---|---|---|---|---|---|---|
+| 2019 | 582 | 200 | 200 | 58% | 310 | 227 | 30 | 53 |
+| 2020 | 682 | 313 | 313 | 50% | 514 | 212 | 287 | 15 |
+| 2021 | 759 | 347 | 347 | 67% | 1,015 | 250 | 705 | 60 |
+| 2022 | 585 | 268 | 268 | 49% | 236 | 140 | 69 | 27 |
+| 2023 | 611 | 236 | 236 | 53% | 788 | 365 | 375 | 48 |
+| 2024 | 613 | 368 | 368 | 74% | 671 | 326 | 324 | 21 |
+| 2025 | 899 | 537 | 536 | 72% | 775 | 418 | 331 | 26 |
+| 2026 | 714 | 280 | 280 | 66% | 308 | 181 | 108 | 19 |
+
+Years are announcement years. Totals: 5,445 rows, 2,549 with a PDF, 2,548 read, 4,617 table rows (2,119 buy, 2,229 sell, 269 unknown). The 231 document ids gained from the regex fix (119 in the universe) are included. Rows without a PDF (53%) are title-only on the portal.
+
+## Extraction rate
+
+- By method, PDFs with at least one trade row: OCR 58% of 1,817, text layer 76% of 730; overall 63% (1,602 of 2,548). One PDF cannot be opened.
+- Confidence: high = price inside the stock's raw high/low range (12% slack) and name, role and direction all present; medium = price checked but name or role missing, or price unverifiable (gift, rights); low = price outside the range, no price, or implausible size. 1,482 high, 2,129 medium, 1,006 low.
+- Accuracy against the 497 hand-read PDFs of run 1 (match on trade date and share count): 479 of 840 hand-read lines recovered (57%), 406 of 672 open-market lines (60%); 50-PDF random sample: 46 of 80 lines, 26 of 48 PDFs complete. Parsed rows that match a hand-read line: high 93% (201 of 215), medium 85% (197 of 233), low 48% (81 of 169).
+- The 497 PDFs are in the table's input, so this accuracy is a floor check on the parser used to build the table, not a held-out test; the parser was tuned on these.
+
+## Known failure modes
+
+- Dates split over two or three lines ("29" / "June" / "2026" or "November" / "10, 2020"): only the "dd-mm-" / "yyyy" and "dd-mm- ... / yyyy" wraps are repaired.
+- Tables where the date cell is on a different line from the share and rate cells; the parser pulls numbers from the next or previous line, which can shift columns (shares read as a rate, a cumulative holding read as shares).
+- Garbled text layers (a dozen CRTM and similar PDFs) and OCR noise in names and years ("202s"); a name misread by a letter splits one person in two.
+- REIT-unit and futures-market notices (TPLRF1), rights certificates, auditor letters and broker statements: units or a different structure, mostly produce no rows or low-confidence rows.
+- Role is blank for 1,043 of 1,496 qualifying sells; boilerplate in the cover letter lists every role, so only the row's own neighbourhood is used.
+- Names in the test are matched order-free and merged when one is a token subset of another within a symbol; the table itself keeps the name as read.
+- Only the first six pages of each PDF are read.
+- The 497 run-1 hand reads also caught lines the parser misses; for the current screen (2026-07-18 on) the SHFA July cluster of run 1 is not recovered.
+
+# Run 1 notes (22 random symbols, hand-read) - kept for provenance
 
 Built 2026-10-17 for `tests/insider_cluster_buying.md` (script `scripts/tests/insider_cluster_buying.py`, raw output `tests/out/insider_cluster_buying.txt`). Not committed.
 
