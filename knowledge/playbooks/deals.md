@@ -130,3 +130,56 @@ Also outside the table: FFC's offer for Agritech (Dec 2024) drew only 7.85m of 1
 ## 6. Could not verify
 
 EPCL offer size and price from a primary filing (17.5% is from ProPakistani); NICL, SBL, AMBL and BML prices; CHCC and AGP buyback progress; whether Liberty Daharki acts in concert with Noventra; PKGP and LPL buyback prices; BIPL and UNITY acceptance; PRL rights (none found, but some filings are scanned images).
+
+## Base rate, complete set (18 Oct 2026)
+
+Written 18 Oct 2026 after the critic's item 4 (`knowledge/playbooks/critic_review.md`: the base rate must include failures). Data: `data/deals_history.csv` (built by `scripts/build_deals_history.py`, statistics by `scripts/deals_history_stats.py`). PDFs are in `data/raw/filings/deals/`. Deal facts come from the PSX announcement archive (filtered titles, 628 hits since 2018) and press; prices are raw PSX closes, with returns computed on the bonus-adjusted price-return panel where the stock is in it. Entry is the close of the first trading day after the PAI (or PAO) date. Exit is the close on the completion date (the filing date of the result or fulfilment notice, which runs a few days before or after payment) or on the withdrawal date. Costs are not deducted.
+
+**The set.** 75 takeover PAIs (53 distinct targets) from Jan 2018 to Sep 2026, plus 9 sponsor delistings listed separately. Renewals of the same bid are one row, except K-Electric (Shanghai Electric renewed its PAI every 180 days from 2018 to 2024; only the first leg is measured). Competing bids for one target are separate rows.
+
+| Status | Count |
+|---|---|
+| Completed | 27 |
+| Withdrawn | 28 |
+| Lapsed (TRG: offer unwound by SECP and the Sindh High Court) | 1 |
+| Unknown (no PAO and no withdrawal found) | 12 |
+| Pending (ESBL, SBL, AMBL, EPCL, BML, ASC, NICL) | 7 |
+
+**Headline base rates**
+- **Completion: 27 of 56 resolved PAIs (48%).** Counting the 12 unknowns as failures it is 27 of 68 non-pending (40%); counting them all as completions it is 57%. For PAIs from 2021 on it is 23 of 44 resolved (52%).
+- **Every failure happens before the PAO.** 28 PAIs reached a PAO. 25 completed, 1 lapsed (TRG), 2 are unknown, and none was withdrawn. All 28 withdrawals came before a PAO. So the odds are about 50% at the PAI and about 90% or better after the PAO.
+- **Timing.** Median 207 days from PAI to completion (quartiles 135 and 305; range 46 to 373; n = 27, of which 7 dates are approximate). Withdrawals come at a median of 183 days, which is the 180-day PAO deadline. The 302 days quoted in section 5 is the median of the 11 large deals only.
+- **Premium of the offer to the pre-PAI close.** Median +20.8%, mean +29% (n = 20 offers with a known price; 16 of 20 are positive). Completed deals only: median +13.7% (n = 19). Three offers were below the market price (HCL twice, at 73.3 and 47.7 against about 127 and 115; Nimir Resins 25 against 31). The +40% in section 5 comes from a subset of large multinational exits.
+
+**Return to a holder who buys the close the day after the PAI and holds to completion or withdrawal** (price return, no tender assumed, so the unaccepted-stub price is what you hold):
+
+| Group | n | Mean | Median | Win rate | Worst |
+|---|---|---|---|---|---|
+| All resolved | 54 | +7.2% | **-1.2%** | 48% | -64.3% (SPLC) |
+| Completed | 27 | +18.5% | +8.0% | 63% | -30.5% (DNCC) |
+| Withdrawn or lapsed | 27 | -4.0% | -5.7% | 33% | -64.3% |
+| KMI member at the time, all resolved | 19 | +12.6% | +5.3% | 58% | -25.9% |
+| Excess over KSE100 price return, same windows (2020 on) | 46 | -6.6% | **-14.3%** | 39% | -88.2% |
+
+The index itself returned a median +11.8% over the same windows (n = 46), so the PAI-day-after buyer lagged the market by a median 14 points. Completed deals alone beat the index by a median 8.8% (n = 25).
+
+If every share could be tendered at the offer price (an upper bound, since offers are pro rata): n = 19, mean +20.4%, median +12.5%, win rate 84%, worst -58.5% (HCL 2023, offer below market).
+
+**Return to a holder who buys the day after the PAO and holds to completion** (completed deals only, since no deal reached a PAO and was withdrawn): n = 24, mean +1.9%, median **+1.1%**, win rate 54%, worst -35.8% (DNCC), best +35.6%. KMI only: n = 11, median +1.4%. The PAO removes the failure risk and nearly all of the return.
+
+**After completion** (n = 19 and 15 with an offer price): the price one month later is a median 5.1% below the offer, and six months later 2.3% below (means are +22% and +80%, pulled up by two re-rated names). This is a smaller sag than the -13% and -14% in section 5; the larger sample dilutes it.
+
+**Sponsor delistings at a PSX-set buy-back price** (PGCL, AYTM, AKZO, WYETH, ADOS, PSMC, PMPK, GLPL, SCL; n = 8 with prices): buying the day after the first delisting filing and tendering at the final price gave a mean +78%, median +64%, win rate 75%, worst -15%, in a median 205 days. The gain comes from PSX raising the sponsor's proposed price (GLPL Rs216 to Rs700, PMPK Rs664 to Rs1,300, PSMC Rs406 to Rs609, WYETH Rs1,284 to Rs2,000), and the stock often runs before the day-after entry. This is a different, thin opportunity set; it is not in the 75.
+
+**Corrections to the table in section 5**
+- Shell: the 17 Jul 2023 PAI was filed by Pakistan Refinery and Air Link, not Wafi. Wafi's PAI was 31 Oct 2023, so the Shell timeline is 343 days, not 449. PRL/Air Link has no PAO or withdrawal in the archive. A Prax Overseas PAI (16 Oct 2023) was withdrawn on 8 Nov 2023.
+- Tri-Pack: the PAI archive timestamp is 18 Feb 2021 10:35, not 17 Feb.
+
+**What this changes.** The 11-deal table had no failures, which is why section 5 read as a near-certain exit. The full set says the PAI is a coin flip (40% to 57% completion), and a PAI-day-after buyer lost to the index. The edge, if any, is in a PAI where an SPA is already signed (EPCL's case), and the sample cannot separate that case: signed-SPA status is not coded for the 75. Do not use the 70% completion estimate for EPCL on the strength of the 11; the whole-set rate is 48% before the PAO and about 90% after.
+
+**Could not find or verify**
+- Outcomes for 12 PAIs: DATM (2018), GLOT (2018), Mian Textile (2020), Summit Bank (offer announced Mar 2022, completion not found), Worldcall (2020), ESBL (2022), SPLC (Mar and Dec 2022), Shell/PRL (2023), Bela (PAO 16 May 2025), ZIL/TWF (2025), SLGL (2025).
+- Offer prices for 53 of 75 PAIs (only 22 are known), mostly scanned filings (135 of 240 downloaded PDFs have no text layer; there is no OCR here) and PAIs that were withdrawn before a price existed. Acceptance counts for most completed deals.
+- Any PAI whose archive title does not say PAI, PAO, takeover or acquire (for example a bare "Disclosure under Takeover Regulations" with no follow-up). The SG Power / Crescent Star PAI (withdrawn 5 Jan 2026) has no PAI date and is excluded. The SECP has no public takeover list; searches for one found none. The archive before 2021 is thinner, so the 2018 to 2020 rows (17 PAIs, 4 completed) probably undercount completions.
+- Completion dates are the result or fulfilment filing, not payment. Seven are approximate (BIPLS 2021, UDPL, SMTM, HCL x2, BGL, DNCC).
+- Whether signed-SPA bids behave differently, since SPA status was not coded.

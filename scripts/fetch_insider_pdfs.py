@@ -1,6 +1,7 @@
 """Download every insider_trade PDF (2019-01-01 on) for the symbols in data/insider_universe.csv into data/raw/filings/insider/.
 Resumes (skips files already there). 1 request/second. Files are only ever read as data, never executed.
-Usage: fetch_insider_pdfs.py"""
+Usage: fetch_insider_pdfs.py [rev]   (rev walks the list oldest first, so a second copy can share the work at 2 requests/second in total)"""
+import sys
 import time
 from pathlib import Path
 
@@ -19,7 +20,9 @@ u = ann[(ann.klass == "insider_trade") & (ann.datetime >= "2019-01-01") & ann.sy
 ids = sorted(set(u.document_ids.str.split(",").explode()), key=int, reverse=True)
 todo = [i for i in ids if not (OUT / f"{i}.pdf").exists()]
 print(len(ids), "ids,", len(todo), "to fetch", flush=True)
-for k, i in enumerate(todo):
+for k, i in enumerate(todo[::-1] if "rev" in sys.argv else todo):
+    if (OUT / f"{i}.pdf").exists():
+        continue
     time.sleep(1)
     status = "fail"
     for attempt in range(3):
