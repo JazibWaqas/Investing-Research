@@ -1,0 +1,71 @@
+doc_id,symbol,type,value,book_start,ex_date,sub_price,note
+267484,TSBL,split,10,,2025-12-29,,Rs10 to Re1; book closure Sat 27 Dec 2025; credit notice 2025-12-29
+249722,AHCL,split,10,,2025-03-27,,Rs10 to Re1; trading resumed 27 Mar 2025
+281277,LSEFSL,split,10,,2026-08-31,,Rs10 to Re1; book closure Sat 29 Aug 2026
+169604,NRSL,split,0.5,,2021-08-17,,consolidation Rs5 to Rs10 par (half the shares); trading resumed 17 Aug 2021
+273911,BAFL,split,2,,2026-04-20,,Rs10 to Rs5; book closure Sat 18 Apr 2026
+258026,KTML,split,5,,2025-09-15,,Rs10 to Rs2; book closure Sat 13 Sep 2025
+254561,IMS,split,10,,2025-06-16,,Rs10 to Re1; trading resumed Mon 16 Jun 2025
+249947,LUCK,split,5,,2025-04-28,,Rs10 to Rs2; trading resumed Mon 28 Apr 2025
+118073,PPL,cash,1.5,2018-10-16,,,final FY18 Rs1.50 (15%); book closure 16-26 Oct 2018
+118073,PPL,bonus,0.15,2018-10-16,,,15 bonus per 100; book closure 16-26 Oct 2018
+134988,PPL,cash,2.0,2019-10-18,,,final FY19 Rs2.00 (20%); book closure 18-28 Oct 2019
+134988,PPL,bonus,0.2,2019-10-18,,,20 bonus per 100; book closure 18-28 Oct 2019
+153275,PREMA,bonus,0.1,2020-11-14,,,10% bonus; revised book closure 14-20 Nov 2020
+192913,PREMA,bonus,0.1,2022-11-15,,,10% bonus; revised book closure 15-21 Nov 2022
+201354,COLG,cash,20.0,2023-02-14,,,interim Rs20 (200%) FY23; book closure 14-16 Feb 2023
+201354,COLG,bonus,0.45,2023-02-14,,,9 bonus per 20 (45%); book closure 14-16 Feb 2023
+158983,GGL,bonus,0.1,2021-01-26,,,10% bonus; register date close of business 25 Jan 2021 (closure revised later in doc 159961)
+210369,GATM,bonus,0.2,2023-06-22,,,20% interim bonus; closure 22-23 Jun 2023
+210177,ILP,cash,3.0,2023-06-19,,,interim Rs3.00 (30%); closure 19-20 Jun 2023
+210177,ILP,bonus,0.5,2023-06-19,,,50 bonus per 100; closure 19-20 Jun 2023
+210372,MTL,bonus,0.5,2023-06-24,,,1 bonus per 2 (50%); closure 24-25 Jun 2023
+209622,MFL,cash,0.5,,,,interim Re0.50 (5%) declared 31 May 2023; no bonus; closure dates not on page 1
+171201,MEBL,bonus,0.15,,,,15% bonus and Rs1.50 cash; seed rows give ex 2021-09-09
+190591,MEBL,bonus,0.1,,,,10% bonus and Rs1.75 cash; seed rows give ex 2022-08-22
+151741,MEBL,bonus,0.1,,,,10% bonus board 17 Aug 2020; dates on page 2 unread
+130765,MEBL,bonus,0.1,,,,10% bonus and Re1 cash (10%) May 2019; dates on page 2 unread
+117763,WAVES,bonus,,2018-10-05,,,interim bonus; revised closure 5-12 Oct 2018; ratio not in letter
+134251,MTL,bonus,0.125,,,,12.5% bonus (1 per 8) FY19; dates not on page 1
+172365,JVDC,bonus,0.2,,,,20% bonus board 23 Sep 2021; dates not on page 1
+173454,AIRLINK,bonus,0.075,,,,7.5% bonus board 4 Oct 2021 AGM 28 Oct 2021; dates not on page 1
+192153,ILP,bonus,0.04,,,,4% bonus board 15 Sep 2022 AGM 18 Oct 2022; dates not on page 1
+210410,BERG,bonus,0.2,,,,20% interim bonus (1 per 5) 13 Jun 2023; dates not on page 1
+122342,MARI,bonus,0.1,,,,10% bonus approved at AGM 18 Oct 2018 (OGDC material info); dates not in letter
+118047,GTYR,bonus,,2018-10-25,,,revised closure 25 Oct-2 Nov 2018 final cash dividend and bonus; ratio not in letter
+145317,HINOON,bonus,0.1,,,,10 per 100 board resolution 31 Mar 2020
+146574,AVN,bonus,0.1,,,,10% bonus board 24 Apr 2020 AGM 29 May 2020
+152816,FEROZ,bonus,0.2,,,,20 per 100 board resolution 24 Sep 2020
+191200,AGIL,bonus,0.25,,,,25% bonus (1 per 4) board 26 Aug 2022
+165180,AVN,bonus,0.2,,,,20% bonus board 20 Apr 2021 AGM 26 May 2021
+184452,AVN,bonus,0.25,,,,25% bonus board 1 Apr 2022 AGM 29 Apr 2022
+207472,AVN,bonus,0.15,,,,15% bonus board 27 Apr 2023 AGM 29 May 2023
+228746,AVN,bonus,0.1,,,,10% bonus board 6 Apr 2024 AGM 29 Apr 2024
+209859,CEPB,bonus,0.8,,,,80% interim bonus board 2 Jun 2023; closure 11-12 Jun 2023; register close 10 Jun 2023
+208946,GATI,cash,3.0,,,,interim Rs3.00 (30%) board 25 May 2023
+208946,GATI,bonus,1.0,,,,100% interim bonus board 25 May 2023
+183753,HINOON,bonus,0.1,,,,10 per 100 board resolution 16 Mar 2022
+210223,HINOON,bonus,0.15,,,,15% interim bonus; board 9 Jun 2023; register 19 Jun 2023 close (closure dates cut off)
+175784,ICL,bonus,0.18063754,2021-11-11,,,18.063754% bonus; closure 11-18 Nov 2021
+210538,IMAGE,bonus,0.15,2023-06-24,,,15% interim bonus; closure 24-25 Jun 2023
+210360,MIRKS,bonus,2.0,2023-06-21,,,200% interim bonus; closure 21-22 Jun 2023
+206582,OCTOPUS,bonus,0.15,,,,15% bonus board 26 Apr 2023 AGM 26 May 2023
+209365,SNAI,bonus,0.65,2023-06-19,,,65% interim bonus; closure 19-21 Jun 2023
+270984,NBP,cash,35.0,,,,final FY25 Rs35 (350%) announced 24 Feb 2026; closure dates not on page 1
+180433,KAPCO,cash,4.0,2022-02-09,,,interim Rs4.00 (40%); closure 9-11 Feb 2022
+142634,BAFL,cash,2.0,,,,final FY19 Rs2.00 (20%) announced 13 Feb 2020; closure dates not on page 1
+210440,TPLP,cash,2.0,2023-06-21,,,interim Rs2 (20%); closure 21-22 Jun 2023
+172008,TGL,cash,12.0,,,,final FY21 Rs12 (120%) announced 18 Sep 2021; bonus nil; closure dates not on page 1
+096212,AVN,cash,1.0,2017-04-18,,,final FY16 Re1 (10%); closure 18-25 Apr 2017
+096212,AVN,bonus,0.25,2017-04-18,,,25 per 100; closure 18-25 Apr 2017
+201976,BAHL,cash,7.0,,,,final FY22 Rs7.0 (70%) announced 15 Feb 2023 AGM 21 Mar 2023; closure dates not on page 1
+101225,AHL,cash,10.0,,,,final FY17 Rs10 (100%) announced 31 Jul 2017
+257914,AHL,cash,10.0,,,,final FY25 Rs10 (100%) announced 18 Aug 2025
+142591,AKBL,cash,1.5,2020-03-20,,,final FY19 Rs1.50 (15%); closure 20-27 Mar 2020
+155975,GHGL,cash,6.5,,,,interim Rs6.5 (65%) announced 28 Oct 2020 with Q1 results
+181091,EPQL,cash,6.0,,,,final FY21 Rs6 (60%) announced 8 Feb 2022 AGM 22 Mar 2022
+234758,EPQL,cash,3.5,,,,first interim FY24 Rs3.5 (35%) announced 1 Aug 2024
+096092,HINOON,cash,8.5,,,,final FY16 Rs8.50 (85%) announced 16 Mar 2017
+096092,HINOON,bonus,0.12,,,,12 per 100 announced 16 Mar 2017
+224587,SNBL,cash,3.0,2024-03-01,,,30% cash dividend; closure 1-8 Mar 2024
+163908,SPWL,cash,2.5,2021-04-19,,,final FY20 Rs2.50 (25%); closure 19-26 Apr 2021

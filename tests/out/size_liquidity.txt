@@ -1,0 +1,95 @@
+Panel (2480, 456), window 2017-01-02 to 2026-10-16 (9.79 yrs). Liquid names per day, mean: 108
+
+== Index price returns
+kse100     2017-01-02 to 2026-10-16: +245.0%  (+13.5% a year)
+kmi30      2017-01-02 to 2026-10-16: +192.4%  (+11.6% a year)
+kmiallshr  2017-01-02 to 2026-10-16: +186.8%  (+11.4% a year)
+
+== (b) rebalancing: daily-rebalanced EW liquid (crude): +44.1% (+3.8% a yr); mean daily 0.0286%, median 0.0704%
+monthly-rebalanced EW liquid (buy-and-hold within month): +68.1% (+5.4% a yr); n months 118
+buy-and-hold EW of the 122 names liquid in Jan 2017 (no rebalance): mean cum +86.6%, median name +14.5%
+annual-rebalanced EW (names liquid each Jan, held the year, no rebalance): +79.0%
+liquid name-days 261143; mean daily name return 0.0291%, median -0.1493%
+daily EW arithmetic mean 0.0286% vs log mean 0.0151%: drag 3.4% a year
+
+== (d) corporate-action handling
+data/corporate_actions.csv exists: True
+crude zeroed 434 moves since 2017: 60 up, 374 down
+  in liquid names: 123 zeroed, 1 up
+EW daily, NO fix at all (fake crashes left in): +21.0%
+EW daily, crude but zeroed up-moves restored: +56.2%
+EW daily, PROVISIONAL total-return adjustment (462 actions, unverified table; includes cash dividends): +54.5%
+
+== (c) buckets by trailing 60d median traded value (1 = least liquid, top = most), liquid universe (>Rs5m)
+
+3 buckets, liquid universe, months 118, mean names/month 107
+        months mean_m median_m  win_m      cum    ann  n_namemonths name_median name_win
+bucket                                                                                  
+1          118  +1.1%    -0.1%  48.3%  +120.2%  +8.4%          4263       -1.1%    45.4%
+2          118  +0.7%    -0.4%  49.2%   +47.6%  +4.0%          4182       -1.1%    45.1%
+3          118  +0.6%    -0.1%  48.3%   +35.4%  +3.1%          4228       -0.7%    47.1%
+spread top-bottom monthly: mean -0.45%, median -0.38%, t -1.22, months top>bottom 44.1%, mean x12 -5.4%
+placebo (200 random bucket draws): spread mean -0.022%, sd 0.260%, 95% band [-0.514%, +0.520%]; real -0.450%, share of placebos at or below real 4.0%
+
+5 buckets, liquid universe, months 118, mean names/month 107
+        months mean_m median_m  win_m      cum     ann  n_namemonths name_median name_win
+bucket                                                                                   
+1          118  +1.3%    -0.4%  48.3%  +184.1%  +11.2%          2579       -0.9%    45.7%
+2          118  +0.8%    -0.2%  49.2%   +68.1%   +5.4%          2513       -1.1%    45.4%
+3          118  +0.5%    -0.9%  46.6%   +12.0%   +1.2%          2512       -1.3%    44.8%
+4          118  +0.8%    +0.3%  51.7%   +66.2%   +5.3%          2513       -1.1%    44.8%
+5          118  +0.6%    +0.1%  50.8%   +26.2%   +2.4%          2556       -0.4%    48.4%
+spread top-bottom monthly: mean -0.72%, median -0.28%, t -1.66, months top>bottom 46.6%, mean x12 -8.7%
+placebo (200 random bucket draws): spread mean -0.024%, sd 0.341%, 95% band [-0.631%, +0.682%]; real -0.723%, share of placebos at or below real 1.5%
+
+3 buckets, wider universe (>Rs1m median traded value), mean names/month 162
+        months mean_m median_m  win_m      cum     ann  n_namemonths name_median name_win
+bucket                                                                                   
+1          118  +1.2%    +0.5%  51.7%  +201.4%  +11.9%          6404       -0.9%    45.7%
+2          118  +0.9%    -0.3%  48.3%   +78.6%   +6.1%          6324       -1.1%    45.3%
+3          118  +0.7%    +0.2%  50.0%   +44.7%   +3.8%          6366       -0.8%    46.5%
+spread top-bottom monthly -0.56%, t -1.92, months top>bottom 42.4%
+
+Yearly tercile returns (liquid universe, compounded monthly; 2026 to 16 Oct)
+       bottom  middle     top top-bottom EW all liquid  KSE100 wide top-bottom
+2017   -19.3%  -27.4%  -20.8%      -1.5%        -22.4%  -16.1%           +1.3%
+2018    -8.4%   -7.9%  -16.7%      -8.3%        -10.9%   -9.0%          -11.2%
+2019    -0.1%   -1.0%  -13.3%     -13.2%         -4.6%   +9.9%           -6.3%
+2020   +39.7%  +29.4%  +42.9%      +3.2%        +37.6%   +7.4%          +12.9%
+2021    -0.1%   -1.6%  -21.1%     -20.9%         -8.0%   +1.9%          -11.7%
+2022   -31.3%  -31.2%  -23.9%      +7.4%        -28.8%   -9.4%           -8.9%
+2023   +36.0%  +58.2%  +47.7%     +11.8%        +47.3%  +53.0%           -4.4%
+2024  +103.5%  +53.9%  +84.3%     -19.1%        +80.4%  +78.0%          -10.5%
+2025   +22.3%  +30.6%  +18.4%      -3.8%        +23.9%  +51.2%          -23.7%
+2026    -8.1%  -20.0%  -14.4%      -6.4%        -14.2%   -4.4%          -14.7%
+top beat bottom in 3 of 10 years; wide universe 2 of 10; top beat EW-all in 5 of 10; KSE100 beat EW liquid in 8 of 10
+mean yearly spread -5.1%, median -5.1%; ex-2026 partial -5.0%
+annualised compounded: bottom +8.4%, middle +4.0%, top +3.1%
+cumulative since 2017: bottom +120.2%, middle +47.6%, top +35.4%
+
+== (e) KSE100 concentration, members point-in-time from 2021-04-01
+KSE100 index price return 2021-04-01 to 2026-10-16: +274.6%
+EW of KSE100 members (monthly rebal): +104.0%
+traded-value-weighted KSE100 members (proxy for cap weights, monthly): +63.4%
+same, excluding the 10 largest by traded value each month: +82.6%
+top-10 share of traded-value weight (mean) 56%; their monthly contributions sum to +39.6% of +68.8% total (simple sums)
+Caveat: real KSE100 weights are free-float market cap; the repo has no share counts, so traded value is a stand-in.
+EW liquid (whole panel, monthly) over same window: +86.1%
+
+== KMI30 members EW vs EW liquid KMI All Share (monthly rebal, point in time)
+from 2020-07-13:
+  EW KMI All members that are liquid (81 names): +99.2% (+11.6% a yr)
+  EW all KMI All members, no liquidity filter (229 names): +334.8%; KMIALLSHR index +259.3%
+  EW KMI30 members (28 names): +139.3% (+15.0% a yr); KMI30 index +307.1%
+     KMI30 EW KMIAll liquid EW    diff
+2020   +29.7%           +26.8%   +2.9%
+2021   -10.7%            -9.6%   -1.2%
+2022   -24.4%           -30.9%   +6.5%
+2023   +52.5%           +46.1%   +6.4%
+2024   +52.4%           +73.8%  -21.3%
+2025   +22.2%           +16.9%   +5.3%
+2026    -3.7%           -15.2%  +11.5%
+  KMI30 beat KMI-liquid in 5 of 7 years; monthly diff mean +0.23%, t 0.92
+from 2019-01-28:
+  EW KMI All members that are liquid (74 names): +98.6% (+9.3% a yr)
+  EW all KMI All members, no liquidity filter (221 names): +378.9%; KMIALLSHR index +236.3%

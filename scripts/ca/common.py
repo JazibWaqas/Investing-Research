@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 import prices  # noqa: E402
 
-T1_SWITCH = pd.Timestamp("2026-03-09")   # book-closure starts on/after this: ex = start - 1 trading day; before: start - 2
+T1_SWITCH = pd.Timestamp("2026-03-05")   # book-closure starts on/after this: ex = start - 1 trading day; before: start - 2
 LAST_PX = None
 
 

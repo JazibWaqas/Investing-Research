@@ -10,7 +10,8 @@ CAP = 400
 
 
 def downloaded():
-    return {p.stem for p in FIL.glob("*.pdf")}
+    """Doc ids this build downloaded (the cap counts these only; the folder may hold other sessions' files)."""
+    return set(LOG.read_text().split()) if LOG.exists() else set()
 
 
 def fetch(ids):
@@ -28,6 +29,8 @@ def fetch(ids):
         try:
             psx_api.download_document(i, FIL / f"{i}.pdf")
             have.add(i)
+            with open(LOG, "a") as f:
+                f.write(i + chr(10))
         except Exception as e:  # noqa: BLE001
             print("FAIL", i, repr(e)[:100], file=sys.stderr)
     return [str(i).zfill(6) for i in ids if str(i).zfill(6) in have]
