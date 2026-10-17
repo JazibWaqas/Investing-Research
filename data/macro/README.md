@@ -43,3 +43,27 @@ Source: World Bank Pink Sheet, https://thedocs.worldbank.org/en/doc/74e8be41ceb2
 ## Other files found, not pulled
 
 SBP `Forex_Arch.xlsx` (https://www.sbp.org.pk/assets/document/Forex_Arch.xlsx) has weekly and month-end liquid FX reserves from 2011; raw copy in `data/raw/macro/forex_arch.xlsx`. SBP easydata and `kibor-rates-<date>.pdf` offer KIBOR but only daily PDFs.
+
+## fipi_lipi.csv (investor-type flows, added 2026-10-17)
+
+Source: scstrade.com `FIPILIPI.aspx/loadmainsumdetails` (Standard Capital Securities, which republishes NCCPL FIPI/LIPI; nccpl.com.pk itself is Cloudflare-blocked). Fetched by `scripts/fetch_fipi_lipi.py`, one POST per business day.
+
+- Cadence: daily, 2017-01-02 to 2026-10-16, 2,413 trading days, 26,355 rows. Long format: `date, investor_type, buy_usd_mn, sell_usd_mn, net_usd_mn, source_url`. Sell is stored as a positive number (the source prints it negative).
+- Units: USD million, converted by the source at its own daily rate. Total value across all markets (regular, future, odd lot etc.), not regular market only. Net sums to about zero across types each day.
+- Types: foreign (overseas pakistani, foreign corporates, foreign individual) = FIPI; local (individuals, companies, banks / dfi, mutual funds, insurance companies, nbfc, broker proprietary trading, other organization) = LIPI. Rows for a type are absent on days with no activity (foreign individual 2,260 days; insurance starts 2017-02-08).
+- Gaps: five weekdays return a server error and are missing: 2017-06-02, 2023-01-19, 2023-06-05, 2023-08-28, 2025-07-30. Weekday holidays return empty and are skipped.
+- Not captured: per-sector and per-market splits (the other endpoints `loadfipiInvestor`, `loadlipi`, `loadfipi` on the same page have them).
+
+## MTS (margin trading system)
+
+No history found. scstrade.com only serves the current day's PDF (`research/Research Reports/General/MTS Report.pdf`, a snapshot saved at `data/raw/flows/scs_mts.pdf`), so no `mts.csv`.
+
+## fipi_lipi_by_sector.csv (sector split, added 2026-10-17)
+
+Source: scstrade.com `FIPILIPI.aspx/loadfipiInvestor`, fetched by `scripts/fetch_fipi_lipi_sector.py` (one POST per business day, 4 retries, resumable: rerun it and it fetches only dates missing from the file). Columns: `date, investor_group, sector, buy_usd_mn, sell_usd_mn, net_usd_mn, source_url`; USD million, sell stored positive.
+
+- Coverage: 2017-01-02 to 2026-10-16, 2,415 trading days, 207,089 rows.
+- `investor_group`: `fipi` (all foreign combined, not split into overseas pakistani / corporates / individuals here) and `lipi <type>` for banks / dfi, broker proprietary trading, companies, individuals, insurance companies, mutual funds, nbfc, other organization.
+- Sectors (source's top-10 PSX sectors by activity plus a remainder): Cement, Commercial Banks, Fertilizer, Food and Personal Care Products, Oil and Gas Exploration Companies, Oil and Gas Marketing Companies, Power Generation and Distribution, Technology and Communication, Textile Composite, Debt Market (from 2020-10-02 only), and All other Sectors (everything else). Pharma, Refinery, Automobile etc. are inside "All other Sectors". The sector set is fixed, but a row is absent when that group did not trade the sector that day, so counts differ by sector.
+- Gaps: 2019-04-19, 2020-06-19 and 2020-11-03 return a server error on this endpoint (they exist in `fipi_lipi.csv`). Conversely the five days missing from `fipi_lipi.csv` (2017-06-02, 2023-01-19, 2023-06-05, 2023-08-28, 2025-07-30) are present here, so summing sectors per group gives a fill for those days.
+- Caveat: sector sums were not reconciled against `fipi_lipi.csv` totals.
