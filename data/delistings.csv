@@ -1,0 +1,170 @@
+symbol,company,delisting_or_suspension_date,date_basis,reason,last_price,source,price_file
+,,2013-11-05,announcement,voluntary delisting,,announcements.parquet: SECP - Suspension and Delisting of Platinum Insurance Company Limited (2013-11-05),False
+ADOS,Ados Pakistan Limited,2023-01-02,last portal trade,voluntary delisting,29.0,announcements.parquet: Public Notice For Buyback of Shares (2022-09-16),True
+ADTM,Adil Textile Mills Limited,2018-09-13,announcement,voluntary delisting,,announcements.parquet: ADTM | Adil Textile Mills Limited - Buy-Back of Shares and Voluntary Delisting of the Company from P (2018-09-13),True
+AEL,AEL Textile Limited,2024-01-05,last portal trade,voluntary delisting,33.68,announcements.parquet: Delisting of AEL Textiles Limited (2024-01-19),True
+AKDCL,AKD Capital Limited,2021-07-08,last portal trade,suspension/unknown,392.0,portal price history ends; no delisting notice in announcements,True
+AKZO,Akzo Nobel Pakistan Limited,2020-08-07,last portal trade,voluntary delisting,270.0,announcements.parquet: AKZO | Akzo Nobel Pakistan Limited - Voluntary Delisting of PSX in Buyback of Shares (2020-07-10),True
+ALCL,ALCL,2006-11-23,announcement,voluntary delisting,,announcements.parquet: Delisting of Asian Leasing Corporation Limited (2006-11-23),False
+ALFT,ALFT,2009-09-15,announcement,liquidation/winding up,,announcements.parquet: Official Assignee Of Karachi Administrator General Of Sindh Official Liquidator - Alif Textiles Indu (2009-09-15),False
+ALQT,Al-Qadir Textile Mills Limited,2017-11-02,last portal trade,voluntary delisting,85.0,announcements.parquet: APPROVAL OF BUY BACK SHARE PRICE OF THE COMPANY (2016-05-27),True
+APXM,APXM,2009-09-15,announcement,liquidation/winding up,,announcements.parquet: Official Assignee Of Karachi Administrator General Of Sindh Official Liquidator - Apex Fabrics Limit (2009-09-15),False
+ARM,Allied Rental Modaraba,2024-02-20,last portal trade,merger,27.9,announcements.parquet: Approval of Scheme of Arrangement (2022-11-30),True
+ASIL,ASIL,2006-09-21,announcement,voluntary delisting,,announcements.parquet: De-Listing of Associated Industries Limited (2006-09-21),False
+ASKL,ASKL,2010-02-23,announcement,merger,,announcements.parquet: Merger of Askari Leasing Limited With and into Askari Bank Limited (2010-02-23),True
+ASRL,Associated Services Limited,2016-12-23,last portal trade,merger,99.0,announcements.parquet: APPROVAL OF MERGER (2016-09-06),True
+ATBL,ATBL,2006-07-25,announcement,voluntary delisting,,announcements.parquet: De-Listing of Atlas Investment Bank Ltd (2006-07-25),True
+AWWAL,Awwal Modaraba,2023-04-05,last portal trade,voluntary delisting,10.0,announcements.parquet: Delisting of Awwal Modaraba (2023-06-27),True
+AYTM,Ayesha Textile Mills Limited,2019-11-07,last portal trade,voluntary delisting,200.0,announcements.parquet: AYTM | Ayesha Textile Mills Limited - Buy-Back of Shares of the Company at Rs. 200.00 per share by t (2019-11-01),True
+AYZT,Ayaz Textile Mills Limited,2016-01-29,announcement,liquidation/winding up,,announcements.parquet: AYZT | Ayaz Textile Mills Limited - Order of Lahore High Court of Lahore received from SECP for Wind (2016-01-29),True
+BCML,Babri Cotton Mills Limited,2022-02-15,last portal trade,merger,42.6,"announcements.parquet: MATERIAL INFORMATION ON MERGER (ADDENDUM TO THE LETTER REF. NO.BCM/CS/22/512, DATED: FEBRUARY 08, 20 (2022-02-14)",True
+BILF,Bilal Fibres Limited,2025-10-23,last portal trade,suspension/unknown,38.39,portal price history ends; no delisting notice in announcements,True
+BIPLS,BIPL Securities Limited,2022-08-01,last portal trade,merger,38.63,announcements.parquet: DISCLOSURE OF MATERIAL INFORMAITON OF OPERATIONAL MERGER (2022-07-28),True
+BPBL,Balochistan Particle Board Limited,2020-08-26,last portal trade,liquidation/winding up,17.31,"announcements.parquet: Transmission of Financial Position as at August 4, 2021, Receipts and Payments Accounts for the Peri (2021-09-08)",True
+BROT,Brothers Textile Mills Limited,2017-03-13,last portal trade,suspension/unknown,4.2,portal price history ends; no delisting notice in announcements,True
+BRR,B.R.R. Guardian Modaraba,2023-06-22,last portal trade,merger,11.5,announcements.parquet: Notice of Announcement of Merger by way of Amalgamation of B.R.R. Guardian Modaraba with and into BR (2023-06-06),True
+BSML,BSML,2009-11-19,announcement,liquidation/winding up,,announcements.parquet: Baig Spinning Mills Limited - Under voluntary winding - Public Notice (2009-11-19),False
+BYCO,Byco Petroleum Pakistan Limited,2021-12-20,last portal trade,suspension/unknown,6.17,portal price history ends; no delisting notice in announcements,True
+CARF,CARF,2015-08-03,announcement,liquidation/winding up,,announcements.parquet: CARF | Caravan East Fabrics Limited - Minutes of EOGM for Voluntary Winding Up (2015-08-03),True
+CASH,Calcorp Limited,2026-03-27,last portal trade,suspension/unknown,50.3,portal price history ends; no delisting notice in announcements,True
+CASS,CASS,2015-11-20,announcement,liquidation/winding up,,announcements.parquet: CASS | Cass Pak Industries Limited - In Liquidation of Cass Pak Industries Limited (2015-11-20),True
+CECL,Climax Engineering Company Limited,2019-02-12,last portal trade,voluntary delisting,100.0,announcements.parquet: CECL | Climax Engineering Company Limited - Voluntary Delisting of the Company From Pakistan Stock E (2019-01-18),True
+CHTM,CHTM,2006-12-01,announcement,voluntary delisting,,announcements.parquet: Delisting of Chenab Textile Mills Limited (2006-12-01),False
+CLOUD,Chakwal Spinning Mills Limited,2024-10-10,last portal trade,suspension/unknown,62.85,portal price history ends; no delisting notice in announcements,True
+COLT,COLT,2006-08-11,announcement,voluntary delisting,,announcements.parquet: De-Listing of Colony Textile Mills Limited (2006-08-11),False
+CPAL,Capital Assets Leasing Corporation,2021-06-28,last portal trade,suspension/unknown,18.81,portal price history ends; no delisting notice in announcements,True
+CSM,Cresent Standard Modaraba,2018-10-04,last portal trade,merger,2.81,announcements.parquet: Notice of Announcement of Merger of Crescent Standard Modaraba (CSM) (2018-09-14),True
+CWSM,Chakwal Spinning Mills Limited,2025-12-29,last portal trade,suspension/unknown,51.18,portal price history ends; no delisting notice in announcements,True
+CYAN,Cyan Limited,2026-03-11,last portal trade,merger,41.91,announcements.parquet: Publication Of Notice Of Final Book Closure Pursuant To The Scheme Of Arrangement (2026-03-06),True
+DATM,Data Textiles Limited,2023-05-12,last portal trade,merger,2.35,announcements.parquet: Material Information-Merger/De-merger Statement (2023-05-31),True
+DAWH,Dawood Hercules Corporation Limited,2025-01-03,last portal trade,merger,275.28,announcements.parquet: Publication of Announcement of Book Closure for Implementation of the Scheme of Arrangement between  (2024-12-27),True
+DHPL,DH Partners Limited,2026-03-11,last portal trade,merger,26.55,announcements.parquet: Publication Of Notice Of Final Book Closure Pursuant To The Scheme Of Arrangement (2026-03-06),True
+DKL,Drekkar Kingsway Limited,2022-01-11,last portal trade,liquidation/winding up,22.92,announcements.parquet: MATERIAL INFORMATION - DISPOSED-OFF THE WINDING UP PETITION (2021-12-09),True
+DKTM,Dewan Khalid Textile Mills Limited,2019-05-28,last portal trade,suspension/unknown,0.94,portal price history ends; no delisting notice in announcements,True
+DMIL,D.M. Industries Limited,2021-01-08,last portal trade,suspension/unknown,49.68,portal price history ends; no delisting notice in announcements,True
+DMTM,Dewan Mushtaq Textile Mills Limited,2025-11-14,last portal trade,suspension/unknown,8.56,portal price history ends; no delisting notice in announcements,True
+DMTX,D.M. Textile Mills Limited,2025-05-29,last portal trade,suspension/unknown,34.96,portal price history ends; no delisting notice in announcements,True
+DSFL,Dewan Salman Fibre Limited,2018-02-19,last portal trade,voluntary delisting,0.88,announcements.parquet: Final Redemption and Delisting of 2nd Issue of TFCs of Dewan Salman Fibre Limited (2006-12-28),True
+DSML,Dar-es-Salaam Textile Mills Limited,2024-12-27,last portal trade,merger,51.25,announcements.parquet: DSML | Dar-es-Salaam Textile Mills Limited - Request for Removal of the Company from Defaulters Segm (2024-10-21),True
+EFGH,EFG Hermes Pakistan Limited,2024-11-22,last portal trade,merger,75.72,announcements.parquet: Disclosure of Material Information-Operational Merger Effective Date (2024-11-14),True
+EFOODS,Engro Foods Limited,2019-07-10,last portal trade,suspension/unknown,52.33,portal price history ends; no delisting notice in announcements,True
+ENGRO,Engro Corporation Limited,2025-01-03,last portal trade,merger,485.38,announcements.parquet: Final Report on the Purchase/Buy-Back of Shares by Engro Corporation Limited (2023-08-03),True
+EWLA,East West Life Assurance Company Limited,2018-07-13,last portal trade,suspension/unknown,21.5,portal price history ends; no delisting notice in announcements,True
+EXTR,Extraction (Pakistan) Limited,2015-10-26,announcement,liquidation/winding up,,announcements.parquet: EXTR | Extraction (Pakistan) Limited - Order of Honorable Lahore High Court of Lahore Pertaining to  (2015-10-26),True
+FABM,FABM,2006-08-04,announcement,voluntary delisting,,announcements.parquet: De-Listing of First Allied Bank Modaraba (2006-08-04),False
+FDIBL,First Dawood Investment Bank Limited,2024-03-22,last portal trade,suspension/unknown,2.92,portal price history ends; no delisting notice in announcements,True
+FFBL,Fauji Fertilizer Bin Qasim Limited,2024-12-20,last portal trade,merger,88.94,announcements.parquet: Certified True Copy of the Order of Honorable Lahore High Court and the Sanctioned Scheme of Arrange (2024-12-13),True
+FUDLM,First UDL Modaraba,2024-06-07,last portal trade,merger,8.0,announcements.parquet: Announcement of Merger (2024-04-25),True
+FZTM,FZTM,2015-01-29,announcement,merger,,announcements.parquet: FZTM | Fazal Textile Mills Limited - Complete Scheme of Arrangement of Fazal Textile Mills Limited a (2015-01-29),True
+GAIL,Ghani Automobile Industries Limited,2021-09-20,last portal trade,merger,7.4,announcements.parquet: DECISION OF BOARD MEETING BOOK CLOSURE FOR MERGER (2021-09-16),True
+GASF,Golden Arrow Selected Stocks,2019-11-13,last portal trade,suspension/unknown,6.69,portal price history ends; no delisting notice in announcements,True
+GCILB,Ghani Chemical Industries Limited (B),2023-05-08,last portal trade,suspension/unknown,9.3,portal price history ends; no delisting notice in announcements,True
+GEMBLUEX,Blue-Ex Limited (GEM),2025-12-26,last portal trade,suspension/unknown,73.5,portal price history ends; no delisting notice in announcements,True
+GEMSPNL,Supernet Limited,2026-03-19,last portal trade,merger,85.95,announcements.parquet: Notice of Final Book Closure of GEMSPNL to identify and determine the entitlement of GEMSPNL Shareho (2026-03-16),True
+GEMUNSL,Universal Network Systems Limited(GEM),2024-01-04,last portal trade,suspension/unknown,20.0,portal price history ends; no delisting notice in announcements,True
+GHNL,Ghandhara Nissan Limited,2023-05-17,last portal trade,suspension/unknown,33.9,portal price history ends; no delisting notice in announcements,True
+GLAT,Glamour Textile Mills Limited,2018-04-20,last portal trade,voluntary delisting,65.0,announcements.parquet: Corporate Announcement for Voluntary Delisting of Company & Purchase of Minority Shares by Sponsors (2018-01-08),True
+GLPL,Gillette Pakistan Limited,2026-05-18,last portal trade,voluntary delisting,700.0,announcements.parquet: Newspaper extracts regarding voluntary delisting of Gillette Pakistan Limited (2026-05-14),True
+GSKCH,GlaxoSmithKline Consumer Healthcare,2023-01-30,last portal trade,merger,120.23,announcements.parquet: Demerger of Haleon plc and Change in Ultimate Parent of the Company (2022-07-29),True
+GTECH,G3 Technologies Limited,2022-11-02,last portal trade,merger,8.58,announcements.parquet: Information Memorandum Merger of G3 Technologies Limited with and into Ghani Chemical Industries Lim (2022-10-21),True
+GUTM,Gulistan Textile Mills Limited,2014-01-03,announcement,liquidation/winding up,,announcements.parquet: GUTM | Gulistan Textile Mills Ltd.Official Assignee of Karachi Administrator General of Sindh Offici (2014-01-03),True
+HADC,Haydari Construction Company Limited,2017-10-13,last portal trade,suspension/unknown,16.51,portal price history ends; no delisting notice in announcements,True
+HAL,Habib-ADM Limited,2020-03-05,last portal trade,suspension/unknown,38.25,portal price history ends; no delisting notice in announcements,True
+HCL,Hallmark Company Limited,2025-01-15,last portal trade,merger,959.26,announcements.parquet: Order granting withdrawal of Petition of Merger (2019-08-07),True
+HMIM,Haji Mohammad Ismail Mills Limited,2017-12-08,last portal trade,suspension/unknown,8.75,portal price history ends; no delisting notice in announcements,True
+HMM,Habib Metro Mod,2023-03-07,last portal trade,merger,5.8,announcements.parquet: Material Information Merger (2023-02-14),True
+HSM,Husein Sugar Mills Limited,2022-07-29,last portal trade,suspension/unknown,12.81,portal price history ends; no delisting notice in announcements,True
+HSPI,Huffaz Seamless Pipe Industries Limited,2024-11-15,last portal trade,suspension/unknown,8.81,portal price history ends; no delisting notice in announcements,True
+ICI,ICI Pakistan Limited,2023-01-12,last portal trade,suspension/unknown,591.53,portal price history ends; no delisting notice in announcements,True
+IDSM,Ideal Spinning Mills Limited,2026-07-16,last portal trade,suspension/unknown,60.72,portal price history ends; no delisting notice in announcements,True
+IFSL,Invest & Finance Securities Limited,2017-05-26,last portal trade,voluntary delisting,157.82,announcements.parquet: Tender Notice for Buy Back/Purchase of Shares (2014-08-29),True
+IGIBL,IGI Investment Bank Limited,2018-01-17,last portal trade,merger,3.22,announcements.parquet: Newspaper Cuttings of Notice of Amalgamation (2018-01-29),True
+IGIIL,IGI Insurance Limited,2018-04-18,last portal trade,merger,305.38,announcements.parquet: IGIIL | IGI Insurance Limited - Notice of Amalgamation (Proposed Restructuring of IGI Group) (2018-03-20),True
+ILTM,Island Textile Mills Limited,2021-06-24,last portal trade,merger,2400.0,announcements.parquet: Material Information-Merger (2021-03-19),True
+IMSL,Imperial Sugar Limited,2020-11-17,last portal trade,suspension/unknown,13.84,portal price history ends; no delisting notice in announcements,True
+ISHT,Ishtiaq Textile Mills Limited,2019-05-23,last portal trade,voluntary delisting,18.0,announcements.parquet: ISHT | Ishtiaq Textile Mills Limited - Voluntary Delisting of the Company From Pakistan Stock Exchan (2019-05-16),True
+ISTM,Ishaq Textile Mills Limited,2019-04-11,last portal trade,suspension/unknown,7.99,portal price history ends; no delisting notice in announcements,True
+JOPP,Johnson & Phillips (Pakistan) Limited,2024-04-16,last portal trade,voluntary delisting,160.06,announcements.parquet: JOPP | Johnson & Phillips (Pakistan) Limited Voluntary Delisting of Johnson & Phillips (Pakistan) Li (2024-04-09),True
+JPGL,Japan Power Generation Limited,2017-12-15,last portal trade,suspension/unknown,1.9,portal price history ends; no delisting notice in announcements,True
+JSCLPSA,Jahangir Sidd(Pref),2025-12-29,last portal trade,suspension/unknown,10.16,portal price history ends; no delisting notice in announcements,True
+KACM,Karim Cotton Mills Limited,2016-09-07,announcement,merger,,announcements.parquet: APPROVAL OF MERGER (2016-09-07),True
+KASBM,KASB Modaraba,2023-05-05,last portal trade,suspension/unknown,1.19,portal price history ends; no delisting notice in announcements,True
+KASBSL,KASBSL,2016-11-22,last portal trade,suspension/unknown,10.57,portal price history ends; no delisting notice in announcements,True
+KASM,KASM,2011-01-26,announcement,liquidation/winding up,,"announcements.parquet: Karim Silk Mills Limited in Liquidation Scheme of Revival - Order sheet in The High Court of Sindh,K (2011-01-26)",False
+KHSM,Khurshid Spinning Mills Limited,2022-05-25,last portal trade,suspension/unknown,11.65,portal price history ends; no delisting notice in announcements,True
+LIBT,LIBT,2015-02-11,announcement,merger,,announcements.parquet: DECISIONS OF THE BOARD MEETING WITH REFERENCE TO THE MERGER OF LIBAAS TEXTILE LIMITED (2015-02-11),True
+LINDE,Linde Pakistan Limited,2018-03-16,last portal trade,suspension/unknown,240.0,portal price history ends; no delisting notice in announcements,True
+LMSM,Landmark Spinning Industries Limited,2024-12-17,last portal trade,voluntary delisting,63.91,announcements.parquet: Application of Withdrawl from Delisting (2021-06-24),True
+LSEPL,LSE Proptech Limited,2024-04-19,last portal trade,merger,4.65,announcements.parquet: Approval of scheme of arrangement (2024-04-08),True
+LSEVLR,LSE Ventures Limited(RIGHT),2026-01-02,last portal trade,suspension/unknown,1.82,portal price history ends; no delisting notice in announcements,True
+MCBAH,MCB-Arif Habib Savings and Invest,2023-09-01,last portal trade,voluntary delisting,24.0,announcements.parquet: MCBAH | MCB-Arif Habib Savings and Investments Limited - Delisting of Pakistan Sarmaya Mehfooz Fund  (2016-12-21),True
+META,MetaTech Trading Limited,2024-07-18,last portal trade,merger,9.67,announcements.parquet: Material Information-Merger Effect Statement (2024-07-29),True
+MFTM,Mohammad Farooq Textile Mills Limited,2017-10-13,last portal trade,suspension/unknown,3.49,portal price history ends; no delisting notice in announcements,True
+MODAM,Modaraba Al-Mali,2024-04-19,last portal trade,merger,5.73,announcements.parquet: Approval of Scheme of Arrangement-Part-1 (2024-04-08),True
+MOIL,Morafco Industries Limited,2017-10-06,announcement,voluntary delisting,,announcements.parquet: MOIL | Morafco Industries Limited - Formal Application of Voluntary Delisting & Buyback of Shares Fr (2017-10-06),True
+MOON,Moonlite (Pak) Limited,2016-06-30,announcement,merger,,announcements.parquet: MOON | Moonlite (Pak) Limited - Scheme of Arrangement for Amalgamation (2016-06-30),True
+MTIL,Mian Textile Industries Limited,2021-09-03,last portal trade,suspension/unknown,39.34,portal price history ends; no delisting notice in announcements,True
+MYBL,MYBL,2011-07-01,announcement,merger,,announcements.parquet: State Bank of Pakistan - Amalgamation of Mybank Limited with into Summit Bank Limited (2011-07-01),True
+MYVI,MYVI,2009-09-15,announcement,liquidation/winding up,,announcements.parquet: Official Assignee Of Karachi Administrator General Of Sindh Official Liquidator - Myfip Video Indust (2009-09-15),False
+MZSM,Mirza Sugar Mills Limited,2018-05-08,last portal trade,suspension/unknown,5.02,portal price history ends; no delisting notice in announcements,True
+NIB,NIB Bank Limited,2017-07-04,last portal trade,merger,1.41,announcements.parquet: Amalgamation of NIB Bank Limited with and into MCB Bank Limited (2017-06-14),True
+NLRL,NLRL,2013-04-02,announcement,liquidation/winding up,,announcements.parquet: Natover Lease Refinance Limited - Official Assignee of Karachi Administrator General of Sindh Offici (2013-04-02),False
+NPSM,N. P. Spinning Mills Limited,2019-08-16,last portal trade,voluntary delisting,20.0,announcements.parquet: NPSM | N.P. Spinning Mills Limited - Voluntary Delisting of the Company From Pakistan Stock Exchange (2019-08-02),True
+OLSM,Olympia Spinning and Weaving Mills Limited,2018-01-09,last portal trade,suspension/unknown,11.97,portal price history ends; no delisting notice in announcements,True
+OLTM,OLTM,2016-03-22,announcement,voluntary delisting,,announcements.parquet: Notice Voluntary Delisting of Olympia Textile Mills Limited (2016-03-22),True
+OPENFUND,OPENFUND,2020-03-18,announcement,merger,,announcements.parquet: JS Investments Limited Funds - Merger of JS Large Cap. Fund and JS Value Fund with & into JS Growth  (2020-03-18),False
+ORIXM,Orix Modaraba,2022-03-22,last portal trade,suspension/unknown,16.1,portal price history ends; no delisting notice in announcements,True
+PAKCEM,Pakcem Limited,2016-03-31,announcement,merger,,announcements.parquet: Board Meeting to consider the scheme of Amalgamation of Pakcem Limited with and into Bestway Cement  (2016-03-31),True
+PAKMI,First Pak Modaraba,2023-05-05,last portal trade,suspension/unknown,1.3,portal price history ends; no delisting notice in announcements,True
+PCML,Punjab Cotton Mill,2017-12-21,last portal trade,voluntary delisting,94.43,announcements.parquet: PCML | Punjab Cotton Mills Limited - Voluntary Delisting of Punjab Cotton Mills Limited (2018-01-17),True
+PDGH,Prudential Discourt & Guarantee House Lt,2023-03-30,announcement,liquidation/winding up,,announcements.parquet: PDGH | Appointment of Official Liquidator of Prudential Discount & Guarantee House Limited (2023-03-30),True
+PGCL,Pakistan Gum & Chemicals Limited,2020-02-06,last portal trade,voluntary delisting,300.0,announcements.parquet: PGCL | Pakistan Gum & Chemicals Limited - Voluntary Delisting of the Company (2020-01-10),True
+PGF,PICIC Growth Fund,2018-05-15,last portal trade,merger,30.51,announcements.parquet: Merger of PICIC Asset Management Company Limited with and into HBL Asset Management Limited - Materi (2016-09-02),True
+PHDL,Pakistan Hotels Developers Limited,2025-01-20,last portal trade,liquidation/winding up,50.4,announcements.parquet: INFORMATION IN RESPECT OF VOLUNTARILY WINDING-UP OF PHDL (THE COMPANY) (2026-09-08),True
+PHIL,PHIL,2008-07-09,announcement,voluntary delisting,,announcements.parquet: Buy-back of shares by the sponsors of Pakistan House International Limited (2008-07-09),False
+PIAA,Pakistan International Airlines Corp,2024-05-24,last portal trade,merger,22.17,announcements.parquet: APPROVAL OF SCHEME OF ARRANGEMENT (2024-05-17),True
+PIAB,Pakistan International Airlines Corporat,2024-03-11,last portal trade,suspension/unknown,81.87,portal price history ends; no delisting notice in announcements,True
+PIF,PICIC Investment Fund,2018-05-15,last portal trade,merger,13.47,announcements.parquet: Merger of PICIC Asset Management Company Limited with and into HBL Asset Management Limited - Materi (2016-09-02),True
+PMCL,PMCL,2015-11-26,announcement,merger,,announcements.parquet: Mobilink to merge with Warid in first merger in Pakistan mobile telecom sector (2015-11-26),False
+PMI,First Prudential Modaraba,2025-07-25,last portal trade,suspension/unknown,4.7,portal price history ends; no delisting notice in announcements,True
+PMPK,Philip Morris (Pakistan) Limited,2025-10-03,last portal trade,voluntary delisting,1431.85,announcements.parquet: DELISTING OF PHILIP MORRIS (PAKISTAN) LIMITED (2025-10-03),True
+PNGRS,Pangrio Sugar Mills Limited,2017-03-03,last portal trade,suspension/unknown,5.42,portal price history ends; no delisting notice in announcements,True
+PSMC,Pak Suzuki Motor Company Limited,2024-04-25,last portal trade,voluntary delisting,609.0,announcements.parquet: Newspaper Clipping Regarding Delisting of the Company from PSX (2024-04-23),True
+RAVT,Ravi Textile Mills Limited,2021-08-03,last portal trade,suspension/unknown,22.35,portal price history ends; no delisting notice in announcements,True
+RCML,Reliance Cotton Spinning Mills Limited,2026-04-15,last portal trade,suspension/unknown,400.22,portal price history ends; no delisting notice in announcements,True
+REST,REST,2016-05-18,announcement,voluntary delisting,,announcements.parquet: Disclosure of Material Information to the Exchange under Rule 5.6.1. (d) of PSX Rule Book and Buy Ba (2016-05-18),True
+SALT,Salfi Textile Mills Limited,2021-06-21,last portal trade,merger,376.0,announcements.parquet: Material Information-Merger (2021-03-19),True
+SANE,Salman Noman Enterprises Limited,2024-10-04,last portal trade,suspension/unknown,8.07,portal price history ends; no delisting notice in announcements,True
+SAPL,Sanofi-Aventis Pakistan Limited,2023-10-27,last portal trade,suspension/unknown,870.0,portal price history ends; no delisting notice in announcements,True
+SCHT,Schon Textiles Limited,2008-12-19,announcement,liquidation/winding up,,announcements.parquet: Official Assigni of Karachi (Schon Textile Ltd.In Liquidation) (2008-12-19),True
+SCL,Shield Corporation Limited,2026-07-24,last portal trade,voluntary delisting,750.07,announcements.parquet: NEWSPAPER CLIPPINGS REGARDING VOLUNTARY DELISTING OF SHIELD CORPORATION LIMITED FROM PSX (2026-07-21),True
+SERF,Service Fabrics Limited,2021-11-19,last portal trade,default/compulsory,12.93,announcements.parquet: Third Rejoinder to Placement of SERF from Defaulter Segment - G3 Technologies Limited (2021-11-19),True
+SFAT,Safa Textiles Limited,2019-10-28,last portal trade,suspension/unknown,1.89,portal price history ends; no delisting notice in announcements,True
+SFLL,SFL Limited,2019-08-21,last portal trade,voluntary delisting,160.0,announcements.parquet: SFLL | SFL Limited - Voluntary Delistng of the Company From PSX (2019-09-05),True
+SHCI,Shaffi Chemical Industries Limited,2017-06-21,last portal trade,voluntary delisting,6.49,announcements.parquet: SHCI | Shaffi Chemical Industries Limited - Application For Voluntary De-Listing & Buy Back of Share (2017-02-24),True
+SHEL,Shell Pakistan Limited,2025-02-28,last portal trade,suspension/unknown,185.01,portal price history ends; no delisting notice in announcements,True
+SICL,Standard Insurance Company Limited,2022-09-22,announcement,voluntary delisting,,announcements.parquet: SICL | Standard Insurance Company Limited - Delisting & Buy Back of Shares (2022-09-22),True
+SILK,Silkbank Limited,2025-03-18,last portal trade,suspension/unknown,1.15,portal price history ends; no delisting notice in announcements,True
+SING,Singer Pakistan ,2018-07-10,last portal trade,merger,32.77,announcements.parquet: DISCLOSURE OF MATERIAL INFORMATION REGARDING MERGER (2018-05-25),True
+SJTM,Sajjad Textile Mills Limited,2020-05-15,last portal trade,voluntary delisting,25.0,announcements.parquet: SJTM | Sajjad Textile Mills Limited - Voluntary Delisting of the Company from Pakistan Stock Exchang (2020-06-11),True
+SLCL,Security Leasing Corporation Limited,2019-10-23,last portal trade,voluntary delisting,1.0,announcements.parquet: SLCL | Security Leasing Corporation Limited - Proposed Delisting (2022-02-07),True
+SLL,SME Leasing Limited,2024-10-31,last portal trade,liquidation/winding up,1.7,announcements.parquet: Appointment of Liquidator - SME Bank Limited (2025-05-19),True
+SMBL,Summit Bank Limited,2023-11-24,last portal trade,merger,2.17,announcements.parquet: Proposed merger / amalgamation of Summit Bank Limited with and into Sindh Bank Limited - Update (2019-06-03),True
+SMBLCPSB,Summit Bank B,2017-10-09,last portal trade,suspension/unknown,10.0,portal price history ends; no delisting notice in announcements,True
+SMTM,Samin Textiles Limited,2022-08-02,last portal trade,merger,11.9,announcements.parquet: Scheme of Arrangement sanctioned by the High Court (2022-06-22),True
+SNL,SNL,2009-01-06,announcement,liquidation/winding up,,announcements.parquet: Official Assignee of Karachi Administrator General of Sindh Officaial Liquidator (Southern Networks  (2009-01-06),False
+SPCL,Saudi Pak Consultancy Company Limited,2022-03-22,last portal trade,suspension/unknown,0.9,portal price history ends; no delisting notice in announcements,True
+SPLC,Saudi Pak Leasing Company Limited,2022-03-22,last portal trade,voluntary delisting,0.9,announcements.parquet: SPLC | Saudi Pak Leasing Company Limited -PROPOSED DELISTING - Progress regarding divestment and non (2023-03-09),True
+SRSM,Sargodha Spinning Mills Limited,2019-06-28,last portal trade,voluntary delisting,40.33,announcements.parquet: SRSM | Sargodha Spinning Mills Limited - Voluntary Delisting from Pakistan Stock Exchange Limited (2019-07-16),True
+SSIC,Silver Star Insurance Company Limited,2019-06-12,announcement,voluntary delisting,,announcements.parquet: SSIC | Silver Star Insurance Company Limited - Proposed Delisting of the Company (2019-06-12),True
+TCLTC,Treet Corporation (Ptc),2019-10-16,last portal trade,suspension/unknown,5.02,portal price history ends; no delisting notice in announcements,True
+TDIL,TPL Direct Insurance Limited,2017-12-29,last portal trade,suspension/unknown,24.8,portal price history ends; no delisting notice in announcements,True
+THAS,Taha Spinning Mills Limited,2017-10-04,last portal trade,suspension/unknown,186.92,portal price history ends; no delisting notice in announcements,True
+TPLPL,TPLPL,2018-01-09,last portal trade,suspension/unknown,10.5,portal price history ends; no delisting notice in announcements,True
+TRIBL,Trust Investment Bank Limited,2019-10-28,last portal trade,voluntary delisting,0.97,announcements.parquet: TRIBL | Trust Investment Bank Limited - Proposed Delisting (2021-04-02),True
+TRPOL,Tri-Star Polyester Limited,2021-04-05,last portal trade,suspension/unknown,14.88,portal price history ends; no delisting notice in announcements,True
+ULEVER,ULEVER,2013-04-02,announcement,voluntary delisting,,announcements.parquet: Unilever Pakistan Ltd - Delisting of the Shares of Unilever Pakistan Ltd and the purchase by the maj (2013-04-02),False
+UNBL,UNBL,2006-12-12,announcement,voluntary delisting,,announcements.parquet: De-Listing of Union Bank Limited (2006-12-12),False
+WHALE,Waves Home Appliances Limited,2023-12-27,last portal trade,suspension/unknown,8.01,portal price history ends; no delisting notice in announcements,True
+WYETH,Wyeth Pakistan Limited,2022-04-01,last portal trade,voluntary delisting,2007.7,announcements.parquet: WYETH | Wyeth Pakistan Limited - Application for Voluntary Delisting - Wyeth Pakistan Limited (2021-08-16),True
+ZHCM,Zahur Cotton Mills Limited,2019-12-20,announcement,voluntary delisting,,announcements.parquet: ZHCM | Zahur Cotton Mills Limited - Voluntary Delisting and Buy-Back of Shares of the Company (2019-12-20),True

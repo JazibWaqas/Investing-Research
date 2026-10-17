@@ -19,7 +19,9 @@ RULES = [  # (reason, regex) in priority order
 ]
 rows = []
 for s in sorted(set(log.symbol) | set(a[a.title.str.contains("delist", case=False, na=False)].symbol.dropna())):
-    if s in panel or re.search(r"(TFC|SC\d*$|OEF|FUNDS)", str(s)):
+    if not isinstance(s, str) or s in panel or re.search(r"(TFC|SC\d*$|OEF|FUNDS)", s):
+        continue
+    if re.search(r"Right|Pref|Convt|\(R\)", str(sym.name.get(s, ""))):  # instruments, not companies
         continue
     x = a[a.symbol == s]
     hits = {}
@@ -29,6 +31,10 @@ for s in sorted(set(log.symbol) | set(a[a.title.str.contains("delist", case=Fals
             hits[r] = h
     lg = log[log.symbol == s]
     last = lg["last"].iloc[0] if len(lg) and pd.notna(lg["last"].iloc[0]) else pd.NaT
+    if len(lg) and lg.rows.iloc[0] > 0:  # last date with real volume, not the last portal row
+        p = pd.read_csv(ROOT / f"data/prices_delisted/{s}.csv", parse_dates=["date"])
+        p = p[p.volume > 0]
+        last = p.date.iloc[-1] if len(p) else pd.NaT
     # voluntary delisting wins over merger if both appear and delist notice is present
     reason = "voluntary delisting" if "voluntary delisting" in hits else (next(iter(hits), None))
     if reason is None and "default/compulsory" in hits:
@@ -51,5 +57,9 @@ for s in sorted(set(log.symbol) | set(a[a.title.str.contains("delist", case=Fals
                      source=("announcements.parquet: " + str(ev.title)[:100] + f" ({ev.d.date()})") if ev is not None else "portal price history ends; no delisting notice in announcements",
                      price_file=bool(len(lg) and lg.rows.iloc[0] > 0)))
 out = pd.DataFrame(rows)
+out.loc[out.symbol == "ENGRO", "reason"] = "merger"  # DH/Engro/EHL scheme of arrangement, keyword hit said delisting
+# still trading on 2026-10-16 (pending or failed delisting) and rights/odd-lot letters are not delistings
+out = out[out.delisting_or_suspension_date.astype(str) < "2026-09-01"]
+out = out[~out.symbol.str.contains(r"R\d$|GTECHBR|FFLNV", regex=True)]
 out.to_csv(ROOT / "data/delistings.csv", index=False)
 print(len(out)); print(out.reason.value_counts()); print(out.price_file.sum())
