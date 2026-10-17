@@ -103,7 +103,7 @@ Approximations:
 - FFC's pre-2025 stakes are FFBL 49.88% and AKBL 43.15% (VIS 2021 and 2013 filings, asserted).
 - JSCL's holdings are held at June 2026 share counts.
 
-**Unusually wide vs own history?** None of the KMI names is. PSO is the outlier in the other direction: the market gives PSO's own business its lowest value in two years, at the moment its listed stake is worth the most. That is a stub signal, not a classic holdco discount, and it sits on top of PSO's Rs415bn of circular-debt receivables.
+**Unusually wide vs own history?** None of the KMI names is. PSO is the outlier in the other direction: the market gives PSO's own business its lowest value since end-2023, at the moment its listed stake is worth the most. That is a stub signal, not a classic holdco discount, and it sits on top of PSO's Rs415bn of circular-debt receivables.
 
 ## 5. Ranking
 

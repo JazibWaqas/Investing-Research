@@ -468,3 +468,6 @@ UPFL,right,0.0345,2018-03-28 14:50,none,title: UPFL | Unilever Pakistan Foods Li
 WASL,right,0.2421,2026-03-02 12:09,none,title: WASL | Wasl Mobility Modaraba (Formerly: First Prudential Modaraba) Ri,5.27
 WAVES,right,0.5,2021-03-24 12:22,none,title:163672 Revised Notice of Book Closure for the entitlement of 50% Right Shares,
 WAVES,right,0.5,2021-04-23 11:00,none,title: WAVES | Waves Singer Pakistan Limited - Issuance of Right Shares 50% a,5.0
+GGL,bonus,0.1,2020-12-28 09:24,none,"pdf:158983; book-closure ex-date 2021-01-22 not credible: expected -9.1%, saw -0.8% (min of ex-1..ex+1), no matching gap within 3 trading days",
+SYM,cash,1.0,2026-09-30 15:22,none,"payouts_raw; book-closure ex-date 2026-10-16 not credible: expected -8.3%, saw +0.4% (min of ex-1..ex+1), no matching gap within 3 trading days",
+TOMCL,bonus,0.0975,2022-09-30 09:19,none,"pdf:193182; book-closure ex-date 2022-10-19 not credible: expected -8.9%, saw -2.1% (min of ex-1..ex+1), no matching gap within 3 trading days",

@@ -47,6 +47,8 @@ def load_payouts(par_at, idx):
             unplaced.append({**base, "ex_date": pd.NaT, "value": pct / 100, "ex_date_source": "none"})
             continue
         start = pd.to_datetime(m.group(1), dayfirst=True)
+        if pd.notna(adt) and start < adt.normalize() - pd.Timedelta(days=3):   # portal typo: closure year one behind (TGL Feb 2026 row)
+            start = start + pd.DateOffset(years=1)
         ex = ex_from_start(start, idx)
         v = pct / 100 * par_at(r.symbol, ex) if kind == "cash" else pct / 100
         rows.append({**base, "ex_date": ex, "value": v, "ex_date_source": "payouts_book_closure"})

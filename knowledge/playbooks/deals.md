@@ -1,10 +1,6 @@
 # Playbook: priced deals on PSX (takeovers, delistings, buybacks)
 
-Written 2026-10-17. Sources:
-- PSX announcements: the repo archive to Oct 2025, plus Nov 2025 to Aug 2026 fetched this session with `scripts/fetch_announcements.py` into the scratchpad. Documents are cited by PSX doc id (dps.psx.com.pk/download/document/ID.pdf).
-- PSX daily closes via `scripts/psx_api.py`, and the press as cited.
-
-Every price is the 16 Oct 2026 PSX close unless stated otherwise. Costs are 0.5% round trip.
+Written 2026-10-17. Sources: PSX announcements (the repo archive plus Nov 2025 to Aug 2026 fetched this session), cited by doc id (dps.psx.com.pk/download/document/ID.pdf); PSX closes via `scripts/psx_api.py`; press as cited. Prices are 16 Oct 2026 PSX closes. Costs are 0.5% round trip.
 
 **Bottom line.** Only one pending, priced deal is KMI-eligible: **EPCL**. Its headline spread is 21.5% (Rs31.77 against Rs38.60), but only about 53% of a minority holding is likely to be bought at the offer price. With 70% completion odds, the expected return is about +3% net over about four months (9% annualised), rising to about 18% annualised if acceptance reaches 70%. Every other live situation is either unpriced (SBL, AMBL, BML, NICL, MFL), not KMI, already trading at the exit price (SCL, GLPL), or suspended (ASC).
 
@@ -16,7 +12,7 @@ The base rate (n = 11, 2021 to 2026) is sobering:
 ## 1. How PSX takeovers price (observed)
 
 - **Offer price rule.** Under the Takeover Regulations 2017, the public-offer price is the highest of four figures: the negotiated SPA price, the highest price the acquirer paid in the look-back period, the VWAP before the PAO, and the 28-day VWAP before the PAI. This is quoted in the PIOC offer (doc 267426, Dec 2025).
-- **The offer can beat the SPA price.** That has happened often: Shell Rs118 SPA vs Rs155.11 offer; Tri-Pack 154.62 vs 245.20; Sanofi 940 vs 1,704; Mitchells 180 vs 232.75.
+- **The offer can beat the SPA price:** Shell 118 vs 155.11; Tri-Pack 154.62 vs 245.20; Sanofi 940 vs 1,704; Mitchells 180 vs 232.75.
 - **Offer size.** At least half of the shares outside the buyer group: PIOC's 11.72% was half of 23.44% (doc 267426). Oversubscription means pro rata acceptance: PIOC took 61.64% of tendered shares (doc 270524).
 - **Timeline.** PAO within 180 days of the PAI, extendable by 90 (Reg. 7(1), doc 282317). The 7-day acceptance window opens about 7 to 8 weeks after the PAO, and payment follows in about 3 days (PIOC: PAO 18 Dec 2025, window 8 to 14 Feb, paid 17 Feb).
 
@@ -28,7 +24,7 @@ The base rate (n = 11, 2021 to 2026) is sobering:
 |---|---|---|---|---|
 | **EPCL** ← Noventra (formerly Lotte Chemical Pakistan, LOTCHEM) (KMI) | SPA for 510,733,455 shares (56.19%) from Engro Corp at Rs38.60 (doc 282064). Public offer for 17.5% (ProPakistani, 1 Sep 2026, asserted) = 159.1m shares | PAI 10 Mar 2026 (doc 272329); SPA 31 Aug; PAO deadline extended to 7 Dec 2026 (doc 282317). Payment likely Feb 2027 (inferred from the PIOC timeline) | 31.77 | Approvals pending |
 | **NICL** ← CHCC (NICL not KMI; CHCC KMI) | At least 30% (33,177,164 shares); no price disclosed. About Rs8.9bn, roughly Rs268 a share (MarketScreener, unverified) | PAI 10 Sep 2026 (doc 282506). PAO due within 180 days | 265.70 (fell from 270.68 pre-PAI) | Due diligence. No spread at the implied price |
-| **MFL**: sale of Matco Corn Products (KMI) | Non-binding IGI Investments offer for 100% of the subsidiary; no price (ProPakistani, 15 Oct 2026) | Board authorised talks 15 Oct | 47.33 (+8.5% on day 1, then gave it back) | Not a minority exit. Catalyst only |
+| **MFL** corn unit sale (KMI) | Non-binding IGI offer for 100% of the subsidiary; no price (ProPakistani, 15 Oct) | Talks authorised 15 Oct | 47.33 | Catalyst, not an exit |
 | **SBL** ← Najd Gateway (not KMI) | SPA for 852.0m shares (84.51%) from SNB; price undisclosed (doc 270513). Mandatory offer for about 78.1m shares (Profit, asserted) | PAI 18 Feb 2026; PAO deadline extended 18 Aug (doc 281278) | 13.32 (pre-PAI 14.39) | Awaiting SBP and SECP |
 | **AMBL** ← Mobilink MFB (not KMI) | Terms not in readable filings | PAI 10 Mar 2026; extended 7 Sep (doc 282316) | 19.50 (pre-PAI 24.65) | Pending |
 | **BML** ← DM Holdings (not KMI) | "Significant shareholding"; terms unread (scanned) | PAI 12 Jun 2026 (doc 278478) | 60.16 | Pending; capital reduction in Jan 2026 |
@@ -75,9 +71,9 @@ Completed in the last 12 months: PIOC, ACPL, RMPL and TPLI (all in section 5), p
 - **Expected value at 70%:**
   - 53.4% acceptance: Rs32.94, which is +3.2% net, or about **9% annualised** over 0.35 years.
   - 70% acceptance: Rs33.82, which is +6.0% net, or about 18% annualised.
-- At 60% odds the 53.4% case falls to +1.0% net (about 3% annualised), below the roughly 12% T-bill yield.
+- At 60% odds the 53.4% case is +1.0% net (about 3% annualised), below the 12% T-bill.
 - **What kills it:** a Noventra funding failure, a failed rights issue, CCP objection, Engro walking away, or Noventra's controlling group changing its mind.
-- **Trigger to act:** the PAO itself, due by 7 Dec 2026. It fixes the price and size and removes most approval risk. Buying before the PAO collects about 3 points more spread but takes the funding risk.
+- **Trigger to act:** the PAO (due by 7 Dec 2026), which fixes price and size and removes most approval risk.
 
 ## 4. Ranked opportunities (expected annualised return after 0.5% costs)
 
@@ -128,15 +124,9 @@ Also outside the table: FFC's offer for Agritech (Dec 2024) drew only 7.85m of 1
 1. **Oversubscription follows the spread.** When the spread is above about 10%, retail tenders and you get pro rata. When the offer sits near the market (LOTCHEM, AGL), few tender. With EPCL's 21.5% spread, expect the free float to tender fully, so about 53% acceptance.
 2. **The stub sags after completion.** The unaccepted remainder usually trades below the pre-offer price within 1 to 6 months (median −13% vs offer at 1 month). Value it below the offer, never at it.
 3. **Most of the return comes at the PAI, not after.** The median premium to the pre-PAI price was 40%, while the median spread left on the day before the PAO was 14.7%. Capturing it means spotting sale processes early (multinational exits: Shell, Sanofi, Gillette, Rafhan).
-4. **Delistings at PSX-set prices** (GLPL Rs700 vs a Rs216 proposal; SCL Rs750) gave large uplifts to holders on the day the price was set. Watch for "voluntary delisting application" notices; that is where minority value appeared in 2026.
+4. **Delistings at PSX-set prices** (GLPL Rs700 vs a Rs216 proposal; SCL Rs750) paid holders when the price was set. Watch "voluntary delisting application" notices.
 5. **Withdrawals are common among competing bidders.** In 2025-26, PAIs for ACPL (AHL, CHCC), RMPL (CHCC, SFL), SGPL and Escorts were withdrawn, and ASC was suspended by SECP. Signed-SPA deals rarely failed in this sample.
 
 ## 6. Could not verify
 
-- The EPCL public-offer size and price from a primary filing. The PAI attachment was not retrievable; 17.5% is from ProPakistani.
-- The NICL, SBL, AMBL and BML deal prices.
-- CHCC and AGP buyback progress.
-- Whether Liberty Daharki is acting in concert with Noventra.
-- PKGP and LPL buyback prices.
-- BIPL and UNITY acceptance figures.
-- PRL rights: none found, and the absence is itself unconfirmed for filings that are scanned images.
+EPCL offer size and price from a primary filing (17.5% is from ProPakistani); NICL, SBL, AMBL and BML prices; CHCC and AGP buyback progress; whether Liberty Daharki acts in concert with Noventra; PKGP and LPL buyback prices; BIPL and UNITY acceptance; PRL rights (none found, but some filings are scanned images).

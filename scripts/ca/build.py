@@ -15,7 +15,8 @@ from sources import COLS  # noqa: E402
 
 PRIO = {"seed": 1, "payouts_book_closure": 2, "pdf_book_closure": 3, "pdf_resume_date": 3, "credit_notice": 4,
         "approx": 5, "approx_wide": 6, "gap_inferred": 7}
-INIT_PAR = {"NRSL": 5.0}   # par values that are not Rs10 before the first split we know of (doc 169604: NRSL Rs5 -> Rs10 in Aug 2021)
+INIT_PAR = {"NRSL": 5.0,   # par not Rs10 before the first split we know of (doc 169604: NRSL Rs5 -> Rs10 in Aug 2021)
+            "ZAL": 1.0}    # doc 260205: Zarea declares "Re.1" cash dividend for what the portal lists as 100%, so par is Re1
 
 close, vol, tv = common.panel()
 idx = close.index
@@ -173,15 +174,49 @@ allrows = pd.concat([p for p in parts if len(p)], ignore_index=True)
 allrows["ex_date"] = pd.to_datetime(allrows.ex_date)
 allrows["prio"] = allrows.ex_date_source.map(PRIO).fillna(9)
 allrows = allrows.dropna(subset=["ex_date"]).sort_values(["symbol", "type", "prio", "ex_date"]).reset_index(drop=True)
-keep = []
+keep, conflicts = [], []
 for (s, t), g in allrows.groupby(["symbol", "type"], sort=False):
     taken = []
     for r in g.itertuples():
-        dup = [k for k in taken if abs((k.ex_date - r.ex_date).days) <= 4 and (t == "split" or abs(k.value - r.value) <= 0.35 * max(abs(k.value), 1e-9))]
+        dup = [k for k in taken if abs((k.ex_date - r.ex_date).days) <= 4]
         if not dup:
             taken.append(r)
+        else:
+            conflicts.append((r.symbol, r.type, r.ex_date.date(), r.value, r.ex_date_source, dup[0].ex_date.date(), dup[0].value, dup[0].ex_date_source))
     keep += [t_.Index for t_ in taken]
 acts = allrows.loc[keep].sort_values(["symbol", "ex_date", "type"]).reset_index(drop=True)
+
+# ---------------- 6b. verify book-closure dates against the price where the move is big enough to see ----------------
+# bonus / cash with an expected move of 8% or more: if neither the ex-date nor the next or previous trading day shows at least 40% of the
+# expected drop, look +-3 trading days for a matching gap; if none, the book-closure date is not credible and the row is demoted to unplaced.
+ver_rows, drop_ix, shifted, demoted = [], [], 0, 0
+for r in acts.itertuples():
+    if r.ex_date_source not in ("payouts_book_closure", "pdf_book_closure") or r.type not in ("bonus", "cash") or r.symbol not in close.columns or r.ex_date > idx[-1]:
+        continue
+    col = close[r.symbol].dropna().index
+    k = col.searchsorted(r.ex_date)
+    if k == 0 or k >= len(col):
+        continue
+    t = col[k]
+    e = G.expected(r.type, r.value, G.prev.at[t, r.symbol])
+    if not np.isfinite(e) or abs(e) < 0.08:
+        continue
+    near = [G.pct.at[col[j], r.symbol] for j in (k - 1, k, k + 1) if 0 <= j < len(col)]
+    if min(near) <= 0.4 * e:
+        continue
+    d = G.find(r.symbol, r.type, r.value, col[max(k - 3, 0)], col[min(k + 3, len(col) - 1)])
+    if d is not None:
+        acts.at[r.Index, "ex_date"] = d
+        acts.at[r.Index, "ex_date_source"] = "approx"
+        acts.at[r.Index, "source_doc"] = f"{r.source_doc}; book-closure date {r.ex_date.date()} did not match the price move, moved to the matching gap"
+        shifted += 1
+    else:
+        drop_ix.append(r.Index)
+        unplaced.append(row(r.symbol, pd.NaT, r.type, r.value, r.announce_dt, "none", f"{r.source_doc}; book-closure ex-date {r.ex_date.date()} not credible: expected {e:+.1%}, saw {min(near):+.1%} (min of ex-1..ex+1), no matching gap within 3 trading days", r.sub_price))
+        demoted += 1
+acts = acts.drop(index=drop_ix).reset_index(drop=True)
+print("verification: moved", shifted, "demoted to unplaced", demoted, "| dedupe conflicts", len(conflicts))
+pd.DataFrame(conflicts, columns=["symbol", "type", "dropped_ex", "dropped_value", "dropped_source", "kept_ex", "kept_value", "kept_source"]).to_csv(ROOT / "data/raw/corporate_actions_conflicts.csv", index=False)
 
 # ---------------- 7. cross-check against seed ----------------
 dis = []
