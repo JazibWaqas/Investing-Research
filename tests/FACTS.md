@@ -113,3 +113,69 @@ Base rate, 11 completed offers 2021 to 2026: premium to pre-announcement price m
 ## Catalyst-trade verdict (knowledge/playbooks/catalyst_trade.md)
 
 "The refiners were flaggable as a 'loaded spring' from 29 Apr and as a trade from 8-9 Jul. Their size was luck: a war restarted. ASL was flaggable on 9 Apr from public sponsor filings. We missed both because we had no watch for ignored earnings or for sponsor buying, and because a sector-momentum filter puts a sector on the radar only after the move." Signals to watch: ignored blowout quarter; crude and inventory direction; product cracks and GRM; other sector spreads; policy pipeline (ECC, cabinet, CCoE); regulated-price resets (OGRA, NEPRA); trade protection (NTC); sponsor and insider buys; volume ignition; PSX unusual-movement letters. "Treat the signal list as a watch design, not a tested model."
+
+
+## Added 18 Oct 2026
+
+| Test | Verdict | Key number | n or episodes |
+|---|---|---|---|
+| quality_within_sector | weak ("Weak, not proven.") | Top minus bottom median "+5.8", placebo "p = 0.054" | 26 formations, 3 annual episodes |
+| insider_cluster_buying (run 2) | not supported ("Still not supported.") | H1 cluster 63 sessions median "-0.4%", p "0.473" | 37 H1 cluster events, 17 symbols |
+| fixed_capital_runs | no 3x ("no pre-registered rule set would have") | S3 "1.36x" vs B1 "2.00x" from 1 Oct 2024; KMI TR "1.81x" | 6 start dates; 14 S3 trades |
+| oracle_and_good_case | nothing reached 3x; breakout "a hypothesis from five windows" | S4 "2.38x", S3 "2.12x" (literal window); oracle "265x" | 8 systems, 5 windows plus literal; 200 random paths |
+| winners_case_control | not predictable ("does not support fast rotation") | Top-decile precision "5.82% (32 of 550)" vs base "4.51%"; placebo median "5.91%" | 129 events, 83 sector episodes |
+| active_trading_codex | suggestive | HIGH52 "2.62x" (2024-26), "3.34x" (2020-22), "0.89x" (2016-18) | 7 rules, 5 cohorts, 200 random paths |
+| system_walkforward post-mortem | "No" (S3 as a system); earnings signal "abandoned" | S3 "1.353" vs same-pool B0' | 132-name pool; 38 S2 satellite closed trades |
+| system_walkforward like-for-like | "B2 does not beat B0 or the index." | B2 accrued ratio to KMI TR "0.86" | 106 deposits, Rs5.3m; 456 survivor names |
+| deals.md base rate, complete set | about 50% at the PAI, "about 90% or better after the PAO" | Completion "27 of 56 resolved PAIs (48%)" | 75 PAIs (53 targets); 56 resolved |
+
+### 11. quality_within_sector
+- Hypothesis: within a sector, higher-quality names (ROE, cash conversion, EPS stability, dividend cover) earn higher 12-month returns; quality plus cheapness beats the EW liquid KMI basket.
+- Headline: n = 26 formations. "Top minus bottom | +9.2 | +5.8 | 69% | -33.2" (mean, median, win, worst). "QARP minus EW liquid KMI | +4.1 | +2.4 | 54% | -22.2". Placebo "p = 0.054."
+- Verdict: weak ("Weak, not proven.")
+- Biggest caveat: "Three episodes. Everything is inside one rerating regime."
+
+### 12. insider_cluster_buying (run 2, full universe)
+- Hypothesis (H1): a second distinct insider buying in the open market within 30 days predicts outperformance over 21, 63 and 126 sessions.
+- Headline: H1 cluster, 63 sessions, net: n 37, 17 symbols, mean "+2.6%", median "-0.4%", win "46%", p "0.473". Out of sample median "+5.0%", p "0.137". H4 single sales, 21 sessions: "137, -3.1%, 0.006".
+- Verdict: not supported.
+- Biggest caveat: "Extraction recall is about 60%, and 37% of PDFs give no row." "The top 3 events sum +192% against a total of +95%."
+
+### 13. fixed_capital_runs
+- Question: would Rs50,000 deposited once have tripled under the frozen rules, from six start dates.
+- Headline, from 1 Oct 2024: "S3 regime | 67,855 | 1.36x"; "B1 orchestrator | 100,041 | 2.00x"; "KMI All Share TR | 90,375 | 1.81x"; placebo "median 1.44x". "No strategy reached 3x."
+- Verdict: "over two years, no, and no pre-registered rule set would have."
+- Biggest caveat: "Cash dividends are complete only from Nov 2024."
+
+### 14. oracle_and_good_case
+- Question: what Rs50,000 could have become, per 2-year window, under perfect foresight and under eight systems fixed before looking.
+- Headline, 17 Oct 2024 to 16 Oct 2026: "S4 ... 2.38x, S3 ... 2.12x, equal-weight top-10 liquid 1.82x, KMI All Share buy and hold 1.74x (Rs86,860). Nothing reached 3x." Perfect foresight "265x" with a 1% cap, "2,099x" without.
+- Verdict: the breakout rule S3 ranked 1, 1, 1, 3, 1 across windows; "a hypothesis from five windows."
+- Biggest caveat: "The windows overlap and the last two share one bull run: really five observations."
+
+### 15. winners_case_control
+- Question: could the 129 six-month doublers of 2017 to 2026 be seen at the start from public data.
+- Headline: "Base rate | 1.72% | 4.51%" (train, test). "Top-decile precision | 4.11% (in-sample) | 5.82% (32 of 550)". "Shuffled-label placebo, top-decile precision | median 5.91%". Doublers 2.5 to 2.8 times more common when the 6-month T-bill sat below the policy rate.
+- Verdict: "This test does not support fast rotation into big winners picked on start-of-move features."
+- Biggest caveat: "There is no correction for testing 27 features."
+
+### 16. active_trading_codex (independent implementation)
+- Method: seven frozen rules (MOM63, MOM252, HIGH52, DIP200, SECTOR63, VOL20, EPS_YOY), five two-year cohorts, 200 random rotation paths each.
+- Headline: HIGH52 "0.89x | 1.08x | 3.34x | 2.09x | 2.62x" (2016-18 to 2024-26). 2024-26 HIGH52: "130,953", "-35%" drawdown, "53" trades, "62%" hit, "+4.6%" median trade, "95th" percentile. Random paths "mean 1.53x, median 1.42x".
+- Verdict: suggestive.
+- Biggest caveat: "the panel omits delistings, older dividends are missing and historical membership was reconstructed."
+
+### 17. system_walkforward: post-mortem and audit (Opus)
+- Headline: "S3 | 1.420 | 1.353 | 1.324" (frozen vs B0, vs same-pool B0', same-pool re-run). "S2 satellite, placebo from its own pool | +0.42 pt | -0.12 pt (fails)". "S4 satellite ... -1.10 pt (fails)".
+- Verdict: "Would I bet the user's Rs50k a month on S3 as a system? No." The ignored-quarter signal "is abandoned."
+- Biggest caveat: "Every value pick and every earnings signal comes from names that were liquid in 2026" (132-name pool).
+
+### 18. system_walkforward: like-for-like benchmarks and cap-weighted core
+- Headline, accrued dividends, 16 Oct 2026: "B2 | 12.15m", "B2-EW | 12.66m", "S3 | 18.60m", "KMI All Share TR | 14.10m". B2 to KMI TR "0.86".
+- Verdict: "B2 does not beat B0 or the index."
+- Biggest caveat: "The accrual is an estimate and is incomplete."
+
+### 19. deals.md: base rate, complete set
+- Headline: "Completion: 27 of 56 resolved PAIs (48%)." Buy the day after the PAI, all resolved: "54 | +7.2% | -1.2% | 48%". Completed only: "27 | +18.5% | +8.0% | 63%".
+- Verdict: "the odds are about 50% at the PAI and about 90% or better after the PAO."
+- Biggest caveat: unknown outcomes for 12 PAIs: "27 of 68 non-pending (40%)" if failures, "57%" if completions.
