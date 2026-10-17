@@ -677,7 +677,7 @@ def cov_tables():
 def main():
     out("== SYSTEM WALK-FORWARD (B0, B1, S2, S3, S4), run 2026-10-17. Pre-registered rules: knowledge/playbooks/strategy_candidates.md")
     out(f"Panel {close.shape[0]} days x {close.shape[1]} symbols, {dates[0].date()} to {LAST.date()}. Months K={K} (deposits {K} x Rs{DEP:,.0f} = Rs{K * DEP:,.0f}); first trade {dates[ID[0]].date()} (formed {dates[IF[0]].date()}), last trade {dates[ID[-1]].date()}; valued at {LAST.date()} close.")
-    out(f"Costs {C:.2%} per side. Dividends: cash from data/corporate_actions.csv at 85% (15% withholding), reinvested through the total-return index. Cash dividends are complete only from Nov 2024: before that the strategies and EW KMI are close to price return, and KSE100 is price only.")
+    out(f"Costs {C:.2%} per side. Dividends: cash from data/corporate_actions.csv at 85% (15% withholding), reinvested through the total-return index. Cash dividends are complete only from Nov 2024: before that the strategies and EW KMI are close to price return, while KSE100 is a total-return index (lesson 20; label corrected in the audit), so comparisons with it are tilted AGAINST the strategies.")
     res = run_all("TR", "frozen")
     first = res["_first"]
     sigs = res["_sigs"]
@@ -708,7 +708,7 @@ def main():
     # ---------------------------------------------------------------- headline
     out("\n== 2. HEADLINE (frozen rules, total-return basis, 15% withholding on known cash dividends)")
     names = ["B0", "B1", "S2", "S3", "S4", "EW", "KSE"]
-    lab = {"B0": "B0 buy market", "B1": "B1 orchestrator", "S2": "S2 momentum+blowout", "S3": "S3 regime (no sponsor sat)", "S4": "S4 full (no sponsor sat)", "EW": "EW liquid KMI (rebal.)", "KSE": "KSE100 price index, no costs"}
+    lab = {"B0": "B0 buy market", "B1": "B1 orchestrator", "S2": "S2 momentum+blowout", "S3": "S3 regime (no sponsor sat)", "S4": "S4 full (no sponsor sat)", "EW": "EW liquid KMI (rebal.)", "KSE": "KSE100 (total return), no costs"}
     b0 = res["B0"]["stats"]["nav"]
     rows = []
     for n in names:
@@ -832,7 +832,7 @@ def main():
         if pl: out(f"   {n} satellite in pool run: n {pl['n']}, actual median {pc(pl['actual'])}, placebo (quarterly_eps names) {pc(pl['placebo'])}, difference {pc(pl['diff'], 2)} -> {'fails' if pl['diff'] <= 0 else 'passes'}")
     kmi = pd.read_csv(ROOT / "data/macro/kmiallshr.csv", parse_dates=["date"]).set_index("date").close.reindex(dates).ffill().values
     kv = sum(DEP / kmi[ID[k]] for k in range(K)) * kmi[-1]
-    out(f"-- Investable Shariah bar: KMI All Share price index bought with each deposit, no costs, no dividends: Rs{kv:,.0f}. Frozen strategy / that: " + ", ".join(f"{n} {v[n] / kv:.2f}" for n in names[:5]))
+    out(f"-- Investable Shariah bar: KMI All Share index (total return, data/macro/INDEX_NOTES.md) bought with each deposit, no costs: Rs{kv:,.0f}. Frozen strategy / that: " + ", ".join(f"{n} {v[n] / kv:.2f}" for n in names[:5]) + ". The strategies carry cash dividends only from Nov 2024, so these ratios understate them.")
     pd.concat([rp[n]["trades"] for n in ("B0", "B1", "S2", "S3", "S4")]).drop(columns=["ie", "ix", "k_entry"]).assign(sig=lambda x: x.sig.astype(str)).to_csv(ROOT / "tests/out/walkforward_trades_pool.csv", index=False)
     set_pool(None)
     # files

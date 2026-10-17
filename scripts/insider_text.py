@@ -1,19 +1,15 @@
-"""PDF -> (text, method). Text layer via pdfplumber; no text layer -> rapidocr on a 150dpi render, boxes regrouped into lines by y."""
-import numpy as np, pdfplumber
-
-_ocr = None
+"""PDF -> (text, method). Text layer via pdfplumber; no text layer -> Windows built-in OCR (winocr) on a 200dpi render, words regrouped into rows by y.
+(rapidocr-onnxruntime was tried first: 12-20 s a page on this machine, vs 0.4 s for winocr.)"""
+import pdfplumber, winocr
 
 
 def ocr_lines(img):
-    global _ocr
-    if _ocr is None:
-        from rapidocr_onnxruntime import RapidOCR
-        _ocr = RapidOCR()
-    res, _ = _ocr(np.array(img.convert("RGB")))
-    boxes = sorted(((np.mean([p[1] for p in b]), min(p[0] for p in b), max(p[1] for p in b) - min(p[1] for p in b), t) for b, t, c in (res or [])))
+    r = winocr.recognize_pil_sync(img.convert("RGB"), "en")
+    ws = sorted(((w["bounding_rect"]["y"] + w["bounding_rect"]["height"] / 2, w["bounding_rect"]["x"], w["bounding_rect"]["height"], w["text"])
+                 for l in r["lines"] for w in l["words"]))
     lines, cur, cy, ch = [], [], None, 0
-    for y, x, h, t in boxes:
-        if cy is not None and abs(y - cy) > max(ch, h) * 0.6:
+    for y, x, h, t in ws:
+        if cy is not None and abs(y - cy) > max(ch, h) * 0.55:
             lines.append(" ".join(t_ for _, t_ in sorted(cur))); cur = []
         if not cur:
             cy, ch = y, h
@@ -30,6 +26,6 @@ def pdf_text(path, max_pages=6):
             txt = "\n".join(pg.extract_text() or "" for pg in pages)
             if len(txt.strip()) >= 80:
                 return txt, "pdf_text"
-            return "\n".join(ocr_lines(pg.to_image(resolution=150).original) for pg in pages), "ocr"
+            return "\n".join(ocr_lines(pg.to_image(resolution=200).original) for pg in pages), "ocr"
     except Exception as e:
         return "", f"error:{type(e).__name__}"

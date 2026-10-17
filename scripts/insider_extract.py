@@ -12,11 +12,12 @@ ROOT = Path(__file__).resolve().parent.parent
 MON = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split(), 1)}
 MONRE = r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
 D_NUM = re.compile(r"(?<!\d)(\d{1,2})\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{2,4})(?!\d)")
+D_ISO = re.compile(r"(?<!\d)(20\d\d)\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{1,2})(?!\d)")
 D_DMY = re.compile(rf"(?<!\d)(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]*{MONRE}[\s,.-]*(\d{{4}})", re.I)
 D_MDY = re.compile(rf"\b{MONRE}[\s.]*(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]+(\d{{4}})", re.I)
 NUM = re.compile(r"(?<![\w.])\d[\d,]*(?:\.\d+)?(?![\w])")
-BUYW = re.compile(r"purchas|bought|\bbuy|acqui|\bgift\s*in|\bpurch", re.I)
-SELLW = re.compile(r"\bsale|\bsold|\bsell|dispos|\bgift\s*out", re.I)
+BUYW = re.compile(r"right|purchas|bought|\bbuy|acqui|\bgift\s*(?:in|from)|\bpurch", re.I)
+SELLW = re.compile(r"\bsale|\bsold|\bsell|dispos|\bgift\s*(?:out|to)", re.I)
 NAMESKIP = re.compile(r"name|person|descri|detail|relevant|shares?\b|transaction|date|nature|form|market|cumulative|holding|certificate|number|percent|rate|sr\b|no\.|total|subject|dear|yours|the general|pakistan|exchange|regulation|company|limited|ltd|director|executive|secretary|officer|spouse|substantial|disclosure|interest|cdc|physical|ready|through", re.I)
 
 
@@ -26,6 +27,8 @@ def dates_in(s):
         d, mo, y = int(m[1]), int(m[2]), int(m[3])
         y += 2000 if y < 100 else 0
         out.append((m.start(), m.end(), d, mo, y))
+    for m in D_ISO.finditer(s):
+        out.append((m.start(), m.end(), int(m[3]), int(m[2]), int(m[1])))
     for m in D_DMY.finditer(s):
         out.append((m.start(), m.end(), int(m[1]), MON[m[2].lower()[:3]], int(m[3])))
     for m in D_MDY.finditer(s):
@@ -115,8 +118,14 @@ def name_for(lines, i, a):
 
 def parse(text, filed, symbol):
     lines = [l.strip() for l in text.splitlines() if l.strip()]
+    for i in range(len(lines) - 1):   # date wrapped over two lines: "24-08-" / "2026 ..."
+        m = re.search(r"(?<!\d)\d{1,2}\s*[-./]\s*(?:\d{1,2}|[A-Za-z]{3,9})\s*[-./,]?\s*$", lines[i])
+        y = re.match(r"([\dOo]{4})\s*(.*)", lines[i + 1])
+        if m and y and not dates_in(lines[i]):
+            lines[i] = lines[i] + " " + y[1].replace("O", "0").replace("o", "0"); lines[i + 1] = y[2]
+    lines = [l for l in lines if l]
     doc_roles = [roles(l) for l in lines if l.count("/") < 2 and re.search(r"\bby\b.*(mr|mrs|ms|dr)\b", l, re.I)]
-    rows = []
+    rows, last_name = [], ""
     for i, ln in enumerate(lines):
         ds = dates_in(ln)
         if not ds:
@@ -134,15 +143,27 @@ def parse(text, filed, symbol):
                 row2 = row + " " + nxt
                 toks = [t for t in NUM.findall(row2[len(ln[:a]):]) if num(t) is not None]
                 win = ln + " " + nxt
+            if len(toks) < 2 and prv and not dates_in(prv):   # layout: data line first, date line second
+                t2 = [t for t in NUM.findall(prv) if num(t) is not None]
+                if len(t2) >= 2:
+                    toks, win = t2, prv + " " + ln
             if len(toks) < 1:
                 continue
             ctx = " ".join([prv, ln, nxt])
             sb, ss = BUYW.search(win), SELLW.search(win)
             if not (sb or ss):
                 sb, ss = BUYW.search(ctx), SELLW.search(ctx)
+            if not (sb or ss):   # broker statements: a PURCHASE / SALE heading above the table
+                for j in range(i - 1, max(-1, i - 25), -1):
+                    h = lines[j].lower().strip()
+                    if re.fullmatch(r"(purchase|purchases|buy|sale|sales|sold)\W*", h):
+                        sb, ss = (BUYW.search(h), None) if h[0] in "pb" else (None, SELLW.search(h)); break
             if not (sb or ss):
-                continue
-            direction = "buy" if sb and (not ss or sb.start() < ss.start()) else "sell"
+                if nature(ctx, text) in ("open_market", "unstated"):
+                    continue
+                direction = "unknown"   # gift / transfer / rights rows that carry no buy or sell word
+            else:
+                direction = "buy" if sb and (not ss or sb.start() < ss.start()) else "sell"
             vals = [num(t) for t in toks]
             sh = pr = None
             cand = [v for v in vals if v is not None]
@@ -166,7 +187,8 @@ def parse(text, filed, symbol):
                     sh, pr = pr, sh
                 else:
                     continue
-            name = name_for(lines, i, a)
+            name = name_for(lines, i, a) or last_name
+            last_name = name
             rw = " ".join(l for l in (prv, ln, nxt) if l.count("/") < 3)
             role = roles(rw) or (doc_roles[0] if doc_roles else "")
             nat = nature(" ".join([ln, nxt]), text)

@@ -1,0 +1,107 @@
+Quality within sector. Run 2026-10-18. Panel 2480 days to 2026-10-16; adjusted total returns (cash dividends complete only from Nov 2024).
+quarterly_eps: 129 names; rows with announce timestamp 1976/2460; missing-timestamp rows assumed available at quarter end + 95d (95th pct of observed lag).
+Rows before 2021-09-30: 18 of 2460: the file is effectively 2021Q3-2026Q2 (20 quarters). 8-quarter EPS stability first computable Sep 2023.
+
+PRIMARY (a,b,c; d only used from Nov 2025 so never in the backtest): formations 2023-09 to 2025-10, 26 monthly; scored names per formation median 74 (min 27, max 86); sectors with >=3 names median 12; top-tercile names median 19; QARP names median 18; ROE fallback names median 16
+EXTENDED (a,b only, needs 4 quarters): 2022-11 to 2025-10, 36 monthly; scored median 69, sectors median 11
+
+=== PRIMARY: 12-month holds, overlapping monthly formations (percent)
+Top-third quality, raw                         n=26  mean   +51.7 median   +57.7 win   92% worst    -7.6
+Bottom-third quality, raw                      n=26  mean   +42.5 median   +37.8 win   92% worst   -14.1
+Top minus bottom (within sector)               n=26  mean    +9.2 median    +5.8 win   69% worst   -33.2
+Top minus all scored names EW                  n=26  mean    +3.0 median    +1.4 win   62% worst   -25.3
+Top minus EW liquid KMI                        n=26  mean    +5.0 median    +3.2 win   58% worst   -19.9
+QARP raw                                       n=26  mean   +50.7 median   +52.2 win   92% worst   -11.0
+QARP minus EW liquid KMI                       n=26  mean    +4.1 median    +2.4 win   54% worst   -22.2
+QARP minus KMI30 members EW                    n=26  mean    +7.7 median    +0.7 win   54% worst   -14.5
+QARP minus all scored EW (selection)           n=26  mean    +2.0 median    -0.3 win   46% worst   -26.3
+Benchmark: EW liquid KMI raw                   n=26  mean   +46.7 median   +51.3 win   92% worst   -10.0
+Benchmark: KMI30 members EW raw                n=26  mean   +43.1 median   +46.4 win   96% worst    -3.6
+-- annual non-overlapping cohorts
+  top-bottom: October cohorts 2023-10 +103.1, 2024-10 -33.2, 2025-10 +6.4
+  top-bottom: 12 month-offsets, annual cohorts per offset [2, 3]; mean of offset means +8.3, offsets positive 10/12, worst offset mean -11.7
+  QARP - KMI: October cohorts 2023-10 +51.6, 2024-10 +16.0, 2025-10 -1.0
+  QARP - KMI: 12 month-offsets, annual cohorts per offset [2, 3]; mean of offset means +3.6, offsets positive 5/12, worst offset mean -4.6
+  QARP - KMI30: October cohorts 2023-10 +73.9, 2024-10 +17.0, 2025-10 -7.5
+  QARP - KMI30: 12 month-offsets, annual cohorts per offset [2, 3]; mean of offset means +6.9, offsets positive 8/12, worst offset mean -7.7
+  KMI EW raw: October cohorts 2023-10 +73.7, 2024-10 +91.9, 2025-10 -10.0
+  KMI EW raw: 12 month-offsets, annual cohorts per offset [2, 3]; mean of offset means +46.0, offsets positive 12/12, worst offset mean +30.9
+-- placebo: random ranks within the same sectors, same counts, 2000 draws of the whole formation path
+  top-bottom mean +9.2; placebo mean -0.1, 5-95% [-10.0, +9.3]; p(placebo >= obs) = 0.054
+  QARP-KMI mean +4.1; placebo mean +2.1, 5-95% [-3.3, +7.6]; p(placebo >= obs) = 0.264
+
+=== EXTENDED a,b only: 12-month holds, overlapping monthly formations (percent)
+Top-third quality, raw                         n=36  mean   +66.3 median   +58.3 win   97% worst    -4.7
+Bottom-third quality, raw                      n=36  mean   +43.6 median   +45.2 win   97% worst    -8.9
+Top minus bottom (within sector)               n=36  mean   +22.6 median    +8.2 win   67% worst   -18.4
+Top minus all scored names EW                  n=36  mean    +9.4 median    +3.2 win   64% worst   -38.5
+Top minus EW liquid KMI                        n=36  mean   +15.9 median    +4.7 win   61% worst   -20.5
+QARP raw                                       n=36  mean   +71.0 median   +57.8 win   94% worst   -11.9
+QARP minus EW liquid KMI                       n=36  mean   +20.7 median    +7.3 win   72% worst   -18.0
+QARP minus KMI30 members EW                    n=36  mean   +26.6 median    +9.6 win   69% worst   -13.9
+QARP minus all scored EW (selection)           n=36  mean   +14.1 median    +4.6 win   69% worst   -21.0
+Benchmark: EW liquid KMI raw                   n=36  mean   +50.4 median   +55.8 win   94% worst   -10.0
+Benchmark: KMI30 members EW raw                n=36  mean   +44.4 median   +49.0 win   97% worst    -3.6
+-- annual non-overlapping cohorts
+  top-bottom: October cohorts 2023-10 +60.4, 2024-10 -0.2, 2025-10 +4.2
+  top-bottom: 12 month-offsets, annual cohorts per offset [3]; mean of offset means +22.6, offsets positive 9/12, worst offset mean -6.0
+  QARP - KMI: October cohorts 2023-10 +54.1, 2024-10 +36.9, 2025-10 -1.9
+  QARP - KMI: 12 month-offsets, annual cohorts per offset [3]; mean of offset means +20.7, offsets positive 10/12, worst offset mean -1.4
+  QARP - KMI30: October cohorts 2023-10 +76.4, 2024-10 +37.9, 2025-10 -8.4
+  QARP - KMI30: 12 month-offsets, annual cohorts per offset [3]; mean of offset means +26.6, offsets positive 12/12, worst offset mean +1.9
+  KMI EW raw: October cohorts 2023-10 +73.7, 2024-10 +91.9, 2025-10 -10.0
+  KMI EW raw: 12 month-offsets, annual cohorts per offset [3]; mean of offset means +50.4, offsets positive 12/12, worst offset mean +41.5
+-- placebo: random ranks within the same sectors, same counts, 2000 draws of the whole formation path
+  top-bottom mean +22.6; placebo mean +0.0, 5-95% [-12.7, +12.4]; p(placebo >= obs) = 0.001
+  QARP-KMI mean +20.7; placebo mean +6.1, 5-95% [-0.9, +13.8]; p(placebo >= obs) = 0.000
+
+=== Splits and rerating
+The 2020-21 vs 2022-26 split is NOT possible: fundamentals start 2021Q3 and every formation date is Sep 2023 or later. Split used instead (formation date):
+[PRIMARY] formed before 2024-09
+  top-bottom                                   n=12  mean   +18.0 median   +14.2 win   67% worst   -29.1
+  QARP - KMI                                   n=12  mean    +4.3 median    -2.6 win   33% worst   -22.2
+  KMI EW raw                                   n=12  mean   +67.1 median   +69.5 win  100% worst   +43.9
+[PRIMARY] formed 2024-09 onwards
+  top-bottom                                   n=14  mean    +1.7 median    +5.3 win   71% worst   -33.2
+  QARP - KMI                                   n=14  mean    +3.8 median    +4.9 win   71% worst    -4.5
+  KMI EW raw                                   n=14  mean   +29.2 median   +17.2 win   86% worst   -10.0
+[EXTENDED] formed before 2024-09
+  top-bottom                                   n=22  mean   +35.6 median   +16.4 win   73% worst   -18.4
+  QARP - KMI                                   n=22  mean   +29.3 median   +12.2 win   68% worst   -18.0
+  KMI EW raw                                   n=22  mean   +63.9 median   +64.8 win  100% worst    +4.9
+[EXTENDED] formed 2024-09 onwards
+  top-bottom                                   n=14  mean    +2.3 median    +0.3 win   57% worst   -14.6
+  QARP - KMI                                   n=14  mean    +7.0 median    +6.1 win   79% worst    -3.6
+  KMI EW raw                                   n=14  mean   +29.2 median   +17.2 win   86% worst   -10.0
+Every holding window sits inside the 2022-25 rerating or its tail, so it cannot be excluded by dropping dates. Reads that remove it: excess over the EW KMI basket (above) and the last cohort, formed Sep-Oct 2025:
+[PRIMARY] formed Sep-Oct 2025 (n=2): top +1.1, bottom -2.4, QARP -0.4, KMI EW -2.7, KMI30 EW +5.6
+[EXTENDED] formed Sep-Oct 2025 (n=2): top +5.9, bottom -0.0, QARP +0.2, KMI EW -2.7, KMI30 EW +5.6
+
+Component check, top minus bottom on a single component (EXTENDED sample; exploratory)
+component a                                    n=36  mean    +6.7 median    +2.6 win   58% worst  -100.2
+component b                                    n=36  mean   +35.3 median   +14.8 win   83% worst   -33.4
+
+EXTENDED (a,b only) restricted to the PRIMARY formation window (2023-09 onwards), to separate the effect of dropping (c) from the effect of the earlier window
+  top-bottom                                   n=26  mean   +11.2 median    +6.0 win   62% worst   -18.4
+  QARP - KMI                                   n=26  mean   +10.6 median    +6.1 win   73% worst   -18.0
+  QARP - KMI30                                 n=26  mean   +14.2 median    +6.5 win   58% worst   -13.9
+EXTENDED formed 2022-11 to 2023-08 only (market rerating at its fastest)
+  top-bottom                                   n=10  mean   +52.2 median   +15.4 win   80% worst    -7.1
+  QARP - KMI                                   n=10  mean   +46.7 median   +24.6 win   70% worst    -7.1
+  KMI EW raw                                   n=10  mean   +60.1 median   +62.8 win  100% worst    +4.9
+
+=== Current screen (as of 2026-10-18; prices to 2026-10-16; quarters announced before then)
+Liquid KMI names with a full score: 112; QARP-qualified: 31. Display order = mean of within-sector quality pct and E/P pct (display rule, not tested).
+sym     sector                              Q   ROE%  cash  CVeps   pay   E/P%
+FCL     CABLE & ELECTRICAL GOODS         0.88   12.9  0.00   0.52  0.46   13.3
+FFC     FERTILIZER                       0.83   33.2  1.32   0.12  0.67   11.4
+ISL     ENGINEERING                      0.85   13.7  0.00   0.54  0.59   10.7
+PRL     REFINERY                         0.83   36.9  1.01   2.87   nan   23.4
+IPAK    PAPER, BOARD & PACKAGING         0.81   23.5  0.44   0.91  0.29   21.2
+PIBTL   TRANSPORT                        0.83   17.9  1.39   1.63   nan   13.8
+SNGP    OIL & GAS MARKETING COMPANIES    0.78   20.6  2.00   0.44  0.13   25.4
+NETSOL  TECHNOLOGY & COMMUNICATION       0.71   17.6  1.16   0.94   nan   22.0
+LUCK    CEMENT                           0.65   18.8  0.62   0.12  0.08   15.2
+ABOT    PHARMACEUTICALS                  0.63    nan  0.98   0.21  0.46    9.3
+ROE = TTM net income / fiscal-year-end equity (nan = fallback used); CVeps = coefficient of variation of last 8 quarterly EPS (lower is steadier); pay = trailing 12m dividends / TTM EPS where recorded.
+Rank 11-20 for context: LOTCHEM(0.76), GGL(0.67), CLOV(0.88), UNITY(0.56), GAL(0.57), PPL(0.58), BIPL(0.75), SPSL(0.93), TRSM(0.72), TATM(0.63)

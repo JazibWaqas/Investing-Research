@@ -1,6 +1,6 @@
 == SYSTEM WALK-FORWARD (B0, B1, S2, S3, S4), run 2026-10-17. Pre-registered rules: knowledge/playbooks/strategy_candidates.md
 Panel 2480 days x 456 symbols, 2016-10-17 to 2026-10-16. Months K=106 (deposits 106 x Rs50,000 = Rs5,300,000); first trade 2018-01-01 (formed 2017-12-29), last trade 2026-10-01; valued at 2026-10-16 close.
-Costs 0.25% per side. Dividends: cash from data/corporate_actions.csv at 85% (15% withholding), reinvested through the total-return index. Cash dividends are complete only from Nov 2024: before that the strategies and EW KMI are close to price return, and KSE100 is price only.
+Costs 0.25% per side. Dividends: cash from data/corporate_actions.csv at 85% (15% withholding), reinvested through the total-return index. Cash dividends are complete only from Nov 2024: before that the strategies and EW KMI are close to price return, while KSE100 is a total-return index (lesson 20; label corrected in the audit), so comparisons with it are tilted AGAINST the strategies.
 
 == 1. DATA AND COVERAGE FLAGS
 KMI membership: 16 lists (2019-01-28 to 2026-06-05); the 13 formations before 28 Jan 2019 use KMI_ALL_derived_2019-01-28.csv (APPROXIMATION: names that left earlier are missing); later ones use the latest derived list plus index_changes.csv (psx.com.pk rows only); 2026 uses the exact 2026-06-05 list. Derived lists sit 0 to 7 names from notice totals.
@@ -29,14 +29,14 @@ Satellite (earnings-blowout) UNCOVERED years: [2018, 2019, 2020, 2021, 2025, 202
 Sponsor-buying satellite: data/insider_trades.csv EXISTS but this script does not parse it. S3 and S4 therefore run as 'no sponsor satellite': S3 is core only; S4 satellite is the earnings-blowout signal only.
 
 == 2. HEADLINE (frozen rules, total-return basis, 15% withholding on known cash dividends)
-                    strategy   final_Rs x_deposits vs_B0 TWR_CAGR    IRR  maxDD  DD_trough worst12m w12_end
-               B0 buy market 12,418,018       2.34 1.000   +10.1% +18.7% -61.3% 2020-03-26   -51.2% 2019-08
-             B1 orchestrator 13,110,944       2.47 1.056   +10.1% +19.9% -66.3% 2023-06-23   -52.9% 2019-08
-         S2 momentum+blowout 14,170,936       2.67 1.141   +11.8% +21.6% -61.3% 2020-03-26   -53.5% 2019-08
-  S3 regime (no sponsor sat) 17,630,566       3.33 1.420   +19.2% +26.3% -50.2% 2020-03-30   -42.2% 2020-03
-    S4 full (no sponsor sat) 16,541,384       3.12 1.332   +18.0% +24.9% -50.2% 2020-03-30   -42.2% 2020-03
-      EW liquid KMI (rebal.) 10,242,065       1.93 0.825    +7.4% +14.5% -60.9% 2020-03-26   -52.1% 2019-07
-KSE100 price index, no costs 17,124,185       3.23 1.379   +17.4% +25.6% -41.6% 2020-03-25   -28.9% 2019-08
+                       strategy   final_Rs x_deposits vs_B0 TWR_CAGR    IRR  maxDD  DD_trough worst12m w12_end
+                  B0 buy market 12,418,018       2.34 1.000   +10.1% +18.7% -61.3% 2020-03-26   -51.2% 2019-08
+                B1 orchestrator 13,110,944       2.47 1.056   +10.1% +19.9% -66.3% 2023-06-23   -52.9% 2019-08
+            S2 momentum+blowout 14,170,936       2.67 1.141   +11.8% +21.6% -61.3% 2020-03-26   -53.5% 2019-08
+     S3 regime (no sponsor sat) 17,630,566       3.33 1.420   +19.2% +26.3% -50.2% 2020-03-30   -42.2% 2020-03
+       S4 full (no sponsor sat) 16,541,384       3.12 1.332   +18.0% +24.9% -50.2% 2020-03-30   -42.2% 2020-03
+         EW liquid KMI (rebal.) 10,242,065       1.93 0.825    +7.4% +14.5% -60.9% 2020-03-26   -52.1% 2019-07
+KSE100 (total return), no costs 17,124,185       3.23 1.379   +17.4% +25.6% -41.6% 2020-03-25   -28.9% 2019-08
 Deposits total Rs5,300,000. TWR CAGR is of the unit value from 2018-01-01 (costs fall on performance). IRR is money-weighted. Worst 12m is the worst rolling 12 months of month-end unit values (F_k).
 
 Trade statistics (net of 0.5% round trip; trade = first buy to full exit; dividends reinvested inside the return; open trades marked at 16 Oct 2026, net of exit fee):
@@ -116,14 +116,14 @@ strategy sleeve  closed_n  hit median   mean  worst  open_n     cost_Rs     PnL_
 2026-10-16 5,300,000 16,541,384 17,124,185 10,242,065   0.97  1.62   -19.3%  -4.4%
 
 == 4. SPLITS (time-weighted CAGR of unit value) and the value-data period
-                    strategy CAGR_2018_2021 CAGR_2022_2026 CAGR_from_2022-09 maxDD_from_2022-09
-               B0 buy market          -1.6%         +20.9%            +27.8%             -28.2%
-             B1 orchestrator          -1.9%         +21.1%            +27.2%             -45.9%
-         S2 momentum+blowout          -0.8%         +23.6%            +33.8%             -28.8%
-  S3 regime (no sponsor sat)          +5.2%         +32.4%            +39.9%             -41.7%
-    S4 full (no sponsor sat)          +5.0%         +30.1%            +37.4%             -35.8%
-      EW liquid KMI (rebal.)          -0.3%         +14.3%            +21.0%             -30.6%
-KSE100 price index, no costs          +2.3%         +31.6%            +39.3%             -22.6%
+                       strategy CAGR_2018_2021 CAGR_2022_2026 CAGR_from_2022-09 maxDD_from_2022-09
+                  B0 buy market          -1.6%         +20.9%            +27.8%             -28.2%
+                B1 orchestrator          -1.9%         +21.1%            +27.2%             -45.9%
+            S2 momentum+blowout          -0.8%         +23.6%            +33.8%             -28.8%
+     S3 regime (no sponsor sat)          +5.2%         +32.4%            +39.9%             -41.7%
+       S4 full (no sponsor sat)          +5.0%         +30.1%            +37.4%             -35.8%
+         EW liquid KMI (rebal.)          -0.3%         +14.3%            +21.0%             -30.6%
+KSE100 (total return), no costs          +2.3%         +31.6%            +39.3%             -22.6%
 From 2022-09 the value inputs are live (15+ eligible names); before it B1, S2 and the cores of S3/S4 run on the EW-of-chosen-sectors fallback. Lesson 9: 2022 to 2025 carries the rerating tailwind; the Oct 2025 to Oct 2026 cohort was flat to negative for value.
 
 == 5. EARNINGS-BLOWOUT SATELLITE (S2 and S4) AND PLACEBO
@@ -201,6 +201,17 @@ strategy   final_Rs TWR_CAGR vs_B0  maxDD
      KSE 17,124,185   +17.4% 1.379 -41.6%
    verdicts: B1 1.056 (ok); S2 1.303 (ok); S3 1.164 (ok); S4 vs best(S2,S3) 1.038 (ok)
    core_trail exits: S2 91; S3 31; S4 32
+-- F. AUDIT: core name sold when a new quarterly filing shows EPS YoY below 0, blocked 3 months; first value month Aug 2022
+strategy   final_Rs TWR_CAGR vs_B0  maxDD
+      B0 12,418,018   +10.1% 1.000 -61.3%
+      B1 13,110,944   +10.1% 1.056 -66.3%
+      S2 15,104,052   +13.2% 1.216 -61.3%
+      S3 20,421,309   +21.4% 1.644 -50.2%
+      S4 15,810,313   +17.4% 1.273 -50.2%
+      EW 10,242,065    +7.4% 0.825 -60.9%
+     KSE 17,124,185   +17.4% 1.379 -41.6%
+   verdicts: B1 1.056 (ok); S2 1.216 (ok); S3 1.644 (ok); S4 vs best(S2,S3) 0.774 (abandon)
+   core_eps exits: S2 17; S3 13; S4 14
 
 == 8. AUDIT (Opus, 2026-10-17): SURVIVOR-SELECTED PICK POOL. sa_ratios and quarterly_eps names were chosen on 2026 liquidity; B0 holds all of U(t).
    2018-01 to 2022-07: pool share of U(t) 85%; monthly EW(pool) - EW(rest) mean +0.03%, median +0.72%, t 0.04, compounded ratio 1.16
@@ -217,5 +228,6 @@ strategy  frozen_Rs frozen_vs_B0 frozen_vs_poolB0    pool_Rs pool_CAGR pool_vs_p
    pool verdicts: B1 1.137 (ok); S2 1.271 (ok); S3 1.324 (ok); S4 vs best(S2,S3) 1.103 (ok)
    S2 satellite in pool run: n 45, actual median +0.5%, placebo (quarterly_eps names) +2.3%, difference -1.88% -> fails
    S4 satellite in pool run: n 45, actual median -0.0%, placebo (quarterly_eps names) +1.2%, difference -1.18% -> fails
+-- Investable Shariah bar: KMI All Share index (total return, data/macro/INDEX_NOTES.md) bought with each deposit, no costs: Rs14,099,143. Frozen strategy / that: B0 0.88, B1 0.93, S2 1.01, S3 1.25, S4 1.17. The strategies carry cash dividends only from Nov 2024, so these ratios understate them.
 
 Wrote tests/out/walkforward_trades.csv (1153 rows) and walkforward_holdings.csv (15974 rows).

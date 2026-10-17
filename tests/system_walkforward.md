@@ -135,3 +135,108 @@ S4 fails in the headline and three of four variants and passes only on price ret
 7. **Survivorship and partial dividends** flatter all EW figures and tilt the dividend comparison; the 15% withholding applies only where cash dividends are known.
 8. Costs are 0.25% per side only. No slippage on Rs1.7m satellite tickets, no tax, fractional shares allowed, and all suspended names are assumed sellable the next month.
 9. Sponsor-buying was not tested, so S3 and S4 verdicts are for the versions without it.
+
+## Post-mortem and audit (Opus, 2026-10-17)
+
+Evidence: `scripts/walkforward.py` (patched, audit sections 7E, 7F and 8), the unpatched engine kept as `scripts/walkforward_v0.py`, `scripts/tests/walkforward_audit.py` with output `tests/out/walkforward_audit.txt`, and `tests/out/walkforward_trades_pool.csv` (the trades of the same-pool re-run). The headline (sections 1 to 6 of `system_walkforward.txt`) is unchanged by the patch: every frozen number above still holds. Only new lines were added.
+
+### 1. Lookahead audit
+
+The engine's own timing is clean. Every decision at the month-end close F uses data stamped by F and trades at the next month's first close. Liquidity uses the 60 sessions strictly before F. Value rows are gated on the result filing. Satellite signals go live 20 sessions after the filing (minimum checked: 20). Stops are tested at F and executed at D, which is late, not early. The leaks are in the data, and one of them is material.
+
+| # | Source | Finding | Severity | Bias | Fix |
+|---|---|---|---|---|---|
+| 1 | `sa_ratios.csv` `pe`, `date`, `TTM`, `peForward` | Clean. `TTM` and `peForward` are never read. Each row is gated on the annual-result filing (464 of 530 matched; 66 use FYE + 4 months). `pe` is on the FYE price: implied EPS matches the sum of the four quarterly EPS within 5% for 79% of 374 rows (median error 0.1%), against 25% at the filing-date price and 7% at today's price. The drift adjustment is therefore right. 13 rows are usable under 30 days after FYE (e.g. ARPL), which looks like genuinely early filers but was not checked against the PDFs. | none | none | none |
+| 2 | **Pick pool chosen on 2026 liquidity** (`sa_ratios` 108 names, `quarterly_eps` 129; 132 together) | **Leak.** Every value pick and every earnings signal comes from names that were liquid in 2026, while B0 holds all of U(t). Inside U(t), pool names beat the rest by +2.28% a month from Aug 2022 to Sep 2026 (median +3.04%, t 3.85, 3.01x compounded) and by +0.03% before (t 0.04). The pool is 82% to 85% of U(t). | **material** for the satellite verdicts; moderate for the strategy ratios | favours every value or earnings strategy against B0, and favours the satellite against a placebo drawn from all of U(t) | Use a same-pool bar and a same-pool placebo. Results below. |
+| 3 | `cpi.csv` `month` | Clean. At month-end t the regime reads print t-1. The unverified 2026-09 print is never read (the last formation reads August). | none | none | none |
+| 4 | Index membership | Mostly clean. Derived rows are dropped and renames mapped. Across the 16 lists, no name's next KMI_ALL change is an add, so the rollback holds together. Left over: the 13 formations before 28 Jan 2019 use the 2019 list (an approximation), and 14.3 members a month (max 26) have no price series because they were delisted or renamed. Exits use the effective date, although the deletion notice comes out about a week earlier. That is conservative, not a leak. | low | survivorship: flatters EW and B0; unclear against the strategies | Flag only. Possible honest refinement: skip names with a pending deletion notice (CSAP, below). |
+| 5 | Sector labels and snapshot data | `universe_scored`, `sector_monthly_ret`, `ew_mkt_ret`, `symbols.csv` and `listed_in` are never read. Sector returns are built from U(t). The labels themselves are the 16 Oct 2026 screener codes applied backwards (ENGROH and DAWH as Fertilizer, SNGP as OMC). | low | unknown, small | Flag only. No dated sector history exists. |
+| 6 | Announcement `datetime` and EPS dates | Clean. Timestamps are Asia/Karachi wall time. 50 of 1,946 EPS filings came after 15:30 and move to the next session; Friday-afternoon filings are treated as after the close, which is conservative. Filing lag runs 10 to 148 days, median 31. 170 dates were re-joined to the result filing, 144 of them earlier than the file's own stamp, which had sometimes caught transmission or extension notices. EPS values are StockAnalysis's, possibly restated, with consolidation unverified (lesson 1). | low | unknown | Flag. ENGROH's ROE of 0.40 for a holding company is the case to check. |
+| 7 | Book closure, ex dates, corporate actions | These affect return measurement, not signals. Ex date is book closure minus 2 trading days (minus 1 from Mar 2026), checked on price gaps. 107 bonus rows are `gap_inferred` (size off by a few points), and the loader zeroes unexplained circuit-breaking days. S3's two drivers are real: SAZEW had no bonus or split in its Jan 2024 to Jan 2025 window (raw Rs189.7 to Rs1,131.7). LUCK's 5:1 split on 28 Apr 2025 is in the table (raw 889.4 to 389.6, times 5, so +119%; total-return index +121%). | low | mixed | none |
+| 8 | Panel survivorship (456 names listed on 16 Oct 2026) | Known; cannot be fixed with this data. | moderate for levels | flatters every EW figure, B0 included | Flag. |
+| 9 | S3 sector lists read off 2018-2026 | Known in-sample. | moderate | flatters S3 and S4 | Treat as an upper bound. |
+| 10 | Variant B (FYE + 3 months) | For the 66 rows with no matched filing, it uses FYE + 3 months, which can come before the real filing: a small lookahead, inside a post-hoc variant only. B1's 1.461 there is not evidence. | low | flatters variant B | Read the frozen FYE + 4 months result. |
+| 11 | `data/insider_trades.csv` | Appeared at 23:44, after the builder's run. Per `tests/insider_cluster_buying.md` it holds 22 random symbols plus 2026 filings, not the full universe, so it cannot drive a point-in-time sponsor satellite for 2018-2026. S3 and S4 stay "no sponsor satellite". | n/a | n/a | Re-run once the full extraction lands. |
+| 12 | **Benchmark labels** (found 18 Oct; lesson 20, `data/macro/INDEX_NOTES.md`) | `kse100.csv` and `kmiallshr.csv` are **total-return** indices, per the PSX brochures. The builder's "KSE100 price index" label is wrong, and so is the caveat above that KSE100 comparisons favour the strategies: they favour the index. The strategies carry cash dividends only from Nov 2024. KSE100's implied yield was 5.0% to 7.6% a year in 2021-25. | **material** for every "vs KSE100" or "vs index" claim; none for ratios to B0 (same basis) | against the strategies | Labels corrected in the script. The numbers cannot be fixed until cash dividends before Nov 2024 are in `corporate_actions.csv`. |
+
+**Leak 2, both numbers** (ratio to B0; `system_walkforward.txt` section 8):
+
+| | Frozen vs B0 (headline) | Frozen vs same-pool B0' | Same-pool re-run vs B0' (all strategies on the 132 names) |
+|---|---|---|---|
+| B0' / B0 | 1.000 | 1.050 (Rs13.04m) | 1.000 |
+| B1 | 1.056 | **1.006** | 1.137 |
+| S2 | 1.141 | **1.087** | 1.271 |
+| S3 | 1.420 | **1.353** | 1.324 |
+| S4 | 1.332 (0.938 of S3: abandon) | 1.269 | 1.461 (1.103 of S3) |
+| S2 satellite, placebo from its own pool | +0.42 pt | **-0.12 pt (fails)** | -1.88 pt (fails) |
+| S4 satellite, placebo from its own pool | -0.20 pt | **-1.10 pt (fails)** | -1.18 pt (fails) |
+
+At the frozen thresholds no strategy verdict changes: B1 passes by 0.6%, S2 by 3.5%, S3 by 23%. The satellite verdict does change. The "ignored blowout quarter" fails its placebo in both strategies once the placebo comes from the same 129 names, so **the signal is abandoned**. S4 passes only in the same-pool re-run, which is post-hoc, so the frozen abandon stands.
+
+**A better bar for this investor.** The KMI All Share index is total return. Bought with each deposit, it ends at Rs14.10m with no costs (Rs14.03m at 0.25% per side): TWR +14.2% a year, max drawdown -44.1%, worst 12 months -33.2%. Ratios to it: B0 0.88, B1 0.93, S2 1.01, S3 1.25, S4 1.17.
+
+These ratios **understate every strategy**. The index has dividends throughout, while the strategies have them only from Nov 2024; on KSE100 the implied yield was 5 to 8 points a year. On a like-for-like basis, B0 and B1 are probably close to the index, and S2, S3 and S4 above it. That is an inference; it was not computed. Likewise, "only S3 beats KSE100" above is a total-return index against near-price-return strategies, not a fair test.
+
+### 2. Post-mortem of S3, the best surviving strategy
+
+S3 made Rs12.29m on Rs5.30m deposited. SAZEW made Rs6.32m of it and LUCK Rs4.48m (88% together). The ten worst trades lost Rs6.25m, and three of them (ECOP, CHCC, TGL, all sold on 1 Apr 2026) account for Rs5.15m.
+
+**10 worst** (model at entry → outcome):
+
+| Trade | Model saw | What happened | Class |
+|---|---|---|---|
+| ECOP 1 Oct 25 → 1 Apr 26, -43%, -Rs2.33m | EASING; Glass/pack/paper 6M +44%; EY 10.9%, ROE 23% | The Dec 2025 quarter swung to EPS -0.23 from +0.56. Price 69 → 55 (Dec) → 45 (Feb) → 35 (Mar). Sector EW -31%, KSE100 -6%. Sold after the regime flipped to TIGHT. | thesis wrong (earnings), then regime shock |
+| CHCC 1 Sep 25 → 1 Apr 26, -27%, -Rs1.45m | EASING; Cement +52%; EY 13.0%, ROE 30% | Cement EW -21% while KSE100 rose 4%. Dec quarter EPS -11% YoY. | regime shock (sector reversal) |
+| TGL 3 Mar 25 → 1 Apr 26, -17%, -Rs1.37m | EASING; Glass +42%; EY 14.6%, ROE 26% | Rose to 271 (Aug 2025), then fell to 194 (Oct) and 135 (Mar). KSE100 +39% over the hold. Dec quarter EPS -39% YoY. | thesis wrong (stock-specific) |
+| ENGROH 1 Apr 26 → open, -4% | TIGHT; Fertilizer (frozen list); EY 17.4%, ROE 40% | -4% while KSE100 rose 7%. ROE 40% for a holding company suggests standalone and consolidated figures are mixed. | too early; possible data error (unverified) |
+| OGDC 1 Oct 26 → open, -3% | TIGHT; E&P; EY 17.8% | 11 sessions | noise |
+| OGDC 1 Feb 18 → 1 Apr 20, -40% | TIGHT; E&P; no value data (EW fallback) | Price 165 → 76. E&P EW -48%, KSE100 -33%. The 2018-19 bear market, then Covid and the oil crash. Sold at the trough when the regime flipped to EASING. | regime shock |
+| PPL 1 Jan 18 → 1 Apr 20, -32% | NEUTRAL, then TIGHT; E&P | As OGDC. The 2018-19 bonuses in the window are gap-sized, error a few points at most. | regime shock |
+| CSAP 2 Jun 25 → 1 Jul 25, -5% | EASING; Steel; EY 13.9% | The KMI deletion notice came out on 2 Jun 2025, the day of the buy; Shariah exit followed. | bad luck (rule interaction) |
+| MARI 1 Feb 18 → 1 Apr 20, -17% | TIGHT; E&P | As OGDC | regime shock |
+| MARI 1 Apr 26 → 1 Oct 26, -1% | TIGHT; E&P; EY 8.7% | Sold when a new annual result put its EY in the bottom half of the sector | noise |
+
+No loss traces to a corporate-action artefact, and none to a confirmed data error.
+
+**10 best:** SAZEW (1 Jan 24 → 1 Jan 25, +136% over four buys, price +496% from the first buy; NEUTRAL, Autos 6M +104%, EY 9.3%, ROE 41%. EPS went from 12.5 to 50.2 to 69.8 a quarter). LUCK (1 Oct 24 → 1 Apr 26, +85%, index +121%; EASING, Cement, EY 25.3%). SYS (+43%). OGDC 2021-24 (trade +6%, price +44%; the gap is the trim churn of 29 buys). ILP (+9%). FABL 2026 (open, +10%). PPL 2021-24 (+44%). LUCK 2024 (+18%). SNGP (+9%; index +37%). FABL 2023 (+13%). All ten are either the 2023-25 easing and rerating, or TIGHT-list E&P and banks during 2021-23. The two that matter are a car maker with a fourfold earnings jump and a cement leader through a 1,100bp cut cycle.
+
+**What rule would have avoided the losses, and is it honest?**
+
+- *A 25% trailing stop on core names.* Honest: it is S2's own pre-registered satellite rule. Variant 7E: S3 falls to Rs14.45m (1.164 vs 1.420) because the stop also cuts LUCK (a 33% dip mid-hold). **Rejected.**
+- *Sell a core name when a new quarter shows EPS down YoY.* Honest: also S2's rule, and knowable at the filing. Variant 7F: S3 rises to Rs20.42m (1.644), but S4 falls to Rs15.81m and S2 moves from 14.17m to 15.10m. The sign flips between sister strategies, so it is not dependable. Keep it as a judgement flag, not a rule.
+- *Skip names with a pending KMI deletion notice.* Honest and knowable, but worth about Rs0.1m.
+- *Leave EASING on the first CPI uptick.* **Hindsight.** It is fit to the single 2026 episode and was not tested.
+- *Hold 5 core names instead of 3.* Honest risk control, untested, and it would halve SAZEW too.
+
+The large losses were sector reversals at a regime turn. Only a regime forecast avoids those, and the regime rule already reacted, a month after the damage. The concentration that caused them is the same concentration that produced SAZEW.
+
+### 3. Calibration (headline trade log, closed trades; `walkforward_audit.txt` section E)
+
+| Setup | n | Hit | Median | Middle 50% | Worst | Median hold | Versus a placebo |
+|---|---|---|---|---|---|---|---|
+| Random liquid KMI name, bought and held (B0) | 89 (+185 open) | 48% | -0.9% | -23% to +19% | -71% | 377 sessions | the base rate |
+| Ignored blowout quarter (S2 satellite) | 38 | 58% | +2.6% | -8% to +21% | -43% | 107 | -0.12 pt vs own pool: **no edge** |
+| Ignored blowout quarter (S4 satellite) | 41 | 56% | +2.0% | -9% to +27% | -43% | 101 | -1.10 pt: **no edge** |
+| Top-EY name, ROE ≥15%, in a top-3 momentum sector (S2 value pick) | 38 | 66% | +5.6% | -7% to +22% | -54% | 65 | +1.8 pt vs same sector (70th pct): not significant |
+| Same, in the regime sector set (S3 value pick) | 25 (+3 open) | 64% | +6.2% | -3% to +13% | -43% | 65 | +5.5 pt vs same sector (98th pct, lump sum, n 28) |
+| Top-2 per regime sector (S4 value pick) | 33 (+4 open) | 61% | +3.8% | -3% to +19% | -41% | 65 | +0.1 pt (51st pct): no edge |
+| Top-5 EY+DY across regime sectors (B1 value pick) | 77 | 66% | +8.5% | -9% to +40% | -54% | 65 | -2.2 pt vs same sector (8th pct): the gain is the sector, not the stock |
+| EW of a momentum sector (S2, before value data) | 223 | 36% | -7.1% | -20% to +8% | -58% | 83 | worse than the base rate |
+| EW of the EASING sector set, 2020 (S3) | 21 | 81% | +20.5% | +11% to +46% | -12% | 106 | **one episode** (Mar to Jul 2020) |
+
+For PICKS.md: "An ignored-quarter setup paid off 56-58% of the time with a median of +2 to +3% over about five months. A random name from the same pool did as well. Treat it as a coin flip." "A cheap, high-ROE leader in a sector the regime or momentum favours paid off about 60-65% of the time, with a median of +4 to +9% over three to four months. Most of that is the sector. The stock pick adds 0 to 5 points, significant only in the 28-trade S3 sample, and contradicted by S4." Size every pick as at most a 60/40 bet.
+
+### 4. Honest verdict
+
+Yes, after costs and on the same survivor pool: S3 beats B0 by 35% and S2 by 9%. B1 ties (1.006), and S4 is abandoned under its frozen rule. Three qualifications:
+
+1. The bar that matters to this investor is the cap-weighted KMI All Share index (total return), not B0. Against it, S3 is 1.25x and S2 1.01x. Both ratios are understated, because the strategies lack dividends before Nov 2024. On a like-for-like basis, S3 very likely beats the index by more than 25%, and S2 and S4 probably beat it too. B0 and B1 are about even with it (unverified until the dividend history is filled).
+2. S3's margin is fragile. Its sector lists are in-sample, 88% of its profit is two stocks, and honest one-rule changes move it anywhere from 1.16x to 1.64x B0. It gave back most of its lead in 2026: 1.61x the KMI index on 31 Dec 2025, 1.25x on 16 Oct 2026, a -24.6% year so far against -3.5%.
+3. No stock-level signal survives a fair placebo. The ignored quarter fails; value picks add nothing reliable inside a sector; sponsor buying is untested.
+
+Would I bet the user's Rs50k a month on S3 as a system? **No.** I would bet it on staying fully invested in cap-weighted KMI exposure every month. That needs no skill and roughly matched B0 like for like. Lesson 13 says waiting costs more than any signal here earned. S3-style rotation would get at most a capped satellite, with a pre-registered review. That is what `knowledge/playbooks/strategy.md` sets out.
+
+### Audit housekeeping
+
+- Patch: `set_pool` and `POOL` (same-pool runs); `placebo(..., names=, rg=)` (own-pool placebo on its own random stream, so the headline placebo is unchanged); variants 7E and 7F (`cstop`); section 8 (pool bar, pool re-run, KMI All Share bar). Every number in sections 1 to 6 matches the builder's run. Text changes: two AUDIT placebo lines in section 5; the `insider_trades.csv` line ("EXISTS but this script does not parse it"); and the KSE100 label, now "total return", with the dividend note in the header line corrected.
+- Another session committed an intermediate state of these files in `0220f06` (23:47): `walkforward.py` with section 8 but without variant F or the KMI bar, `walkforward_v0.py`, and an earlier `walkforward_trades_pool.csv`. The working tree holds the final versions. This audit committed nothing.
