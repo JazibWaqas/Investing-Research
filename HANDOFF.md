@@ -32,7 +32,7 @@ Workflow resume: `Workflow({scriptPath: "<session workflows dir>/psx-phase2b-ann
 ## Emerging model (provisional, for whoever writes REPORT.md)
 
 - Sector and macro timing signals exist in the data but are too weak or too few to trade for a long-only retail investor. Being invested matters more than timing: cash drag is the biggest documented cost.
-- The KSE100 beat the equal-weight liquid basket by a wide margin 2017 to 2026. Pending the size test, this says large liquid names beat the chaotic small caps, which contradicts the hope that chaos is where retail makes money.
+- The KSE100 beat the equal-weight liquid basket by a wide margin 2017 to 2026, but tests/size_liquidity.md shows this is NOT a large-cap premium: daily rebalancing noise costs about 24 points, dropped dividends about 10, and the rest is cap-weighting toward a few large winners. Inside the investable set, the least liquid third beat the most liquid third by about 5 points a year (weak, t about -1.5, led in 3 of 10 years). Practical reading: concentrated positions in a few winners beat broad equal-weight baskets; churn is expensive.
 - Stock-level edges still open for testing in Phase 2b: a strong quarter the market ignores (the 2026 refiner setup: PRL at 2x trailing earnings after its March-quarter result), disclosed sponsor buying (ASL), partial-offer deal math (EPCL).
 - The orchestrator's deep-value result is mostly a sector effect and not statistically distinguishable from zero. Value is a tiebreaker inside a sector view.
 
