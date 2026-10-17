@@ -3,6 +3,7 @@
 Deliverables are complete: REPORT.md, PICKS.md (v2), RUNBOOK.md, sector_map.md, catalysts/ (calendar, dividend calendar, 33 frozen predictions, scorecard), knowledge/ (16 sector notes, 13 company cards with red teams, 10 playbooks incl. strategy, deals, holdco discounts, catalyst trade, practitioner signals, critic and consultant reviews), tests/ (14 test write-ups plus FACTS.md), data/ and scripts/ as documented in CLAUDE.md. Everything is committed and pushed to origin main.
 
 ## Still running when this was written
+- Active trading study (workflow wf_f22862e1-2dc): tests/fixed_capital_runs.md, oracle_and_good_case.md, winners_case_control.md, then knowledge/playbooks/active_trading.md and a DECISIONS.md entry. Plus a Codex replication (knowledge/playbooks/active_trading_codex.md). When they land: revise PICKS.md satellite rules and strategy.md if an active sleeve is supported; update REPORT.md section 1.
 - Full insider-trade extraction 2019 to 2026 (fixes the .PDF case bug in the scraper, OCRs scanned filings, rebuilds data/insider_trades.csv, re-runs tests/insider_cluster_buying.md as "run 2"). When it lands: commit it, update the sponsor-buying trigger line in PICKS.md with the measured base rate, and add a DECISIONS.md line.
 
 ## What to do next, in order
