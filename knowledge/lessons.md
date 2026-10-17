@@ -14,7 +14,7 @@ Mistakes already made in this project. Don't repeat them.
 10. **Narrow takeover offers.** EPCL's control block sells at Rs38.60, but the public offer covers only 17.5% of shares, so minorities get the offer price on only about 50 to 70% of their holding. Always do the pro rata math before calling a takeover spread "free money."
 11. **Insider sales are weak signals, but context matters.** A senior manager at SYS selling Rs138m while cash conversion sat at 60% was worth acting on (we deferred the buy). One small executive sale at MEBL was not.
 12. **Don't recommend before mapping the sector.** The orchestrator pitched NETSOL before checking sector momentum. Tech was third worst. Check the sector backdrop first.
-13. **Waiting has a cost.** An earlier ChatGPT strategy that sat in cash waiting for "validated" entries ended at Rs2.86m versus Rs4.26m for simply staying invested (same deposits). Don't let rigor turn into paralysis.
+13. **Waiting has a cost.** The original citation (a ChatGPT comparison, Rs2.86m vs Rs4.26m, no period or rules on file) is weak. The better evidence is the walk-forward: no-skill monthly buying of liquid KMI names made 2.4x the deposits over 2018 to 2026, and the index 2.7x, while hike years (2018, 2019, 2021, 2022) lost to T-bills and the one hike year that did not (2023, +53%) was unrecoverable for anyone who waited. Don't let rigor turn into paralysis; and know that in a hike regime the cost of waiting is low until the year it is not. (Revised 18 Oct 2026.)
 
 ## Added 17 Oct 2026 (Fable session, from tests/seed_audit.md)
 

@@ -1,5 +1,7 @@
 # The strategy the evidence supports
 
+> Revised 18 Oct 2026 after the rebenchmark (tests/system_walkforward.md, like-for-like section) and two reviews (picks_redteam_codex.md, consultant_review.md). Changes from the first draft: the cap-weighted 12-name core (B2) was tested and lost to both the equal-weight basket and the index (0.86x the KMI All Share, deepest drawdown), so the core is now the three-name mechanical S3 pick, equal weight; funds and ETFs are out of mandate (stocks only); the active sleeve is 25%, not 30%; the regime label is context, not an edge. The frozen rules in strategy_candidates.md are unchanged. PICKS.md is the operating document.
+
 Evidence date 17 Oct 2026, data to 16 Oct 2026. Sources: the "Post-mortem and audit" section of `tests/system_walkforward.md`; `tests/out/system_walkforward.txt`, sections 7 and 8; `tests/out/walkforward_audit.txt`. The pre-registered rules in `strategy_candidates.md` are unchanged. Review when the sponsor-buying data is complete or after 24 live months.
 
 ## Bottom line
