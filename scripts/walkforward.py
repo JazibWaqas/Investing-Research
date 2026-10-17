@@ -3,7 +3,7 @@ Run: .venv/Scripts/python.exe -I scripts/walkforward.py      Writes tests/out/sy
 Point in time: every decision at month-end F_k uses data stamped by F_k; trades execute at the first close D_k of the next month, when the Rs50,000 deposit arrives.
 Frozen rules are implemented as written. Anything added after seeing results is labelled POST-HOC and kept out of the headline.
 """
-import sys, io, re, ast, glob, calendar, collections, warnings
+import os, sys, io, re, ast, glob, calendar, collections, warnings
 from pathlib import Path
 import numpy as np, pandas as pd
 from scipy.optimize import brentq
@@ -43,11 +43,13 @@ for b, a in (("TR", A_NET), ("PR", A_PR)):
     RET[b], TRI[b] = make_tri(a)
 
 # ================================================================ calendar: trade date D_k, formation date F_k
-MI = pd.period_range("2018-01", "2026-10", freq="M")
+WF_START = os.environ.get("WF_START", "2018-01")   # default = frozen calendar; fixed_capital_runs.py sets 2017-01 for the 2016-12-30 start
+MI = pd.period_range(WF_START, "2026-10", freq="M")
 ID = [int(dates.searchsorted(m.start_time)) for m in MI]
 IF = [i - 1 for i in ID]
 K = len(ID)
-assert dates[IF[0]] == pd.Timestamp("2017-12-29") and K == 106
+if WF_START == "2018-01": assert dates[IF[0]] == pd.Timestamp("2017-12-29") and K == 106
+DEPS = [DEP] * K        # deposit schedule by month; default = Rs50,000 every month (frozen). fixed_capital_runs.py overrides it
 KOF = {i: k for k, i in enumerate(ID)}
 
 # ================================================================ membership (KMI All Share), point in time
@@ -469,7 +471,7 @@ def step(R, strat, k, sigs):
     totF = sum(wF.values())
     trims = [s for s in pos if strat != "B0" and totF > 0 and wF[s] / totF > 0.35 and s not in sells]
     V0 = sum(p["u"] * T[iD, p["c"]] for p in pos.values())
-    pool = DEP
+    pool = DEPS[k]
     for s, why in list(sells.items()):
         if not tradable(s): continue                                # suspended: defer to next month
         pool += R.sell(k, s, 1.0, why)
@@ -498,7 +500,8 @@ def step(R, strat, k, sigs):
     wts = {}
     if strat == "B0":
         U = [s for s in m["U"] if tradable(s)]
-        for s in U: R.buy(k, s, pool / len(U), "core")
+        if pool > 1e-9:
+            for s in U: R.buy(k, s, pool / len(U), "core")
     else:
         share = 1 - SATW * n_sat
         if core_t:
@@ -509,8 +512,8 @@ def step(R, strat, k, sigs):
         for s in held_sat: wts[s] = (SATW, "sat", {})
         for s, key in new_sat: wts[s] = (SATW, "sat", dict(sig=key))
         short = {s: w * Vtot - (pos[s]["u"] * T[iD, pos[s]["c"]] if s in pos else 0.0) for s, (w, _, _) in wts.items()}
-        alloc = waterfill(pool, short, MINT)
-        if not alloc:
+        alloc = waterfill(pool, short, MINT) if pool > 1e-9 else {}
+        if not alloc and pool > 1e-9:
             alloc = {s: pool * w for s, (w, _, _) in wts.items()}   # nothing below target: split by target weight
         for s, amt in alloc.items():
             sl = wts[s][1]
@@ -527,7 +530,7 @@ class EWRun(Run):
         m, iD, T = M[k], ID[k], s.T
         s.nav_pre[k] = sum(p["u"] * T[iD, p["c"]] for p in s.pos.values())
         U = [x for x in m["U"] if np.isfinite(closeV[iD, cidx[x]])]
-        tot = s.nav_pre[k] + DEP
+        tot = s.nav_pre[k] + DEPS[k]
         tgt = tot / len(U)
         cur = {x: p["u"] * T[iD, p["c"]] for x, p in s.pos.items()}
         traded = sum(abs(tgt - cur.get(x, 0.0)) for x in U) + sum(v for x, v in cur.items() if x not in U)

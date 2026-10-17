@@ -1,0 +1,142 @@
+== FIXED CAPITAL RUNS: one Rs50,000 deposit, no further deposits, to 2026-10-16. Frozen rules, TR basis (15% withholding on known cash dividends; complete only from Nov 2024).
+Default-behaviour check: monthly Rs50k deposits, S3 final = Rs17,630,566 (frozen headline Rs17,630,566) -> REPRODUCED
+Entry = first close of the start month (formed on the prior month-end). 2016-12-30 uses a 2017-01 calendar (K=118 months) because the frozen calendar starts 2018-01; the others use the frozen 2018-01 calendar (regime state carried from 2018-01).
+
+-- START 2024-10-01 (entry 2024-10-01); strategies' final value is mark-to-market before an exit fee; B0 has no sales except Shariah exits
+row                                                         final Rs multiple     CAGR    maxDD  trades sells   hit med trade   worst
+B0                                                            83,936     1.68   +28.9%   -31.2%     169    14   53%     +6.0%  -82.8%
+B1                                                           100,041     2.00   +40.5%   -29.5%      31    26   55%     +4.1%  -53.9%
+S2                                                            82,384     1.65   +27.7%   -29.4%      42    37   57%     +7.0%  -53.9%
+S3                                                            67,855     1.36   +16.1%   -41.7%      14    23   50%     +2.3%  -43.0%
+S4                                                            74,929     1.50   +21.9%   -36.8%      42    34   55%     +2.2%  -43.0%
+EW liquid KMI basket (monthly rebal., 0.5% costs)             79,978     1.60   +25.9%   -30.6%
+KMI All Share TR                                              90,375     1.81   +33.7%   -21.3%
+KSE100 TR                                                    101,718     2.03   +41.6%   -22.6%
+KSE100 PR                                                     89,000     1.78   +32.7%   -23.8%
+KSE30 PR                                                      94,798     1.90   +36.8%   -23.7%
+best liquid KMI name (buy & hold) QUICE                      268,834     5.38  +128.1%   -49.6%
+10th best SSGC                                               133,877     2.68   +62.1%   -60.3%
+worst (survivors only) OCTOPUS                                13,582     0.27   -47.2%   -77.5%
+Names in U(t0): n=87; buy-and-hold multiple median 1.50, mean 1.70, win rate (>1.0x) 82%, names >=2x 24 and >=3x 8, beat KMI TR 33%; top3 [('QUICE', 5.4), ('PRL', 4.5), ('POWER', 4.0)]; bottom3 [('EXIDE', 0.49), ('UNITY', 0.31), ('OCTOPUS', 0.27)]
+Placebo (quarterly rotation into 4 random U(t) names, 9 rotations, 1000 sims, 0.5% per switch): median 1.44x, 5th-95th 0.89-2.51x, mean 1.55x, win 90%; S3 beats 41% of sims
+
+-- START 2024-01-01 (entry 2024-01-01); strategies' final value is mark-to-market before an exit fee; B0 has no sales except Shariah exits
+row                                                         final Rs multiple     CAGR    maxDD  trades sells   hit med trade   worst
+B0                                                            99,295     1.99   +27.9%   -29.5%     189    30   53%     +6.5%  -88.6%
+B1                                                           111,782     2.24   +33.4%   -30.1%      37    32   59%     +8.1%  -53.9%
+S2                                                           140,114     2.80   +44.7%   -31.0%      52    48   56%     +4.2%  -53.9%
+S3                                                           122,172     2.44   +37.7%   -41.7%      19    27   63%     +4.8%  -43.0%
+S4                                                           132,785     2.66   +41.9%   -35.6%      56    49   57%     +3.6%  -40.8%
+EW liquid KMI basket (monthly rebal., 0.5% costs)             90,143     1.80   +23.5%   -30.6%
+KMI All Share TR                                             103,290     2.07   +29.7%   -21.3%
+KSE100 TR                                                    128,685     2.57   +40.3%   -22.6%
+KSE100 PR                                                    108,698     2.17   +32.1%   -23.8%
+KSE30 PR                                                     114,074     2.28   +34.4%   -23.7%
+best liquid KMI name (buy & hold) THCCL                      845,499    16.91  +175.6%   -52.4%
+10th best POWER                                              174,327     3.49   +56.5%   -30.9%
+worst (survivors only) UNITY                                  16,235     0.32   -33.2%   -80.4%
+Names in U(t0): n=99; buy-and-hold multiple median 1.58, mean 2.01, win rate (>1.0x) 80%, names >=2x 30 and >=3x 15, beat KMI TR 26%; top3 [('THCCL', 16.9), ('SAZEW', 8.4), ('GAL', 7.0)]; bottom3 [('AVN', 0.5), ('SPWL', 0.42), ('UNITY', 0.32)]
+Placebo (quarterly rotation into 4 random U(t) names, 12 rotations, 1000 sims, 0.5% per switch): median 1.58x, 5th-95th 0.93-3.03x, mean 1.74x, win 92%; S3 beats 86% of sims
+
+-- START 2022-10-01 (entry 2022-10-03); strategies' final value is mark-to-market before an exit fee; B0 has no sales except Shariah exits
+row                                                         final Rs multiple     CAGR    maxDD  trades sells   hit med trade   worst
+B0                                                           129,188     2.58   +26.5%   -31.0%     193    34   52%     +2.5%  -87.3%
+B1                                                           150,096     3.00   +31.3%   -38.8%      54    52   63%     +8.3%  -53.9%
+S2                                                           186,302     3.73   +38.5%   -30.9%      67    67   58%     +5.7%  -53.9%
+S3                                                           212,950     4.26   +43.2%   -41.7%      21    45   67%     +5.4%  -43.0%
+S4                                                           219,512     4.39   +44.3%   -35.6%      79    84   57%     +3.2%  -42.8%
+EW liquid KMI basket (monthly rebal., 0.5% costs)            115,536     2.31   +23.1%   -30.6%
+KMI All Share TR                                             158,081     3.16   +33.0%   -21.3%
+KSE100 TR                                                    201,908     4.04   +41.3%   -22.6%
+KSE100 PR                                                    157,216     3.14   +32.8%   -23.8%
+KSE30 PR                                                     160,015     3.20   +33.4%   -23.7%
+best liquid KMI name (buy & hold) GAL                        437,902     8.76   +71.2%   -53.5%
+10th best PPL                                                189,606     3.79   +39.1%   -37.0%
+worst (survivors only) UNITY                                  16,810     0.34   -23.7%   -80.4%
+Names in U(t0): n=47; buy-and-hold multiple median 2.11, mean 2.62, win rate (>1.0x) 81%, names >=2x 25 and >=3x 14, beat KMI TR 28%; top3 [('GAL', 8.8), ('ATRL', 8.5), ('MEBL', 7.1)]; bottom3 [('OCTOPUS', 0.48), ('AVN', 0.45), ('UNITY', 0.34)]
+Placebo (quarterly rotation into 4 random U(t) names, 17 rotations, 1000 sims, 0.5% per switch): median 2.12x, 5th-95th 1.12-4.27x, mean 2.34x, win 97%; S3 beats 95% of sims
+
+-- START 2020-10-01 (entry 2020-10-01); strategies' final value is mark-to-market before an exit fee; B0 has no sales except Shariah exits
+row                                                         final Rs multiple     CAGR    maxDD  trades sells   hit med trade   worst
+B0                                                           122,578     2.45   +16.0%   -50.6%     219    59   52%     +5.7%  -88.4%
+B1                                                           174,852     3.50   +23.0%   -63.1%      70    69   63%     +8.3%  -59.0%
+S2                                                           140,548     2.81   +18.7%   -51.7%     112   108   50%     -0.7%  -53.9%
+S3                                                           221,818     4.44   +28.0%   -41.7%      38    75   63%     +6.0%  -43.0%
+S4                                                           208,027     4.16   +26.6%   -35.2%      91    99   59%     +5.1%  -42.8%
+EW liquid KMI basket (monthly rebal., 0.5% costs)            100,682     2.01   +12.3%   -52.3%
+KMI All Share TR                                             161,786     3.24   +21.5%   -21.8%
+KSE100 TR                                                    204,563     4.09   +26.3%   -22.6%
+KSE100 PR                                                    140,334     2.81   +18.6%   -27.7%
+KSE30 PR                                                     142,875     2.86   +19.0%   -28.6%
+best liquid KMI name (buy & hold) MEBL                       666,275    13.33   +53.5%   -34.4%
+10th best NRL                                                190,687     3.81   +24.8%   -77.6%
+worst (survivors only) WAVES                                  17,010     0.34   -16.3%   -80.1%
+Names in U(t0): n=75; buy-and-hold multiple median 1.81, mean 2.35, win rate (>1.0x) 79%, names >=2x 31 and >=3x 15, beat KMI TR 17%; top3 [('MEBL', 13.3), ('SAZEW', 11.2), ('ATRL', 8.8)]; bottom3 [('ASC', 0.49), ('RPL', 0.45), ('WAVES', 0.34)]
+Placebo (quarterly rotation into 4 random U(t) names, 25 rotations, 1000 sims, 0.5% per switch): median 1.73x, 5th-95th 0.85-3.90x, mean 1.96x, win 89%; S3 beats 96% of sims
+
+-- START 2018-10-01 (entry 2018-10-01); strategies' final value is mark-to-market before an exit fee; B0 has no sales except Shariah exits
+row                                                         final Rs multiple     CAGR    maxDD  trades sells   hit med trade   worst
+B0                                                           128,558     2.57   +12.5%   -53.2%     232    72   50%     +0.6%  -91.8%
+B1                                                           103,759     2.08    +9.5%   -68.6%      71    71   51%     +2.1%  -67.2%
+S2                                                           139,628     2.79   +13.6%   -57.0%     148   144   47%     -3.1%  -56.9%
+S3                                                           234,837     4.70   +21.2%   -48.5%      52   100   65%     +6.0%  -43.0%
+S4                                                           219,466     4.39   +20.2%   -48.5%     106   125   60%     +5.2%  -42.8%
+EW liquid KMI basket (monthly rebal., 0.5% costs)             97,849     1.96    +8.7%   -53.5%
+KMI All Share TR                                             164,804     3.30   +16.0%   -37.3%
+KSE100 TR                                                    203,301     4.07   +19.1%   -37.0%
+KSE100 PR                                                 n/a (series starts 2020-04-01)
+KSE30 PR                                                     123,998     2.48   +12.0%   -41.6%
+best liquid KMI name (buy & hold) MEBL                       704,075    14.08   +38.9%   -47.6%
+10th best PRL                                                205,127     4.10   +19.2%   -64.2%
+worst (survivors only) ASTL                                   14,033     0.28   -14.6%   -79.6%
+Names in U(t0): n=55; buy-and-hold multiple median 1.81, mean 2.48, win rate (>1.0x) 69%, names >=2x 24 and >=3x 17, beat KMI TR 25%; top3 [('MEBL', 14.1), ('ATRL', 8.6), ('SAZEW', 6.2)]; bottom3 [('UNITY', 0.32), ('WAVES', 0.3), ('ASTL', 0.28)]
+Placebo (quarterly rotation into 4 random U(t) names, 33 rotations, 1000 sims, 0.5% per switch): median 1.61x, 5th-95th 0.68-3.96x, mean 1.86x, win 82%; S3 beats 98% of sims
+
+-- START 2016-12-30 (entry 2017-01-02); strategies' final value is mark-to-market before an exit fee; B0 has no sales except Shariah exits
+row                                                         final Rs multiple     CAGR    maxDD  trades sells   hit med trade   worst
+B0                                                           117,101     2.34    +9.1%   -65.7%     236    76   45%     -5.6%  -87.9%
+B1                                                            87,750     1.75    +5.9%   -80.0%      70    72   50%     +0.7%  -80.0%
+S2                                                           136,631     2.73   +10.8%   -67.7%     163   160   46%     -4.0%  -56.9%
+S3                                                           217,671     4.35   +16.2%   -64.7%      77   131   56%     +4.9%  -46.4%
+S4                                                           204,138     4.08   +15.5%   -64.7%     130   155   56%     +4.2%  -46.4%
+EW liquid KMI basket (monthly rebal., 0.5% costs)             69,167     1.38    +3.4%   -69.9%
+KMI All Share TR                                             143,416     2.87   +11.4%   -49.4%
+KSE100 TR                                                    172,490     3.45   +13.5%   -48.5%
+KSE100 PR                                                 n/a (series starts 2020-04-01)
+KSE30 PR                                                      94,316     1.89    +6.7%   -58.0%
+best liquid KMI name (buy & hold) SAZEW                    1,124,879    22.50   +37.5%   -85.5%
+10th best LOTCHEM                                            186,082     3.72   +14.4%   -58.8%
+worst (survivors only) ASC                                     8,775     0.18   -16.3%   -89.7%
+Names in U(t0): n=70; buy-and-hold multiple median 1.47, mean 2.35, win rate (>1.0x) 61%, names >=2x 23 and >=3x 16, beat KMI TR 26%; top3 [('SAZEW', 22.5), ('MEBL', 20.8), ('THCCL', 8.3)]; bottom3 [('DCL', 0.23), ('WAVES', 0.21), ('ASC', 0.18)]
+Placebo (quarterly rotation into 4 random U(t) names, 40 rotations, 1000 sims, 0.5% per switch): median 1.08x, 5th-95th 0.41-3.02x, mean 1.32x, win 55%; S3 beats 98% of sims
+
+== MONTH BY MONTH, Rs50,000 entered 2024-10-01 (first close of each month; last row 2026-10-16)
+date                S3    KMI TR  KSE100 TR    EW KMI  S3/KMI
+2024-10-01      49,875    50,000     50,000    49,875    1.00
+2024-11-01      50,572    54,630     55,535    53,438    0.93
+2024-12-02      55,885    61,249     63,123    63,403    0.91
+2025-01-01      71,158    70,765     71,517    74,673    1.01
+2025-02-03      63,592    66,188     68,911    69,259    0.96
+2025-03-03      66,672    66,118     68,448    67,516    1.01
+2025-04-03      73,888    71,663     72,696    72,049    1.03
+2025-05-02      79,758    67,573     69,748    67,758    1.18
+2025-06-02      82,804    70,898     72,660    72,919    1.17
+2025-07-01      85,657    74,816     78,357    77,914    1.14
+2025-08-01      88,588    80,552     86,202    80,154    1.10
+2025-09-01      98,573    85,430     91,664    85,662    1.15
+2025-10-01     101,226    93,957    101,241    91,969    1.08
+2025-11-03      87,468    89,045     99,507    87,350    0.98
+2025-12-01      90,845    91,285    102,722    87,817    1.00
+2026-01-01      92,279    94,772    107,791    92,292    0.97
+2026-02-02      90,214    98,820    113,110    92,704    0.91
+2026-03-02      69,018    80,586     92,888    71,467    0.86
+2026-04-01      66,696    83,616     95,051    71,641    0.80
+2026-05-04      68,307    87,851    100,208    79,186    0.78
+2026-06-01      68,757    91,857    104,273    84,270    0.75
+2026-07-01      74,907    98,525    112,494    91,881    0.76
+2026-08-03      72,543    95,240    108,918    88,651    0.76
+2026-09-01      71,016    95,729    107,859    87,095    0.74
+2026-10-01      69,303    91,290    103,073    81,331    0.76
+2026-10-16      67,855    90,375    101,718    79,978    0.75
+
+S3 trades since 2024-10-01 (closed and open): SAZEW 2024-10-01->2025-01-01 +12%; TGL 2024-11-01->2025-01-01 +36%; AIRLINK 2024-10-01->2025-04-03 +30%; CSAP 2025-06-02->2025-07-01 -5%; SNGP 2024-12-02->2025-07-01 +16%; ILP 2025-07-01->2025-10-01 +9%; LUCK 2024-10-01->2026-04-01 +48%; TGL 2025-03-03->2026-04-01 -13%; CHCC 2025-09-01->2026-04-01 -27%; ECOP 2025-10-01->2026-04-01 -43%; MARI 2026-04-01->2026-10-01 -0%; FABL 2026-04-01->open +5%; ENGROH 2026-04-01->open -4%; OGDC 2026-10-01->open -3%

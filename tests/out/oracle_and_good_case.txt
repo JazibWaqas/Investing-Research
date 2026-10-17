@@ -1,0 +1,263 @@
+Oracle and good case. Price panel: total return, dividends complete only from Nov 2024. Data to 2026-10-16.
+Missed corporate actions repaired (one-session drops of 25%+/50%+, history rescaled, any liquidity): 25: MUGHAL 2017-04-04 -44%; GHGL 2017-05-04 -42%; UNITY 2017-10-16 -90%; IGIL 2019-07-01 -39%; GRYL 2019-07-15 -26%; GRYL 2019-07-31 -26%; GRYL 2019-08-27 -26%; SHDT 2019-10-18 -51%; SAZEW 2020-02-26 -33%; IDYM 2021-03-29 -64%; SUTM 2021-03-29 -64%; PAKRI 2022-04-20 -66%; GVGL 2023-06-16 -45%; ATIL 2023-06-20 -37%; ALTN 2023-08-18 -26%; ALTN 2024-10-17 -26%; ALTN 2025-02-27 -36%; KML 2025-10-06 -90%; BECO 2025-11-17 -89%; BNL 2025-12-08 -89%; FNEL 2026-02-02 -91%; STL 2026-03-24 -91%; STL 2026-08-13 -28%; JLICL 2026-08-27 -30%; HICL 2026-09-03 -37%
+Windows (start close -> end close):
+  2016-12-30   2016-12-30 -> 2018-12-28  494 sessions  universe: all liquid names (membership unknown)
+  2018-10-01   2018-10-01 -> 2020-10-01  498 sessions  universe: all liquid names (membership unknown)
+  2020-10-01   2020-10-01 -> 2022-09-30  494 sessions  universe: KMI All Share liquid
+  2022-10-03   2022-10-03 -> 2024-10-01  491 sessions  universe: KMI All Share liquid
+  2024-10-01   2024-10-01 -> 2026-10-01  499 sessions  universe: KMI All Share liquid
+  2024-10-17*  2024-10-17 -> 2026-10-16  498 sessions  universe: KMI All Share liquid
+
+== A. Buy and hold, no costs: names liquid at the window start, start close to end close ==
+
+Window 2016-12-30 (2016-12-30 to 2018-12-28): universe 122 names, 122 priced at both ends (0 stopped trading before the end)
+  >=2x 3.3% (4)  >=3x 0.8% (1)  >=5x 0.0% (0)  lost money 84.4%  median 0.63x  mean 0.73x  worst 0.14x  EW buy-and-hold (no rebalance) 0.73x
+  KMI All Share TR 0.80x   KSE100 TR 0.78x
+  top 10: AVN 3.1x (Tech & telecom); SAZEW 2.8x (Autos); LOTCHEM 2.0x (Chemicals); EPCL 2.0x (Chemicals); SML 2.0x (n/a); DOL 1.7x (Chemicals); MEBL 1.5x (Islamic banks); STPL 1.4x (Glass/pack/paper); ANL 1.4x (Textiles); STCL 1.3x (Glass/pack/paper)
+  reference, hindsight-chosen current picks (not point in time, not a test): FFC 0.88x  OGDC 0.77x  MEBL 1.46x  FABL 1.14x  PPL 0.91x  HUBC 0.70x
+
+Window 2018-10-01 (2018-10-01 to 2020-10-01): universe 86 names, 86 priced at both ends (0 stopped trading before the end)
+  >=2x 3.5% (3)  >=3x 0.0% (0)  >=5x 0.0% (0)  lost money 68.6%  median 0.86x  mean 0.97x  worst 0.46x  EW buy-and-hold (no rebalance) 0.97x
+  KMI All Share TR 1.02x   KSE100 TR 0.99x
+  top 10: SYS 2.5x (Tech & telecom); FEROZ 2.4x (Pharma); PIOC 2.1x (Cement); KOHC 2.0x (Cement); TRG 1.8x (Tech & telecom); CHCC 1.7x (Cement); DOL 1.5x (Chemicals); EPCL 1.4x (Chemicals); ACPL 1.4x (Cement); TGL 1.3x (Glass/pack/paper)
+  reference, hindsight-chosen current picks (not point in time, not a test): FFC 1.11x  OGDC 0.69x  MEBL 1.06x  FABL 0.65x  PPL 0.61x  HUBC 0.90x
+
+Window 2020-10-01 (2020-10-01 to 2022-09-30): universe 74 names, 74 priced at both ends (0 stopped trading before the end)
+  >=2x 4.1% (3)  >=3x 1.4% (1)  >=5x 0.0% (0)  lost money 68.9%  median 0.76x  mean 0.91x  worst 0.23x  EW buy-and-hold (no rebalance) 0.91x
+  KMI All Share TR 1.02x   KSE100 TR 1.01x
+  top 10: SYS 3.1x (Tech & telecom); LOTCHEM 2.4x (Chemicals); MTL 2.1x (Autos); EPCL 1.9x (Chemicals); MEBL 1.9x (Islamic banks); NETSOL 1.6x (Tech & telecom); GGL 1.5x (Chemicals); NRL 1.4x (Refineries); UNITY 1.4x (Food & staples); EFERT 1.3x (Fertilizer)
+  reference, hindsight-chosen current picks (not point in time, not a test): FFC 1.17x  OGDC 0.81x  MEBL 1.90x  FABL 1.52x  PPL 0.66x  HUBC 1.08x
+
+Window 2022-10-03 (2022-10-03 to 2024-10-01): universe 47 names, 47 priced at both ends (0 stopped trading before the end)
+  >=2x 21.3% (10)  >=3x 2.1% (1)  >=5x 0.0% (0)  lost money 31.9%  median 1.25x  mean 1.48x  worst 0.54x  EW buy-and-hold (no rebalance) 1.48x
+  KMI All Share TR 1.75x   KSE100 TR 1.98x
+  top 10: GAL 3.8x (Autos); HUBC 2.9x (Power); PIOC 2.8x (Cement); MEBL 2.7x (Islamic banks); MARI 2.6x (E&P); FLYNG 2.5x (Cement); EFERT 2.4x (Fertilizer); OGDC 2.3x (E&P); ATRL 2.2x (Refineries); GHNI 2.2x (Autos)
+  reference, hindsight-chosen current picks (not point in time, not a test): FFC 2.99x  OGDC 2.33x  MEBL 2.66x  FABL 1.74x  PPL 1.80x  HUBC 2.94x
+
+Window 2024-10-01 (2024-10-01 to 2026-10-01): universe 87 names, 87 priced at both ends (0 stopped trading before the end)
+  >=2x 32.2% (28)  >=3x 8.0% (7)  >=5x 1.1% (1)  lost money 16.1%  median 1.51x  mean 1.74x  worst 0.28x  EW buy-and-hold (no rebalance) 1.74x
+  KMI All Share TR 1.83x   KSE100 TR 2.06x
+  top 10: QUICE 5.1x (Food & staples); THCCL 4.0x (Cement); POWER 4.0x (Cement); PRL 3.8x (Refineries); ATRL 3.7x (Refineries); CNERGY 3.4x (Refineries); GHNI 3.2x (Autos); MEBL 2.9x (Islamic banks); NRL 2.9x (Refineries); SSGC 2.7x (OMC)
+  reference, hindsight-chosen current picks (not point in time, not a test): FFC 2.89x  OGDC 2.45x  MEBL 2.91x  FABL 2.47x  PPL 2.16x  HUBC 1.83x
+
+Window 2024-10-17* (2024-10-17 to 2026-10-16): universe 89 names, 89 priced at both ends (0 stopped trading before the end)
+  >=2x 25.8% (23)  >=3x 7.9% (7)  >=5x 0.0% (0)  lost money 16.9%  median 1.48x  mean 1.66x  worst 0.31x  EW buy-and-hold (no rebalance) 1.66x
+  KMI All Share TR 1.75x   KSE100 TR 1.94x
+  top 10: QUICE 4.9x (Food & staples); POWER 4.3x (Cement); PRL 4.0x (Refineries); THCCL 3.5x (Cement); CNERGY 3.4x (Refineries); ATRL 3.3x (Refineries); NRL 3.1x (Refineries); GHNI 2.9x (Autos); MEBL 2.7x (Islamic banks); SSGC 2.7x (OMC)
+  reference, hindsight-chosen current picks (not point in time, not a test): FFC 2.54x  OGDC 2.02x  MEBL 2.72x  FABL 2.15x  PPL 1.77x  HUBC 2.37x
+
+== A2. Survivorship check: delisted names that were liquid at each window start (crude return adjustment, last trade or window end) ==
+  2016-12-30: 22 delisted names liquid at the start; AKZO 0.67x (last trade 2020-08-07); BYCO 0.37x (last trade 2021-12-20); DAWH 0.80x (last trade 2025-01-03); DSFL 0.18x (last trade 2018-02-19); EFOODS 0.43x (last trade 2019-07-10); ENGRO 0.94x (last trade 2025-01-03); FDIBL 0.47x (last trade 2024-03-22); FFBL 0.73x (last trade 2024-12-20); GAIL 0.45x (last trade 2021-09-20); GHNL 0.27x (last trade 2023-05-17); ICI 0.79x (last trade 2023-01-12); IGIIL 0.99x (last trade 2018-04-18); JPGL 0.34x (last trade 2017-12-15); NIB 0.78x (last trade 2017-07-04); PIAA 0.54x (last trade 2024-05-24); PSMC 0.29x (last trade 2024-04-25); SHEL 0.57x (last trade 2025-02-28); SILK 0.61x (last trade 2025-03-18); SING 0.62x (last trade 2018-07-10); SMBL 0.19x (last trade 2023-11-24); TRPOL 1.52x (last trade 2021-04-05); WYETH 0.25x (last trade 2022-04-01)
+  2018-10-01: 9 delisted names liquid at the start; BYCO 0.98x (last trade 2021-12-20); EFOODS 0.62x (last trade 2019-07-10); ENGRO 0.97x (last trade 2025-01-03); FFBL 0.55x (last trade 2024-12-20); GHNL 0.67x (last trade 2023-05-17); PIAA 0.87x (last trade 2024-05-24); PSMC 0.62x (last trade 2024-04-25); SHEL 0.84x (last trade 2025-02-28); TRPOL 0.47x (last trade 2021-04-05)
+  2020-10-01: 10 delisted names liquid at the start; BYCO 0.61x (last trade 2021-12-20); DAWH 0.73x (last trade 2025-01-03); ENGRO 0.76x (last trade 2025-01-03); FFBL 1.10x (last trade 2024-12-20); GHNL 0.70x (last trade 2023-05-17); GSKCH 0.74x (last trade 2023-01-30); ICI 0.91x (last trade 2023-01-12); PSMC 0.96x (last trade 2024-04-25); SHEL 0.69x (last trade 2025-02-28); TRPOL 1.78x (last trade 2021-04-05)
+  2022-10-03: 6 delisted names liquid at the start; ENGRO 1.32x (last trade 2025-01-03); FFBL 2.59x (last trade 2024-12-20); GHNL 0.59x (last trade 2023-05-17); GTECH 1.05x (last trade 2022-11-02); PSMC 3.41x (last trade 2024-04-25); SHEL 1.18x (last trade 2025-02-28)
+  2024-10-01: 5 delisted names liquid at the start; CLOUD 0.94x (last trade 2024-10-10); CWSM 0.76x (last trade 2025-12-29); ENGRO 1.60x (last trade 2025-01-03); FFBL 1.78x (last trade 2024-12-20); SHEL 1.25x (last trade 2025-02-28)
+  2024-10-17*: 6 delisted names liquid at the start; CLOUD 1.00x (last trade 2024-10-10); CWSM 1.16x (last trade 2025-12-29); ENGRO 1.57x (last trade 2025-01-03); FFBL 1.56x (last trade 2024-12-20); PHDL 1.29x (last trade 2025-01-20); SHEL 1.18x (last trade 2025-02-28)
+
+== B. Perfect-foresight upper bound (UNATTAINABLE; it only sets the scale). Multiple of Rs50,000 ==
+Universe fixed at the window start unless marked 'rolling'. Costs as above (0.5% round trip, 1.0% under Rs20m traded value). 'cap' = position in a name at most 1% of its trailing median daily traded value.
+window           best1 uncapped    best3 uncapped  best1 cap(cash)  best3 cap  waterfall cap  roll waterfall  roll best3  weekly best3  weekly wf
+2016-12-30             8,581.00            917.82            24.90      45.06         135.76          148.97       69.47        166.02   1,041.75
+2018-10-01             1,113.66            333.21            26.57      62.56         190.64          196.03       68.84        229.25   1,457.68
+2020-10-01               944.87            172.41            38.94      45.06         147.65          153.75       66.84        199.17     841.06
+2022-10-03             2,499.30            305.91            91.03      98.73         254.25          524.86      125.22        330.83     948.12
+2024-10-01            20,078.94          1,920.75           168.37     247.76         702.43          853.94      210.91        788.63   3,743.72
+2024-10-17*           22,587.40          2,098.65           193.37     264.70         791.87          954.48      225.30        799.08   3,804.47
+
+== C. Placebo: 200 random monthly rotations into 3 random liquid names (same dates, same costs, full turnover every month) ==
+  2016-12-30    p5 0.36x  p25 0.46x  median 0.56x  p75 0.67x  p95 0.88x  max 1.27x  share>=2x 0.0%  share>=3x 0.0%
+  2018-10-01    p5 0.50x  p25 0.63x  median 0.78x  p75 1.01x  p95 1.28x  max 1.77x  share>=2x 0.0%  share>=3x 0.0%
+  2020-10-01    p5 0.47x  p25 0.58x  median 0.70x  p75 0.86x  p95 1.11x  max 1.32x  share>=2x 0.0%  share>=3x 0.0%
+  2022-10-03    p5 0.73x  p25 0.97x  median 1.16x  p75 1.47x  p95 2.05x  max 2.54x  share>=2x 5.5%  share>=3x 0.0%
+  2024-10-01    p5 0.78x  p25 1.07x  median 1.32x  p75 1.65x  p95 2.34x  max 3.99x  share>=2x 10.0%  share>=3x 1.0%
+  2024-10-17*   p5 0.75x  p25 0.98x  median 1.18x  p75 1.54x  p95 2.24x  max 3.30x  share>=2x 7.0%  share>=3x 1.5%
+
+== D. Systems, Rs50,000 each window: multiple / CAGR / max drawdown / trades / hit rate / median trade / placebo percentile ==
+(n/a = the system had no usable signals or data in that window and stayed in cash; percentile = share of the 200 random paths the system beat)
+
+Window 2016-12-30
+sys   multiple   final Rs    CAGR   maxDD  trades   hit  median  plc pct
+S1       0.77x     38,294    -13%    -58%      43   28%     -8%      88%
+S2       0.63x     31,457    -21%    -42%      30   43%     -5%      67%
+S3       0.81x     40,254    -10%    -20%       7   43%    -11%      90%
+S4         n/a          -       -       -       0     -       -        -
+S5       0.38x     18,969    -39%    -66%      36   22%    -18%       8%
+S6         n/a          -       -       -       0     -       -        -
+S7       0.80x     39,890    -11%    -29%       1    0%    -20%      90%
+S8       0.53x     26,521    -27%    -57%      44   16%     -9%      44%
+  best of menu: S3 0.81x; menu median 0.70x; placebo median 0.56x
+
+Window 2018-10-01
+sys   multiple   final Rs    CAGR   maxDD  trades   hit  median  plc pct
+S1       0.49x     24,555    -30%    -70%      45   33%     -7%       4%
+S2       0.61x     30,311    -22%    -66%      44   36%     -2%      19%
+S3       1.02x     50,902     +1%    -43%      11   36%    -11%      75%
+S4         n/a          -       -       -       0     -       -        -
+S5       0.59x     29,401    -23%    -65%      39   36%    -11%      16%
+S6         n/a          -       -       -       0     -       -        -
+S7       1.01x     50,678     +1%    -37%       1  100%     +1%      75%
+S8       0.90x     45,032     -5%    -50%      40   42%     -6%      66%
+  best of menu: S3 1.02x; menu median 0.75x; placebo median 0.78x
+
+Window 2020-10-01
+sys   multiple   final Rs    CAGR   maxDD  trades   hit  median  plc pct
+S1       0.95x     47,416     -3%    -50%      37   46%     -2%      84%
+S2       0.53x     26,656    -27%    -58%      31   26%     -3%      16%
+S3       2.59x    129,456    +61%    -18%       8   75%    +40%     100%
+S4       1.03x     51,505     +1%    -12%       4   50%     +2%      90%
+S5       0.89x     44,363     -6%    -44%      38   42%     -6%      78%
+S6       0.97x     48,694     -1%     -9%       3   33%     -3%      86%
+S7       1.02x     50,965     +1%    -16%       1  100%     +2%      90%
+S8       0.71x     35,449    -16%    -54%      41   29%     -6%      52%
+  best of menu: S3 2.59x; menu median 0.96x; placebo median 0.70x
+
+Window 2022-10-03
+sys   multiple   final Rs    CAGR   maxDD  trades   hit  median  plc pct
+S1       2.37x    118,601    +54%    -33%      43   42%     -2%      98%
+S2       3.21x    160,391    +79%    -27%      32   44%     -1%     100%
+S3       2.96x    147,838    +72%    -19%      11   64%     +2%     100%
+S4       1.38x     69,245    +18%    -24%      29   41%     -1%      70%
+S5       1.56x     78,091    +25%    -21%      40   55%     +3%      80%
+S6       2.98x    148,913    +73%    -15%      25   80%    +25%     100%
+S7       1.74x     87,022    +32%    -12%       1  100%    +74%      88%
+S8       1.82x     91,038    +35%    -22%      46   54%     +4%      90%
+  best of menu: S2 3.21x; menu median 2.10x; placebo median 1.16x
+
+Window 2024-10-01
+sys   multiple   final Rs    CAGR   maxDD  trades   hit  median  plc pct
+S1       1.84x     91,962    +36%    -59%      41   46%     -2%      84%
+S2       1.34x     66,902    +16%    -63%      37   38%     -2%      52%
+S3       2.46x    122,927    +57%    -26%      12   58%    +11%      96%
+S4       2.33x    116,255    +53%    -32%      34   53%     +2%      94%
+S5       1.57x     78,572    +25%    -50%      56   59%     +9%      70%
+S6       1.43x     71,433    +20%    -31%      25   48%     -3%      58%
+S7       1.82x     90,834    +35%    -21%       1  100%    +82%      82%
+S8       1.85x     92,343    +36%    -24%      49   59%     +5%      84%
+  best of menu: S3 2.46x; menu median 1.83x; placebo median 1.32x
+
+Window 2024-10-17*
+sys   multiple   final Rs    CAGR   maxDD  trades   hit  median  plc pct
+S1       1.36x     68,173    +17%    -63%      41   46%     -3%      64%
+S2       0.90x     44,786     -5%    -68%      36   39%     -9%      16%
+S3       2.12x    106,092    +46%    -28%      12   58%    +17%      94%
+S4       2.38x    118,904    +54%    -32%      34   53%     +2%      96%
+S5       1.43x     71,661    +20%    -51%      56   54%     +1%      70%
+S6       1.38x     69,237    +18%    -31%      25   48%     -3%      66%
+S7       1.74x     86,860    +32%    -21%       1  100%    +74%      85%
+S8       1.82x     91,015    +35%    -24%      49   63%     +4%      88%
+  best of menu: S4 2.38x; menu median 1.59x; placebo median 1.18x
+
+== E. Rank stability across windows (rank by multiple, 1 = best; systems with no signals excluded from that window) ==
+    2016-12-30  2018-10-01  2020-10-01  2022-10-03  2024-10-01  2024-10-17*
+S1        0.77        0.49        0.95        2.37        1.84         1.36
+S2        0.63        0.61        0.53        3.21        1.34         0.90
+S3        0.81        1.02        2.59        2.96        2.46         2.12
+S4         NaN         NaN        1.03        1.38        2.33         2.38
+S5        0.38        0.59        0.89        1.56        1.57         1.43
+S6         NaN         NaN        0.97        2.98        1.43         1.38
+S7        0.80        1.01        1.02        1.74        1.82         1.74
+S8        0.53        0.90        0.71        1.82        1.85         1.82
+
+ranks:
+    2016-12-30  2018-10-01  2020-10-01  2022-10-03  2024-10-01  2024-10-17*
+S1         3.0         6.0         5.0         4.0         4.0          7.0
+S2         4.0         4.0         8.0         1.0         8.0          8.0
+S3         1.0         1.0         1.0         3.0         1.0          2.0
+S4         NaN         NaN         2.0         8.0         2.0          1.0
+S5         6.0         5.0         6.0         7.0         6.0          5.0
+S6         NaN         NaN         4.0         2.0         7.0          6.0
+S7         2.0         2.0         3.0         6.0         5.0          4.0
+S8         5.0         3.0         7.0         5.0         3.0          3.0
+  Spearman rank correlation 2016-12-30 vs 2018-10-01: +0.60 (n=6 systems)
+  Spearman rank correlation 2016-12-30 vs 2020-10-01: +0.77 (n=6 systems)
+  Spearman rank correlation 2016-12-30 vs 2022-10-03: +0.43 (n=6 systems)
+  Spearman rank correlation 2016-12-30 vs 2024-10-01: +0.49 (n=6 systems)
+  Spearman rank correlation 2018-10-01 vs 2020-10-01: +0.49 (n=6 systems)
+  Spearman rank correlation 2018-10-01 vs 2022-10-03: +0.14 (n=6 systems)
+  Spearman rank correlation 2018-10-01 vs 2024-10-01: +0.49 (n=6 systems)
+  Spearman rank correlation 2020-10-01 vs 2022-10-03: -0.29 (n=8 systems)
+  Spearman rank correlation 2020-10-01 vs 2024-10-01: +0.64 (n=8 systems)
+  Spearman rank correlation 2022-10-03 vs 2024-10-01: -0.43 (n=8 systems)
+  mean pairwise +0.33; pairs with positive correlation 8 of 10
+  winner per window: 2016-12-30: S3, 2018-10-01: S3, 2020-10-01: S3, 2022-10-03: S2, 2024-10-01: S3, 2024-10-17*: S4
+  rank of the 2024-10-01 winner (S3) in other windows: 2016-12-30: 1, 2018-10-01: 1, 2020-10-01: 1, 2022-10-03: 3
+  windows where the system beat S7 (KMI buy and hold) / beat placebo median / made >=1.0x, of the 5 main windows:
+   S1: beat S7 in 2/5; beat placebo median in 4/5; at least 1.0x in 2/5; reached 2x in 1
+   S2: beat S7 in 1/5; beat placebo median in 3/5; at least 1.0x in 2/5; reached 2x in 1
+   S3: beat S7 in 5/5; beat placebo median in 5/5; at least 1.0x in 4/5; reached 2x in 3
+   S4: beat S7 in 2/3; beat placebo median in 3/3; at least 1.0x in 3/3; reached 2x in 1
+   S5: beat S7 in 0/5; beat placebo median in 3/5; at least 1.0x in 2/5; reached 2x in 0
+   S6: beat S7 in 1/3; beat placebo median in 3/3; at least 1.0x in 2/3; reached 2x in 1
+   S7: beat S7 in 0/5; beat placebo median in 5/5; at least 1.0x in 4/5; reached 2x in 0
+   S8: beat S7 in 2/5; beat placebo median in 4/5; at least 1.0x in 2/5; reached 2x in 0
+
+== F. Largest participation: trade size as a share of the name's trailing median daily traded value ==
+  S1: max 0.59%, trades above 1%: 0 of 250
+  S2: max 0.69%, trades above 1%: 0 of 210
+  S3: max 0.38%, trades above 1%: 0 of 61
+  S4: max 0.45%, trades above 1%: 0 of 101
+  S5: max 0.44%, trades above 1%: 0 of 265
+  S6: max 0.31%, trades above 1%: 0 of 78
+  S8: max 0.01%, trades above 1%: 0 of 269
+
+== G. 2024 to 2026: systems reaching 2x / 3x, and their trades ==
+
+Window 2024-10-01: S1 1.84x; S2 1.34x; S3 2.46x; S4 2.33x; S5 1.57x; S6 1.43x; S7 1.82x; S8 1.85x
+  reached 2x: ['S3', 'S4']   reached 3x: []
+  S3 top 10 trades by Rs P&L (of 12):
+    FATIMA   2024-10-02 -> 2026-02-25  +165%  Rs27,405  trail_stop_20  (Fertilizer)
+    TPLT     2026-06-01 -> 2026-10-01  +71%  Rs21,457  end_open  (Tech & telecom)
+    THCCL    2024-10-02 -> 2024-12-19  +117%  Rs19,430  trail_stop_20  (Cement)
+    FCCL     2024-10-02 -> 2026-03-03  +74%  Rs12,260  trail_stop_20  (Cement)
+    POWER    2025-04-25 -> 2026-03-03  +20%  Rs3,825  trail_stop_20  (Cement)
+    MEBL     2026-04-09 -> 2026-10-01  +11%  Rs3,499  end_open  (Islamic banks)
+    IPAK     2026-04-17 -> 2026-10-01  +10%  Rs3,373  end_open  (Glass/pack/paper)
+    CRTM     2026-04-09 -> 2026-05-19  -5%  Rs-1,732  trail_stop_20  (Textiles)
+    SSGC     2024-12-19 -> 2025-01-08  -11%  Rs-2,688  trail_stop_20  (OMC)
+    GWLC     2025-01-14 -> 2025-02-04  -17%  Rs-4,253  trail_stop_20  (Cement)
+  S4 top 10 trades by Rs P&L (of 34):
+    TOMCL    2025-05-02 -> 2025-10-01  +124%  Rs33,762  rotation  (Food & staples)
+    PRL      2026-08-03 -> 2026-10-01  +43%  Rs15,605  end_open  (Refineries)
+    CPHL     2024-10-02 -> 2025-01-01  +86%  Rs14,350  rotation  (Pharma)
+    GWLC     2024-10-02 -> 2024-11-01  +55%  Rs9,211  rotation  (Cement)
+    MLCF     2024-11-01 -> 2025-03-03  +36%  Rs7,401  rotation  (Cement)
+    SNGP     2024-12-02 -> 2025-04-03  +27%  Rs6,543  rotation  (OMC)
+    NML      2025-11-03 -> 2026-01-01  +17%  Rs6,290  rotation  (Textiles)
+    SPEL     2026-06-01 -> 2026-07-01  +19%  Rs5,995  rotation  (Glass/pack/paper)
+    EPQL     2026-03-02 -> 2026-09-01  +15%  Rs4,588  rotation  (Power)
+    KTML     2026-05-04 -> 2026-07-01  +13%  Rs4,318  rotation  (Textiles)
+  S1 (below 2x) best trade BNL +242%; exit reasons: rotation 38, end_open 3
+  S2 (below 2x) best trade BNL +255%; exit reasons: rotation 34, end_open 3
+  S5 (below 2x) best trade ZAHID +46%; exit reasons: time_60 30, target_25 21, end_open 5
+  S6 (below 2x) best trade GHNI +66%; exit reasons: time_90 20, end_open 5
+  S8 (below 2x) best trade GAL +111%; exit reasons: rotation 39, end_open 10
+
+Window 2024-10-17*: S1 1.36x; S2 0.90x; S3 2.12x; S4 2.38x; S5 1.43x; S6 1.38x; S7 1.74x; S8 1.82x
+  reached 2x: ['S3', 'S4']   reached 3x: []
+  S3 top 10 trades by Rs P&L (of 12):
+    MEBL     2024-11-25 -> 2026-10-16  +139%  Rs26,241  end_open  (Islamic banks)
+    DCR      2025-05-13 -> 2026-10-16  +63%  Rs11,958  end_open  (code836)
+    THCCL    2024-10-21 -> 2024-12-19  +71%  Rs11,932  trail_stop_20  (Cement)
+    TPLT     2026-06-01 -> 2026-10-16  +63%  Rs11,630  end_open  (Tech & telecom)
+    AGP      2024-10-18 -> 2025-05-08  +24%  Rs4,020  trail_stop_20  (Pharma)
+    POWER    2025-04-25 -> 2026-03-03  +20%  Rs2,912  trail_stop_20  (Cement)
+    FLYNG    2024-10-21 -> 2024-11-25  +14%  Rs2,279  trail_stop_20  (Cement)
+    CRTM     2026-04-09 -> 2026-05-19  -5%  Rs-1,048  trail_stop_20  (Textiles)
+    SSGC     2024-12-19 -> 2025-01-08  -11%  Rs-2,333  trail_stop_20  (OMC)
+    SHFA     2025-02-25 -> 2025-04-25  -19%  Rs-3,575  trail_stop_20  (Glass/pack/paper)
+  S4 top 10 trades by Rs P&L (of 34):
+    TOMCL    2025-05-02 -> 2025-10-01  +124%  Rs32,163  rotation  (Food & staples)
+    PRL      2026-08-03 -> 2026-10-16  +68%  Rs23,374  end_open  (Refineries)
+    CPHL     2024-10-18 -> 2025-01-01  +75%  Rs12,431  rotation  (Pharma)
+    GWLC     2024-10-18 -> 2024-11-01  +44%  Rs7,308  rotation  (Cement)
+    MLCF     2024-11-01 -> 2025-03-03  +36%  Rs7,067  rotation  (Cement)
+    SNGP     2024-12-02 -> 2025-04-03  +27%  Rs6,243  rotation  (OMC)
+    NML      2025-11-03 -> 2026-01-01  +17%  Rs5,991  rotation  (Textiles)
+    SPEL     2026-06-01 -> 2026-07-01  +19%  Rs5,711  rotation  (Glass/pack/paper)
+    EPQL     2026-03-02 -> 2026-09-01  +15%  Rs4,370  rotation  (Power)
+    KTML     2026-05-04 -> 2026-07-01  +13%  Rs4,113  rotation  (Textiles)
+  S1 (below 2x) best trade BNL +242%; exit reasons: rotation 38, end_open 3
+  S2 (below 2x) best trade BNL +255%; exit reasons: rotation 33, end_open 3
+  S5 (below 2x) best trade ZAHID +46%; exit reasons: time_60 29, target_25 22, end_open 5
+  S6 (below 2x) best trade GHNI +66%; exit reasons: time_90 20, end_open 5
+  S8 (below 2x) best trade GAL +117%; exit reasons: rotation 39, end_open 10

@@ -29,6 +29,9 @@ for k, i in enumerate(order):
     for attempt in range(3):
         try:
             r = S.get(f"https://dps.psx.com.pk/download/document/{i}.pdf", timeout=60)
+            if r.status_code == 404:   # the portal is case-sensitive: links ending .PDF only resolve with the capital extension
+                time.sleep(1)
+                r = S.get(f"https://dps.psx.com.pk/download/document/{i}.PDF", timeout=60)
             if r.status_code == 200 and r.content[:5] == b"%PDF-":
                 (OUT / f"{i}.pdf").write_bytes(r.content); status = f"ok\t{len(r.content)}"; break
             status = f"http{r.status_code}"
