@@ -17,8 +17,8 @@ The base rate (n = 11, 2021 to 2026) is sobering:
 
 - **Offer price rule.** Under the Takeover Regulations 2017, the public-offer price is the highest of four figures: the negotiated SPA price, the highest price the acquirer paid in the look-back period, the VWAP before the PAO, and the 28-day VWAP before the PAI. This is quoted in the PIOC offer (doc 267426, Dec 2025).
 - **The offer can beat the SPA price.** That has happened often: Shell Rs118 SPA vs Rs155.11 offer; Tri-Pack 154.62 vs 245.20; Sanofi 940 vs 1,704; Mitchells 180 vs 232.75.
-- **Offer size.** The offer covers at least half of the shares the acquirer group does not own. PIOC's offer was 11.72%, half of the 23.44% outside the buyer group (doc 267426). If more shares are tendered than the offer covers, acceptance is pro rata: PIOC accepted 61.64% of tendered shares (doc 270524).
-- **Timeline.** The PAI is followed by the PAO within 180 days (extendable by 90, Regulation 7(1); doc 282317). The acceptance window opens about 7 to 8 weeks after the PAO and runs 7 days. Payment follows within about 3 days. For PIOC: PAO 18 Dec 2025, window 8 to 14 Feb 2026, paid 17 Feb.
+- **Offer size.** At least half of the shares outside the buyer group: PIOC's 11.72% was half of 23.44% (doc 267426). Oversubscription means pro rata acceptance: PIOC took 61.64% of tendered shares (doc 270524).
+- **Timeline.** PAO within 180 days of the PAI, extendable by 90 (Reg. 7(1), doc 282317). The 7-day acceptance window opens about 7 to 8 weeks after the PAO, and payment follows in about 3 days (PIOC: PAO 18 Dec 2025, window 8 to 14 Feb, paid 17 Feb).
 
 **Worked example of the trap (PIOC, KMI).** Someone who bought at Rs415.94 on the day before the PAO got 61.64% filled at Rs478.43, and the rest was worth Rs330.22 on payment day. The blended exit was Rs421.6, a gain of **+1.4%**, against a 15% headline spread.
 
@@ -38,12 +38,12 @@ The base rate (n = 11, 2021 to 2026) is sobering:
 | **ENGROH** market buyback (KMI) | Up to 45m shares (3.73%) at market (doc 275940) | 7 May to 25 Oct 2026; about 36.0m done by 15 Oct (my sum of filings) | 260.65 | Support, not an exit price |
 | **CHCC** market buyback (KMI) | Up to 7,771,800 shares (4%) at market (doc 278417) | 12 Jun to 1 Dec 2026; progress filings are scanned | 271.23 | Support |
 | **AGP** market buyback (KMI) | Up to 5.6m shares (about 2%) at market (Mettis, asserted) | 22 Apr to 18 Oct 2026; daily filings to 16 Oct | 168.38 | Support; ends 18 Oct |
-| **PIA** privatisation (PIAHCLA not KMI) | Arif Habib consortium (FFC 33.99% of the SPV, FATIMA, AHCL, others) paid Rs135bn for 75%. The call option on the remaining 25% (Rs45bn) has been exercised (FFC H1 report, doc 281738) | First close 29 Jun 2026. The Lucky consortium lost with Rs134bn (Aaj, Profit) | 22.45 | No minority offer. A cash drain for FFC |
-| **GEPCO / FESCO / IESCO** | 51% to 100% stakes. The Lucky/Hub Power Holdings/Kohat/Metro consortium is among 9 prequalified for GEPCO (Tribune, 6 Oct 2026) | Targets: FESCO Jan, GEPCO Feb, IESCO Mar 2027 (IMF plan, asserted) | – | Unlisted targets. Risk to the LUCK, HUBC and KOHC buyers |
-| **PRL** rights | **No rights issue found** in 2026 PSX filings. Upgrade agreement signed 24 Sep 2026 (doc 283398) | – | 106.95 | Funding is a future dilution risk (inference) |
-| **Noventra** funding (KMI) | Authorised capital doubled to Rs40bn on 22 Sep (chemicals.md). Cash Rs2.2bn against Rs19.7bn plus up to Rs6.1bn for the offer | EGM resolutions 22 Jun and 22 Sep (docs 278927, 283195; not read) | 25.41 | A rights issue is likely (inference) |
+| **PIA** (PIAHCLA not KMI) | AHCL-led consortium (FFC 33.99% of SPV) paid Rs135bn for 75%; 25% call option (Rs45bn) exercised (doc 281738) | Closed 29 Jun 2026; Lucky consortium lost at Rs134bn (Aaj) | 22.45 | No minority offer |
+| **GEPCO / FESCO / IESCO** | 51-100%; Lucky/Hub/Kohat/Metro among 9 prequalified for GEPCO (Tribune, 6 Oct) | FESCO Jan, GEPCO Feb, IESCO Mar 2027 (asserted) | – | Unlisted; risk to LUCK, HUBC, KOHC |
+| **PRL** rights | **None found** in 2026 filings; upgrade agreement signed 24 Sep (doc 283398) | – | 106.95 | Future dilution risk (inference) |
+| **Noventra** funding (KMI) | Authorised capital doubled to Rs40bn (22 Sep); Rs2.2bn cash vs about Rs26bn needed | EGMs 22 Jun, 22 Sep (not read) | 25.41 | Rights issue likely (inference) |
 
-Completed in the last 12 months (they feed the base rate): PIOC (MLCF, Feb 2026), ACPL (FCCL/KAPCO, Apr 2026), RMPL (Nishat, May 2026), TPLI (Jazz, Jul 2026), plus the market-bought tender buybacks at LPL (100m shares cancelled, Dec 2025; doc 267879) and PKGP (May 2026; doc 277400; price unread).
+Completed in the last 12 months: PIOC, ACPL, RMPL and TPLI (all in section 5), plus tender buybacks at LPL (100m shares cancelled, doc 267879) and PKGP (doc 277400; price unread).
 
 ## 3. EPCL in detail (the only live KMI arbitrage)
 
@@ -76,7 +76,7 @@ Completed in the last 12 months (they feed the base rate): PIOC (MLCF, Feb 2026)
   - 53.4% acceptance: Rs32.94, which is +3.2% net, or about **9% annualised** over 0.35 years.
   - 70% acceptance: Rs33.82, which is +6.0% net, or about 18% annualised.
 - At 60% odds the 53.4% case falls to +1.0% net (about 3% annualised), below the roughly 12% T-bill yield.
-- **What kills it:** a Noventra funding failure, a failed rights issue, CCP objection, Engro walking away, or Noventra's controlling group changing its mind. Lotte Chemical Korea's earlier exit history shows these groups do restructure.
+- **What kills it:** a Noventra funding failure, a failed rights issue, CCP objection, Engro walking away, or Noventra's controlling group changing its mind.
 - **Trigger to act:** the PAO itself, due by 7 Dec 2026. It fixes the price and size and removes most approval risk. Buying before the PAO collects about 3 points more spread but takes the funding risk.
 
 ## 4. Ranked opportunities (expected annualised return after 0.5% costs)
@@ -94,13 +94,7 @@ None beats the 12% T-bill on expected value except EPCL in its 70%-acceptance ca
 
 ## 5. Base rate: 11 completed PSX tender offers, 2021 to 2026
 
-How the columns are built:
-- "Pre-PAI" is the close on the day before the first Public Announcement of Intention.
-- "Spread" is the offer price against the close on the day before the PAO.
-- "Days" runs from the PAI to payment or the result date.
-- The post-completion columns compare the price 21, 63 and 126 trading days after completion with the offer price. "Rel" is the 6-month return from completion relative to the KSE-100.
-- Prices are raw PSX closes. There were no gaps beyond ±11% in any window.
-- Offer terms come from the PSX docs and press cited in section 1 and below.
+Columns: pre-PAI close (day before the first PAI); spread = offer vs close the day before the PAO; days from PAI to payment; price 21 and 126 trading days after completion vs the offer; "rel" = 6-month return from completion vs the KSE-100. Raw PSX closes; no gap beyond ±11% in any window.
 
 | Target (acquirer) | PAI | Offer (SPA) | Pre-PAI | Premium | Spread before PAO | Acceptance (tendered vs offer size) | Days | 1m vs offer | 6m vs offer | 6m rel |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -133,7 +127,7 @@ Also outside the table: FFC's offer for Agritech (Dec 2024) drew only 7.85m of 1
 **Lessons for the next deal:**
 1. **Oversubscription follows the spread.** When the spread is above about 10%, retail tenders and you get pro rata. When the offer sits near the market (LOTCHEM, AGL), few tender. With EPCL's 21.5% spread, expect the free float to tender fully, so about 53% acceptance.
 2. **The stub sags after completion.** The unaccepted remainder usually trades below the pre-offer price within 1 to 6 months (median −13% vs offer at 1 month). Value it below the offer, never at it.
-3. **Most of the return comes at the PAI, not after.** The median premium to the pre-PAI price was 40%, while the median spread left on the day before the PAO was 14.7%. Being in before the PAI requires spotting sale processes (sponsor exits, multinational retreats such as Shell, Sanofi, Gillette and Rafhan), which is a separate screen.
+3. **Most of the return comes at the PAI, not after.** The median premium to the pre-PAI price was 40%, while the median spread left on the day before the PAO was 14.7%. Capturing it means spotting sale processes early (multinational exits: Shell, Sanofi, Gillette, Rafhan).
 4. **Delistings at PSX-set prices** (GLPL Rs700 vs a Rs216 proposal; SCL Rs750) gave large uplifts to holders on the day the price was set. Watch for "voluntary delisting application" notices; that is where minority value appeared in 2026.
 5. **Withdrawals are common among competing bidders.** In 2025-26, PAIs for ACPL (AHL, CHCC), RMPL (CHCC, SFL), SGPL and Escorts were withdrawn, and ASC was suspended by SECP. Signed-SPA deals rarely failed in this sample.
 

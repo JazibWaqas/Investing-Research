@@ -42,3 +42,11 @@ Workflow resume: `Workflow({scriptPath: "<session workflows dir>/psx-phase2b-ann
 - Commits: no Co-Authored-By trailer. Push to origin main freely (user instruction 17 Oct).
 - Raw downloads under `data/raw/` and `data/announcements.csv` are gitignored.
 - Codex CLI: `codex exec` works; web search needs `-c 'tools.web_search=true'` (the `--search` flag is not accepted by `exec`).
+
+## Addendum (about 22:00 PKT): underwriting result
+
+All 12 cards are in `knowledge/companies/` with red-team sections. Every one came back WATCH or AVOID. Expected 12-month returns after the red team: NETSOL +2%, PSO +4%, GHGL +8 to 10%, OGDC +2 to 3%, PPL +4%, MEBL +3%, FFC +3%, ATRL +0.5%, LUCK +3%, SAZEW about -9% (avoid), EPCL about 0% (avoid, partial offer), SNGP +2% (avoid). All below the 12.5% T-bill. The red teams mostly cut the base case for one-offs treated as recurring and for re-ratings assumed without a driver.
+
+What this means for PICKS.md: at 16 Oct prices, with the market near its high and the curve pricing hikes, none of the obvious candidates clears a 30% bar, and most do not clear the risk-free rate. The honest provisional pick list is therefore small and conditional: entry limits from the cards (OGDC about Rs265, MEBL Rs485, PSO Rs345, GHGL after the 28 Oct print, NETSOL after the 30 Oct print) plus whatever the Phase 2b live screens produce (ignored-quarter setups, sponsor-buying clusters). Do not manufacture 30% upside that the cards do not support; say so in PICKS.md and give the triggers. The cash rule in PLAN.md section 6 still applies: deploy into the best available names at their limits, not into the T-bill.
+
+Also landed: `knowledge/playbooks/deals.md`, `holdco_discounts.md`, `tests/size_liquidity.md` (read its verdict before writing REPORT.md).
