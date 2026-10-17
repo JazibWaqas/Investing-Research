@@ -1,0 +1,620 @@
+====================================================================================================
+DIVIDEND RUN-UPS, EX-DATE BEHAVIOUR, CUT DRIFT AND CALENDAR  (run 2026-10-17)
+====================================================================================================
+Panel 2480 sessions x 456 symbols to 2026-10-16. Adjusted total returns; market = ew_market (Rs5m); net-of-WHT uses cash x0.85 in the actions table (market also net).
+Cash rows in corporate_actions.csv: 473. Dropped: ex_date before 2024-11-01: 94. Future ex_date after 2026-10-16 (calendar only): 34.
+Test-window cash rows after the seed/payouts duplicate fix: 344 (1 payouts duplicate of a seed row removed: seed ex date kept). By source: {'payouts_book_closure': 314, 'seed': 30}
+Symbols not in the price panel: 0. Ex date not a session: 0.
+Declaration time: {'announce_dt+ruleb': 304, 'seed_inferred_from_results': 29, 'announce_dt': 11}; missing: 0. Stamped at/after 15:30 PKT (T0 shifted to next session): 15 of 344.
+Before spec rule 0.3(b): raw CA announce_dt stamps at/after 15:30 PKT: 207 of 315 rows with a stamp (29 rows have no announce_dt). Rule (b) moves the declaration to an earlier results/dividend row when one exists in the 3 days before, which removes most of the after-15:30 cases.
+
+====================================================================================================
+SECTION 0. SAMPLE
+====================================================================================================
+Ex-date month distribution of the 378 cash rows with ex_date from 2024-11-01 (includes 34 future-dated rows; 344 test-window rows after the in-panel filter):
+  all rows from Nov 2024:  2024-11:1, 2025-01:3, 2025-02:10, 2025-03:22, 2025-04:20, 2025-05:16, 2025-06:3, 2025-07:2, 2025-08:10, 2025-09:20, 2025-10:67, 2025-11:16, 2025-12:2, 2026-01:10, 2026-02:16, 2026-03:20, 2026-04:26, 2026-05:14, 2026-06:1, 2026-07:6, 2026-08:7, 2026-09:20, 2026-10:66
+  by calendar month (all rows from Nov 2024): Jan:13, Feb:26, Mar:42, Apr:46, May:30, Jun:4, Jul:8, Aug:17, Sep:40, Oct:133, Nov:17, Dec:2
+  by calendar month (test window, ex <= 2026-10-16): Jan:13, Feb:26, Mar:42, Apr:46, May:30, Jun:4, Jul:8, Aug:17, Sep:40, Oct:99, Nov:17, Dec:2
+  Dec rows: 2 (all) / 2 (test), Jun rows: 4 / 4, Oct rows: 133 / 99
+  Note: the spec quotes 379 rows from Nov 2024; that figure includes the 34 future-dated rows (378 here after the duplicate fix). Rows with an outcome: 344.
+
+====================================================================================================
+H1. High yielders (trailing yield > 8%) rise before results / dividend announcement. Effective window from 2025-11-01.
+====================================================================================================
+Results announcements (financial_result, excluding transmissions/revoked/funds) for panel symbols, T0 dedupe by symbol+session: 1966 since Sep 2025; titles-regex excluded 22143 other financial_result rows overall.
+H1a candidate results with window start >= 2025-11-01: 1325 (dropped 641 with window start before it: trailing yield not valid). After-15:30 stamps among kept: 27.
+  trailing yield missing: 19; high (>8%): 42; low (<=8%): 1264
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+  [H1a high] input 42; no data to window end 0; illiquid 19; not in KMI snapshot 0; no trade at entry 0; kept 23; per-symbol overlap dropped 0; final 23
+H1a high yield, 20s to pre-news, gross           23   13    4 |   +2.2%   +1.5%  65%  -11.8%  +12.4% |    4   +3.6%   +3.5%  75%   -0.0%   +7.3% |   -0.1%   -0.5%  46% | 0.070 0.000
+    leave-one-cluster-out: cluster median ranges +2.5% to +4.5% (full +3.5%); dropping the largest cluster by n leaves median +4.5%
+    clusters of 'H1a high yield, 20s to pre-news, gross' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2026-01-01 to 2026-02-26  n=7   mean +4.5%  [BIPL, DOL, EPQL, FFC, HUBC, MTL, SNGP]
+      #2   2026-03-12 to 2026-04-29  n=10  mean -0.0%  [BIPL, BWHL, CSAP, EPQL, FABL, GHGL, HUBC, IMAGE, LOTCHEM, SNGP]
+      #3   2026-06-16 to 2026-08-25  n=5   mean +2.5%  [BIPL, EPQL, GHGL, HUBC, LOTCHEM]
+      #4   2026-09-17 to 2026-10-14  n=1   mean +7.3%  [LOTCHEM]
+H1a high yield, net of WHT                       23   13    4 |   +2.3%   +1.5%  65%  -11.7%  +12.4% |    4   +3.6%   +3.5% 100%   +0.0%   +7.4% |   +0.0%   -0.2%  49% | 0.074 0.000
+  [H1a low] input 1264; no data to window end 0; illiquid 737; not in KMI snapshot 171; no trade at entry 0; kept 356; per-symbol overlap dropped 11; final 345
+H1a low yield, 20s to pre-news, gross           345  144    2 |   +1.8%   +0.2%  50%  -43.7% +187.7% |    2   +1.8%   +1.8% 100%   +1.7%   +1.8% |   +1.1%   -1.1%  44% | 0.001 0.408
+  H1a clusters (all eligible results windows): high-yield vs low-yield mean excess in the same episode
+      #1   2025-11-24 to 2026-05-25  high n=17  mean +1.9%   low n=227  mean +1.7%
+      #2   2026-06-16 to 2026-10-14  high n=6   mean +3.3%   low n=118  mean +1.8%
+  high minus low across clusters with both: n=2, mean +0.8%, median +0.8%, win 100%
+  Expected power: about one year of data and about 4 results seasons, so about 4 independent episodes at best.
+
+H1b. Tradable: enter at close of first tradable session after the board_meeting_notice, exit at last pre-news close. Net of 0.5% cost.
+  results with a matched notice (earliest notice in the 30 days before, after the previous result): 1827 of 1966
+  dropped, notice less than 2 sessions before the result: 8
+  entry >= 2025-11-01 with valid trailing yield: 1229; high 44, low 1185
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+  [H1b high] input 44; no data to window end 0; illiquid 20; not in KMI snapshot 0; no trade at entry 0; kept 24; per-symbol overlap dropped 0; final 24
+H1b high yield, notice to pre-news, net cost     24   11    9 |   +1.9%   +1.4%  62%   -7.5%  +14.5% |    9   +1.9%   +1.1%  78%   -2.3%   +6.8% |   -0.6%   -0.7%  39% | 0.004 0.029
+    leave-one-cluster-out: cluster median ranges +1.0% to +2.1% (full +1.1%); dropping the largest cluster by n leaves median +2.1%
+    clusters of 'H1b high yield, notice to pre-news, net cost' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-11-24 to 2025-11-27  n=1   mean +3.6%  [SNGP]
+      #2   2026-01-23 to 2026-02-03  n=2   mean +6.8%  [EPQL, FFC]
+      #3   2026-02-11 to 2026-03-02  n=7   mean +3.0%  [BIPL, DOL, HUBC, IMAGE, LOTCHEM, MTL, SNGP]
+      #4   2026-04-07 to 2026-04-29  n=8   mean +0.4%  [BIPL, BWHL, EPQL, GHGL, HUBC, IMAGE, LOTCHEM, SNGP]
+      #5   2026-07-10 to 2026-07-15  n=1   mean +4.0%  [LOTCHEM]
+      #6   2026-07-21 to 2026-07-29  n=1   mean -0.7%  [EPQL]
+      #7   2026-08-13 to 2026-08-18  n=1   mean +0.8%  [BIPL]
+      #8   2026-08-20 to 2026-08-25  n=2   mean +1.1%  [GHGL, HUBC]
+      #9   2026-10-09 to 2026-10-14  n=1   mean -2.3%  [LOTCHEM]
+  [H1b low] input 1185; no data to window end 0; illiquid 694; not in KMI snapshot 157; no trade at entry 0; kept 334; per-symbol overlap dropped 0; final 334
+H1b low yield, notice to pre-news, net cost     334  144    8 |   -0.7%   -1.1%  37%  -28.2%  +95.7% |    8   -2.3%   -0.9%   0%  -13.1%   -0.1% |   -0.4%   -1.0%  37% | 0.764 0.835
+
+====================================================================================================
+H2. Behaviour into and on the ex date. Test window 2024-11-01 to 2026-10-16.
+====================================================================================================
+Rows: 344. ex_date_source not in allowed set (approx/approx_wide/gap_inferred etc.): 0. Same-day bonus/split/right: 0.
+After source and same-day filters: 344. Ex date later than last session or no session: 0.
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+H2a: rows with a declaration time 344 (missing: 0). T0 after ex-10 (ex-date not yet public at entry): 168.
+  [H2a] input 176; no data to window end 0; illiquid 61; not in KMI snapshot 9; no trade at entry 0; kept 106; per-symbol overlap dropped 0; final 106
+H2a run-up ex-10 to ex-1, net cost              106   71   12 |   +0.5%   +0.0%  50%  -16.1%  +24.2% |   12   +0.8%   +0.8%  67%   -4.7%   +5.6% |   -0.6%   -1.3%  39% | 0.015 0.010
+    leave-one-cluster-out: cluster median ranges +0.6% to +1.0% (full +0.8%); dropping the largest cluster by n leaves median +1.0%
+    clusters of 'H2a run-up ex-10 to ex-1, net cost' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-02-26 to 2025-04-17  n=12  mean +0.5%  [ABOT, AGP, BIPL, EFERT, FABL, FATIMA, FCEPL, GLAXO, HALEON, HINOON, MEBL, SYS]
+      #2   2025-04-29 to 2025-05-12  n=1   mean +4.0%  [SNGP]
+      #3   2025-05-23 to 2025-06-05  n=1   mean -4.7%  [HCAR]
+      #4   2025-07-08 to 2025-07-18  n=1   mean +2.1%  [EXIDE]
+      #5   2025-09-02 to 2025-10-20  n=43  mean -0.8%  [AGIL, ATRL, BERG, BIFO, BWHL, CHCC, CPHL, CPPL, DGKC, DOL, ECOP, FCCL, FCL, FECTC, FEROZ, ]
+      #6   2025-11-06 to 2025-11-18  n=1   mean -2.7%  [SNGP]
+      #7   2026-02-23 to 2026-03-18  n=6   mean +4.4%  [BIPL, EFERT, EPQL, FABL, FFC, MEBL]
+      #8   2026-03-27 to 2026-04-29  n=11  mean +1.0%  [ABOT, AGP, FATIMA, FCEPL, GLAXO, HALEON, HINOON, KSBP, SGF, SYS, WAFI]
+      #9   2026-05-04 to 2026-05-14  n=1   mean +5.6%  [AVN]
+      #10  2026-06-02 to 2026-06-12  n=1   mean -1.7%  [HCAR]
+      #11  2026-06-18 to 2026-07-02  n=1   mean +0.6%  [GWLC]
+      #12  2026-09-03 to 2026-10-15  n=27  mean +1.3%  [ATRL, BERG, BIFO, CHCC, COLG, CPPL, FCL, FECTC, GADT, GAL, GHNI, HUBC, ILP, INIL, IPAK, IS]
+H2a run-up, gross (descriptive)                 106   71   12 |   +1.0%   +0.5%  53%  -15.6%  +24.7% |   12   +1.3%   +1.3%  67%   -4.2%   +6.1% |   +0.1%   -0.6%  44% | 0.016 0.015
+H2a run-up, D/close(ex-10) >= 2%, net cost       63   47   10 |   +0.6%   +0.1%  51%   -9.6%  +10.6% |   10   +0.7%   +1.5%  60%   -4.7%   +5.6% |   -0.6%   -1.2%  40% | 0.063 0.007
+H2a run-up, D/close(ex-10) < 2%, net cost        43   34   10 |   +0.2%   -0.1%  49%  -16.1%  +24.2% |   10   +0.5%   +0.4%  60%   -2.8%   +6.8% |   -0.1%   -1.0%  42% | 0.116 0.151
+H2b/H2c: ex session without a trade for the symbol: 4 dropped.
+  [H2b/c] input 340; no data to window end 0; illiquid 121; not in KMI snapshot 19; no trade at entry 0; kept 200; per-symbol overlap dropped 0; final 200
+H2b eligible events 200; by group {'payouts': 175, 'pdf/seed': 25}; by bucket {'<2%': 107, '2-5%': 75, '>5%': 18}
+H2b drop ratio = (raw close ex-1 - raw close ex) / gross dividend. Observed ratio and placebo (same symbol, random days, same dividend) in the 'mean/med' columns are ratios x100 shown as %.
+H2b drop ratio, yield>=2%, all                   93   52   73 |  +98.5% +100.6%  89% -166.0% +373.0% |   73 +101.8% +100.6%  90% -166.0% +373.0% |   -4.8%   +0.7%  51% | 0.000 0.000
+    leave-one-cluster-out: cluster median ranges +99.8% to +102.3% (full +100.6%); dropping the largest cluster by n leaves median +99.8%
+    clusters of 'H2b drop ratio, yield>=2%, all' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-01-15 to 2025-01-15  n=1   mean +116.4%  [DCR]
+      #2   2025-02-06 to 2025-02-06  n=1   mean +143.1%  [LCI]
+      #3   2025-03-03 to 2025-03-03  n=2   mean +143.1%  [DOL, MTL]
+      #4   2025-03-06 to 2025-03-06  n=1   mean -1.6%  [PIOC]
+      #5   2025-03-07 to 2025-03-07  n=1   mean +49.4%  [HUBC]
+      #6   2025-03-14 to 2025-03-14  n=1   mean +71.7%  [EFERT]
+      #7   2025-03-17 to 2025-03-17  n=1   mean +85.6%  [FABL]
+      #8   2025-03-18 to 2025-03-18  n=1   mean +98.4%  [BIPL]
+      #9   2025-03-20 to 2025-03-20  n=1   mean +92.4%  [MEBL]
+      #10  2025-03-26 to 2025-03-26  n=1   mean +35.7%  [AGP]
+      #11  2025-04-08 to 2025-04-08  n=1   mean -83.6%  [DCR]
+      #12  2025-04-09 to 2025-04-09  n=1   mean +89.4%  [FATIMA]
+      #13  2025-04-11 to 2025-04-11  n=1   mean +181.8%  [FCEPL]
+      #14  2025-04-18 to 2025-04-18  n=2   mean +137.2%  [GLAXO, HINOON]
+      #15  2025-04-29 to 2025-04-29  n=1   mean +75.9%  [MEBL]
+      #16  2025-05-06 to 2025-05-06  n=1   mean +104.0%  [FABL]
+      #17  2025-05-07 to 2025-05-07  n=1   mean +373.0%  [GWLC]
+      #18  2025-05-09 to 2025-05-09  n=2   mean -94.5%  [CSAP, IMAGE]
+      #19  2025-05-13 to 2025-05-13  n=1   mean -4.5%  [SNGP]
+      #20  2025-06-10 to 2025-06-10  n=1   mean +52.0%  [HCAR]
+      #21  2025-08-29 to 2025-08-29  n=1   mean +82.7%  [BIPL]
+      #22  2025-09-05 to 2025-09-05  n=1   mean +84.0%  [FATIMA]
+      #23  2025-09-18 to 2025-09-18  n=1   mean +38.8%  [MARI]
+      #24  2025-09-22 to 2025-09-22  n=1   mean +260.0%  [FCCL]
+      #25  2025-09-24 to 2025-09-24  n=1   mean +31.9%  [BWHL]
+      #26  2025-10-03 to 2025-10-03  n=1   mean +120.0%  [PPP]
+      #27  2025-10-06 to 2025-10-06  n=1   mean +135.0%  [HUBC]
+      #28  2025-10-08 to 2025-10-08  n=1   mean +149.6%  [JVDC]
+      #29  2025-10-10 to 2025-10-10  n=1   mean +272.0%  [AGIL]
+      #30  2025-10-13 to 2025-10-13  n=2   mean +175.7%  [DOL, ECOP]
+      #31  2025-10-14 to 2025-10-14  n=1   mean -12.3%  [BIFO]
+      #32  2025-10-15 to 2025-10-15  n=2   mean +105.3%  [MTL, PSO]
+      #33  2025-10-16 to 2025-10-16  n=1   mean +162.0%  [FCL]
+      #34  2025-10-17 to 2025-10-17  n=4   mean +97.0%  [BERG, CPHL, PIOC, SMCPL]
+      #35  2025-10-20 to 2025-10-20  n=2   mean +44.7%  [GHGL, SYM]
+      #36  2025-10-21 to 2025-10-21  n=1   mean +48.0%  [IMAGE]
+      #37  2025-10-24 to 2025-10-24  n=1   mean +106.0%  [EFERT]
+      #38  2025-11-10 to 2025-11-10  n=1   mean +58.4%  [HUBC]
+      #39  2025-11-19 to 2025-11-19  n=1   mean +124.0%  [SNGP]
+      #40  2026-02-02 to 2026-02-02  n=1   mean +99.0%  [LOTCHEM]
+      #41  2026-02-13 to 2026-02-13  n=1   mean +64.0%  [ILP]
+      #42  2026-02-16 to 2026-02-16  n=1   mean +45.5%  [BWHL]
+      #43  2026-03-02 to 2026-03-02  n=1   mean +174.9%  [MTL]
+      #44  2026-03-05 to 2026-03-05  n=1   mean +100.6%  [TGL]
+      #45  2026-03-06 to 2026-03-06  n=1   mean +231.2%  [HUBC]
+      #46  2026-03-09 to 2026-03-09  n=1   mean +238.5%  [DOL]
+      #47  2026-03-10 to 2026-03-10  n=1   mean -166.0%  [GHGL]
+      #48  2026-03-18 to 2026-03-18  n=1   mean +66.4%  [EPQL]
+      #49  2026-03-19 to 2026-03-19  n=2   mean +126.2%  [BIPL, FABL]
+      #50  2026-04-13 to 2026-04-13  n=1   mean +279.0%  [AGP]
+      #51  2026-04-16 to 2026-04-16  n=1   mean +128.6%  [FCEPL]
+      #52  2026-04-22 to 2026-04-22  n=5   mean +114.5%  [ABOT, GLAXO, HINOON, PAKQATAR, PQGTL]
+      #53  2026-05-05 to 2026-05-05  n=1   mean +167.2%  [HUBC]
+      #54  2026-05-15 to 2026-05-15  n=1   mean +160.0%  [AVN]
+      #55  2026-06-15 to 2026-06-15  n=1   mean +85.7%  [HCAR]
+      #56  2026-07-03 to 2026-07-03  n=1   mean +0.0%  [GHGL]
+      #57  2026-07-24 to 2026-07-24  n=1   mean +154.0%  [LOTCHEM]
+      #58  2026-08-10 to 2026-08-10  n=1   mean +137.7%  [FFC]
+      #59  2026-08-11 to 2026-08-11  n=1   mean +170.0%  [EPQL]
+      #60  2026-08-21 to 2026-08-21  n=1   mean +1.3%  [FCCL]
+      #61  2026-09-01 to 2026-09-01  n=1   mean +126.7%  [BIPL]
+      #62  2026-09-02 to 2026-09-02  n=1   mean +91.3%  [GLAXO]
+      #63  2026-09-16 to 2026-09-16  n=1   mean +117.4%  [COLG]
+      #64  2026-09-18 to 2026-09-18  n=1   mean +64.6%  [LCI]
+      #65  2026-09-21 to 2026-09-21  n=1   mean +77.9%  [MARI]
+      #66  2026-09-28 to 2026-09-28  n=2   mean +112.2%  [INIL, ISL]
+      #67  2026-09-29 to 2026-09-29  n=1   mean +107.8%  [JVDC]
+      #68  2026-09-30 to 2026-09-30  n=1   mean +184.0%  [CPPL]
+      #69  2026-10-05 to 2026-10-05  n=1   mean +151.3%  [GAL]
+      #70  2026-10-06 to 2026-10-06  n=2   mean +54.6%  [ILP, NRSL]
+      #71  2026-10-12 to 2026-10-12  n=1   mean +132.6%  [HUBC]
+      #72  2026-10-15 to 2026-10-15  n=4   mean +43.1%  [BERG, BIFO, FCL, FECTC]
+      #73  2026-10-16 to 2026-10-16  n=2   mean +44.3%  [IPAK, SYM]
+H2b drop ratio, yield>=2%, pdf/seed               9    3    9 | +120.0% +132.6% 100%  +49.4% +231.2% |    9 +120.0% +132.6% 100%  +49.4% +231.2% |   -8.9%   -0.7%  49% | 0.000 0.000
+H2b drop ratio, yield>=2%, payouts               84   49   64 |  +96.2%  +99.9%  88% -166.0% +373.0% |   64  +99.3%  +99.8%  89% -166.0% +373.0% |   -7.7%   +0.2%  50% | 0.000 0.000
+H2b drop ratio, <2%                             107   49   80 |  +83.5% +112.5%  78% -880.0% +944.0% |   80  +93.9%  +94.5%  75% -880.0% +944.0% |   -8.3%   +7.2%  53% | 0.000 0.000
+H2b drop ratio, <2%, pdf/seed                    16    4   14 | +129.2% +151.6%  81% -172.0% +300.6% |   14 +125.4% +151.6%  79% -172.0% +300.6% |  -12.7%   -1.9%  48% | 0.000 0.000
+H2b drop ratio, <2%, payouts                     91   45   72 |  +75.5%  +95.6%  77% -880.0% +944.0% |   72  +75.9%  +89.5%  74% -880.0% +944.0% |  -11.5%   +4.5%  52% | 0.000 0.000
+H2b drop ratio, 2-5%                             75   46   64 |  +96.9%  +92.4%  91% -166.0% +373.0% |   64  +99.7%  +96.5%  91% -166.0% +373.0% |   -4.3%   +1.8%  51% | 0.000 0.000
+H2b drop ratio, 2-5%, pdf/seed                    9    3    9 | +120.0% +132.6% 100%  +49.4% +231.2% |    9 +120.0% +132.6% 100%  +49.4% +231.2% |   -5.8%   -0.8%  47% | 0.000 0.000
+H2b drop ratio, 2-5%, payouts                    66   43   55 |  +93.8%  +90.3%  89% -166.0% +373.0% |   55  +96.4%  +91.3%  89% -166.0% +373.0% |   -7.2%   +1.4%  52% | 0.000 0.000
+H2b drop ratio, >5%                              18   13   15 | +105.0% +117.3%  83%  -58.0% +238.5% |   15 +105.7% +117.5%  87%  -58.0% +238.5% |   -1.7%   +1.0%  52% | 0.000 0.000
+H2b drop ratio, >5%, pdf/seed                   no events
+H2b drop ratio, >5%, payouts                     18   13   15 | +105.0% +117.3%  83%  -58.0% +238.5% |   15 +105.7% +117.5%  87%  -58.0% +238.5% |   -4.8%   -0.2%  47% | 0.000 0.000
+  Drop ratio detail (mean/median/share with ratio >= 1 / share > 0) by bucket:
+    yield>=2%        n=93   mean ratio +0.99  median +1.01  share>=1 51%  share>0 89%  winsor-5/95 mean +1.00  p25 +0.58  p75 +1.41
+    yld>=2% pdf/seed n=9    mean ratio +1.20  median +1.33  share>=1 56%  share>0 100%  winsor-5/95 mean +1.18  p25 +0.76  p75 +1.38
+    yld>=2% payouts  n=84   mean ratio +0.96  median +1.00  share>=1 50%  share>0 88%  winsor-5/95 mean +0.98  p25 +0.56  p75 +1.42
+    <2%              n=107  mean ratio +0.84  median +1.12  share>=1 51%  share>0 78%  winsor-5/95 mean +0.85  p25 +0.27  p75 +1.98
+    2-5%             n=75   mean ratio +0.97  median +0.92  share>=1 48%  share>0 91%  winsor-5/95 mean +0.98  p25 +0.58  p75 +1.36
+    >5%              n=18   mean ratio +1.05  median +1.17  share>=1 61%  share>0 83%  winsor-5/95 mean +1.05  p25 +0.95  p75 +1.43
+H2b ex-day total-return excess vs ew_market (dividend added back once by the loader), gross and net WHT; windows are single sessions so clusters are ex-dates.
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+H2b ex-day TR excess yield>=2%, gross            93   52   73 |   +0.2%   -0.1%  46%   -4.2%   +9.0% |   73   +0.1%   -0.1%  47%   -4.2%   +7.3% |   -0.0%   -0.2%  43% | 0.252 0.390
+H2b ex-day TR excess yield>=2%, net WHT          93   52   73 |   -0.3%   -0.7%  34%   -4.7%   +7.7% |   73   -0.4%   -0.7%  34%   -4.7%   +6.8% |   -0.0%   -0.2%  43% | 0.997 0.999
+H2b ex-day TR excess <2%, gross                 107   49   80 |   +0.3%   +0.0%  50%   -4.3%   +7.9% |   80   +0.1%   -0.1%  48%   -4.3%   +7.9% |   +0.1%   -0.2%  44% | 0.120 0.253
+H2b ex-day TR excess <2%, net WHT               107   49   80 |   +0.1%   -0.2%  46%   -4.4%   +7.7% |   80   -0.1%   -0.2%  44%   -4.4%   +7.7% |   +0.0%   -0.2%  45% | 0.400 0.596
+H2b ex-day TR excess 2-5%, gross                 75   46   64 |   +0.1%   -0.1%  48%   -4.2%   +7.3% |   64   +0.1%   -0.1%  48%   -4.2%   +7.3% |   -0.0%   -0.2%  43% | 0.263 0.281
+H2b ex-day TR excess 2-5%, net WHT               75   46   64 |   -0.3%   -0.6%  36%   -4.7%   +6.8% |   64   -0.4%   -0.5%  38%   -4.7%   +6.8% |   +0.1%   -0.1%  46% | 0.985 0.965
+H2b ex-day TR excess >5%, gross                  18   13   15 |   +0.5%   -0.6%  39%   -2.7%   +9.0% |   15   +0.3%   -0.4%  33%   -2.7%   +5.2% |   -0.0%   -0.3%  43% | 0.877 0.699
+H2b ex-day TR excess >5%, net WHT                18   13   15 |   -0.5%   -1.7%  28%   -3.5%   +7.7% |   15   -0.6%   -1.6%  27%   -3.5%   +4.4% |   -0.1%   -0.3%  39% | 1.000 1.000
+H2c dividend capture: (raw close ex + k*D)/raw close ex-1 - 1 - 0.5%, k=1 gross, k=0.85 net. Placebo = random-day total return (no dividend) in the same symbols, same transform.
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+H2c capture, gross D, raw return                200   79  125 |   -0.4%   -0.6%  36%   -9.0%   +9.0% |  125   -0.5%   -0.5%  35%   -9.0%   +9.0% |   -0.4%   -0.6%  33% | 0.562 0.517
+    leave-one-cluster-out: cluster median ranges -0.5% to -0.5% (full -0.5%); dropping the largest cluster by n leaves median -0.5%
+    clusters of 'H2c capture, gross D, raw return' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-01-15 to 2025-01-15  n=1   mean -0.9%  [DCR]
+      #2   2025-02-06 to 2025-02-06  n=3   mean -1.0%  [ATRL, LCI, THCCL]
+      #3   2025-02-12 to 2025-02-12  n=1   mean -1.7%  [CSAP]
+      #4   2025-02-14 to 2025-02-14  n=1   mean +0.2%  [SPEL]
+      #5   2025-02-26 to 2025-02-26  n=1   mean -2.2%  [CPPL]
+      #6   2025-02-27 to 2025-02-27  n=1   mean -1.2%  [CHCC]
+      #7   2025-03-03 to 2025-03-03  n=2   mean -3.5%  [DOL, MTL]
+      #8   2025-03-04 to 2025-03-04  n=1   mean +8.2%  [TGL]
+      #9   2025-03-06 to 2025-03-06  n=2   mean +1.3%  [PIOC, SAZEW]
+      #10  2025-03-07 to 2025-03-07  n=1   mean +1.4%  [HUBC]
+      #11  2025-03-10 to 2025-03-10  n=2   mean -1.5%  [AIRLINK, OGDC]
+      #12  2025-03-11 to 2025-03-11  n=1   mean -0.1%  [HALEON]
+      #13  2025-03-12 to 2025-03-12  n=1   mean -0.7%  [PPL]
+      #14  2025-03-14 to 2025-03-14  n=1   mean +0.5%  [EFERT]
+      #15  2025-03-17 to 2025-03-17  n=1   mean +0.2%  [FABL]
+      #16  2025-03-18 to 2025-03-18  n=1   mean -0.4%  [BIPL]
+      #17  2025-03-20 to 2025-03-20  n=1   mean -0.3%  [MEBL]
+      #18  2025-03-26 to 2025-03-26  n=1   mean +0.8%  [AGP]
+      #19  2025-04-08 to 2025-04-08  n=1   mean +3.5%  [DCR]
+      #20  2025-04-09 to 2025-04-09  n=1   mean +0.0%  [FATIMA]
+      #21  2025-04-11 to 2025-04-11  n=1   mean -3.2%  [FCEPL]
+      #22  2025-04-14 to 2025-04-14  n=1   mean -0.6%  [ABOT]
+      #23  2025-04-18 to 2025-04-18  n=3   mean -0.7%  [GLAXO, HINOON, SYS]
+      #24  2025-04-29 to 2025-04-29  n=2   mean +0.5%  [MEBL, SAZEW]
+      #25  2025-04-30 to 2025-04-30  n=1   mean -4.4%  [EFERT]
+      #26  2025-05-05 to 2025-05-05  n=1   mean -0.6%  [SPEL]
+      #27  2025-05-06 to 2025-05-06  n=1   mean -0.6%  [FABL]
+      #28  2025-05-07 to 2025-05-07  n=2   mean -6.1%  [GWLC, TGL]
+      #29  2025-05-09 to 2025-05-09  n=4   mean +5.9%  [CSAP, IMAGE, OGDC, PPL]
+      #30  2025-05-13 to 2025-05-13  n=1   mean +5.9%  [SNGP]
+      #31  2025-06-10 to 2025-06-10  n=1   mean +0.8%  [HCAR]
+      #32  2025-07-21 to 2025-07-21  n=1   mean +0.3%  [EXIDE]
+      #33  2025-08-08 to 2025-08-08  n=1   mean -3.1%  [EFERT]
+      #34  2025-08-25 to 2025-08-25  n=1   mean -1.9%  [MEBL]
+      #35  2025-08-29 to 2025-08-29  n=1   mean +0.2%  [BIPL]
+      #36  2025-09-02 to 2025-09-02  n=2   mean -0.3%  [AGP, HALEON]
+      #37  2025-09-05 to 2025-09-05  n=2   mean -0.5%  [FATIMA, GLAXO]
+      #38  2025-09-09 to 2025-09-09  n=1   mean -0.1%  [FABL]
+      #39  2025-09-15 to 2025-09-15  n=1   mean -0.1%  [ISL]
+      #40  2025-09-16 to 2025-09-16  n=1   mean -1.3%  [INIL]
+      #41  2025-09-17 to 2025-09-17  n=2   mean +1.9%  [LUCK, SAZEW]
+      #42  2025-09-18 to 2025-09-18  n=2   mean +0.5%  [LCI, MARI]
+      #43  2025-09-22 to 2025-09-22  n=2   mean -4.1%  [FCCL, SPEL]
+      #44  2025-09-24 to 2025-09-24  n=1   mean +1.9%  [BWHL]
+      #45  2025-09-30 to 2025-09-30  n=1   mean +2.3%  [CHCC]
+      #46  2025-10-01 to 2025-10-01  n=1   mean -1.7%  [ILP]
+      #47  2025-10-03 to 2025-10-03  n=1   mean -1.1%  [PPP]
+      #48  2025-10-06 to 2025-10-06  n=1   mean -2.0%  [HUBC]
+      #49  2025-10-08 to 2025-10-08  n=1   mean -3.4%  [JVDC]
+      #50  2025-10-10 to 2025-10-10  n=1   mean -4.7%  [AGIL]
+      #51  2025-10-13 to 2025-10-13  n=4   mean -3.6%  [CPPL, DGKC, DOL, ECOP]
+      #52  2025-10-14 to 2025-10-14  n=2   mean +0.8%  [BIFO, SITC]
+      #53  2025-10-15 to 2025-10-15  n=7   mean -0.3%  [FECTC, GAL, GHNI, MACFL, MTL, PSO, SHFA]
+      #54  2025-10-16 to 2025-10-16  n=2   mean -0.6%  [FCL, FEROZ]
+      #55  2025-10-17 to 2025-10-17  n=8   mean -0.8%  [ATRL, BERG, CPHL, ICL, NML, PIOC, PPL, SMCPL]
+      #56  2025-10-20 to 2025-10-20  n=4   mean +2.1%  [DCR, GHGL, SSOM, SYM]
+      #57  2025-10-21 to 2025-10-21  n=2   mean +1.6%  [IMAGE, OGDC]
+      #58  2025-10-24 to 2025-10-24  n=1   mean -0.6%  [EFERT]
+      #59  2025-10-27 to 2025-10-27  n=1   mean -1.9%  [SAZEW]
+      #60  2025-11-03 to 2025-11-03  n=1   mean -1.9%  [MEBL]
+      #61  2025-11-04 to 2025-11-04  n=2   mean -1.6%  [FABL, HALEON]
+      #62  2025-11-05 to 2025-11-05  n=1   mean -1.8%  [WAFI]
+      #63  2025-11-07 to 2025-11-07  n=2   mean +0.7%  [GHGL, OGDC]
+      #64  2025-11-10 to 2025-11-10  n=2   mean +1.4%  [HUBC, PPL]
+      #65  2025-11-18 to 2025-11-18  n=1   mean -0.4%  [SSGC]
+      #66  2025-11-19 to 2025-11-19  n=1   mean -1.1%  [SNGP]
+      #67  2025-12-26 to 2025-12-26  n=1   mean -1.1%  [DCR]
+      #68  2026-01-30 to 2026-01-30  n=1   mean +2.1%  [MARI]
+      #69  2026-02-02 to 2026-02-02  n=1   mean -0.3%  [LOTCHEM]
+      #70  2026-02-04 to 2026-02-04  n=1   mean -0.4%  [LCI]
+      #71  2026-02-06 to 2026-02-06  n=3   mean -0.4%  [INIL, ISL, SAZEW]
+      #72  2026-02-13 to 2026-02-13  n=1   mean +0.3%  [ILP]
+      #73  2026-02-16 to 2026-02-16  n=2   mean -0.5%  [BWHL, CSAP]
+      #74  2026-02-23 to 2026-02-23  n=1   mean -5.3%  [SPEL]
+      #75  2026-02-25 to 2026-02-25  n=1   mean -2.4%  [PPL]
+      #76  2026-02-26 to 2026-02-26  n=1   mean +4.7%  [CHCC]
+      #77  2026-02-27 to 2026-02-27  n=2   mean +0.1%  [BIFO, ICL]
+      #78  2026-03-02 to 2026-03-02  n=1   mean -3.3%  [MTL]
+      #79  2026-03-05 to 2026-03-05  n=1   mean -0.5%  [TGL]
+      #80  2026-03-06 to 2026-03-06  n=4   mean -1.4%  [ATRL, FFC, HUBC, OGDC]
+      #81  2026-03-09 to 2026-03-09  n=1   mean -9.0%  [DOL]
+      #82  2026-03-10 to 2026-03-10  n=1   mean +9.0%  [GHGL]
+      #83  2026-03-16 to 2026-03-16  n=2   mean -2.0%  [EFERT, MEBL]
+      #84  2026-03-18 to 2026-03-18  n=1   mean +1.1%  [EPQL]
+      #85  2026-03-19 to 2026-03-19  n=2   mean -0.2%  [BIPL, FABL]
+      #86  2026-04-09 to 2026-04-09  n=2   mean +1.7%  [DCR, FATIMA]
+      #87  2026-04-13 to 2026-04-13  n=1   mean -5.9%  [AGP]
+      #88  2026-04-14 to 2026-04-14  n=1   mean +0.6%  [KSBP]
+      #89  2026-04-16 to 2026-04-16  n=2   mean -1.9%  [ACPL, FCEPL]
+      #90  2026-04-20 to 2026-04-20  n=1   mean -4.8%  [WAFI]
+      #91  2026-04-21 to 2026-04-21  n=1   mean +0.5%  [HALEON]
+      #92  2026-04-22 to 2026-04-22  n=6   mean -1.4%  [ABOT, GLAXO, HINOON, PAKQATAR, PQGTL, SGF]
+      #93  2026-04-30 to 2026-04-30  n=3   mean -1.3%  [FABL, SAZEW, SYS]
+      #94  2026-05-04 to 2026-05-04  n=1   mean -0.0%  [EFERT]
+      #95  2026-05-05 to 2026-05-05  n=2   mean -0.8%  [HUBC, MEBL]
+      #96  2026-05-06 to 2026-05-06  n=1   mean +7.3%  [GWLC]
+      #97  2026-05-11 to 2026-05-11  n=2   mean -0.5%  [FFC, OGDC]
+      #98  2026-05-13 to 2026-05-13  n=1   mean +0.4%  [PPL]
+      #99  2026-05-15 to 2026-05-15  n=1   mean -2.1%  [AVN]
+      #100 2026-06-15 to 2026-06-15  n=1   mean -0.0%  [HCAR]
+      #101 2026-07-03 to 2026-07-03  n=2   mean +0.9%  [GHGL, GWLC]
+      #102 2026-07-24 to 2026-07-24  n=2   mean -2.0%  [DCR, LOTCHEM]
+      #103 2026-08-10 to 2026-08-10  n=2   mean -0.9%  [EFERT, FFC]
+      #104 2026-08-11 to 2026-08-11  n=1   mean -3.1%  [EPQL]
+      #105 2026-08-18 to 2026-08-18  n=1   mean -2.5%  [MEBL]
+      #106 2026-08-19 to 2026-08-19  n=1   mean -0.4%  [FABL]
+      #107 2026-08-21 to 2026-08-21  n=1   mean +2.2%  [FCCL]
+      #108 2026-09-01 to 2026-09-01  n=1   mean -1.9%  [BIPL]
+      #109 2026-09-02 to 2026-09-02  n=2   mean -1.4%  [AGP, GLAXO]
+      #110 2026-09-07 to 2026-09-07  n=1   mean -1.9%  [HALEON]
+      #111 2026-09-16 to 2026-09-16  n=1   mean -1.0%  [COLG]
+      #112 2026-09-17 to 2026-09-17  n=1   mean +0.2%  [LUCK]
+      #113 2026-09-18 to 2026-09-18  n=1   mean +0.4%  [LCI]
+      #114 2026-09-21 to 2026-09-21  n=1   mean +0.1%  [MARI]
+      #115 2026-09-28 to 2026-09-28  n=2   mean -0.9%  [INIL, ISL]
+      #116 2026-09-29 to 2026-09-29  n=1   mean -0.8%  [JVDC]
+      #117 2026-09-30 to 2026-09-30  n=1   mean -3.0%  [CPPL]
+      #118 2026-10-02 to 2026-10-02  n=1   mean -2.0%  [SPEL]
+      #119 2026-10-05 to 2026-10-05  n=3   mean -1.9%  [CHCC, GAL, GHNI]
+      #120 2026-10-06 to 2026-10-06  n=2   mean +0.9%  [ILP, NRSL]
+      #121 2026-10-08 to 2026-10-08  n=1   mean -0.9%  [OGDC]
+      #122 2026-10-12 to 2026-10-12  n=2   mean -1.1%  [ATRL, HUBC]
+      #123 2026-10-14 to 2026-10-14  n=1   mean +0.1%  [SEARL]
+      #124 2026-10-15 to 2026-10-15  n=4   mean +1.3%  [BERG, BIFO, FCL, FECTC]
+      #125 2026-10-16 to 2026-10-16  n=2   mean +4.1%  [IPAK, SYM]
+H2c capture, gross D, excess vs mkt             200   79  125 |   -0.2%   -0.6%  36%   -4.8%   +8.5% |  125   -0.4%   -0.6%  37%   -4.7%   +7.4% |   -0.5%   -0.7%  31% | 0.111 0.365
+H2c capture, net 0.85D, raw return              200   79  125 |   -0.8%   -1.0%  30%   -9.9%   +8.5% |  125   -0.8%   -0.9%  29%   -9.9%   +8.5% |   -0.3%   -0.5%  34% | 1.000 0.998
+H2c capture, net 0.85D, excess vs mkt           200   79  125 |   -0.6%   -0.9%  30%   -5.2%   +7.2% |  125   -0.7%   -1.0%  30%   -5.2%   +7.2% |   -0.4%   -0.7%  32% | 0.975 0.994
+H2c capture yield>=2%, gross, raw return         93   52   73 |   -0.4%   -0.5%  41%   -9.0%   +9.0% |   73   -0.5%   -0.5%  40%   -9.0%   +9.0% |   -0.3%   -0.6%  33% | 0.366 0.441
+H2c capture yield>=2%, net, raw return           93   52   73 |   -1.0%   -1.0%  29%   -9.9%   +8.5% |   73   -1.1%   -1.0%  30%   -9.9%   +8.5% |   -0.3%   -0.6%  34% | 0.995 0.994
+H2c capture >5%, gross, raw return               18   13   15 |   -0.8%   -1.4%  22%   -9.0%   +8.2% |   15   -0.8%   -1.7%  27%   -9.0%   +7.8% |   -0.2%   -0.5%  36% | 0.986 0.993
+H2c capture >5%, net, raw return                 18   13   15 |   -1.7%   -2.8%  22%   -9.9%   +7.0% |   15   -1.8%   -2.7%  27%   -9.9%   +7.0% |   -0.4%   -0.7%  30% | 1.000 1.000
+H2d: ex+10 beyond the last session: 31 dropped.
+  [H2d] input 313; no data to window end 0; illiquid 109; not in KMI snapshot 19; no trade at entry 0; kept 185; per-symbol overlap dropped 0; final 185
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+H2d buy ex close, hold 10, gross, net cost      185   76   13 |   -1.0%   -1.7%  32%  -14.6%  +21.2% |   13   -3.6%   -2.6%  15%  -11.5%   +2.7% |   -0.2%   -0.9%  42% | 0.969 0.994
+    leave-one-cluster-out: cluster median ranges -3.6% to -2.3% (full -2.6%); dropping the largest cluster by n leaves median -3.6%
+    clusters of 'H2d buy ex close, hold 10, gross, net cost' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-01-16 to 2025-01-29  n=1   mean +2.7%  [DCR]
+      #2   2025-02-07 to 2025-05-27  n=41  mean -0.3%  [ABOT, AGP, AIRLINK, ATRL, BIPL, CHCC, CPPL, CSAP, DCR, DOL, EFERT, FABL, FATIMA, FCEPL, GL]
+      #3   2025-06-11 to 2025-06-24  n=1   mean -5.0%  [HCAR]
+      #4   2025-07-22 to 2025-08-04  n=1   mean -6.0%  [EXIDE]
+      #5   2025-08-11 to 2025-08-25  n=1   mean -6.9%  [EFERT]
+      #6   2025-08-26 to 2025-12-03  n=63  mean -1.3%  [AGIL, AGP, ATRL, BERG, BIFO, BIPL, BWHL, CHCC, CPHL, CPPL, DCR, DGKC, DOL, ECOP, EFERT, FA]
+      #7   2025-12-29 to 2026-01-09  n=1   mean -9.5%  [DCR]
+      #8   2026-02-02 to 2026-04-06  n=27  mean +0.9%  [ATRL, BIFO, BIPL, BWHL, CHCC, CSAP, DOL, EFERT, EPQL, FABL, FFC, GHGL, HUBC, ICL, ILP, INI]
+      #9   2026-04-10 to 2026-06-03  n=25  mean -2.0%  [ABOT, ACPL, AGP, AVN, DCR, EFERT, FABL, FATIMA, FCEPL, FFC, GLAXO, GWLC, HALEON, HINOON, H]
+      #10  2026-06-16 to 2026-07-01  n=1   mean -11.5%  [HCAR]
+      #11  2026-07-06 to 2026-07-17  n=2   mean -2.6%  [GHGL, GWLC]
+      #12  2026-07-27 to 2026-08-07  n=2   mean -4.6%  [DCR, LOTCHEM]
+      #13  2026-08-11 to 2026-10-16  n=19  mean -0.5%  [AGP, BIPL, COLG, CPPL, EFERT, EPQL, FABL, FCCL, FFC, GLAXO, HALEON, INIL, ISL, JVDC, LCI, ]
+H2d buy ex close, hold 10, net WHT, net cost    185   76   13 |   -1.0%   -1.7%  32%  -14.6%  +21.2% |   13   -3.6%   -2.6%  15%  -11.5%   +2.7% |   -0.5%   -1.0%  42% | 0.964 0.999
+  H2d windows containing another ex-date of the same symbol (so gross vs net differ only there): 0 of 185
+
+====================================================================================================
+H3. December and June are dividend seasons with positive excess for high yielders. Valid months Dec 2025 and Jun 2026 (2 episodes).
+====================================================================================================
+month     formed       nElig nHigh |  EW excess gross  net WHT   median   win    worst     best | non-bucket | p(rand names)
+2025-11   2025-10-31    trailing yield not valid before 2025-11-01: not computed
+2025-12   2025-11-28     121     8 |            +0.3%    +0.3%    -0.3%   38%    -5.8%    +7.5% |      +0.9% |         0.503
+2026-01   2025-12-31     127     8 |            -1.9%    -1.9%    -3.9%   38%    -7.0%    +5.8% |      -0.5% |         0.617
+2026-02   2026-01-30     129     7 |            +5.7%    +5.7%    +8.6%   86%    -5.5%   +13.6% |      +0.2% |         0.056
+2026-03   2026-02-27     129    11 |            +7.5%    +7.2%    +5.1%  100%    +1.3%   +20.5% |      +0.1% |         0.028
+2026-04   2026-03-31     123    13 |            -3.0%    -2.9%    -2.4%   31%   -19.0%   +24.0% |      +1.1% |         0.747
+2026-05   2026-04-30     116     7 |            -0.6%    -0.6%    -0.2%   43%    -6.0%    +3.5% |      +1.6% |         0.705
+2026-06   2026-05-29     116     5 |            -6.0%    -6.0%    -4.6%   20%   -13.2%    +0.0% |      +0.4% |         0.942
+2026-07   2026-06-30     135     5 |            +1.4%    +1.3%    +2.8%   60%    -4.2%    +6.6% |      -1.2% |         0.237
+2026-08   2026-07-31     140     5 |            +2.6%    +2.5%    +2.4%   60%    -2.8%    +8.7% |      +0.9% |         0.283
+2026-09   2026-08-31     141     5 |            +1.3%    +1.4%    +1.3%   80%    -0.1%    +3.0% |      -1.3% |         0.187
+2026-10 (partial to 10-16)2026-09-30     128     5 |            +0.5%    +0.5%    +1.1%   80%    -1.4%    +1.4% |      -0.0% |         0.433
+  month placebo for 2025-12: other valid months Nov-based list n=9, mean +0.8%, median +1.3%, win 56%; share of other months with bucket excess >= 2025-12: 0.56
+  month placebo for 2026-06: other valid months Nov-based list n=9, mean +1.5%, median +1.3%, win 67%; share of other months with bucket excess >= 2026-06: 1.00
+  Episodes: 2 (Dec 2025, Jun 2026): not testable.
+
+====================================================================================================
+H4. Dividend cut followed by negative drift. Events from T0 >= 2025-11-01.
+====================================================================================================
+Declarations (cash rows incl. 34 future-ex) with T0 >= 2025-11-01: 189
+  prior-year match: {'period': 114, 'no prior': 47, 'ex-month': 24, 'prior window before coverage': 4}
+  classification: {'increase': 65, 'unmatched': 51, 'cut': 37, 'flat': 36}
+  period parsed from linked results title: 161 of 189
+  Cuts (symbol, ex, amount, prior in current terms, ratio): AHTM 2026-10-20 0.75 vs 1.5 (0.50); ATRL 2026-03-06 2.5 vs 5 (0.50); BIFO 2026-10-15 2.5 vs 3.5 (0.71); COLG 2026-02-27 29 vs 32 (0.91); DGKC 2026-10-19 1 vs 2 (0.50); DYNO 2026-10-14 18.5 vs 20 (0.93); EFERT 2026-03-16 4 vs 8 (0.50); EFERT 2026-05-04 2 vs 2.25 (0.89); EFERT 2026-08-10 1.75 vs 4.25 (0.41); EPQL 2026-03-18 1.25 vs 7.5 (0.17); EPQL 2026-08-11 1 vs 2.5 (0.40); EXIDE 2026-07-22 5 vs 10 (0.50); FABL 2026-03-19 2 vs 2.5 (0.80); FATIMA 2026-04-09 2.5 vs 4.25 (0.59); FFC 2026-03-06 8.5 vs 21 (0.40); FIMM 2026-10-13 10 vs 15 (0.67); GHGL 2026-10-21 1 vs 1.5 (0.67); GWLC 2026-05-06 0.5 vs 1 (0.50); HAFL 2026-10-14 1 vs 2.5 (0.40); HUBC 2026-10-12 5 vs 10 (0.50); ICL 2026-02-27 1 vs 2 (0.50); JDWS 2026-01-14 25 vs 30 (0.83); LCI 2026-02-04 5.25 vs 6.8 (0.77); LCI 2026-09-18 5.25 vs 6.2 (0.85); MARI 2026-09-21 18.7 vs 21.7 (0.86); MRNS 2026-05-22 0.5 vs 1 (0.50); MTL 2026-03-02 20 vs 45 (0.44); NESTLE 2026-08-04 213 vs 223 (0.96); RMPL 2026-04-27 94 vs 100 (0.94); RMPL 2026-09-02 60 vs 100 (0.60); SAPT 2026-03-06 10 vs 25.5 (0.39); SGF 2026-04-22 2 vs 4 (0.50); UDPL 2026-03-06 1.25 vs 2 (0.62); UPFL 2026-04-17 216 vs 600 (0.36); UPFL 2026-05-08 331 vs 525 (0.63); UPFL 2026-09-07 35 vs 444 (0.08); WAHN 2026-10-20 5 vs 10 (0.50)
+  Omissions: results with a prior-year cash dividend for the period 182 of 1356 results (no prior-year dividend found: 1174); omission = no cash row, unplaced cash row or dividend notice within +-3 days: 44; results after 2026-09-15 not classified (payouts feed lag): 10
+  Omissions: ACPL 2026-08-11; ADAMS 2026-01-30; AGIL 2026-09-01; AIRLINK 2026-02-25; ARPL 2026-07-28; BIFO 2026-04-23; BWHL 2026-08-20; CSAP 2026-04-21; DCR 2026-02-25; DCR 2026-04-29; DOL 2026-09-04; EPQL 2026-04-20; EXIDE 2026-07-29; FABL 2026-04-29; FATIMA 2026-04-24; FATIMA 2026-08-20; GCIL 2026-02-27; GLAXO 2026-04-27; GVGL 2026-02-25; GVGL 2026-04-28; GWLC 2026-09-14; HINOON 2026-04-29; IMAGE 2026-04-30; JDWS 2026-01-29; JDWS 2026-07-27; KOHTM 2026-04-30; KTML 2026-08-03; MACFL 2026-09-02; MACTER 2026-04-27; MRNS 2026-07-30; PIOC 2026-02-11; PIOC 2026-07-29; PKGS 2026-04-28; PTL 2026-09-04; SAZEW 2026-08-27; SGF 2026-04-28; SHSML 2026-05-21; SNGP 2025-11-28; SNGP 2026-04-29; SPEL 2026-04-20; SRVI 2026-04-28; TGL 2026-04-28; THCCL 2026-02-26; UPFL 2026-03-24
+Event counts: cuts 37 (30 symbols), omissions 44 (38 symbols), pooled cut+omit 81 (58 symbols), controls up/flat 101 (78 symbols)
+
+-- T0 reaction: last pre-news close to close of T0 (descriptive, before cost; p = share of placebo medians <= observed)
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+  [H4 cuts T0 reaction] input 37; no data to window end 0; illiquid 16; not in KMI snapshot 1; no trade at entry 0; kept 20; per-symbol overlap dropped 0; final 20
+H4 cuts T0 reaction                              20   16   16 |   -0.4%   -0.6%  45%   -7.6%   +4.6% |   16   -0.9%   -0.9%  38%   -7.6%   +4.5% |   +0.0%   -0.1%  47% | 0.045 0.003
+    leave-one-cluster-out: cluster median ranges -1.0% to -0.9% (full -0.9%); dropping the largest cluster by n leaves median -1.0%
+    clusters of 'H4 cuts T0 reaction' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2026-01-27 to 2026-01-27  n=1   mean -2.7%  [LCI]
+      #2   2026-01-29 to 2026-01-29  n=1   mean -7.6%  [FFC]
+      #3   2026-02-04 to 2026-02-04  n=1   mean -1.2%  [EPQL]
+      #4   2026-02-12 to 2026-02-12  n=1   mean -3.5%  [EFERT]
+      #5   2026-02-17 to 2026-02-17  n=2   mean +3.3%  [ICL, MTL]
+      #6   2026-02-19 to 2026-02-19  n=1   mean -0.9%  [FABL]
+      #7   2026-02-24 to 2026-02-24  n=1   mean +4.5%  [ATRL]
+      #8   2026-03-09 to 2026-03-09  n=1   mean -1.7%  [FATIMA]
+      #9   2026-03-18 to 2026-03-18  n=1   mean -5.2%  [SGF]
+      #10  2026-04-20 to 2026-04-20  n=1   mean -0.3%  [EFERT]
+      #11  2026-04-28 to 2026-04-28  n=1   mean -2.2%  [GWLC]
+      #12  2026-07-30 to 2026-07-30  n=2   mean +1.6%  [EFERT, EPQL]
+      #13  2026-08-04 to 2026-08-04  n=1   mean +0.3%  [LCI]
+      #14  2026-08-07 to 2026-08-07  n=1   mean +0.7%  [MARI]
+      #15  2026-08-27 to 2026-08-27  n=3   mean +1.3%  [DGKC, GHGL, HUBC]
+      #16  2026-09-24 to 2026-09-24  n=1   mean -1.0%  [BIFO]
+  [H4 omissions T0 reaction] input 44; no data to window end 0; illiquid 16; not in KMI snapshot 2; no trade at entry 0; kept 26; per-symbol overlap dropped 0; final 26
+H4 omissions T0 reaction                         26   22   20 |   +0.0%   -0.7%  35%   -4.4%  +11.2% |   20   -0.0%   -0.9%  30%   -4.4%  +11.2% |   -0.0%   -0.2%  43% | 0.031 0.014
+    leave-one-cluster-out: cluster median ranges -0.9% to -0.9% (full -0.9%); dropping the largest cluster by n leaves median -0.9%
+    clusters of 'H4 omissions T0 reaction' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-11-28 to 2025-11-28  n=1   mean -0.8%  [SNGP]
+      #2   2026-02-11 to 2026-02-11  n=1   mean -0.9%  [PIOC]
+      #3   2026-02-25 to 2026-02-25  n=2   mean -1.6%  [AIRLINK, DCR]
+      #4   2026-02-27 to 2026-02-27  n=1   mean +8.8%  [GCIL]
+      #5   2026-04-20 to 2026-04-20  n=2   mean -2.4%  [EPQL, SPEL]
+      #6   2026-04-21 to 2026-04-21  n=1   mean -0.9%  [CSAP]
+      #7   2026-04-23 to 2026-04-23  n=1   mean +0.4%  [BIFO]
+      #8   2026-04-24 to 2026-04-24  n=1   mean +0.3%  [FATIMA]
+      #9   2026-04-27 to 2026-04-27  n=1   mean -0.2%  [GLAXO]
+      #10  2026-04-28 to 2026-04-28  n=2   mean -1.4%  [SGF, TGL]
+      #11  2026-04-29 to 2026-04-29  n=4   mean +2.1%  [DCR, FABL, HINOON, SNGP]
+      #12  2026-04-30 to 2026-04-30  n=1   mean -4.4%  [IMAGE]
+      #13  2026-07-29 to 2026-07-29  n=1   mean -3.0%  [PIOC]
+      #14  2026-08-03 to 2026-08-03  n=1   mean -2.5%  [KTML]
+      #15  2026-08-11 to 2026-08-11  n=1   mean -3.0%  [ACPL]
+      #16  2026-08-20 to 2026-08-20  n=1   mean -2.4%  [FATIMA]
+      #17  2026-08-27 to 2026-08-27  n=1   mean +2.5%  [SAZEW]
+      #18  2026-09-02 to 2026-09-02  n=1   mean +11.2%  [MACFL]
+      #19  2026-09-07 to 2026-09-07  n=1   mean -2.4%  [PTL]
+      #20  2026-09-14 to 2026-09-14  n=1   mean -0.1%  [GWLC]
+  [H4 pooled cut+omit T0 reaction] input 81; no data to window end 0; illiquid 32; not in KMI snapshot 3; no trade at entry 0; kept 46; per-symbol overlap dropped 0; final 46
+H4 pooled cut+omit T0 reaction                   46   32   33 |   -0.1%   -0.7%  39%   -7.6%  +11.2% |   33   -0.4%   -0.9%  33%   -7.6%  +11.2% |   +0.2%   -0.0%  48% | 0.003 0.000
+    leave-one-cluster-out: cluster median ranges -0.9% to -0.9% (full -0.9%); dropping the largest cluster by n leaves median -0.9%
+    clusters of 'H4 pooled cut+omit T0 reaction' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-11-28 to 2025-11-28  n=1   mean -0.8%  [SNGP]
+      #2   2026-01-27 to 2026-01-27  n=1   mean -2.7%  [LCI]
+      #3   2026-01-29 to 2026-01-29  n=1   mean -7.6%  [FFC]
+      #4   2026-02-04 to 2026-02-04  n=1   mean -1.2%  [EPQL]
+      #5   2026-02-11 to 2026-02-11  n=1   mean -0.9%  [PIOC]
+      #6   2026-02-12 to 2026-02-12  n=1   mean -3.5%  [EFERT]
+      #7   2026-02-17 to 2026-02-17  n=2   mean +3.3%  [ICL, MTL]
+      #8   2026-02-19 to 2026-02-19  n=1   mean -0.9%  [FABL]
+      #9   2026-02-24 to 2026-02-24  n=1   mean +4.5%  [ATRL]
+      #10  2026-02-25 to 2026-02-25  n=2   mean -1.6%  [AIRLINK, DCR]
+      #11  2026-02-27 to 2026-02-27  n=1   mean +8.8%  [GCIL]
+      #12  2026-03-09 to 2026-03-09  n=1   mean -1.7%  [FATIMA]
+      #13  2026-03-18 to 2026-03-18  n=1   mean -5.2%  [SGF]
+      #14  2026-04-20 to 2026-04-20  n=3   mean -1.7%  [EFERT, EPQL, SPEL]
+      #15  2026-04-21 to 2026-04-21  n=1   mean -0.9%  [CSAP]
+      #16  2026-04-23 to 2026-04-23  n=1   mean +0.4%  [BIFO]
+      #17  2026-04-24 to 2026-04-24  n=1   mean +0.3%  [FATIMA]
+      #18  2026-04-27 to 2026-04-27  n=1   mean -0.2%  [GLAXO]
+      #19  2026-04-28 to 2026-04-28  n=3   mean -1.7%  [GWLC, SGF, TGL]
+      #20  2026-04-29 to 2026-04-29  n=4   mean +2.1%  [DCR, FABL, HINOON, SNGP]
+      #21  2026-04-30 to 2026-04-30  n=1   mean -4.4%  [IMAGE]
+      #22  2026-07-29 to 2026-07-29  n=1   mean -3.0%  [PIOC]
+      #23  2026-07-30 to 2026-07-30  n=2   mean +1.6%  [EFERT, EPQL]
+      #24  2026-08-03 to 2026-08-03  n=1   mean -2.5%  [KTML]
+      #25  2026-08-04 to 2026-08-04  n=1   mean +0.3%  [LCI]
+      #26  2026-08-07 to 2026-08-07  n=1   mean +0.7%  [MARI]
+      #27  2026-08-11 to 2026-08-11  n=1   mean -3.0%  [ACPL]
+      #28  2026-08-20 to 2026-08-20  n=1   mean -2.4%  [FATIMA]
+      #29  2026-08-27 to 2026-08-27  n=4   mean +1.6%  [DGKC, GHGL, HUBC, SAZEW]
+      #30  2026-09-02 to 2026-09-02  n=1   mean +11.2%  [MACFL]
+      #31  2026-09-07 to 2026-09-07  n=1   mean -2.4%  [PTL]
+      #32  2026-09-14 to 2026-09-14  n=1   mean -0.1%  [GWLC]
+      #33  2026-09-24 to 2026-09-24  n=1   mean -1.0%  [BIFO]
+  [H4 controls up/flat T0 reaction] input 101; no data to window end 0; illiquid 36; not in KMI snapshot 1; no trade at entry 0; kept 64; per-symbol overlap dropped 0; final 64
+H4 controls up/flat T0 reaction                  64   47   47 |   +0.3%   -0.0%  50%   -5.9%  +11.6% |   47   +0.4%   +0.2%  55%   -5.9%   +9.3% |   +0.0%   -0.1%  46% | 0.678 0.936
+
+-- drift +5: excess from close of T0 to +5 sessions (descriptive, before cost; p = share of placebo medians <= observed)
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+  [H4 cuts drift +5] input 37; no data to window end 0; illiquid 16; not in KMI snapshot 1; no trade at entry 0; kept 20; per-symbol overlap dropped 0; final 20
+H4 cuts drift +5                                 20   16    9 |   -0.5%   -0.8%  45%   -6.5%   +5.5% |    9   -1.1%   -2.0%  33%   -6.5%   +4.1% |   +0.1%   -0.2%  47% | 0.152 0.019
+    leave-one-cluster-out: cluster median ranges -2.1% to -1.9% (full -2.0%); dropping the largest cluster by n leaves median -2.1%
+    clusters of 'H4 cuts drift +5' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2026-01-28 to 2026-02-12  n=3   mean -2.0%  [EPQL, FFC, LCI]
+      #2   2026-02-13 to 2026-03-03  n=5   mean +3.2%  [ATRL, EFERT, FABL, ICL, MTL]
+      #3   2026-03-10 to 2026-03-16  n=1   mean -6.5%  [FATIMA]
+      #4   2026-03-19 to 2026-03-27  n=1   mean +0.3%  [SGF]
+      #5   2026-04-21 to 2026-04-27  n=1   mean -2.9%  [EFERT]
+      #6   2026-04-29 to 2026-05-06  n=1   mean +4.1%  [GWLC]
+      #7   2026-07-31 to 2026-08-17  n=4   mean -1.8%  [EFERT, EPQL, LCI, MARI]
+      #8   2026-08-28 to 2026-09-03  n=3   mean -2.1%  [DGKC, GHGL, HUBC]
+      #9   2026-09-25 to 2026-10-01  n=1   mean -2.5%  [BIFO]
+  [H4 omissions drift +5] input 44; no data to window end 0; illiquid 16; not in KMI snapshot 2; no trade at entry 0; kept 26; per-symbol overlap dropped 0; final 26
+H4 omissions drift +5                            26   22    8 |   +0.5%   -0.9%  42%  -11.6%  +18.1% |    8   -1.1%   -1.6%  38%  -11.6%   +9.4% |   +0.5%   -0.1%  49% | 0.164 0.054
+    leave-one-cluster-out: cluster median ranges -3.2% to -0.1% (full -1.6%); dropping the largest cluster by n leaves median -3.2%
+    clusters of 'H4 omissions drift +5' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-12-01 to 2025-12-05  n=1   mean -3.5%  [SNGP]
+      #2   2026-02-12 to 2026-02-18  n=1   mean -11.6%  [PIOC]
+      #3   2026-02-26 to 2026-03-06  n=3   mean +9.4%  [AIRLINK, DCR, GCIL]
+      #4   2026-04-21 to 2026-05-08  n=13  mean -0.1%  [BIFO, CSAP, DCR, EPQL, FABL, FATIMA, GLAXO, HINOON, IMAGE, SGF, SNGP, SPEL, TGL]
+      #5   2026-07-30 to 2026-08-10  n=2   mean -3.2%  [KTML, PIOC]
+      #6   2026-08-12 to 2026-08-19  n=1   mean +1.2%  [ACPL]
+      #7   2026-08-21 to 2026-09-14  n=4   mean +2.3%  [FATIMA, MACFL, PTL, SAZEW]
+      #8   2026-09-15 to 2026-09-21  n=1   mean -3.5%  [GWLC]
+  [H4 pooled cut+omit drift +5] input 81; no data to window end 0; illiquid 32; not in KMI snapshot 3; no trade at entry 0; kept 46; per-symbol overlap dropped 0; final 46
+H4 pooled cut+omit drift +5                      46   32    9 |   +0.0%   -0.9%  43%  -11.6%  +18.1% |    9   -1.7%   -1.8%  44%   -6.5%   +2.2% |   +0.2%   -0.3%  46% | 0.097 0.024
+    leave-one-cluster-out: cluster median ranges -2.1% to -0.9% (full -1.8%); dropping the largest cluster by n leaves median -2.1%
+    clusters of 'H4 pooled cut+omit drift +5' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-12-01 to 2025-12-05  n=1   mean -3.5%  [SNGP]
+      #2   2026-01-28 to 2026-03-06  n=12  mean +2.2%  [AIRLINK, ATRL, DCR, EFERT, EPQL, FABL, FFC, GCIL, ICL, LCI, MTL, PIOC]
+      #3   2026-03-10 to 2026-03-16  n=1   mean -6.5%  [FATIMA]
+      #4   2026-03-19 to 2026-03-27  n=1   mean +0.3%  [SGF]
+      #5   2026-04-21 to 2026-05-08  n=15  mean +0.0%  [BIFO, CSAP, DCR, EFERT, EPQL, FABL, FATIMA, GLAXO, GWLC, HINOON, IMAGE, SGF, SNGP, SPEL, T]
+      #6   2026-07-30 to 2026-08-19  n=7   mean -1.8%  [ACPL, EFERT, EPQL, KTML, LCI, MARI, PIOC]
+      #7   2026-08-21 to 2026-09-14  n=7   mean +0.4%  [DGKC, FATIMA, GHGL, HUBC, MACFL, PTL, SAZEW]
+      #8   2026-09-15 to 2026-09-21  n=1   mean -3.5%  [GWLC]
+      #9   2026-09-25 to 2026-10-01  n=1   mean -2.5%  [BIFO]
+  [H4 controls up/flat drift +5] input 101; no data to window end 0; illiquid 36; not in KMI snapshot 1; no trade at entry 0; kept 64; per-symbol overlap dropped 0; final 64
+H4 controls up/flat drift +5                     64   47    8 |   -0.1%   -0.0%  50%   -7.6%  +11.3% |    8   +1.6%   +0.6%  62%   -2.4%  +10.5% |   +0.3%   -0.2%  48% | 0.593 0.845
+
+-- drift +20: excess from close of T0 to +20 sessions (descriptive, before cost; p = share of placebo medians <= observed)
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+  [H4 cuts drift +20] input 32; no data to window end 0; illiquid 12; not in KMI snapshot 1; no trade at entry 0; kept 19; per-symbol overlap dropped 0; final 19
+H4 cuts drift +20                                19   15    3 |   +2.8%   +1.7%  53%   -6.1%  +15.6% |    3   +2.3%   +2.6%  67%   -1.3%   +5.8% |   +0.3%   -0.4%  47% | 0.881 0.888
+    leave-one-cluster-out: cluster median ranges +0.6% to +4.2% (full +2.6%); dropping the largest cluster by n leaves median +0.6%
+    clusters of 'H4 cuts drift +20' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2026-01-28 to 2026-04-17  n=10  mean +5.8%  [ATRL, EFERT, EPQL, FABL, FATIMA, FFC, ICL, LCI, MTL, SGF]
+      #2   2026-04-21 to 2026-06-01  n=2   mean +2.6%  [EFERT, GWLC]
+      #3   2026-07-31 to 2026-09-24  n=7   mean -1.3%  [DGKC, EFERT, EPQL, GHGL, HUBC, LCI, MARI]
+H4 cuts drift +20, net WHT                       19   15    3 |   +2.7%   +1.7%  53%   -6.0%  +15.6% |    3   +2.2%   +2.4%  67%   -1.4%   +5.7% |   +0.2%   -0.8%  44% | 0.877 0.868
+  [H4 omissions drift +20] input 44; no data to window end 0; illiquid 16; not in KMI snapshot 2; no trade at entry 0; kept 26; per-symbol overlap dropped 0; final 26
+H4 omissions drift +20                           26   22    4 |   +1.4%   -0.2%  46%  -14.6%  +26.2% |    4   -0.2%   +0.1%  50%   -3.7%   +2.7% |   +1.0%   -0.1%  49% | 0.596 0.521
+    leave-one-cluster-out: cluster median ranges -0.4% to +0.7% (full +0.1%); dropping the largest cluster by n leaves median -0.4%
+    clusters of 'H4 omissions drift +20' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-12-01 to 2025-12-29  n=1   mean -3.7%  [SNGP]
+      #2   2026-02-12 to 2026-03-31  n=4   mean -0.4%  [AIRLINK, DCR, GCIL, PIOC]
+      #3   2026-04-21 to 2026-06-03  n=13  mean +2.7%  [BIFO, CSAP, DCR, EPQL, FABL, FATIMA, GLAXO, HINOON, IMAGE, SGF, SNGP, SPEL, TGL]
+      #4   2026-07-30 to 2026-10-12  n=8   mean +0.7%  [ACPL, FATIMA, GWLC, KTML, MACFL, PIOC, PTL, SAZEW]
+H4 omissions drift +20, net WHT                  26   22    4 |   +1.4%   -0.2%  42%  -14.6%  +26.2% |    4   -0.2%   +0.2%  50%   -3.7%   +2.7% |   +1.3%   -0.5%  48% | 0.610 0.552
+  [H4 pooled cut+omit drift +20] input 76; no data to window end 0; illiquid 28; not in KMI snapshot 3; no trade at entry 0; kept 45; per-symbol overlap dropped 0; final 45
+H4 pooled cut+omit drift +20                     45   32    4 |   +2.0%   -0.2%  49%  -14.6%  +26.2% |    4   +0.7%   +1.2%  50%   -3.7%   +4.0% |   +0.8%   -0.7%  45% | 0.668 0.770
+    leave-one-cluster-out: cluster median ranges -0.2% to +2.7% (full +1.2%); dropping the largest cluster by n leaves median -0.2%
+    clusters of 'H4 pooled cut+omit drift +20' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 0)
+      #1   2025-12-01 to 2025-12-29  n=1   mean -3.7%  [SNGP]
+      #2   2026-01-28 to 2026-04-17  n=14  mean +4.0%  [AIRLINK, ATRL, DCR, EFERT, EPQL, FABL, FATIMA, FFC, GCIL, ICL, LCI, MTL, PIOC, SGF]
+      #3   2026-04-21 to 2026-06-03  n=15  mean +2.7%  [BIFO, CSAP, DCR, EFERT, EPQL, FABL, FATIMA, GLAXO, GWLC, HINOON, IMAGE, SGF, SNGP, SPEL, T]
+      #4   2026-07-30 to 2026-10-12  n=15  mean -0.2%  [ACPL, DGKC, EFERT, EPQL, FATIMA, GHGL, GWLC, HUBC, KTML, LCI, MACFL, MARI, PIOC, PTL, SAZE]
+H4 pooled cut+omit drift +20, net WHT            45   32    4 |   +1.9%   -0.2%  47%  -14.6%  +26.2% |    4   +0.7%   +1.2%  50%   -3.7%   +3.9% |   +1.3%   +0.1%  51% | 0.662 0.785
+  [H4 controls up/flat drift +20] input 79; no data to window end 0; illiquid 22; not in KMI snapshot 1; no trade at entry 0; kept 56; per-symbol overlap dropped 0; final 56
+H4 controls up/flat drift +20                    56   39    2 |   -0.5%   +0.1%  52%  -18.2%  +17.8% |    2   -0.5%   -0.5%  50%   -1.1%   +0.1% |   +1.5%   +0.4%  52% | 0.506 0.027
+
+-- drift +60: excess from close of T0 to +60 sessions (descriptive, before cost; p = share of placebo medians <= observed)
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+  [H4 cuts drift +60] input 21; no data to window end 0; illiquid 8; not in KMI snapshot 1; no trade at entry 0; kept 12; per-symbol overlap dropped 1; final 11
+H4 cuts drift +60                                11   11    1 |   +3.8%   +2.1%  73%  -13.3%  +20.5% |    1   +3.8%   +3.8% 100%   +3.8%   +3.8% |   +8.5%   +7.4%  68% | 0.110 0.157
+    clusters of 'H4 cuts drift +60' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 3)
+      #1   2026-01-28 to 2026-07-29  n=11  mean +3.8%  [ATRL, EFERT, EPQL, FABL, FATIMA, FFC, GWLC, ICL, LCI, MTL, SGF]
+H4 cuts drift +60, net WHT                       11   11    1 |   +3.5%   +1.7%  73%  -13.5%  +20.1% |    1   +3.5%   +3.5% 100%   +3.5%   +3.5% |   +8.4%   +7.8%  68% | 0.109 0.159
+  [H4 omissions drift +60] input 29; no data to window end 0; illiquid 9; not in KMI snapshot 2; no trade at entry 0; kept 18; per-symbol overlap dropped 1; final 17
+H4 omissions drift +60                           17   16    1 |   +0.1%   -1.8%  47%  -13.3%  +13.0% |    1   +0.1%   +0.1% 100%   +0.1%   +0.1% |   +1.4%   -0.5%  49% | 0.128 0.020
+    clusters of 'H4 omissions drift +60' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 3)
+      #1   2025-12-01 to 2026-07-31  n=17  mean +0.1%  [AIRLINK, BIFO, CSAP, DCR, EPQL, FABL, FATIMA, GCIL, GLAXO, HINOON, IMAGE, PIOC, SGF, SNGP,]
+H4 omissions drift +60, net WHT                  17   16    1 |   +0.1%   -1.7%  47%  -13.2%  +13.0% |    1   +0.1%   +0.1% 100%   +0.1%   +0.1% |   +1.3%   -0.9%  47% | 0.133 0.018
+  [H4 pooled cut+omit drift +60] input 50; no data to window end 0; illiquid 17; not in KMI snapshot 3; no trade at entry 0; kept 30; per-symbol overlap dropped 6; final 24
+H4 pooled cut+omit drift +60                     24   23    1 |   +0.6%   +0.2%  50%  -13.3%  +20.5% |    1   +0.6%   +0.6% 100%   +0.6%   +0.6% |   +1.8%   -0.2%  49% | 0.292 0.013
+    clusters of 'H4 pooled cut+omit drift +60' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: 5)
+      #1   2025-12-01 to 2026-07-31  n=24  mean +0.6%  [AIRLINK, ATRL, BIFO, CSAP, DCR, EFERT, EPQL, FABL, FATIMA, FFC, GCIL, GLAXO, GWLC, HINOON,]
+H4 pooled cut+omit drift +60, net WHT            24   23    1 |   +0.5%   +0.1%  50%  -13.5%  +20.1% |    1   +0.5%   +0.5% 100%   +0.5%   +0.5% |   +1.6%   -0.4%  50% | 0.275 0.013
+  [H4 controls up/flat drift +60] input 40; no data to window end 0; illiquid 11; not in KMI snapshot 1; no trade at entry 0; kept 28; per-symbol overlap dropped 5; final 23
+H4 controls up/flat drift +60                    23   23    1 |   -1.4%   -3.9%  48%  -24.4%  +34.6% |    1   -1.4%   -1.4%   0%   -1.4%   -1.4% |   +0.6%   -1.3%  45% | 0.062 0.171
+
+H4 exit/avoid reading: gain of selling at the close of T0 and not holding the window = -(excess) - 0.5% cost (round trip). p = share of placebo medians >= observed.
+row                                               n  sym  clu |    mean     med  win   worst    best |  clu    mean     med  win   worst    best | pl.mean  pl.med  win |  p_ev p_clu
+H4 exit cuts drift +5                            20   16    9 |   +0.0%   +0.3%  55%   -6.0%   +6.0% |    9   +0.6%   +1.5%  67%   -4.6%   +6.0% |   -0.8%   -0.5%  45% | 0.203 0.027
+H4 exit cuts drift +20                           19   15    3 |   -3.3%   -2.2%  42%  -16.1%   +5.6% |    3   -2.8%   -3.1%  33%   -6.3%   +0.8% |   -0.8%   +0.3%  52% | 0.895 0.895
+H4 exit cuts drift +60                           11   11    1 |   -4.3%   -2.6%  18%  -21.0%  +12.8% |    1   -4.3%   -4.3%   0%   -4.3%   -4.3% |   -8.7%   -7.8%  31% | 0.110 0.168
+H4 exit omissions drift +5                       26   22    8 |   -1.0%   +0.4%  54%  -18.6%  +11.1% |    8   +0.6%   +1.1%  50%   -9.9%  +11.1% |   -1.1%   -0.3%  45% | 0.193 0.049
+H4 exit omissions drift +20                      26   22    4 |   -1.9%   -0.3%  46%  -26.7%  +14.1% |    4   -0.3%   -0.6%  25%   -3.2%   +3.2% |   -1.1%   +0.1%  51% | 0.603 0.542
+H4 exit omissions drift +60                      17   16    1 |   -0.6%   +1.3%  53%  -13.5%  +12.8% |    1   -0.6%   -0.6%   0%   -0.6%   -0.6% |   -2.0%   -0.0%  50% | 0.141 0.019
+H4 exit pooled cut+omit drift +5                 46   32    9 |   -0.5%   +0.4%  54%  -18.6%  +11.1% |    9   +1.2%   +1.3%  56%   -2.7%   +6.0% |   -0.9%   -0.2%  46% | 0.090 0.014
+H4 exit pooled cut+omit drift +20                45   32    4 |   -2.5%   -0.3%  44%  -26.7%  +14.1% |    4   -1.2%   -1.7%  25%   -4.5%   +3.2% |   -1.6%   -0.2%  49% | 0.669 0.812
+H4 exit pooled cut+omit drift +60                24   23    1 |   -1.1%   -0.7%  46%  -21.0%  +12.8% |    1   -1.1%   -1.1%   0%   -1.1%   -1.1% |   -2.6%   -0.8%  46% | 0.282 0.013
+
+====================================================================================================
+SECTION 5. DIVIDEND CALENDAR 2026-10-17 to 2027-10-16
+====================================================================================================
+KMI_ALL_derived_2026-06-05: 309 symbols; liquid_universe('2026-10-17'): 174; intersection with prices: 125
+Top-30 names whose trailing window holds the same seasonal payment twice (two ex-dates 345-385 days apart), which inflates their trailing yield: 3: SYM, BERG, OGDC
+Projected rows NOT created because the same-period payment already went ex on or before 2026-10-16 (3): SYM basis 2025-10-20 (repeated on 2026-10-16); BERG basis 2025-10-17 (repeated on 2026-10-15); OGDC basis 2025-10-21 (repeated on 2026-10-08)
+Calendar rows 69: declared 2, projected 67, one_off_flag true 6 (rows), on 6 symbols; names 30 of 30.
+Top 30 by trailing yield at 2026-10-16 (gross cash with ex in (2025-10-16, 2026-10-16], current share terms, over raw close):
+   1 LOTCHEM   25.58%  close     25.41  payments 2  rows 2 (declared 0, projected 2, one-off 1)
+   2 SYM       12.40%  close     12.10  payments 2  rows 1 (declared 0, projected 1, one-off 0)
+   3 EPQL      11.67%  close     23.57  payments 5  rows 3 (declared 0, projected 3, one-off 0)
+   4 BIPL      11.27%  close     24.41  payments 4  rows 2 (declared 0, projected 2, one-off 0)
+   5 HUBC      10.34%  close    193.43  payments 6  rows 4 (declared 0, projected 4, one-off 0)
+   6 GHGL      10.20%  close     39.22  payments 4  rows 4 (declared 1, projected 3, one-off 0)
+   7 BERG       8.87%  close    112.68  payments 2  rows 1 (declared 0, projected 1, one-off 0)
+   8 FFC        7.62%  close    537.87  payments 7  rows 4 (declared 0, projected 4, one-off 0)
+   9 OGDC       7.36%  close    299.10  payments 8  rows 4 (declared 0, projected 4, one-off 0)
+  10 FABL       7.10%  close     91.49  payments 7  rows 4 (declared 0, projected 4, one-off 0)
+  11 DCR        6.48%  close     39.81  payments 6  rows 4 (declared 0, projected 4, one-off 0)
+  12 ISL        6.32%  close     79.06  payments 3  rows 2 (declared 0, projected 2, one-off 0)
+  13 IPAK       6.31%  close     31.72  payments 2  rows 1 (declared 0, projected 1, one-off 1)
+  14 EFERT      6.29%  close    194.82  payments 7  rows 4 (declared 0, projected 4, one-off 0)
+  15 GLAXO      6.08%  close    312.45  payments 4  rows 2 (declared 0, projected 2, one-off 0)
+  16 FCL        6.07%  close     24.71  payments 2  rows 1 (declared 0, projected 1, one-off 1)
+  17 COLG       5.74%  close   1115.69  payments 3  rows 2 (declared 0, projected 2, one-off 0)
+  18 CPHL       5.68%  close     61.66  payments 1  rows 1 (declared 0, projected 1, one-off 1)
+  19 MEBL       5.40%  close    545.82  payments 7  rows 4 (declared 0, projected 4, one-off 0)
+  20 LCI        5.40%  close    194.44  payments 4  rows 2 (declared 0, projected 2, one-off 0)
+  21 HINOON     5.36%  close    931.97  payments 2  rows 1 (declared 0, projected 1, one-off 0)
+  22 CSAP       5.04%  close     89.35  payments 4  rows 2 (declared 1, projected 1, one-off 0)
+  23 AGP        4.75%  close    168.38  payments 4  rows 2 (declared 0, projected 2, one-off 1)
+  24 BIFO       4.71%  close    106.09  payments 4  rows 2 (declared 0, projected 2, one-off 0)
+  25 WAFI       4.55%  close    153.79  payments 2  rows 2 (declared 0, projected 2, one-off 0)
+  26 NRSL       4.53%  close     33.10  payments 1  rows 1 (declared 0, projected 1, one-off 1)
+  27 JVDC       4.50%  close    133.29  payments 2  rows 1 (declared 0, projected 1, one-off 0)
+  28 INIL       4.49%  close    156.01  payments 3  rows 2 (declared 0, projected 2, one-off 0)
+  29 HCAR       4.46%  close    201.80  payments 2  rows 1 (declared 0, projected 1, one-off 0)
+  30 HALEON     4.38%  close    684.36  payments 5  rows 3 (declared 0, projected 3, one-off 0)

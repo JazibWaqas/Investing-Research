@@ -1,0 +1,70 @@
+symbol,company,status,expected_ex_month,expected_ex_date,gross_amount_rs,net_amount_rs,basis_ex_date,basis_amount_rs,basis_source,trailing_yield_pct,close_2026_10_16,payments_in_history,one_off_flag,added_on
+AGP,AGP Limited,projected,2027-04,,6.0,5.1,2026-04-13,6.0,payouts_book_closure,4.75,168.38,4,True,2026-10-17
+AGP,AGP Limited,projected,2027-09,,2.0,1.7,2026-09-02,2.0,payouts_book_closure,4.75,168.38,4,False,2026-10-17
+BERG,Berger Paints Pakistan Limited,projected,2027-10,,5.0,4.25,2026-10-15,5.0,payouts_book_closure,8.87,112.68,2,False,2026-10-17
+BIFO,Biafo Industries Limited,projected,2027-02,,2.5,2.125,2026-02-27,2.5,payouts_book_closure,4.71,106.09,4,False,2026-10-17
+BIFO,Biafo Industries Limited,projected,2027-10,,2.5,2.125,2026-10-15,2.5,payouts_book_closure,4.71,106.09,4,False,2026-10-17
+BIPL,BankIslami Pakistan Limited,projected,2027-03,,1.25,1.0625,2026-03-19,1.25,payouts_book_closure,11.27,24.41,4,False,2026-10-17
+BIPL,BankIslami Pakistan Limited,projected,2027-09,,1.5,1.275,2026-09-01,1.5,payouts_book_closure,11.27,24.41,4,False,2026-10-17
+COLG,Colgate-Palmolive (Pakistan) Limited,projected,2027-02,,29.0,24.65,2026-02-27,29.0,payouts_book_closure,5.74,1115.69,3,False,2026-10-17
+COLG,Colgate-Palmolive (Pakistan) Limited,projected,2027-09,,35.0,29.75,2026-09-16,35.0,payouts_book_closure,5.74,1115.69,3,False,2026-10-17
+CPHL,Citi Pharma Ltd.,projected,2026-10,,3.5,2.975,2025-10-17,3.5,payouts_book_closure,5.68,61.66,1,True,2026-10-17
+CSAP,Crescent Steel & Allied Products Limited,declared,2026-10,2026-10-21,3.5,2.975,2025-10-20,2.5,payouts_book_closure,5.04,89.35,4,False,2026-10-17
+CSAP,Crescent Steel & Allied Products Limited,projected,2027-02,,2.0,1.7,2026-02-16,2.0,payouts_book_closure,5.04,89.35,4,False,2026-10-17
+DCR,Dolmen City REIT,projected,2026-10,,0.63,0.5355,2025-10-20,0.63,payouts_book_closure,6.48,39.81,6,False,2026-10-17
+DCR,Dolmen City REIT,projected,2026-12,,0.63,0.5355,2025-12-26,0.63,payouts_book_closure,6.48,39.81,6,False,2026-10-17
+DCR,Dolmen City REIT,projected,2027-04,,0.66,0.561,2026-04-09,0.66,payouts_book_closure,6.48,39.81,6,False,2026-10-17
+DCR,Dolmen City REIT,projected,2027-07,,0.66,0.561,2026-07-24,0.66,payouts_book_closure,6.48,39.81,6,False,2026-10-17
+EFERT,Engro Fertilizers Limited,projected,2026-10,,4.5,3.825,2025-10-24,4.5,payouts_book_closure,6.29,194.82,7,False,2026-10-17
+EFERT,Engro Fertilizers Limited,projected,2027-03,,4.0,3.4,2026-03-16,4.0,payouts_book_closure,6.29,194.82,7,False,2026-10-17
+EFERT,Engro Fertilizers Limited,projected,2027-05,,2.0,1.7,2026-05-04,2.0,payouts_book_closure,6.29,194.82,7,False,2026-10-17
+EFERT,Engro Fertilizers Limited,projected,2027-08,,1.75,1.4875,2026-08-10,1.75,payouts_book_closure,6.29,194.82,7,False,2026-10-17
+EPQL,Engro Powergen Qadirpur Limited,projected,2026-10,,0.5,0.425,2025-10-31,0.5,payouts_book_closure,11.67,23.57,5,False,2026-10-17
+EPQL,Engro Powergen Qadirpur Limited,projected,2027-03,,1.25,1.0625,2026-03-18,1.25,payouts_book_closure,11.67,23.57,5,False,2026-10-17
+EPQL,Engro Powergen Qadirpur Limited,projected,2027-08,,1.0,0.85,2026-08-11,1.0,payouts_book_closure,11.67,23.57,5,False,2026-10-17
+FABL,Faysal Bank Limited,projected,2026-11,,1.5,1.275,2025-11-04,1.5,payouts_book_closure,7.1,91.49,7,False,2026-10-17
+FABL,Faysal Bank Limited,projected,2027-03,,2.0,1.7,2026-03-19,2.0,payouts_book_closure,7.1,91.49,7,False,2026-10-17
+FABL,Faysal Bank Limited,projected,2027-04,,1.5,1.275,2026-04-30,1.5,payouts_book_closure,7.1,91.49,7,False,2026-10-17
+FABL,Faysal Bank Limited,projected,2027-08,,1.5,1.275,2026-08-19,1.5,payouts_book_closure,7.1,91.49,7,False,2026-10-17
+FCL,Fast Cables Limited,projected,2027-10,,1.5,1.275,2026-10-15,1.5,payouts_book_closure,6.07,24.71,2,True,2026-10-17
+FFC,Fauji Fertilizer Company Limited,projected,2026-11,,9.5,8.075,2025-11-03,9.5,seed,7.62,537.87,7,False,2026-10-17
+FFC,Fauji Fertilizer Company Limited,projected,2027-03,,8.5,7.225,2026-03-06,8.5,seed,7.62,537.87,7,False,2026-10-17
+FFC,Fauji Fertilizer Company Limited,projected,2027-05,,8.5,7.225,2026-05-11,8.5,seed,7.62,537.87,7,False,2026-10-17
+FFC,Fauji Fertilizer Company Limited,projected,2027-08,,14.5,12.325,2026-08-10,14.5,seed,7.62,537.87,7,False,2026-10-17
+GHGL,Ghani Glass Limited,declared,2026-10,2026-10-21,1.0,0.85,2025-10-20,1.5,payouts_book_closure,10.2,39.22,4,False,2026-10-17
+GHGL,Ghani Glass Limited,projected,2026-11,,0.5,0.425,2025-11-07,0.5,payouts_book_closure,10.2,39.22,4,False,2026-10-17
+GHGL,Ghani Glass Limited,projected,2027-03,,1.0,0.85,2026-03-10,1.0,payouts_book_closure,10.2,39.22,4,False,2026-10-17
+GHGL,Ghani Glass Limited,projected,2027-07,,1.0,0.85,2026-07-03,1.0,payouts_book_closure,10.2,39.22,4,False,2026-10-17
+GLAXO,GlaxoSmithKline Pakistan Limited,projected,2027-04,,12.0,10.2,2026-04-22,12.0,payouts_book_closure,6.08,312.45,4,False,2026-10-17
+GLAXO,GlaxoSmithKline Pakistan Limited,projected,2027-09,,7.0,5.95,2026-09-02,7.0,payouts_book_closure,6.08,312.45,4,False,2026-10-17
+HALEON,Haleon Pakistan Limited,projected,2026-11,,5.0,4.25,2025-11-04,5.0,payouts_book_closure,4.38,684.36,5,False,2026-10-17
+HALEON,Haleon Pakistan Limited,projected,2027-04,,15.0,12.75,2026-04-21,15.0,payouts_book_closure,4.38,684.36,5,False,2026-10-17
+HALEON,Haleon Pakistan Limited,projected,2027-09,,10.0,8.5,2026-09-07,10.0,payouts_book_closure,4.38,684.36,5,False,2026-10-17
+HCAR,Honda Atlas Cars (Pakistan) Limited,projected,2027-06,,9.0,7.65,2026-06-15,9.0,payouts_book_closure,4.46,201.8,2,False,2026-10-17
+HINOON,Highnoon Laboratories Limited,projected,2027-04,,50.0,42.5,2026-04-22,50.0,payouts_book_closure,5.36,931.97,2,False,2026-10-17
+HUBC,The Hub Power Company Limited,projected,2026-11,,5.0,4.25,2025-11-10,5.0,seed,10.34,193.43,6,False,2026-10-17
+HUBC,The Hub Power Company Limited,projected,2027-03,,5.0,4.25,2026-03-06,5.0,seed,10.34,193.43,6,False,2026-10-17
+HUBC,The Hub Power Company Limited,projected,2027-05,,5.0,4.25,2026-05-05,5.0,seed,10.34,193.43,6,False,2026-10-17
+HUBC,The Hub Power Company Limited,projected,2027-10,,5.0,4.25,2026-10-12,5.0,seed,10.34,193.43,6,False,2026-10-17
+INIL,International Industries Limited,projected,2027-02,,2.0,1.7,2026-02-06,2.0,payouts_book_closure,4.49,156.01,3,False,2026-10-17
+INIL,International Industries Limited,projected,2027-09,,5.0,4.25,2026-09-28,5.0,payouts_book_closure,4.49,156.01,3,False,2026-10-17
+IPAK,International Packaging Films Limited,projected,2027-10,,2.0,1.7,2026-10-16,2.0,payouts_book_closure,6.31,31.72,2,True,2026-10-17
+ISL,International Steels Limited,projected,2027-02,,2.0,1.7,2026-02-06,2.0,payouts_book_closure,6.32,79.06,3,False,2026-10-17
+ISL,International Steels Limited,projected,2027-09,,3.0,2.55,2026-09-28,3.0,payouts_book_closure,6.32,79.06,3,False,2026-10-17
+JVDC,Javedan Corporation Limited,projected,2027-09,,6.0,5.1,2026-09-29,6.0,payouts_book_closure,4.5,133.29,2,False,2026-10-17
+LCI,Lucky Core Industries Limited,projected,2027-02,,5.25,4.4625,2026-02-04,5.25,payouts_book_closure,5.4,194.44,4,False,2026-10-17
+LCI,Lucky Core Industries Limited,projected,2027-09,,5.25,4.4625,2026-09-18,5.25,payouts_book_closure,5.4,194.44,4,False,2026-10-17
+LOTCHEM,Lotte Chemical Pakistan Limited,projected,2027-02,,5.0,4.25,2026-02-02,5.0,payouts_book_closure,25.58,25.41,2,True,2026-10-17
+LOTCHEM,Lotte Chemical Pakistan Limited,projected,2027-07,,1.5,1.275,2026-07-24,1.5,payouts_book_closure,25.58,25.41,2,False,2026-10-17
+MEBL,Meezan Bank Limited,projected,2026-11,,7.0,5.95,2025-11-03,7.0,seed,5.4,545.82,7,False,2026-10-17
+MEBL,Meezan Bank Limited,projected,2027-03,,7.0,5.95,2026-03-16,7.0,seed,5.4,545.82,7,False,2026-10-17
+MEBL,Meezan Bank Limited,projected,2027-05,,7.5,6.375,2026-05-05,7.5,seed,5.4,545.82,7,False,2026-10-17
+MEBL,Meezan Bank Limited,projected,2027-08,,8.0,6.8,2026-08-18,8.0,seed,5.4,545.82,7,False,2026-10-17
+NRSL,Nimir Resins Limited,projected,2027-10,,1.5,1.275,2026-10-06,1.5,payouts_book_closure,4.53,33.1,1,True,2026-10-17
+OGDC,Oil & Gas Development Company Limited,projected,2026-11,,3.5,2.975,2025-11-07,3.5,seed,7.36,299.1,8,False,2026-10-17
+OGDC,Oil & Gas Development Company Limited,projected,2027-03,,4.25,3.6125,2026-03-06,4.25,seed,7.36,299.1,8,False,2026-10-17
+OGDC,Oil & Gas Development Company Limited,projected,2027-05,,3.25,2.7625,2026-05-11,3.25,seed,7.36,299.1,8,False,2026-10-17
+OGDC,Oil & Gas Development Company Limited,projected,2027-10,,6.0,5.1,2026-10-08,6.0,seed,7.36,299.1,8,False,2026-10-17
+SYM,Symmetry Group Limited,projected,2027-10,,1.0,0.85,2026-10-16,1.0,payouts_book_closure,12.4,12.1,2,False,2026-10-17
+WAFI,Wafi Energy Pakistan Limited,projected,2026-11,,3.0,2.55,2025-11-05,3.0,payouts_book_closure,4.55,153.79,2,False,2026-10-17
+WAFI,Wafi Energy Pakistan Limited,projected,2027-04,,4.0,3.4,2026-04-20,4.0,payouts_book_closure,4.55,153.79,2,False,2026-10-17

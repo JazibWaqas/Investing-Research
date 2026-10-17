@@ -1,0 +1,284 @@
+== INSIDER CLUSTER BUYING (PSX). Panel (2480, 456) 2016-10-17 to 2026-10-16; last date 2026-10-16; returns = bonus/split-only price returns, benchmark = equal-weight market (Rs5m); cost 0.5% round trip charged to the stock leg. Seed 20261017.
+
+== 1. COVERAGE
+insider_trade rows in announcements.parquet: 13,120; with a document id 6,661 (50.8%). tags: {'unknown': 12946, 'buy': 147, 'sell': 27}
+in the 22 drawn symbols: 609 rows, with a document 383 (62.9%); since 2019-01-01: 584 rows, with a document 363
+drawn symbols in draw order (numpy default_rng 20261017 permutation of the liquid-KMI candidates, whole symbols added until the 500 cap would break): HCAR, ISL, BIPL, CNERGY, FECTC, WASL, KOHC, GGL, CRTM, BFAGRO, SPL, TELE, EFERT, FFC, NETSOL, GLAXO, SSGC, WAVES, GCWL, RPL, CEPB, CPPL
+PDFs downloaded and read: 497 (block a, current: 144; block b, backtest: 353). parse_method pdf_text 113, pdf_eye 384
+  pdf_text = a usable text layer was read (113); pdf_eye = the page image was read by eye: 373 files have no text layer and 11 have a garbled one (3 of the 373 have a broken page tree that pdfplumber cannot open; their embedded JPEG was extracted and read).
+  unreadable files: 0. Files with no trade lines (logged with reason): 9
+    282740 PQGTL 2026-09-15: 34-page broker (Foundation Securities) client trade report, no disclosure form text, no role or insider direction stated per line
+    146406 TELE 2020-04-23: nil return: no transactions in the period stated
+    285406 INKL 2026-10-09: extract of board minutes noting a director's disclosure of interest (Waseem Shafi); no trade lines
+    279322 NML 2026-06-30: 5-page material-information notice: Nishat Mills group acquired 4,713,831 shares of Rafhan Maize Products from Ingredion (Rs9,800 per share); an acquisition in another listed company, not a trade in the filer's own shares; page 1 read only
+    279317 DGKC 2026-06-30: 5-page material-information notice: D.G. Khan Cement group acquired Rafhan Maize Products shares (same notice as 279322); not a trade in the filer's own shares; page 1 read only
+    212198 BIPL 2023-07-20: notice of book closure under the takeover regulations (public offer by JS Bank for 275,891,286 BIPL shares); no insider trade lines
+    175477 BIPL 2021-10-27: notice that trades of 31 Aug to 22 Sep 2021 were presented to the board (PUCARS references); no trade lines
+    156942 GLAXO 2020-11-05: PUCARS information note listing an independent director's holding of 2 shares (Muneer Kamal); no transaction lines
+    127909 GGL 2019-03-26: company received 25,098,200 shares of Ghani Global Glass from its sponsors under a court scheme (an acquisition by the company, not a trade in its own shares)
+PDF read method by announcement year (share read by eye): 2019: 48% of 52, 2020: 82% of 38, 2021: 94% of 54, 2022: 87% of 47, 2023: 95% of 39, 2024: 100% of 18, 2025: 67% of 64, 2026: 75% of 185
+trade lines: 973; duplicates removed (same symbol, holder, trade date, direction and shares as an earlier document): 96; unique lines 877; revoked or revised: 0 filings carry an explicit revocation notice; 1 filing (181996) is a corrected re-filing of 181992 (kept, different key); roles filled from the holder's other filings: 85 lines
+unique lines by mode: market 668, other 54, gift_inherit_transfer 54, off_market_block 51, rights 24, esop 10, unstated 7, bonus 5, tender 4
+unique lines by direction: buy 584, sell 286, unknown 7
+excluded lines (not market/unstated) by reason and direction: other: buy 28, sell 26; gift_inherit_transfer: buy 22, sell 25; esop: buy 10, sell 0; off_market_block: buy 20, sell 31; bonus: buy 5, sell 0; tender: buy 2, sell 2; rights: buy 24, sell 0
+qualifying lines (market or unstated, unique): buys 473, sells 202; distinct qualifying buyers (symbol, holder) 88, sellers 60; market-only buys 468, sells 200
+qualifying lines by role (buy/sell): sponsor_substantial: 201/44, director_ceo: 213/100, executive: 46/38, other: 0/1, unknown: 13/19
+title-tagged directions: 174 rows (buy 147, sell 27); 141 have a document; 64 are dated 2019 on. Only 1 falls on a sampled document (BIPL 2023-07-20 tagged buy): a takeover book-closure notice with no trade lines, so agreement with the PDF reads cannot be assessed (0 comparable). Most tags are on 2015-2018 takeover-regulation or 'Purchase/Sale of Shares by Director' titles, outside the sample.
+transcription check: 672 unique qualifying lines with a price and trade date compared with the raw close within +-3 trading days (+-10%): 672 inside, 0 outside
+5-row spot check of insider rows with no document id (seed 20261017, drawn symbols, 2019 on): PSX portal day pages queried 2026-10-17. FFC 2025-01-09 14:48: row has no PDF; FFC 2024-11-19 09:08: no PDF; FFC 2021-06-30 09:53: no PDF; GGL 2021-03-26 10:40: no PDF (3 rows that day, none with a PDF); CEPB 2019-07-31 14:33: a PDF exists at /download/document/133076.PDF.
+  The CEPB hit is a scraper bug: fetch_announcements.py matches '.pdf' case-sensitively, so documents linked as '.PDF' were stored as 'no document'. Re-fetching every announcement of the 22 drawn symbols (data/raw/insider_refetch_drawn.csv) finds 23 insider rows stored as no-document that do have a PDF (ISL 18, CNERGY 2, CEPB 2, SSGC 1; 2019: 4, 2020: 14, 2021: 3, 2025: 2), i.e. 23 of 224 no-document rows in the drawn symbols. The 2026-06-18 to 2026-10-16 window has none (data/raw/insider_refetch_2026.csv). These 23 are NOT in the 500-PDF sample, which was fixed in advance; ISL 2020 is the most affected.
+
+Filing lag (announcement date minus trade date, days; unique lines with a trade date, n=874): median 2, 90th percentile 10, share filed same day 5%, share lag over 5 days 19%
+Sample filings stamped at or after 15:30 PKT: 5.4% (27 of 497); stamped before 09:15: 2.8%
+All insider filings with a document since 2019 (n=6,169): at or after 15:30 5.1%, before 09:15 2.0%
+
+== 2. EVENT COUNTS BEFORE RETURNS (all symbols with parsed filings; the backtest keeps the 22 drawn symbols only, from 2019-01-01)
+H1 cluster              : all symbols   18; drawn symbols   16; announcements 2026-07-18 to 2026-10-16 (any symbol) 1
+H1 net-of-sales         : all symbols   17; drawn symbols   15; announcements 2026-07-18 to 2026-10-16 (any symbol) 1
+H1 singles              : all symbols  106; drawn symbols   82; announcements 2026-07-18 to 2026-10-16 (any symbol) 16
+H2 sponsor_substantial  : all symbols   39; drawn symbols   30; announcements 2026-07-18 to 2026-10-16 (any symbol) 7
+H2 director_ceo         : all symbols   66; drawn symbols   53; announcements 2026-07-18 to 2026-10-16 (any symbol) 8
+H2 executive            : all symbols   33; drawn symbols   17; announcements 2026-07-18 to 2026-10-16 (any symbol) 12
+H3 round-trip           : all symbols   12; drawn symbols    9; announcements 2026-07-18 to 2026-10-16 (any symbol) 2
+H3 clean                : all symbols  134; drawn symbols   98; announcements 2026-07-18 to 2026-10-16 (any symbol) 26
+H4 single               : all symbols   84; drawn symbols   60; announcements 2026-07-18 to 2026-10-16 (any symbol) 16
+H4 cluster              : all symbols   11; drawn symbols    8; announcements 2026-07-18 to 2026-10-16 (any symbol) 2
+
+== 3. RESULTS (net of 0.5% round trip, excess vs equal-weight market; non-overlap rule; placebo = 1,000 samples of one random same-symbol day within +-365 days per event). IS = entry 2019-01-01 to 2023-12-31, OOS = 2024-01-01 to 2026-10-16
+A buy can appear in both H1 and H2 (and H3); the hypotheses are never pooled.
+
+-- H1 cluster
+H1 cluster: events built 16; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 7; usable 9
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 1; kept 8
+   H1 cluster              | h=21 | all | n=8   sym=6  mo=7  mean=-0.0% med=+3.2% win=62% worst=-21.0% (GGL 2021-12-02) | mc_med=+1.6% mc_win=57% | plc_med=-3.1% plc_win=36% p=0.045 (placebo n=8)  [insufficient to conclude]
+   H1 cluster              | h=21 | IS  | n=3   sym=3  mo=3  mean=-5.6% med=-4.0% win=33% worst=-21.0% (GGL 2021-12-02) | mc_med=-4.0% mc_win=33% | plc_med=-2.2% plc_win=40% p=0.587 (placebo n=3)  [insufficient to conclude]
+   H1 cluster              | h=21 | OOS | n=5   sym=4  mo=4  mean=+3.4% med=+4.9% win=80% worst=-13.2% (SPL 2026-01-12) | mc_med=+4.3% mc_win=75% | plc_med=-3.3% plc_win=34% p=0.033 (placebo n=5)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 2; kept 7
+   H1 cluster              | h=63 | all | n=7   sym=6  mo=6  mean=-1.0% med=+1.1% win=57% worst=-33.2% (GGL 2021-12-02) | mc_med=-1.2% mc_win=50% | plc_med=-2.9% plc_win=43% p=0.264 (placebo n=7)  [insufficient to conclude]
+   H1 cluster              | h=63 | IS  | n=3   sym=3  mo=3  mean=-14.5% med=-6.9% win=0% worst=-33.2% (GGL 2021-12-02) | mc_med=-6.9% mc_win=0% | plc_med=-3.0% plc_win=36% p=0.669 (placebo n=3)  [insufficient to conclude]
+   H1 cluster              | h=63 | OOS | n=4   sym=4  mo=3  mean=+9.2% med=+8.0% win=100% worst=+1.1% (SPL 2026-01-12) | mc_med=+8.6% mc_win=100% | plc_med=-0.6% plc_win=49% p=0.150 (placebo n=4)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 2; kept 7
+   H1 cluster              | h=126| all | n=7   sym=6  mo=6  mean=+24.4% med=-4.4% win=29% worst=-28.7% (GGL 2021-12-02) | mc_med=-5.9% mc_win=33% | plc_med=-6.5% plc_win=38% p=0.333 (placebo n=7)  [insufficient to conclude]
+   H1 cluster              | h=126| IS  | n=3   sym=3  mo=3  mean=-17.7% med=-17.1% win=0% worst=-28.7% (GGL 2021-12-02) | mc_med=-17.1% mc_win=0% | plc_med=-13.4% plc_win=19% p=0.746 (placebo n=3)  [insufficient to conclude]
+   H1 cluster              | h=126| OOS | n=4   sym=4  mo=3  mean=+56.0% med=+6.8% win=50% worst=-4.4% (SPL 2026-01-12) | mc_med=+6.8% mc_win=67% | plc_med=-1.1% plc_win=50% p=0.124 (placebo n=4)  [insufficient to conclude]
+
+-- H1 net-of-sales
+H1 net-of-sales: events built 15; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 6; usable 9
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 1; kept 8
+   H1 net-of-sales         | h=21 | all | n=8   sym=5  mo=7  mean=+1.5% med=+3.2% win=62% worst=-21.0% (GGL 2021-12-02) | mc_med=+1.6% mc_win=57% | plc_med=-1.6% plc_win=42% p=0.060 (placebo n=8)  [insufficient to conclude]
+   H1 net-of-sales         | h=21 | IS  | n=4   sym=4  mo=4  mean=-4.4% med=-2.4% win=25% worst=-21.0% (GGL 2021-12-02) | mc_med=-2.4% mc_win=25% | plc_med=-0.1% plc_win=48% p=0.702 (placebo n=4)  [insufficient to conclude]
+   H1 net-of-sales         | h=21 | OOS | n=4   sym=3  mo=3  mean=+7.5% med=+7.1% win=100% worst=+1.6% (CRTM 2025-10-10) | mc_med=+7.1% mc_win=100% | plc_med=-2.3% plc_win=38% p=0.030 (placebo n=4)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 2; kept 7
+   H1 net-of-sales         | h=63 | all | n=7   sym=5  mo=6  mean=-1.7% med=-3.6% win=43% worst=-33.2% (GGL 2021-12-02) | mc_med=-3.8% mc_win=33% | plc_med=-2.8% plc_win=44% p=0.565 (placebo n=7)  [insufficient to conclude]
+   H1 net-of-sales         | h=63 | IS  | n=4   sym=4  mo=4  mean=-11.9% med=-5.4% win=0% worst=-33.2% (GGL 2021-12-02) | mc_med=-5.4% mc_win=0% | plc_med=-3.4% plc_win=42% p=0.570 (placebo n=4)  [insufficient to conclude]
+   H1 net-of-sales         | h=63 | OOS | n=3   sym=3  mo=2  mean=+11.9% med=+8.6% win=100% worst=+7.4% (KOHC 2026-03-13) | mc_med=+11.1% mc_win=100% | plc_med=-1.9% plc_win=48% p=0.170 (placebo n=3)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 2; kept 7
+   H1 net-of-sales         | h=126| all | n=7   sym=5  mo=6  mean=+27.0% med=-0.3% win=43% worst=-28.7% (GGL 2021-12-02) | mc_med=-0.3% mc_win=50% | plc_med=-4.3% plc_win=41% p=0.296 (placebo n=7)  [insufficient to conclude]
+   H1 net-of-sales         | h=126| IS  | n=4   sym=4  mo=4  mean=-9.8% med=-12.3% win=25% worst=-28.7% (GGL 2021-12-02) | mc_med=-12.3% mc_win=25% | plc_med=-10.5% plc_win=31% p=0.622 (placebo n=4)  [insufficient to conclude]
+   H1 net-of-sales         | h=126| OOS | n=3   sym=3  mo=2  mean=+76.1% med=+14.0% win=67% worst=-0.3% (KOHC 2026-03-13) | mc_med=+110.8% mc_win=100% | plc_med=+0.3% plc_win=53% p=0.123 (placebo n=3)  [insufficient to conclude]
+
+-- H1 singles
+H1 singles: events built 82; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 32; usable 50
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 0; kept 50
+   H1 singles              | h=21 | all | n=50  sym=15 mo=38 mean=-0.5% med=-1.3% win=42% worst=-21.0% (GGL 2021-12-02) | mc_med=-0.6% mc_win=45% | plc_med=-1.9% plc_win=41% p=0.308 (placebo n=50)
+   H1 singles              | h=21 | IS  | n=29  sym=12 mo=24 mean=+0.8% med=+0.0% win=52% worst=-21.0% (GGL 2021-12-02) | mc_med=+1.0% mc_win=54% | plc_med=-2.1% plc_win=41% p=0.152 (placebo n=29)
+   H1 singles              | h=21 | OOS | n=21  sym=10 mo=14 mean=-2.3% med=-3.6% win=29% worst=-18.4% (KOHC 2024-07-04) | mc_med=-2.0% mc_win=29% | plc_med=-2.0% plc_win=41% p=0.844 (placebo n=21)
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 10; kept 40
+   H1 singles              | h=63 | all | n=40  sym=15 mo=35 mean=-2.3% med=-4.3% win=35% worst=-33.2% (RPL 2021-01-06) | mc_med=-1.6% mc_win=40% | plc_med=-3.8% plc_win=39% p=0.576 (placebo n=40)
+   H1 singles              | h=63 | IS  | n=23  sym=12 mo=21 mean=-2.8% med=-1.8% win=30% worst=-33.2% (RPL 2021-01-06) | mc_med=-1.6% mc_win=33% | plc_med=-3.1% plc_win=39% p=0.261 (placebo n=23)
+   H1 singles              | h=63 | OOS | n=17  sym=10 mo=14 mean=-1.7% med=-5.2% win=41% worst=-26.9% (BFAGRO 2026-03-18) | mc_med=-2.5% mc_win=50% | plc_med=-4.8% plc_win=38% p=0.523 (placebo n=17)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 6, no obs in window 0; overlapping events removed 13; kept 31
+   H1 singles              | h=126| all | n=31  sym=15 mo=27 mean=-10.4% med=-13.7% win=26% worst=-38.0% (EFERT 2020-04-22) | mc_med=-13.7% mc_win=22% | plc_med=-9.5% plc_win=32% p=0.909 (placebo n=31)
+   H1 singles              | h=126| IS  | n=19  sym=12 mo=17 mean=-9.1% med=-9.6% win=26% worst=-38.0% (EFERT 2020-04-22) | mc_med=-9.6% mc_win=24% | plc_med=-10.4% plc_win=29% p=0.441 (placebo n=19)  [insufficient to conclude]
+   H1 singles              | h=126| OOS | n=12  sym=8  mo=10 mean=-12.3% med=-16.2% win=25% worst=-31.7% (NETSOL 2024-09-27) | mc_med=-16.4% mc_win=20% | plc_med=-7.7% plc_win=35% p=0.924 (placebo n=12)  [insufficient to conclude]
+
+-- H2 sponsor_substantial
+H2 sponsor_substantial: events built 30; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 21; usable 9
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 0; kept 9
+   H2 sponsor_substantial  | h=21 | all | n=9   sym=4  mo=9  mean=-3.2% med=-4.2% win=33% worst=-13.2% (SPL 2026-01-12) | mc_med=-4.2% mc_win=33% | plc_med=-2.0% plc_win=43% p=0.714 (placebo n=9)  [insufficient to conclude]
+   H2 sponsor_substantial  | h=21 | IS  | n=2   sym=1  mo=2  mean=+0.6% med=+0.6% win=50% worst=-4.2% (CRTM 2021-10-01) | mc_med=+0.6% mc_win=50% | plc_med=-1.0% plc_win=44% p=0.398 (placebo n=2)  [insufficient to conclude]
+   H2 sponsor_substantial  | h=21 | OOS | n=7   sym=4  mo=7  mean=-4.3% med=-7.5% win=29% worst=-13.2% (SPL 2026-01-12) | mc_med=-7.5% mc_win=29% | plc_med=-1.1% plc_win=44% p=0.883 (placebo n=7)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 3; kept 6
+   H2 sponsor_substantial  | h=63 | all | n=6   sym=4  mo=6  mean=-0.7% med=-2.4% win=50% worst=-26.9% (BFAGRO 2026-03-18) | mc_med=-2.4% mc_win=50% | plc_med=-2.3% plc_win=42% p=0.501 (placebo n=6)  [insufficient to conclude]
+   H2 sponsor_substantial  | h=63 | IS  | n=1   sym=1  mo=1  mean=-5.8% med=-5.8% win=0% worst=-5.8% (CRTM 2021-10-01) | mc_med=-5.8% mc_win=0% | plc_med=-3.0% plc_win=31% p=0.628 (placebo n=1)  [insufficient to conclude]
+   H2 sponsor_substantial  | h=63 | OOS | n=5   sym=4  mo=5  mean=+0.4% med=+1.1% win=60% worst=-26.9% (BFAGRO 2026-03-18) | mc_med=+1.1% mc_win=60% | plc_med=-1.8% plc_win=44% p=0.350 (placebo n=5)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 2, no obs in window 0; overlapping events removed 2; kept 5
+   H2 sponsor_substantial  | h=126| all | n=5   sym=4  mo=5  mean=+37.1% med=-4.4% win=40% worst=-25.3% (BFAGRO 2026-03-18) | mc_med=-4.4% mc_win=40% | plc_med=-5.8% plc_win=34% p=0.397 (placebo n=5)  [insufficient to conclude]
+   H2 sponsor_substantial  | h=126| IS  | n=1   sym=1  mo=1  mean=-4.7% med=-4.7% win=0% worst=-4.7% (CRTM 2021-10-01) | mc_med=-4.7% mc_win=0% | plc_med=-6.3% plc_win=10% p=0.346 (placebo n=1)  [insufficient to conclude]
+   H2 sponsor_substantial  | h=126| OOS | n=4   sym=4  mo=4  mean=+47.5% med=+0.3% win=50% worst=-25.3% (BFAGRO 2026-03-18) | mc_med=+0.3% mc_win=50% | plc_med=-4.2% plc_win=40% p=0.294 (placebo n=4)  [insufficient to conclude]
+
+-- H2 director_ceo
+H2 director_ceo: events built 53; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 15; usable 38
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 7; kept 31
+   H2 director_ceo         | h=21 | all | n=31  sym=12 mo=26 mean=+0.4% med=-0.3% win=45% worst=-21.0% (GGL 2021-12-02) | mc_med=-0.7% mc_win=42% | plc_med=-2.0% plc_win=40% p=0.151 (placebo n=31)
+   H2 director_ceo         | h=21 | IS  | n=18  sym=10 mo=17 mean=-0.4% med=-0.4% win=44% worst=-21.0% (GGL 2021-12-02) | mc_med=-0.8% mc_win=47% | plc_med=-2.1% plc_win=39% p=0.216 (placebo n=18)  [insufficient to conclude]
+   H2 director_ceo         | h=21 | OOS | n=13  sym=6  mo=9  mean=+1.5% med=-0.3% win=46% worst=-9.8% (CEPB 2026-03-04) | mc_med=-0.6% mc_win=33% | plc_med=-2.0% plc_win=42% p=0.286 (placebo n=13)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 14; kept 24
+   H2 director_ceo         | h=63 | all | n=24  sym=12 mo=21 mean=-1.1% med=-2.6% win=38% worst=-33.2% (RPL 2021-01-06) | mc_med=-1.6% mc_win=38% | plc_med=-4.6% plc_win=38% p=0.258 (placebo n=24)
+   H2 director_ceo         | h=63 | IS  | n=15  sym=10 mo=14 mean=-3.1% med=-3.6% win=27% worst=-33.2% (RPL 2021-01-06) | mc_med=-2.6% mc_win=29% | plc_med=-4.2% plc_win=39% p=0.418 (placebo n=15)  [insufficient to conclude]
+   H2 director_ceo         | h=63 | OOS | n=9   sym=6  mo=7  mean=+2.2% med=+5.3% win=56% worst=-16.4% (NETSOL 2024-09-27) | mc_med=+3.1% mc_win=57% | plc_med=-5.0% plc_win=38% p=0.055 (placebo n=9)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 3, no obs in window 0; overlapping events removed 15; kept 20
+   H2 director_ceo         | h=126| all | n=20  sym=12 mo=18 mean=+2.7% med=-7.8% win=35% worst=-32.9% (RPL 2021-01-06) | mc_med=-7.8% mc_win=33% | plc_med=-8.7% plc_win=33% p=0.431 (placebo n=20)
+   H2 director_ceo         | h=126| IS  | n=14  sym=10 mo=13 mean=-9.1% med=-8.9% win=29% worst=-32.9% (RPL 2021-01-06) | mc_med=-8.1% mc_win=23% | plc_med=-10.1% plc_win=30% p=0.435 (placebo n=14)  [insufficient to conclude]
+   H2 director_ceo         | h=126| OOS | n=6   sym=5  mo=5  mean=+30.2% med=+1.7% win=50% worst=-31.7% (NETSOL 2024-09-27) | mc_med=+4.1% mc_win=60% | plc_med=-6.1% plc_win=38% p=0.174 (placebo n=6)  [insufficient to conclude]
+
+-- H2 executive
+H2 executive: events built 17; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 3; usable 14
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 0; kept 14
+   H2 executive            | h=21 | all | n=14  sym=8  mo=13 mean=+0.8% med=+0.1% win=50% worst=-18.4% (KOHC 2024-07-04) | mc_med=+0.6% mc_win=54% | plc_med=-1.2% plc_win=44% p=0.315 (placebo n=14)  [insufficient to conclude]
+   H2 executive            | h=21 | IS  | n=10  sym=6  mo=9  mean=+2.2% med=+2.1% win=50% worst=-6.6% (EFERT 2020-04-22) | mc_med=+0.6% mc_win=56% | plc_med=-0.8% plc_win=45% p=0.172 (placebo n=10)  [insufficient to conclude]
+   H2 executive            | h=21 | OOS | n=4   sym=4  mo=4  mean=-2.5% med=-2.5% win=50% worst=-18.4% (KOHC 2024-07-04) | mc_med=-2.5% mc_win=50% | plc_med=-3.1% plc_win=39% p=0.456 (placebo n=4)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 1; kept 13
+   H2 executive            | h=63 | all | n=13  sym=8  mo=12 mean=-1.3% med=-1.0% win=46% worst=-29.8% (GGL 2021-12-13) | mc_med=+0.6% mc_win=50% | plc_med=-1.3% plc_win=45% p=0.481 (placebo n=13)  [insufficient to conclude]
+   H2 executive            | h=63 | IS  | n=9   sym=6  mo=8  mean=-1.2% med=-1.0% win=44% worst=-29.8% (GGL 2021-12-13) | mc_med=+0.6% mc_win=50% | plc_med=-1.5% plc_win=46% p=0.453 (placebo n=9)  [insufficient to conclude]
+   H2 executive            | h=63 | OOS | n=4   sym=4  mo=4  mean=-1.5% med=-0.1% win=50% worst=-19.1% (FECTC 2026-01-08) | mc_med=-0.1% mc_win=50% | plc_med=-1.5% plc_win=42% p=0.438 (placebo n=4)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 1, no obs in window 0; overlapping events removed 2; kept 11
+   H2 executive            | h=126| all | n=11  sym=7  mo=10 mean=+6.6% med=-4.3% win=36% worst=-38.0% (EFERT 2020-04-22) | mc_med=-3.4% mc_win=30% | plc_med=+0.6% plc_win=51% p=0.715 (placebo n=11)  [insufficient to conclude]
+   H2 executive            | h=126| IS  | n=8   sym=6  mo=7  mean=+13.8% med=+5.3% win=50% worst=-38.0% (EFERT 2020-04-22) | mc_med=-1.6% mc_win=43% | plc_med=-2.2% plc_win=47% p=0.206 (placebo n=8)  [insufficient to conclude]
+   H2 executive            | h=126| OOS | n=3   sym=3  mo=3  mean=-12.7% med=-15.7% win=0% worst=-20.0% (FECTC 2026-01-08) | mc_med=-15.7% mc_win=0% | plc_med=+5.1% plc_win=60% p=0.930 (placebo n=3)  [insufficient to conclude]
+
+-- H3 round-trip
+H3 round-trip: events built 9; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 0; usable 9
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 1; kept 8
+   H3 round-trip           | h=21 | all | n=8   sym=3  mo=8  mean=-1.8% med=-2.4% win=12% worst=-5.1% (KOHC 2019-06-17) | mc_med=-2.4% mc_win=12% | plc_med=-1.4% plc_win=45% p=0.618 (placebo n=8)  [insufficient to conclude]
+   H3 round-trip           | h=21 | IS  | n=3   sym=1  mo=3  mean=-3.3% med=-3.1% win=0% worst=-5.1% (KOHC 2019-06-17) | mc_med=-3.1% mc_win=0% | plc_med=+1.0% plc_win=55% p=0.771 (placebo n=3)  [insufficient to conclude]
+   H3 round-trip           | h=21 | OOS | n=5   sym=3  mo=5  mean=-0.9% med=-0.9% win=20% worst=-3.6% (NETSOL 2024-09-27) | mc_med=-0.9% mc_win=20% | plc_med=-2.8% plc_win=41% p=0.451 (placebo n=5)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 3; kept 6
+   H3 round-trip           | h=63 | all | n=6   sym=3  mo=6  mean=+2.6% med=-1.0% win=50% worst=-16.4% (NETSOL 2024-09-27) | mc_med=-1.0% mc_win=50% | plc_med=-4.4% plc_win=40% p=0.285 (placebo n=6)  [insufficient to conclude]
+   H3 round-trip           | h=63 | IS  | n=2   sym=1  mo=2  mean=-1.0% med=-1.0% win=50% worst=-6.9% (KOHC 2019-06-17) | mc_med=-1.0% mc_win=50% | plc_med=+3.5% plc_win=57% p=0.659 (placebo n=2)  [insufficient to conclude]
+   H3 round-trip           | h=63 | OOS | n=4   sym=3  mo=4  mean=+4.3% med=+3.0% win=50% worst=-16.4% (NETSOL 2024-09-27) | mc_med=+3.0% mc_win=50% | plc_med=-5.9% plc_win=33% p=0.064 (placebo n=4)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 1, no obs in window 0; overlapping events removed 3; kept 5
+   H3 round-trip           | h=126| all | n=5   sym=2  mo=5  mean=+1.4% med=+5.1% win=80% worst=-31.7% (NETSOL 2024-09-27) | mc_med=+5.1% mc_win=80% | plc_med=-2.4% plc_win=44% p=0.208 (placebo n=5)  [insufficient to conclude]
+   H3 round-trip           | h=126| IS  | n=2   sym=1  mo=2  mean=+14.9% med=+14.9% win=100% worst=+9.9% (KOHC 2019-06-17) | mc_med=+14.9% mc_win=100% | plc_med=+20.4% plc_win=68% p=0.556 (placebo n=2)  [insufficient to conclude]
+   H3 round-trip           | h=126| OOS | n=3   sym=2  mo=3  mean=-7.5% med=+4.1% win=67% worst=-31.7% (NETSOL 2024-09-27) | mc_med=+4.1% mc_win=67% | plc_med=-6.8% plc_win=29% p=0.091 (placebo n=3)  [insufficient to conclude]
+
+-- H3 clean
+H3 clean: events built 98; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 41; usable 57
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 9; kept 48
+   H3 clean                | h=21 | all | n=48  sym=16 mo=35 mean=-0.1% med=-0.2% win=48% worst=-21.0% (GGL 2021-12-02) | mc_med=-0.6% mc_win=46% | plc_med=-2.3% plc_win=38% p=0.049 (placebo n=48)
+   H3 clean                | h=21 | IS  | n=29  sym=12 mo=23 mean=+1.2% med=+0.1% win=55% worst=-21.0% (GGL 2021-12-02) | mc_med=+1.9% mc_win=57% | plc_med=-2.1% plc_win=38% p=0.078 (placebo n=29)
+   H3 clean                | h=21 | OOS | n=19  sym=10 mo=12 mean=-2.1% med=-5.1% win=37% worst=-18.4% (KOHC 2024-07-04) | mc_med=-3.8% mc_win=25% | plc_med=-2.5% plc_win=39% p=0.876 (placebo n=19)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 19; kept 38
+   H3 clean                | h=63 | all | n=38  sym=16 mo=31 mean=-2.4% med=-3.9% win=37% worst=-33.2% (RPL 2021-01-06) | mc_med=-1.8% mc_win=39% | plc_med=-3.8% plc_win=40% p=0.510 (placebo n=38)
+   H3 clean                | h=63 | IS  | n=23  sym=12 mo=20 mean=-2.3% med=-3.8% win=30% worst=-33.2% (RPL 2021-01-06) | mc_med=-1.7% mc_win=35% | plc_med=-3.8% plc_win=41% p=0.497 (placebo n=23)
+   H3 clean                | h=63 | OOS | n=15  sym=10 mo=11 mean=-2.4% med=-4.8% win=47% worst=-26.9% (BFAGRO 2026-03-18) | mc_med=-5.2% mc_win=45% | plc_med=-3.9% plc_win=40% p=0.562 (placebo n=15)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 5, no obs in window 0; overlapping events removed 22; kept 30
+   H3 clean                | h=126| all | n=30  sym=16 mo=25 mean=-2.6% med=-11.7% win=23% worst=-38.0% (EFERT 2020-04-22) | mc_med=-12.2% mc_win=24% | plc_med=-7.2% plc_win=36% p=0.891 (placebo n=30)
+   H3 clean                | h=126| IS  | n=19  sym=12 mo=17 mean=-9.2% med=-9.6% win=26% worst=-38.0% (EFERT 2020-04-22) | mc_med=-9.6% mc_win=24% | plc_med=-9.2% plc_win=33% p=0.566 (placebo n=19)  [insufficient to conclude]
+   H3 clean                | h=126| OOS | n=11  sym=9  mo=8  mean=+8.8% med=-15.7% win=18% worst=-26.5% (HCAR 2024-05-17) | mc_med=-13.9% mc_win=25% | plc_med=-4.4% plc_win=41% p=0.967 (placebo n=11)  [insufficient to conclude]
+
+-- H4 single
+H4 single: events built 60; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 5; usable 55
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 13; kept 42
+   H4 single               | h=21 | all | n=42  sym=15 mo=28 mean=-1.6% med=-3.2% win=31% worst=-24.1% (BIPL 2023-06-27) | mc_med=-3.1% mc_win=32% | plc_med=-2.4% plc_win=37% p=0.296 (placebo n=42)
+   H4 single               | h=21 | IS  | n=23  sym=9  mo=17 mean=+0.5% med=-1.7% win=43% worst=-24.1% (BIPL 2023-06-27) | mc_med=-1.8% mc_win=41% | plc_med=-1.8% plc_win=41% p=0.522 (placebo n=23)
+   H4 single               | h=21 | OOS | n=19  sym=10 mo=11 mean=-4.2% med=-4.4% win=16% worst=-16.1% (NETSOL 2024-04-17) | mc_med=-3.4% mc_win=18% | plc_med=-3.0% plc_win=33% p=0.183 (placebo n=19)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 20; kept 35
+   H4 single               | h=63 | all | n=35  sym=15 mo=26 mean=-0.5% med=-2.5% win=43% worst=-33.2% (RPL 2021-01-06) | mc_med=-2.6% mc_win=38% | plc_med=-5.2% plc_win=36% p=0.814 (placebo n=35)
+   H4 single               | h=63 | IS  | n=19  sym=9  mo=15 mean=+1.5% med=-0.3% win=42% worst=-33.2% (RPL 2021-01-06) | mc_med=-0.0% mc_win=47% | plc_med=-4.8% plc_win=36% p=0.899 (placebo n=19)  [insufficient to conclude]
+   H4 single               | h=63 | OOS | n=16  sym=10 mo=11 mean=-2.8% med=-6.3% win=44% worst=-20.2% (HCAR 2024-05-17) | mc_med=-6.1% mc_win=27% | plc_med=-5.0% plc_win=37% p=0.389 (placebo n=16)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 1, no obs in window 0; overlapping events removed 25; kept 29
+   H4 single               | h=126| all | n=29  sym=15 mo=23 mean=-0.4% med=-7.3% win=34% worst=-46.7% (FFC 2020-06-29) | mc_med=-9.3% mc_win=35% | plc_med=-7.2% plc_win=37% p=0.469 (placebo n=29)
+   H4 single               | h=126| IS  | n=16  sym=9  mo=14 mean=+5.8% med=-4.7% win=44% worst=-46.7% (FFC 2020-06-29) | mc_med=-8.8% mc_win=43% | plc_med=-8.0% plc_win=34% p=0.700 (placebo n=16)  [insufficient to conclude]
+   H4 single               | h=126| OOS | n=13  sym=10 mo=9  mean=-7.9% med=-8.5% win=23% worst=-31.2% (EFERT 2025-01-06) | mc_med=-9.3% mc_win=22% | plc_med=-6.8% plc_win=39% p=0.361 (placebo n=13)  [insufficient to conclude]
+
+-- H4 cluster
+H4 cluster: events built 8; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 0; usable 8
+   h=21: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 0; kept 8
+   H4 cluster              | h=21 | all | n=8   sym=3  mo=6  mean=+0.3% med=-3.3% win=38% worst=-18.9% (KOHC 2023-11-16) | mc_med=-4.8% mc_win=33% | plc_med=-3.0% plc_win=36% p=0.449 (placebo n=8)  [insufficient to conclude]
+   H4 cluster              | h=21 | IS  | n=4   sym=3  mo=3  mean=+5.9% med=+0.5% win=50% worst=-18.9% (KOHC 2023-11-16) | mc_med=+1.9% mc_win=67% | plc_med=-1.7% plc_win=41% p=0.673 (placebo n=4)  [insufficient to conclude]
+   H4 cluster              | h=21 | OOS | n=4   sym=2  mo=3  mean=-5.3% med=-6.7% win=25% worst=-9.2% (NETSOL 2026-01-01) | mc_med=-5.7% mc_win=0% | plc_med=-3.6% plc_win=31% p=0.120 (placebo n=4)  [insufficient to conclude]
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 1; kept 7
+   H4 cluster              | h=63 | all | n=7   sym=3  mo=5  mean=+5.6% med=+2.8% win=71% worst=-15.7% (NETSOL 2025-09-24) | mc_med=+1.6% mc_win=60% | plc_med=-6.4% plc_win=33% p=0.891 (placebo n=7)  [insufficient to conclude]
+   H4 cluster              | h=63 | IS  | n=4   sym=3  mo=3  mean=+13.0% med=+15.3% win=75% worst=-10.1% (KOHC 2023-11-16) | mc_med=+21.8% mc_win=67% | plc_med=-5.6% plc_win=39% p=0.934 (placebo n=4)  [insufficient to conclude]
+   H4 cluster              | h=63 | OOS | n=3   sym=2  mo=2  mean=-4.2% med=+0.4% win=67% worst=-15.7% (NETSOL 2025-09-24) | mc_med=-7.0% mc_win=50% | plc_med=-6.6% plc_win=27% p=0.828 (placebo n=3)  [insufficient to conclude]
+   h=126: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 3; kept 5
+   H4 cluster              | h=126| all | n=5   sym=3  mo=5  mean=+6.0% med=-12.9% win=20% worst=-27.6% (KOHC 2023-11-16) | mc_med=-12.9% mc_win=20% | plc_med=-2.8% plc_win=45% p=0.112 (placebo n=5)  [insufficient to conclude]
+   H4 cluster              | h=126| IS  | n=3   sym=3  mo=3  mean=+15.0% med=-23.4% win=33% worst=-27.6% (KOHC 2023-11-16) | mc_med=-23.4% mc_win=33% | plc_med=-0.9% plc_win=50% p=0.011 (placebo n=3)  [insufficient to conclude]
+   H4 cluster              | h=126| OOS | n=2   sym=2  mo=2  mean=-7.4% med=-7.4% win=0% worst=-12.9% (NETSOL 2025-09-24) | mc_med=-7.4% mc_win=0% | plc_med=-5.1% plc_win=43% p=0.456 (placebo n=2)  [insufficient to conclude]
+
+-- event lists (all events in the 22 drawn symbols, before drops): H1 buy clusters and H4 sell clusters
+  H1 cluster: BIPL completed 2021-09-16 11:11; members HAIDER ALI HILALY, TASNIM UL FAROOQUI; entry 2021-09-16 illiquid
+  H1 cluster: CRTM completed 2021-10-28 15:53; members AHMAD SHAFI, KHALID BASHIR; entry 2021-10-29 liquid
+  H1 cluster: CRTM completed 2021-11-16 11:14; members AHMAD SHAFI, KHALID BASHIR; entry 2021-11-16 liquid
+  H1 cluster: CRTM completed 2022-03-14 13:01; members AHMAD SHAFI, KHALID BASHIR; entry 2022-03-14 illiquid
+  H1 cluster: CRTM completed 2023-04-04 10:41; members AHMAD SHAFI, KHALID BASHIR; entry 2023-04-04 illiquid
+  H1 cluster: CRTM completed 2024-10-04 15:48; members AHMAD SHAFI, MUHAMMAD ANWAR; entry 2024-10-07 illiquid
+  H1 cluster: CRTM completed 2025-10-10 12:55; members AHMAD SHAFI, MUHAMMAD ANWAR; entry 2025-10-10 liquid
+  H1 cluster: CRTM completed 2025-11-11 12:47; members AHMAD SHAFI, MUHAMMAD ANWAR; entry 2025-11-11 liquid
+  H1 cluster: FECTC completed 2024-10-22 09:39; members JUWAD SABOOR, LUBNA YASIN FECTO; entry 2024-10-22 illiquid
+  H1 cluster: GGL completed 2021-12-02 15:17; members ATIQUE AHMAD KHAN, HAFIZ FAROOQ AHMAD, MASROOR AHMAD KHAN; entry 2021-12-02 liquid
+  H1 cluster: KOHC completed 2019-05-21 10:00; members MUHAMMAD IRFAN, NADEEM ATTA SHEIKH; entry 2019-05-21 illiquid
+  H1 cluster: KOHC completed 2026-03-13 12:27; members HAMZA ATTA SHEIKH, NADEEM ATTA SHEIKH; entry 2026-03-13 liquid
+  H1 cluster: NETSOL completed 2026-03-04 10:21; members OMAR SHAHAB GHAURI, SALIM ULLAH GHAURI; entry 2026-03-04 liquid
+  H1 cluster: SPL completed 2025-11-27 12:43; members NADEEM NISAR, TARIQ NISAR; entry 2025-11-27 illiquid
+  H1 cluster: SPL completed 2026-01-12 14:52; members NADEEM NISAR, TARIQ NISAR; entry 2026-01-12 liquid
+  H1 cluster: TELE completed 2022-09-08 11:13; members SYED AAMIR HUSSAIN, SYED HASHIM ALI; entry 2022-09-08 liquid
+  H4 cluster: HCAR completed 2023-06-23 14:37; members IMRAN NASEEM, MUHAMMAD SATTAR ANJUM; entry 2023-06-23 liquid
+  H4 cluster: HCAR completed 2023-11-17 15:28; members IQBAL AHMAD, MUHAMMAD NAUMAN ALI; entry 2023-11-17 liquid
+  H4 cluster: KOHC completed 2023-11-16 09:16; members ASAD ATTA SHEIKH, HAFSA NADEEM; entry 2023-11-16 liquid
+  H4 cluster: KOHC completed 2026-01-14 09:18; members HIJAB TARIQ, OMER AIZAZ SHEIKH; entry 2026-01-14 liquid
+  H4 cluster: NETSOL completed 2020-12-24 12:44; members NAJEEB ULLAH GHAURI, OMAR SHAHAB GHAURI; entry 2020-12-24 liquid
+  H4 cluster: NETSOL completed 2025-09-24 15:05; members BOO ALI SIDDIQUI, SEHRISH ISHTIAQ; entry 2025-09-24 liquid
+  H4 cluster: NETSOL completed 2025-11-05 11:39; members BOO ALI SIDDIQUI, SALIM ULLAH GHAURI; entry 2025-11-05 liquid
+  H4 cluster: NETSOL completed 2026-01-01 11:30; members MUHAMMAD ABDUL WAHAB HAFEEZ, SEHRISH ISHTIAQ; entry 2026-01-01 liquid
+
+== 4. H2: difference in medians, sponsor_substantial minus director_ceo (net, kept events); p = share of 1,000 label shuffles with a difference at least as large (one-sided)
+h=21 all drawn events: sponsor n=9 median -4.2%, director n=31 median -0.3%; difference -3.9%; p=0.912  [insufficient to conclude]
+h=21 without ASL and AHCL: sponsor n=9 median -4.2%, director n=31 median -0.3%; difference -3.9%; p=0.912  [insufficient to conclude]
+h=63 all drawn events: sponsor n=6 median -2.4%, director n=24 median -2.6%; difference +0.3%; p=0.501  [insufficient to conclude]
+h=63 without ASL and AHCL: sponsor n=6 median -2.4%, director n=24 median -2.6%; difference +0.3%; p=0.501  [insufficient to conclude]
+h=126 all drawn events: sponsor n=5 median -4.4%, director n=20 median -7.8%; difference +3.4%; p=0.405  [insufficient to conclude]
+h=126 without ASL and AHCL: sponsor n=5 median -4.4%, director n=20 median -7.8%; difference +3.4%; p=0.405  [insufficient to conclude]
+ASL and AHCL: neither ASL (symbol) nor Arif Habib Corporation (holder) is in the 22 drawn backtest symbols, so the H2 rows above already exclude them; their 2026 filings sit in block a and are used only in the current list.
+
+== 5. CONCENTRATION (kept events, h=63, all periods)
+H1 cluster              : n=7; by year 2021:2, 2022:1, 2025:1, 2026:3; largest single month 2026-03 holds 29% of events; top 3 events sum +35.60% vs total net -6.87% (total net not positive, share not meaningful)
+H2 sponsor_substantial  : n=6; by year 2021:1, 2025:2, 2026:3; largest single month 2026-03 holds 17% of events; top 3 events sum +37.37% vs total net -4.08% (total net not positive, share not meaningful)
+H2 director_ceo         : n=24; by year 2019:4, 2021:5, 2022:5, 2023:1, 2024:1, 2025:4, 2026:4; largest single month 2025-10 holds 8% of events; top 3 events sum +81.25% vs total net -26.51% (total net not positive, share not meaningful)
+H2 executive            : n=13; by year 2019:1, 2020:5, 2021:3, 2024:1, 2025:1, 2026:2; largest single month 2021-12 holds 15% of events; top 3 events sum +57.59% vs total net -17.20% (total net not positive, share not meaningful)
+H4 single               : n=35; by year 2019:2, 2020:7, 2021:5, 2023:5, 2024:3, 2025:6, 2026:7; largest single month 2026-01 holds 14% of events; top 3 events sum +113.99% vs total net -16.40% (total net not positive, share not meaningful)
+H4 cluster              : n=7; by year 2020:1, 2023:3, 2025:1, 2026:2; largest single month 2023-11 holds 29% of events; top 3 events sum +62.01% vs total net +39.37% (share 158%)
+
+== 6. H1 ROBUSTNESS at h=63 (all periods, IS, OOS)
+H1 cluster D+1: events built 16; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 7; usable 9
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 2; kept 7
+   H1 cluster D+1          | h=63 | all | n=7   sym=6  mo=6  mean=-2.2% med=+0.8% win=57% worst=-31.8% (GGL 2021-12-03) | mc_med=-1.3% mc_win=50% | plc_med=-4.9% plc_win=37% p=0.187 (placebo n=7)  [insufficient to conclude]
+   H1 cluster D+1          | h=63 | IS  | n=3   sym=3  mo=3  mean=-14.7% med=-8.7% win=0% worst=-31.8% (GGL 2021-12-03) | mc_med=-8.7% mc_win=0% | plc_med=-7.0% plc_win=26% p=0.661 (placebo n=3)  [insufficient to conclude]
+   H1 cluster D+1          | h=63 | OOS | n=4   sym=4  mo=3  mean=+7.2% med=+5.7% win=100% worst=+0.8% (SPL 2026-01-13) | mc_med=+5.2% mc_win=100% | plc_med=-2.2% plc_win=46% p=0.195 (placebo n=4)  [insufficient to conclude]
+H1 cluster market-only: events built 16; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 7; usable 9
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 2; kept 7
+   H1 cluster market-only  | h=63 | all | n=7   sym=6  mo=6  mean=-0.6% med=+1.1% win=57% worst=-30.5% (GGL 2021-12-07) | mc_med=-1.2% mc_win=50% | plc_med=-2.9% plc_win=39% p=0.221 (placebo n=7)  [insufficient to conclude]
+   H1 cluster market-only  | h=63 | IS  | n=3   sym=3  mo=3  mean=-13.7% med=-6.9% win=0% worst=-30.5% (GGL 2021-12-07) | mc_med=-6.9% mc_win=0% | plc_med=-4.3% plc_win=33% p=0.629 (placebo n=3)  [insufficient to conclude]
+   H1 cluster market-only  | h=63 | OOS | n=4   sym=4  mo=3  mean=+9.2% med=+8.0% win=100% worst=+1.1% (SPL 2026-01-12) | mc_med=+8.6% mc_win=100% | plc_med=-2.5% plc_win=44% p=0.162 (placebo n=4)  [insufficient to conclude]
+H1 cluster ex-results: events built 16; dropped no price series 0, no observation within 5 rows 0, illiquid at entry 7, post-results 5; usable 4
+   h=63: dropped horizon past 2026-10-16 0, no obs in window 0; overlapping events removed 0; kept 4
+   H1 cluster ex-results   | h=63 | all | n=4   sym=4  mo=4  mean=-8.0% med=-2.9% win=50% worst=-33.2% (GGL 2021-12-02) | mc_med=-2.9% mc_win=50% | plc_med=-6.2% plc_win=31% p=0.326 (placebo n=4)  [insufficient to conclude]
+   H1 cluster ex-results   | h=63 | IS  | n=3   sym=3  mo=3  mean=-11.0% med=-6.9% win=33% worst=-33.2% (GGL 2021-12-02) | mc_med=-6.9% mc_win=33% | plc_med=-7.0% plc_win=26% p=0.491 (placebo n=3)  [insufficient to conclude]
+   H1 cluster ex-results   | h=63 | OOS | n=1   sym=1  mo=1  mean=+1.1% med=+1.1% win=100% worst=+1.1% (SPL 2026-01-12) | mc_med=+1.1% mc_win=100% | plc_med=-7.9% plc_win=39% p=0.348 (placebo n=1)  [insufficient to conclude]
+(c) share of usable H1 cluster events entering within 10 trading days after a financial_result announcement in the same symbol: 5 of 9 (56%)
+    among the kept 63-day H1 events: 4 of 7
+
+== 7. CURRENT LIST: H1 buy clusters and H4 sell clusters whose completing announcement falls 2026-07-18 to 2026-10-16 in KMI-list names
+
+H1 buy cluster: 1 clusters
+  SHFA: completed 2026-08-06 15:11; NOT liquid at Rs5m; entry close 2026-08-06, net excess to 2026-10-16 close -1.8%; liquid at entry: True
+      buy: ann 2026-07-13 11:18 doc 279829; Zeeshan Bin Ishtiaque (director_ceo); trade 2026-07-10; 1,850 sh @ 530.91 = Rs 982,183; mode market
+      buy: ann 2026-07-14 09:46 doc 279886; Zeeshan Bin Ishtiaque (director_ceo); trade 2026-07-13; 1,800 sh @ 536 = Rs 964,800; mode market
+      buy: ann 2026-07-14 13:46 doc 279913; Zeeshan Bin Ishtiaque (director_ceo); trade 2026-07-14; 1,850 sh @ 525.27 = Rs 971,750; mode market
+      buy: ann 2026-07-21 12:53 doc 280158; Zeeshan Bin Ishtiaque (director_ceo); trade 2026-07-15; 1,929 sh @ 522.36 = Rs 1,007,632; mode market
+      buy: ann 2026-07-21 12:53 doc 280158; Zeeshan Bin Ishtiaque (director_ceo); trade 2026-07-16; 1,900 sh @ 532 = Rs 1,010,800; mode market
+      buy: ann 2026-08-06 15:11 doc 280847; Hubert (executive); trade 2026-08-04; 200 sh @ 516 = Rs 103,200; mode market
+      no qualifying opposite-side trades in the same 30 days
+
+H4 sell cluster: 2 clusters
+  FCL: completed 2026-08-21 15:51; liquid (Rs5m, trailing 60 days); entry close 2026-08-24, net excess to 2026-10-16 close -4.5%; liquid at entry: True
+      sell: ann 2026-08-21 15:51 doc 281531; Muhammad Shahzad Mian (executive); trade 2026-08-20; 881,000 sh @ 28.02 = Rs 24,685,620; mode market
+      sell: ann 2026-08-21 15:51 doc 281531; Muhammad Usman (executive); trade 2026-08-21; 5 sh @ 28.02 = Rs 140; mode market
+      opposite side (buy) in the window: ann 2026-08-21 15:51; Muhammad Usman (executive); 5 sh @ 28.1
+  MEBL: completed 2026-09-22 13:59; liquid (Rs5m, trailing 60 days); entry close 2026-09-22, net excess to 2026-10-16 close +2.5%; liquid at entry: True
+      sell: ann 2026-09-10 10:24 doc 282470; Irfan Siddiqui (director_ceo); trade 2026-09-07; 10 sh @ 564.75 = Rs 5,648; mode market
+      sell: ann 2026-09-22 13:59 doc 283196; Shahzad Abdullah (executive); trade 2026-09-21; 23,334 sh @ 550.68 = Rs 12,849,567; mode market
+      no qualifying opposite-side trades in the same 30 days
+
+Other qualifying single buys 2026-07-18 to 2026-10-16 in KMI names that did NOT form a cluster are not listed; see data/insider_trades.csv.

@@ -71,7 +71,8 @@ ann["dt"] = ann.datetime.dt.tz_localize(None)
 fr = ann[ann.klass == "financial_result"].copy()
 low = fr.title.str.lower()
 fr["is_trans"] = low.str.contains("transmission|annual report")
-fr["bad"] = low.str.contains("revoked|other than|board meeting|conclusion|transmission|annual report") | ~low.str.contains("result")
+NOTRES = r"extension|extend|application|applied|briefing|commentary|placement|progress report|approval of|board of director|issuance of direction"
+fr["bad"] = low.str.contains("revoked|other than|board meeting|conclusion|transmission|annual report|" + NOTRES) | ~low.str.contains("result")
 MON = {m.lower(): i for i, m in enumerate(calendar.month_name) if m}
 MON.update({m.lower(): i for i, m in enumerate(calendar.month_abbr) if m}); MON["sept"] = 9
 def parse_period(t):
@@ -105,6 +106,10 @@ out(f"\n== 0. DATA CHECKS\nEPS file rows {len(e)}, symbols {e.symbol.nunique()},
 assert e.symbol.isin(cidx).all(), "EPS symbol missing from price panel"
 e["cur"] = pd.to_datetime(e.announce_dt.str.slice(0, 19), errors="coerce")
 e["cur_trans"] = e.announce_title.fillna("").str.lower().str.contains("transmission|annual report")
+# the EPS file's own join also accepted extension applications, briefings, dividend declarations etc. as the "result" stamp
+_t = e.announce_title.fillna("").str.lower()
+e["cur_bad"] = e.announce_dt.notna() & ~e.cur_trans & (_t.str.contains("revoked|other than|board meeting|conclusion|" + NOTRES) | ~_t.str.contains("result"))
+out(f"Rows whose existing announce_dt title is NOT a results release (extension application, briefing, dividend declaration, board-meeting notice, etc.): {int(e.cur_bad.sum())}; they are re-searched in qe+7d..qe+150d among valid result titles, else dropped")
 ME = pd.offsets.MonthEnd(0)
 def mshift(qe, months): return qe + pd.DateOffset(months=months) + ME
 ix = e.set_index(["symbol", "qe"])
@@ -136,7 +141,7 @@ for r in e.itertuples():
     g = FR.get(r.symbol)
     pick = None
     if g is not None:
-        ok = (g.dt >= r.qe + pd.Timedelta(days=7)) & (g.dt <= r.cur)
+        ok = (g.dt >= r.qe + pd.Timedelta(days=7)) & (g.dt <= (r.qe + pd.Timedelta(days=150) if r.cur_bad else r.cur))
         pd_ok = g.pdate.notna() & ((g.pdate - r.qe).abs() <= pd.Timedelta(days=4))
         und = g.pdate.isna()
         kind_ok = ((g.kind == "Y") & (r.qtype in ("Q4", "NA"))) | ((g.kind == "H") & (r.qtype in ("Q2", "NA"))) | \
@@ -146,15 +151,21 @@ for r in e.itertuples():
         if len(c): pick = c.iloc[0]
     if pick is not None:
         new.append(pick["dt"]); newdoc.append(str(pick["document_ids"]).split(",")[0].strip())
-    elif r.cur_trans:
+    elif r.cur_trans or r.cur_bad:
         new.append(pd.NaT); newdoc.append(""); trans_only += 1
     else:
-        new.append(r.cur); newdoc.append("" if pd.isna(r.announce_doc_id) else str(int(r.announce_doc_id)))
+        new.append(r.cur)
+        if pd.isna(r.announce_doc_id) and g is not None and (g.dt == r.cur).any():
+            newdoc.append(str(g[g.dt == r.cur].iloc[0]["document_ids"]).split(",")[0].strip())   # doc id looked up from announcements
+        else:
+            newdoc.append("" if pd.isna(r.announce_doc_id) else str(int(r.announce_doc_id)))
 e["ann"], e["doc"] = new, newdoc
 mv = e.ann.notna() & e.cur.notna() & (e.ann < e.cur)
 sh = (e.cur - e.ann)[mv].dt.total_seconds() / 86400
-out(f"Rows with joined announce_dt {e.cur.notna().sum()} (of which Transmission/Annual-Report title {int(e.cur_trans.sum())}); rows with NO announce_dt {e.cur.isna().sum()}; Transmission-only (no earlier result row found, dropped) {trans_only}")
-out(f"announce_dt moved to an EARLIER release: {int(mv.sum())} events; median shift {sh.median():.1f} days, mean {sh.mean():.1f}, 90th pct {sh.quantile(.9):.1f}, max {sh.max():.1f}; moved events whose old stamp was a Transmission row: {int((mv & e.cur_trans).sum())}")
+out(f"Rows with joined announce_dt {e.cur.notna().sum()} (of which Transmission/Annual-Report title {int(e.cur_trans.sum())}); rows with NO announce_dt {e.cur.isna().sum()}; Transmission-only or bad-title-only (no valid result row found, dropped) {trans_only}")
+out(f"announce_dt moved to an EARLIER release: {int(mv.sum())} events; median shift {sh.median():.1f} days, mean {sh.mean():.1f}, 90th pct {sh.quantile(.9):.1f}, max {sh.max():.1f}; moved events whose old stamp was a Transmission row: {int((mv & e.cur_trans).sum())}, a non-result title: {int((mv & e.cur_bad).sum())}")
+ml = e.ann.notna() & e.cur.notna() & (e.ann > e.cur)
+out(f"announce_dt moved to a LATER valid release (old stamp was a non-result title): {int(ml.sum())} events; median shift {((e.ann - e.cur)[ml].dt.total_seconds() / 86400).median():.1f} days")
 out("Dropped for no announce_dt (or transmission-only), by quarter-end year:", e[e.ann.isna()].groupby(e.qe.dt.year).size().to_dict(), "of rows by year", e.groupby(e.qe.dt.year).size().to_dict())
 out(f"Stamp exactly 08:00 (placeholder-looking) among used announce_dt: {int((e.ann.dropna().dt.strftime('%H:%M') == '08:00').sum())} of {int(e.ann.notna().sum())}")
 
@@ -408,6 +419,9 @@ for h in (60, 120):
 out("\nH3 groups: pre-dedupe n -> post-dedupe n: " + "; ".join(f"{k}: {int(G3[k].sum())} -> {int(G3d[k].sum())}" for k in G3))
 mainm = G3d["H3 main: Positive, muted +-3%, P/E<6"]
 out(f"H3 main: distinct symbols {len(set(SYM[mainm]))}, (sector, season) clusters {len(set(zip(M.sector[mainm], M.season[mainm])))}, sectors {M.sector[mainm].value_counts().to_dict()}")
+rf = (M.sector == "REFINERY") & (M.t0.dt.year == 2026)
+out(f"2026 refinery-sector events in the sample: {int(rf.sum())}; Positive {int((rf & pos_m).sum())}; muted {int((rf & pos_m & muted).sum())}; with TTM P/E<6 {int((rf & pos_m & (pe < 6)).sum())}; in H3 main {int((rf & base_h3).sum())}. Refinery 2026 detail (bucket, 5-session reaction, P/E at t0+4):")
+for k in np.where(rf)[0]: out(f"   {M.symbol[k]} qe {M.qe[k].date()} t0 {M.t0[k].date()} bucket {M.bucket[k]} reaction {fp(react[k])} P/E {fn(pe[k])}")
 out(f"Tercile cutoff on those dates: median {np.nanmedian(M.cut[mainm]):.2f}; absolute P/E<6 vs bottom tercile overlap: {int((mainm & G3d['H3 tercile: Positive, muted, P/E bottom tercile']).sum())} shared of {int(mainm.sum())}")
 
 # ---------------------------------------------------------------- historical and live H3 lists
@@ -495,12 +509,52 @@ def spot(df):
         res.append(("matched" if ni_ok else "mismatched", f"NI {'found' if ni_ok else 'not found'}, EPS {'found' if eps_ok else 'not found'} (incl. x{F:.2f} action factor)", ni_ok, eps_ok))
     return res
 out("\n== EPS SPOT-CHECK against filing PDFs (earliest result row's document; PDFs saved under data/raw/filings/, parsed as text only). 'matched' = StockAnalysis net income found in the PDF numbers (Rs, Rs'000 or Rs m, 1% tolerance); EPS also tried at restated value and at value x action factor.")
+# Manual visual reads (I rendered the scanned PDFs with pypdfium2 and read the profit and loss page by eye; recorded here, typed by hand).
+# Filing values are quoted as read. "cum" = the filing shows the annual/half-year/nine-month figure, compared with the sum of the StockAnalysis quarters.
+MANUAL = {
+ "203025": ("matched", "visual: consolidated Q2 PAT 8,391,101k, EPS 78.70 = SA 8,391 / 78.70 (standalone page shows 8,056,215k, so SA uses consolidated)"),
+ "195506": ("matched", "visual: PAT 1,027,140k, EPS 1.63"),
+ "217427": ("matched", "visual: consolidated PAT 12,301,058k, EPS 115.38"),
+ "215752": ("matched", "visual cum: FY23 PAT 2,388,337,569, EPS 140.49 = sum of SA four quarters (2,388.33m, 140.49); Q4 is derived, not directly checked"),
+ "215950": ("matched", "visual cum: FY23 PAT 224,617,797k, EPS 52.23 = SA four-quarter sum 224,618 / 52.23"),
+ "195772": ("matched", "visual: PAT 53,302,539k, EPS 12.39 vs SA 53,303 / 12.39"),
+ "230025": ("matched", "visual: unconsolidated PAT 3,215,628k, EPS 2.90 vs SA 3,201 / 2.89 (0.45% gap)"),
+ "215239": ("matched", "visual cum: FY23 consolidated PAT 97,221,614k, EPS 35.73 = SA four-quarter sum 97,222 / 35.73 (unconsolidated page shows 97,937,106k, EPS 35.99)"),
+ "196061": ("matched", "text parse"),
+ "224848": ("matched", "visual cum: FY23 consolidated attributable 20,246,473k, EPS 13.34 vs SA four-quarter sum 20,247 / 13.34 (unconsolidated 20,045,939k)"),
+ "230312": ("matched", "visual: consolidated attributable 17,186,378k, EPS 13.25 = SA 17,186 / 13.25 (unconsolidated shows 7,034,759k, EPS 5.42)"),
+ "226183": ("matched", "visual: Dolmen City REIT quarter PAT 4,047,258k, EPS 1.82 = SA 4,047 / 1.82; includes 2,923,008k unrealised fair-value gain"),
+ "235887": ("matched", "visual: consolidated Q2 attributable 6,951,840k, EPS 4.58 = SA 6,952 / 4.58 (half-year 13,561,142k)"),
+ "202621": ("matched", "visual cum: FY22 consolidated attributable 11,437,643k, EPS 7.54 = SA four-quarter sum 11,438 / 7.54"),
+ "218214": ("matched", "text parse"),
+ "201768": ("matched", "visual cum: FY22 PAT 10,118,471k, EPS 6.68 vs SA four-quarter sum 10,118 / 6.69"),
+ "201901": ("matched", "visual cum: six-month PAT 5,079,321k = SA two-quarter sum 5,079; filed EPS 2.25 vs SA 2.07 (SA EPS restated for a later bonus, ratio 1.087)"),
+ "218940": ("matched", "visual: cover letter net profit Rs19.1bn, EPS 143.50 as filed; SA EPS 15.94 = 143.50 / 9 (restated for 9:1 bonus)"),
+ "219373": ("matched", "visual: consolidated attributable to owners about 17.7bn (directors' report), EPS 57.80 as filed; SA 17,706 and 11.56 = 57.80 / 5 (5:1 split)"),
+ "283321": ("matched", "text parse"),
+ "283949": ("matched", "visual cum: FY26 consolidated attributable 14,444,403k, EPS 41.08 vs SA four-quarter sum 14,444 / 41.00"),
+ "276313": ("matched", "text parse"),
+ "281990": ("matched", "visual: half-year filing; three months to 30 Jun 2026 attributable to owners 382,030k, EPS 1.57 = SA 382.03 / 1.57 (read from a reduced-size render)"),
+ "274350": ("matched", "visual: quarter PAT 2,520,530k, EPS 59.16 = SA 2,521 / 59.16"),
+ "275279": ("mismatched", "visual: consolidated Q1 2026 attributable to owners 10,235,731k, EPS 8.50; SA shows 9,650 / 8.01 (SA is 5.7% below the filing)"),
+ "282260": ("matched", "visual cum: FY26 profit 242,371,881k (consolidated page), EPS 56.35 = SA four-quarter sum 242,371 / 56.35"),
+ "275887": ("matched", "visual: quarter PAT 212,005,917k of which owners 210,526,755k, EPS 0.50 vs SA 212.38 / 0.50 (0.9% above attributable; read from a reduced-size render)"),
+ "281755": ("matched", "visual cum: FY26 PAT 7,225,124,654, EPS 7.23 = SA four-quarter sum 7,226.34 / 7.23"),
+ "275541": ("matched", "visual: Q3 PAT 2,289,916,242, EPS 2.29 = SA 2,290 / 2.29; nine months 4,690,427,044 vs SA 4,690.34"),
+ "282589": ("matched", "visual cum: FY26 PAT about 414.9m, EPS 8.60 vs SA four-quarter sum 414.88 / 8.59 (read from a reduced-size render)"),
+}
 for nm, df in [("historical H3 list", hist.head(LISTN)), ("live H3 list", live)]:
     if not len(df): out(f"  {nm}: empty"); continue
     r_ = spot(df)
-    c = pd.Series([x[0] for x in r_]).value_counts().to_dict()
-    out(f"  {nm}: n {len(df)}; matched {c.get('matched',0)}, mismatched {c.get('mismatched',0)}, unreadable {c.get('unreadable',0)}; EPS also found in {sum(x[3] for x in r_)}")
-    for (k, rr), x in zip(df.iterrows(), r_): out(f"    {rr.symbol} {rr.qe} doc {rr.doc}: {x[0]} - {x[1]}")
+    c0 = pd.Series([x[0] for x in r_]).value_counts().to_dict()
+    out(f"  {nm}: n {len(df)}; AUTOMATIC text parse: matched {c0.get('matched',0)}, mismatched {c0.get('mismatched',0)}, unreadable {c0.get('unreadable',0)} (most filings are scanned images with no text layer)")
+    fin = []
+    for (k, rr), x in zip(df.iterrows(), r_):
+        m = MANUAL.get(str(rr.doc))
+        fin.append((m[0], m[1]) if m else (x[0], "automatic: " + x[1] + (" (no manual read)" if x[0] == "unreadable" else "")))
+    c = pd.Series([x[0] for x in fin]).value_counts().to_dict()
+    out(f"  {nm}: FINAL after visual reads of the rendered PDFs: matched {c.get('matched',0)}, mismatched {c.get('mismatched',0)}, unreadable {c.get('unreadable',0)}")
+    for (k, rr), x in zip(df.iterrows(), fin): out(f"    {rr.symbol} {rr.qe} doc {rr.doc}: {x[0]} - {x[1]}")
 
 # ---------------------------------------------------------------- H4 board notices
 out("\n== H4 BOARD MEETING NOTICES (2017-2026, announcements only, all panel names liquid at n0)")
@@ -522,7 +576,10 @@ mg = mg[mg.L >= 1].reset_index(drop=True)
 mg["s"] = mg.symbol.map(cidx)
 mg["liq"] = liq[mg.in0.values, mg.s.values]
 out(f"pairs before liquidity filter {len(mg)}; after point-in-time Rs5m filter at n0: {int(mg.liq.sum())}; median leg length {mg[mg.liq].L.median():.0f} sessions, mean {mg[mg.liq].L.mean():.1f}")
-H = mg[mg.liq].reset_index(drop=True)
+KMI = {f.stem for f in (ROOT / "data" / "prices_raw").glob("*.csv")}   # the 313 KMI names fetched from the portal (current list, not point in time)
+HALL = mg[mg.liq].reset_index(drop=True)
+H = HALL[HALL.symbol.isin(KMI)].reset_index(drop=True)
+out(f"KMI restriction (names in data/prices_raw, current KMI list): pairs after liquidity filter {len(HALL)} (all panel names) -> {len(H)} (KMI names, PRIMARY); symbols {HALL.symbol.nunique()} -> {H.symbol.nunique()}")
 H["n0"] = dates[H.in0.values]; H["t0"] = dates[H.it0.values]
 H["season"] = H.t0.dt.year.astype(str) + "Q" + H.t0.dt.quarter.astype(str)
 H["sector"] = H.symbol.map(sec).fillna("UNK")
@@ -542,6 +599,17 @@ def t4(R):
 T = t4(R4a); show("H4 (i) notice-day excess close(n0-1)->close(n0), DESCRIPTIVE not tradable", T); MDS["H4a"] = T
 T = t4(R4b); show("H4 (ii) tradable leg close(n0)->close(t0-1) excess net 0.5%, exit before the result", T); MDS["H4b"] = T
 out("   window length varies by notice; placebo uses the same length at random sessions of the same symbol and year. The leg is a pre-result run-up and overlaps the H2 pre-run window: do not add H2 and H4.")
+
+# H4 robustness: all panel names (not only KMI)
+Ha = HALL.copy(); Ha["n0"] = dates[Ha.in0.values]; Ha["t0"] = dates[Ha.it0.values]
+Ha["season"] = Ha.t0.dt.year.astype(str) + "Q" + Ha.t0.dt.quarter.astype(str); Ha["sector"] = Ha.symbol.map(sec).fillna("UNK")
+DRa = draws(Ha.s.values, Ha.in0.values, Ha.n0.dt.year.values)
+INFa = Info(Ha.symbol, Ha.n0, Ha.season, Ha.sector)
+Ra = run_window(ENG, Ha.s.values, Ha.in0.values, Ha.L.values, DRa, lambda x, L: (x, x + L), COST)
+Rb = run_window(ENG, Ha.s.values, Ha.in0.values, Ha.L.values, DRa, lambda x, L: (x - 1, x), 0.0)
+Ga = [("ALL panel names", np.ones(len(Ha), bool)), ("2017-2021", (Ha.n0.dt.year <= 2021).values), ("2022-2026", (Ha.n0.dt.year >= 2022).values)]
+show("H4 ROBUSTNESS all panel names (not only KMI): (ii) tradable leg net 0.5%", pd.DataFrame([{**summ(m, Ra, INFa), "grp": g, "per": "n0 year"} for g, m in Ga]))
+show("H4 ROBUSTNESS all panel names (not only KMI): (i) notice-day, descriptive", pd.DataFrame([{**summ(m, Rb, INFa), "grp": g, "per": "n0 year"} for g, m in Ga]))
 
 # ---------------------------------------------------------------- save
 out("\n== MARKDOWN TABLES (generated)")

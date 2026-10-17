@@ -174,6 +174,8 @@ out(f"Cash rows in corporate_actions.csv: {len(ca[ca.type=='cash'])}. Dropped: e
 out(f"Test-window cash rows after the seed/payouts duplicate fix: {len(cash)} ({n_dup} payouts duplicate of a seed row removed: seed ex date kept). By source: {cash.ex_date_source.value_counts().to_dict()}")
 out(f"Symbols not in the price panel: {(~cash.inpanel).sum()}. Ex date not a session: {(dates[np.minimum(cash.expos, LAST)] != cash.ex_date).sum()}.")
 out(f"Declaration time: {cash.how.value_counts().to_dict()}; missing: {(cash.T0 < 0).sum()}. Stamped at/after 15:30 PKT (T0 shifted to next session): {int((cash.decl.dt.hour*60+cash.decl.dt.minute >= 930).sum())} of {int(cash.decl.notna().sum())}.")
+_h = cash.ann.dt.hour * 60 + cash.ann.dt.minute
+out(f"Before spec rule 0.3(b): raw CA announce_dt stamps at/after 15:30 PKT: {int((_h >= 930).sum())} of {int(cash.ann.notna().sum())} rows with a stamp ({int(cash.ann.isna().sum())} rows have no announce_dt). Rule (b) moves the declaration to an earlier results/dividend row when one exists in the 3 days before, which removes most of the after-15:30 cases.")
 cash = cash[cash.inpanel].copy()
 
 # event positions per symbol for placebo exclusion (declaration, ex dates, results, bonus/split)
@@ -305,6 +307,9 @@ def evaluate(name, ev, kind="exc", net=False, cost=0.0, sign=1.0, direction="ge"
         name[:46], e["n"], nsym, cid.max() + 1, pf(e["mean"]), pf(e["med"]), pw(e["win"]), pf(e["worst"]), pf(e["best"]),
         c["n"], pf(c["mean"]), pf(c["med"]), pw(c["win"]), pf(c["worst"]), pf(c["best"]), pf(ps["mean"]), pf(ps["med"]), pw(ps["win"]), p_ev, p_cl))
     RESULTS.append(dict(name=name, e=e, c=c, ps=ps, p_ev=p_ev, p_cl=p_cl, clu=int(cid.max() + 1), no_pool=int((~has).sum())))
+    if show and len(cm) >= 3:
+        loo = [np.median(np.delete(cm.values, k)) for k in range(len(cm))]
+        out(f"    leave-one-cluster-out: cluster median ranges {pf(min(loo))} to {pf(max(loo))} (full {pf(c['med'])}); dropping the largest cluster by n leaves median {pf(np.median(np.delete(cm.values, int(np.bincount(cid).argmax()))))}")
     if show:
         out(f"    clusters of '{name}' (dates = first to last exposure session; mean = equal-weight over events; placebo events without pool: {int((~has).sum())})")
         for q in range(cid.max() + 1):
@@ -421,6 +426,9 @@ a = a[a.i >= 0]
 ea = prep("H2a", a.assign(sym=a.symbol), need_trd=True)
 evaluate("H2a run-up ex-10 to ex-1, net cost", ea, cost=COST, need_trd=True)
 evaluate("H2a run-up, gross (descriptive)", ea, need_trd=True, show=False)
+ea["yin"] = ea.value / cff[ea.i.values, ea.s.values]
+evaluate("H2a run-up, D/close(ex-10) >= 2%, net cost", ea[ea.yin >= 0.02].reset_index(drop=True), cost=COST, need_trd=True, show=False)
+evaluate("H2a run-up, D/close(ex-10) < 2%, net cost", ea[ea.yin < 0.02].reset_index(drop=True), cost=COST, need_trd=True, show=False)
 
 # H2b
 b = c2.copy(); b["sym"] = b.symbol
@@ -447,8 +455,8 @@ for bk in ["<2%", "2-5%", ">5%"]:
     for g in ["pdf/seed", "payouts"]:
         dr(f"H2b drop ratio, {bk}, {g}", b[(b.bucket == bk) & (b.grp == g)])
 out("  Drop ratio detail (mean/median/share with ratio >= 1 / share > 0) by bucket:")
-for lab, d in [("yield>=2%", b[sel]), ("<2%", b[b.bucket == "<2%"]), ("2-5%", b[b.bucket == "2-5%"]), (">5%", b[b.bucket == ">5%"])]:
-    out(f"    {lab:<10s} n={len(d):<4d} mean ratio {d.ratio.mean():+.2f}  median {d.ratio.median():+.2f}  share>=1 {pw((d.ratio>=1).mean())}  share>0 {pw((d.ratio>0).mean())}  winsor-5/95 mean {d.ratio.clip(d.ratio.quantile(.05), d.ratio.quantile(.95)).mean():+.2f}")
+for lab, d in [("yield>=2%", b[sel]), ("yld>=2% pdf/seed", b[sel & (b.grp == "pdf/seed")]), ("yld>=2% payouts", b[sel & (b.grp == "payouts")]), ("<2%", b[b.bucket == "<2%"]), ("2-5%", b[b.bucket == "2-5%"]), (">5%", b[b.bucket == ">5%"])]:
+    out(f"    {lab:<16s} n={len(d):<4d} mean ratio {d.ratio.mean():+.2f}  median {d.ratio.median():+.2f}  share>=1 {pw((d.ratio>=1).mean())}  share>0 {pw((d.ratio>0).mean())}  winsor-5/95 mean {d.ratio.clip(d.ratio.quantile(.05), d.ratio.quantile(.95)).mean():+.2f}  p25 {d.ratio.quantile(.25):+.2f}  p75 {d.ratio.quantile(.75):+.2f}")
 out("H2b ex-day total-return excess vs ew_market (dividend added back once by the loader), gross and net WHT; windows are single sessions so clusters are ex-dates.")
 header()
 for lab, d in [("yield>=2%", b[sel]), ("<2%", b[b.bucket == "<2%"]), ("2-5%", b[b.bucket == "2-5%"]), (">5%", b[b.bucket == ">5%"])]:
@@ -583,7 +591,7 @@ for hname, h, _ in HORIZ:
         eoff = 1 if h == "T0" else 0
         e2 = prep(f"H4 {sname} {hname}", e2, eoff=eoff)
         lo4 = int(dates.searchsorted(Y0))
-        r = evaluate(f"H4 {sname} {hname}", e2, eoff=eoff, direction="le", lo=lo4, show=(sname in ("cuts", "omissions", "pooled cut+omit") and h in (20,)))
+        r = evaluate(f"H4 {sname} {hname}", e2, eoff=eoff, direction="le", lo=lo4, show=(sname in ("cuts", "omissions", "pooled cut+omit")))
         H4V[(sname, hname)] = (e2, r)
         if h in (20, 60) and sname in ("cuts", "omissions", "pooled cut+omit"):
             evaluate(f"H4 {sname} {hname}, net WHT", e2, net=True, eoff=eoff, direction="le", lo=lo4, show=False)
@@ -610,8 +618,13 @@ for s in uni:
     ty_now[s] = amt / lastc[s]
 rank = pd.Series(ty_now).sort_values(ascending=False)
 top = list(rank.index[:30])
+dbl = []
+for s_ in top:   # the 365-day trailing window can hold the same seasonal payment twice (Oct 2025 and Oct 2026)
+    g_ = hist[(hist.symbol == s_) & (hist.ex_date > CAL0) & (hist.ex_date <= CAL1)].ex_date.sort_values().tolist()
+    if any(abs((y - x).days - 365) <= 20 for x in g_ for y in g_ if y > x): dbl.append(s_)
+out(f"Top-30 names whose trailing window holds the same seasonal payment twice (two ex-dates 345-385 days apart), which inflates their trailing yield: {len(dbl)}: {', '.join(dbl)}")
 names = an.drop_duplicates("symbol", keep="last").set_index("symbol").company
-rows = []
+rows = []; skipped = []
 for s in top:
     g = cash_all[cash_all.symbol == s].sort_values("ex_date")
     hist_s = g[g.ex_date <= CAL1]
@@ -641,12 +654,20 @@ for s in top:
                          one_off_flag=bool(one_off(best if best is not None else r)), added_on="2026-10-17"))
     for b_ in basis.itertuples():
         if b_.Index in used: continue
+        # already realized: an actual row within 45 days of basis+365d that went ex on or before 2026-10-16 (the pattern has repeated)
+        # one-to-one: each realized row repeats only the basis row whose +365d date is nearest to it
+        bl = list(hist_s.itertuples())
+        done = [x for x in basis.itertuples() if x.Index != b_.Index and abs((x.ex_date - (b_.ex_date + pd.Timedelta(days=365))).days) <= 45
+                and min(bl, key=lambda q: abs((x.ex_date - (q.ex_date + pd.Timedelta(days=365))).days)).Index == b_.Index]
+        if done:
+            skipped.append(f"{s} basis {b_.ex_date.date()} (repeated on {done[0].ex_date.date()})"); continue
         amt = adj(b_)
         rows.append(dict(symbol=s, company=names.get(s, ""), status="projected",
                          expected_ex_month=(b_.ex_date + pd.DateOffset(years=1)).strftime("%Y-%m"), expected_ex_date="",
                          gross_amount_rs=round(amt, 4), net_amount_rs=round(WHT * amt, 4), basis_ex_date=b_.ex_date.date(),
                          basis_amount_rs=round(amt, 4), basis_source=b_.ex_date_source, trailing_yield_pct=round(100 * ty_now[s], 2),
                          close_2026_10_16=lastc[s], payments_in_history=len(hist_s), one_off_flag=bool(one_off(b_)), added_on="2026-10-17"))
+out(f"Projected rows NOT created because the same-period payment already went ex on or before 2026-10-16 ({len(skipped)}): " + "; ".join(skipped))
 cal = pd.DataFrame(rows).sort_values(["symbol", "expected_ex_month"])
 (ROOT / "catalysts").mkdir(exist_ok=True)
 cal.to_csv(ROOT / "catalysts/dividend_calendar.csv", index=False)

@@ -1,0 +1,221 @@
+== SYSTEM WALK-FORWARD (B0, B1, S2, S3, S4), run 2026-10-17. Pre-registered rules: knowledge/playbooks/strategy_candidates.md
+Panel 2480 days x 456 symbols, 2016-10-17 to 2026-10-16. Months K=106 (deposits 106 x Rs50,000 = Rs5,300,000); first trade 2018-01-01 (formed 2017-12-29), last trade 2026-10-01; valued at 2026-10-16 close.
+Costs 0.25% per side. Dividends: cash from data/corporate_actions.csv at 85% (15% withholding), reinvested through the total-return index. Cash dividends are complete only from Nov 2024: before that the strategies and EW KMI are close to price return, and KSE100 is price only.
+
+== 1. DATA AND COVERAGE FLAGS
+KMI membership: 16 lists (2019-01-28 to 2026-06-05); the 13 formations before 28 Jan 2019 use KMI_ALL_derived_2019-01-28.csv (APPROXIMATION: names that left earlier are missing); later ones use the latest derived list plus index_changes.csv (psx.com.pk rows only); 2026 uses the exact 2026-06-05 list. Derived lists sit 0 to 7 names from notice totals.
+U(t) size by formation year (min/mean/max): 2017: 46/46/46; 2018: 46/54/60; 2019: 32/40/59; 2020: 51/61/75; 2021: 56/65/74; 2022: 46/51/58; 2023: 43/58/99; 2024: 70/87/106; 2025: 96/114/129; 2026: 116/129/141
+Names in U(t) with no sector code: mean 0.8, max 3. Eligible sectors (3+ names) per month: mean 11.4, min 4, max 17.
+B1 regime (6M cut-off minus policy rate, +-50bp): months {'NEUTRAL': 54, 'CUT': 16, 'HIKE': 36}
+S3 regime: months {'NEUTRAL': 14, 'TIGHT': 64, 'EASING': 28}
+S3 regime episodes: NEUTRAL 2017-12..2017-12 (1m); TIGHT 2018-01..2019-12 (24m); NEUTRAL 2020-01..2020-02 (2m); EASING 2020-03..2020-07 (5m); NEUTRAL 2020-08..2021-01 (6m); TIGHT 2021-02..2021-07 (6m); NEUTRAL 2021-08..2021-08 (1m); TIGHT 2021-09..2023-11 (27m); NEUTRAL 2023-12..2024-02 (3m); EASING 2024-03..2025-10 (20m); NEUTRAL 2025-11..2025-11 (1m); EASING 2025-12..2026-02 (3m); TIGHT 2026-03..2026-09 (7m)
+B1 regime episodes: NEUTRAL 2017-12..2018-10 (11m); CUT 2018-11..2018-11 (1m); NEUTRAL 2018-12..2019-04 (5m); HIKE 2019-05..2019-09 (5m); NEUTRAL 2019-10..2020-03 (6m); CUT 2020-04..2020-04 (1m); NEUTRAL 2020-05..2021-01 (9m); HIKE 2021-02..2021-07 (6m); NEUTRAL 2021-08..2021-08 (1m); HIKE 2021-09..2021-10 (2m); NEUTRAL 2021-11..2021-11 (1m); HIKE 2021-12..2022-12 (13m); NEUTRAL 2023-01..2023-01 (1m); HIKE 2023-02..2023-05 (4m); NEUTRAL 2023-06..2023-06 (1m); HIKE 2023-07..2023-09 (3m); NEUTRAL 2023-10..2023-10 (1m); CUT 2023-11..2024-06 (8m); NEUTRAL 2024-07..2024-07 (1m); CUT 2024-08..2024-08 (1m); NEUTRAL 2024-09..2024-09 (1m); CUT 2024-10..2025-01 (4m); NEUTRAL 2025-02..2025-12 (11m); CUT 2026-01..2026-01 (1m); NEUTRAL 2026-02..2026-02 (1m); HIKE 2026-03..2026-03 (1m); NEUTRAL 2026-04..2026-04 (1m); HIKE 2026-05..2026-05 (1m); NEUTRAL 2026-06..2026-08 (3m); HIKE 2026-09..2026-09 (1m)
+Value inputs: sa_ratios fiscal-year rows 530 for 108 names (FY by year: {2020: 2, 2021: 28, 2022: 103, 2023: 105, 2024: 107, 2025: 107, 2026: 78}); matched to an annual-result announcement 464, fallback FYE+4 months 66.
+First month with 15 or more value-eligible names in U(t): Aug 2022 formation (frozen text said about Oct 2020; the data say later because sa_ratios holds only 2 FY2020 and 28 FY2021 rows). Value-eligible names in U(t) at Dec 2020 / Dec 2021 / Dec 2022 / Sep 2026: 0 / 4 / 38 / 86
+Before that month, B1 and the S2/S3/S4 cores hold EW of the chosen sectors' liquid names (fallback rule). Lesson 9: the value half of the test covers only 50 months of a market that rerated 2022-25.
+Quarterly EPS: 2460 rows, 129 names; dated after re-join 1946; with a year-ago comparator 1584. Consolidation status UNVERIFIED (lesson 1). Blowout signals (>=+50% YoY or loss to profit) 551, of which flat vs market in the 20 sessions 247.
+Name-quarter coverage of the EPS series (liquid KMI name-quarters at calendar quarter-ends; September 2026 quarter excluded, not yet due). Under 70% = UNCOVERED:
+ year  name_quarters  in_eps_file  dated_rows  with_yoy cov_dated cov_yoy      flag
+ 2018            219          184           0         0        0%      0% UNCOVERED
+ 2019            170          150           0         0        0%      0% UNCOVERED
+ 2020            245          203           4         2        2%      1% UNCOVERED
+ 2021            250          213          94         5       38%      2% UNCOVERED
+ 2022            199          177         142        72       71%     36%   covered
+ 2023            252          218         186       185       74%     73%   covered
+ 2024            346          288         243       241       70%     70%   covered
+ 2025            453          351         309       309       68%     68% UNCOVERED
+ 2026            258          208         180       178       70%     69% UNCOVERED
+Satellite (earnings-blowout) UNCOVERED years: [2018, 2019, 2020, 2021, 2025, 2026]. Signals still trade where they exist (they are point-in-time); no other signal is substituted.
+Sponsor-buying satellite: data/insider_trades.csv EXISTS but this script does not parse it. S3 and S4 therefore run as 'no sponsor satellite': S3 is core only; S4 satellite is the earnings-blowout signal only.
+
+== 2. HEADLINE (frozen rules, total-return basis, 15% withholding on known cash dividends)
+                    strategy   final_Rs x_deposits vs_B0 TWR_CAGR    IRR  maxDD  DD_trough worst12m w12_end
+               B0 buy market 12,418,018       2.34 1.000   +10.1% +18.7% -61.3% 2020-03-26   -51.2% 2019-08
+             B1 orchestrator 13,110,944       2.47 1.056   +10.1% +19.9% -66.3% 2023-06-23   -52.9% 2019-08
+         S2 momentum+blowout 14,170,936       2.67 1.141   +11.8% +21.6% -61.3% 2020-03-26   -53.5% 2019-08
+  S3 regime (no sponsor sat) 17,630,566       3.33 1.420   +19.2% +26.3% -50.2% 2020-03-30   -42.2% 2020-03
+    S4 full (no sponsor sat) 16,541,384       3.12 1.332   +18.0% +24.9% -50.2% 2020-03-30   -42.2% 2020-03
+      EW liquid KMI (rebal.) 10,242,065       1.93 0.825    +7.4% +14.5% -60.9% 2020-03-26   -52.1% 2019-07
+KSE100 price index, no costs 17,124,185       3.23 1.379   +17.4% +25.6% -41.6% 2020-03-25   -28.9% 2019-08
+Deposits total Rs5,300,000. TWR CAGR is of the unit value from 2018-01-01 (costs fall on performance). IRR is money-weighted. Worst 12m is the worst rolling 12 months of month-end unit values (F_k).
+
+Trade statistics (net of 0.5% round trip; trade = first buy to full exit; dividends reinvested inside the return; open trades marked at 16 Oct 2026, net of exit fee):
+strategy  closed_n closed_hit closed_median closed_mean closed_worst  open_n open_hit open_median  all_n all_hit all_median avg_names sell_turnover_pa fees_Rs
+      B0        89       +48%         -0.9%      +14.5%       -70.5%     185     +49%       -0.8%    274    +49%      -0.8%      99.0               6%  23,701
+      B1       277       +43%         -6.1%       +5.4%       -72.3%       5     +20%       -7.7%    282    +43%      -6.2%      24.8             178% 364,150
+      S2       299       +43%         -4.9%       +2.9%       -58.0%       6     +17%       -4.7%    305    +42%      -4.9%      13.7             247% 562,582
+      S3       121       +57%         +5.4%      +14.6%       -43.0%       3     +33%       -3.5%    124    +56%      +5.2%       5.6             199% 616,733
+      S4       160       +60%         +5.0%      +17.5%       -42.7%       8     +25%       -3.1%    168    +58%      +3.9%       7.6             195% 534,912
+Closed-trade exit reasons: B1: {'review_regime': 217, 'shariah': 20, 'review_rank': 40, 'open': 5}; S2: {'review_sector': 246, 'shariah': 11, 'sat_time': 17, 'sat_breaker': 15, 'review_ey_bottom_half': 5, 'sat_trail': 5, 'open': 6}; S3: {'regime_set': 67, 'review_sector': 43, 'shariah': 9, 'review_ey_bottom_half': 2, 'open': 3}; S4: {'regime_set': 61, 'review_sector': 44, 'shariah': 12, 'sat_time': 17, 'sat_breaker': 18, 'review_ey_bottom_half': 3, 'sat_trail': 5, 'open': 8}
+
+By sleeve (P&L = proceeds + open mark - cost, summed over trades; ret_on_cost = P&L / cost):
+strategy sleeve  closed_n  hit median   mean  worst  open_n     cost_Rs     PnL_Rs ret_on_cost
+      B1   core       243 +47%  -2.2%  +7.0% -72.3%       5  74,917,200  7,812,907      +10.4%
+      B1     ew        34 +18%  -9.0%  -6.2% -33.7%       0     568,919    -34,740       -6.1%
+      S2   core       261 +41%  -5.5%  +2.0% -58.0%       2  71,290,958  7,356,710      +10.3%
+      S2    sat        38 +58%  +2.6%  +9.2% -42.5%       4  43,881,333  1,478,798       +3.4%
+      S3   core       121 +57%  +5.4% +14.6% -43.0%       3 126,002,422 12,286,490       +9.8%
+      S4   core       119 +61%  +7.4% +20.4% -40.7%       4  58,925,585  8,314,070      +14.1%
+      S4    sat        41 +56%  +2.0%  +9.3% -42.7%       4  50,712,700  2,885,961       +5.7%
+
+== 3. YEAR BY YEAR: Rs value of the Rs50k/month deposits at each 31 Dec (and 16 Oct 2026) vs KSE100 and EW KMI
+-- B0
+      date deposited   strategy     KSE100     EW_KMI vs_KSE vs_EW year_TWR KSE_yr
+2018-12-31   600,000    476,874    524,015    480,974   0.91  0.99   -17.7%  -9.0%
+2019-12-31 1,200,000  1,110,007  1,261,529  1,132,923   0.88  0.98    -9.4%  +9.9%
+2020-12-31 1,800,000  2,491,266  2,053,357  2,462,256   1.21  1.01   +46.8%  +7.4%
+2021-12-31 2,400,000  2,639,756  2,674,135  2,745,893   0.99  0.96   -14.3%  +1.9%
+2022-12-30 3,000,000  2,416,113  2,986,859  2,355,127   0.81  1.03   -26.9%  -9.4%
+2023-12-29 3,600,000  4,545,548  5,455,893  4,309,309   0.83  1.05   +52.6% +54.5%
+2024-12-31 4,200,000  9,212,574 10,981,075  8,421,190   0.84  1.09   +81.9% +84.3%
+2025-12-31 4,800,000 12,795,242 17,399,027 11,071,893   0.74  1.16   +31.1% +51.2%
+2026-10-16 5,300,000 12,418,018 17,124,185 10,242,065   0.73  1.21    -6.8%  -4.4%
+-- B1
+      date deposited   strategy     KSE100     EW_KMI vs_KSE vs_EW year_TWR KSE_yr
+2018-12-31   600,000    474,668    524,015    480,974   0.91  0.99   -20.0%  -9.0%
+2019-12-31 1,200,000  1,201,828  1,261,529  1,132,923   0.95  1.06    -3.3%  +9.9%
+2020-12-31 1,800,000  2,935,478  2,053,357  2,462,256   1.43  1.19   +62.9%  +7.4%
+2021-12-31 2,400,000  2,642,308  2,674,135  2,745,893   0.99  0.96   -26.4%  +1.9%
+2022-12-30 3,000,000  2,112,405  2,986,859  2,355,127   0.71  0.90   -36.1%  -9.4%
+2023-12-29 3,600,000  4,434,757  5,455,893  4,309,309   0.81  1.03   +63.3% +54.5%
+2024-12-31 4,200,000  8,856,624 10,981,075  8,421,190   0.81  1.05   +77.4% +84.3%
+2025-12-31 4,800,000 14,857,310 17,399,027 11,071,893   0.85  1.34   +58.6% +51.2%
+2026-10-16 5,300,000 13,110,944 17,124,185 10,242,065   0.77  1.28   -14.7%  -4.4%
+-- S2
+      date deposited   strategy     KSE100     EW_KMI vs_KSE vs_EW year_TWR KSE_yr
+2018-12-31   600,000    511,181    524,015    480,974   0.98  1.06   -12.9%  -9.0%
+2019-12-31 1,200,000  1,064,706  1,261,529  1,132,923   0.84  0.94   -18.4%  +9.9%
+2020-12-31 1,800,000  2,595,585  2,053,357  2,462,256   1.26  1.05   +57.9%  +7.4%
+2021-12-31 2,400,000  2,760,923  2,674,135  2,745,893   1.03  1.01   -13.6%  +1.9%
+2022-12-30 3,000,000  2,258,320  2,986,859  2,355,127   0.76  0.96   -34.7%  -9.4%
+2023-12-29 3,600,000  4,142,055  5,455,893  4,309,309   0.76  0.96   +46.3% +54.5%
+2024-12-31 4,200,000 11,015,798 10,981,075  8,421,190   1.00  1.31  +142.6% +84.3%
+2025-12-31 4,800,000 17,060,631 17,399,027 11,071,893   0.98  1.54   +48.1% +51.2%
+2026-10-16 5,300,000 14,170,936 17,124,185 10,242,065   0.83  1.38   -19.6%  -4.4%
+-- S3
+      date deposited   strategy     KSE100     EW_KMI vs_KSE vs_EW year_TWR KSE_yr
+2018-12-31   600,000    510,603    524,015    480,974   0.97  1.06    -8.7%  -9.0%
+2019-12-31 1,200,000  1,239,558  1,261,529  1,132,923   0.98  1.09    +9.7%  +9.9%
+2020-12-31 1,800,000  2,525,151  2,053,357  2,462,256   1.23  1.03   +32.7%  +7.4%
+2021-12-31 2,400,000  2,907,553  2,674,135  2,745,893   1.09  1.06    -7.9%  +1.9%
+2022-12-30 3,000,000  3,413,222  2,986,859  2,355,127   1.14  1.45    -3.7%  -9.4%
+2023-12-29 3,600,000  6,197,745  5,455,893  4,309,309   1.14  1.44   +56.4% +54.5%
+2024-12-31 4,200,000 17,952,247 10,981,075  8,421,190   1.63  2.13  +174.1% +84.3%
+2025-12-31 4,800,000 22,758,149 17,399,027 11,071,893   1.31  2.06   +23.1% +51.2%
+2026-10-16 5,300,000 17,630,566 17,124,185 10,242,065   1.03  1.72   -24.6%  -4.4%
+-- S4
+      date deposited   strategy     KSE100     EW_KMI vs_KSE vs_EW year_TWR KSE_yr
+2018-12-31   600,000    510,603    524,015    480,974   0.97  1.06    -8.7%  -9.0%
+2019-12-31 1,200,000  1,239,558  1,261,529  1,132,923   0.98  1.09    +9.7%  +9.9%
+2020-12-31 1,800,000  2,525,151  2,053,357  2,462,256   1.23  1.03   +32.7%  +7.4%
+2021-12-31 2,400,000  2,893,531  2,674,135  2,745,893   1.08  1.05    -8.4%  +1.9%
+2022-12-30 3,000,000  3,247,730  2,986,859  2,355,127   1.09  1.38    -8.0%  -9.4%
+2023-12-29 3,600,000  6,398,578  5,455,893  4,309,309   1.17  1.48   +68.5% +54.5%
+2024-12-31 4,200,000 15,642,638 10,981,075  8,421,190   1.42  1.86  +129.8% +84.3%
+2025-12-31 4,800,000 19,910,094 17,399,027 11,071,893   1.14  1.80   +22.7% +51.2%
+2026-10-16 5,300,000 16,541,384 17,124,185 10,242,065   0.97  1.62   -19.3%  -4.4%
+
+== 4. SPLITS (time-weighted CAGR of unit value) and the value-data period
+                    strategy CAGR_2018_2021 CAGR_2022_2026 CAGR_from_2022-09 maxDD_from_2022-09
+               B0 buy market          -1.6%         +20.9%            +27.8%             -28.2%
+             B1 orchestrator          -1.9%         +21.1%            +27.2%             -45.9%
+         S2 momentum+blowout          -0.8%         +23.6%            +33.8%             -28.8%
+  S3 regime (no sponsor sat)          +5.2%         +32.4%            +39.9%             -41.7%
+    S4 full (no sponsor sat)          +5.0%         +30.1%            +37.4%             -35.8%
+      EW liquid KMI (rebal.)          -0.3%         +14.3%            +21.0%             -30.6%
+KSE100 price index, no costs          +2.3%         +31.6%            +39.3%             -22.6%
+From 2022-09 the value inputs are live (15+ eligible names); before it B1, S2 and the cores of S3/S4 run on the EW-of-chosen-sectors fallback. Lesson 9: 2022 to 2025 carries the rerating tailwind; the Oct 2025 to Oct 2026 cohort was flat to negative for value.
+
+== 5. EARNINGS-BLOWOUT SATELLITE (S2 and S4) AND PLACEBO
+-- S2: satellite trades 42 (closed 38, open 4); by entry year {2021: 1, 2022: 1, 2023: 11, 2024: 10, 2025: 10, 2026: 9}; in UNCOVERED years: 20
+   trade return (net, as defined): n 42, hit +52%, median +0.4%, mean +7.9%, worst -42.5%
+   Placebo (1,000 sets, one random U(t) name per trade, same entry day and same exit, lump-sum, net of 0.5%): actual median +1.5% vs placebo median +1.1% (5th-95th pct of set medians -2.8% to +6.0%); difference +0.42%; actual above 57% of placebo sets; mean actual +13.2% vs placebo +10.1%. Signal survives the placebo test.
+   AUDIT placebo drawn only from quarterly_eps names (the signal's own survivor pool): placebo median +1.7%, difference -0.12%, actual above 47% of sets -> fails
+   by exit reason (count, median): {'open': {'count': 4, 'median': -0.047}, 'sat_breaker': {'count': 15, 'median': 0.004}, 'sat_time': {'count': 17, 'median': 0.206}, 'sat_trail': {'count': 5, 'median': -0.154}, 'shariah': {'count': 1, 'median': 0.175}}
+-- S4: satellite trades 45 (closed 41, open 4); by entry year {2021: 1, 2022: 2, 2023: 12, 2024: 10, 2025: 11, 2026: 9}; in UNCOVERED years: 21
+   trade return (net, as defined): n 45, hit +51%, median +0.4%, mean +7.9%, worst -42.7%
+   Placebo (1,000 sets, one random U(t) name per trade, same entry day and same exit, lump-sum, net of 0.5%): actual median +0.4% vs placebo median +0.6% (5th-95th pct of set medians -3.1% to +5.6%); difference -0.20%; actual above 48% of placebo sets; mean actual +11.5% vs placebo +8.2%. Signal ABANDONED (<= 0).
+   AUDIT placebo drawn only from quarterly_eps names (the signal's own survivor pool): placebo median +1.5%, difference -1.10%, actual above 34% of sets -> fails
+   by exit reason (count, median): {'open': {'count': 4, 'median': -0.056}, 'sat_breaker': {'count': 18, 'median': 0.029}, 'sat_time': {'count': 17, 'median': 0.218}, 'sat_trail': {'count': 5, 'median': -0.267}, 'shariah': {'count': 1, 'median': -0.0}}
+-- Signal-level placebo not applicable to S3: no sponsor satellite.
+
+== 6. ABANDONMENT TESTS (value at 16 Oct 2026, frozen)
+B0: bar, never abandoned.
+B1: Rs13,110,944 / B0 Rs12,418,018 = 1.056 (threshold 1.00) -> SURVIVES
+S2: Rs14,170,936 / B0 Rs12,418,018 = 1.141 (threshold 1.05) -> SURVIVES
+S3: Rs17,630,566 / B0 Rs12,418,018 = 1.420 (threshold 1.10) -> SURVIVES
+S4: Rs16,541,384 / better of S2 and S3 Rs17,630,566 = 0.938 (threshold 1.00) -> ABANDON
+S4: satellite signal fails the placebo (median trade minus placebo <= 0) -> signal abandoned whatever the strategy does.
+S3 sponsor-buying signal: not tested (no insider_trades.csv). S3 and S4 verdicts are for 'no sponsor satellite' versions; the S3 sector lists were read off 2018-2026 windows (partly in-sample), so S3 is an upper bound.
+Also: B0 is 0.73x KSE100 and 1.21x EW KMI; best strategy S3 is 1.03x KSE100.
+
+== 7. VARIANTS (POST-HOC, not headline). Final Rs / TWR CAGR / ratio to that variant's B0
+-- A. price-return basis (no cash dividends at all); first value month Aug 2022
+strategy   final_Rs TWR_CAGR vs_B0  maxDD
+      B0 11,686,370    +9.1% 1.000 -61.4%
+      B1 11,916,756    +8.8% 1.020 -66.4%
+      S2 13,114,431   +10.6% 1.122 -61.4%
+      S3 15,203,688   +16.8% 1.301 -50.4%
+      S4 16,259,015   +17.5% 1.391 -50.4%
+      EW  9,789,628    +6.7% 0.838 -60.9%
+     KSE 17,124,185   +17.4% 1.465 -41.6%
+   verdicts: B1 1.020 (ok); S2 1.122 (ok); S3 1.301 (ok); S4 vs best(S2,S3) 1.069 (ok)
+-- B. value lag = later of announcement and FYE+3m (task wording); first value month Sep 2022
+strategy   final_Rs TWR_CAGR vs_B0  maxDD
+      B0 12,418,018   +10.1% 1.000 -61.3%
+      B1 18,136,705   +14.8% 1.461 -65.0%
+      S2 16,780,380   +14.4% 1.351 -61.3%
+      S3 17,878,565   +19.4% 1.440 -50.2%
+      S4 16,018,535   +17.5% 1.290 -50.2%
+      EW 10,242,065    +7.4% 0.825 -60.9%
+     KSE 17,124,185   +17.4% 1.379 -41.6%
+   verdicts: B1 1.461 (ok); S2 1.351 (ok); S3 1.440 (ok); S4 vs best(S2,S3) 0.896 (abandon)
+-- C. satellite switched off (S2 and S4 core only); first value month Aug 2022
+strategy   final_Rs TWR_CAGR vs_B0  maxDD
+      B0 12,418,018   +10.1% 1.000 -61.3%
+      B1 13,110,944   +10.1% 1.056 -66.3%
+      S2 13,648,899   +11.3% 1.099 -61.3%
+      S3 17,630,566   +19.2% 1.420 -50.2%
+      S4 16,050,090   +17.7% 1.292 -50.2%
+      EW 10,242,065    +7.4% 0.825 -60.9%
+     KSE 17,124,185   +17.4% 1.379 -41.6%
+   verdicts: B1 1.056 (ok); S2 1.099 (ok); S3 1.420 (ok); S4 vs best(S2,S3) 0.910 (abandon)
+-- D. a trimmed name gets no new money in the month it is trimmed; first value month Aug 2022
+strategy   final_Rs TWR_CAGR vs_B0  maxDD
+      B0 12,418,018   +10.1% 1.000 -61.3%
+      B1 13,106,113   +10.1% 1.055 -66.4%
+      S2 14,807,743   +12.4% 1.192 -61.3%
+      S3 17,227,128   +19.8% 1.387 -45.4%
+      S4 16,579,604   +18.8% 1.335 -45.4%
+      EW 10,242,065    +7.4% 0.825 -60.9%
+     KSE 17,124,185   +17.4% 1.379 -41.6%
+   verdicts: B1 1.055 (ok); S2 1.192 (ok); S3 1.387 (ok); S4 vs best(S2,S3) 0.962 (abandon)
+-- E. AUDIT: 25% trailing stop on core names (month-end check), stopped name blocked 3 months; first value month Aug 2022
+strategy   final_Rs TWR_CAGR vs_B0  maxDD
+      B0 12,418,018   +10.1% 1.000 -61.3%
+      B1 13,110,944   +10.1% 1.056 -66.3%
+      S2 16,186,502   +15.1% 1.303 -55.9%
+      S3 14,450,534   +16.4% 1.164 -47.3%
+      S4 16,801,873   +19.0% 1.353 -47.3%
+      EW 10,242,065    +7.4% 0.825 -60.9%
+     KSE 17,124,185   +17.4% 1.379 -41.6%
+   verdicts: B1 1.056 (ok); S2 1.303 (ok); S3 1.164 (ok); S4 vs best(S2,S3) 1.038 (ok)
+   core_trail exits: S2 91; S3 31; S4 32
+
+== 8. AUDIT (Opus, 2026-10-17): SURVIVOR-SELECTED PICK POOL. sa_ratios and quarterly_eps names were chosen on 2026 liquidity; B0 holds all of U(t).
+   2018-01 to 2022-07: pool share of U(t) 85%; monthly EW(pool) - EW(rest) mean +0.03%, median +0.72%, t 0.04, compounded ratio 1.16
+   2022-08 to 2026-09: pool share of U(t) 82%; monthly EW(pool) - EW(rest) mean +2.28%, median +3.04%, t 3.85, compounded ratio 3.01
+-- Every strategy re-run with U(t) restricted to the pick pool (132 names: sa_ratios or quarterly_eps); B0' and EW' hold the same pool. First value month Aug 2022.
+strategy  frozen_Rs frozen_vs_B0 frozen_vs_poolB0    pool_Rs pool_CAGR pool_vs_poolB0 pool_maxDD
+      B0 12,418,018        1.000            0.953 13,035,446    +10.9%          1.000     -60.9%
+      B1 13,110,944        1.056            1.006 14,817,824    +11.5%          1.137     -65.9%
+      S2 14,170,936        1.141            1.087 16,568,950    +13.8%          1.271     -62.0%
+      S3 17,630,566        1.420            1.353 17,264,373    +19.6%          1.324     -50.2%
+      S4 16,541,384        1.332            1.269 19,050,382    +20.8%          1.461     -50.2%
+      EW 10,242,065        0.825            0.786 11,846,249     +9.8%          0.909     -59.9%
+     KSE 17,124,185        1.379            1.314 17,124,185    +17.4%          1.314     -41.6%
+   pool verdicts: B1 1.137 (ok); S2 1.271 (ok); S3 1.324 (ok); S4 vs best(S2,S3) 1.103 (ok)
+   S2 satellite in pool run: n 45, actual median +0.5%, placebo (quarterly_eps names) +2.3%, difference -1.88% -> fails
+   S4 satellite in pool run: n 45, actual median -0.0%, placebo (quarterly_eps names) +1.2%, difference -1.18% -> fails
+
+Wrote tests/out/walkforward_trades.csv (1153 rows) and walkforward_holdings.csv (15974 rows).
