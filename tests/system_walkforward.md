@@ -240,3 +240,78 @@ Would I bet the user's Rs50k a month on S3 as a system? **No.** I would bet it o
 
 - Patch: `set_pool` and `POOL` (same-pool runs); `placebo(..., names=, rg=)` (own-pool placebo on its own random stream, so the headline placebo is unchanged); variants 7E and 7F (`cstop`); section 8 (pool bar, pool re-run, KMI All Share bar). Every number in sections 1 to 6 matches the builder's run. Text changes: two AUDIT placebo lines in section 5; the `insider_trades.csv` line ("EXISTS but this script does not parse it"); and the KSE100 label, now "total return", with the dividend note in the header line corrected.
 - Another session committed an intermediate state of these files in `0220f06` (23:47): `walkforward.py` with section 8 but without variant F or the KMI bar, `walkforward_v0.py`, and an earlier `walkforward_trades_pool.csv`. The working tree holds the final versions. This audit committed nothing.
+
+## Like-for-like benchmarks and the cap-weighted core (18 Oct 2026)
+
+Script `scripts/walkforward_rebench.py` (imports the frozen engine from `walkforward.py`; no pre-registered rule changed). Raw output `tests/out/walkforward_rebench.txt`. Same Rs50k monthly deposits (106 deposits, Rs5.3m), same trade dates, valued 16 Oct 2026. Benchmarks are bought with each deposit at no cost.
+
+### Method
+
+1. **Accrued dividends (an ESTIMATE).** Before 1 Nov 2024, `corporate_actions.csv` holds only 94 cash rows, so the strategies are close to price return. For each holding-month the accrued basis adds 0.85 x `dividendyield` / 12 to the name's return, using the latest fiscal year in `sa_ratios.csv` published before the month (the later of the annual `financial_result` announcement, else FYE + 4 months, and FYE + 4 months). The 94 early cash rows are dropped from the accrued basis so nothing is counted twice; from Nov 2024 the actual table is used and nothing is accrued. Every strategy is re-run on the accrued return series, so the sector-momentum and regime inputs of S2 to S4 also see the accrued returns.
+   Limits: the yield is the fiscal-year yield, not the payment dates; names outside `sa_ratios` (108 names) accrue 0; and `sa_ratios` has almost no rows before FY2021, so strict "accrued" covers 0% of U(t) in 2018-2020, 4% in Jan 2021 and 33-44% from 2022. The strict figure therefore still understates the early years. I added a POST-HOC `accrued_bf` basis that fills the months before a name's first published row with that first row's yield (37-45% of names covered throughout). It uses a later yield for earlier months, so read it as an upper estimate; the truth lies between the two.
+2. **B2** (the cap-weighted core `strategy.md` proposes): at each month-end the 12 largest liquid KMI All Share names by 60-day median traded value (a proxy for size, since share counts are unavailable), weighted by that traded value and capped at 15%. Targets are reviewed quarterly (and at once if a target leaves KMI), each deposit goes to the names furthest below target, a name is sold only on KMI deletion, costs 0.5% round trip. **B2-EW**: the same 12 names at equal weight. **B0-monthly**: the existing monthly-rebalanced equal-weight liquid-KMI run (labelled "EW" in the original report).
+3. **70/30**: 70% of each deposit to B2 and 30% to S3 (frozen rules), rebalanced to 70/30 each January at 0.25% a side on the amount moved. Built from the two sleeves' unit-value series.
+
+### Result: final value (Rs, 16 Oct 2026) and ratio to KMI All Share TR (Rs14.10m)
+
+| | Frozen (no accrual) | Accrued | Accrued, backfilled (post-hoc) | Ratio to KMI TR: frozen / accrued / backfilled |
+|---|---|---|---|---|
+| B0 | 12.42m | 12.90m | 13.66m | 0.88 / 0.92 / 0.97 |
+| B0-monthly | 10.24m | 10.65m | 11.09m | 0.73 / 0.76 / 0.79 |
+| B1 | 13.11m | 14.14m | 14.81m | 0.93 / 1.00 / 1.05 |
+| S2 | 14.17m | 15.27m | 16.20m | 1.01 / 1.08 / 1.15 |
+| S3 | 17.63m | 18.60m | 20.37m | 1.25 / 1.32 / 1.44 |
+| S4 | 16.54m | 17.85m | 19.46m | 1.17 / 1.27 / 1.38 |
+| **B2** | 11.55m | 12.15m | 12.99m | 0.82 / 0.86 / 0.92 |
+| B2-EW | 12.07m | 12.66m | 13.66m | 0.86 / 0.90 / 0.97 |
+| **70/30 B2 + S3** | 13.39m | 14.12m | 15.24m | 0.95 / 1.00 / 1.08 |
+| KMI All Share TR | 14.10m | | | 1.00 |
+| KMI30 TR | 15.17m | | | 1.08 |
+| KSE100 TR | 17.12m | | | 1.21 |
+
+The accrual lifts the strategies by 4% to 8% (backfilled: 10% to 16%), so it closes only part of the gap the Opus note attributed to missing dividends. The index still leads B0, B0-monthly and the B2 family on every basis. B1, S2, S3, S4 and the blend reach or pass the index once accrued.
+
+### Statistics (accrued basis; the backfilled and frozen versions are in the raw file)
+
+CAGR is the time-weighted return of unit value. Turnover is sells / average NAV / year.
+
+| | Final Rs | x deposits | TWR CAGR | IRR | Max DD | Worst 12m (end) | Turnover |
+|---|---|---|---|---|---|---|---|
+| B0 | 12.90m | 2.43 | +10.7% | +19.5% | -61.4% | -51.2% (Aug 19) | 5% |
+| B0-monthly | 10.65m | 2.01 | +8.0% | +15.4% | -60.9% | -52.1% (Jul 19) | 121% |
+| B2 | 12.15m | 2.29 | +7.1% | +18.2% | -63.7% | -49.8% (Aug 19) | 4% |
+| B2-EW | 12.66m | 2.39 | +9.0% | +19.1% | -61.1% | -49.0% (Aug 19) | 4% |
+| S3 | 18.60m | 3.51 | +19.8% | +27.4% | -50.4% | -42.3% (Mar 20) | 197% |
+| 70/30 | 14.12m | 2.66 | +11.4% | +21.5% | -59.4% | -46.4% (Aug 19) | 66% |
+| KMI All Share TR | 14.10m | 2.66 | +14.2% | +21.4% | -44.1% | -33.2% (Aug 19) | - |
+| KMI30 TR | 15.17m | 2.86 | +15.3% | +23.0% | -47.8% | -34.7% (Aug 19) | - |
+| KSE100 TR | 17.12m | 3.23 | +17.4% | +25.6% | -41.6% | -28.9% (Aug 19) | - |
+
+Year by year, time-weighted return, accrued (the raw file has every strategy on all three bases, and Rs values at each year end):
+
+| Year | KMI TR | B0 | B0-monthly | B2 | B2-EW | S3 | 70/30 |
+|---|---|---|---|---|---|---|---|
+| 2018 | -10.8% | -17.7% | -15.9% | -25.5% | -23.2% | -8.9% | -20.5% |
+| 2019 | +6.6% | -9.5% | -9.0% | -9.5% | -6.2% | +9.3% | -3.9% |
+| 2020 | +12.0% | +46.7% | +42.5% | +28.0% | +35.9% | +33.1% | +29.6% |
+| 2021 | +1.4% | -14.7% | -9.9% | -22.0% | -21.7% | -9.8% | -18.3% |
+| 2022 | -9.3% | -26.5% | -31.2% | -27.5% | -25.3% | -6.8% | -21.3% |
+| 2023 | +53.4% | +57.0% | +50.8% | +58.9% | +58.6% | +63.7% | +60.3% |
+| 2024 | +64.8% | +87.0% | +77.8% | +80.8% | +86.1% | +189.2% | +113.6% |
+| 2025 | +34.3% | +30.1% | +23.1% | +31.1% | +32.6% | +23.3% | +28.8% |
+| 2026 (to 16 Oct) | -3.5% | -6.9% | -11.8% | -0.9% | -4.8% | -24.6% | -8.0% |
+
+### Findings
+
+- **B2 does not beat B0 or the index.** Accrued, B2 ends at 0.94x B0 and 0.86x the KMI All Share TR (0.82x frozen, 0.92x backfilled). Equal-weighting the same 12 names (B2-EW, 0.90x) beats traded-value weighting, and B0 (all liquid KMI names, buy and hold) beats both. B2 also has the deepest drawdown (-63.7% against the index's -44.1%). It trails the index in 2018, 2019, 2021, 2022 and 2025, and leads in 2020, 2023, 2024 and 2026 (-0.9% against -3.5%).
+- **B0-monthly is worse than B0** (10.65m against 12.90m accrued): monthly rebalancing and 121% turnover cost about Rs2.3m. Buy and hold is the better equal-weight version.
+- **70/30 ends level with the index when accrued** (14.12m, 1.00x; 1.08x backfilled; 0.76x S3 alone). It has a worse max drawdown (-59.4% against -44.1%) and worst 12 months (-46.4% against -33.2%) than the index. It inherits B2's weakness more than S3's strength: S3's 2024 of +189% is diluted to +114%.
+- **B2 membership.** 40 target reviews in 106 months (quarterly, plus forced by deletions). Per review a mean 2.7 names enter the top 12 (max 5), and only one review left the set unchanged; 43 distinct names were ever in the top 12; 10 KMI-deletion sells. Because B2 sells only on deletion, a name that drops out of the top 12 stays held at a zero target, so on 16 Oct 2026 B2 holds **33 names**, not 12. Largest: ATRL 14.3%, LUCK 8.3%, PPL 8.1%, SAZEW 7.9%, OGDC 7.1%, PSO 5.9%. The current targets (Sep 2026 review) are PRL 15%, NRL 12.3%, MLCF 10.8%, OGDC 9.1%, PPL 8.6%, DGKC 7.4%, ATRL 7.0%, PSO 5.7%, LUCK 4.7%, MEBL 4.2%, FFC 4.2% and one more name (see raw file). The rule as written gives a diffuse tail, which is the main reason B2 behaves like an equal-weight book.
+
+### Caveats
+
+1. **The accrual is an estimate and is incomplete.** Strict accrued has no coverage in 2018-2020; backfilled covers about 40% of names with later yields. Names outside `sa_ratios` and non-payers get 0. The index carries its full dividend history from day one, so the like-for-like gap is still tilted against the strategies in 2018-21. The ratios to the index lie between the accrued and backfilled columns.
+2. **The panel is survivor-biased** (456 names listed on 16 Oct 2026), which flatters B0, B2 and every equal- or traded-value-weight book against the real index histories. B0 and B2 lag the index despite that.
+3. **B2 is a proxy, not an index replica.** Traded value is not free-float cap. It favours heavily traded, speculative names (PRL, NRL, ATRL) that a cap-weighted index holds at low weights. A KMI tracking fund or a true cap-weighted book could behave differently; this test cannot say so.
+4. The blend uses sleeve unit-value series, so minimum-ticket effects at the 30% deposit size are ignored; the January rebalance costs 0.25% a side on the amount moved.
+5. S3 stays in-sample (sector lists read off the test period; SAZEW and LUCK drive its profit), so the S3 leg of the blend flatters it.

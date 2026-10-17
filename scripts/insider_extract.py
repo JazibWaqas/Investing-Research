@@ -16,7 +16,7 @@ D_ISO = re.compile(r"(?<!\d)(20\d\d)\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{1,2})(?!\
 D_DMY = re.compile(rf"(?<!\d)(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]*{MONRE}[\s,.-]*(\d{{4}})", re.I)
 D_MDY = re.compile(rf"\b{MONRE}[\s.]*(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]+(\d{{4}})", re.I)
 NUM = re.compile(r"(?<![\w.])\d[\d,]*(?:\.\d+)?(?![\w])")
-BUYW = re.compile(r"right|purchas|bought|\bbuy|acqui|\bgift\s*(?:in|from)|\bpurch", re.I)
+BUYW = re.compile(r"\bright\b|purchas|bought|\bbuy|acqui|\bgift\s*(?:in|from)|\bpurch", re.I)
 SELLW = re.compile(r"\bsale|\bsold|\bsell|dispos|\bgift\s*(?:out|to)", re.I)
 NAMESKIP = re.compile(r"name|person|descri|detail|relevant|shares?\b|transaction|date|nature|form|market|cumulative|holding|certificate|number|percent|rate|sr\b|no\.|total|subject|dear|yours|the general|pakistan|exchange|regulation|company|limited|ltd|director|executive|secretary|officer|spouse|substantial|disclosure|interest|cdc|physical|ready|through", re.I)
 
@@ -100,7 +100,8 @@ def clean_name(s):
     s = re.sub(r"\b(cdc|ready|physical|through|market|buy|sale|sold|purchase[d]?|rs\.?|s\.?no|sr\.?)\b", " ", s, flags=re.I)
     s = re.sub(r"^[\s\d.)\-:]+", "", s)
     s = re.sub(r"[^A-Za-z .'&-]", " ", s)
-    return " ".join(s.split())
+    s = re.sub(r"[ ,]+(ceo|cfo|chairman|chairperson|director|executive|secretary|nominee|sponsor|spouse|shareholder|manager).*$", "", " ".join(s.split()), flags=re.I)
+    return s.strip(" ,.-")
 
 
 def name_for(lines, i, a):
@@ -118,11 +119,15 @@ def name_for(lines, i, a):
 
 def parse(text, filed, symbol):
     lines = [l.strip() for l in text.splitlines() if l.strip()]
-    for i in range(len(lines) - 1):   # date wrapped over two lines: "24-08-" / "2026 ..."
-        m = re.search(r"(?<!\d)\d{1,2}\s*[-./]\s*(?:\d{1,2}|[A-Za-z]{3,9})\s*[-./,]?\s*$", lines[i])
-        y = re.match(r"([\dOo]{4})\s*(.*)", lines[i + 1])
-        if m and y and not dates_in(lines[i]):
-            lines[i] = lines[i] + " " + y[1].replace("O", "0").replace("o", "0"); lines[i + 1] = y[2]
+    for i in range(len(lines) - 1):   # date wrapped over two lines: "11-03- BUY ..." / "Shafi 2025" or "24-08-" / "2026 ..."
+        if dates_in(lines[i]):
+            continue
+        m = re.search(r"(?<!\d)(\d{1,2}\s*[-./]\s*(?:\d{1,2}|[A-Za-z]{3,9})\s*[-./,])(?!\s*\d)", lines[i])
+        y = re.search(r"(?<![\d,.])(20[\dOoSs]{2})(?![\d,.])", lines[i + 1])
+        if m and y:
+            yr = y[1].translate(str.maketrans("OoSs", "0055"))
+            lines[i] = lines[i][:m.end()] + yr + lines[i][m.end():]
+            lines[i + 1] = (lines[i + 1][:y.start()] + lines[i + 1][y.end():]).strip()
     lines = [l for l in lines if l]
     doc_roles = [roles(l) for l in lines if l.count("/") < 2 and re.search(r"\bby\b.*(mr|mrs|ms|dr)\b", l, re.I)]
     rows, last_name = [], ""
@@ -167,21 +172,14 @@ def parse(text, filed, symbol):
             vals = [num(t) for t in toks]
             sh = pr = None
             cand = [v for v in vals if v is not None]
-            # default layout: shares then price; try swapped if only that fits the market
-            if len(cand) >= 2:
-                s1, p1 = cand[0], cand[1]
-                ok1 = price_ok(symbol, d, p1)
-                ok2 = price_ok(symbol, d, s1)
-                if ok1 is False and ok2:
-                    sh, pr = p1, s1
-                else:
-                    sh, pr = s1, p1
-                    if ok1 is False:   # look for any later token that fits
-                        for v in cand[2:]:
-                            if price_ok(symbol, d, v):
-                                pr = v; break
-            else:
-                sh = cand[0]
+            # default layout: shares then price; the price is the first later token that sits inside the market range
+            sh, pr = cand[0], (cand[1] if len(cand) > 1 else None)
+            if len(cand) >= 2 and price_ok(symbol, d, pr) is False:
+                fit = [k for k in range(len(cand)) if k != 0 and price_ok(symbol, d, cand[k])]
+                if fit:
+                    pr = cand[fit[0]]
+                elif price_ok(symbol, d, cand[0]):   # price printed before the share count
+                    sh, pr = cand[1], cand[0]
             if sh is not None and (sh < 1 or sh != int(sh)):
                 if pr is not None and pr == int(pr) and pr >= 1:
                     sh, pr = pr, sh

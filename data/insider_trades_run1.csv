@@ -1,0 +1,974 @@
+doc_id,line,ann_datetime,symbol,holder_name,holder_norm,role,direction,mode,trade_date,shares,price,source,note,value_rs,dup_of,revoked,qual
+127607,0,2019-03-15 11:10:00,FECTC,Mohammad Yasin Fecto,MOHAMMAD YASIN FECTO,director_ceo,buy,market,2019-03-13,4583.0,30.0,pdf_eye,Director/CEO; physical purchase,137490.0,,0,True
+127886,0,2019-03-26 09:58:00,CPPL,Abid Vazir,ABID VAZIR,director_ceo,buy,market,2019-03-25,100.0,138.9,pdf_eye,Director and Company Secretary,13890.0,,0,True
+127983,0,2019-03-28 12:24:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,buy,other,2019-03-26,2515115.0,,pdf_eye,Chairman; allotment against transfer of Ghani Global Glass shares under a court-sanctioned scheme,,,0,False
+127983,0,2019-03-28 12:24:00,GGL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,buy,other,2019-03-26,2061092.0,,pdf_eye,CEO; scheme allotment,,,0,False
+127983,0,2019-03-28 12:24:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,buy,other,2019-03-26,2061150.0,,pdf_eye,Director; scheme allotment,,,0,False
+127983,0,2019-03-28 12:24:00,GGL,Rabia Atique,RABIA ATIQUE,director_ceo,buy,other,2019-03-26,419540.0,,pdf_eye,Director; scheme allotment,,,0,False
+127983,0,2019-03-28 12:24:00,GGL,Saira Farooq,SAIRA FAROOQ,director_ceo,buy,other,2019-03-26,419540.0,,pdf_eye,Director; scheme allotment,,,0,False
+127983,0,2019-03-28 12:24:00,GGL,Tahira Naheed,TAHIRA NAHEED,sponsor_substantial,buy,other,2019-03-26,6947816.0,,pdf_eye,Sponsor; scheme allotment,,,0,False
+130977,0,2019-05-16 12:06:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-05-15,62000.0,54.59,pdf_text,Director,3384580.0,,0,True
+131089,0,2019-05-21 10:00:00,KOHC,Muhammad Irfan,MUHAMMAD IRFAN,executive,buy,market,2019-05-16,7500.0,52.21,pdf_eye,Executive,391575.0,,0,True
+131096,0,2019-05-21 10:39:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,market,2019-05-20,22000.0,46.97,pdf_text,Director,1033340.0,,0,True
+131154,0,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,7700.0,55.9,pdf_text,Executive Director,430430.0,,0,True
+131154,1,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,100.0,55.99,pdf_text,Executive Director,5599.0,,0,True
+131154,2,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,4700.0,56.0,pdf_text,Executive Director,263200.0,,0,True
+131154,3,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,700.0,56.4,pdf_text,Executive Director,39480.0,,0,True
+131154,4,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,1600.0,56.45,pdf_text,Executive Director,90320.0,,0,True
+131154,5,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,300.0,56.46,pdf_text,Executive Director,16938.0,,0,True
+131154,6,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,5000.0,56.47,pdf_text,Executive Director,282350.0,,0,True
+131154,7,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,1000.0,56.5,pdf_text,Executive Director,56500.0,,0,True
+131154,8,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,400.0,56.56,pdf_text,Executive Director,22624.0,,0,True
+131154,9,2019-05-22 11:36:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-05-21,28500.0,56.59,pdf_text,Executive Director,1612815.0,,0,True
+131156,0,2019-05-22 11:41:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,market,2019-05-21,10000.0,47.75,pdf_text,Director,477500.0,,0,True
+131210,0,2019-05-23 13:24:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,buy,gift_inherit_transfer,2019-05-22,2421171.0,,pdf_eye,Non-Executive Director; Gift in,,,0,False
+131210,0,2019-05-23 13:24:00,GGL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,buy,gift_inherit_transfer,2019-05-22,1909845.0,,pdf_eye,Executive Director; Gift in,,,0,False
+131210,0,2019-05-23 13:24:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,buy,gift_inherit_transfer,2019-05-22,2647133.0,,pdf_eye,Executive Director; Gift in,,,0,False
+131252,0,2019-05-27 10:01:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-05-24,10000.0,53.23,pdf_text,Director,532300.0,,0,True
+131253,0,2019-05-27 10:01:00,WAVES,Haroon Ahmad Khan,HAROON AHMAD KHAN,director_ceo,buy,market,2019-05-24,600000.0,26.48,pdf_eye,Director/CEO (Managing Director; substantial holder per sibling bonus filing),15888000.0,,0,True
+131362,0,2019-05-29 11:51:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-05-28,30000.0,53.35,pdf_text,Director,1600500.0,,0,True
+131407,0,2019-05-30 10:07:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-05-29,34000.0,55.87,pdf_eye,Director,1899580.0,,0,True
+131469,0,2019-06-03 10:00:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-05-30,104000.0,56.32,pdf_text,Director,5857280.0,,0,True
+131474,0,2019-06-03 10:04:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,buy,market,2019-05-30,26000.0,56.88,pdf_text,Director,1478880.0,,0,True
+131585,0,2019-06-10 14:46:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-03,4500.0,55.2,pdf_eye,Director,248400.0,,0,True
+131620,0,2019-06-11 15:27:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-10,10000.0,53.2,pdf_eye,"Director; PDF page tree unreadable by pdfplumber, embedded JPEG read by eye",532000.0,,0,True
+131636,0,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,400.0,61.51,pdf_eye,copy of 131642 (earliest of the three),24604.0,,0,True
+131636,1,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,200.0,61.6,pdf_eye,copy of 131642 (earliest of the three),12320.0,,0,True
+131636,2,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.0,pdf_eye,copy of 131642 (earliest of the three),31000.0,,0,True
+131636,3,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1100.0,62.2,pdf_eye,copy of 131642 (earliest of the three),68420.0,,0,True
+131636,4,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.4,pdf_eye,copy of 131642 (earliest of the three),31200.0,,0,True
+131636,5,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1200.0,62.5,pdf_eye,copy of 131642 (earliest of the three),75000.0,,0,True
+131636,6,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,600.0,62.7,pdf_eye,copy of 131642 (earliest of the three),37620.0,,0,True
+131636,7,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2000.0,62.74,pdf_eye,copy of 131642 (earliest of the three),125480.0,,0,True
+131636,8,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1100.0,62.8,pdf_eye,copy of 131642 (earliest of the three),69080.0,,0,True
+131636,9,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,62.9,pdf_eye,copy of 131642 (earliest of the three),6290.0,,0,True
+131636,10,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,3100.0,62.95,pdf_eye,copy of 131642 (earliest of the three),195145.0,,0,True
+131636,11,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2000.0,62.97,pdf_eye,copy of 131642 (earliest of the three),125940.0,,0,True
+131636,12,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.98,pdf_eye,copy of 131642 (earliest of the three),31490.0,,0,True
+131636,13,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1600.0,62.99,pdf_eye,copy of 131642 (earliest of the three),100784.0,,0,True
+131636,14,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,20200.0,63.0,pdf_eye,copy of 131642 (earliest of the three),1272600.0,,0,True
+131636,15,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,63.2,pdf_eye,copy of 131642 (earliest of the three),6320.0,,0,True
+131636,16,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.25,pdf_eye,copy of 131642 (earliest of the three),31625.0,,0,True
+131636,17,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.38,pdf_eye,copy of 131642 (earliest of the three),31690.0,,0,True
+131636,18,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,63.39,pdf_eye,copy of 131642 (earliest of the three),6339.0,,0,True
+131636,19,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.4,pdf_eye,copy of 131642 (earliest of the three),31700.0,,0,True
+131636,20,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2500.0,63.49,pdf_eye,copy of 131642 (earliest of the three),158725.0,,0,True
+131636,21,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,200.0,63.5,pdf_eye,copy of 131642 (earliest of the three),12700.0,,0,True
+131636,22,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1300.0,63.6,pdf_eye,copy of 131642 (earliest of the three),82680.0,,0,True
+131636,23,2019-06-12 12:22:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1500.0,63.61,pdf_eye,copy of 131642 (earliest of the three),95415.0,,0,True
+131641,0,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,400.0,61.51,pdf_eye,copy of 131642,24604.0,131636,0,False
+131641,1,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,200.0,61.6,pdf_eye,copy of 131642,12320.0,131636,0,False
+131641,2,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.0,pdf_eye,copy of 131642,31000.0,131636,0,False
+131641,3,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1100.0,62.2,pdf_eye,copy of 131642,68420.0,131636,0,False
+131641,4,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.4,pdf_eye,copy of 131642,31200.0,131636,0,False
+131641,5,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1200.0,62.5,pdf_eye,copy of 131642,75000.0,131636,0,False
+131641,6,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,600.0,62.7,pdf_eye,copy of 131642,37620.0,131636,0,False
+131641,7,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2000.0,62.74,pdf_eye,copy of 131642,125480.0,131636,0,False
+131641,8,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1100.0,62.8,pdf_eye,copy of 131642,69080.0,131636,0,False
+131641,9,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,62.9,pdf_eye,copy of 131642,6290.0,131636,0,False
+131641,10,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,3100.0,62.95,pdf_eye,copy of 131642,195145.0,131636,0,False
+131641,11,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2000.0,62.97,pdf_eye,copy of 131642,125940.0,131636,0,False
+131641,12,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.98,pdf_eye,copy of 131642,31490.0,131636,0,False
+131641,13,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1600.0,62.99,pdf_eye,copy of 131642,100784.0,131636,0,False
+131641,14,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,20200.0,63.0,pdf_eye,copy of 131642,1272600.0,131636,0,False
+131641,15,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,63.2,pdf_eye,copy of 131642,6320.0,131636,0,False
+131641,16,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.25,pdf_eye,copy of 131642,31625.0,131636,0,False
+131641,17,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.38,pdf_eye,copy of 131642,31690.0,131636,0,False
+131641,18,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,63.39,pdf_eye,copy of 131642,6339.0,131636,0,False
+131641,19,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.4,pdf_eye,copy of 131642,31700.0,131636,0,False
+131641,20,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2500.0,63.49,pdf_eye,copy of 131642,158725.0,131636,0,False
+131641,21,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,200.0,63.5,pdf_eye,copy of 131642,12700.0,131636,0,False
+131641,22,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1300.0,63.6,pdf_eye,copy of 131642,82680.0,131636,0,False
+131641,23,2019-06-12 12:41:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1500.0,63.61,pdf_eye,copy of 131642,95415.0,131636,0,False
+131642,0,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,400.0,61.51,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",24604.0,131636,0,False
+131642,1,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,200.0,61.6,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",12320.0,131636,0,False
+131642,2,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.0,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",31000.0,131636,0,False
+131642,3,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1100.0,62.2,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",68420.0,131636,0,False
+131642,4,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.4,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",31200.0,131636,0,False
+131642,5,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1200.0,62.5,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",75000.0,131636,0,False
+131642,6,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,600.0,62.7,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",37620.0,131636,0,False
+131642,7,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2000.0,62.74,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",125480.0,131636,0,False
+131642,8,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1100.0,62.8,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",69080.0,131636,0,False
+131642,9,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,62.9,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",6290.0,131636,0,False
+131642,10,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,3100.0,62.95,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",195145.0,131636,0,False
+131642,11,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2000.0,62.97,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",125940.0,131636,0,False
+131642,12,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,62.98,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",31490.0,131636,0,False
+131642,13,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1600.0,62.99,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",100784.0,131636,0,False
+131642,14,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,20200.0,63.0,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",1272600.0,131636,0,False
+131642,15,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,63.2,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",6320.0,131636,0,False
+131642,16,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.25,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",31625.0,131636,0,False
+131642,17,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.38,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",31690.0,131636,0,False
+131642,18,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,100.0,63.39,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",6339.0,131636,0,False
+131642,19,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,500.0,63.4,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",31700.0,131636,0,False
+131642,20,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,2500.0,63.49,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",158725.0,131636,0,False
+131642,21,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,200.0,63.5,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",12700.0,131636,0,False
+131642,22,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1300.0,63.6,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",82680.0,131636,0,False
+131642,23,2019-06-12 12:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2019-06-11,1500.0,63.61,pdf_eye,"Executive Director; page 1 read by eye; same content filed three times (131636, 131641, 131642)",95415.0,131636,0,False
+131690,0,2019-06-13 15:11:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-12,87000.0,52.63,pdf_eye,"Director; PDF page tree unreadable by pdfplumber, embedded JPEG read by eye",4578810.0,,0,True
+131729,0,2019-06-14 14:40:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-13,51000.0,55.4,pdf_eye,Director,2825400.0,,0,True
+131730,0,2019-06-14 14:43:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,buy,market,2019-06-13,36500.0,55.41,pdf_eye,Director,2022464.9999999998,,0,True
+131760,0,2019-06-17 09:21:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-14,109500.0,57.76,pdf_text,Director; price OCR-garbled,6324720.0,,0,True
+131816,0,2019-06-18 10:52:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-17,10000.0,59.63,pdf_text,Director,596300.0,,0,True
+131858,0,2019-06-19 09:54:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-18,5000.0,56.7,pdf_text,Director,283500.0,,0,True
+131898,0,2019-06-20 11:22:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-19,10000.0,57.72,pdf_text,Director,577200.0,,0,True
+132159,0,2019-06-28 10:42:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-06-27,5000.0,52.2,pdf_eye,Director,261000.0,,0,True
+132367,0,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,10.0,51.7,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,517.0,,0,True
+132367,1,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,10.0,51.72,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,517.2,,0,True
+132367,2,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,5.0,51.73,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,258.65,,0,True
+132367,3,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,2500.0,52.0,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,130000.0,,0,True
+132367,4,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,2000.0,51.84,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,103680.0,,0,True
+132367,5,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,1500.0,52.03,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,78045.0,,0,True
+132367,6,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,500.0,52.28,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,26140.0,,0,True
+132367,7,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,2500.0,52.5,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,131250.0,,0,True
+132367,8,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,2500.0,52.75,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,131875.0,,0,True
+132367,9,2019-07-05 12:52:00,ISL,Syed Hasan Irshad Rizvi,SYED HASAN IRSHAD RIZVI,unknown,sell,market,2019-04-29,2500.0,52.9,pdf_text,broker trade confirmation (Fortune Securities) with no insider role stated; filed 67 days after the trade,132250.0,,0,True
+132467,0,2019-07-10 11:14:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-09,5000.0,52.75,pdf_text,Director,263750.0,,0,True
+132493,0,2019-07-11 12:34:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-10,9000.0,53.14,pdf_eye,Director,478260.0,,0,True
+132506,0,2019-07-12 11:48:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-11,5000.0,52.97,pdf_text,Director,264850.0,,0,True
+132549,0,2019-07-15 14:24:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-12,15000.0,52.03,pdf_text,Director/Chief Executive,780450.0,,0,True
+132561,0,2019-07-16 10:40:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-15,33000.0,50.26,pdf_text,Director/Chief Executive,1658580.0,,0,True
+132590,0,2019-07-17 10:22:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-16,3000.0,48.65,pdf_text,Director/Chief Executive,145950.0,,0,True
+132653,0,2019-07-18 13:00:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-17,17000.0,50.32,pdf_text,Director/Chief Executive,855440.0,,0,True
+132690,0,2019-07-19 11:28:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-07-18,17000.0,48.49,pdf_text,Director/Chief Executive,824330.0,,0,True
+132898,0,2019-07-26 15:09:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,esop,2019-07-25,10000.0,16.42,pdf_eye,"Executive Director; nature LSOS (ESOS exercise), physical shares; text layer empty so read by eye",164200.00000000003,,0,False
+133198,0,2019-08-06 10:10:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2019-08-05,10000.0,46.38,pdf_text,Director/Chief Executive,463800.0,,0,True
+133463,0,2019-08-19 11:37:00,CEPB,Aftab Ahmad,AFTAB AHMAD,unknown,buy,market,2019-08-09,37000.0,25.71,pdf_eye,role not stated in the filing; ready market,951270.0,,0,True
+133519,0,2019-08-20 12:41:00,CEPB,Premier Fashions Private Limited,PREMIER FASHIONS PRIVATE LIMITED,sponsor_substantial,buy,off_market_block,2019-08-19,450000.0,23.558,pdf_eye,Associated Company; NDM,10601100.0,,0,False
+134274,0,2019-09-06 11:05:00,SSGC,Syed Akhtar Ali,SYED AKHTAR ALI,director_ceo,buy,market,2019-08-27,500.0,18.2,pdf_text,Director; month garbled in OCR (27-Aug-19 inferred from filing date),9100.0,,0,True
+134274,1,2019-09-06 11:05:00,SSGC,Syed Akhtar Ali,SYED AKHTAR ALI,director_ceo,buy,market,2019-08-27,1000.0,18.23,pdf_text,Director; month garbled in OCR (27-Aug-19 inferred from filing date),18230.0,,0,True
+134274,2,2019-09-06 11:05:00,SSGC,Syed Akhtar Ali,SYED AKHTAR ALI,director_ceo,buy,market,2019-08-27,500.0,18.24,pdf_text,Director; month garbled in OCR (27-Aug-19 inferred from filing date),9120.0,,0,True
+134274,3,2019-09-06 11:05:00,SSGC,Syed Akhtar Ali,SYED AKHTAR ALI,director_ceo,buy,market,2019-08-27,500.0,18.25,pdf_text,Director; month garbled in OCR (27-Aug-19 inferred from filing date),9125.0,,0,True
+134471,0,2019-09-16 11:40:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,buy,market,2019-09-13,5000.0,46.27,pdf_text,Executive,231350.00000000003,,0,True
+137377,0,2019-10-22 15:05:00,ISL,Nausheen Ahmad,NAUSHEEN AHMAD,director_ceo,buy,market,2019-10-21,500.0,41.975,pdf_text,Director,20987.5,,0,True
+138929,0,2019-11-05 12:30:00,WAVES,Waves bonus allotment (8 lines),WAVES BONUS ALLOTMENT 8 LINES,unknown,buy,bonus,2019-11-05,9377416.0,,pdf_eye,"15 percent bonus shares to Haroon Ahmad Khan (MD), directors and spouses; individual lines not transcribed because excluded by mode",,,0,False
+139219,0,2019-11-13 11:29:00,CPPL,Cherat bonus allotment (11 lines),CHERAT BONUS ALLOTMENT 11 LINES,unknown,buy,bonus,2019-11-12,18959.0,,pdf_eye,byte-identical copy (md5) of 139220,,,0,False
+139220,0,2019-11-13 11:34:00,CPPL,Cherat bonus allotment (11 lines),CHERAT BONUS ALLOTMENT 11 LINES,unknown,buy,bonus,2019-11-12,18959.0,,pdf_eye,"bonus shares to Amer Faruque (CEO), Akbarali Pesnani, other directors and spouses, Faruque (Pvt) Ltd; individual lines not transcribed because excluded by mode",,139219,0,False
+139702,0,2019-11-25 12:34:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2019-11-22,1000.0,19.5,pdf_text,Director (Mohammad Raziuddin Monem),19500.0,,0,True
+140118,0,2019-12-05 11:54:00,KOHC,Muhammad Irfan,MUHAMMAD IRFAN,executive,sell,market,2019-12-04,2000.0,78.5,pdf_text,Executive,157000.0,,0,True
+140415,0,2019-12-13 15:31:00,KOHC,Muhammad Irfan,MUHAMMAD IRFAN,executive,sell,market,2019-12-12,2000.0,75.64,pdf_text,Executive,151280.0,,0,True
+140565,0,2019-12-18 12:32:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,sell,gift_inherit_transfer,2019-12-16,2300000.0,,pdf_eye,Non-Executive Director; Gift out,,,0,False
+140565,0,2019-12-18 12:32:00,GGL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,sell,gift_inherit_transfer,2019-12-16,2300000.0,,pdf_eye,CEO; Gift out,,,0,False
+140565,0,2019-12-18 12:32:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,sell,gift_inherit_transfer,2019-12-16,2300000.0,,pdf_eye,Executive Director; Gift out,,,0,False
+141472,0,2020-01-15 11:45:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,sell,gift_inherit_transfer,2020-01-13,600000.0,,pdf_eye,Executive Director; Gift out,,,0,False
+141871,0,2020-01-27 13:04:00,KOHC,Muhammad Irfan,MUHAMMAD IRFAN,executive,sell,market,2020-01-24,1500.0,83.02,pdf_eye,Executive,124530.0,,0,True
+142255,0,2020-02-04 09:29:00,KOHC,Muhammad Irfan,MUHAMMAD IRFAN,executive,sell,market,2020-01-31,2000.0,90.0,pdf_eye,Executive,180000.0,,0,True
+142462,0,2020-02-10 13:18:00,ISL,Sanaullah,SANAULLAH,executive,buy,market,2020-02-07,1000.0,53.6361,pdf_text,Head of Export,53636.1,,0,True
+142585,0,2020-02-13 10:41:00,ISL,Sanaullah,SANAULLAH,executive,buy,market,2020-02-11,1000.0,48.145,pdf_text,Head of Export,48145.0,,0,True
+144345,0,2020-03-05 09:15:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,buy,market,2020-03-03,20000.0,106.9,pdf_eye,Executive,2138000.0,,0,True
+145114,0,2020-03-27 10:46:00,ISL,Mustapha A Chinoy,MUSTAPHA A CHINOY,director_ceo,sell,market,2020-03-26,310000.0,30.029,pdf_eye,Director,9308990.0,,0,True
+145221,0,2020-03-30 12:44:00,ISL,Mustapha A. Chinoy,MUSTAPHA A CHINOY,director_ceo,sell,market,2020-03-27,329000.0,30.0,pdf_text,Director,9870000.0,,0,True
+145296,0,2020-03-31 12:03:00,ISL,Mustapha A. Chinoy,MUSTAPHA A CHINOY,director_ceo,sell,market,2020-03-30,400000.0,31.905,pdf_text,Director,12762000.0,,0,True
+145352,0,2020-04-01 10:51:00,ISL,Mustapha A. Chinoy,MUSTAPHA A CHINOY,director_ceo,sell,market,2020-03-31,226000.0,35.2612,pdf_text,Director,7969031.2,,0,True
+145512,0,2020-04-07 11:42:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,sell,market,2020-03-19,25000.0,99.22,pdf_eye,Executive,2480500.0,,0,True
+145640,0,2020-04-10 13:45:00,BIPL,Ali Hussain,ALI HUSSAIN,sponsor_substantial,buy,off_market_block,2020-04-09,40000000.0,9.5,pdf_eye,Chairman and sponsor shareholder; NDM,380000000.0,,0,False
+145640,0,2020-04-10 13:45:00,BIPL,Ahmed G M Randeree,AHMED G M RANDEREE,sponsor_substantial,sell,off_market_block,2020-04-09,40000000.0,9.5,pdf_eye,sponsor shareholder; NDM; counterpart of Ali Hussain buy,380000000.0,,0,False
+145848,0,2020-04-16 12:32:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2020-03-17,13000.0,20.77,pdf_eye,director,270010.0,,0,True
+145848,1,2020-04-16 12:32:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2020-03-18,87000.0,19.2276,pdf_eye,director,1672801.2,,0,True
+145848,2,2020-04-16 12:32:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2020-03-19,50000.0,17.78,pdf_eye,director,889000.0,,0,True
+146294,0,2020-04-22 13:50:00,EFERT,Ghias Uddin Khan,GHIAS UDDIN KHAN,executive,buy,unstated,2020-04-21,1663894.0,57.36,pdf_text,Engro Corp employee 'shares declaration form'; Bought per edit log; exchange vs private not determinable,95440959.84,,0,True
+148936,0,2020-06-15 15:01:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,buy,market,2020-04-09,10000.0,118.0,pdf_eye,Executive,1180000.0,,0,True
+148936,0,2020-06-15 15:01:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,sell,market,2020-04-29,10000.0,138.4,pdf_eye,Executive,1384000.0,,0,True
+149373,0,2020-06-29 11:03:00,FFC,Muhammad Aleem Khan,MUHAMMAD ALEEM KHAN,executive,sell,market,2020-06-26,20000.0,109.47,pdf_eye,General Manager M&O,2189400.0,,0,True
+149848,0,2020-07-13 15:11:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2020-07-07,305500.0,24.33,pdf_eye,Non-Executive Director,7432814.999999999,,0,True
+149848,1,2020-07-13 15:11:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2020-07-08,50000.0,24.0,pdf_eye,Non-Executive Director,1200000.0,,0,True
+149962,0,2020-07-16 15:16:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2020-07-14,1012000.0,24.87,pdf_eye,Non-Executive Director,25168440.0,,0,True
+149962,1,2020-07-16 15:16:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2020-07-15,2730000.0,24.86,pdf_eye,Non-Executive Director,67867800.0,,0,True
+149971,0,2020-07-17 10:07:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2020-07-16,4631500.0,24.68,pdf_eye,Non-Executive Director,114305420.0,,0,True
+151935,0,2020-09-07 15:25:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-04,342500.0,12.0,pdf_eye,beneficial owner of Alpha Beta Finance Limited,4110000.0,,0,True
+151935,1,2020-09-07 15:25:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-03,1157500.0,12.1933,pdf_eye,beneficial owner of Alpha Beta Finance Limited,14113744.75,,0,True
+151962,0,2020-09-08 10:32:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-07,1460500.0,12.1,pdf_eye,beneficial owner of Alpha Beta Finance Limited,17672050.0,,0,True
+151962,1,2020-09-08 10:32:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-07,39500.0,12.11,pdf_eye,beneficial owner of Alpha Beta Finance Limited,478345.0,,0,True
+151962,2,2020-09-08 10:32:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-07,3000000.0,12.2,pdf_eye,beneficial owner of Alpha Beta Finance Limited,36600000.0,,0,True
+152302,0,2020-09-16 13:14:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-15,50000.0,11.5,pdf_eye,beneficial owner of Alpha Beta Finance Limited,575000.0,,0,True
+152356,0,2020-09-17 12:35:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-16,144500.0,11.5,pdf_eye,beneficial owner of Alpha Beta Finance Limited,1661750.0,,0,True
+153263,0,2020-09-30 11:04:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-09-29,526000.0,11.0,pdf_eye,beneficial owner of Alpha Beta Finance Limited,5786000.0,,0,True
+157218,0,2020-11-11 15:13:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-11-10,104500.0,9.8065,pdf_eye,beneficial owner of Alpha Beta Finance Limited,1024779.25,,0,True
+157248,0,2020-11-12 11:43:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-11-11,3175000.0,10.002,pdf_eye,beneficial owner of Alpha Beta Finance Limited,31756350.000000004,,0,True
+157301,0,2020-11-13 11:34:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-11-12,400000.0,10.5,pdf_eye,beneficial owner of Alpha Beta Finance Limited,4200000.0,,0,True
+157362,0,2020-11-16 10:54:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-11-13,1000000.0,10.1215,pdf_eye,beneficial owner of Alpha Beta Finance Limited,10121500.0,,0,True
+157418,0,2020-11-17 11:18:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-11-16,200000.0,10.026,pdf_eye,beneficial owner of Alpha Beta Finance Limited,2005200.0,,0,True
+158550,0,2020-12-16 11:28:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-12-15,500000.0,11.3674,pdf_eye,beneficial owner of Alpha Beta Finance Limited,5683700.0,,0,True
+158748,0,2020-12-21 14:40:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-12-18,2800000.0,11.2162,pdf_eye,beneficial owner of Alpha Beta Finance Limited,31405360.0,,0,True
+158782,0,2020-12-22 10:33:00,BIPL,Siraj Ahmed Dadabhoy,SIRAJ AHMED DADABHOY,director_ceo,sell,market,2020-12-21,4804726.0,11.5986,pdf_eye,"Director (beneficial owner of Alpha Beta Finance Limited, the seller)",55728094.9836,,0,True
+158870,0,2020-12-23 14:43:00,WAVES,Arslan Shahid Butt,ARSLAN SHAHID BUTT,executive,buy,market,2020-09-15,5000.0,31.2,pdf_eye,CFO; filed 99 days after the trade,156000.0,,0,True
+158918,0,2020-12-24 11:40:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2020-12-22,9500.0,181.98,pdf_eye,Executive Director,1728810.0,,0,True
+158918,1,2020-12-24 11:40:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2020-12-22,500.0,181.99,pdf_eye,Executive Director,90995.0,,0,True
+158929,0,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,10000.0,170.0,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",1700000.0,,0,True
+158929,1,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,9500.0,170.1,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",1615950.0,,0,True
+158929,2,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,500.0,170.15,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",85075.0,,0,True
+158929,3,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,170.5,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",852500.0,,0,True
+158929,4,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,179.0,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",895000.0,,0,True
+158929,5,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,25000.0,180.0,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",4500000.0,,0,True
+158929,6,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,2000.0,182.45,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",364900.0,,0,True
+158929,7,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,182.5,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",912500.0,,0,True
+158929,8,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,4500.0,182.8,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",822600.0,,0,True
+158929,9,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,3000.0,183.3,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",549900.0,,0,True
+158929,10,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,500.0,183.51,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",91755.0,,0,True
+158929,11,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,3000.0,184.12,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",552360.0,,0,True
+158929,12,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,1000.0,184.13,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",184130.0,,0,True
+158929,13,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,1000.0,184.25,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",184250.0,,0,True
+158929,14,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,184.5,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",922500.0,,0,True
+158929,15,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,185.9,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",929500.0,,0,True
+158929,16,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,186.4,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",932000.0,,0,True
+158929,17,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,186.9,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",934500.0,,0,True
+158929,18,2020-12-24 12:44:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,187.8,pdf_eye,"Non-Executive Director; text layer partial, completed from page images",939000.0,,0,True
+158934,0,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,10000.0,170.0,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",1700000.0,158929,0,False
+158934,1,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,9500.0,170.1,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",1615950.0,158929,0,False
+158934,2,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,500.0,170.15,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",85075.0,158929,0,False
+158934,3,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,170.5,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",852500.0,158929,0,False
+158934,4,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,179.0,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",895000.0,158929,0,False
+158934,5,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,25000.0,180.0,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",4500000.0,158929,0,False
+158934,6,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,2000.0,182.45,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",364900.0,158929,0,False
+158934,7,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,182.5,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",912500.0,158929,0,False
+158934,8,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,4500.0,182.8,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",822600.0,158929,0,False
+158934,9,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,3000.0,183.3,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",549900.0,158929,0,False
+158934,10,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,500.0,183.51,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",91755.0,158929,0,False
+158934,11,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,3000.0,184.12,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",552360.0,158929,0,False
+158934,12,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,1000.0,184.13,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",184130.0,158929,0,False
+158934,13,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,1000.0,184.25,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",184250.0,158929,0,False
+158934,14,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,184.5,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",922500.0,158929,0,False
+158934,15,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,185.9,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",929500.0,158929,0,False
+158934,16,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,186.4,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",932000.0,158929,0,False
+158934,17,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,186.9,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",934500.0,158929,0,False
+158934,18,2020-12-24 13:03:00,NETSOL,Najeeb Ullah Ghauri,NAJEEB ULLAH GHAURI,director_ceo,sell,market,2020-12-23,5000.0,187.8,pdf_eye,"Non-Executive Director; second copy of 158929 (same date, filed 19 minutes later)",939000.0,158929,0,False
+159419,0,2021-01-06 15:13:00,RPL,Khalid Eijaz Qureshi,KHALID EIJAZ QURESHI,director_ceo,buy,market,2020-12-15,5000.0,40.8,pdf_eye,Director,204000.0,,0,True
+159419,0,2021-01-06 15:13:00,RPL,Khalid Eijaz Qureshi,KHALID EIJAZ QURESHI,director_ceo,sell,market,2020-12-16,5000.0,41.42,pdf_eye,Director,207100.0,,0,True
+160195,0,2021-01-27 13:33:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,sell,market,2021-01-26,,219.14,pdf_eye,spouse Tahira Salim Ghauri of Executive Director; shares figure illegible,,,0,True
+160637,0,2021-02-04 12:59:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,buy,market,2021-02-01,4000.0,213.0,pdf_eye,Executive,852000.0,,0,True
+160721,0,2021-02-08 12:42:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2021-02-02,1214000.0,28.78,pdf_eye,Non-Executive Director,34938920.0,,0,True
+160721,1,2021-02-08 12:42:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2021-02-03,706000.0,28.61,pdf_eye,Non-Executive Director,20198660.0,,0,True
+160721,2,2021-02-08 12:42:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,market,2021-02-04,80000.0,28.13,pdf_eye,Non-Executive Director,2250400.0,,0,True
+161347,0,2021-02-18 10:03:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-02-16,75000.0,13.4957,pdf_eye,Director; through Ithaca Capital,1012177.5,,0,True
+163035,0,2021-03-08 11:36:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-03-05,400000.0,10.6284,pdf_eye,Director; through Ithaca Capital,4251360.0,,0,True
+163190,0,2021-03-10 12:54:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-03-09,205000.0,10.1641,pdf_eye,Director; through Ithaca Capital,2083640.5,,0,True
+163280,0,2021-03-12 10:46:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-03-11,53000.0,10.1126,pdf_eye,Director; through Ithaca Capital,535967.8,,0,True
+163285,0,2021-03-12 10:56:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-03-11,50000.0,10.2064,pdf_eye,Director,510320.0,,0,True
+163894,0,2021-03-29 13:02:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-03-26,5000.0,11.5,pdf_eye,Director,57500.0,,0,True
+163895,0,2021-03-29 13:12:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-03-26,35000.0,11.6773,pdf_eye,Director,408705.5,,0,True
+167113,0,2021-05-20 13:20:00,CPPL,Maleeha Humayun Bangash,MALEEHA HUMAYUN BANGASH,director_ceo,buy,market,2021-05-19,1.0,207.96,pdf_text,Director,207.96,,0,True
+168174,0,2021-06-16 09:34:00,KOHC,Aizaz Mansoor Sheikh,AIZAZ MANSOOR SHEIKH,director_ceo,sell,market,2021-06-15,70000.0,221.27,pdf_eye,Director,15488900.0,,0,True
+168450,0,2021-06-22 15:15:00,CEPB,Shahid Ahmed Khan,SHAHID AHMED KHAN,director_ceo,sell,market,2021-06-15,1000.0,125.71,pdf_eye,Director,125710.0,,0,True
+168450,1,2021-06-22 15:15:00,CEPB,Shahid Ahmed Khan,SHAHID AHMED KHAN,director_ceo,sell,market,2021-06-15,34.0,123.33,pdf_eye,Director,4193.22,,0,True
+169111,0,2021-07-06 11:08:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,buy,market,2021-06-25,1500.0,348.4,pdf_eye,Mr. Iqbal Ahmad and Mr. Muhammad Nauman Ali purchased; split of lines not stated; all credited to Iqbal Ahmad (role not stated),522599.99999999994,,0,True
+169111,1,2021-07-06 11:08:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,buy,market,2021-06-25,500.0,348.01,pdf_eye,Mr. Iqbal Ahmad and Mr. Muhammad Nauman Ali purchased; split of lines not stated; all credited to Iqbal Ahmad (role not stated),174005.0,,0,True
+169112,0,2021-07-06 11:10:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,buy,market,2021-06-28,500.0,335.0,pdf_eye,role not stated,167500.0,,0,True
+169349,0,2021-07-12 15:24:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,buy,market,2021-06-28,400.0,339.31,pdf_eye,role not stated,135724.0,,0,True
+171150,0,2021-08-31 10:35:00,BIPL,Tasnim ul Farooqui,TASNIM UL FAROOQUI,director_ceo,buy,market,2021-08-30,500.0,10.38,pdf_eye,Director,5190.0,,0,True
+171869,0,2021-09-16 11:11:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-09-15,100000.0,11.4139,pdf_eye,Director; through CALCORP,1141390.0,,0,True
+171938,0,2021-09-17 10:21:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-09-16,75000.0,12.3057,pdf_eye,Director; through CALCORP,922927.5,,0,True
+171980,0,2021-09-17 14:55:00,HCAR,Muhammad Nauman,MUHAMMAD NAUMAN ALI,unknown,buy,market,2021-09-10,1000.0,292.5,pdf_eye,role not stated,292500.0,,0,True
+172020,0,2021-09-20 10:18:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-09-17,235000.0,12.9431,pdf_eye,Director; through CALCORP,3041628.5,,0,True
+172160,0,2021-09-22 10:07:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,buy,market,2021-09-21,150000.0,13.4082,pdf_eye,Director; bought through CALCORP Limited,2011230.0000000002,,0,True
+172480,0,2021-09-27 09:53:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,off_market_block,2021-09-24,41427.0,18.0,pdf_eye,NDM | role filled from the same holder's other filings,745686.0,,0,False
+172480,0,2021-09-27 09:53:00,CRTM,Khurram Mazhar Karim,KHURRAM MAZHAR KARIM,unknown,sell,off_market_block,2021-09-24,41427.0,18.0,pdf_eye,NDM; counterpart of Ahmad Shafi buy,745686.0,,0,False
+172484,0,2021-09-27 10:20:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2021-09-24,49800.0,119.85,pdf_eye,spouse of Executive Director Salim Ullah Ghauri (letter names Salim Ullah Ghauri; spouse not named),5968530.0,,0,True
+173042,0,2021-10-01 11:50:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-09-30,864500.0,23.08,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,19952660.0,,0,True
+173163,0,2021-10-04 10:56:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-10-01,135500.0,23.71,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,3212705.0,,0,True
+173265,0,2021-10-04 15:19:00,KOHC,Hijab Tariq,HIJAB TARIQ,director_ceo,buy,gift_inherit_transfer,2021-08-09,4680.0,,pdf_eye,Director; gift from mother; filed 56 days after the trade,,,0,False
+174975,0,2021-10-22 11:11:00,HCAR,Muhammad Nauman,MUHAMMAD NAUMAN ALI,unknown,sell,market,2021-10-21,1000.0,233.6,pdf_eye,role not stated,233600.0,,0,True
+175788,0,2021-10-28 15:53:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2021-10-22,15500.0,21.8516,pdf_text,Director,338699.80000000005,,0,True
+177091,0,2021-11-10 11:06:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,buy,market,2021-11-09,1000.0,226.99,pdf_text,role not stated,226990.0,,0,True
+177091,1,2021-11-10 11:06:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,buy,market,2021-11-10,1000.0,231.0,pdf_text,role not stated,231000.0,,0,True
+177178,0,2021-11-11 13:17:00,GGL,Ghani Global bonus allotment (15 lines),GHANI GLOBAL BONUS ALLOTMENT 15 LINES,unknown,buy,bonus,2021-11-01,3367038.0,,pdf_eye,byte-identical copy (md5) of 177180,,,0,False
+177180,0,2021-11-11 13:23:00,GGL,Ghani Global bonus allotment (15 lines),GHANI GLOBAL BONUS ALLOTMENT 15 LINES,unknown,buy,bonus,2021-11-01,3367038.0,,pdf_eye,"bonus shares to Masroor Ahmad Khan, Atique Ahmad Khan, Hafiz Farooq Ahmad, Rabia Atique, others; individual lines not transcribed because excluded by mode",,177178,0,False
+177360,0,2021-11-16 11:14:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-15,100000.0,21.57,pdf_eye,byte-identical copy (md5) of 177935 | role filled from the same holder's other filings,2157000.0,,0,True
+177925,0,2021-11-26 11:00:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-24,36500.0,20.52,pdf_eye,byte-identical copy (md5) of 177929 | role filled from the same holder's other filings,748980.0,,0,True
+177925,1,2021-11-26 11:00:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-25,38000.0,20.53,pdf_eye,byte-identical copy (md5) of 177929 | role filled from the same holder's other filings,780140.0,,0,True
+177929,0,2021-11-26 11:37:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-24,36500.0,20.52,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,748980.0,177925,0,False
+177929,1,2021-11-26 11:37:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-25,38000.0,20.53,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,780140.0,177925,0,False
+177935,0,2021-11-26 12:05:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-15,100000.0,21.57,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,2157000.0,177360,0,False
+178000,0,2021-11-29 09:40:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-26,25500.0,20.6,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,525300.0,,0,True
+178164,0,2021-12-02 09:44:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-11-30,74500.0,21.51,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1602495.0000000002,,0,True
+178164,1,2021-12-02 09:44:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-01,25500.0,21.56,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,549780.0,,0,True
+178196,0,2021-12-02 12:25:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,buy,unstated,2021-12-01,200000.0,31.84,pdf_eye,market N/A (second copy of 178254),6368000.0,,0,True
+178213,0,2021-12-02 15:17:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,buy,unstated,2021-12-02,207000.0,31.13,pdf_eye,"Director; same trade, market N/A (second copy)",6443910.0,,0,True
+178213,0,2021-12-02 15:17:00,GGL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,buy,unstated,2021-12-02,215000.0,29.84,pdf_eye,CEO; market N/A (second copy),6415600.0,,0,True
+178222,0,2021-12-03 09:46:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-02,100000.0,21.03,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,2103000.0,,0,True
+178254,0,2021-12-03 14:30:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,buy,market,2021-12-01,200000.0,31.84,pdf_eye,Non-Executive Director,6368000.0,178196,0,False
+178257,0,2021-12-03 14:39:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,buy,market,2021-12-02,207000.0,31.13,pdf_eye,Director,6443910.0,178213,0,False
+178257,0,2021-12-03 14:39:00,GGL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,buy,market,2021-12-02,215000.0,29.84,pdf_eye,Chief Executive Officer,6415600.0,178213,0,False
+178361,0,2021-12-07 10:42:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,buy,market,2021-12-06,300000.0,25.29,pdf_eye,Non-Executive Director,7587000.0,,0,True
+178361,0,2021-12-07 10:42:00,GGL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,buy,market,2021-12-06,270000.0,25.2,pdf_eye,Non-Executive Director,6804000.0,,0,True
+178414,0,2021-12-08 09:29:00,GGL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,buy,market,2021-12-07,1000000.0,26.02,pdf_eye,Non-Executive Director,26020000.0,,0,True
+178450,0,2021-12-08 14:34:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-06,32000.0,19.53,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,624960.0,,0,True
+178515,0,2021-12-10 09:32:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-08,59000.0,19.85,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1171150.0,,0,True
+178515,1,2021-12-10 09:32:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-09,9000.0,19.87,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,178830.0,,0,True
+178564,0,2021-12-10 15:53:00,GGL,Chaudhary Saad Ahmad,CHAUDHARY SAAD AHMAD,executive,buy,market,2021-12-10,1000.0,24.65,pdf_eye,Head of Internal Audit,24650.0,,0,True
+178585,0,2021-12-13 09:32:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-10,55000.0,19.71,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1084050.0,,0,True
+178638,0,2021-12-14 09:28:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-13,201000.0,19.48,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,3915480.0,,0,True
+178638,0,2021-12-14 09:28:00,CRTM,Khurram Mazhar Karim,KHURRAM MAZHAR KARIM,unknown,sell,market,2021-12-13,163000.0,19.46,pdf_eye,role not stated,3171980.0,,0,True
+178740,0,2021-12-16 09:30:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2021-12-14,38000.0,19.88,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,755440.0,,0,True
+178863,0,2021-12-20 11:28:00,NETSOL,Boo-Ali Siddiqui,BOO ALI SIDDIQUI,executive,buy,market,2021-12-17,10.0,93.0,pdf_eye,CFO; odd lot,930.0,,0,True
+180272,0,2022-01-21 10:11:00,GGL,Chaudhary Saad Ahmad,CHAUDHARY SAAD AHMAD,executive,buy,market,2022-01-20,1000.0,19.18,pdf_eye,Head of Internal Audit,19180.0,,0,True
+180472,0,2022-01-26 11:22:00,BIPL,Emirates NBD Bank PJSC,EMIRATES NBD BANK PJSC,sponsor_substantial,buy,off_market_block,2022-01-25,144200144.0,13.18,pdf_eye,substantial shareholder; CDC reg 3.17.1(p) transfer; first of 5 pages read (page 1 holds the full table),1900557897.92,,0,False
+180472,0,2022-01-26 11:22:00,BIPL,Dubai Bank PJSC,DUBAI BANK PJSC,sponsor_substantial,sell,off_market_block,2022-01-25,144200144.0,13.18,pdf_eye,counterpart of Emirates NBD buy,1900557897.92,,0,False
+181992,0,2022-02-22 09:53:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2022-02-21,10000.0,10.4,pdf_text,spouse Ghazala Monem of Independent Director,104000.0,,0,True
+181992,1,2022-02-22 09:53:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2022-02-21,9000.0,10.44,pdf_text,spouse Ghazala Monem of Independent Director,93960.0,,0,True
+181992,2,2022-02-22 09:53:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2022-02-21,91000.0,10.45,pdf_text,spouse Ghazala Monem of Independent Director,950949.9999999999,,0,True
+181996,0,2022-02-22 10:05:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2022-02-21,100000.0,10.4,pdf_text,"spouse Ghazala Monem of Independent Director; possibly revised copy of 181992 | corrected re-filing of 181992 (share count 100,000 vs 10,000 at 10.40); both kept, different key",1040000.0,,0,True
+181996,1,2022-02-22 10:05:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2022-02-21,9000.0,10.44,pdf_text,"spouse Ghazala Monem of Independent Director; possibly revised copy of 181992 | corrected re-filing of 181992 (share count 100,000 vs 10,000 at 10.40); both kept, different key",93960.0,181992,0,False
+181996,2,2022-02-22 10:05:00,SSGC,Raziuddin Monem,RAZIUDDIN MONEM,director_ceo,buy,market,2022-02-21,91000.0,10.45,pdf_text,"spouse Ghazala Monem of Independent Director; possibly revised copy of 181992 | corrected re-filing of 181992 (share count 100,000 vs 10,000 at 10.40); both kept, different key",950949.9999999999,181992,0,False
+183022,0,2022-03-01 14:50:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-02-28,100000.0,19.33,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1932999.9999999998,,0,True
+183394,0,2022-03-08 14:39:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-03-07,194500.0,19.02,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,3699390.0,,0,True
+183486,0,2022-03-10 09:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-03-08,5500.0,18.56,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,102080.0,,0,True
+183519,0,2022-03-10 14:20:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-03-09,100000.0,18.34,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1834000.0,,0,True
+183636,0,2022-03-14 13:01:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2022-03-11,124000.0,19.06,pdf_eye,Director (per sibling filings),2363440.0,,0,True
+183657,0,2022-03-15 09:54:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2022-03-10,67000.0,18.79,pdf_eye,Director (per sibling filings),1258930.0,,0,True
+183907,0,2022-03-22 12:29:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2022-03-21,50000.0,80.64,pdf_eye,Executive Director,4032000.0,,0,True
+185047,0,2022-04-15 10:00:00,CNERGY,Uzma Abbasi,UZMA ABBASI,director_ceo,buy,off_market_block,2022-04-13,57142857.0,5.43,pdf_text,Non-Executive Director via Integrate Pk (Pvt) Ltd; NDM,310285713.51,,0,False
+187163,0,2022-05-11 10:27:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-05-09,49500.0,18.02,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,891990.0,,0,True
+187163,1,2022-05-11 10:27:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-05-10,50000.0,18.04,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,902000.0,,0,True
+187317,0,2022-05-13 15:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-05-12,49000.0,16.99,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,832509.9999999999,,0,True
+187365,0,2022-05-16 12:47:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,buy,market,2022-05-12,94000.0,12.88,pdf_eye,Non-Executive Director,1210720.0,,0,True
+187365,1,2022-05-16 12:47:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,buy,market,2022-05-13,112500.0,13.11,pdf_eye,Non-Executive Director,1474875.0,,0,True
+187749,0,2022-05-25 09:22:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-05-23,2500.0,17.87,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,44675.0,,0,True
+187749,1,2022-05-25 09:22:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-05-24,5000.0,18.04,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,90200.0,,0,True
+187860,0,2022-05-27 09:22:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-05-25,21000.0,17.77,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,373170.0,,0,True
+188167,0,2022-06-03 09:34:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-01,67500.0,18.55,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1252125.0,,0,True
+188167,1,2022-06-03 09:34:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-02,32500.0,18.53,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,602225.0,,0,True
+188434,0,2022-06-10 09:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-08,9000.0,17.54,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,157860.0,,0,True
+188434,1,2022-06-10 09:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-09,3500.0,17.57,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,61495.0,,0,True
+189045,0,2022-06-28 09:33:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-24,26500.0,17.66,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,467990.0,,0,True
+189045,1,2022-06-28 09:33:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-27,37000.0,17.25,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,638250.0,,0,True
+189143,0,2022-06-29 14:42:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-06-28,24000.0,17.54,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,420960.0,,0,True
+189677,0,2022-07-19 09:15:00,SSGC,Faisal Bengali,FAISAL BENGALI,director_ceo,buy,market,2022-07-18,500000.0,10.2363,pdf_eye,Director; 19 line items aggregated by volume-weighted average (computed from the listed lines),5118150.0,,0,True
+189776,0,2022-07-21 09:46:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-07-19,113500.0,17.2,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1952200.0,,0,True
+189776,1,2022-07-21 09:46:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-07-20,35000.0,17.27,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,604450.0,,0,True
+189821,0,2022-07-22 09:30:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-07-21,51500.0,17.27,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,889405.0,,0,True
+189982,0,2022-07-27 10:43:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2022-07-26,90000.0,90.66,pdf_eye,Executive Director,8159400.0,,0,True
+191555,0,2022-09-02 09:28:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,off_market_block,2022-08-31,1704452.0,18.0,pdf_eye,NDM | role filled from the same holder's other filings,30680136.0,,0,False
+191623,0,2022-09-05 09:32:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,off_market_block,2022-09-02,343840.0,18.0,pdf_eye,NDM | role filled from the same holder's other filings,6189120.0,,0,False
+191640,0,2022-09-05 11:14:00,TELE,Syed Hashim Ali,SYED HASHIM ALI,director_ceo,buy,market,2022-09-02,13000.0,11.37,pdf_eye,Director/CFO,147810.0,,0,True
+191660,0,2022-09-05 14:29:00,CRTM,Amjad Mehmood,AMJAD MEHMOOD,director_ceo,sell,off_market_block,2022-09-02,100000.0,18.0,pdf_eye,Non-Executive Director; NDM,1800000.0,,0,False
+191817,0,2022-09-08 11:13:00,TELE,Syed Aamir Hussain,SYED AAMIR HUSSAIN,director_ceo,buy,market,2022-09-02,25000.0,11.35,pdf_eye,CEO,283750.0,,0,True
+192111,0,2022-09-15 09:54:00,SSGC,Faisal Bengali,FAISAL BENGALI,director_ceo,buy,market,2022-09-14,200000.0,10.2572,pdf_text,Director; stated total (line items OCR damaged),2051439.9999999998,,0,True
+192252,0,2022-09-19 09:23:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,off_market_block,2022-09-16,103634.0,18.0,pdf_eye,NDM (counterpart of 192364) | role filled from the same holder's other filings,1865412.0,,0,False
+192252,0,2022-09-19 09:23:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-09-16,161000.0,17.75,pdf_eye,ready market; role not stated in this filing | role filled from the same holder's other filings,2857750.0,,0,True
+192364,0,2022-09-20 12:14:00,CRTM,Amjad Mehmood,AMJAD MEHMOOD,director_ceo,sell,off_market_block,2022-09-16,103634.0,18.0,pdf_eye,spouse Naheed Amjad; NDM,1865412.0,,0,False
+192898,0,2022-09-28 09:18:00,SSGC,Faisal Bengali,FAISAL BENGALI,director_ceo,buy,market,2022-09-27,134000.0,10.1746,pdf_text,Director; line items aggregated to the stated total,1363396.4,,0,True
+193759,0,2022-10-05 09:29:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-10-03,135000.0,17.21,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,2323350.0,,0,True
+193759,1,2022-10-05 09:29:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-10-04,57500.0,17.24,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,991299.9999999999,,0,True
+193760,0,2022-10-05 09:31:00,CRTM,Amjad Mehmood,AMJAD MEHMOOD,director_ceo,sell,off_market_block,2022-09-29,205476.0,18.0,pdf_eye,spouse Naheed Amjad of Non-Executive Director Amjad Mehmood; NDM,3698568.0,,0,False
+193762,0,2022-10-05 09:33:00,CRTM,Umar Shafi,UMAR SHAFI,executive,buy,off_market_block,2022-09-29,132204.0,18.0,pdf_eye,Executive; NDM,2379672.0,,0,False
+194211,0,2022-10-07 09:31:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-10-05,24000.0,17.3,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,415200.0,,0,True
+194211,1,2022-10-07 09:31:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-10-06,26000.0,17.26,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,448760.00000000006,,0,True
+195785,0,2022-10-25 14:40:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,sell,gift_inherit_transfer,2022-10-03,103960.0,,pdf_eye,"Gift out (three lines of 103,960)",,,0,False
+195785,1,2022-10-25 14:40:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,sell,gift_inherit_transfer,2022-10-04,103960.0,,pdf_eye,"Gift out (three lines of 103,960)",,,0,False
+195785,2,2022-10-25 14:40:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,sell,gift_inherit_transfer,2022-10-06,103960.0,,pdf_eye,"Gift out (three lines of 103,960)",,,0,False
+195796,0,2022-10-25 15:07:00,CRTM,Amjad Mehmood,AMJAD MEHMOOD,director_ceo,buy,gift_inherit_transfer,2022-10-06,103960.0,,pdf_eye,spouse Naheed Amjad of Non-Executive Director Amjad Mehmood; Gift in,,,0,False
+196656,0,2022-10-28 16:15:00,CPPL,Cherat bonus allotment (10 persons),CHERAT BONUS ALLOTMENT 10 PERSONS,unknown,buy,bonus,2022-10-27,20855.0,,pdf_eye,"bonus shares to Amer Faruque (CEO), Akbarali Pesnani, other directors and spouses, Faruque (Pvt) Ltd; individual lines not transcribed because excluded by mode",,,0,False
+197812,0,2022-11-14 13:09:00,BIPL,JS Bank Limited,JS BANK LIMITED,sponsor_substantial,buy,off_market_block,2022-11-10,86316954.0,13.24,pdf_eye,substantial shareholder; NDM,1142836470.96,,0,False
+197812,0,2022-11-14 13:09:00,BIPL,Emirates NBD Bank PJSC,EMIRATES NBD BANK PJSC,sponsor_substantial,sell,off_market_block,2022-11-10,86316954.0,13.24,pdf_eye,NDM; counterpart of JS Bank buy,1142836470.96,,0,False
+197837,0,2022-11-14 15:28:00,BIPL,Ahmed Goolam Mohamed Randeree and Shabir Ahmed Randeree,AHMED GOOLAM MOHAMED RANDEREE AND SHABIR AHMED RANDEREE,sponsor_substantial,buy,unstated,2022-11-11,57883190.0,13.24,pdf_text,section 110 takeover-regulation disclosure (acquirers 19.47% collectively),766373435.6,,0,True
+198236,0,2022-11-22 12:55:00,RPL,Muhammad Adil,MUHAMMAD ADIL,unknown,buy,market,2022-11-22,10309.0,14.22,pdf_eye,role not stated; physical shares,146593.98,,0,True
+199053,0,2022-12-13 09:24:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,off_market_block,2022-12-09,300000.0,14.81,pdf_eye,NDM | role filled from the same holder's other filings,4443000.0,,0,False
+199053,0,2022-12-13 09:24:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-09,136500.0,14.05,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1917825.0,,0,True
+199053,1,2022-12-13 09:24:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-12,53500.0,13.55,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,724925.0,,0,True
+199476,0,2022-12-22 09:37:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-19,20000.0,13.06,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,261200.0,,0,True
+199476,1,2022-12-22 09:37:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-20,100000.0,12.89,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1289000.0,,0,True
+199476,2,2022-12-22 09:37:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-21,20000.0,13.01,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,260200.0,,0,True
+199892,0,2022-12-30 09:28:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-28,35000.0,12.76,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,446600.0,,0,True
+199892,1,2022-12-30 09:28:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2022-12-29,4500.0,13.03,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,58635.0,,0,True
+200865,0,2023-01-23 11:14:00,SSGC,Ayaz Dawood,AYAZ DAWOOD,director_ceo,buy,gift_inherit_transfer,2023-01-19,35639.0,,pdf_text,"Director; transmission of shares to legal heir; stated total 35,593 differs from line 35,639",,,0,False
+200911,0,2023-01-24 09:25:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-01-20,27000.0,11.99,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,323730.0,,0,True
+200911,1,2023-01-24 09:25:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-01-23,44000.0,12.56,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,552640.0,,0,True
+201008,0,2023-01-25 15:14:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,sell,market,2023-01-23,560000.0,12.7277,pdf_eye,Director; sold through CALCORP Limited where he is Director and CEO,7127512.0,,0,True
+201028,0,2023-01-26 09:44:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-01-24,76000.0,12.77,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,970520.0,,0,True
+201028,1,2023-01-26 09:44:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-01-25,36500.0,13.3,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,485450.0,,0,True
+201287,0,2023-01-31 11:04:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-01-26,44500.0,14.02,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,623890.0,,0,True
+201287,1,2023-01-31 11:04:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-01-27,37000.0,14.11,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,522070.0,,0,True
+201610,0,2023-02-08 10:15:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,sell,market,2023-02-03,733000.0,12.2813,pdf_eye,Director; sold through Ithaca Capital Pvt Ltd where he is Director and CEO,9002192.9,,0,True
+202091,0,2023-02-16 15:11:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-02-14,23500.0,13.0,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,305500.0,,0,True
+203072,0,2023-02-28 10:57:00,CPPL,Sher Afzal Khan Mazari,SHER AFZAL KHAN MAZARI,director_ceo,buy,market,2023-01-25,10.0,88.0,pdf_eye,Director; filed 34 days after the trade,880.0,,0,True
+204496,0,2023-03-21 14:12:00,CEPB,SIZA Commodities Private Limited,SIZA COMMODITIES PRIVATE LIMITED,sponsor_substantial,buy,off_market_block,2023-03-17,2813439.0,45.33,pdf_eye,Associated Company; NDM; inter-group transfer,127533189.86999999,,0,False
+204496,0,2023-03-21 14:12:00,CEPB,Accuray Surgicals Limited,ACCURAY SURGICALS LIMITED,sponsor_substantial,sell,off_market_block,2023-03-17,2813439.0,45.27,pdf_eye,Associated Company; NDM; counterpart of the SIZA buy,127364383.53000002,,0,False
+204946,0,2023-03-31 09:20:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-03-29,300000.0,11.79,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,3536999.9999999995,,0,True
+204955,0,2023-03-31 10:11:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2023-03-30,110000.0,74.33,pdf_eye,Executive Director,8176300.0,,0,True
+205115,0,2023-04-04 10:41:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2023-03-06,8500.0,11.94,pdf_eye,"role not stated in this filing, Director elsewhere",101490.0,,0,True
+205115,1,2023-04-04 10:41:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,buy,market,2023-03-07,91500.0,11.93,pdf_eye,"role not stated in this filing, Director elsewhere",1091595.0,,0,True
+205226,0,2023-04-05 12:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-04-04,800000.0,11.79,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,9432000.0,,0,True
+206713,0,2023-04-27 09:24:00,CRTM,Khalid Bashir,KHALID BASHIR,director_ceo,sell,gift_inherit_transfer,2023-04-07,207910.0,,pdf_eye,Director; Inherited-out,,,0,False
+208505,0,2023-05-17 11:07:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-05-15,107340.0,13.79,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1480218.5999999999,,0,True
+208505,1,2023-05-17 11:07:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-05-16,6500.0,13.8,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,89700.0,,0,True
+209538,0,2023-05-31 14:27:00,CPPL,Cherat bonus allotment (10 persons),CHERAT BONUS ALLOTMENT 10 PERSONS,unknown,buy,bonus,2023-05-30,11470.0,,pdf_eye,"bonus shares to Amer Faruque (CEO), Akbarali Pesnani, other directors and spouses, Faruque (Pvt) Ltd substantial shareholder; individual lines not transcribed because excluded by mode",,,0,False
+210195,0,2023-06-09 15:01:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-06-07,58500.0,13.36,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,781560.0,,0,True
+210349,0,2023-06-13 10:55:00,HCAR,Imran Naseem,IMRAN NASEEM,unknown,sell,market,2023-05-26,400.0,99.35,pdf_eye,role not stated,39740.0,,0,True
+210733,0,2023-06-19 10:14:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-06-15,20000.0,12.99,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,259800.0,,0,True
+210733,1,2023-06-19 10:14:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-06-16,55000.0,12.99,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,714450.0,,0,True
+211113,0,2023-06-23 11:04:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-06-19,32000.0,12.87,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,411840.0,,0,True
+211113,1,2023-06-23 11:04:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-06-20,50000.0,12.7,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,635000.0,,0,True
+211113,2,2023-06-23 11:04:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-06-21,43500.0,12.94,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,562890.0,,0,True
+211145,0,2023-06-23 14:37:00,HCAR,Muhammad Sattar Anjum,MUHAMMAD SATTAR ANJUM,unknown,sell,market,2023-06-09,300.0,96.4,pdf_eye,role not stated; letter says purchased but table says Sale; treated as sale,28920.0,,0,True
+211438,0,2023-06-27 14:18:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,sell,market,2023-06-26,60000.0,16.2041,pdf_eye,Director; market REG,972246.0,,0,True
+212453,0,2023-07-26 12:44:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-07-24,147000.0,14.04,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,2063879.9999999998,,0,True
+213936,0,2023-08-28 10:01:00,BIPL,JS Bank Limited,JS BANK LIMITED,sponsor_substantial,buy,tender,2023-08-25,470603772.0,,pdf_eye,sponsor shareholder; share swap and public offer under takeover regulations; page 1 read only (2-page filing),,,0,False
+213936,0,2023-08-28 10:01:00,BIPL,Jahangir Siddiqui and Co Ltd,JAHANGIR SIDDIQUI AND CO LTD,sponsor_substantial,sell,tender,2023-08-24,235684306.0,,pdf_eye,sponsor shareholder; shares transferred to JS Bank under takeover,,,0,False
+213936,0,2023-08-28 10:01:00,BIPL,Shabir Ahmed Randeree,SHABIR AHMED RANDEREE,sponsor_substantial,sell,tender,2023-08-25,127965233.0,,pdf_eye,sponsor shareholder; shares transferred to JS Bank under takeover,,,0,False
+213936,1,2023-08-28 10:01:00,BIPL,JS Bank Limited,JS BANK LIMITED,sponsor_substantial,buy,tender,2023-08-25,275891286.0,23.99,pdf_eye,sponsor shareholder; share swap and public offer under takeover regulations; page 1 read only (2-page filing),6618631951.139999,,0,False
+215051,0,2023-09-18 10:25:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-09-14,30000.0,12.07,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,362100.0,,0,True
+215051,1,2023-09-18 10:25:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-09-15,73500.0,12.64,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,929040.0,,0,True
+220377,0,2023-11-03 10:13:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-10-31,112000.0,12.54,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1404480.0,,0,True
+220377,1,2023-11-03 10:13:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-11-01,80500.0,12.78,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1028790.0,,0,True
+220377,2,2023-11-03 10:13:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-11-02,107500.0,13.52,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,1453400.0,,0,True
+220773,0,2023-11-10 10:29:00,HCAR,Iqbal Ahmad,IQBAL AHMAD,unknown,sell,market,2023-11-08,4000.0,179.98,pdf_eye,role not stated,719920.0,,0,True
+220798,0,2023-11-10 12:38:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2023-11-08,200000.0,14.15,pdf_eye,role not stated in this filing | role filled from the same holder's other filings,2830000.0,,0,True
+221055,0,2023-11-16 09:05:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,sell,market,2023-11-15,1133.0,216.0,pdf_eye,Director,244728.0,,0,True
+221058,0,2023-11-16 09:16:00,KOHC,Asad Atta Sheikh,ASAD ATTA SHEIKH,executive,sell,market,2023-11-14,15600.0,220.05,pdf_eye,Executive,3432780.0,,0,True
+221058,1,2023-11-16 09:16:00,KOHC,Asad Atta Sheikh,ASAD ATTA SHEIKH,executive,sell,market,2023-11-15,12024.0,219.45,pdf_eye,Executive,2638666.8,,0,True
+221140,0,2023-11-17 09:15:00,KOHC,Asad Atta Sheikh,ASAD ATTA SHEIKH,executive,sell,market,2023-11-16,22768.0,218.07,pdf_eye,Executive,4965017.76,,0,True
+221196,0,2023-11-17 15:28:00,HCAR,Muhammad Nauman Ali,MUHAMMAD NAUMAN ALI,unknown,sell,market,2023-11-10,900.0,175.49,pdf_text,role not stated,157941.0,,0,True
+221233,0,2023-11-20 09:06:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,sell,market,2023-11-17,61867.0,219.44,pdf_eye,Director,13576094.48,,0,True
+221234,0,2023-11-20 09:09:00,KOHC,Asad Atta Sheikh,ASAD ATTA SHEIKH,executive,sell,market,2023-11-17,56134.0,222.03,pdf_eye,Executive,12463432.02,,0,True
+222253,0,2023-12-08 09:12:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,market,2023-12-07,46482.0,228.61,pdf_eye,Director,10626250.020000001,,0,True
+222332,0,2023-12-11 09:14:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,market,2023-12-08,7758.0,230.0,pdf_eye,Director,1784340.0,,0,True
+222470,0,2023-12-13 09:04:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,market,2023-12-12,26017.0,229.67,pdf_eye,Director,5975324.39,,0,True
+222514,0,2023-12-14 09:05:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,market,2023-12-13,14500.0,232.8,pdf_eye,Director,3375600.0,,0,True
+223940,0,2024-01-17 10:00:00,FECTC,Abdul Basit,ABDUL BASIT,executive,buy,market,2024-01-02,10000.0,45.573,pdf_eye,Executive,455730.0,,0,True
+229126,0,2024-04-17 11:10:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2024-04-16,150000.0,122.33,pdf_eye,Executive Director,18349500.0,,0,True
+229380,0,2024-04-19 11:54:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2024-04-18,50000.0,120.72,pdf_eye,Executive Director,6036000.0,,0,True
+229580,0,2024-04-22 12:45:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2024-04-19,50000.0,120.94,pdf_eye,Executive Director,6047000.0,,0,True
+231825,0,2024-05-17 11:46:00,HCAR,Muhammad Ali,MUHAMMAD ALI,unknown,buy,market,2024-04-25,25.0,294.52,pdf_eye,role not stated,7363.0,,0,True
+231825,0,2024-05-17 11:46:00,HCAR,Muhammad Ali,MUHAMMAD ALI,unknown,sell,market,2024-04-25,25.0,299.84,pdf_eye,role not stated,7495.999999999999,,0,True
+231825,1,2024-05-17 11:46:00,HCAR,Muhammad Ali,MUHAMMAD ALI,unknown,buy,market,2024-04-26,97.0,319.5,pdf_eye,role not stated,30991.5,,0,True
+231825,1,2024-05-17 11:46:00,HCAR,Muhammad Ali,MUHAMMAD ALI,unknown,sell,market,2024-04-26,97.0,319.0,pdf_eye,role not stated,30943.0,,0,True
+232119,0,2024-05-23 15:01:00,WAVES,Hamza Ahmad Khan,HAMZA AHMAD KHAN,unknown,buy,gift_inherit_transfer,2024-05-16,4000000.0,,pdf_eye,role not stated; Gift In,,,0,False
+232119,0,2024-05-23 15:01:00,WAVES,Hamza Ahmad Khan,HAMZA AHMAD KHAN,unknown,sell,off_market_block,2024-05-17,2700000.0,7.81,pdf_eye,"sale for financing, NDM",21087000.0,,0,False
+232119,0,2024-05-23 15:01:00,WAVES,Hamza Ahmad Khan,HAMZA AHMAD KHAN,unknown,buy,other,2024-05-17,2700000.0,7.89,pdf_eye,re-purchase in the futures market,21303000.0,,0,False
+232120,0,2024-05-23 15:02:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,off_market_block,2024-05-14,750000.0,8.16,pdf_eye,"role not stated; sale for financing, NDM | role filled from the same holder's other filings",6120000.0,,0,False
+232120,0,2024-05-23 15:02:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,buy,other,2024-05-14,750000.0,8.29,pdf_eye,re-purchase in the futures market | role filled from the same holder's other filings,6217499.999999999,,0,False
+232120,1,2024-05-23 15:02:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,sell,off_market_block,2024-05-20,3000000.0,7.7,pdf_eye,"role not stated; sale for financing, NDM | role filled from the same holder's other filings",23100000.0,,0,False
+232120,1,2024-05-23 15:02:00,WAVES,Nighat Haroon Khan,NIGHAT HAROON KHAN,director_ceo,buy,other,2024-05-20,3000000.0,7.8,pdf_eye,re-purchase in the futures market | role filled from the same holder's other filings,23400000.0,,0,False
+232952,0,2024-06-13 14:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2024-06-11,449230.0,13.09,pdf_eye,CEO,5880420.7,,0,True
+233715,0,2024-07-04 09:22:00,KOHC,Omer Aizaz Sheikh,OMER AIZAZ SHEIKH,executive,buy,market,2024-07-02,2500.0,261.61,pdf_eye,Executive,654025.0,,0,True
+233717,0,2024-07-04 09:25:00,KOHC,Omer Aizaz Sheikh,OMER AIZAZ SHEIKH,executive,buy,market,2024-07-02,15000.0,265.22,pdf_eye,spouse Meher Khan Tareen of Executive,3978300.0000000005,,0,True
+233905,0,2024-07-10 12:06:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,gift_inherit_transfer,2024-06-21,200000.0,,pdf_eye,Director; gift to son,,,0,False
+233905,0,2024-07-10 12:06:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,buy,gift_inherit_transfer,2024-06-21,200000.0,,pdf_eye,Executive; gift from father,,,0,False
+233905,1,2024-07-10 12:06:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,gift_inherit_transfer,2024-06-25,75000.0,,pdf_eye,Director; gift to son,,,0,False
+234104,0,2024-07-15 15:10:00,KOHC,Omer Aizaz Sheikh,OMER AIZAZ SHEIKH,executive,buy,market,2024-07-03,1000.0,277.11,pdf_eye,Executive,277110.0,,0,True
+234104,0,2024-07-15 15:10:00,KOHC,Omer Aizaz Sheikh,OMER AIZAZ SHEIKH,executive,buy,market,2024-07-03,500.0,276.61,pdf_eye,spouse Meher Khan Tareen,138305.0,,0,True
+237664,0,2024-09-27 10:52:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2024-09-26,255000.0,128.18,pdf_eye,Executive Director,32685900.0,,0,True
+238667,0,2024-10-04 15:48:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2024-10-02,35000.0,11.55,pdf_eye,CEO 22%,404250.0,,0,True
+238667,0,2024-10-04 15:48:00,CRTM,Muhammad Anwar,MUHAMMAD ANWAR,director_ceo,buy,market,2024-10-02,35000.0,11.55,pdf_eye,Director,404250.0,,0,True
+239820,0,2024-10-17 13:36:00,HCAR,Muhammad Sattar Anjum,MUHAMMAD SATTAR ANJUM,unknown,sell,market,2024-10-17,300.0,263.5,pdf_eye,role not stated,79050.0,,0,True
+240186,0,2024-10-22 09:39:00,FECTC,Khalid Yacoob,KHALID YACOOB,director_ceo,sell,market,2024-10-07,2000.0,34.88,pdf_eye,"Director; physical shares, Ready",69760.0,,0,True
+240186,0,2024-10-22 09:39:00,FECTC,Lubna Yasin Fecto,LUBNA YASIN FECTO,director_ceo,buy,market,2024-10-07,1500.0,34.88,pdf_eye,spouse of the CEO (CEO not named); physical,52320.00000000001,,0,True
+240186,0,2024-10-22 09:39:00,FECTC,Juwad Saboor,JUWAD SABOOR,executive,buy,market,2024-10-07,500.0,34.88,pdf_eye,Executive; physical,17440.0,,0,True
+242559,0,2024-11-08 16:07:00,CPPL,Akbarali Pesnani,AKBARALI PESNANI,director_ceo,sell,market,2024-11-06,1000.0,105.0,pdf_eye,spouse Sakina Pesnani of Director,105000.0,,0,True
+242559,1,2024-11-08 16:07:00,CPPL,Akbarali Pesnani,AKBARALI PESNANI,director_ceo,sell,market,2024-11-07,2525.0,106.95,pdf_eye,spouse Sakina Pesnani of Director,270048.75,,0,True
+243746,0,2024-12-02 12:45:00,CPPL,Akbarali Pesnani,AKBARALI PESNANI,director_ceo,sell,market,2024-11-29,2000.0,128.0,pdf_eye,spouse Sakina Pesnani of Director,256000.0,,0,True
+245282,0,2025-01-01 13:52:00,EFERT,Asad Said Jaffar,ASAD SAID JAFFAR,director_ceo,buy,market,2024-12-31,5000.0,205.93,pdf_text,Director,1029650.0,,0,True
+245431,0,2025-01-06 08:01:00,EFERT,Asad Said Jaffar,ASAD SAID JAFFAR,director_ceo,sell,market,2025-01-02,5000.0,216.69,pdf_text,Director,1083450.0,,0,True
+246389,0,2025-01-27 13:29:00,HCAR,Muhammad Naeem Khan,MUHAMMAD NAEEM KHAN,unknown,buy,market,2024-12-13,300.0,322.9,pdf_eye,role not stated; filed 45 days after the trade,96870.0,,0,True
+246785,0,2025-02-03 15:25:00,GGL,Farzand Ali,FARZAND ALI,executive,sell,gift_inherit_transfer,2025-02-03,4411.0,,pdf_eye,signs as Company Secretary; Gift Out; market N/A,,,0,False
+249581,0,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-10,1145.0,13.09,pdf_text,CEO,14988.05,,0,True
+249581,1,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,592.0,13.06,pdf_text,CEO,7731.52,,0,True
+249581,2,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,500.0,13.26,pdf_text,CEO,6630.0,,0,True
+249581,3,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,250.0,13.3,pdf_text,CEO,3325.0,,0,True
+249581,4,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,2499.0,13.31,pdf_text,CEO,33261.69,,0,True
+249581,5,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,250.0,13.3,pdf_text,CEO,3325.0,,0,True
+249581,6,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,500.0,13.31,pdf_text,CEO,6655.0,,0,True
+249581,7,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,250.0,13.3,pdf_text,CEO,3325.0,,0,True
+249581,8,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,500.0,13.31,pdf_text,CEO,6655.0,,0,True
+249581,9,2025-03-14 10:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,200.0,13.33,pdf_text,CEO,2666.0,,0,True
+249585,0,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,652.0,13.34,pdf_text,CEO,8697.68,,0,True
+249585,1,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,348.0,13.34,pdf_text,CEO,4642.32,,0,True
+249585,2,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,250.0,13.35,pdf_text,CEO,3337.5,249581,0,False
+249585,3,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,500.0,13.36,pdf_text,CEO,6680.0,249581,0,False
+249585,4,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,250.0,13.35,pdf_text,CEO,3337.5,249581,0,False
+249585,5,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,2000.0,13.16,pdf_text,CEO,26320.0,,0,True
+249585,6,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,3000.0,13.16,pdf_text,CEO,39480.0,,0,True
+249585,7,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,1000.0,13.17,pdf_text,CEO,13170.0,,0,True
+249585,8,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,1500.0,13.16,pdf_text,CEO,19740.0,,0,True
+249585,9,2025-03-14 11:18:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,500.0,13.11,pdf_text,CEO,6555.0,249581,0,False
+249589,0,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,1000.0,13.36,pdf_text,CEO,13360.0,249585,0,False
+249589,1,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-11,8000.0,13.36,pdf_text,CEO,106880.0,,0,True
+249589,2,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-12,500.0,13.14,pdf_text,CEO,6570.0,,0,True
+249589,3,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-12,1000.0,13.16,pdf_text,CEO,13160.0,,0,True
+249589,4,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-12,500.0,13.16,pdf_text,CEO,6580.0,,0,True
+249589,5,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,1000.0,13.2,pdf_text,CEO,13200.0,,0,True
+249589,6,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,400.0,13.31,pdf_text,CEO,5324.0,,0,True
+249589,7,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,100.0,13.31,pdf_text,CEO,1331.0,,0,True
+249589,8,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,500.0,13.26,pdf_text,CEO,6630.0,,0,True
+249589,9,2025-03-14 11:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,1000.0,13.21,pdf_text,CEO,13210.0,,0,True
+249593,0,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,1000.0,13.16,pdf_text,CEO,13160.0,249589,0,False
+249593,1,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,400.0,13.11,pdf_text,CEO,5244.0,249589,0,False
+249593,2,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,1000.0,13.26,pdf_text,CEO,13260.0,249589,0,False
+249593,3,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,500.0,13.21,pdf_text,CEO,6605.0,249589,0,False
+249593,4,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,500.0,13.16,pdf_text,CEO,6580.0,,0,True
+249593,5,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,600.0,13.11,pdf_text,CEO,7866.0,,0,True
+249593,6,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,1000.0,13.08,pdf_text,CEO,13080.0,,0,True
+249593,7,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,2000.0,13.06,pdf_text,CEO,26120.0,,0,True
+249593,8,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,500.0,13.3,pdf_text,CEO,6650.0,,0,True
+249593,9,2025-03-14 11:49:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,500.0,13.3,pdf_text,CEO,6650.0,,0,True
+249594,0,2025-03-14 11:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,500.0,13.31,pdf_text,CEO,6655.0,249589,0,False
+249594,1,2025-03-14 11:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-13,19000.0,13.31,pdf_text,CEO,252890.0,,0,True
+249718,0,2025-03-18 12:42:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-03-14,17000.0,13.37,pdf_text,CEO,227290.0,,0,True
+251055,0,2025-04-14 14:36:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-04-09,6500.0,13.06,pdf_text,CEO,84890.0,,0,True
+251599,0,2025-04-21 12:53:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,,,13.46,pdf_text,CEO; date and shares not legible in text layer,,,0,True
+253229,0,2025-04-30 15:26:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,sell,gift_inherit_transfer,2025-04-29,240000.0,,pdf_eye,Director; gift to wife,,,0,False
+253229,0,2025-04-30 15:26:00,KOHC,Faisal Atta Sheikh,FAISAL ATTA SHEIKH,executive,sell,gift_inherit_transfer,2025-04-29,200000.0,,pdf_eye,Executive; gift to mother,,,0,False
+253229,0,2025-04-30 15:26:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,buy,gift_inherit_transfer,2025-04-29,240000.0,,pdf_eye,Director; gifts received from husband and son,,,0,False
+253229,1,2025-04-30 15:26:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,buy,gift_inherit_transfer,2025-04-29,200000.0,,pdf_eye,Director; gifts received from husband and son,,,0,False
+253229,2,2025-04-30 15:26:00,KOHC,Hafsa Nadeem,HAFSA NADEEM,director_ceo,buy,gift_inherit_transfer,2025-04-29,54873.0,,pdf_eye,Director; gifts received from husband and son,,,0,False
+253317,0,2025-05-02 12:20:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-04-30,9496.0,13.23,pdf_text,CEO,125632.08,,0,True
+253411,0,2025-05-05 10:32:00,GCWL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,Director; transfer of one qualifying share to original allottee (7 directors in this filing),,,0,False
+253411,0,2025-05-05 10:32:00,GCWL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,CEO/Director; qualifying share transfer,,,0,False
+253411,0,2025-05-05 10:32:00,GCWL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,Director; qualifying share transfer,,,0,False
+253411,0,2025-05-05 10:32:00,GCWL,Rabia Atique,RABIA ATIQUE,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,Director; qualifying share transfer,,,0,False
+253411,0,2025-05-05 10:32:00,GCWL,Saira Farooq,SAIRA FAROOQ,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,Director; qualifying share transfer,,,0,False
+253411,0,2025-05-05 10:32:00,GCWL,Hafiz Imran Lateef,HAFIZ IMRAN LATEEF,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,Director; qualifying share transfer,,,0,False
+253411,0,2025-05-05 10:32:00,GCWL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,unknown,gift_inherit_transfer,2025-05-02,1.0,,pdf_eye,Director; qualifying share transfer,,,0,False
+253638,0,2025-05-09 11:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-06,14000.0,13.49,pdf_text,CEO; overlaps 253658 (same trades re-filed),188860.0,,0,True
+253638,1,2025-05-09 11:59:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-07,33445.0,13.01,pdf_text,CEO; overlaps 253658 (same trades re-filed),435119.45,,0,True
+253658,0,2025-05-09 15:12:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-05,3000.0,13.55,pdf_text,CEO,40650.0,,0,True
+253658,1,2025-05-09 15:12:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-06,14000.0,13.5,pdf_text,CEO,189000.0,253638,0,False
+253658,2,2025-05-09 15:12:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-07,33445.0,13.02,pdf_text,CEO,435453.89999999997,253638,0,False
+253658,3,2025-05-09 15:12:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-08,24555.0,12.94,pdf_text,CEO,317741.7,,0,True
+253823,0,2025-05-14 13:23:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-09,65000.0,12.54,pdf_eye,CEO 22.6%; page 2 blank,815100.0,,0,True
+253823,1,2025-05-14 13:23:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-13,1825.0,13.47,pdf_eye,CEO 22.6%; page 2 blank,24582.75,,0,True
+254027,0,2025-05-19 09:20:00,GCWL,Shahnawaz Zafar,SHAHNAWAZ ZAFAR,executive,sell,market,2025-05-15,156000.0,9.64,pdf_eye,Senior Management,1503840.0,,0,True
+254132,0,2025-05-20 15:25:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-05-19,10000.0,384.54,pdf_eye,Director,3845400.0,,0,True
+254164,0,2025-05-21 13:01:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-05-20,1.0,385.0,pdf_eye,Director,385.0,,0,True
+254164,0,2025-05-21 13:01:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,buy,market,2025-05-20,1383.0,384.43,pdf_eye,Director,531666.6900000001,,0,True
+254221,0,2025-05-22 14:49:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-05-21,13000.0,378.04,pdf_eye,Director,4914520.0,,0,True
+254282,0,2025-05-23 14:32:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-05-22,2500.0,378.12,pdf_eye,Director,945300.0,,0,True
+254716,0,2025-06-03 11:20:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-05-14,12000.0,13.32,pdf_text,CEO,159840.0,,0,True
+254910,0,2025-06-10 12:02:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-06-05,1451.0,15.57,pdf_text,CEO,22592.07,,0,True
+255013,0,2025-06-12 12:41:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-06-10,8549.0,15.59,pdf_text,CEO,133278.91,,0,True
+255013,1,2025-06-12 12:41:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-06-11,30512.0,16.02,pdf_text,CEO,488802.24,,0,True
+255032,0,2025-06-12 14:48:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-06-11,50000.0,392.0,pdf_eye,"Director, 18% holder",19600000.0,,0,True
+255067,0,2025-06-13 12:12:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-06-12,133487.0,407.75,pdf_eye,"Director, 18% holder",54429324.25,,0,True
+255132,0,2025-06-16 11:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-06-12,18000.0,15.76,pdf_text,CEO,283680.0,,0,True
+255132,1,2025-06-16 11:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-06-13,4488.0,15.57,pdf_text,CEO,69878.16,,0,True
+255365,0,2025-06-20 12:28:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-06-19,99500.0,383.99,pdf_eye,"Director, 18% holder",38207005.0,,0,True
+256241,0,2025-07-09 15:26:00,GCWL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,sell,market,2025-07-08,44500.0,14.36,pdf_eye,Independent Director,639020.0,,0,True
+256345,0,2025-07-11 16:18:00,GCWL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,sell,market,2025-07-10,43900.0,12.35,pdf_eye,Independent Director,542165.0,,0,True
+256653,0,2025-07-21 12:29:00,GGL,Syed Sibtul Hassan Gilani,SYED SIBTUL HASSAN GILANI,executive,buy,market,2025-07-11,100.0,19.39,pdf_eye,Executive,1939.0,,0,True
+259423,0,2025-09-17 11:46:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,buy,esop,2025-09-16,18685.0,77.84,pdf_eye,CFO; ESOS treasury shares; letter header says 2024 (typo),1454440.4000000001,,0,False
+259423,0,2025-09-17 11:46:00,NETSOL,Sehrish Ishtiaq,SEHRISH ISHTIAQ,executive,buy,esop,2025-09-16,4225.0,77.84,pdf_eye,Company Secretary; ESOS,328874.0,,0,False
+259423,0,2025-09-17 11:46:00,NETSOL,Muhammad Abdul Wahab Hafeez,MUHAMMAD ABDUL WAHAB HAFEEZ,executive,buy,esop,2025-09-16,5915.0,77.84,pdf_eye,Chief Internal Auditor; ESOS,460423.60000000003,,0,False
+259636,0,2025-09-19 16:20:00,GCWL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,sell,gift_inherit_transfer,2025-09-16,890000.0,,pdf_eye,Director; Gift Out,,,0,False
+259636,0,2025-09-19 16:20:00,GCWL,Hafiz Farooq Ahmad,HAFIZ FAROOQ AHMAD,director_ceo,sell,gift_inherit_transfer,2025-09-16,890000.0,,pdf_eye,Director; Gift Out,,,0,False
+259859,0,2025-09-23 15:05:00,GCWL,Atique Ahmad Khan,ATIQUE AHMAD KHAN,director_ceo,sell,gift_inherit_transfer,2025-09-19,890000.0,,pdf_eye,CEO/Director; Gift Out,,,0,False
+259859,0,2025-09-23 15:05:00,GCWL,Rabia Atique,RABIA ATIQUE,director_ceo,sell,gift_inherit_transfer,2025-09-19,760000.0,,pdf_eye,Director; Gift Out,,,0,False
+259951,0,2025-09-24 15:05:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,sell,market,2025-09-23,5000.0,164.59,pdf_eye,Chief Financial Officer,822950.0,,0,True
+259951,0,2025-09-24 15:05:00,NETSOL,Sehrish Ishtiaq,SEHRISH ISHTIAQ,executive,sell,market,2025-09-23,2225.0,160.25,pdf_eye,Company Secretary,356556.25,,0,True
+260175,0,2025-09-26 15:27:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2025-09-25,150000.0,150.03,pdf_eye,Executive Director,22504500.0,,0,True
+260175,1,2025-09-26 15:27:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2025-09-26,105000.0,150.56,pdf_eye,Executive Director,15808800.0,,0,True
+260196,0,2025-09-26 16:07:00,GCWL,Saira Farooq,SAIRA FAROOQ,director_ceo,sell,gift_inherit_transfer,2025-09-26,760000.0,,pdf_eye,Director; Gift Out,,,0,False
+260196,0,2025-09-26 16:07:00,GCWL,Masroor Ahmad Khan,MASROOR AHMAD KHAN,director_ceo,sell,gift_inherit_transfer,2025-09-26,760000.0,,pdf_eye,spouse Ayesha Masroor of Masroor Ahmad Khan (role not stated); Gift Out | role filled from the same holder's other filings,,,0,False
+260359,0,2025-09-29 14:46:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,sell,market,2025-09-26,5000.0,151.18,pdf_eye,Chief Financial Officer,755900.0,,0,True
+260743,0,2025-10-01 15:06:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2025-09-30,30000.0,102.05,pdf_eye,Director,3061500.0,,0,True
+261892,0,2025-10-09 12:06:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2025-10-03,12500.0,109.06,pdf_eye,Director,1363250.0,,0,True
+261990,0,2025-10-10 12:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-10-06,92560.0,23.96,pdf_text,CEO 22.8%,2217737.6,,0,True
+261990,0,2025-10-10 12:55:00,CRTM,Muhammad Anwar,MUHAMMAD ANWAR,director_ceo,buy,market,2025-10-09,21300.0,23.37,pdf_text,Director,497781.0,,0,True
+261990,1,2025-10-10 12:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-10-07,55753.0,23.98,pdf_text,CEO 22.8%,1336956.94,,0,True
+261990,2,2025-10-10 12:55:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-10-08,59187.0,23.87,pdf_text,CEO 22.8%,1412793.69,,0,True
+264853,0,2025-11-03 09:34:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-10-29,600000.0,26.1,pdf_eye,Non-Executive Director; same content as 264865 (this copy signed For Merit Packaging Limited),15660000.0,,0,True
+264853,1,2025-11-03 09:34:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-10-30,900000.0,26.5,pdf_eye,Non-Executive Director; same content as 264865 (this copy signed For Merit Packaging Limited),23850000.0,,0,True
+264865,0,2025-11-03 10:39:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-10-29,600000.0,26.1,pdf_eye,Non-Executive Director,15660000.0,264853,0,False
+264865,1,2025-11-03 10:39:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-10-30,900000.0,26.5,pdf_eye,Non-Executive Director,23850000.0,264853,0,False
+264875,0,2025-11-03 11:39:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,sell,market,2025-10-31,50300.0,132.94,pdf_eye,Executive Director,6686882.0,,0,True
+264935,0,2025-11-03 14:39:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-10-31,900000.0,27.62,pdf_eye,Non-Executive Director,24858000.0,,0,True
+264973,0,2025-11-04 10:49:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,sell,market,2025-11-03,149700.0,133.11,pdf_eye,Executive Director,19926567.000000004,,0,True
+265039,0,2025-11-05 11:39:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,sell,market,2025-11-04,5695.0,134.44,pdf_eye,Chief Financial Officer,765635.7999999999,,0,True
+265039,0,2025-11-05 11:39:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,buy,esop,2025-11-04,10065.0,77.84,pdf_eye,CFO; treasury shares via ESOS exercise,783459.6,,0,False
+265039,0,2025-11-05 11:39:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,esop,2025-11-04,286000.0,77.84,pdf_eye,Executive Director; ESOS,22262240.0,,0,False
+265039,0,2025-11-05 11:39:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,esop,2025-11-04,373750.0,77.84,pdf_eye,Executive Director; ESOS,29092700.0,,0,False
+265124,0,2025-11-06 10:31:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-11-03,400000.0,28.62,pdf_eye,Non-Executive Director,11448000.0,,0,True
+265124,1,2025-11-06 10:31:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-11-04,750000.0,29.57,pdf_eye,Non-Executive Director,22177500.0,,0,True
+265241,0,2025-11-07 10:35:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-11-06,625000.0,30.03,pdf_eye,Non-Executive Director,18768750.0,,0,True
+265480,0,2025-11-11 12:28:00,GCWL,Ghani Chemical Industries Limited,GHANI CHEMICAL INDUSTRIES LIMITED,sponsor_substantial,sell,unstated,2025-11-10,50000.0,18.4,pdf_eye,"Associated Company; physical shares, market NA",919999.9999999999,,0,True
+265484,0,2025-11-11 12:47:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-06,9000.0,23.14,pdf_text,CEO; third line date missing in OCR,208260.0,,0,True
+265484,0,2025-11-11 12:47:00,CRTM,Muhammad Anwar,MUHAMMAD ANWAR,director_ceo,buy,market,2025-11-06,14277.0,23.1,pdf_text,Director,329798.7,,0,True
+265484,1,2025-11-11 12:47:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-07,36000.0,23.34,pdf_text,CEO; third line date missing in OCR,840240.0,,0,True
+265484,1,2025-11-11 12:47:00,CRTM,Muhammad Anwar,MUHAMMAD ANWAR,director_ceo,buy,market,2025-11-07,31500.0,23.3,pdf_text,Director,733950.0,,0,True
+265484,2,2025-11-11 12:47:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,,24500.0,23.32,pdf_text,CEO; third line date missing in OCR,571340.0,,0,True
+265717,0,2025-11-14 15:51:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-11,30490.0,23.12,pdf_text,CEO 23%,704928.8,,0,True
+265717,1,2025-11-14 15:51:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-12,2050.0,23.07,pdf_text,CEO 23%,47293.5,,0,True
+265717,2,2025-11-14 15:51:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-13,43501.0,23.33,pdf_text,CEO 23%,1014878.33,,0,True
+265846,0,2025-11-18 10:14:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2025-11-14,140000.0,29.99,pdf_eye,Non-Executive Director,4198600.0,,0,True
+266059,0,2025-11-20 14:41:00,CPPL,Akbarali Pesnani,AKBARALI PESNANI,director_ceo,sell,market,2025-11-19,500.0,101.01,pdf_eye,spouse Sakina Pesnani of Director,50505.0,,0,True
+266227,0,2025-11-24 12:36:00,SPL,Tariq Nisar,TARIQ NISAR,sponsor_substantial,buy,market,2025-11-17,817059.0,38.35,pdf_eye,Substantial Shareholder 7.6-8.75%,31334212.650000002,,0,True
+266227,1,2025-11-24 12:36:00,SPL,Tariq Nisar,TARIQ NISAR,sponsor_substantial,buy,market,2025-11-18,200000.0,43.02,pdf_eye,Substantial Shareholder 7.6-8.75%,8604000.0,,0,True
+266227,2,2025-11-24 12:36:00,SPL,Tariq Nisar,TARIQ NISAR,sponsor_substantial,buy,market,2025-11-20,409295.0,51.04,pdf_eye,Substantial Shareholder 7.6-8.75%,20890416.8,,0,True
+266387,0,2025-11-26 12:38:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-20,2000.0,24.22,pdf_text,"CEO, 23%; OCR text, dates partly garbled but consistent with cumulative holding",48440.0,,0,True
+266387,1,2025-11-26 12:38:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-21,42459.0,24.08,pdf_text,"CEO, 23%; OCR text, dates partly garbled but consistent with cumulative holding",1022412.72,,0,True
+266387,2,2025-11-26 12:38:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-24,10000.0,23.91,pdf_text,"CEO, 23%; OCR text, dates partly garbled but consistent with cumulative holding",239100.0,,0,True
+266387,3,2025-11-26 12:38:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,market,2025-11-25,10000.0,23.77,pdf_text,"CEO, 23%; OCR text, dates partly garbled but consistent with cumulative holding",237700.0,,0,True
+266461,0,2025-11-27 12:43:00,SPL,Nadeem Nisar,NADEEM NISAR,sponsor_substantial,buy,market,2025-11-24,31117.0,55.84,pdf_eye,Substantial Shareholder 11.35%,1737573.28,,0,True
+266598,0,2025-12-01 11:20:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,sell,market,2025-11-28,189000.0,130.08,pdf_eye,Executive Director,24585120.000000004,,0,True
+266605,0,2025-12-01 12:23:00,SPL,Nadeem Nisar,NADEEM NISAR,sponsor_substantial,buy,market,2025-11-28,321511.0,81.57,pdf_eye,Substantial Shareholder 11.93%,26225652.27,,0,True
+266717,0,2025-12-03 12:51:00,SPL,Nadeem Nisar,NADEEM NISAR,sponsor_substantial,buy,market,2025-12-01,60000.0,90.17,pdf_eye,Substantial Shareholder 12.04%,5410200.0,,0,True
+266844,0,2025-12-05 12:17:00,SPL,Nadeem Nisar,NADEEM NISAR,sponsor_substantial,buy,market,2025-12-03,10000.0,109.26,pdf_eye,Substantial Shareholder 12.06%,1092600.0,,0,True
+267237,0,2025-12-15 11:25:00,SPL,Nadeem Nisar,NADEEM NISAR,sponsor_substantial,buy,market,2025-12-11,300000.0,87.29,pdf_eye,Substantial Shareholder 12.6%,26187000.000000004,,0,True
+268082,0,2026-01-01 11:30:00,NETSOL,Sehrish Ishtiaq,SEHRISH ISHTIAQ,executive,sell,market,2025-12-31,2000.0,134.42,pdf_eye,Company Secretary,268840.0,,0,True
+268082,0,2026-01-01 11:30:00,NETSOL,Muhammad Abdul Wahab Hafeez,MUHAMMAD ABDUL WAHAB HAFEEZ,executive,sell,market,2025-12-31,3235.0,133.01,pdf_eye,Chief Internal Auditor; serial numbers skip 2 in the source form,430287.35,,0,True
+268082,1,2026-01-01 11:30:00,NETSOL,Muhammad Abdul Wahab Hafeez,MUHAMMAD ABDUL WAHAB HAFEEZ,executive,sell,market,2025-12-31,330.0,133.2,pdf_eye,Chief Internal Auditor; serial numbers skip 2 in the source form,43955.99999999999,,0,True
+268082,2,2026-01-01 11:30:00,NETSOL,Muhammad Abdul Wahab Hafeez,MUHAMMAD ABDUL WAHAB HAFEEZ,executive,sell,market,2025-12-31,2350.0,133.25,pdf_eye,Chief Internal Auditor; serial numbers skip 2 in the source form,313137.5,,0,True
+268129,0,2026-01-02 09:15:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2025-12-26,987875.0,119.38,pdf_eye,"Director, 18% holder",117932517.5,,0,True
+268206,0,2026-01-05 11:18:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,sell,market,2026-01-01,2475.0,136.4,pdf_eye,Chief Financial Officer,337590.0,,0,True
+268441,0,2026-01-08 10:49:00,NETSOL,Boo-Ali,BOO ALI SIDDIQUI,executive,sell,market,2026-01-07,3000.0,134.5,pdf_eye,Chief Financial Officer,403500.0,,0,True
+268443,0,2026-01-08 11:04:00,BIPL,Haider Ali Hilaly,HAIDER ALI HILALY,director_ceo,sell,market,2026-01-07,30000.0,34.18,pdf_eye,Director,1025400.0,,0,True
+268480,0,2026-01-08 15:04:00,FECTC,Muhammad Nauraiz Khan,MUHAMMAD NAURAIZ KHAN,executive,buy,market,2025-12-26,6500.0,152.38,pdf_eye,Executive,990470.0,,0,True
+268480,0,2026-01-08 15:04:00,FECTC,Muhammad Nauraiz Khan,MUHAMMAD NAURAIZ KHAN,executive,sell,market,2025-12-30,16500.0,151.55,pdf_eye,Executive; position closed,2500575.0,,0,True
+268480,1,2026-01-08 15:04:00,FECTC,Muhammad Nauraiz Khan,MUHAMMAD NAURAIZ KHAN,executive,buy,market,2025-12-29,10000.0,150.5,pdf_eye,Executive,1505000.0,,0,True
+268586,0,2026-01-12 11:04:00,SPL,Nadeem Nisar,NADEEM NISAR,sponsor_substantial,sell,market,2026-01-08,1477951.0,63.5,pdf_eye,Substantial Shareholder 9.9%; counterpart of 268622 buy,93849888.5,,0,True
+268594,0,2026-01-12 11:45:00,CPPL,Akbarali Pesnani,AKBARALI PESNANI,director_ceo,sell,market,2026-01-07,2500.0,101.02,pdf_eye,spouse Sakina Pesnani of Director,252550.0,,0,True
+268622,0,2026-01-12 14:52:00,SPL,Tariq Nisar,TARIQ NISAR,sponsor_substantial,buy,market,2026-01-08,1477951.0,63.5,pdf_eye,spouse Shabnam Tariq of Substantial Shareholder; cum 6.53%,93849888.5,,0,True
+268664,0,2026-01-13 11:11:00,CPPL,Akbarali Pesnani,AKBARALI PESNANI,director_ceo,sell,market,2026-01-08,1500.0,103.0,pdf_eye,spouse Sakina Pesnani of Director; market not stated but CDC sale,154500.0,,0,True
+268700,0,2026-01-14 09:18:00,KOHC,Omer Aizaz Sheikh,OMER AIZAZ SHEIKH,executive,sell,market,2026-01-09,162500.0,112.05,pdf_eye,"spouse Meher Khan Tareen of Executive Omer Aizaz Sheikh (named in sibling filings 234104, 233717); cum nil",18208125.0,,0,True
+268843,0,2026-01-19 11:35:00,SPL,Tariq Nisar,TARIQ NISAR,sponsor_substantial,buy,market,2026-01-12,91780.0,67.79,pdf_eye,"spouse Shabnam Tariq of Substantial Shareholder Tariq Nisar (named in sibling filing 268622), holds 10.32% after; self-signed letter; 3-page PDF, page 1 read only",6221766.2,,0,True
+268843,1,2026-01-19 11:35:00,SPL,Tariq Nisar,TARIQ NISAR,sponsor_substantial,buy,market,2026-01-13,2000000.0,72.0,pdf_eye,"spouse Shabnam Tariq of Substantial Shareholder Tariq Nisar (named in sibling filing 268622), holds 10.32% after; self-signed letter; 3-page PDF, page 1 read only",144000000.0,,0,True
+268876,0,2026-01-19 14:00:00,NETSOL,Sehrish Ishtiaq,SEHRISH ISHTIAQ,executive,buy,esop,2026-01-19,2275.0,77.84,pdf_text,Company Secretary; ESOS treasury shares exercised,177086.0,,0,False
+268876,0,2026-01-19 14:00:00,NETSOL,Muhammad Abdul Wahab Hafeez,MUHAMMAD ABDUL WAHAB HAFEEZ,executive,buy,esop,2026-01-19,3185.0,77.84,pdf_text,Chief Internal Auditor; ESOS,247920.40000000002,,0,False
+269771,0,2026-02-06 11:38:00,GCWL,Shahnawaz Zafar,SHAHNAWAZ ZAFAR,executive,sell,market,2026-02-04,590.0,24.33,pdf_eye,Senior Management,14354.699999999999,,0,True
+269825,0,2026-02-09 09:53:00,GGL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,sell,market,2026-01-29,75000.0,23.4,pdf_text,Director; OCR text partly garbled,1755000.0,,0,True
+270999,0,2026-02-25 10:16:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2026-02-24,50000.0,108.74,pdf_eye,Executive Director,5437000.0,,0,True
+271497,0,2026-02-27 11:25:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2026-02-26,15000.0,91.99,pdf_eye,Director,1379850.0,,0,True
+271928,0,2026-03-03 11:28:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2026-03-02,5500.0,88.28,pdf_eye,Director,485540.0,,0,True
+271963,0,2026-03-03 13:25:00,WASL,Wasl Modaraba Management Limited,WASL MODARABA MANAGEMENT LIMITED,sponsor_substantial,buy,rights,2026-03-02,3132572.0,5.27,pdf_eye,"management company, substantial certificate holder; auditor's certificate of rights subscription (2 pages)",16508654.44,,0,False
+271971,0,2026-03-04 09:25:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2026-03-03,6500.0,82.44,pdf_eye,Director,535860.0,,0,True
+271986,0,2026-03-04 10:21:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2026-03-03,50000.0,93.09,pdf_eye,Executive Director,4654500.0,,0,True
+271986,0,2026-03-04 10:21:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2026-03-03,155000.0,93.48,pdf_eye,Executive Director,14489400.0,,0,True
+272010,0,2026-03-04 12:11:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2026-03-02,500000.0,26.18,pdf_eye,Non-Executive Director,13090000.0,,0,True
+272047,0,2026-03-05 09:56:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2026-03-04,64000.0,94.83,pdf_eye,Executive Director,6069120.0,,0,True
+272071,0,2026-03-05 11:26:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2026-03-03,100000.0,27.02,pdf_eye,Non-Executive Director,2702000.0,,0,True
+272312,0,2026-03-10 11:31:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2026-03-09,50000.0,89.18,pdf_eye,Executive Director,4459000.0,,0,True
+272451,0,2026-03-12 12:18:00,NETSOL,Omar Shahab Ghauri,OMAR SHAHAB GHAURI,director_ceo,buy,market,2026-03-11,50000.0,100.13,pdf_eye,Executive Director,5006500.0,,0,True
+272527,0,2026-03-13 12:23:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2026-03-11,10000.0,83.4,pdf_eye,Director,834000.0,,0,True
+272529,0,2026-03-13 12:27:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-10,168363.0,80.55,pdf_eye,Chief Executive,13561639.65,,0,True
+272529,1,2026-03-13 12:27:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-11,167625.0,81.21,pdf_eye,Chief Executive,13612826.249999998,,0,True
+272529,2,2026-03-13 12:27:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-12,154754.0,78.05,pdf_eye,Chief Executive,12078549.7,,0,True
+272555,0,2026-03-16 10:56:00,KOHC,Talha Saeed Ahmed,TALHA SAEED AHMED,director_ceo,buy,market,2026-03-10,5500.0,80.17,pdf_eye,Independent Director,440935.0,,0,True
+272725,0,2026-03-18 11:48:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-13,115590.0,78.08,pdf_eye,Chief Executive,9025267.2,,0,True
+272725,1,2026-03-18 11:48:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-17,77321.0,79.77,pdf_eye,Chief Executive,6167896.17,,0,True
+272748,0,2026-03-18 12:48:00,BFAGRO,Barkat Steel Pvt Limited,BARKAT STEEL PVT LIMITED,sponsor_substantial,buy,market,2026-03-12,108949.0,33.99,pdf_eye,Associated Company,3703176.5100000002,,0,True
+272748,1,2026-03-18 12:48:00,BFAGRO,Barkat Steel Pvt Limited,BARKAT STEEL PVT LIMITED,sponsor_substantial,buy,market,2026-03-13,15000.0,33.51,pdf_eye,Associated Company,502649.99999999994,,0,True
+272748,2,2026-03-18 12:48:00,BFAGRO,Barkat Steel Pvt Limited,BARKAT STEEL PVT LIMITED,sponsor_substantial,buy,market,2026-03-16,36119.0,33.28,pdf_eye,Associated Company,1202040.32,,0,True
+272748,3,2026-03-18 12:48:00,BFAGRO,Barkat Steel Pvt Limited,BARKAT STEEL PVT LIMITED,sponsor_substantial,buy,market,2026-03-17,20000.0,33.42,pdf_eye,Associated Company,668400.0,,0,True
+273221,0,2026-03-30 15:22:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-25,7000.0,80.72,pdf_eye,Chief Executive,565040.0,,0,True
+273500,0,2026-04-03 14:55:00,KOHC,Nadeem Atta Sheikh,NADEEM ATTA SHEIKH,director_ceo,buy,market,2026-03-30,4070.0,75.4,pdf_eye,Chief Executive,306878.0,,0,True
+273891,0,2026-04-09 14:06:00,CRTM,Nazia Maqbool,NAZIA MAQBOOL,director_ceo,buy,gift_inherit_transfer,2026-02-16,18406.0,,pdf_text,Independent Director; Gift-In; late filing,,,0,False
+274012,0,2026-04-13 11:42:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2026-04-10,68000.0,114.92,pdf_eye,spouse Tahira Salim Ghauri of Executive Director,7814560.0,,0,True
+274790,0,2026-04-22 10:44:00,NETSOL,Salim Ullah Ghauri,SALIM ULLAH GHAURI,director_ceo,buy,market,2026-04-21,17700.0,123.17,pdf_eye,spouse Tahira Salim Ghauri of Executive Director,2180109.0,,0,True
+276391,0,2026-04-30 15:03:00,BIPL,Imran Haleem Shaikh,IMRAN HALEEM SHAIKH,executive,buy,market,2026-04-29,1000.0,26.0,pdf_eye,Deputy Chief Executive Officer,26000.0,,0,True
+276715,0,2026-05-06 10:32:00,CEPB,Iqbal Ali Lakhani,IQBAL ALI LAKHANI,director_ceo,buy,market,2026-05-04,750000.0,28.04,pdf_eye,Non-Executive Director,21030000.0,,0,True
+277080,0,2026-05-12 14:07:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-04-15,3282.0,70.68,pdf_text,Substantial Shareholder; OCR text with minor garbling; cum 15.47%,231971.76,,0,True
+277080,1,2026-05-12 14:07:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-04-17,25000.0,80.09,pdf_text,Substantial Shareholder; OCR text with minor garbling; cum 15.47%,2002250.0,,0,True
+277080,2,2026-05-12 14:07:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-04-21,1702500.0,95.62,pdf_text,Substantial Shareholder; OCR text with minor garbling; cum 15.47%,162793050.0,,0,True
+277080,3,2026-05-12 14:07:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-05-04,30000.0,84.68,pdf_text,Substantial Shareholder; OCR text with minor garbling; cum 15.47%,2540400.0,,0,True
+277080,4,2026-05-12 14:07:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-05-05,695000.0,85.28,pdf_text,Substantial Shareholder; OCR text with minor garbling; cum 15.47%,59269600.0,,0,True
+277080,5,2026-05-12 14:07:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-05-06,720000.0,90.2,pdf_text,Substantial Shareholder; OCR text with minor garbling; cum 15.47%,64944000.0,,0,True
+277784,0,2026-05-25 10:19:00,KOHC,Hamza Atta Sheikh,HAMZA ATTA SHEIKH,director_ceo,buy,market,2026-05-20,13000.0,80.7,pdf_eye,Director,1049100.0,,0,True
+278734,0,2026-06-17 14:56:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-06-15,205000.0,102.33,pdf_eye,"Director, 18% holder",20977650.0,,0,True
+278734,1,2026-06-17 14:56:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-06-16,145000.0,102.32,pdf_eye,"Director, 18% holder",14836399.999999998,,0,True
+278778,0,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,1.0,7770.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,7770.0,,0,True
+278778,1,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,3.0,7779.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,23337.0,,0,True
+278778,2,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,7.0,7779.75,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,54458.25,,0,True
+278778,3,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,6.0,7778.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,46668.0,,0,True
+278778,4,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7778.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15556.0,,0,True
+278778,5,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,10.0,7780.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,77800.0,,0,True
+278778,6,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,8.0,7780.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,62240.0,,0,True
+278778,7,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,18.0,7780.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,140040.0,,0,True
+278778,8,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,7.0,7779.8,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,54458.6,,0,True
+278778,9,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7739.9,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15479.8,,0,True
+278778,10,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,3.0,7740.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,23220.0,,0,True
+278778,11,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7740.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15480.0,,0,True
+278778,12,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7774.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15548.0,,0,True
+278778,13,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,1.0,7774.98,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,7774.98,,0,True
+278778,14,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,1.0,7774.99,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,7774.99,,0,True
+278778,15,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7775.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15550.0,,0,True
+278778,16,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7775.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15550.0,,0,True
+278778,17,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7775.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15550.0,,0,True
+278778,18,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,1.0,7777.99,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,7777.99,,0,True
+278778,19,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,2.0,7770.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,15540.0,,0,True
+278778,20,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,8.0,7777.99,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,62223.92,,0,True
+278778,21,2026-06-18 14:42:00,NESTLE,Faisal Nadeem,FAISAL NADEEM,director_ceo,buy,market,2026-06-16,10.0,7770.0,pdf_text,spouse Maimoona Faisal of Director; 100 shares in total,77700.0,,0,True
+278819,0,2026-06-19 11:22:00,JVDC,Arif Habib Corporation Limited,ARIF HABIB CORPORATION LIMITED,sponsor_substantial,sell,market,2026-06-12,1007672.0,147.9,pdf_eye,substantial shareholder 35.45% after the sale,149034688.8,,0,True
+278823,0,2026-06-19 11:30:00,MEBL,Irfan Siddiqui,IRFAN SIDDIQUI,director_ceo,buy,gift_inherit_transfer,2026-06-10,20000.0,,pdf_eye,"spouse Dr. Ghazala Siddiqui received a gift; three adult daughters (not insiders) also received gifts, not recorded",,,0,False
+278866,0,2026-06-19 16:04:00,SHDT,Hamza Naseem,HAMZA NASEEM,director_ceo,buy,gift_inherit_transfer,2026-06-15,76722.0,,pdf_eye,Non-Executive Director; Gift In,,,0,False
+278945,0,2026-06-22 14:28:00,JVDC,Arif Habib Corporation Limited,ARIF HABIB CORPORATION LIMITED,sponsor_substantial,sell,market,2026-06-15,5000000.0,153.33,pdf_eye,substantial shareholder 34.13% after the sale,766650000.0000001,,0,True
+278970,0,2026-06-23 08:23:00,SHFA,Maimoona Siddiqui,MAIMOONA SIDDIQUI,executive,buy,market,2026-06-22,220.0,524.0,pdf_eye,Senior Management,115280.0,,0,True
+278970,0,2026-06-23 08:23:00,SHFA,Maimoona Siddiqui,MAIMOONA SIDDIQUI,executive,sell,market,2026-06-22,220.0,523.0,pdf_eye,Senior Management,115060.0,,0,True
+278993,0,2026-06-23 12:48:00,SHFA,Muhammad Akbar Khan,MUHAMMAD AKBAR KHAN,executive,buy,market,2026-06-22,100.0,529.0,pdf_eye,Senior Management,52900.0,,0,True
+278993,0,2026-06-23 12:48:00,SHFA,Muhammad Akbar Khan,MUHAMMAD AKBAR KHAN,executive,sell,market,2026-06-23,100.0,528.0,pdf_eye,Senior Management,52800.0,,0,True
+279009,0,2026-06-23 14:22:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-06-19,162931.0,11.0,pdf_text,spouse Maryam Habib first line; PREFERENCE shares,1792241.0,,0,False
+279009,1,2026-06-23 14:22:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-06-23,200000.0,10.8,pdf_text,spouse Maryam Habib first line; PREFERENCE shares,2160000.0,,0,False
+279043,0,2026-06-24 10:46:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-06-19,100455.0,14.2,pdf_eye,substantial certificate holder 12.1-12.3%,1426461.0,,0,True
+279043,1,2026-06-24 10:46:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-06-22,26565.0,14.0,pdf_eye,substantial certificate holder 12.1-12.3%,371910.0,,0,True
+279068,0,2026-06-24 12:50:00,BAFS,Khawaja Bilal Hussain,KHAWAJA BILAL HUSSAIN,director_ceo,buy,market,2026-06-23,600.0,286.0,pdf_eye,Independent Director; physical shares,171600.0,,0,True
+279155,0,2026-06-29 12:08:00,PPL,The President of the Islamic Republic of Pakistan,THE PRESIDENT OF THE ISLAMIC REPUBLIC OF PAKISTAN,sponsor_substantial,buy,gift_inherit_transfer,2026-06-24,200057318.0,,pdf_eye,Substantial Shareholder 74.9%; Transfer In (physical),,,0,False
+279202,0,2026-06-29 13:54:00,PAKD,Muhammad Waheed,MUHAMMAD WAHEED,director_ceo,sell,market,2026-06-23,12280.0,134.9,pdf_eye,Non-Executive Director,1656572.0,,0,True
+279202,1,2026-06-29 13:54:00,PAKD,Muhammad Waheed,MUHAMMAD WAHEED,director_ceo,sell,market,2026-06-24,51321.0,132.07,pdf_eye,Non-Executive Director,6777964.47,,0,True
+279263,0,2026-06-30 09:59:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-06-23,13809.0,13.5,pdf_eye,substantial certificate holder 11.6-12%,186421.5,,0,True
+279263,1,2026-06-30 09:59:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-06-24,52746.0,13.5,pdf_eye,substantial certificate holder 11.6-12%,712071.0,,0,True
+279329,0,2026-06-30 15:20:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-06-29,26000.0,104.99,pdf_eye,"Director, 18% holder",2729740.0,,0,True
+279366,0,2026-07-01 11:37:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-01,101.0,360.66,pdf_eye,Associated Company; cum 1.03%,36426.66,,0,True
+279366,1,2026-07-01 11:37:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-05,4.0,373.49,pdf_eye,Associated Company; cum 1.03%,1493.96,,0,True
+279366,2,2026-07-01 11:37:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-08,109.0,365.15,pdf_eye,Associated Company; cum 1.03%,39801.35,,0,True
+279366,3,2026-07-01 11:37:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-23,11267.0,382.24,pdf_eye,Associated Company; cum 1.03%,4306698.08,,0,True
+279366,4,2026-07-01 11:37:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-24,100000.0,380.19,pdf_eye,Associated Company; cum 1.03%,38019000.0,,0,True
+279366,5,2026-07-01 11:37:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-29,10041.0,381.69,pdf_eye,Associated Company; cum 1.03%,3832549.29,,0,True
+279376,0,2026-07-01 13:11:00,TICL,Khawaja Bilal Hussain,KHAWAJA BILAL HUSSAIN,director_ceo,buy,market,2026-06-30,5000.0,889.0,pdf_eye,Independent Director; physical shares,4445000.0,,0,True
+279430,0,2026-07-02 11:36:00,MEBL,Muhammad Umar Khan Fareedy,MUHAMMAD UMAR KHAN FAREEDY,executive,sell,market,2026-07-01,5000.0,542.12,pdf_eye,Executive of the Bank,2710600.0,,0,True
+279438,0,2026-07-02 14:01:00,THCCL,Saleem Zamindar,SALEEM ZAMINDAR,director_ceo,sell,market,2026-07-01,1248703.0,67.35,pdf_eye,Director,84100147.05,,0,True
+279486,0,2026-07-03 12:14:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-01,50000.0,14.07,pdf_eye,substantial certificate holder 10.9-11.2%,703500.0,,0,True
+279486,1,2026-07-03 12:14:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-02,50000.0,15.48,pdf_eye,substantial certificate holder 10.9-11.2%,774000.0,,0,True
+279488,0,2026-07-03 12:22:00,PAKD,Muhammad Waheed,MUHAMMAD WAHEED,director_ceo,sell,market,2026-06-29,25796.0,129.02,pdf_eye,Non-Executive Director,3328199.9200000004,,0,True
+279488,1,2026-07-03 12:22:00,PAKD,Muhammad Waheed,MUHAMMAD WAHEED,director_ceo,sell,market,2026-06-30,47904.0,126.95,pdf_eye,Non-Executive Director,6081412.8,,0,True
+279488,2,2026-07-03 12:22:00,PAKD,Muhammad Waheed,MUHAMMAD WAHEED,director_ceo,sell,market,2026-07-01,10713.0,127.44,pdf_eye,Non-Executive Director,1365264.72,,0,True
+279488,3,2026-07-03 12:22:00,PAKD,Muhammad Waheed,MUHAMMAD WAHEED,director_ceo,sell,market,2026-07-02,19486.0,126.57,pdf_eye,Non-Executive Director,2466343.02,,0,True
+279490,0,2026-07-03 13:08:00,PPL,Pir Muhammad Usman,PIR MUHAMMAD USMAN,executive,sell,unstated,2026-07-03,4251.0,247.26,pdf_eye,Executive; market not stated (CDS electronic); cum nil,1051102.26,,0,True
+279505,0,2026-07-03 15:55:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-06-22,11890000.0,9.89,pdf_text,REIT units futures,117592100.0,,0,False
+279505,0,2026-07-03 15:55:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-06-22,11890000.0,9.66,pdf_text,REIT units futures,114857400.0,,0,False
+279505,0,2026-07-03 15:55:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,buy,other,2026-06-23,9915000.0,9.85,pdf_text,REIT units futures,97662750.0,,0,False
+279505,0,2026-07-03 15:55:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,sell,other,2026-06-23,9915000.0,9.91,pdf_text,REIT units futures,98257650.0,,0,False
+279505,1,2026-07-03 15:55:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-06-23,6000000.0,9.93,pdf_text,REIT units futures,59580000.0,,0,False
+279505,1,2026-07-03 15:55:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-06-18,134133.0,10.01,pdf_text,REIT units futures,1342671.33,,0,False
+279505,2,2026-07-03 15:55:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-06-23,6000000.0,9.75,pdf_text,REIT units futures,58500000.0,,0,False
+279509,0,2026-07-03 16:08:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-06-30,1600.0,508.5,pdf_eye,CEO,813600.0,,0,True
+279509,0,2026-07-03 16:08:00,SHFA,Maimoona Siddiqui,MAIMOONA SIDDIQUI,executive,buy,market,2026-06-30,570.0,510.0,pdf_eye,Senior Management,290700.0,,0,True
+279509,1,2026-07-03 16:08:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-01,3980.0,510.75,pdf_eye,CEO,2032785.0,,0,True
+279509,2,2026-07-03 16:08:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-03,7936.0,508.0,pdf_eye,CEO,4031488.0,,0,True
+279528,0,2026-07-06 09:03:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-07-01,275000.0,107.1,pdf_eye,"Director, 17.9% holder",29452500.0,,0,True
+279528,1,2026-07-06 09:03:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-07-02,115956.0,107.09,pdf_eye,"Director, 17.9% holder",12417728.040000001,,0,True
+279603,0,2026-07-07 10:53:00,SHFA,Mohsin Qazi,MOHSIN QAZI,executive,buy,market,2026-07-03,300.0,505.0,pdf_eye,Senior Management; letter dated April 6 2026 but trade dated 03-07-2026,151500.0,,0,True
+279681,0,2026-07-08 11:55:00,GOC,Khawar Anwar Khawaja,KHAWAR ANWAR KHAWAJA,sponsor_substantial,buy,market,2026-07-07,126206.0,115.88,pdf_eye,"CEO & Director & Substantial Shareholder, 15.03%",14624751.28,,0,True
+279691,0,2026-07-08 13:01:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-06-30,26118.0,380.31,pdf_eye,Associated Company; cum 1.36%,9932936.58,,0,True
+279691,1,2026-07-08 13:01:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-01,351.0,381.26,pdf_eye,Associated Company; cum 1.36%,133822.26,,0,True
+279691,2,2026-07-08 13:01:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-02,9971.0,382.1,pdf_eye,Associated Company; cum 1.36%,3809919.1,,0,True
+279691,3,2026-07-08 13:01:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-03,34493.0,385.0,pdf_eye,Associated Company; cum 1.36%,13279805.0,,0,True
+279702,0,2026-07-08 15:22:00,TCORP,Directors and Substantial Shareholder (aggregate),DIRECTORS AND SUBSTANTIAL SHAREHOLDER AGGREGATE,unknown,buy,rights,2026-07-08,12858230.0,20.0,pdf_text,"intimation of rights subscription, no individual names",257164600.0,,0,False
+279716,0,2026-07-09 10:04:00,TCORP,Directors and Substantial Shareholder (aggregate),DIRECTORS AND SUBSTANTIAL SHAREHOLDER AGGREGATE,unknown,buy,rights,2026-07-09,12858230.0,20.0,pdf_text,"auditor certificate of rights subscription, no individual names",257164600.0,,0,False
+279720,0,2026-07-09 11:08:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-07-06,221000.0,106.41,pdf_eye,"Director, 17.9% holder",23516610.0,,0,True
+279720,1,2026-07-09 11:08:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-07-07,167000.0,104.56,pdf_eye,"Director, 17.9% holder",17461520.0,,0,True
+279720,2,2026-07-09 11:08:00,KOHC,Hijab Tariq,HIJAB TARIQ,sponsor_substantial,sell,market,2026-07-08,202000.0,100.5,pdf_eye,"Director, 17.9% holder",20301000.0,,0,True
+279790,0,2026-07-10 15:05:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-07-07,88855.0,81.93,pdf_text,"Substantial Shareholder; OCR text partly garbled, share count of line 2 inferred from cumulative holding change",7279890.15,,0,True
+279790,1,2026-07-10 15:05:00,CRTM,Crescent Bahuman Limited,CRESCENT BAHUMAN LIMITED,sponsor_substantial,buy,market,2026-07-08,1211145.0,88.11,pdf_text,"Substantial Shareholder; OCR text partly garbled, share count of line 2 inferred from cumulative holding change",106713985.95,,0,True
+279805,0,2026-07-10 16:06:00,GCIL,Ghani ChemWorld Limited,GHANI CHEMWORLD LIMITED,sponsor_substantial,sell,off_market_block,2026-07-06,10000000.0,39.0,pdf_eye,Substantial Shareholder 10.52%; NDM,390000000.0,,0,False
+279829,0,2026-07-13 11:18:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-10,1850.0,530.91,pdf_eye,CEO,982183.4999999999,,0,True
+279839,0,2026-07-13 14:38:00,GGL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,buy,market,2026-07-10,100000.0,25.45,pdf_eye,Independent Director,2545000.0,,0,True
+279886,0,2026-07-14 09:46:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-13,1800.0,536.0,pdf_eye,CEO,964800.0,,0,True
+279892,0,2026-07-14 10:15:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-09,7500000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,337500000.0,,0,False
+279892,1,2026-07-14 10:15:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-10,2500000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,112500000.0,,0,False
+279913,0,2026-07-14 13:46:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-14,1850.0,525.27,pdf_eye,CEO,971749.5,,0,True
+279924,0,2026-07-14 14:20:00,GGL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,buy,market,2026-07-13,56746.0,24.51,pdf_eye,Independent Director,1390844.4600000002,,0,True
+279962,0,2026-07-15 12:21:00,GGL,Mahmood Ahmad,MAHMOOD AHMAD,director_ceo,buy,market,2026-07-14,41602.0,23.88,pdf_eye,Independent Director,993455.76,,0,True
+279966,0,2026-07-15 13:20:00,MEBL,MEBL executives ESOS allotment (52 lines),MEBL EXECUTIVES ESOS ALLOTMENT 52 LINES,executive,buy,esop,2026-07-08,709999.0,557.07,pdf_eye,byte-identical copy (md5),395519142.93,,0,False
+279967,0,2026-07-15 13:21:00,MEBL,MEBL executives ESOS allotment (52 lines),MEBL EXECUTIVES ESOS ALLOTMENT 52 LINES,executive,buy,esop,2026-07-08,709999.0,557.07,pdf_eye,byte-identical copy (md5),395519142.93,279966,0,False
+279968,0,2026-07-15 13:23:00,MEBL,MEBL executives ESOS allotment (52 lines),MEBL EXECUTIVES ESOS ALLOTMENT 52 LINES,executive,buy,esop,2026-07-08,709999.0,557.07,pdf_eye,byte-identical copy (md5),395519142.93,279966,0,False
+279969,0,2026-07-15 13:24:00,MEBL,MEBL executives ESOS allotment (52 lines),MEBL EXECUTIVES ESOS ALLOTMENT 52 LINES,executive,buy,esop,2026-07-08,709999.0,557.07,pdf_eye,"byte-identical PDF to 279970 (md5), filed again",395519142.93,279966,0,False
+279970,0,2026-07-15 13:25:00,MEBL,MEBL executives ESOS allotment (52 lines),MEBL EXECUTIVES ESOS ALLOTMENT 52 LINES,executive,buy,esop,2026-07-08,709999.0,557.07,pdf_eye,"ESOS allotment to executives (Ahmed Ali Siddiqui, Ebrahim Yakoob, Faiz Ur Rehman, Irfan Siddiqui, Khalid Zaman Khan ... 3 pages); individual lines not transcribed because excluded by mode",395519142.93,279966,0,False
+279980,0,2026-07-15 15:02:00,MEBL,Muhammad Umar Khan Fareedy,MUHAMMAD UMAR KHAN FAREEDY,executive,buy,market,2026-07-13,334.0,550.8,pdf_eye,Executive of the Bank,183967.19999999998,,0,True
+279980,1,2026-07-15 15:02:00,MEBL,Muhammad Umar Khan Fareedy,MUHAMMAD UMAR KHAN FAREEDY,executive,buy,market,2026-07-14,3000.0,541.51,pdf_eye,Executive of the Bank,1624530.0,,0,True
+280029,0,2026-07-17 10:28:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-08,14291.0,387.0,pdf_eye,Associated Company; cum 1.48%,5530617.0,,0,True
+280029,1,2026-07-17 10:28:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-10,338.0,387.05,pdf_eye,Associated Company; cum 1.48%,130822.90000000001,,0,True
+280029,2,2026-07-17 10:28:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-13,5100.0,387.03,pdf_eye,Associated Company; cum 1.48%,1973852.9999999998,,0,True
+280029,3,2026-07-17 10:28:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-14,6023.0,388.73,pdf_eye,Associated Company; cum 1.48%,2341320.79,,0,True
+280030,0,2026-07-17 10:35:00,NCML,Sajjad Aslam,SAJJAD ASLAM,sponsor_substantial,buy,market,2026-06-29,100000.0,13.47,pdf_eye,Substantial Shareholder 13.4%,1347000.0,,0,True
+280051,0,2026-07-17 14:55:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-13,250000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,11250000.0,,0,False
+280051,1,2026-07-17 14:55:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-13,700000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,31500000.0,,0,False
+280051,2,2026-07-17 14:55:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-13,2500000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,112500000.0,,0,False
+280051,3,2026-07-17 14:55:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-13,1000000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,45000000.0,,0,False
+280051,4,2026-07-17 14:55:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-14,800000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,36000000.0,,0,False
+280053,0,2026-07-17 14:59:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-07-14,1.0,36.0,pdf_text,Non-Executive Director,36.0,,0,True
+280063,0,2026-07-17 15:35:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,sell,gift_inherit_transfer,2026-07-13,4970000.0,,pdf_text,CEO 13.2%; Gift-Out to spouse,,,0,False
+280063,0,2026-07-17 15:35:00,CRTM,Ahmad Shafi,AHMAD SHAFI,sponsor_substantial,buy,gift_inherit_transfer,2026-07-13,4970000.0,,pdf_text,spouse Mehreen Ahmad Gift-In,,,0,False
+280157,0,2026-07-21 12:52:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-14,1841.0,13.5,pdf_eye,substantial certificate holder 10.2-10.9%,24853.5,,0,True
+280157,1,2026-07-21 12:52:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-15,50000.0,13.15,pdf_eye,substantial certificate holder 10.2-10.9%,657500.0,,0,True
+280157,2,2026-07-21 12:52:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-16,10000.0,13.62,pdf_eye,substantial certificate holder 10.2-10.9%,136200.0,,0,True
+280157,3,2026-07-21 12:52:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-17,38159.0,13.21,pdf_eye,substantial certificate holder 10.2-10.9%,504080.39,,0,True
+280158,0,2026-07-21 12:53:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-15,1929.0,522.36,pdf_eye,CEO,1007632.4400000001,,0,True
+280158,1,2026-07-21 12:53:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-07-16,1900.0,532.0,pdf_eye,CEO,1010800.0,,0,True
+280203,0,2026-07-22 10:37:00,SKRS,Dinshaw Hoshang Anklesaria,DINSHAW HOSHANG ANKLESARIA,director_ceo,sell,off_market_block,2026-07-21,11152878.0,20.0,pdf_eye,"Director; physical shares, market N/A, price Rs20 vs market Rs27-31 so treated as off-market; cum 0",223057560.0,,0,False
+280303,0,2026-07-24 12:13:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-17,7000000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,315000000.0,,0,False
+280303,1,2026-07-24 12:13:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-17,24000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,1080000.0,,0,False
+280303,2,2026-07-24 12:13:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-07-17,300000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM,13500000.0,,0,False
+280318,0,2026-07-24 14:51:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-22,15051.0,11.18,pdf_text,Substantial Shareholder; PREFERENCE shares,168270.18,,0,False
+280366,0,2026-07-27 12:16:00,SHFA,Habib Ur Rahman,HABIB UR RAHMAN,director_ceo,sell,gift_inherit_transfer,2026-07-24,40000.0,,pdf_eye,Chairman/Director; Gifted Out,,,0,False
+280416,0,2026-07-28 11:52:00,CCM,Mustafa Adnan Amjad,MUSTAFA ADNAN AMJAD,unknown,buy,market,2026-07-21,153.0,64.96,pdf_eye,minor/dependent of an insider (principal not named),9938.88,,0,True
+280465,0,2026-07-29 12:43:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-23,23001.0,11.38,pdf_text,PREFERENCE shares,261751.38,,0,False
+280465,0,2026-07-29 12:43:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,sell,other,2026-07-28,2500.0,11.1,pdf_text,PREFERENCE shares,27750.0,,0,False
+280465,1,2026-07-29 12:43:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-24,1002.0,11.44,pdf_text,PREFERENCE shares,11462.88,,0,False
+280465,2,2026-07-29 12:43:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-27,3002.0,11.59,pdf_text,PREFERENCE shares,34793.18,,0,False
+280465,3,2026-07-29 12:43:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-28,48044.0,11.06,pdf_text,PREFERENCE shares,531366.64,,0,False
+280470,0,2026-07-29 13:53:00,TRSM,Al-Zamin Modaraba Management Pvt Ltd,AL ZAMIN MODARABA MANAGEMENT PVT LTD,sponsor_substantial,sell,off_market_block,2026-07-29,1100000.0,12.0,pdf_eye,"management company of the Modaraba, 14%->10%; NDM",13200000.0,,0,False
+280470,1,2026-07-29 13:53:00,TRSM,Al-Zamin Modaraba Management Pvt Ltd,AL ZAMIN MODARABA MANAGEMENT PVT LTD,sponsor_substantial,sell,off_market_block,2026-07-29,1181388.0,12.0,pdf_eye,"management company of the Modaraba, 14%->10%; NDM",14176656.0,,0,False
+280495,0,2026-07-29 15:13:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-07-28,10000.0,33.05,pdf_text,Non-Executive Director,330500.0,,0,True
+280609,0,2026-07-31 11:28:00,CPPL,Cherat Cement Company Limited,CHERAT CEMENT COMPANY LIMITED,sponsor_substantial,buy,market,2026-07-30,71000.0,100.1418,pdf_eye,Substantial Shareholder 12.85%,7110067.8,,0,True
+280643,0,2026-07-31 16:08:00,GCIL,Ghani ChemWorld Limited,GHANI CHEMWORLD LIMITED,sponsor_substantial,sell,off_market_block,2026-07-27,10000000.0,38.75,pdf_eye,Substantial Shareholder 8.76%; NDM,387500000.0,,0,False
+280676,0,2026-08-03 12:16:00,CPPL,Cherat Cement Company Limited,CHERAT CEMENT COMPANY LIMITED,sponsor_substantial,buy,market,2026-07-31,75000.0,103.9925,pdf_eye,Substantial Shareholder 13.0%,7799437.500000001,,0,True
+280691,0,2026-08-03 14:58:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-29,58359.0,11.17,pdf_text,Substantial Shareholder (10.96% of preference); PREFERENCE shares,651870.03,,0,False
+280691,0,2026-08-03 14:58:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,sell,other,2026-07-29,1000.0,11.8,pdf_text,PREFERENCE shares,11800.0,,0,False
+280691,1,2026-08-03 14:58:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,buy,other,2026-07-30,1.0,11.17,pdf_text,Substantial Shareholder (10.96% of preference); PREFERENCE shares,11.17,,0,False
+280691,1,2026-08-03 14:58:00,TCORP,Faisal Abdul Sattar,FAISAL ABDUL SATTAR,sponsor_substantial,sell,other,2026-07-28,147474.0,11.36,pdf_text,PREFERENCE shares,1675304.64,,0,False
+280696,0,2026-08-03 15:28:00,FPRM,Asif Nathani,ASIF NATHANI,sponsor_substantial,sell,market,2026-07-31,83667.0,12.55,pdf_eye,substantial certificate holder 9.55%,1050020.85,,0,True
+280728,0,2026-08-04 12:16:00,CLOV,Fossil Energy Private Limited,FOSSIL ENERGY PRIVATE LIMITED,sponsor_substantial,sell,market,2026-08-03,2000000.0,8.56,pdf_eye,Substantial Shareholder,17120000.0,,0,True
+280799,0,2026-08-05 15:19:00,ASL,Arif Habib Corporation Limited,ARIF HABIB CORPORATION LIMITED,sponsor_substantial,buy,market,2026-08-03,12924531.0,13.53,pdf_eye,AHCL substantial shareholder 19.8-21.2% (ordinary shares),174868904.42999998,,0,True
+280799,1,2026-08-05 15:19:00,ASL,Arif Habib Corporation Limited,ARIF HABIB CORPORATION LIMITED,sponsor_substantial,buy,market,2026-08-04,13889019.0,13.78,pdf_eye,AHCL substantial shareholder 19.8-21.2% (ordinary shares),191390681.82,,0,True
+280810,0,2026-08-06 10:26:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,sell,market,2026-07-23,6491.0,9.77,pdf_text,"REIT units, ready market; Substantial Unitholder and Director of RMC; cum 0.29%",63417.07,,0,True
+280810,0,2026-08-06 10:26:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-07-27,11890000.0,10.37,pdf_text,REIT units futures,123299299.99999999,,0,False
+280810,0,2026-08-06 10:26:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-07-27,11890000.0,10.25,pdf_text,REIT units futures,121872500.0,,0,False
+280847,0,2026-08-06 15:11:00,SHFA,Hubert,HUBERT,executive,buy,market,2026-08-04,200.0,516.0,pdf_eye,Senior Management,103200.0,,0,True
+280873,0,2026-08-07 10:28:00,EMCO,Ahsan Suhail Mannan,AHSAN SUHAIL MANNAN,director_ceo,buy,market,2026-08-05,71500.0,52.43,pdf_eye,Company Secretary/Director; second line is spouse Bushra Ahsan Mannan,3748745.0,,0,True
+280873,1,2026-08-07 10:28:00,EMCO,Ahsan Suhail Mannan,AHSAN SUHAIL MANNAN,director_ceo,buy,market,2026-08-05,217500.0,52.43,pdf_eye,Company Secretary/Director; second line is spouse Bushra Ahsan Mannan,11403525.0,,0,True
+280875,0,2026-08-07 10:35:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-07-31,7595.0,379.56,pdf_eye,Associated Company; cum 1.78%,2882758.2,,0,True
+280875,1,2026-08-07 10:35:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-08-03,7000.0,385.53,pdf_eye,Associated Company; cum 1.78%,2698710.0,,0,True
+280875,2,2026-08-07 10:35:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-08-04,140.0,381.64,pdf_eye,Associated Company; cum 1.78%,53429.6,,0,True
+280875,3,2026-08-07 10:35:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-08-05,47392.0,379.99,pdf_eye,Associated Company; cum 1.78%,18008486.080000002,,0,True
+280902,0,2026-08-07 15:16:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,sell,other,2026-07-28,2500000.0,10.08,pdf_text,REIT units via futures,25200000.0,,0,False
+280902,0,2026-08-07 15:16:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,buy,other,2026-07-28,2500000.0,10.19,pdf_text,REIT units via futures,25475000.0,,0,False
+280902,0,2026-08-07 15:16:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-07-29,5000000.0,9.88,pdf_text,REIT units via futures,49400000.00000001,,0,False
+280902,0,2026-08-07 15:16:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-07-29,4571000.0,10.02,pdf_text,REIT units via futures,45801420.0,,0,False
+280902,1,2026-08-07 15:16:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,sell,other,2026-07-30,9915000.0,9.8,pdf_text,REIT units via futures,97167000.0,,0,False
+280902,1,2026-08-07 15:16:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,buy,other,2026-07-30,9915000.0,9.97,pdf_text,REIT units via futures,98852550.0,,0,False
+280902,1,2026-08-07 15:16:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-07-30,1000000.0,9.8,pdf_text,REIT units via futures,9800000.0,,0,False
+280902,1,2026-08-07 15:16:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-07-30,1429000.0,9.96,pdf_text,REIT units via futures,14232840.000000002,,0,False
+280911,0,2026-08-07 15:56:00,TCORP,Mustafa Ali Tariq,MUSTAFA ALI TARIQ,sponsor_substantial,sell,market,2026-08-04,350000.0,21.1,pdf_text,spouse Ramisha Ashfaq of CEO,7385000.000000001,,0,True
+280911,1,2026-08-07 15:56:00,TCORP,Mustafa Ali Tariq,MUSTAFA ALI TARIQ,sponsor_substantial,sell,market,2026-08-05,763500.0,19.68,pdf_text,spouse Ramisha Ashfaq of CEO,15025680.0,,0,True
+280911,2,2026-08-07 15:56:00,TCORP,Mustafa Ali Tariq,MUSTAFA ALI TARIQ,sponsor_substantial,sell,market,2026-08-06,86568.0,19.19,pdf_text,spouse Ramisha Ashfaq of CEO,1661239.9200000002,,0,True
+280911,3,2026-08-07 15:56:00,TCORP,Mustafa Ali Tariq,MUSTAFA ALI TARIQ,sponsor_substantial,sell,market,2026-08-07,150488.0,18.96,pdf_text,spouse Ramisha Ashfaq of CEO,2853252.48,,0,True
+280943,0,2026-08-10 11:19:00,LOADS,Chaudhary Ehsan ul Haq,CHAUDHARY EHSAN UL HAQ,director_ceo,buy,market,2026-08-07,10000.0,13.79,pdf_eye,Director,137900.0,,0,True
+281007,0,2026-08-11 12:01:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,buy,rights,2026-08-07,7528750.0,20.0,pdf_text,"Chairman, 35.9%",150575000.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,Mustafa Ali Tariq,MUSTAFA ALI TARIQ,sponsor_substantial,buy,rights,2026-08-07,5300730.0,20.0,pdf_text,"CEO, 33.6%",106014600.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,Fauzia Abbas,FAUZIA ABBAS,director_ceo,buy,rights,2026-08-07,119.0,20.0,pdf_text,Ind. Director,2380.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,M. Imran Khan,M IMRAN KHAN,director_ceo,buy,rights,2026-08-07,306.0,20.0,pdf_text,Ind. Director,6120.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,Azher Fazal,AZHER FAZAL,director_ceo,buy,rights,2026-08-07,119.0,20.0,pdf_text,Executive Director,2380.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,Muhammad Anwar,MUHAMMAD ANWAR,director_ceo,buy,rights,2026-08-07,149.0,20.0,pdf_text,Non-Ex. Director,2980.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,Raza Elahi,RAZA ELAHI,director_ceo,buy,rights,2026-08-07,67107.0,20.0,pdf_text,Ind. Director,1342140.0,,0,False
+281007,0,2026-08-11 12:01:00,TCORP,Danish Elahi,DANISH ELAHI,sponsor_substantial,buy,rights,2026-08-07,2258704.0,20.0,pdf_text,Substantial Shareholder 14.3%,45174080.0,,0,False
+281119,0,2026-08-13 11:03:00,SHFA,Hubert,HUBERT,executive,buy,market,2026-08-11,160.0,506.0,pdf_eye,Senior Management,80960.0,,0,True
+281119,0,2026-08-13 11:03:00,SHFA,Maimoona Siddiqui,MAIMOONA SIDDIQUI,executive,buy,market,2026-08-10,390.0,510.0,pdf_eye,Senior Management,198900.0,,0,True
+281119,0,2026-08-13 11:03:00,SHFA,Khawaja Junaid Mustafa,KHAWAJA JUNAID MUSTAFA,executive,buy,market,2026-08-07,30.0,512.1,pdf_eye,Chief Medical Officer,15363.0,,0,True
+281119,1,2026-08-13 11:03:00,SHFA,Hubert,HUBERT,executive,buy,market,2026-08-07,100.0,510.0,pdf_eye,Senior Management,51000.0,,0,True
+281252,0,2026-08-18 09:49:00,JUBS,Usman Shafi,USMAN SHAFI,sponsor_substantial,buy,gift_inherit_transfer,2026-08-13,42859.0,,pdf_eye,Substantial Shareholder; gift deed received (2-page filing),,,0,False
+281341,0,2026-08-19 11:26:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-08-17,31500.0,12.42,pdf_text,"Director, 39-42% holder; PREFERENCE shares",391230.0,,0,False
+281341,1,2026-08-19 11:26:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-08-18,427000.0,11.49,pdf_text,"Director, 39-42% holder; PREFERENCE shares",4906230.0,,0,False
+281341,2,2026-08-19 11:26:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-08-19,41500.0,10.52,pdf_text,"Director, 39-42% holder; PREFERENCE shares",436580.0,,0,False
+281386,0,2026-08-19 15:15:00,LUCK,Lucky Exim Private Limited,LUCKY EXIM PRIVATE LIMITED,sponsor_substantial,buy,market,2026-08-18,140000.0,440.32,pdf_eye,Associated Company,61644800.0,,0,True
+281503,0,2026-08-21 12:32:00,STL,Telecard Limited,TELECARD LIMITED,sponsor_substantial,buy,rights,2026-08-21,35171451.0,10.0,pdf_text,Substantial Shareholder; auditor certificate of rights subscription; date = letter date,351714510.0,,0,False
+281518,0,2026-08-21 15:06:00,MEHT,Muhammad Anees,MUHAMMAD ANEES,unknown,sell,off_market_block,2026-08-20,900000.0,154.44,pdf_eye,role not stated; NDM; text layer garbled so read by eye,138996000.0,,0,False
+281518,0,2026-08-21 15:06:00,MEHT,Muhammad Mehr Ali,MUHAMMAD MEHR ALI,sponsor_substantial,sell,off_market_block,2026-08-20,1463403.0,154.44,pdf_eye,role not stated; NDM; cum 5.76% | role filled from the same holder's other filings,226007959.32,,0,False
+281531,0,2026-08-21 15:51:00,FCL,Muhammad Shahzad Mian,MUHAMMAD SHAHZAD MIAN,executive,sell,market,2026-08-20,881000.0,28.02,pdf_eye,COO (Executive),24685620.0,,0,True
+281531,0,2026-08-21 15:51:00,FCL,Muhammad Usman,MUHAMMAD USMAN,executive,buy,market,2026-08-21,5.0,28.1,pdf_eye,CCO (Executive),140.5,,0,True
+281531,0,2026-08-21 15:51:00,FCL,Muhammad Usman,MUHAMMAD USMAN,executive,sell,market,2026-08-21,5.0,28.02,pdf_eye,CCO (Executive),140.1,,0,True
+281945,0,2026-08-28 16:01:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-08-25,200.0,4013.0,pdf_text,Associated Company,802600.0,,0,True
+281957,0,2026-08-28 16:16:00,SGPL,Mr. Naim Anwar,NAIM ANWAR,unknown,buy,rights,2026-08-28,1499.0,10.0,pdf_eye,"rights subscription certificate (auditor), director/substantial holders, roles not individually stated",14990.0,,0,False
+281957,0,2026-08-28 16:16:00,SGPL,Mr. Umer Ali Malik,UMER ALI MALIK,unknown,buy,rights,2026-08-28,2999988.0,10.0,pdf_eye,rights certificate,29999880.0,,0,False
+281957,0,2026-08-28 16:16:00,SGPL,Mian Ateeq Ur Rehman,MIAN ATEEQ UR REHMAN,unknown,buy,rights,2026-08-28,179999.0,10.0,pdf_eye,rights certificate,1799990.0,,0,False
+281957,0,2026-08-28 16:16:00,SGPL,Mr. Omer Habib,OMER HABIB,unknown,buy,rights,2026-08-28,1499.0,10.0,pdf_eye,rights certificate,14990.0,,0,False
+281957,0,2026-08-28 16:16:00,SGPL,Brig. Syed Ali Ammar Haider,BRIG SYED ALI AMMAR HAIDER,unknown,buy,rights,2026-08-28,1499.0,10.0,pdf_eye,rights certificate,14990.0,,0,False
+281957,0,2026-08-28 16:16:00,SGPL,Dr. Maria Fatima Haral,MARIA FATIMA HARAL,unknown,buy,rights,2026-08-28,1499.0,10.0,pdf_eye,rights certificate,14990.0,,0,False
+281957,0,2026-08-28 16:16:00,SGPL,Ms. Fatima Ali Malik,FATIMA ALI MALIK,unknown,buy,rights,2026-08-28,4919981.0,10.0,pdf_eye,rights certificate,49199810.0,,0,False
+282005,0,2026-08-31 10:55:00,CLOV,Fossil Energy Private Limited,FOSSIL ENERGY PRIVATE LIMITED,sponsor_substantial,sell,market,2026-08-27,2000000.0,6.85,pdf_eye,Substantial Shareholder,13700000.0,,0,True
+282005,1,2026-08-31 10:55:00,CLOV,Fossil Energy Private Limited,FOSSIL ENERGY PRIVATE LIMITED,sponsor_substantial,sell,market,2026-08-28,2000000.0,6.83,pdf_eye,Substantial Shareholder,13660000.0,,0,True
+282021,0,2026-08-31 14:28:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-08-24,51034.0,375.0,pdf_eye,Associated Company; cum 2.37%,19137750.0,,0,True
+282021,1,2026-08-31 14:28:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-08-25,74112.0,375.02,pdf_eye,Associated Company; cum 2.37%,27793482.24,,0,True
+282046,0,2026-08-31 15:19:00,SHFA,Muhammad Mustafa,MUHAMMAD MUSTAFA,executive,buy,market,2026-08-27,478.0,489.99,pdf_eye,Senior Management,234215.22,,0,True
+282046,1,2026-08-31 15:19:00,SHFA,Muhammad Mustafa,MUHAMMAD MUSTAFA,executive,buy,market,2026-08-28,132.0,490.0,pdf_eye,Senior Management,64680.0,,0,True
+282095,0,2026-09-01 13:29:00,CLOV,Fossil Energy Private Limited,FOSSIL ENERGY PRIVATE LIMITED,sponsor_substantial,sell,market,2026-08-31,2000000.0,6.78,pdf_eye,Substantial Shareholder,13560000.0,,0,True
+282116,0,2026-09-01 15:29:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,sell,other,2026-08-24,2500000.0,9.67,pdf_text,REIT units sold via futures market and re-bought; Substantial Unitholder and Director of RMC,24175000.0,,0,False
+282116,0,2026-09-01 15:29:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,buy,other,2026-08-24,2500000.0,9.78,pdf_text,REIT units futures market,24450000.0,,0,False
+282116,0,2026-09-01 15:29:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-08-24,11890000.0,9.7,pdf_text,REIT units futures market,115332999.99999999,,0,False
+282116,0,2026-09-01 15:29:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-08-24,11890000.0,9.8,pdf_text,REIT units futures market,116522000.00000001,,0,False
+282116,1,2026-09-01 15:29:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,sell,other,2026-08-27,9915000.0,9.6,pdf_text,REIT units sold via futures market and re-bought; Substantial Unitholder and Director of RMC,95184000.0,,0,False
+282116,1,2026-09-01 15:29:00,TPLRF1,Muhammad Ali Jameel,MUHAMMAD ALI JAMEEL,director_ceo,buy,other,2026-08-27,9915000.0,9.74,pdf_text,REIT units futures market,96572100.0,,0,False
+282116,1,2026-09-01 15:29:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,sell,other,2026-08-25,6000000.0,9.63,pdf_text,REIT units futures market,57780000.00000001,,0,False
+282116,1,2026-09-01 15:29:00,TPLRF1,TPL Properties Limited,TPL PROPERTIES LIMITED,sponsor_substantial,buy,other,2026-08-25,6000000.0,9.77,pdf_text,REIT units futures market,58620000.0,,0,False
+282270,0,2026-09-04 14:27:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-09-02,2100.0,480.0,pdf_eye,CEO,1008000.0,,0,True
+282270,1,2026-09-04 14:27:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-09-03,2100.0,480.0,pdf_eye,CEO,1008000.0,,0,True
+282324,0,2026-09-07 12:24:00,REWM,Faisal Ahmed,FAISAL AHMED,sponsor_substantial,sell,gift_inherit_transfer,2026-09-04,1992928.0,,pdf_eye,"Director/CEO, 19.13% holder; Gift-Out",,,0,False
+282324,0,2026-09-07 12:24:00,REWM,Faisal Ahmed,FAISAL AHMED,sponsor_substantial,buy,gift_inherit_transfer,2026-09-04,27714.0,,pdf_eye,spouse Farah Faisal; Gift-In,,,0,False
+282339,0,2026-09-07 13:55:00,FZCM,Faisal Ahmed,FAISAL AHMED,director_ceo,sell,gift_inherit_transfer,2026-09-04,338093.0,,pdf_eye,Director; Gift-out to son; cum 5.67%,,,0,False
+282413,0,2026-09-08 15:25:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-03,200.0,4001.0,pdf_text,Associated Company,800200.0,,0,True
+282413,1,2026-09-08 15:25:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-07,100.0,3989.0,pdf_text,Associated Company,398900.0,,0,True
+282439,0,2026-09-09 12:16:00,THCCL,Khawaja Muhammad Salman Younis,KHAWAJA MUHAMMAD SALMAN YOUNIS,director_ceo,buy,market,2026-09-08,100000.0,76.64,pdf_eye,Director,7664000.0,,0,True
+282468,0,2026-09-10 09:52:00,TOWL,Mahjabeen Obaid,MAHJABEEN OBAID,director_ceo,sell,market,2026-09-09,120905.0,220.37,pdf_eye,Non Executive Director; text layer garbled so read by eye,26643834.85,,0,True
+282470,0,2026-09-10 10:24:00,MEBL,Irfan Siddiqui,IRFAN SIDDIQUI,director_ceo,sell,market,2026-09-07,10.0,564.75,pdf_eye,spouse Dr. Ghazala Siddiqui of Non-Executive Director,5647.5,,0,True
+282533,0,2026-09-11 11:27:00,FZCM,Faisal Ahmed,FAISAL AHMED,director_ceo,sell,gift_inherit_transfer,2026-09-10,676184.0,,pdf_eye,Director; Gift-out to adult sons,,,0,False
+282539,0,2026-09-11 12:55:00,REWM,Faisal Ahmed,FAISAL AHMED,sponsor_substantial,sell,gift_inherit_transfer,2026-09-10,3927928.0,,pdf_eye,Director/CEO 6.38%; Gift-Out,,,0,False
+282539,0,2026-09-11 12:55:00,REWM,Muhammad Fazeel Mukhtar,MUHAMMAD FAZEEL MUKHTAR,director_ceo,buy,gift_inherit_transfer,2026-09-10,1962714.0,,pdf_eye,Director; Gift-In,,,0,False
+282574,0,2026-09-11 16:10:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-11,2500.0,37.4,pdf_text,Non-Executive Director,93500.0,,0,True
+282579,0,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-09-07,64000.0,10.01,pdf_text,"Director, 35-38% holder; PREFERENCE shares",640640.0,,0,False
+282579,0,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,market,2026-09-07,253500.0,19.59,pdf_text,"spouse Maryam Habib, ordinary shares",4966065.0,,0,True
+282579,1,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-09-08,305501.0,10.0,pdf_text,"Director, 35-38% holder; PREFERENCE shares",3055010.0,,0,False
+282579,1,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,market,2026-09-08,92611.0,19.71,pdf_text,"spouse Maryam Habib, ordinary shares",1825362.81,,0,True
+282579,2,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-09-09,106500.0,10.11,pdf_text,"Director, 35-38% holder; PREFERENCE shares",1076715.0,,0,False
+282579,2,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,market,2026-09-09,73104.0,19.61,pdf_text,"spouse Maryam Habib, ordinary shares",1433569.44,,0,True
+282579,3,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-09-10,20510.0,10.11,pdf_text,"Director, 35-38% holder; PREFERENCE shares",207356.09999999998,,0,False
+282579,3,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,market,2026-09-10,124004.0,19.03,pdf_text,"spouse Maryam Habib, ordinary shares",2359796.12,,0,True
+282579,4,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,other,2026-09-11,103489.0,9.45,pdf_text,"Director, 35-38% holder; PREFERENCE shares",977971.0499999999,,0,False
+282579,4,2026-09-11 16:28:00,TCORP,Ahmed Ali Tariq,AHMED ALI TARIQ,sponsor_substantial,sell,market,2026-09-11,82299.0,18.87,pdf_text,"spouse Maryam Habib, ordinary shares",1552982.1300000001,,0,True
+282580,0,2026-09-11 16:29:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-09,101.0,3970.0,pdf_text,Associated Company,400970.0,,0,True
+282580,1,2026-09-11 16:29:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-10,599.0,3946.0,pdf_text,Associated Company,2363654.0,,0,True
+282600,0,2026-09-14 10:31:00,AWTX,Allawasaya Spinning Mills Pvt Ltd,ALLAWASAYA SPINNING MILLS PVT LTD,sponsor_substantial,buy,off_market_block,2026-03-05,12100.0,1925.0,pdf_eye,"Associated Company; physical shares; PDF page tree unreadable by pdfplumber, embedded JPEG extracted and read by eye; filed months after the first trades",23292500.0,,0,False
+282600,1,2026-09-14 10:31:00,AWTX,Allawasaya Spinning Mills Pvt Ltd,ALLAWASAYA SPINNING MILLS PVT LTD,sponsor_substantial,buy,off_market_block,2026-06-29,7500.0,1925.0,pdf_eye,"Associated Company; physical shares; PDF page tree unreadable by pdfplumber, embedded JPEG extracted and read by eye; filed months after the first trades",14437500.0,,0,False
+282600,2,2026-09-14 10:31:00,AWTX,Allawasaya Spinning Mills Pvt Ltd,ALLAWASAYA SPINNING MILLS PVT LTD,sponsor_substantial,buy,off_market_block,2026-09-03,4500.0,1925.0,pdf_eye,"Associated Company; physical shares; PDF page tree unreadable by pdfplumber, embedded JPEG extracted and read by eye; filed months after the first trades",8662500.0,,0,False
+282609,0,2026-09-14 11:10:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-11,5000.0,34.0,pdf_text,Non-Executive Director,170000.0,,0,True
+282657,0,2026-09-14 15:18:00,MEHT,Muhammad Anees,MUHAMMAD ANEES,unknown,buy,off_market_block,2026-09-14,220000.0,158.25,pdf_eye,role not stated; NDM; cum 1.92%,34815000.0,,0,False
+282657,0,2026-09-14 15:18:00,MEHT,Muhammad Mehr Ali,MUHAMMAD MEHR ALI,sponsor_substantial,buy,off_market_block,2026-09-14,1463403.0,158.25,pdf_eye,NDM; cum 10.64%,231583524.75,,0,False
+282694,0,2026-09-15 11:34:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-14,15000.0,31.75,pdf_text,Non-Executive Director,476250.0,,0,True
+282719,0,2026-09-15 13:25:00,MEHT,Muhammad Anees,MUHAMMAD ANEES,unknown,buy,off_market_block,2026-09-10,680000.0,157.88,pdf_eye,role not stated; NDM; cum 4.19%,107358400.0,,0,False
+282743,0,2026-09-15 15:27:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-11,200.0,3925.0,pdf_text,Associated Company,785000.0,,0,True
+282743,1,2026-09-15 15:27:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-14,1.0,3925.0,pdf_text,Associated Company,3925.0,,0,True
+282864,0,2026-09-17 11:51:00,STL,Telecard Limited,TELECARD LIMITED,sponsor_substantial,buy,rights,2026-09-17,66367524.0,10.0,pdf_text,Substantial Shareholder 51%,663675240.0,,0,False
+282864,0,2026-09-17 11:51:00,STL,Jamal Nasir Khan,JAMAL NASIR KHAN,director_ceo,buy,rights,2026-09-17,1848.0,10.0,pdf_text,CEO,18480.0,,0,False
+282864,0,2026-09-17 11:51:00,STL,Waseem Ahmad,WASEEM AHMAD,director_ceo,buy,rights,2026-09-17,924.0,10.0,pdf_text,Executive Director,9240.0,,0,False
+282864,0,2026-09-17 11:51:00,STL,Asad Mujtaba Naqvi,ASAD MUJTABA NAQVI,director_ceo,buy,rights,2026-09-17,924.0,10.0,pdf_text,Independent Director,9240.0,,0,False
+282864,0,2026-09-17 11:51:00,STL,Muhammad Farhan Saeed,MUHAMMAD FARHAN SAEED,executive,buy,rights,2026-09-17,,10.0,pdf_text,Company Secretary; unsubscribed portion,,,0,False
+282882,0,2026-09-17 14:07:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-09-14,22160.0,449.47,pdf_eye,CEO,9960255.200000001,,0,True
+282882,0,2026-09-17 14:07:00,SHFA,Taimoor Shah,TAIMOOR SHAH,director_ceo,buy,market,2026-09-14,6624.0,449.75,pdf_eye,Director,2979144.0,,0,True
+282882,0,2026-09-17 14:07:00,SHFA,Aamer Nazir Ahmad,AAMER NAZIR AHMAD,executive,buy,market,2026-09-14,4016.0,446.95,pdf_eye,Senior Management,1794951.2,,0,True
+282882,0,2026-09-17 14:07:00,SHFA,Shaif Shafiq,SHAIF SHAFIQ,executive,buy,market,2026-09-15,100.0,439.0,pdf_eye,Senior Management,43900.0,,0,True
+282888,0,2026-09-17 14:15:00,SHFA,Manzoor Ul Haq Qazi,MANZOOR UL HAQ QAZI,director_ceo,sell,market,2026-07-13,123.0,550.0,pdf_eye,Director; filed about 2 months after the trades,67650.0,,0,True
+282888,1,2026-09-17 14:15:00,SHFA,Manzoor Ul Haq Qazi,MANZOOR UL HAQ QAZI,director_ceo,sell,market,2026-07-21,1497.0,540.05,pdf_eye,Director; filed about 2 months after the trades,808454.85,,0,True
+282900,0,2026-09-17 14:54:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-09-11,123.0,350.0,pdf_eye,Associated Company; cum 2.37%,43050.0,,0,True
+282921,0,2026-09-18 08:10:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-17,2501.0,32.25,pdf_text,Non-Executive Director,80657.25,,0,True
+282929,0,2026-09-18 09:49:00,BWHL,Razak Bengali,RAZAK BENGALI,director_ceo,buy,market,2026-09-16,20000.0,229.25,pdf_eye,spouse Gul Bano Razak of CEO; spouse holds 15.62%,4585000.0,,0,True
+283011,0,2026-09-18 16:27:00,HPL,AGT Strategic Holdings Pvt Limited,AGT STRATEGIC HOLDINGS PVT LIMITED,sponsor_substantial,buy,market,2026-09-17,1199.0,3901.0,pdf_text,Associated Company; cum 2.20%,4677299.0,,0,True
+283115,0,2026-09-21 15:14:00,SHFA,Rashid Javed,RASHID JAVED,executive,buy,market,2026-09-17,200.0,435.0,pdf_eye,Senior Management,87000.0,,0,True
+283115,0,2026-09-21 15:14:00,SHFA,Hubert,HUBERT,executive,buy,market,2026-09-17,200.0,430.0,pdf_eye,Senior Management (Mr. Hubert),86000.0,,0,True
+283196,0,2026-09-22 13:59:00,MEBL,Shahzad Abdullah,SHAHZAD ABDULLAH,executive,sell,market,2026-09-21,23334.0,550.68,pdf_eye,Executive of the Bank,12849567.12,,0,True
+283238,0,2026-09-23 09:58:00,SKRS,Syed Zameer Haider Jaffri,SYED ZAMEER HAIDER JAFFRI,executive,buy,market,2026-09-22,500.0,24.88,pdf_eye,CFO; same trade re-filed a day later,12440.0,,0,True
+283244,0,2026-09-23 10:08:00,SKRS,Syed Zameer Haider Jaffri,SYED ZAMEER HAIDER JAFFRI,executive,buy,market,2026-09-22,500.0,24.88,pdf_eye,CFO,12440.0,283238,0,False
+283299,0,2026-09-23 14:56:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-09-15,67389.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM; cum 24.5%,3032505.0,,0,False
+283299,1,2026-09-23 14:56:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-09-15,600000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM; cum 24.5%,27000000.0,,0,False
+283299,2,2026-09-23 14:56:00,STYLERS,Naimat Saleem Trust,NAIMAT SALEEM TRUST,sponsor_substantial,sell,off_market_block,2026-09-22,1200000.0,45.0,pdf_text,Substantial Shareholder/Associated Co NDM; cum 24.5%,54000000.0,,0,False
+283316,0,2026-09-24 08:19:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-23,29000.0,36.55,pdf_text,Non-Executive Director,1059950.0,,0,True
+283351,0,2026-09-24 12:50:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-24,26500.0,40.15,pdf_text,Non-Executive Director,1063975.0,,0,True
+283442,0,2026-09-25 12:20:00,GEMPACRA,Asif Nathani,ASIF NATHANI,director_ceo,buy,market,2026-09-24,500.0,43.49,pdf_text,Non-Executive Director,21745.0,,0,True
+283531,0,2026-09-28 10:48:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-09-18,9681.0,354.99,pdf_eye,Associated Company; cum 2.65%,3436658.19,,0,True
+283531,1,2026-09-28 10:48:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-09-22,15196.0,355.0,pdf_eye,Associated Company; cum 2.65%,5394580.0,,0,True
+283531,2,2026-09-28 10:48:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-09-23,35000.0,350.0,pdf_eye,Associated Company; cum 2.65%,12250000.0,,0,True
+284081,0,2026-10-01 11:03:00,FFL,Usman Zaheer Ahmad,USMAN ZAHEER AHMAD,director_ceo,sell,market,2026-09-30,200000.0,14.77,pdf_eye,CEO; cum holding 0,2954000.0,,0,True
+284117,0,2026-10-01 12:59:00,PPP,Khurram Aftab,KHURRAM AFTAB,other,sell,market,2026-04-01,2500.0,105.0,pdf_text,Ex-Director; trade dated 6 months before filing,262500.0,,0,True
+284194,0,2026-10-01 15:19:00,MWMP,Meskay and Femtee Trading Company Pvt Ltd,MESKAY AND FEMTEE TRADING COMPANY PVT LTD,sponsor_substantial,buy,market,,120000.0,79.85,pdf_eye,"Substantial Shareholder 69.6%; stated trade date 30-10-2026 is after the filing date, treated as unknown",9582000.0,,0,True
+284216,0,2026-10-02 09:11:00,SYS,Ammara Masood,AMMARA MASOOD,executive,sell,market,2026-09-11,500000.0,117.0,pdf_text,Senior Management,58500000.0,,0,True
+284216,1,2026-10-02 09:11:00,SYS,Ammara Masood,AMMARA MASOOD,executive,sell,market,2026-09-18,203000.0,122.14,pdf_text,Senior Management,24794420.0,,0,True
+284216,2,2026-10-02 09:11:00,SYS,Ammara Masood,AMMARA MASOOD,executive,sell,market,2026-09-21,228274.0,121.14,pdf_text,Senior Management,27653112.36,,0,True
+284216,3,2026-10-02 09:11:00,SYS,Ammara Masood,AMMARA MASOOD,executive,sell,market,2026-09-22,119226.0,121.05,pdf_text,Senior Management,14432307.299999999,,0,True
+284216,4,2026-10-02 09:11:00,SYS,Ammara Masood,AMMARA MASOOD,executive,sell,market,2026-09-23,100000.0,122.0,pdf_text,Senior Management,12200000.0,,0,True
+284286,0,2026-10-02 13:18:00,GEMPACRA,LSE Ventures Limited,LSE VENTURES LIMITED,sponsor_substantial,buy,off_market_block,2026-10-01,134439.0,50.95,pdf_text,Substantial Shareholder NDM; cum 32.91%,6849667.050000001,,0,False
+284354,0,2026-10-02 16:13:00,SZTM,Imran Aslam,IMRAN ASLAM,sponsor_substantial,buy,gift_inherit_transfer,2026-10-02,1008636.0,,pdf_eye,"Executive Director, 30.6% holder; inheritance, shares received",,,0,False
+284354,0,2026-10-02 16:13:00,SZTM,Irfan Aslam,IRFAN ASLAM,sponsor_substantial,buy,gift_inherit_transfer,2026-10-02,1008636.0,,pdf_eye,"Non-Executive Director, 30.3% holder; inheritance, shares received",,,0,False
+284586,0,2026-10-05 15:10:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-09-29,10000.0,340.5,pdf_eye,Associated Company; cum 2.84%,3405000.0,,0,True
+284586,1,2026-10-05 15:10:00,SHSML,Al-Noor Fertilizer Industries Ltd,AL NOOR FERTILIZER INDUSTRIES LTD,sponsor_substantial,buy,market,2026-09-30,30000.0,340.5,pdf_eye,Associated Company; cum 2.84%,10215000.0,,0,True
+284785,0,2026-10-06 12:52:00,SHFA,Rashid Javed,RASHID JAVED,executive,buy,market,2026-10-02,200.0,435.0,pdf_eye,Senior Management,87000.0,,0,True
+284785,0,2026-10-06 12:52:00,SHFA,Maimoona Siddiqui,MAIMOONA SIDDIQUI,executive,buy,market,2026-10-05,350.0,433.0,pdf_eye,Senior Management,151550.0,,0,True
+285107,0,2026-10-07 13:09:00,SYS,Zeeshan Khawar,ZEESHAN KHAWAR,executive,buy,market,2026-10-05,2000.0,113.45,pdf_text,Senior Management,226900.0,,0,True
+285211,0,2026-10-07 15:16:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-05,2245.0,443.61,pdf_eye,CEO,995904.4500000001,,0,True
+285211,1,2026-10-07 15:16:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-06,2300.0,443.0,pdf_eye,CEO,1018900.0,,0,True
+285288,0,2026-10-08 11:36:00,SZTM,Sadaf Parvez,SADAF PARVEZ,director_ceo,buy,gift_inherit_transfer,2026-10-08,504319.0,,pdf_eye,"Non-Executive Director; inheritance, shares received",,,0,False
+285317,0,2026-10-08 13:09:00,AWTX,Allawasaya Spinning Mills Pvt Ltd,ALLAWASAYA SPINNING MILLS PVT LTD,sponsor_substantial,buy,off_market_block,2026-10-05,2600.0,1925.0,pdf_eye,Associated Company; physical shares; cum 3.34%,5005000.0,,0,False
+285425,0,2026-10-09 15:38:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-07,2280.0,446.43,pdf_eye,CEO,1017860.4,,0,True
+285425,0,2026-10-09 15:38:00,SHFA,Aamer Nazir Ahmad,AAMER NAZIR AHMAD,executive,buy,market,2026-10-08,2300.0,442.65,pdf_eye,Senior Management,1018095.0,,0,True
+285425,1,2026-10-09 15:38:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-08,2250.0,442.58,pdf_eye,CEO,995805.0,,0,True
+285610,0,2026-10-13 15:18:00,SHFA,Aamer Nazir Ahmad,AAMER NAZIR AHMAD,executive,buy,market,2026-10-09,512.0,443.0,pdf_eye,Senior Management,226816.0,,0,True
+285621,0,2026-10-14 08:45:00,GFIL,Khawaja Waheed Raza,KHAWAJA WAHEED RAZA,director_ceo,sell,market,2026-09-17,20000.0,26.0,pdf_eye,Independent Director; filed 20 days after the first trade,520000.0,,0,True
+285621,1,2026-10-14 08:45:00,GFIL,Khawaja Waheed Raza,KHAWAJA WAHEED RAZA,director_ceo,sell,market,2026-09-24,10000.0,25.79,pdf_eye,Independent Director; filed 20 days after the first trade,257900.0,,0,True
+285738,0,2026-10-15 12:36:00,AVN,Faisal Nadeem Sheikh,FAISAL NADEEM SHEIKH,executive,sell,market,2026-10-14,18262.0,27.07,pdf_text,Company Secretary,494352.34,,0,True
+285884,0,2026-10-16 15:26:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-12,2200.0,449.5,pdf_eye,CEO; cum 0.56%,988900.0,,0,True
+285884,1,2026-10-16 15:26:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-13,2200.0,448.53,pdf_eye,CEO; cum 0.56%,986765.9999999999,,0,True
+285884,2,2026-10-16 15:26:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-14,2250.0,450.0,pdf_eye,CEO; cum 0.56%,1012500.0,,0,True
+285884,3,2026-10-16 15:26:00,SHFA,Zeeshan Bin Ishtiaque,ZEESHAN BIN ISHTIAQUE,director_ceo,buy,market,2026-10-15,2250.0,449.32,pdf_eye,CEO; cum 0.56%,1010970.0,,0,True

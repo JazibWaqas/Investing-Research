@@ -1,0 +1,28 @@
+== WALK-FORWARD RE-BENCH, 18 Oct 2026. Frozen engine from scripts/walkforward.py; no rule changed. Deposits 106 x Rs50,000 = Rs5.3m, same dates for all rows.
+ACCRUED is an ESTIMATE: before 1 Nov 2024 each holding-month adds 0.85 x (last published fiscal-year dividend yield in sa_ratios.csv, announcement or FYE+4m, whichever is later) / 12 to the name's return. Names outside sa_ratios (108 names) accrue 0. After Oct 2024 the actual corporate_actions table is used and nothing is accrued. The 94 cash rows before Nov 2024 are dropped from the accrued basis (replaced by the estimate).
+STRICT 'accrued' leaves a name at 0 until its first published sa_ratios row (value data starts 2021-22). 'accrued_bf' (POST-HOC) backfills those months with the name's first published yield.
+Share of U(t) names with non-zero accrual, accrued (January of each year): 2017: 0%, 2018: 0%, 2019: 0%, 2020: 0%, 2021: 4%, 2022: 44%, 2023: 33%, 2024: 33%, 2025: 39%; mean accrual annualised over names that accrue 6.37%
+Share of U(t) names with non-zero accrual, accrued_bf (January of each year): 2017: 39%, 2018: 43%, 2019: 42%, 2020: 37%, 2021: 45%, 2022: 44%, 2023: 33%, 2024: 33%, 2025: 39%; mean accrual annualised over names that accrue 6.42%
+
+== A. LIKE-FOR-LIKE FINAL VALUES (Rs, 16 Oct 2026)
+
+== B. STATISTICS, ACCRUED basis (CAGR = TWR of unit value; IRR money-weighted; turnover = sells / average NAV / year)
+
+== B. STATISTICS, ACCRUED_BF basis (CAGR = TWR of unit value; IRR money-weighted; turnover = sells / average NAV / year)
+
+== B. STATISTICS, FROZEN basis (CAGR = TWR of unit value; IRR money-weighted; turnover = sells / average NAV / year)
+
+== C. YEAR-BY-YEAR TWR, ACCRUED basis, vs KMI All Share TR (2018 from first trade; 2026 to 16 Oct)
+Rs value at each year end, B2 / B2-EW / B0 / KMI TR:
+
+== C. YEAR-BY-YEAR TWR, ACCRUED_BF basis, vs KMI All Share TR (2018 from first trade; 2026 to 16 Oct)
+Rs value at each year end, B2 / B2-EW / B0 / KMI TR:
+
+== C. YEAR-BY-YEAR TWR, FROZEN basis, vs KMI All Share TR (2018 from first trade; 2026 to 16 Oct)
+Rs value at each year end, B2 / B2-EW / B0 / KMI TR:
+
+== D. B2 MEMBERSHIP
+Target reviews 40 (quarterly plus forced by a KMI deletion). Names entering the top 12 per review: mean 2.69, max 5, reviews with no change 1. Distinct names ever in the top 12: 43. KMI-deletion sells: 10.
+Top-12 set by year-end review: 2017-12: ATRL DGKC EFERT ISL LUCK OGDC PAEL PPL PSO SEARL SNGP SSGC; 2018-12: ATRL DGKC EFERT EPCL ISL LOTCHEM LUCK MLCF OGDC PAEL PSO SNGP; 2019-12: ATRL DGKC EFERT FCCL ISL LUCK MLCF OGDC PAEL PPL SEARL SNGP; 2020-12: ATRL DGKC GHNI ISL LUCK MLCF NRL OGDC PAEL PPL PSO UNITY; 2021-12: ATRL AVN DGKC GGL LUCK MEBL MLCF NETSOL NRL OGDC SYS UNITY; 2022-12: ATRL AVN HUBC LUCK MEBL NRL OGDC PPL PSO SNGP SYS UNITY; 2023-12: AIRLINK ATRL DGKC HUBC LUCK MLCF NRL OGDC PPL PRL PSO SEARL; 2024-12: AIRLINK ATRL GAL GHNI HUBC MARI PPL PSO SAZEW SEARL SNGP SSGC; 2025-12: ATRL FFC HUBC LUCK MARI MEBL MLCF NRL OGDC PPL PSO SEARL
+Holdings on 2026-10-16 (weight in book / current target weight; target from the Sep 2026 formation): ATRL 14.3%/7.0%, LUCK 8.3%/4.7%, PPL 8.1%/8.6%, SAZEW 7.9%/0.0%, OGDC 7.1%/9.1%, PSO 5.9%/5.7%, HUBC 4.3%/0.0%, GHNI 4.2%/0.0%, PRL 4.0%/15.0%, GAL 3.7%/0.0%, DGKC 3.7%/7.4%, MLCF 3.5%/10.8%, MEBL 3.4%/4.2%, MARI 2.7%/0.0%, FFC 2.5%/4.2%, SYS 2.3%/0.0%, EFERT 2.0%/0.0%, NETSOL 1.4%/0.0%, SEARL 1.4%/0.0%, SNGP 1.1%/0.0%, PAEL 1.0%/0.0%, GGL 1.0%/0.0%, FCCL 0.9%/0.0%, EPCL 0.9%/0.0%, ISL 0.9%/0.0%, FEROZ 0.7%/0.0%, CHCC 0.7%/0.0%, AVN 0.6%/0.0%, SSGC 0.5%/0.0%, NRL 0.5%/12.3%, TREET 0.4%/0.0%, TELE 0.3%/0.0%, WAFI 0.1%/0.0%
+Size proxy is 60-day median traded value (no share counts), so it favours heavily traded names over the largest by free-float cap. Weights are traded-value weights capped at 15%, not index weights.
