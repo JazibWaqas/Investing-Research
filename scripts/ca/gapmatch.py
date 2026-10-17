@@ -25,7 +25,7 @@ class Gaps:
 
     def find(self, sym, kind, v, lo, hi, min_exp=0.08):
         """Matching observation date in [lo, hi] (inclusive), or None.
-        match = |actual move - expected move| <= 0.015 + 0.06*|expected|. Expected moves smaller than min_exp (8%) are never
+        match = |actual move - expected move| <= 0.015 + 0.06*|expected| (0.02 + 0.15*|expected| when the expected move is 12% or more: bigger events carry more cash-dividend and market noise). Expected moves smaller than min_exp (8%) are never
         matched: they do not stand out of daily noise. If more than one day matches, the best is returned only when its error is
         under 40% of the runner-up's, otherwise None (ambiguous)."""
         if sym not in self.close:
@@ -37,7 +37,7 @@ class Gaps:
             if not np.isfinite(e) or abs(e) < min_exp:
                 continue
             err = abs(x - e)
-            if err <= 0.015 + 0.06 * abs(e):
+            if err <= (0.02 + 0.15 * abs(e) if abs(e) >= 0.12 else 0.015 + 0.06 * abs(e)):
                 hits.append((err, d))
         if not hits:
             return None

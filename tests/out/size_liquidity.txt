@@ -19,6 +19,8 @@ crude zeroed 434 moves since 2017: 60 up, 374 down
 EW daily, NO fix at all (fake crashes left in): +21.0%
 EW daily, crude but zeroed up-moves below +100% restored: +44.1%
 EW daily, PROVISIONAL total-return adjustment (462 actions, unverified table; includes cash dividends): +54.5%
+EW daily, method adjusted with data/corporate_actions.csv (WORK IN PROGRESS file, 653 rows, total return): +61.8%
+  cash rows 473, bonus/split rows 180
 
 == (c) buckets by trailing 60d median traded value (1 = least liquid, top = most), liquid universe (>Rs5m)
 

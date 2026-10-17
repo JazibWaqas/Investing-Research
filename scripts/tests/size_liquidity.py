@@ -84,6 +84,15 @@ try:
     out(f"EW daily, PROVISIONAL total-return adjustment ({len(acts)} actions, unverified table; includes cash dividends): {pct((1+d2).prod()-1)}")
 except Exception as e:
     out("provisional adjustment failed:", repr(e))
+try:
+    if P.ACTIONS.exists():
+        a2 = P.load_actions(); rb = P.returns(close, "adjusted"); rb = rb[rb.index >= START]
+        d3 = rb.where(liquid).mean(axis=1).dropna()
+        out(f"EW daily, method adjusted with data/corporate_actions.csv (WORK IN PROGRESS file, {len(a2)} rows, total return): {pct((1+d3).prod()-1)}")
+        dd = a2[a2.type == "cash"]
+        out(f"  cash rows {len(dd)}, bonus/split rows {len(a2)-len(dd)}")
+except Exception as e:
+    out("adjusted run failed:", repr(e))
 
 def buckets(q, universe_mask, rng=None):
     rows, per = {}, []

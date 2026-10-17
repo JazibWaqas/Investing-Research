@@ -47,19 +47,27 @@ sus["pct_after"] = [pct1.at[d, s] for s, d in zip(sus.symbol, sus.date)]
 med = prices._med_tv(tv)
 sus["liquid"] = [bool(med.at[d, s] > 5e6) if d in med.index and pd.notna(med.at[d, s]) else False for s, d in zip(sus.symbol, sus.date)]
 sus["mtv_m"] = [round(med.at[d, s] / 1e6, 1) if d in med.index and pd.notna(med.at[d, s]) else np.nan for s, d in zip(sus.symbol, sus.date)]
-sus.to_pickle(Path(__file__).with_name("_sus.pkl"))
 
-# adjusted panel (total return: cash added back on ex date where in the table; still-unexplained suspects zeroed as in 'crude')
-ret = prices.returns(close, "adjusted", vol=vol, actions=actions)
-adj = pd.DataFrame(np.nan, close.index, close.columns)
-for c in close.columns:
-    s = close[c].dropna()
-    if not len(s):
-        continue
-    r = ret[c].loc[s.index].fillna(0.0)
-    lvl = (1 + r).cumprod()
-    adj.loc[s.index, c] = (lvl * (s.iloc[-1] / lvl.iloc[-1])).values
+def adj_panel(act):
+    """Back-adjusted close level: obs-to-obs returns from prices.returns('adjusted') chained and scaled so the last close equals the raw last close."""
+    ret = prices.returns(close, "adjusted", vol=vol, actions=act)
+    out = pd.DataFrame(np.nan, close.index, close.columns)
+    for c in close.columns:
+        s = close[c].dropna()
+        if not len(s):
+            continue
+        r = ret[c].loc[s.index].fillna(0.0)
+        lvl = (1 + r).cumprod()
+        out.loc[s.index, c] = (lvl * (s.iloc[-1] / lvl.iloc[-1])).values
+    return out, ret
+
+
+# total-return panel: bonus, split and every cash dividend in the table; still-unexplained suspects zeroed as in 'crude'
+adj, ret_tr = adj_panel(actions)
 adj.to_parquet(ROOT / "data/panel_close_adj.parquet")
+# price-return panel: bonus and split only (cash ignored). Cash coverage is thin before Nov 2024, so use this one for comparisons across years.
+adj_px, ret_px = adj_panel(actions[actions.type != "cash"])
+adj_px.to_parquet(ROOT / "data/panel_close_adj_pricereturn.parquet")
 
 if __name__ == "__main__":
     print("suspects", len(sus), "explained", int(sus.explained.sum()), "applied but still big", int((sus.applied & sus.still_big).sum()), "unexplained", int((~sus.applied).sum()))

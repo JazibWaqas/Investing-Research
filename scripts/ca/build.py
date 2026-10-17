@@ -195,7 +195,7 @@ for r in acts.itertuples():
         continue
     col = close[r.symbol].dropna().index
     k = col.searchsorted(r.ex_date)
-    if k == 0 or k >= len(col):
+    if k == 0 or k >= len(col) - 1:   # no next trading day to check against
         continue
     t = col[k]
     e = G.expected(r.type, r.value, G.prev.at[t, r.symbol])
@@ -238,5 +238,4 @@ unp = pd.concat([pay_unplaced, pd.DataFrame(unplaced, columns=COLS)], ignore_ind
 unp = unp.assign(announce_dt=pd.to_datetime(unp.announce_dt).dt.strftime("%Y-%m-%d %H:%M")).drop(columns="ex_date")
 unp.drop_duplicates().to_csv(ROOT / "data/corporate_actions_unplaced.csv", index=False)
 seed_cmp.to_csv(ROOT / "data/raw/corporate_actions_seed_compare.csv", index=False)
-acts.to_pickle(Path(__file__).with_name("_acts.pkl"))
 print(len(out), out.type.value_counts().to_dict(), out.ex_date_source.value_counts().to_dict(), "unplaced", len(unp))

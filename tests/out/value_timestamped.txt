@@ -1,0 +1,154 @@
+Value with true publication dates. Run date 2026-10-17. Panel 2480 days 2016-10-17 to 2026-10-16.
+sa_ratios: 108 names, 530 fiscal-year rows (TTM dropped); pe blank 114, of which roe<0 71, roe>0 30; all names in panel: True; sector codes 26
+Annual-result announcements for the 108 names: 1883; after dropping REVOKED 1817; period end unparsed 154
+
+== Publication timestamps, 530 fiscal-year rows
+src
+announcement     455
+none              74
+quarterly_eps      1
+announcement lag from FYE, days: median 82, min 23, max 147; timestamps at exactly 00:00: 0; after 15:30: 22
+rows by FYE month: {3: 5, 6: 406, 9: 5, 12: 114}
+
+== Sample accounting (sequential: names removed at each step; main run applies the Rs5m liquidity filter)
+year | F | outcome end | names | no published FY | stale (>18m) | no ey (pe and roe/pb blank) | no price/not traded in 10d | = before liquidity | liquidity removed | eligible | roe/pb fallback | loss-makers kept (ey<0)
+2021 | 2021-10-29 | 2022-10-31 | 108 | 103 | 0 | 0 | 0 | 5 | 1 | 4 | 0 | 0
+2022 | 2022-10-31 | 2023-10-31 | 108 | 25 | 0 | 1 | 0 | 82 | 38 | 44 | 2 | 2
+2023 | 2023-10-31 | 2024-10-31 | 108 | 18 | 3 | 0 | 1 | 86 | 37 | 49 | 6 | 5
+2024 | 2024-10-31 | 2025-10-31 | 108 | 14 | 2 | 2 | 0 | 90 | 21 | 69 | 9 | 8
+2025 | 2025-10-31 | 2026-10-16 | 108 | 9 | 2 | 1 | 0 | 96 | 11 | 85 | 11 | 9
+Cohort Oct 2021 SKIPPED: 4 eligible names (< 30).
+Oct 2022: thin-sector names excluded from T2 12 (sectors with >=3 eligible: 9); fiscal-year mix: {3: 1, 6: 35, 12: 8}; roe/pb fallback 2; ey_form median 0.187; T4 top-half sectors: [809, 810, 821, 823, 824, 825, 828, 829]
+Oct 2023: thin-sector names excluded from T2 13 (sectors with >=3 eligible: 9); fiscal-year mix: {3: 1, 6: 37, 12: 11}; roe/pb fallback 6; ey_form median 0.142; T4 top-half sectors: [801, 804, 808, 810, 821, 824, 825, 830]
+Oct 2024: thin-sector names excluded from T2 15 (sectors with >=3 eligible: 11); fiscal-year mix: {3: 1, 6: 53, 12: 15}; roe/pb fallback 9; ey_form median 0.117; T4 top-half sectors: [801, 804, 808, 809, 820, 821, 823, 828]
+Oct 2025: thin-sector names excluded from T2 15 (sectors with >=3 eligible: 14); fiscal-year mix: {3: 1, 6: 65, 12: 19}; roe/pb fallback 11; ey_form median 0.068; T4 top-half sectors: [803, 804, 808, 809, 824, 828, 829, 830, 833]
+Oct 2025 cohort is PARTIAL: ends 2026-10-16, 11.5 months.
+
+== T1 by cohort (price return, 12m, gross unless marked net; returns in percent)
+cohort | n top/mid/bot | mean top / mid / bot | median top / bot | universe mean (n) | win rate | worst top (name) | spread mean | spread median | spread net 1.0 | top-univ net 0.5
+Oct 2022 | 15/15/14 | +16.9 / +7.1 / -3.8 | +11.0 / -8.0 | +7.0 (44) | 53% | -25.4 (EPCL) | +20.8 | +19.0 | +19.8 | +9.4
+Oct 2023 | 17/16/16 | +50.6 / +80.3 / +69.9 | +39.2 / +33.8 | +66.6 (49) | 35% | -33.2 (LOTCHEM) | -19.3 | +5.4 | -20.3 | -16.5
+Oct 2024 | 23/23/23 | +81.5 / +60.7 / +76.0 | +75.0 / +63.4 | +72.8 (69) | 57% | -12.8 (EPCL) | +5.5 | +11.6 | +4.5 | +8.3
+Oct 2025 (partial) | 29/28/28 | -2.9 / +5.6 / +5.0 | -7.6 / -17.7 | +2.5 (85) | 41% | -39.3 (WAVES) | -7.9 | +10.1 | -8.9 | -5.9
+
+== T2 by cohort (price return, 12m, gross unless marked net; returns in percent)
+cohort | n top/mid/bot | mean top / mid / bot | median top / bot | universe mean (n) | win rate | worst top (name) | spread mean | spread median | spread net 1.0 | top-univ net 0.5
+Oct 2022 | 12/10/10 | +13.8 / +7.6 / +4.6 | +12.5 / -1.8 | +7.0 (44) | 58% | -27.5 (TELE) | +9.2 | +14.3 | +8.2 | +6.3
+Oct 2023 | 15/11/10 | +100.0 / +50.4 / +40.6 | +45.1 / +30.3 | +66.6 (49) | 33% | -19.5 (EPCL) | +59.4 | +14.7 | +58.4 | +32.9
+Oct 2024 | 22/18/14 | +71.4 / +69.5 / +73.8 | +50.6 / +59.4 | +72.8 (69) | 41% | -12.8 (EPCL) | -2.4 | -8.8 | -3.4 | -1.9
+Oct 2025 (partial) | 26/24/20 | -7.4 / -4.7 / +2.8 | -15.1 / -10.0 | +2.5 (85) | 27% | -64.7 (UNITY) | -10.2 | -5.2 | -11.2 | -10.4
+
+== T3 by cohort (price return, 12m, gross unless marked net; returns in percent)
+cohort | n top/mid/bot | mean top / mid / bot | median top / bot | universe mean (n) | win rate | worst top (name) | spread mean | spread median | spread net 1.0 | top-univ net 0.5
+Oct 2022 | 8/7/7 | +12.3 / +12.9 / +7.9 | +6.3 / +10.3 | +7.0 (44) | 50% | -25.4 (EPCL) | +4.4 | -4.0 | +3.4 | +4.8
+Oct 2023 | 8/8/8 | +37.6 / +63.0 / +116.9 | +35.8 / +52.2 | +66.6 (49) | 38% | -19.5 (EPCL) | -79.3 | -16.4 | -80.3 | -29.5
+Oct 2024 | 12/11/11 | +71.9 / +87.1 / +27.8 | +61.8 / +31.4 | +72.8 (69) | 50% | -12.8 (EPCL) | +44.1 | +30.4 | +43.1 | -1.3
+Oct 2025 (partial) | 14/14/14 | -9.0 / -5.7 / -12.0 | -14.0 / -18.2 | +2.5 (85) | 36% | -35.7 (SSGC) | +3.0 | +4.2 | +2.0 | -12.0
+
+== T4 by cohort (price return, 12m, gross unless marked net; returns in percent)
+cohort | n top/mid/bot | mean top / mid / bot | median top / bot | universe mean (n) | win rate | worst top (name) | spread mean | spread median | spread net 1.0 | top-univ net 0.5
+Oct 2022 | 7/7/6 | +15.8 / +8.9 / -14.8 | +0.8 / -18.9 | +7.0 (44) | 43% | -20.6 (GATM) | +30.6 | +19.7 | +29.6 | +8.3
+Oct 2023 | 9/9/8 | +59.7 / +145.6 / +19.0 | +45.1 / +21.8 | +66.6 (49) | 33% | +2.1 (HUBC) | +40.7 | +23.3 | +39.7 | -7.4
+Oct 2024 | 13/13/12 | +106.7 / +32.3 / +95.4 | +89.4 / +81.2 | +72.8 (69) | 69% | -9.3 (CSAP) | +11.3 | +8.1 | +10.3 | +33.5
+Oct 2025 (partial) | 13/13/12 | -10.7 / -14.0 / -18.8 | -11.0 / -20.5 | +2.5 (85) | 31% | -39.3 (WAVES) | +8.1 | +9.6 | +7.1 | -13.7
+
+--- Across cohorts: MAIN (liquidity filter, price return)
+test | N | mean gross | median gross | mean net | median net | k+ net | worst cohort net | mean top-univ net | k+ | placebo gross med / p5 / p95 | p (share >= actual)
+T1 | 4 | -0.2 | -1.2 | -1.2 | -2.2 | 2 of 4 | -20.3 | -1.2 | 2 of 4 | +0.0 / -17.6 / +17.9 | 0.510
+T2 | 4 | +14.0 | +3.4 | +13.0 | +2.4 | 2 of 4 | -11.2 | +6.7 | 2 of 4 | +2.9 / -15.0 / +20.1 | 0.174
+T3 | 4 | -6.9 | +3.7 | -7.9 | +2.7 | 3 of 4 | -80.3 | -9.5 | 1 of 4 | -0.7 / -26.3 / +25.3 | 0.641
+T4 | 4 | +22.7 | +21.0 | +21.7 | +20.0 | 4 of 4 | +7.1 | +5.2 | 2 of 4 | -0.7 / -28.4 / +28.3 | 0.100
+
+Placebo: shuffle ey_form across the same eligible names (within sector for T2, within subset for T3/T4), 2,000 draws, seed 20261017
+
+== T4 momentum-only baseline (all eligible names in top-half sectors minus eligible universe) vs T4 value spread
+cohort | n in top-half sectors / eligible | momentum EW mean | universe mean | momentum minus universe gross | net 0.5 | T4 value spread gross | T4 value spread net 1.0 | T4 top-tercile minus universe net
+Oct 2022 | 20/44 | +4.2 | +7.0 | -2.8 | -3.3 | +30.6 | +29.6 | +8.3
+Oct 2023 | 26/49 | +76.9 | +66.6 | +10.3 | +9.8 | +40.7 | +39.7 | -7.4
+Oct 2024 | 38/69 | +77.7 | +72.8 | +4.9 | +4.4 | +11.3 | +10.3 | +33.5
+Oct 2025 | 38/85 | -14.4 | +2.5 | -16.9 | -17.4 | +8.1 | +7.1 | -13.7
+mean momentum-only minus universe, gross -1.1, net -1.6; mean T4 value spread gross +22.7, net +21.7
+
+== Total return (panel_close_adj, cash dividends complete only from Nov 2024) beside price return, Oct 2024 and Oct 2025 cohorts only
+cohort | test | price: top / bottom / spread | total: top / bottom / spread | total spread net 1.0 | universe mean price / total
+Oct 2024 | T1 | +81.5 / +76.0 / +5.5 | +86.6 / +77.4 / +9.2 | +8.2 | +72.8 / +76.4
+Oct 2024 | T2 | +71.4 / +73.8 / -2.4 | +75.0 / +76.3 / -1.2 | -2.2 | +72.8 / +76.4
+Oct 2024 | T3 | +71.9 / +27.8 / +44.1 | +78.1 / +32.1 / +46.0 | +45.0 | +72.8 / +76.4
+Oct 2024 | T4 | +106.7 / +95.4 / +11.3 | +113.0 / +97.5 / +15.5 | +14.5 | +72.8 / +76.4
+Oct 2025 | T1 | -2.9 / +5.0 / -7.9 | -0.4 / +6.1 / -6.5 | -7.5 | +2.5 / +4.6
+Oct 2025 | T2 | -7.4 / +2.8 / -10.2 | -5.8 / +4.1 / -9.9 | -10.9 | +2.5 / +4.6
+Oct 2025 | T3 | -9.0 / -12.0 / +3.0 | -5.8 / -9.4 / +3.6 | +2.6 | +2.5 / +4.6
+Oct 2025 | T4 | -10.7 / -18.8 / +8.1 | -9.0 / -17.9 / +9.0 | +8.0 | +2.5 / +4.6
+
+== Year-fixed-effects regression: 12m price return on within-cohort percentile rank of ey_form (0 to 1), cohort dummies
+overall rank: n 247, slope -9.9 pts per full rank (bottom to top), ticker-clustered t -0.72 (86 clusters), cohort-clustered t -0.74 (4 clusters: UNRELIABLE, 4 clusters)
+within-sector rank (sectors >=3): n 192, slope +3.3 pts per full rank (bottom to top), ticker-clustered t 0.18 (71 clusters), cohort-clustered t 0.17 (4 clusters: UNRELIABLE, 4 clusters)
+
+== Monthly non-overlapping check: EW monthly return of fixed formation-date top and bottom terciles, held 12 months
+T1: months 47, mean spread +0.24 pts/month, median -0.49, t 0.40, worst month -11.6 (2023-11-30); by cohort mean {2022: 1.27, 2023: -0.89, 2024: 0.4, 2025: 0.18}
+T2: months 47, mean spread +0.63 pts/month, median +0.53, t 1.07, worst month -10.7 (2025-12-31); by cohort mean {2022: 0.75, 2023: 2.22, 2024: -0.11, 2025: -0.46}
+Months within a cohort share one portfolio: do not read this t as more than four independent episodes.
+
+== ROBUSTNESS: outliers. Largest eligible 12m return per cohort, and spreads with returns winsorised at the cohort 5th/95th percentile
+Oct 2022: max +79.7 (ATRL, ey rank 0.95); universe mean +7.0, excluding the max +5.3; median +5.4
+Oct 2023: max +538.6 (SAZEW, ey rank 0.35); universe mean +66.6, excluding the max +56.8; median +39.2
+Oct 2024: max +292.9 (THCCL, ey rank 0.61); universe mean +72.8, excluding the max +69.5; median +62.4
+Oct 2025: max +329.9 (MACFL, ey rank 0.42); universe mean +2.5, excluding the max -1.4; median -12.0
+
+--- Across cohorts: WINSORISED RETURNS (5/95 within cohort)
+test | N | mean gross | median gross | mean net | median net | k+ net | worst cohort net | mean top-univ net | k+ | placebo gross med / p5 / p95 | p (share >= actual)
+T1 | 4 | +4.1 | +2.3 | +3.1 | +1.3 | 2 of 4 | -6.5 | +2.9 | 2 of 4 | -0.0 / -11.7 / +11.6 | 0.284
+T2 | 4 | +5.1 | +0.8 | +4.1 | -0.2 | 2 of 4 | -6.9 | +0.9 | 2 of 4 | +1.7 / -9.7 / +14.0 | 0.325
+T3 | 4 | +2.5 | +2.0 | +1.5 | +1.0 | 3 of 4 | -38.4 | -6.0 | 2 of 4 | +0.1 / -16.2 / +15.0 | 0.413
+T4 | 4 | +17.9 | +13.9 | +16.9 | +12.9 | 4 of 4 | +2.6 | +6.1 | 3 of 4 | +0.3 / -15.8 / +16.7 | 0.040
+Per-cohort winsorised net spreads (pts) T1 / T2 / T3 / T4:
+Oct 2022: +16.1 / +6.0 / +0.1 / +22.8
+Oct 2023: -6.5 / +23.9 / -38.4 / +39.3
+Oct 2024: +5.3 / -6.4 / +42.3 / +3.1
+Oct 2025: -2.7 / -6.9 / +2.0 / +2.6
+
+== SENSITIVITY: no liquidity filter
+Oct 2022: eligible 82 (with filter 44)
+Oct 2023: eligible 86 (with filter 49)
+Oct 2024: eligible 90 (with filter 69)
+Oct 2025: eligible 96 (with filter 85)
+
+--- Across cohorts: NO LIQUIDITY FILTER
+test | N | mean gross | median gross | mean net | median net | k+ net | worst cohort net | mean top-univ net | k+ | placebo gross med / p5 / p95 | p (share >= actual)
+T1 | 4 | -14.5 | -21.1 | -15.5 | -22.1 | 1 of 4 | -29.9 | -5.1 | 2 of 4 | -0.0 / -18.7 / +18.7 | 0.902
+T2 | 4 | -19.3 | -19.9 | -20.3 | -20.9 | 1 of 4 | -46.1 | -5.6 | 1 of 4 | -1.7 / -22.9 / +18.1 | 0.907
+T3 | 4 | +0.6 | +10.4 | -0.4 | +9.4 | 3 of 4 | -67.5 | -12.7 | 1 of 4 | +0.4 / -17.8 / +18.3 | 0.494
+T4 | 4 | -8.5 | -0.1 | -9.5 | -1.1 | 2 of 4 | -62.6 | -1.0 | 2 of 4 | -0.1 / -33.6 / +33.2 | 0.648
+
+== SENSITIVITY: roe/pb fallback rows dropped (liquidity filter on)
+Oct 2022: eligible 42 (with fallback rows 44)
+Oct 2023: eligible 43 (with fallback rows 49)
+Oct 2024: eligible 60 (with fallback rows 69)
+Oct 2025: eligible 74 (with fallback rows 85)
+
+--- Across cohorts: FALLBACK ROWS DROPPED (loss-makers with a blank pe are gone)
+test | N | mean gross | median gross | mean net | median net | k+ net | worst cohort net | mean top-univ net | k+ | placebo gross med / p5 / p95 | p (share >= actual)
+T1 | 4 | -7.2 | +12.2 | -8.2 | +11.2 | 3 of 4 | -71.4 | -3.6 | 3 of 4 | -0.1 / -19.4 / +18.4 | 0.729
+T2 | 4 | +22.2 | +2.3 | +21.2 | +1.3 | 2 of 4 | -3.7 | +8.8 | 2 of 4 | +3.0 / -18.9 / +25.5 | 0.087
+T3 | 4 | -10.6 | +3.9 | -11.6 | +2.9 | 3 of 4 | -92.7 | -10.0 | 1 of 4 | +1.0 / -27.6 / +27.8 | 0.705
+T4 | 4 | -20.2 | +16.0 | -21.2 | +15.0 | 3 of 4 | -147.7 | +2.8 | 2 of 4 | +1.1 / -34.8 / +34.2 | 0.831
+
+Per-cohort net spreads (pts) for the sensitivities, T1 / T2 / T3 / T4:
+main Oct 2022: +19.8 / +8.2 / +3.4 / +29.6  (n 44/32/22/20)
+main Oct 2023: -20.3 / +58.4 / -80.3 / +39.7  (n 49/36/24/26)
+main Oct 2024: +4.5 / -3.4 / +43.1 / +10.3  (n 69/54/34/38)
+main Oct 2025: -8.9 / -11.2 / +2.0 / +7.1  (n 85/70/42/38)
+no liq Oct 2022: +12.1 / -8.7 / +12.0 / +26.8  (n 82/64/40/31)
+no liq Oct 2023: -29.9 / +6.7 / -67.5 / +22.0  (n 86/71/43/43)
+no liq Oct 2024: -18.4 / -33.2 / +46.9 / -62.6  (n 90/76/45/40)
+no liq Oct 2025: -25.9 / -46.1 / +6.8 / -24.3  (n 96/85/48/45)
+no fallback Oct 2022: +16.1 / +4.4 / +3.5 / +26.7  (n 42/29/21/19)
+no fallback Oct 2023: -71.4 / +85.7 / -92.7 / -147.7  (n 43/27/21/20)
+no fallback Oct 2024: +9.5 / -3.7 / +40.6 / +32.9  (n 60/46/30/34)
+no fallback Oct 2025: +12.9 / -1.8 / +2.3 / +3.2  (n 74/56/37/33)
+
+== PRE-REGISTERED VERDICT
+Independent episodes (cohorts with outcome): 4; required positive cohorts: 3
+T1 net spread positive in 2 of 4; mean net -1.2; placebo net 95th pct +16.9, p 0.510
+T2 net spread positive in 2 of 4; mean net +13.0; placebo net median +1.9, 95th pct +19.1, p 0.174
+Rule result: NOTHING. With 4 episodes a standalone verdict cannot be reached at conventional confidence whatever the point estimate.
