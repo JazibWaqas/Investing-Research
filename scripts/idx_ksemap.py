@@ -18,7 +18,7 @@ def annex(f):
     names=[]
     for pg in pdfplumber.open(f).pages[1:]:
         for line in (pg.extract_text() or '').split('\n'):
-            for m in re.finditer(r'(?<!\S)(\d{2,3})\.*\s*(.+?)(?=\s+\d{2,3}(?:\.+|\s)\s*[A-Za-z]|$)',line):
+            for m in re.finditer(r'(?<!\S)(\d{1,3})(?:\.+\s*|(?<=\d\d)\s+)(.+?)(?=\s+\d{1,3}(?:\.+|\s)\s*[A-Za-z]|$)',line):
                 nm=m.group(2)
                 if nm.startswith(('The complete','The list')): continue
                 nm=re.sub(r'\*?\s*\*?\s*On Sector Rule Basis','',nm)

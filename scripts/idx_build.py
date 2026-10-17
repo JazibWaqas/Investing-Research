@@ -8,7 +8,7 @@ U = 'https://www.psx.com.pk/psx/themes/psx/uploads/'
 D = 'data/raw/index_pdfs/'
 # names the symbols.csv fuzzy match gets wrong or cannot find
 MANUAL = {'Mari Petroleum Company Ltd': 'MARI', 'Mari Petroleum Company Ltd.': 'MARI', 'Orix Leasing Pakistan Ltd': 'OLPL',
-          'I. C. I. Pakistan Ltd': 'ICI', 'Treet Corporation Limited': 'TREET'}
+          'I. C. I. Pakistan Ltd': 'ICI', 'Treet Corporation Limited': 'TREET', 'Orix Leasing Pakistan Limited': 'OLPL', 'Mari Petroleum Company Limited': 'MARI', 'Attock Gen Limited': 'AGL'}
 if os.path.exists('scripts/idx_manual_names.json'): MANUAL.update(json.load(open('scripts/idx_manual_names.json')))
 
 # ---- KSE-100 notices: (file, announce, effective, in-names, out-names, full list parsed)

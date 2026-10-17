@@ -12,6 +12,5 @@ for pg in pdf.pages[2:]:
                 if ok:
                     rows.append(((r[1] or '').strip(), (r[2] or '').replace('*', '').strip()))
 d = pd.DataFrame(rows, columns=['symbol', 'company']).drop_duplicates('symbol')
-d['sector'] = ''  # not present in the PDF
 d.to_csv('data/kmi_allshare_2026-06-05.csv', index=False)
 print(len(d))

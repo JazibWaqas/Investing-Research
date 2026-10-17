@@ -10,6 +10,10 @@ files={
  'KMI-All-share-Notice-Recomposition-as-of-Dec-_2024-Final.pdf':2,
  'Merged_KMIALL_Notice_and_FinalList_June2025.pdf':2,
  'Notice-to-KMIALL-re-composition-as-of-Dec-2025-Revised.pdf':2,
+ 'Notice-with-List-incoming-outgoing-KMI-ALL-Shares-July-01-2019-Dec-31-2019.pdf':3,
+ 'sharia_KMI_All_Share_list_June_2021_Final_27122021.pdf':3,
+ 'Copy_of_KMI_All_Share_June_-22_23122022.pdf':3,
+ 'Notice-666_KMI_All_Share_Index_re-composition_for_Dec-22.pdf':3,
 }
 tk=re.compile(r'^[A-Z][A-Z0-9]{1,9}$')
 out={}
