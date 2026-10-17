@@ -72,3 +72,9 @@ Lesson: the market paid for policy clarity, not for a peak quarter.
 ## 7. Evidence and dates
 
 ProPakistani 2 Sep, 7 Sep, 24-30 Sep, 25 Sep 2026; Mettis 27 Aug and 16 Sep 2026; The News 2 May and 2 Sep 2026; Geo 5 Sep 2026; Platts via Hellenic Shipping 25 Aug 2026; Nukta/Topline 28 Aug 2026; Energy Update 2 Oct 2026; AHL via Bloom Pakistan 3 Oct 2026; PSX filings 283339, 283521, 284872, 285290, 285409, 285746, 285837, 285915, 283230 (Sep to Oct 2026); Wikipedia 2026 oil chronology; Fortune and Vantage oil quotes; our `data/macro` and PSX price history. Not confirmed: cap extension, PRL board date, CNERGY Q1 date, NRL charge detail, seven-year incentive terms.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- ATRL's FY26 consolidated profit was Rs26.062bn and consolidated EPS Rs244.45, versus standalone profit Rs22.103bn and EPS Rs207.32. The associate contribution explains why the two figures should not be mixed. Source: [ATRL FY26 annual report](https://dps.psx.com.pk/download/document/283523.pdf), transmitted 28 September 2026, reporting year ended 30 June 2026.
+- The amended refinery policy called for deemed duty on HSD to fall to 2.5% for refineries signing an upgrade agreement by 1 October and to zero by 15 November. The reported Cabinet terms are clear, but the operative notification and whether each refinery's rate had actually changed by 17 October remain unverified. Source: [Business Recorder's account of the Cabinet terms](https://www.brecorder.com/news/amp/40438968), September 2026.
+- [PRL's PSX page](https://dps.psx.com.pk/company/PRL) records a board-meeting rescheduling notice on 16 October 2026. The notice text was not retrievable here, so the meeting's new time is unverified. The HSD crack cap's original term had not yet ended on 17 October; extension, reduction or lapse cannot be reported as an outcome before 19 to 20 October. CNERGY's Q1 board date remains unverified.

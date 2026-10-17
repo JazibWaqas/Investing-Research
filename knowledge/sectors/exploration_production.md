@@ -74,3 +74,9 @@ The cause of the Dec 2024 spike was not verified. Reports tie the sector to circ
 Company letters: dps.psx.com.pk docs 282660, 283329, 285371, 283519. FY26 results: propakistani.pk, mettisglobal.news (PPL 2026-09-14, POL), pkrevenue.com (POL), tribune.com.pk/story/2627512 (OGDC, 2026-09-05). Circular debt: tribune.com.pk/story/2624675 and /2626125 (IMF, 2026-08-28). Prices from the PSX API (2016-10-17 to 2026-10-16) and `seed/data/fundamentals/screener_20261016.csv`.
 
 Not found: OGDC, PPL and MARI 1Q board dates, FY26 realised oil prices, per-dollar earnings sensitivity, any privatisation timetable, the SBP September decision.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- [SBP's 14 September 2026 announcement](https://www.sbp.org.pk/DFMD/pr.asp) confirms that the MPC held the policy rate at 11.5%. Its [published calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) sets the next meetings for 26 October and 14 December 2026.
+- The Rs1.495tn gas circular-debt settlement was a Petroleum Division proposal submitted to the CCoE, with planned dividends from OGDC, PPL and GHPL. No CCoE or IMF final approval was confirmed by 17 October. Source: [Express Tribune, 19 August 2026](https://tribune.com.pk/story/2624675/ministry-unveils-debt-clearance-plan?amp=1); [Nukta, August 2026](https://nukta.com/pakistan-settle-gas-circular-debt). Treat the expected collection as contingent.
+- [PSX pages for OGDC](https://dps.psx.com.pk/company/OGDC), [PPL](https://dps.psx.com.pk/company/PPL) and [MARI](https://dps.psx.com.pk/company/MARI), checked 17 October, do not show 1QFY27 board notices. Dates remain unverified, not delayed.

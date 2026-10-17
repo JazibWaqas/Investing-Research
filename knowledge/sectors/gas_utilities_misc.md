@@ -74,4 +74,9 @@ PNSC (not KMI, 9% free float, Rs15m a day) is about 5x consolidated earnings, an
 
 PSX documents 283618, 284944, 284072, 285269, 244576, 265066, 242268, 242895, 283600, 284907, 281736, 280841, 282619, 282325; OGRA site (17 Oct 2026); Mettis 21 May 2025 (FY26 prescribed price SNGPL Rs1,895.25, SSGC Rs1,498.18 per mmbtu; FY27 not found); Dawn 2037472 (16 Oct, E&P third-party gas sales up to 35%); mettisglobal.news/-63884 (1 Oct); links in section 2; prices from data/prices_raw.
 
+## Gap resolution (17 Oct 2026, Codex)
+
+- [OGRA's decision index](https://www.ogra.org.pk/decisions-3), checked 17 October, lists SSGCL's FY27 estimated revenue requirement decision dated 23 June 2026, but its latest listed FY25 final revenue requirement is 7 November 2025. No FY26 final revenue requirement decision or firm publication date for SNGPL or SSGCL was found. The note's “about 6 November” is an inference from AGM timing, not an OGRA deadline.
+- [SNGP's PSX page](https://dps.psx.com.pk/company/SNGP) records its 28 September and 7 October applications to extend the FY26 AGM. That confirms the filing delay; it does not establish the eventual AGM or determination date. The Rs1.495tn circular-debt plan was [submitted to the CCoE in August](https://tribune.com.pk/story/2624675/ministry-unveils-debt-clearance-plan?amp=1), with final approval still unverified by 17 October.
+
 Data gaps: FRR and UFG percentages, FY27 consumer gas price, SNGP Q4 FY26, Pakistan Services terms, PIBTL cargo data, causal triggers for the 2020 and 2024 moves.

@@ -72,3 +72,8 @@ KMI All Share per screener: SAZEW, GAL, GHNI, HCAR, MTL, AGTL, BWHL, EXIDE, LOAD
 ## 7. Evidence and dates
 
 PAMA (13 Oct), Dawn (14 Sep, 15-16 Oct), Profit (12 Oct), ProPakistani (14, 16 Oct; 17 May), Mettis (13, 16 Oct), TradingEconomics, StockAnalysis (16 Oct close), PSX notices 282611, 282910, 283434, 284160, 284740, 284743, 285180, 285464, 285896, screener_20261016.csv, data/macro. Gaps: SBP and Business Recorder blocked, Topline and AHL notes not retrieved, MTL board date unread.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- The [PAMA September 2026 table](https://pama.org.pk/wp-content/uploads/2026/10/Production-Sales-September-2026.pdf), released 13 October, directly confirms 10,939 passenger cars sold in September and 41,872 in July to September, against 12,126 and 29,318 in the comparable 2025 periods. Tractors were 1,815 in September and 4,109 for the quarter; trucks and buses 933 and 2,727. The [PAMA write-up](https://pama.org.pk/wp-content/uploads/2026/10/Write-up-for-September-2026.pdf%20) cautions that jeeps, pickups and LCV sales fell 34% YoY in the quarter despite car growth. These figures were already in this note; their primary source is now verified.
+- [MTL's PSX page](https://dps.psx.com.pk/company/MTL) shows a 15 October board notice, but its meeting date and the claimed 19 October ex-dividend date could not be read from the accessible record. Both remain unverified. [SBP's calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) confirms the 26 October and 14 December MPC dates.

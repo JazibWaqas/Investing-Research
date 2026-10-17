@@ -113,7 +113,7 @@ def _moves(close, vol):
 def suspects(close, vol):
     """Every observation with a big move and normal volume: symbol, date, pct_move, volume_ratio."""
     pct, _, _, vr, big = _moves(close, vol)
-    m = (big & (vr <= VOL_NORMAL)).stack()
+    m = (big & ((vr <= VOL_NORMAL) | vr.isna())).stack()
     m = m[m].index
     return pd.DataFrame({"symbol": m.get_level_values(1), "date": m.get_level_values(0),
                          "pct_move": pct.stack().reindex(m).values, "volume_ratio": vr.stack().reindex(m).values})
@@ -186,8 +186,8 @@ def liquid_universe(date, min_value=5e6):
 def provisional_actions():
     """Best-effort table from data/payouts_raw.csv (about 2 years) and seed/data/corporate_actions.csv, same
     schema as corporate_actions.csv. For reconciling the suspect log only. Payout percentages are assumed to be
-    of Rs10 par (UNVERIFIED), ex-date is approximated as the trading day before book closure starts (seed rows
-    use hand-checked dates and win). Rights are skipped."""
+    of Rs10 par (UNVERIFIED), ex-date is approximated as 2 trading days before book closure starts (the average dip in 94 large
+    payers falls at -2 and -1; real ex-date may be off by a day; seed rows use hand-checked dates and win). Rights are skipped."""
     out = []
     p = pd.read_csv(ROOT / "data" / "payouts_raw.csv")
     close = load_panel()[0]
@@ -197,7 +197,7 @@ def provisional_actions():
         if not m or not nums or "(R)" in r.Details:
             continue
         start = pd.to_datetime(m.group(1), dayfirst=True)
-        ex = close.index[close.index.searchsorted(start) - 1] if start > close.index[0] else start
+        ex = close.index[max(close.index.searchsorted(start) - 2, 0)] if start > close.index[0] else start
         if "(B)" in r.Details:
             out.append((r.symbol, ex, "bonus", sum(nums) / 100))
         elif "(D)" in r.Details or "DIVIDEND" in r.Details.upper():
@@ -206,8 +206,9 @@ def provisional_actions():
     ty = {"cash_div": "cash", "bonus": "bonus", "split": "split"}
     val = s.amount_pkr_or_ratio.astype(str).map(lambda v: float(v[:-1]) / 100 if v.endswith("%") else float(v.split(":")[0]) if ":" in v else float(v))
     seed = pd.DataFrame({"symbol": s.ticker, "ex_date": s.ex_date, "type": s.type.map(ty), "value": val})
-    a = pd.concat([seed, pd.DataFrame(out, columns=seed.columns)])
-    return a.drop_duplicates(["symbol", "ex_date", "type"]).sort_values(["symbol", "ex_date"]).reset_index(drop=True)
+    new = pd.DataFrame(out, columns=seed.columns)
+    dup = new.apply(lambda r: ((seed.symbol == r.symbol) & (seed.type == r.type) & ((seed.ex_date - r.ex_date).abs() <= pd.Timedelta(days=7))).any(), axis=1)
+    return pd.concat([seed, new[~dup]]).drop_duplicates(["symbol", "ex_date", "type"]).sort_values(["symbol", "ex_date"]).reset_index(drop=True)
 
 
 if __name__ == "__main__":

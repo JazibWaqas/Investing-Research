@@ -82,3 +82,8 @@ Idiosyncratic spikes exist too: SPEL +130% (Jul to Sep 2024) and ECOP +143% (Apr
 - PSX filings: TGL results 283378 and annual report 284469, GHGL annual report 285037, IPAK results 282487, PKGS Shariah disclosure 282741, CEPB annual report 284308.
 - Repo: `data/prices_raw`, `data/macro/kmiallshr.csv`, `brent.csv`, `policy_rate_decisions.csv`, `data/payouts_raw.csv`.
 - Dawn (12 and 17 Oct), ProPakistani budget page, Trading Economics, OGRA site.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- [SBP's published calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) confirms MPC meetings on 26 October and 14 December 2026. The earlier note's 26 October date was correct, while its unspecified December date can now be replaced with 14 December for monitoring.
+- [GHGL's PSX page](https://dps.psx.com.pk/company/GHGL) records the 6 October AGM notice and 7 October FY26 annual report transmission. The note's 21 October ex-date is still an inference from book closure, not a separately verified exchange ex-date. [OGRA's decision index](https://www.ogra.org.pk/decisions-3) does not provide a current industrial gas tariff for these named mills; input-cost attribution remains unverified.

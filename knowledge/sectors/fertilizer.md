@@ -74,3 +74,9 @@ Measured from `seed/data/macro/sector_monthly_ret.csv` (fert) against `ew_mkt_re
 ProPakistani 2026-06-02, 07-16, 07-20, 07-29, 07-30, 08-04, 08-05, 08-17, 09-03, 09-04, 10-14; Bol News 2026-10-01; Profit 2026-04-06 and 07-09; Arab News 2026-07-21; The News 2026-05-12; Fertilizer Daily 2026-06-29, 09-28, 09-29; Tribune 2026-09-05; ARY 2026-09-14; Bloom Pakistan (Fatima H1, secondary, verify against PSX); PSX EFERT notices 2026-10-02 and 09-21 (documents 284264, 283091); stockanalysis.com quotes 2026-10-16; repo screener, prices, corporate_actions, announcements.
 
 Data gaps: current feed gas price per network, FY27 budget FED and super tax, Oct 7 India tender result, current retail urea price, FFC and Fatima board dates, EFERT and Fatima GIDC provisions, single primary source for the 2024 re-rating.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- [Dawn's 4 October 2026 report citing Topline](https://www.dawn.com/news/2034575/urea-sales-dip-13pc-in-september) corroborates September industry urea inventory of roughly 0.65Mt and EFERT's 519,000t, versus FFC's 88,000t and Fatima's 29,000t. This is broker-estimated inventory, not EFERT's audited balance. EFERT's 19 October payout is still future and unverified.
+- [EFERT's PSX page](https://dps.psx.com.pk/company/EFERT) confirms an October 2 board notice for nine-month results; it does not contain the forthcoming payout. [SBP](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) confirms the next MPC dates as 26 October and 14 December 2026.
+- Current plant-specific feed-gas charges still cannot be reconciled to a 2026 government notification. [OGRA's decision index](https://www.ogra.org.pk/decisions-3), checked 17 October, is the authoritative monitor; do not carry the February 2024 rates forward as current facts.

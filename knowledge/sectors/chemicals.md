@@ -81,3 +81,8 @@ A cyclical looks cheapest at peak earnings. Three up and three down moves in ten
 PSX documents 281225, 282061, 282064, 282128, 284276, 284637, 285750, 285873, 270336, 272329, 276612, 285527, 285539, 285566, 285801, 088343, 093805, 097342 (dps.psx.com.pk/download/document/ID.pdf); PSX company pages (16 Oct); stockanalysis.com/quote/psx/EPCL/statistics; NTC (undated); sunsirs (17 Oct); pkrevenue.com (10 Mar, 8 May, 21 Apr, 17 Oct); repo screener, announcements, macro, prices.
 
 **Gaps:** broker research, PX price, OGRA and NEPRA data, takeover price rules, why LCI de-rated, Noventra's other income, the buyer of Mitsubishi's 11% EPCL stake (SPA 17 Feb), GCIL's EOGM.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- [SBP's calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) fixes the December MPC at 14 December 2026. The earlier “mid-Dec” window can be monitored as a dated event.
+- [PSX regulation 5.6.4 and its takeover/disclosure framework](https://www.psx.com.pk/psx/themes/psx/uploads/PSX-Regulations-November-24-2025.pdf) makes related-person trading and offer disclosures public, but no final EPCL public-offer document or acceptance terms were verified by 17 October. The Rs38.60 control-block price must not be treated as a guaranteed exit for every minority share; pro rata acceptance remains unverified.

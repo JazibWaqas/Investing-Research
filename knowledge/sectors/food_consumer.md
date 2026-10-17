@@ -91,3 +91,8 @@ Relative to KMI All Share (`data/macro/kmiallshr.csv`), raw closes from `seed/da
 - News: Dawn 16 Oct, Tribune 10 and 17 Oct, Dawn 24 Jun (links above). SBP statement 14 Sep.
 - Repo data: `data/macro/*.csv`, `data/announcements.csv`, `seed/data/prices`.
 - Not found: edible oil and ghee prices, milk price, sugar policy, tobacco FED, broker research, Nestle board date.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- The [PBS weekly SPI report for the week ended 15 October 2026](https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_15.10.2026.pdf), released 16 October, gives the national average refined-sugar retail price as Rs142.11/kg, down 23.20% YoY, and fresh milk as Rs218.92/litre, up 8.00% YoY. These are observable retail-price series for the note's sugar and milk gaps, although they do not establish a particular producer's margins or a policy decision.
+- [Nestle's PSX page](https://dps.psx.com.pk/company/NESTLE), checked 17 October, had no accessible October 2026 Q3 board notice or result. The date and payout remain unverified; last year's 16 October print is not this year's announcement. The [SBP calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) fixes the next MPC on 26 October, not an inferred November meeting.

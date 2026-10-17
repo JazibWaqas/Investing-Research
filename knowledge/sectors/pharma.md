@@ -81,3 +81,8 @@ URLs 1, 4, 5, 6, 8, 9 are standard sources not fetched this session.
 ## 7. Evidence and dates
 
 PSX company pages of 16 Oct 2026 for all eleven symbols; psx_api payouts; screener_20261016.csv; stockanalysis.com quarterly tables (cross-checked, differs on some); pkrevenue.com articles dated 22 Jul, 14 Aug, 25 Aug, 6 May and 15 Jan 2026, 25 May 2025, and 2019 items; dra.gov.pk homepage (17 Oct 2026); dawn.com/news/2037605 (16 Oct 2026); en.wikipedia.org/wiki/Pharmaceutical_industry_in_Pakistan (market Rs748bn in 2023, top 10 hold 48%); repo files seed/data/macro/*.csv, seed/data/prices/*.csv, data/macro/usdpkr.csv. Gaps: pricing policy changes 2019 to 2025, FY27 budget pharma measures, brokerage forecasts, result dates for December-year names, Brent (repo series shows 126.55 on 14 Oct while omc.md cites $104; unresolved, so not used).
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- The [FBR's final 2026-27 Fifth Schedule](https://download1.fbr.gov.pk/Docs/2026825118858478FifthSchedule2026-27.pdf), updated 30 June 2026, lists multiple active pharmaceutical ingredients at zero customs duty, subject to the schedule's product and DRAP conditions. [Business Recorder, 19 August 2026](https://www.brecorder.com/news/amp/40432052) reported that the Finance Act also raised the minimum turnover tax on pharmaceutical distributors from 0.25% to 0.50% effective 1 July. The first helps qualifying manufacturers; the second pressures distributors. Neither establishes a company-specific EPS effect.
+- [SBP's published calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) confirms the 14 December 2026 MPC date. Q3 board dates for the named December-year drug makers remain unverified.

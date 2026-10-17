@@ -74,6 +74,13 @@ def main():
                 continue
             season = calendar[(calendar >= start) & (calendar <= end)]
             add(rows, "results_season", f"{year}Q{quarter}", season, series, calendar)
+            off_start, off_end = [(f"{year}-03-01", f"{year}-04-19"),
+                                  (f"{year}-06-01", f"{year}-07-19"),
+                                  (f"{year}-09-01", f"{year}-10-19"),
+                                  (f"{year}-12-01", f"{year+1}-01-19")][quarter-1]
+            off = calendar[(calendar >= off_start) & (calendar <= off_end)]
+            if len(off) and off[-1] >= pd.Timestamp(off_end) - pd.Timedelta(days=4):
+                add(rows, "results_offseason", f"{year}Q{quarter}", off, series, calendar)
         months = sorted(set(yd.to_period("M")))
         for period in months[1:]:
             prev = calendar[calendar.to_period("M") == period-1]

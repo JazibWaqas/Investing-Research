@@ -29,7 +29,9 @@ def main():
     p = load_prices()
     ret, ew, liq = p["ret"], p["ew"], p["liquidity"]
     calendar = ew.dropna().index
-    changes = pd.read_csv(ROOT / "data/index_changes.csv", parse_dates=["announce_date", "effective_date"])
+    changes = pd.read_csv(ROOT / "data/index_changes.csv")
+    for col in ["announce_date", "effective_date"]:
+        changes[col] = pd.to_datetime(changes[col], errors="coerce")
     source_n = len(changes)
     changes = changes[changes.announce_date.notna() & changes.effective_date.notna()
                       & changes.source_url.fillna("").ne("derived")].copy()
@@ -45,6 +47,7 @@ def main():
             continue
         spans = {"anticipation": calendar[pre_end-20:pre_end],
                  "announce_to_effective": calendar[a:e+1],
+                 "effective_day": calendar[e:e+1],
                  "post_effective_20d": calendar[e+1:e+21]}
         for phase, dates in spans.items():
             actual = window_return(ret, ew, row.symbol, dates)
@@ -63,7 +66,8 @@ def main():
                 start = int(RNG.integers(0, len(year_dates)-len(dates)))
                 cd = year_dates[start:start+len(dates)]
                 eligible = liq.loc[cd[0]].dropna()
-                eligible = eligible[(eligible > 0) & (np.abs(np.log(eligible/lv)) <= np.log(2))]
+                eligible = eligible[eligible > 0]
+                eligible = eligible[np.abs(np.log(eligible/lv)) <= np.log(2)]
                 eligible = eligible.index.difference([row.symbol])
                 if len(eligible):
                     sym = str(RNG.choice(eligible))
@@ -73,7 +77,7 @@ def main():
             records.append(dict(index=row.index, action=row.action, phase=phase, symbol=row.symbol,
                                 announce=row.announce_date.date(), effective=row.effective_date.date(),
                                 excess=actual, placebo=float(np.mean(controls)) if controls else np.nan,
-                                controls=len(controls)))
+                                controls=len(controls), liquidity_m=lv/1e6))
     out = pd.DataFrame(records)
     if out.empty:
         print("No eligible events")
@@ -91,11 +95,16 @@ def main():
         s = stats(episodes)
         print(f"{action} {phase}: episodes={s['n']} mean={fmt(s['mean'])}% median={fmt(s['median'])}% "
               f"hit={fmt(s['hit'])}% worst={fmt(s['worst'])}%")
+    print("\nLiquid-only (prior 60-day median traded value >Rs5m), pooled event rows:")
+    for (action, phase), g in out[out.liquidity_m > 5].groupby(["action", "phase"]):
+        s = stats(g.excess)
+        print(f"{action} {phase}: n={s['n']} mean={fmt(s['mean'])}% median={fmt(s['median'])}% "
+              f"hit={fmt(s['hit'])}% worst={fmt(s['worst'])}% placebo={fmt(g.placebo.mean())}%")
     print("\nEvent rows and matched control means (percentage points):")
-    print("index,action,phase,symbol,announce,effective,excess_pct,placebo_pct,control_draws")
+    print("index,action,phase,symbol,announce,effective,excess_pct,placebo_pct,control_draws,prior_median_value_Rsm")
     for r in out.itertuples(index=False):
         print(f"{r.index},{r.action},{r.phase},{r.symbol},{r.announce},{r.effective},"
-              f"{fmt(r.excess)},{fmt(r.placebo)},{r.controls}")
+              f"{fmt(r.excess)},{fmt(r.placebo)},{r.controls},{r.liquidity_m:.2f}")
     print("\nNeutralized corporate-action-like raw returns:")
     print(p["actions"].to_csv(index=False), end="")
 

@@ -76,3 +76,8 @@ Limit: across 114 months, the 3-month T-bill change had 0.05 correlation with st
 ## 7. Evidence and dates
 
 Mettis Global (ISL 2026-08-20, INIL 08-21, Mughal and Amreli 09-15/16, Agha 09-24), ProPakistani, Trade Chronicle (AL Habib data, 10-01), PACRA steel study (Sep 2025), SteelOrbis (2026-03-25, 07-08), Dawn (2026-06-26), pakera.pk (10-13), PSX payouts API, PSX documents 285544, 285728, 285891, stockanalysis.com, Kamran Steel. Unverified: FY27 customs duty on scrap and billet (FY26 totals 5% and 17%, PACRA), FY27 super tax, PSDP, October scrap price, Aisha and Amreli Q1 dates.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- The [Pakistan trade tariff portal's FY27 entry for ferrous waste and scrap, PCT heading 7204](https://tipp.gov.pk/index.php?id=19541&r=tradeInfo%2Fview&sort=rate.desc), shows a 4% regulatory duty valid from 1 July 2026 to 30 June 2027. This confirms one component of the landed import burden, not the combined customs, additional duty, sales tax and withholding burden. The note's FY26 all-in percentage should not be carried forward as the FY27 all-in rate without PCT-level reconciliation.
+- [ISL's PSX page](https://dps.psx.com.pk/company/ISL) records a Q1 board notice on 13 October 2026. Aisha and Amreli Q1 dates and a landed October scrap quote remain unverified.

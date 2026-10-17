@@ -76,3 +76,8 @@ Limits: four episodes, equal-weighted sector index, prices unadjusted for most b
 Business Recorder 15 Aug 2023 to 16 Oct 2026 (ids as cited above plus 40257870, 40320464, 40385064, 40400827, 40412320, 40417609, 40420629, 40423840, 40424155, 40426355, 40426388, 40430365, 40432826, 40439111, 40439576); Profit 17 Sep and 17 Oct 2026; ProPakistani 8 Oct 2026; Wikipedia (Telenor Pakistan, TRG Pakistan); stockanalysis.com quarterly financials 16-17 Oct 2026; PSX company pages, payouts API, AIRLINK filing 283753; SBP MPC calendar; repo data/macro and seed/data/prices.
 
 Gaps: web search quota ran out, so Topline, AHL, JS and Mettis notes, PTA subscriber data and NETSOL FY26 earnings quality were not reached. data/macro/usdpkr.csv has bad ticks (276.7 prints), so PKR uses ProPakistani.
+
+## Gap resolution (17 Oct 2026, Codex)
+
+- [NETSOL's PSX page](https://dps.psx.com.pk/company/NETSOL), checked 17 October, shows its FY26 result on 29 September and annual report transmission on 7 October but no 1QFY27 board notice. [SYS's PSX page](https://dps.psx.com.pk/company/SYS) shows its H1 result on 27 August and no Q3 board notice. The late-October dates in section 3 remain estimates, not confirmed meetings.
+- [SBP's MPC calendar](https://www.sbp.org.pk/m_policy/mp-comm-semi.asp) confirms 26 October, 14 December and 25 January meetings. [NETSOL's 7 September unusual-volume notice](https://dps.psx.com.pk/company/NETSOL) is a PSX disclosure prompt, not a finding of manipulation.
