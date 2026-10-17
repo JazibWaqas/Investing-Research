@@ -11,21 +11,31 @@ import psx_api
 ROOT = Path(__file__).parent.parent
 
 
+def base(sym, known):
+    """Strip ex-rights (XD/XB/XR/XA/XE) and NC suffixes if the base is a real symbol."""
+    m = re.fullmatch(r"(.+?)(?:XD|XB|XR|XA|XE|NC)+", sym)
+    return m.group(1) if m and m.group(1) in known else sym
+
+
 def symbol_set():
+    """Returns (base symbols to fetch, {suffixed: base} mapping that was collapsed)."""
     df = pd.read_csv(ROOT / "seed/data/fundamentals/screener_20261016.csv")
+    known = set(pd.read_csv(ROOT / "data/symbols.csv").symbol)
     syms = set(df[df.listed_in.fillna("").str.contains("KMIALLSHR")].symbol.astype(str))
-    # ex-dividend/bonus/right duplicates (e.g. LUCKXD) are skipped when the base is present
-    dups = {s for s in syms if re.fullmatch(r"(.+?)(XD|XB|XR|XA|XE)", s) and re.fullmatch(r"(.+?)(XD|XB|XR|XA|XE)", s).group(1) in syms}
-    return sorted(syms - dups), sorted(dups)
+    mapped = {s: base(s, known) for s in syms}
+    return sorted(set(mapped.values())), {s: b for s, b in mapped.items() if s != b}
 
 
 if __name__ == "__main__":
     syms, dups = symbol_set()
-    print("skipped ex-duplicates:", dups)
+    print("collapsed to base:", dups)
     out = ROOT / "data/prices_raw"
     out.mkdir(parents=True, exist_ok=True)
     ok, failed = 0, []
     for s in syms:
+        if (out / f"{s}.csv").exists():  # resume: skip files already written
+            ok += 1
+            continue
         try:
             df = psx_api.historical_full(s)
             if df.empty:

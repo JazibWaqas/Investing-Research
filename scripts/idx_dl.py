@@ -10,6 +10,8 @@ for u in [l.strip() for l in sys.stdin if l.strip()]:
     try:
         r=requests.get(u,headers={"User-Agent":UA},timeout=60)
         ok=r.content[:4]==b'%PDF'
+        if not ok and 'psx.com.pk/psx/themes' in u:  # fall back to Wayback copy
+            r=requests.get('https://web.archive.org/web/2id_/'+u,headers={"User-Agent":UA},timeout=90); ok=r.content[:4]==b'%PDF'; n+=' (wayback)'
         if ok: open(p,'wb').write(r.content)
         print(r.status_code,ok,n)
     except Exception as e: print('ERR',u,e)
