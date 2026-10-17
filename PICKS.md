@@ -82,7 +82,7 @@ Every month after: Rs37,500 core to the name furthest below target, Rs12,500 to 
 | ISL | steel | HRC up 10% from the Oct low and Q1 EPS up year on year | Rs75 | quality screen top 10; sector lagged 45 pts since May 2024 |
 | SAZEW | autos | Q1 FY27 EPS at or above Rs60 and no hike on 26 Oct | Rs1,450 | cheapest high-ROE name; margin squeeze |
 | HUBC | power | GEPCO bid disclosed with HUBC's equity share below Rs20bn | Rs170 | 10% yield ballast |
-| Any KMI name | any | a sponsor or substantial shareholder buys in the open market on two or more days within 30 days | market, max Rs12.5k | the ASL 2026 pattern; base rate being measured now; needs a card first |
+| Any KMI name | any | a sponsor or substantial shareholder buys in the open market on two or more days within 30 days | paper only | the ASL 2026 pattern; run 2 of tests/insider_cluster_buying.md found no cluster effect (37 clusters, median −0.4%); director buys out of sample are the only lead; insider sales are a soft negative |
 | Any KMI name | any | quarterly EPS above 10% of price and the stock within ±3% of the market 20 days after the result | market, max Rs12.5k | the PRL 2026 pattern; failed its placebo in the walk-forward; needs a card and a reason the market is wrong |
 
 ## Live calls already frozen (catalysts/frozen_predictions.csv)
