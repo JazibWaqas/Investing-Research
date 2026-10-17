@@ -344,7 +344,7 @@ def waterfill(pool, s, minimum):
     return {}
 
 class Run:
-    def __init__(s, name, basis, mode, sat=True, excl=False, cstop=False):
+    def __init__(s, name, basis, mode, sat=True, excl=False, cstop=None):
         s.name, s.basis, s.mode, s.sat, s.excl, s.cstop, s.block = name, basis, mode, sat, excl, cstop, {}
         s.T = TRI[basis]; s.pos = {}; s.log = []; s.ev = []; s.used = set()
         s.fees = np.zeros(K); s.nav_pre = np.zeros(K); s.buy_amt = np.zeros(K); s.sell_val = np.zeros(K); s.nhold = np.zeros(K); s.hold_rows = []
@@ -446,11 +446,12 @@ def step(R, strat, k, sigs):
         core_t = core_pick(chosen, per)
         if strat == "S4" and m["value_mode"]: core_t = core_t[:4]
         if quarter: core_review(set(chosen))
-        if R.cstop:   # POST-HOC variant E (audit): S2's 25% trailing stop applied to core names; a stopped name is not re-bought for 3 months
+        if R.cstop:   # POST-HOC variants E/F (audit): S2's satellite exits applied to core names; E = 25% trailing stop, F = next quarter EPS YoY below 0. A stopped name is not re-bought for 3 months
             for s, p in pos.items():
                 if p["sleeve"] == "core" and s not in sells:
                     path = T[p["ie"]:iF + 1, p["c"]]
-                    if (path / np.maximum.accumulate(path)).min() <= 0.75: sells[s] = "core_trail"; R.block[s] = k + 3
+                    hit = (path / np.maximum.accumulate(path)).min() <= 0.75 if R.cstop == "trail" else any(p["ie"] < i0 <= iF and ng for i0, ng in FILINGS.get(s, []))
+                    if hit: sells[s] = "core_" + R.cstop; R.block[s] = k + 3
             core_t = [(s, f) for s, f in core_t if k >= R.block.get(s, -1)]
         if R.sat and strat in ("S2", "S4"):
             for s, p in pos.items():
@@ -621,7 +622,7 @@ def placebo(tr, basis, n=1000, names=None, rg=None):
                 act_mean=act.mean(), pl_mean=R_.mean())
 
 # ================================================================ driver
-def run_all(basis, vmode, sat=True, excl=False, pool=None, cstop=False):
+def run_all(basis, vmode, sat=True, excl=False, pool=None, cstop=None):
     set_pool(pool)
     first = build_val(vmode)
     ew, cum, sigs = build_feat(basis)
@@ -792,7 +793,8 @@ def main():
     out("\n== 7. VARIANTS (POST-HOC, not headline). Final Rs / TWR CAGR / ratio to that variant's B0")
     for tag, basis, vm, sat, ex, cs in (("A. price-return basis (no cash dividends at all)", "PR", "frozen", True, False, False), ("B. value lag = later of announcement and FYE+3m (task wording)", "TR", "task", True, False, False),
                                     ("C. satellite switched off (S2 and S4 core only)", "TR", "frozen", False, False, False), ("D. a trimmed name gets no new money in the month it is trimmed", "TR", "frozen", True, True, False),
-                                    ("E. AUDIT: 25% trailing stop on core names (month-end check), stopped name blocked 3 months", "TR", "frozen", True, False, True)):
+                                    ("E. AUDIT: 25% trailing stop on core names (month-end check), stopped name blocked 3 months", "TR", "frozen", True, False, "trail"),
+                                    ("F. AUDIT: core name sold when a new quarterly filing shows EPS YoY below 0, blocked 3 months", "TR", "frozen", True, False, "eps")):
         rv = run_all(basis, vm, sat, ex, cstop=cs)
         out(f"-- {tag}; first value month {M[rv['_first']]['F']:%b %Y}")
         rows = []
@@ -802,7 +804,7 @@ def main():
         df_out(pd.DataFrame(rows))
         vv = {n: rv[n]["stats"]["nav"] for n in names}
         out(f"   verdicts: B1 {vv['B1'] / vv['B0']:.3f} ({'ok' if vv['B1'] >= vv['B0'] else 'abandon'}); S2 {vv['S2'] / vv['B0']:.3f} ({'ok' if vv['S2'] >= 1.05 * vv['B0'] else 'abandon'}); S3 {vv['S3'] / vv['B0']:.3f} ({'ok' if vv['S3'] >= 1.10 * vv['B0'] else 'abandon'}); S4 vs best(S2,S3) {vv['S4'] / max(vv['S2'], vv['S3']):.3f} ({'ok' if vv['S4'] >= max(vv['S2'], vv['S3']) else 'abandon'})")
-        if cs: out("   core_trail exits: " + "; ".join(f"{n} {int((rv[n]['trades'].reason == 'core_trail').sum())}" for n in ("S2", "S3", "S4")))
+        if cs: out(f"   core_{cs} exits: " + "; ".join(f"{n} {int((rv[n]['trades'].reason == 'core_' + cs).sum())}" for n in ("S2", "S3", "S4")))
     # audit: same-pool comparison
     out("\n== 8. AUDIT (Opus, 2026-10-17): SURVIVOR-SELECTED PICK POOL. sa_ratios and quarterly_eps names were chosen on 2026 liquidity; B0 holds all of U(t).")
     rows = []
@@ -828,6 +830,9 @@ def main():
         sat = rp[n]["trades"][rp[n]["trades"].sleeve == "sat"]
         pl = placebo(sat, "TR", names=EPSSET, rg=np.random.default_rng(SEED + 2))
         if pl: out(f"   {n} satellite in pool run: n {pl['n']}, actual median {pc(pl['actual'])}, placebo (quarterly_eps names) {pc(pl['placebo'])}, difference {pc(pl['diff'], 2)} -> {'fails' if pl['diff'] <= 0 else 'passes'}")
+    kmi = pd.read_csv(ROOT / "data/macro/kmiallshr.csv", parse_dates=["date"]).set_index("date").close.reindex(dates).ffill().values
+    kv = sum(DEP / kmi[ID[k]] for k in range(K)) * kmi[-1]
+    out(f"-- Investable Shariah bar: KMI All Share price index bought with each deposit, no costs, no dividends: Rs{kv:,.0f}. Frozen strategy / that: " + ", ".join(f"{n} {v[n] / kv:.2f}" for n in names[:5]))
     pd.concat([rp[n]["trades"] for n in ("B0", "B1", "S2", "S3", "S4")]).drop(columns=["ie", "ix", "k_entry"]).assign(sig=lambda x: x.sig.astype(str)).to_csv(ROOT / "tests/out/walkforward_trades_pool.csv", index=False)
     set_pool(None)
     # files

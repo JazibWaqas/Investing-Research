@@ -46,7 +46,7 @@ def parse(doc):
         td = tr.xpath("td")
         if len(td) < 6:
             continue
-        ids = re.findall(r"/download/document/(\d+)\.pdf", html.tostring(td[5]).decode())
+        ids = re.findall(r"/download/document/(\d+)\.pdf", html.tostring(td[5]).decode(), re.I)
         out.append(dict(
             datetime=pd.to_datetime(f"{td[0].text_content().strip()} {td[1].text_content().strip()}", format="%b %d, %Y %I:%M %p"),
             symbol=td[2].text_content().strip(), company=td[3].text_content().strip(),
