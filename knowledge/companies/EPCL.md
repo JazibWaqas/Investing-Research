@@ -72,3 +72,23 @@ Recommendation: do not buy at Rs31.77. For reference, 350 shares cost Rs11,120 (
 PSX documents (dps.psx.com.pk/download/document/ID.pdf, copies in data/raw/filings): 272303 (PAI, 10 Mar 2026, read from page images), 282317 (extension to 7 Dec, 7 Sep), 282058 (Rs38.6, 1 Sep), 270336 (Mitsubishi SPA, 17 Feb), 281225 and 281179 (H1 briefing and results, 17 and 18 Aug), 285750, 282128 and 284637 (Noventra). StockAnalysis EPCL statistics and balance sheet (17 Oct 2026). sa_ratios.csv and screener_20261016.csv. cc.gov.pk press release 749 (CCP cleared LDPL's purchase of Mitsubishi's stake; no clearance found for Noventra).
 
 **Unverified:** the offer price floor rules; tender intent of Nadeem Nisar and Seagreen; the tax rate on the remeasurement gain; settlement timing; a second extension; the Noventra rights issue; StockAnalysis EPS and BVPS gaps; the official KSE100 P/E. No broker notes were reachable.
+
+## Red team (17 Oct 2026)
+
+**UPHELD.** Avoid stands. The card's expected return of -0.1% is soft: reasonable inputs give about -1% to +4% (+3% to +8% if proceeds are credited with T-bill interest after settlement), and cash at 12.4% still beats every version.
+
+What held up:
+- **Share count and EPS basis.** 510.73m / 56.19% = 908.9m shares. The 318.2m tenderable pool and exact 50% acceptance math reconcile. The card uses consolidated figures, as lessons.md #1 requires.
+- **Dividends.** No payout since March 2024. Half-year cash flow in data/fundamentals/quarterly_eps.csv was -1.0bn (Q1-26) and -4.6bn (Q2-26), and net debt rose Rs10.5bn in six months. Rs0 is right.
+- **Governance and liquidity.** No suspension, non-compliance, auditor change, unusual-movement letter or pledge in 2026 announcements for EPCL (639 rows searched). The only unusual-movement letter is for the acquirer LOTCHEM (5 Jun 2026). Median traded value is Rs12.6m over 60 days (Rs19.9m over 120). Rs12k is trivial, though volume has faded to 120k to 380k shares a day and the 17.5% float left after the offer will be thin.
+- **Priced-in check.** The deal is not priced as a run-up. Adjusted 6-month return is -10.4% against a market median of -0.5% (26th percentile of 418 names). The stock hit 38.58 in Dec 2025 and 38.48 on 12 Feb, before the SPA was filed on 17 Feb, then faded to 31.77 even with the PAI out. The market doubts completion, and that is consistent with the card.
+
+Objections, strongest first:
+1. **Bear Rs23 is below every price in the last 12 months (low 27.30, Oct 2025) and p_bear 25% has no base rate behind it.** Nothing in tests/ covers deal outcomes. With the SPA signed and the PAI published, the PAO extension looks like routine regulatory delay. Setting bear to 27 at 20% and trimming the leftover to Rs24 at 55% base gives about Rs32.3 to 33.1, +2% to +4%. That is still below 5 months of T-bills (about 5%), so the call survives, but "-0.1%" is false precision. Quote it as roughly 0% (range -1% to +4%).
+2. **Normalised EPS of Rs1.0 to 1.5 is too generous.** Q1-26 PAT was Rs0.37bn and Q2-26 Rs1.26bn, so the Rs1.3bn gain sits almost entirely in Q2. Quarterly EPS ex-gain is roughly -0.24, -0.49, +0.31, +0.45, a trailing sum near zero. P/E on ex-gain earnings is far above the 21 to 32x stated, and book value of 24 earns about 0%. This supports the avoid, and it argues for a lower leftover price (Rs24 to 26) after the offer.
+3. **The frozen Q3 prediction (55% below Rs1.04) is under-confident.** Q2's 1.04 contains the one-off gain. A print below it needs only a normal quarter, so I would put it near 90%. The frozen row is append-only and stays. Do not treat a "hit" as skill.
+
+Other gaps, not strong enough to change the call:
+- Three insider-trade disclosures (7 Apr, 7 May, 16 Jul 2026) were not read. They may show whether Nadeem Nisar (10.03%) is selling or holding, which sets acceptance between 50% and 77%.
+- The expected-return calc mixes a 5-month deal payoff with a 12-month horizon. Tender proceeds earn nothing in the calc for the 7 months after settlement, which understates the stock by about 4 points (12.4% x 7/12 x 55% of value). Adding that moves the range to about +3% to +8%, still under 12.4% cash.
+- No broker or CCP-clearance evidence for Noventra, as the card already admits.

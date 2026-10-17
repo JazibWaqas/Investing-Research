@@ -4,11 +4,11 @@ Written 17 Oct 2026. Price Rs90.23 (16 Oct close). KMI All Share member (also KM
 
 ## The story
 
-SNGP distributes gas across Punjab, KP and Islamabad: 7.3m consumers, a network of 162,000 km, and about 1,025 mmcfd of local gas plus 800 to 1,000 mmcfd of RLNG (corporate briefing, Dec 2025, doc 266922). It does not earn a margin on gas. OGRA allows it a return on its net operating fixed assets. From that it deducts penalties for gas lost (UFG) above the benchmark, then finance cost and tax. Over seven years the allowed return was 17% four times, 21% twice and 26% once (The News, 14 Jan 2026). It tracks interest rates. The return fell from 26.22% in FY24 to 21.25% in FY25, and EPS fell with it, from Rs29.92 to Rs23.01.
+SNGP distributes gas to 7.3m consumers in Punjab, KP and Islamabad (doc 266922). It earns no margin on gas. OGRA allows a return on net operating fixed assets, less penalties for gas lost (UFG) above benchmark, then finance cost and tax. The return tracks rates: 17% four times, 21% twice and 26% once in seven years (The News, 14 Jan 2026). It fell from 26.22% in FY24 to 21.25% in FY25, and EPS fell from Rs29.92 to Rs23.01.
 
-The starting pitch was an event trade: OGRA's FY26 Final Revenue Requirement (FRR), which holds up the audit and the AGM (deadline 27 Nov). Plus a circular-debt plan. I could not confirm the claimed 10 to 40% price swing on the ruling, and the sector note does not contain it. History shows what the Q4 true-up does to earnings: Q4 EPS was Rs1.46 in FY22, 3.42 in FY23, 13.01 in FY24 and 7.03 in FY25. So FY26 EPS should land between about Rs17 and Rs29. That range is wide, but it is mostly a timing question, and the FRR does not change what the business is.
+The pitch was an event trade on OGRA's FY26 Final Revenue Requirement (FRR), which holds up the audit and the AGM, plus a circular-debt plan. I could not confirm the claimed 10 to 40% swing; the sector note does not contain it. The Q4 true-up has been Rs1.46 (FY22), 3.42, 13.01 and 7.03 (FY25), so FY26 EPS should land between about Rs17 and Rs29. That is timing, not a change in the business.
 
-What does change it is accounting. SNGP's books carry Rs904bn of regulatory deferral balances (gas-price shortfalls owed by the government through tariffs) and Rs425bn of trade receivables. Against that sits equity of Rs78.8bn, inside total liabilities of Rs1.66tn. SECP's IFRS 14 exemption expired in June 2024, and every review since has been qualified (doc 271513). In July 2026 the Cabinet Committee on SOEs deferred a renewed IFRS 9/IFRS 14 exemption (SNGP clarification, doc 279802, 10 Jul). In IMF talks the Fund suggested that amounts owed to the gas companies be booked as losses and the companies recapitalised afterwards (ARY, 21 Jul 2026). That is the real reason SNGP fell 25% after 30 June while the KSE100 fell 8%.
+Accounting is what could change it. The books carry Rs904bn of regulatory deferral balances (tariff shortfalls owed via the government) and Rs425bn of trade receivables, against equity of Rs78.8bn. The IFRS 14 exemption expired in June 2024 and every review since has been qualified (doc 271513). In July 2026 the Cabinet Committee on SOEs deferred a renewed IFRS 9/14 exemption (doc 279802). The IMF suggested that amounts owed to the gas companies be booked as losses and the companies recapitalised (ARY, 21 Jul 2026). Since 30 June SNGP is down 25%, the KSE100 8%.
 
 ## Why it is mispriced (or not)
 
@@ -23,49 +23,49 @@ What does change it is accounting. SNGP's books carry Rs904bn of regulatory defe
 | Net debt | Rs196bn (debt Rs209.8bn, cash Rs13.6bn), Rs309 a share | stockanalysis |
 | 52 weeks | high Rs134.57 (24 Oct 2025), low Rs88.07 (5 Oct 2026); -30% vs KSE100 +1% | price files |
 
-**Consolidated vs standalone.** SNGP's only subsidiary is a small one (Rs1bn capital, unverified), so standalone and consolidated EPS are effectively the same here.
+The only subsidiary is small (unverified), so standalone and consolidated EPS are effectively equal.
 
-**What is one-off.** The Q4 true-up is the swing item. Also, 9M FY26 held flat with FY25 only because the asset base grew. Policy rate is now 11.5%, against 20%+ in FY24. The FY27 tariff build already carries a Rs15bn UFG disallowance (Geo, 7 Jul 2026), and OGRA's KPMG rate-of-return review (consultation, Jan 2026) can only cut the return. **Normalised EPS: about Rs20** for FY27. That puts the stock at 4.5x normalised.
+**What is one-off.** The Q4 true-up. 9M FY26 held flat only because the asset base grew while rates fell (policy rate 11.5% vs 20%+ in FY24). The FY27 tariff carries a Rs15bn UFG disallowance (Geo, 7 Jul 2026), and OGRA's KPMG return review can only cut. **Normalised EPS about Rs20**, so 4.5x normalised.
 
-**Relative P/E.** SNGP P/E over the median of about 60 StockAnalysis-covered PSX names at each fiscal year end: FY22 0.34x, FY23 0.51x, FY24 0.36x, FY25 0.46x, an average of 0.42x. Today: 3.93 over the KSE100 constituent median of 8.43 (screener, 16 Oct) is 0.47x. That is at the top of its own range, not the bottom. (The market median is a proxy, not the official index P/E.)
+**Relative P/E** (SNGP vs median of about 60 covered PSX names at fiscal year end): FY22 0.34x, FY23 0.51x, FY24 0.36x, FY25 0.46x, average 0.42x. Today 3.93 against the KSE100 constituent median of 8.43 is 0.47x: the top of its range, not the bottom (proxy, not the official index P/E).
 
-**P/B vs ROE.** On paper, ROE of 17 to 19% with a cost of equity near 17% justifies about 1x book. In cash, shareholders get little. The payout ratio was 13% in FY25 (Rs3 on Rs23.01) and 25 to 40% in FY21 to FY24 (doc 266922). The earnings mostly accrue as receivables. In FY22 to FY24 the stock sat at 0.55 to 0.63x book. Its spell at 1.05x, in FY25, came with the SSGC rerating. 0.73x is mid-range.
+**P/B vs ROE.** ROE of 17 to 19% at a cost of equity near 17% justifies about 1x book on paper. But payout was 13% in FY25 (Rs3 on Rs23.01) and 25 to 40% before; earnings accrue as receivables. The stock sat at 0.55 to 0.63x book in FY22 to FY24 and at 1.05x only during the FY25 rerating. 0.73x is mid-range.
 
-Conclusion: SNGP is not mispriced. It is cheap on earnings because a large part of the earnings is never paid in cash, and because the equity is a thin slice under a Rs1.3tn government receivable.
+Not mispriced. It is cheap on earnings because most of them are never paid in cash and the equity is a thin slice under a Rs1.3tn government receivable.
 
 ## What is coming and when
 
 | Date | Event | Read |
 |---|---|---|
-| 26 Oct | SBP MPC (11.5%; survey leans +50bp) | A hike raises the allowed return later but costs finance expense now |
-| ~30 Oct | Q1 FY27 accounts due. Extension applied for 9 Oct (doc 285365) | A further delay is the warning signal |
-| Late Oct to early Nov (inferred) | OGRA FY26 FRR. Petition filed 14 Aug (doc 283618) | Q4 between Rs1.5 and Rs13 |
-| By 27 Nov | FY26 accounts, final dividend, AGM (SECP extension, doc 284944) | Watch the audit opinion on IFRS 9/14 and receivables |
-| Unscheduled | CCoSOE decision on the IFRS exemption; IMF stance on the Rs1.49tn gas circular-debt plan; outcome of the KPMG return review | The thesis turns on these, not the FRR |
-| ~late Feb, ~late Apr 2027 | H1 and 9M FY27 results (last year 27 Feb, 29 Apr) | No interim dividends in FY25 or FY26 |
-| ~late Jun 2027 | OGRA FY28 tariff (ERR) decision (last one 23 Jun 2026) | Shows the allowed return under the new regime |
+| 26 Oct | SBP MPC (11.5%; survey leans +50bp) | Raises allowed return later, finance cost now |
+| ~30 Oct | Q1 FY27 accounts due; extension sought 9 Oct (doc 285365) | Further delay is a warning |
+| Late Oct to early Nov (inferred) | OGRA FY26 FRR; petition 14 Aug (doc 283618) | Q4 EPS Rs1.5 to 13 |
+| By 27 Nov | FY26 accounts, dividend, AGM (doc 284944) | Read the audit opinion |
+| Unscheduled | CCoSOE on the IFRS exemption; IMF on the Rs1.49tn gas debt plan; KPMG return review | The thesis turns on these |
+| ~late Feb, ~late Apr 2027 | H1 and 9M FY27 (last year 27 Feb, 29 Apr) | No interims in FY25 or FY26 |
+| ~late Jun 2027 | OGRA FY28 ERR (last 23 Jun 2026) | Allowed return under any new regime |
 
-**Dividends.** SNGP pays one final dividend a year and no interims, so there are no four ex-months to list. Last year: Rs3, ex 19 Nov 2025 (book closure 21 to 27 Nov). The FY24 final of Rs7.5 went ex on 13 May 2025, a year late, because the accounts were late. Expected next: **about Rs3, ex mid-November to December 2026, Rs2.55 net** of 15% withholding. If OGRA slips again, the ex-date slips with it. The FY27 final would fall around November 2027, outside the 12-month window.
+**Dividends.** One final a year, no interims, so there are no four ex-months to list. Last year Rs3, ex 19 Nov 2025; the FY24 final of Rs7.5 went ex 13 May 2025 because accounts were a year late. Expected: **about Rs3, ex mid-November to December 2026, Rs2.55 net** of 15% withholding, slipping if OGRA slips. The FY27 final (~Nov 2027) falls outside the window.
 
 ## How much it can move (12 months, ex-dividend)
 
-- **Bear Rs60, probability 30%.** An IMF-linked or audit-driven write-down of part of the receivables or regulatory balances, or ECL under IFRS 9. Or a cut to the allowed return plus a heavy UFG disallowance, with the dividend skipped. Method: 3x EPS of Rs20, about 0.5x a book that has been cut. This is near the 2024 base of about Rs63, before the SSGC-led rerating.
-- **Base Rs90, probability 50%.** The FRR lands in range, FY26 EPS is Rs21 to 23, Rs3 is paid, and the exemption issue keeps getting deferred, as it has since 2024. Method: 0.65x forward book of about Rs140 (June 2027), cross-checked at 4.5x normalised EPS of Rs20.
-- **Bull Rs135, probability 20%.** The exemption is granted, or a circular-debt settlement is agreed without write-downs (LPS waiver, levy funding). Cash comes in, payout rises, and the stock rerates to its October 2025 high. Method: 1.0x book of about Rs135, or 6.5x EPS of Rs21 (relative P/E 0.77, the FY25 multiple). A TradingView target of Rs145.40 is single-source and undated (unverified).
+- **Bear Rs60, 30%.** A write-down of receivables or regulatory balances (IMF or auditor driven, or IFRS 9 ECL), or a cut in the allowed return plus heavy UFG disallowance; dividend skipped. Method: 3x EPS of Rs20, about 0.5x a reduced book; near the 2024 base of Rs63.
+- **Base Rs90, 50%.** FRR in range, FY26 EPS Rs21 to 23, Rs3 paid, exemption deferred again as since 2024. Method: 0.65x June 2027 book of about Rs140, cross-checked at 4.5x normalised EPS.
+- **Bull Rs135, 20%.** Exemption granted or a settlement with no write-down (LPS waiver, levy funding); payout rises. Method: 1.0x book of Rs135, or 6.5x EPS of Rs21 (relative 0.77, the FY25 multiple); equals the Oct 2025 high. A TradingView target of Rs145.40 is undated and single-source (unverified).
 
-Weighted value is Rs90.0. With Rs2.55 net dividend, **expected 12-month return is +2.6%**, below the 6-month T-bill (12.4% gross), with a 30% chance of a one-third loss.
+Weighted value Rs90.0; with Rs2.55 net dividend, **expected return +2.6%**, below the T-bill, with a 30% chance of losing a third.
 
 ## What kills it
 
-1. The IMF, Finance Division or SECP requires the gas companies to write down receivables or regulatory balances, or refuses the IFRS 9/14 exemption outright. Trigger: CCoSOE minutes, the IMF staff report, or an SNGP material-information filing.
-2. An adverse or disclaimer audit opinion on FY26, not just the usual presentation qualification. Trigger: the auditor's paragraph in the results filing.
-3. A second AGM extension past 27 Nov, or Q1 FY27 not filed by early December. In 2020 and 2024, delays like these preceded falls of 36 to 56% at SNGP and SSGC.
-4. OGRA adopts a lower or fixed rate of return out of the KPMG review. Trigger: an OGRA determination below 17%.
-5. Trade receivables above Rs450bn, or debt above Rs230bn, in the next quarterly balance sheet.
+1. A write-down instruction, or outright refusal of the IFRS 9/14 exemption. Trigger: CCoSOE minutes, IMF staff report, SNGP material-information filing.
+2. An adverse or disclaimer opinion on FY26, beyond the usual presentation qualification (auditor's paragraph in the results filing).
+3. A second AGM extension past 27 Nov, or Q1 FY27 unfiled by early December. Such delays preceded 36 to 56% falls at SNGP and SSGC in 2020 and 2025.
+4. An OGRA return below 17% or a fixed-return regime from the KPMG review.
+5. Trade receivables above Rs450bn or debt above Rs230bn in the next balance sheet.
 
 ## Position plan (Rs10,000 to Rs12,500)
 
-Not now. If a client insists: 120 shares at Rs90.23 cost Rs10,828 (commission ignored).
+Not now. If insisted: 120 shares at Rs90.23 = Rs10,828.
 
 | Scenario | Value of 120 shares | Net dividend | Total | P&L |
 |---|---|---|---|---|
@@ -74,12 +74,32 @@ Not now. If a client insists: 120 shares at Rs90.23 cost Rs10,828 (commission ig
 | Bull Rs135 | Rs16,200 | Rs306 | Rs16,506 | +Rs5,678 (+52%) |
 | Weighted | | | Rs11,106 | +Rs278 (+2.6%) |
 
-**Buy:** a formal IFRS exemption, or an IMF-agreed settlement with no write-down, while the price is under Rs105. Or the price at Rs65 or below (about 0.5x book, 3.2x EPS) once FY26 accounts carry a clean opinion on receivables. **Cut:** any official write-down instruction, or a close below Rs80 (under the 52-week low and about 0.64x book).
+**Buy:** a formal exemption or no-write-down settlement with the price under Rs105, or Rs65 or below (0.5x book) once FY26 accounts are clean on receivables. **Cut:** any write-down instruction, or a close below Rs80 (under the 52-week low).
 
 ## Evidence
 
-- PSX filings, saved in data/raw/filings/SNGP/: H1 FY26 results with the IFRS 14 qualification (RDA Rs903.9bn, EPS 11.30), doc 271513 (27 Feb 2026); FRR-linked AGM extension request 283618 (28 Sep 2026); SECP extension to 27 Nov, 284944 (6 Oct); Q1 FY27 accounts extension 285365 (9 Oct, title only, scanned); IFRS exemption clarification 279802 (10 Jul 2026); LHC CEA tax clarification 274913 (22 Apr 2026); corporate briefing 266922 (8 Dec 2025: FY25 PAT Rs14.59bn, EPS 23.01, return 21.25% vs 26.22%, payout history). Q3 FY26 (275732) and FY25 (264847) are scanned and were not read.
-- stockanalysis.com statistics, ratios and balance sheet (fetched 17 Oct 2026). seed/data/fundamentals/sa_ratios.csv and screener_20261016.csv for relative P/E.
-- payouts_raw.csv and corporate_actions.csv: Rs3 ex 19 Nov 2025; Rs7.5 ex 13 May 2025.
-- News: The News 1392816 (14 Jan 2026, return history); Profit 9 Jan 2026 (KPMG return review); Geo 671871 (7 Jul 2026, FY27 prescribed price Rs1,719, Rs15bn UFG disallowance); ARY (21 Jul 2026, IMF view on receivables); The News 1395498 (27 Jan 2026, circular-debt plan); Mettis (9M FY26 PAT).
-- **Unverified:** the date of the FRR ruling and the claimed 10 to 40% price swing; the FY26 allowed return percentage; the size of any IFRS 9 ECL hit; the status of the SECP IFRS 9 exemption for government receivables; the FY26 dividend amount; the subsidiary's size; the TradingView target; whether the IMF has accepted the gas plan since August.
+- PSX filings in data/raw/filings/SNGP/: 271513 (27 Feb 2026, H1 FY26, IFRS 14 qualification, RDA Rs903.9bn); 283618 (28 Sep, extension tied to FRR); 284944 (6 Oct, SECP extension to 27 Nov); 285365 (9 Oct, Q1 extension, scanned); 279802 (10 Jul, IFRS exemption deferred); 266922 (Dec 2025 briefing: FY25 EPS 23.01, return 21.25%, payouts). Scanned 275732 and 264847 not read.
+- stockanalysis.com statistics, ratios, balance sheet (17 Oct 2026); sa_ratios.csv and screener_20261016.csv; payouts_raw.csv and corporate_actions.csv.
+- News: The News 1392816 (14 Jan 2026); Profit (9 Jan 2026, KPMG review); Geo 671871 (7 Jul 2026); ARY (21 Jul 2026, IMF on receivables); The News 1395498 (27 Jan 2026, debt plan); Mettis (9M FY26 PAT).
+- **Unverified:** FRR date and the 10 to 40% swing claim; FY26 allowed return; size of any IFRS 9 hit; SECP IFRS 9 exemption status; FY26 dividend; subsidiary size; TradingView target; IMF stance since August.
+
+## Red team (17 Oct 2026)
+
+Checked against prices_raw/SNGP.csv, panel_close_adj.parquet, announcements.parquet (736 SNGP rows, 91 since Oct 2025), filing 274913 and the tests/ folder.
+
+**Verdict: UPHELD (avoid). Expected return corrected from +2.6% to about +1.7%, and it is fragile.**
+
+**What holds**
+- Share count and EPS basis: 634.22m shares x Rs90.23 = Rs57.2bn, and Rs124.37 x 634.22m = Rs78.9bn matches reported equity. TTM EPS 22.95 reconciles to 9M PAT Rs10.10bn. The subsidiary is still unverified, but it cannot move 3.9x enough to change the call.
+- Liquidity: median daily traded value since 16 Jul is Rs131m (Rs188m over six months). Rs12k is trivial. No suspension, unusual-movement or non-compliance letter for SNGP in 2026.
+- Governance: the only flags are three director changes (11 Feb, 2 Mar, 25 Aug), a postponed director election (20 Aug, doc 281426) and AGM extensions. The 22 Apr material information (doc 274913) is benign: a Lahore High Court win on a CEA tax disallowance with no new liability. No auditor change, no pledge disclosures found.
+- Dividend capacity: Rs3 x 634m is about Rs1.9bn against about Rs14.6bn FY25 profit. Payout is not the constraint, though cash backing is weak (net debt Rs196bn).
+
+**Three strongest objections**
+1. **Much of the bad news is already in the price, so the bear leg is not clean.** SNGP is -25% since 30 Jun (10th percentile of 456 names; market median -9.5%), -14% over six months (21st percentile), and 2.4% above its 52-week low of Rs88.07. SSGC is -29%. The IMF remark (21 Jul) came after a Rs110 spike on 16 Jul and the stock has bled from there. A card that says "the IMF risk is the story" should say the market has already charged about a quarter for it. Against that, Rs60 is only 0.48x book; if a write-down were real, 6% of the Rs1.33tn of balances erases all Rs79bn of equity, so the true bear tail is below Rs60 (recapitalisation, dilution). The card's bear is both too probable (30% for a write-down inside 12 months, when the exemption has been deferred since 2024) and too shallow. The two errors roughly offset, which is why the expected return looks stable but is not trustworthy.
+2. **The probabilities are not honest to the second decimal, and the base rate does not support a median of flat.** Moving 10 points of probability from bear to base lifts the expected return to about +6%; moving 10 points from base to bear takes it to about -2%. A +2.6% estimate is indistinguishable from zero. Also: the dividend is counted in the bear case in the table (Rs306) though the text says it may be skipped. Dropping it there gives 90.0 + 0.7 x 2.55 = 91.8, a +1.7% return. tests/seed_audit.md shows random PSX entries have a negative median (20d -1.5%, 60d -2.9%, win 43%) because of skew, so a three-point distribution centred on Rs90 is generous on the median. No test covers 12-month horizons or results drift for gas utilities, so the card has no empirical base for its 20% bull (+50%, a return to the Oct 2025 high). Lessons 7 and 15 apply.
+3. **The "delay is a warning" kills are the base case.** Last year: AGM extension 3 Oct, Q1 extension 21 and 23 Oct, FY25 results 3 Nov, AGM 27 Nov, Q1 filed 28 Nov, dividend credited 9 Dec. This year follows the same sequence (extensions on 28 Sep, 7 Oct, 9 Oct). Kill 3 ("Q1 unfiled by early December") is one week looser than last year's actual filing date, and the "Further delay is a warning" read for Q1 on ~30 Oct is noise. Only a second AGM extension past 27 Nov is a real signal. The FRR window (6 to 27 Nov) is inferred, so the pitch is a timing bet on an unscheduled regulator.
+
+**Other notes.** Relative P/E 0.47x is in the top third of its 0.34-0.51x range, so "no cheaper than usual" stands. The Rs80 stop is 11% below the price and only 9% below the 52-week low, so a single bad print can trigger it. Stock-level momentum has no edge over placebo (tests/seed_audit.md), so the 30% drawdown cannot be read as either continuation or reversal.
+
+**UPHELD.** Avoid stands; expected return about +1.7% (range -2% to +6% on plausible probability shifts), with a fatter and unpriced left tail than the Rs60 bear shows.

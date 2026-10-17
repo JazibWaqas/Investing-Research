@@ -84,3 +84,27 @@ Not now. If a client insists: 30 shares at Rs368.04 cost Rs11,041 (commission ig
 - knowledge/sectors/omc.md and refineries.md (17 Oct 2026).
 - Margin link to digitisation: [Tribune, 21 Aug 2026](https://tribune.com.pk/story/2624991/omcs-seek-swift-margin-revision?amp=1), [ProPakistani, 20 Aug 2026](https://propakistani.pk/2026/08/20/oil-marketing-companies-seek-margin-increase-after-3-year-freeze/), [BOL](https://www.bolnews.com/?p=1181291). Windfall claim: [Business Recorder](https://www.brecorder.com/news/amp/40410864).
 - **Unverified:** PSO's PRL stake (63.6%); Q1FY27 board date; any margin notification after August; broker targets; the Q1FY26 EPS of Rs20 (taken from the sector note); the official KSE100 P/E.
+
+## Red team (17 Oct 2026)
+
+Checked against data/prices_raw, data/announcements.parquet, data/fundamentals/quarterly_eps.csv, data/macro and tests/. Verdict on the "watch" call is unchanged. The card survives on arithmetic; its weak points are the PRL treatment and the return net of costs.
+
+**What holds.**
+- Share count and EPS basis: 469.47m shares. PRL has 630m shares (quarterly_eps.csv); 63.6% x 630m x Rs25.05 = Rs10.0bn, or Rs21.4 a PSO share. That reconciles the Rs22 consolidated-minus-standalone gap, so the PRL stake is consistent with the filing.
+- Quarter arithmetic: 20 + 11.4 + 52.6 - 29.6 = 54.4, matches Rs54.29. Weighted value Rs376.5 and the +4.6% are arithmetically right.
+- Already priced? No. PSO is -0.3% over 6 months (16 Apr to 16 Oct), KMI All Share -1.1%, while refiners ran: ATRL +40%, NRL +89%, PRL +205%. Over 12 months PSO is -22% against the index at -1%. The margin notification is not in the price.
+- Liquidity: 60-day median traded value Rs582m a day (250-day Rs941m). Rs12k is 33 shares. No suspension, unusual-movement letter or non-compliance notice for PSO in 2026 (23 announcements). PRL did get an unusual-movement letter on 30 Jul.
+- Dividend: Rs10 x 469m = Rs4.7bn, 18% of consolidated and 31% of standalone EPS. Affordable on earnings. Operating cash flow was not checked (unverified).
+
+**Strongest objections.**
+1. **PRL is treated as a fading earnings line but is also an asset the market values.** PSO's stake at PRL's Rs106.95 is about Rs43bn, Rs91 a PSO share, 25% of the market cap. Topline expects PRL Rs8 to 10bn for Q1FY27 alone, so the Q1 consolidated print will likely show EPS far above Rs50 and trailing P/E under 5x. The card's "normal PRL Rs10 to 12" is a mean-reversion assumption with no dated evidence. Against that, PRL pays no dividend and a rights issue is pending (Topline assumes 80%). The kill line "more than Rs10bn from PSO" is not unlikely: PSO's pro-rata share is about 320m shares, so it is breached at any issue price above about Rs31. The base case ignores this.
+2. **The tails are too narrow and the bull is probably too light.** PSO's own 250-day returns since 2018 (n=1,927 overlapping, so about 8 independent years) have std 53%, median -6%, 10th percentile -35%, 90th +105%. A fall beyond -27% happened in 22% of windows and a gain beyond +36% in 29%. Since 2022 the numbers are 15% and 45%, but that is the 2022 to 2025 rerating (lesson 9). The 25/55/20 split is not dishonest, but a range of Rs270 to 500 around a stock that went 161 to 445 in three months understates variance. Moving 5 points from base to bull lifts expected return to about +6%. Still below the T-bill, so the call does not change.
+3. **The expected return is gross.** Placebo base rates (tests/out/size_liquidity.txt: name-month median -1.1%, win rate 45%; lessons 15) say the median PSX stock gives little, and the card's +4.6% is before costs. With 0.5% round-trip commission (the repo's cost assumption) and 15% CGT on the price gain (my assumption, filer rate), a cum-dividend buyer nets about +3.8% (Rs13.85 on Rs368.04). An ex-date buyer at Rs358 nets about +3.9%, so the dividend is not a reason to buy by 19 Oct: price drops Rs10, dividend pays Rs8.50 after withholding.
+
+**Smaller points.**
+- Governance: CEO churn in 2026 (interim CEO 30 Mar, new CEO 13 Apr, effective date changed 27 Apr), board resignations on 15 Jun and 3 Sep, a member change on 9 Jan. No auditor change or pledge notice. CEO churn is not in the kill list; add it.
+- Brent from 30 Jun ($70.5) to 30 Sep ($115.9) is +64%, but daily pricing began 21 Jul at $93.85, so the gain under daily pricing is closer to +23%. The Q1 "large inventory gain" is likely smaller than the card implies, though PRL partly offsets.
+- The cause of PSO's 26% fall before the war (to 25 Feb) is still not identified (omc.md). Until it is, "why is the market wrong" is unanswered.
+- The 20 Oct ex-date is inferred from other stocks, not from a PSO notice. Confirm with the broker before relying on a 19 Oct purchase.
+
+**Final: WEAKENED, expected 12-month return +3.8% net of commission and CGT (+4.6% gross); verdict watch stands.**

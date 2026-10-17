@@ -69,3 +69,31 @@ doc_id,symbol,type,value,book_start,ex_date,sub_price,note
 096092,HINOON,bonus,0.12,,,,12 per 100 announced 16 Mar 2017
 224587,SNBL,cash,3.0,2024-03-01,,,30% cash dividend; closure 1-8 Mar 2024
 163908,SPWL,cash,2.5,2021-04-19,,,final FY20 Rs2.50 (25%); closure 19-26 Apr 2021
+118317,BERG,cash,1.25,,,,final FY18 Rs1.25 (12.5%) announced 24 Sep 2018
+118317,BERG,bonus,0.125,,,,12.5% bonus (1.25 per 10) announced 24 Sep 2018
+133248,CHCC,cash,1.0,2019-10-10,,,final FY19 Re1 (10%); closure from 10 Oct 2019
+133248,CHCC,bonus,0.1,2019-10-10,,,10 per 100; closure from 10 Oct 2019
+190158,COLG,cash,28.0,,,,final FY22 Rs28 (280%) announced 29 Jul 2022
+190158,COLG,bonus,0.15,,,,3 per 20 (15%) announced 29 Jul 2022
+169792,COLG,cash,24.0,,,,final FY21 Rs24 (240%) announced 28 Jul 2021; bonus ratio cut off
+134774,ECOP,cash,0.5,,,,final FY19 Rs0.50 (5%) announced 21 Sep 2019
+258570,FCL,cash,0.5,,,,final FY25 Rs0.50 (5%) announced 29 Aug 2025
+258570,FCL,bonus,0.025,,,,25 per 1000 (2.5%) announced 29 Aug 2025
+103726,GGL,bonus,0.06,2017-10-25,,,6 per 100; closure 25-31 Oct 2017
+117471,GGL,bonus,0.05,2018-10-19,,,5 per 100; closure from 19 Oct 2018
+171558,GGL,bonus,0.15,,,,15% final bonus FY21 (interim 10% already) announced 9 Sep 2021
+259509,IPAK,cash,0.6,,,,final FY25 Rs0.60 (6%) announced 18 Sep 2025
+259509,IPAK,bonus,0.05,,,,5 per 100 announced 18 Sep 2025
+118241,JVDC,cash,0.7,,,,final FY18 Rs0.70 (7%) announced 24 Sep 2018; bonus not visible
+135617,JVDC,bonus,0.1,2019-10-20,,,10 per 100; register date 19 Oct 2019 close
+117364,MARI,cash,2.5,,,,final FY18 Rs2.50 (25%) announced 30 Aug 2018
+133010,MARI,cash,2.0,,,,final FY19 Rs2.00 (20%) announced 30 Jul 2019
+117276,MEBL,cash,1.5,,,,interim H1 2018 Rs1.50 (15%) announced 29 Aug 2018
+117276,MEBL,bonus,0.1,,,,1 per 10 announced 29 Aug 2018
+152832,SAZEW,bonus,0.3,,,,30 per 100 announced 24 Sep 2020
+149303,SRVI,cash,7.5,,,,final FY19 Rs7.50 (75%) announced 25 Jun 2020
+149303,SRVI,bonus,0.25,,,,25 per 100 announced 25 Jun 2020
+173822,TELE,bonus,0.05,,,,5% announced 7 Oct 2021
+194356,TELE,bonus,0.075,,,,7.5% announced 7 Oct 2022 AGM 28 Oct 2022
+172971,TOMCL,bonus,0.1,2021-10-21,,,10% bonus; closure 21-26 Oct 2021
+193182,TOMCL,bonus,0.0975,2022-10-21,,,9.75% bonus; closure 21-28 Oct 2022

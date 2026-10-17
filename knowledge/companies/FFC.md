@@ -100,3 +100,23 @@ At Rs537.87 the budget buys 19 to 23 shares. Shown for 21 shares (Rs11,295), inc
 - Q3 offtake and the standalone EPS estimate: brecorder.com/news/40443536 (Oct 2026). Read via search snippet only, page returned 403.
 - PIA terms: thestandard.com.pk, ground.news (Jun-Aug 2026). Relative P/E: seed/data/fundamentals/sa_ratios.csv, screener_20261016.csv.
 - **Unverified:** the Q3 board date; Q3 consensus EPS; the size of the Q4'25 impairment; the date of the PIA second payment; the current Mari feed-gas price and any 2026 uniformity decision; the gas sensitivity per Rs100/mmbtu (my estimate); the dividend amounts beyond last year's pattern.
+
+## Red team (17 Oct 2026)
+
+**WEAKENED: corrected expected 12-month return about +3% (was +5.1%). Verdict WATCH stands, and the Rs485 entry is still sensible.**
+
+Checks that held up:
+
+- Share count and EPS basis. 1,439m shares matches data/fundamentals/quarterly_eps.csv (Q1 and Q2 2026 net income / 1,439 = 13.62 and 15.43). The jump from 1,423m is the FPCL share issue. Consolidated is the right basis (lesson 1). One caveat: Rs7.4bn of H1 profit (about Rs5/share) is Askari Bank's equity-accounted share, which is not cash to FFC beyond Askari's dividend. On standalone EPS (Rs53.7) the stock is on 10.0x, not 8.8x.
+- Liquidity. Median traded value over the last 60 sessions is about Rs317m a day, so Rs12k is trivial. No suspension, unusual-movement or non-compliance notice for FFC in announcements.parquet in 2026 (53 notices).
+- Governance. Nothing adverse. Seen: independent director appointed 19 Jan, company secretary changed 9 Sep, a director changed 16 Oct (doc 285815, reason not read), auditors' certificate 29 Jan, and 17 director/executive interest disclosures (direction not parsed). No auditor change and no pledge notice found.
+- Dividends can be paid. About Rs59bn of dividends at Rs41 against about Rs116bn of trailing consolidated operating cash flow and Rs186bn of short-term investments. A cut is a choice, not a necessity, though Rs30.6bn for PIA, Rs22bn of PEF capex and a possible Rs85bn GIDC call all draw on the same pile.
+- The catalyst is not priced. FFC is +3.9% since 16 Apr (adjusted), at the 59th percentile of the 6-month cross-section (median -0.5%). EFERT is -7%, FATIMA -2.7%. No run-up to fade.
+
+Strongest objections:
+
+1. **The base case EPS is above anything the evidence supports.** Base uses Rs63 against TTM Rs61.4, in a year that starts with offtake -9% y/y, a Q3 consolidated estimate of Rs15-17 against Rs17.24 a year ago, and a new PIA loss line. TTM falls to about Rs59-60 when Q3 rolls in. Rs60 x 8.5 = Rs510 as the base, not Rs535. The card cites the headwinds in the text but does not put them in the number. Re-weighting 25/50/25 on 405/510/646 gives Rs518; plus Rs34.85 of dividends is **+2.8%**. One turn of P/E is Rs60 of value, so the +5% to +3% change is well inside noise, but the sign of the revision is clear.
+2. **The "re-rating from 0.48x to 1.0x" is partly a universe change.** The 2021-2025 relatives divide FFC by the median of about 20 December-year-end names (13.4x at end 2025); the "now" figure divides by the KSE-100 screener median (8.43x). Against the same Dec-YE yardstick FFC fell from 10.1x to 8.8x in 2026 while the market median was moving from 13.4x to 8.4x. The jump from 0.76 to 1.03 is not like for like, and the 0.48 five-year median is dragged by 2021-23 (lesson 2). The card's valuation story rests on this ratio; treat it as unverified.
+3. **The dividend trend and the probabilities are too tidy.** Declared dividends fell from Rs21 (final FY24, Jan 2025) and Rs12 (H1 2025) to Rs8.50 final FY25, while H1 2026 was Rs14.50, so the "Rs41 repeated" figure is lumpy and the H1 interim carries 35% of it. A cut to Rs36 gross removes about Rs4 net (another -0.8%). The 25/50/25 split is symmetric by construction: FFC's 12-month forward price return since 2016 has p10 of -4%, median +15% and worst -29% (n=2,230 overlapping days, mostly the 2022-25 re-rating, lesson 9), and 2026 realised volatility is 34% annualised. The Rs405 bear (-25%) at 25% is heavy against history; the bull is not. Rs646 (+20%) needs both EPS and multiple to expand. Round probabilities carry no base-rate evidence; the repo has no results-drift test, so none of this was tested against FFC's own post-result moves.
+
+Not tested: FFC's own reaction to the last eight results, since none of the Phase 2a tests covers earnings drift (PLAN item 2c). Unverified claims in the card (Q3 date, impairment size, PIA timing, gas sensitivity) remain unverified.

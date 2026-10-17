@@ -83,3 +83,23 @@ I would not buy at Rs1,530. For reference, 8 shares cost Rs12,243. Including Rs4
 - StockAnalysis (16 Oct). ProPakistani, 27 Aug (AHL review). PakWheels, 7 Jul (25% GST). Daily Pakistan, 14 Sep (18% rate). Profit, 12 Oct (policy status).
 - Relative P/E from seed/data/fundamentals/sa_ratios.csv.
 - **Unverified:** whether Sazgar raised Haval prices or absorbed the tax; the Tank 500's tax rate; the Q1 board date; how much of the paint shop was spent in FY26; competitor pricing; my FY27 EPS and dividend estimates. I found no broker forecast for FY27.
+
+## Red team (17 Oct 2026)
+
+Checked against data/prices_raw/SAZEW.csv, data/announcements.parquet, data/fundamentals/quarterly_eps.csv, data/panel_close_adj.parquet, tests/ and autos.md.
+
+**Held up.**
+- Share count and EPS basis are right. Q4 profit Rs8,726m / EPS 144.36 = 60.44m shares. Quarterly EPS sums to Rs390.5. No subsidiaries, so standalone is consolidated.
+- Liquidity is fine. Median traded value is Rs190m a day over 60 sessions and Rs277m over 250. Rs12k is nothing.
+- Governance: no suspension, unusual-movement, non-compliance, auditor, show-cause or pledge title in the 38 SAZEW announcements of 2026 (title search only; the PDFs are scans and I did not read them). Directors were elected at the 17 Mar EOGM, routine on its face.
+- Dividends are not at risk from cash flow in the next year. Rs70 a share is about Rs4.2bn against Rs9.6bn operating cash flow, and the Rs12 interim costs Rs0.7bn against Rs14bn cash. The risk is later, from capex (below).
+
+**Where the case breaks.**
+1. **The base EPS of Rs263 sits above the card's own run rate.** It needs 16,000 four-wheelers, or 1,333 a month. Q1 FY27 was 3,137 (1,046 a month, July distorted), and August-September ran at 1,237 a month. The card's own "bear" trigger is 1,200 and its "recovery" line is 1,600. Re-running the card's model at 14,850 units (the Aug-Sep pace), 21% gross margin and Rs10bn opex gives EPS of about Rs235, and the card's own Q1 range (Rs45-70) annualises to Rs180-280. Base value at 5.5x becomes about Rs1,300, not Rs1,450.
+2. **The probabilities are not anchored and the sign is fragile.** No test in tests/ covers results drift or single-stock rebounds at 52-week lows, so 30/50/20 is judgement. Swap bear and bull (20/50/30) and the expected return becomes +3%. The bull case also needs the hybrid concession restored, while the draft policy the PM approved (14 Sep) says hybrid parity with petrol cars, and SRO 1525 already set 18%. I would put bull nearer 10% than 20%. Still, even at 20/40/40 the return is about 5%, below the 12.5% T-bill, so Avoid survives any plausible reweighting.
+3. **Part of the bad news is priced.** SAZEW is -28% since 16 Apr and -27% since 1 Jul, against HCAR -16%, INDU -12%, MTL -1%, GHNI +5% over the same window (adjusted panel). The 5.8x normalised multiple is above the stock's own four-year relative median (0.64x) only on a base EPS that is probably too high. This makes a 12-month bear of Rs900 less likely than 30%, but not the base.
+4. **Smaller points.** (a) FY26 cash conversion was 41% (operating cash flow Rs9.6bn on profit Rs23.6bn; Q2 -Rs6.9bn, Q4 -Rs17.0bn) and stock in trade tripled to Rs42bn while units fall: a write-down or discounting risk the card does not size. (b) Commitments of about Rs28bn (paint shop, land) against Rs8.7bn net cash make net debt by mid-FY27 likely, so the Rs12 interim is safe but the later ones are not. (c) The card treats PKR weakness as the kill risk, yet PKR is a tailwind: usdpkr.csv ends at 277.4 (30 Sep) and autos.md says 268.3 on 12 Oct, against 281 a year earlier. The two files disagree; one needs fixing. Autos on PKR is a supported cell in tests/commodity_pkr_sensitivity.md (-1.70 pts per +5%). (d) Sector momentum (tests/sector_momentum_regime.md) is "works, modestly" and mostly on the short leg, which agrees with Avoid, but its Autos-in-hikes list is in-sample and H2 failed, so the card's "hikes hurt autos" line is unsupported either way.
+
+**Corrected expected return.** Base Rs1,300 with 30/50/20 gives Rs1,340 plus Rs45.90 net dividends, or about **-9%**. With bull cut to 10% and base raised to 60%, about -15%. Range -15% to +3% depending on probabilities; all below the 12.5% T-bill.
+
+**UPHELD.** Avoid stands. The stated -4.5% is not robust; the corrected figure is about -9%, driven by a base EPS reset to the observed sales run rate. Re-underwrite when the Q1 result lands (by 30 Oct) and the next monthly sales filing.
