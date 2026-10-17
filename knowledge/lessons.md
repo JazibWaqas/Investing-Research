@@ -15,3 +15,12 @@ Mistakes already made in this project. Don't repeat them.
 11. **Insider sales are weak signals, but context matters.** A senior manager at SYS selling Rs138m while cash conversion sat at 60% was worth acting on (we deferred the buy). One small executive sale at MEBL was not.
 12. **Don't recommend before mapping the sector.** The orchestrator pitched NETSOL before checking sector momentum. Tech was third worst. Check the sector backdrop first.
 13. **Waiting has a cost.** An earlier ChatGPT strategy that sat in cash waiting for "validated" entries ended at Rs2.86m versus Rs4.26m for simply staying invested (same deposits). Don't let rigor turn into paralysis.
+
+## Added 17 Oct 2026 (Fable session, from tests/seed_audit.md)
+
+14. **Ex-dividend suffixes break symbol lookups.** The PSX screener lists names trading ex-dividend as `HUBCXD`, `OGDCXD` etc. Strip `XD`, `XB`, `XR` before fetching prices or fundamentals. The orchestrator's value test silently ran on 71 names instead of 115 because of this.
+15. **Always run a placebo.** Random liquid entry days on PSX give a 20-day median of about -1.5% and a 43% win rate. That is the market's skew, not a signal. Any "this signal fails" or "this signal works" claim must be compared against random entries in the same names and period.
+16. **Count episodes, not events.** 13 rate cuts are 3 easing cycles. 33 months of falling CPI are 10 runs, and one run (Nov 2022 to Apr 2025) supplies 21 of them. Report the number of independent episodes and show each one.
+17. **Value on PSX is mostly a sector bet.** Ranked within sector, the earnings-yield spread was -1.3 pts. Year-fixed-effects slope 24.8 pts but t about 1.2. Treat value as a tiebreaker inside a sector view, not a standalone edge.
+18. **Formation lag matters.** The value spread is 28 pts with a 3-month lag after fiscal year end, 5 pts at 4 months, 0 at 5. About a quarter of June-year-end companies post annual results in October, after the 3-month point. Use announcement timestamps, not an assumed lag.
+19. **Do not add trailing dividend yield to a return series that already zeroes ex-dividend gaps.** That counts the dividend twice.
