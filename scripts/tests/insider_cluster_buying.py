@@ -79,7 +79,7 @@ cm = (1 + mkt.reindex(dates).fillna(0)).cumprod().values
 
 def win(sym, ia, ib):
     """excess return close(ia)->close(ib) over the market; code 0 ok, 1 window outside the panel, 2 no observation in the window"""
-    ia, ib, sym = np.asarray(ia), np.asarray(ib), np.asarray(sym)
+    ia, ib, sym = np.asarray(ia).astype(int), np.asarray(ib).astype(int), np.asarray(sym).astype(int)
     inc = (ia < 0) | (ib >= N) | (ia >= ib)
     a, b = np.clip(ia, 0, N - 1), np.clip(ib, 0, N - 1)
     nobs = cnt[b, sym] - cnt[a, sym]
@@ -322,6 +322,7 @@ def run(label, ev, plus1=False, extra_drop=None, splits=True, hz=HZ, restrict=Tr
         out(f"{label}: no events"); return res
     d1 = pre.why.value_counts().to_dict()
     ok_ = pre[pre.why == "ok"].copy()
+    ok_[["eidx", "sidx"]] = ok_[["eidx", "sidx"]].astype(int)
     out(f"{label}: events built {len(pre)}; dropped no price series {d1.get('no_price_series',0)}, no observation within 5 rows {d1.get('no_obs_5d',0)}, illiquid at entry {d1.get('illiquid',0)}"
         + (f", post-results {d1.get('post_results',0)}" if 'post_results' in d1 else "") + f"; usable {len(ok_)}")
     for h in hz:

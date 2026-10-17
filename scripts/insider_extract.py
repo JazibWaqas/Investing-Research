@@ -13,7 +13,7 @@ MON = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov d
 MONRE = r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
 D_NUM = re.compile(r"(?<!\d)(\d{1,2})\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{2,4})(?!\d)")
 D_ISO = re.compile(r"(?<!\d)(20\d\d)\s*[./-]\s*(\d{1,2})\s*[./-]\s*(\d{1,2})(?!\d)")
-D_DMY = re.compile(rf"(?<!\d)(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]*{MONRE}[\s,.-]*(\d{{4}})", re.I)
+D_DMY = re.compile(rf"(?<!\d)(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]*{MONRE}[\s,.-]*(\d{{4}}|\d{{2}})(?!\d)", re.I)
 D_MDY = re.compile(rf"\b{MONRE}[\s.]*(\d{{1,2}})(?:st|nd|rd|th)?[\s,-]+(\d{{4}})", re.I)
 NUM = re.compile(r"(?<![\w.])\d[\d,]*(?:\.\d+)?(?![\w])")
 BUYW = re.compile(r"\bright\b|purchas|bought|\bbuy|acqui|\bgift\s*(?:in|from)|\bpurch", re.I)
@@ -30,7 +30,7 @@ def dates_in(s):
     for m in D_ISO.finditer(s):
         out.append((m.start(), m.end(), int(m[3]), int(m[2]), int(m[1])))
     for m in D_DMY.finditer(s):
-        out.append((m.start(), m.end(), int(m[1]), MON[m[2].lower()[:3]], int(m[3])))
+        out.append((m.start(), m.end(), int(m[1]), MON[m[2].lower()[:3]], int(m[3]) + (2000 if int(m[3]) < 100 else 0)))
     for m in D_MDY.finditer(s):
         out.append((m.start(), m.end(), int(m[2]), MON[m[1].lower()[:3]], int(m[3])))
     ok = []
