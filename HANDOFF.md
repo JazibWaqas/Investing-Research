@@ -1,4 +1,6 @@
-# HANDOFF.md — state of the program (18 Oct 2026, 13:30 PKT)
+# HANDOFF.md — state of the program (18 Oct 2026, evening)
+
+> Status: PAUSED by the user for alignment. Read knowledge/HOW_TO_THINK.md first. The plan in its section 9 (thinking charter and question list, situation library, noise and actor maps, opportunity types incl. shock and rebound, blind replays across regimes, growth core, then names and sizing with him) starts only when he explicitly says go. A growth-and-opportunity workflow was launched and stopped on his request; do not resume it blindly, re-brief it from HOW_TO_THINK.md. PICKS.md v3 predates the alignment and is evidence, not the plan; do not place its orders without his say.
 
 Deliverables are complete: REPORT.md, PICKS.md (v2), RUNBOOK.md, sector_map.md, catalysts/ (calendar, dividend calendar, 33 frozen predictions, scorecard), knowledge/ (16 sector notes, 13 company cards with red teams, 10 playbooks incl. strategy, deals, holdco discounts, catalyst trade, practitioner signals, critic and consultant reviews), tests/ (14 test write-ups plus FACTS.md), data/ and scripts/ as documented in CLAUDE.md. Everything is committed and pushed to origin main.
 
