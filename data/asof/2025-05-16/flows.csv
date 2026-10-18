@@ -1,0 +1,215 @@
+kind,window,key,net_usd_mn,through
+investor_type,last_5_sessions,banks / dfi,-10.83,2025-05-15
+investor_type,last_5_sessions,broker proprietary trading,7.159,2025-05-15
+investor_type,last_5_sessions,companies,-6.66,2025-05-15
+investor_type,last_5_sessions,foreign corporates,-8.123,2025-05-15
+investor_type,last_5_sessions,foreign individual,-0.027,2025-05-15
+investor_type,last_5_sessions,individuals,-16.316,2025-05-15
+investor_type,last_5_sessions,insurance companies,5.964,2025-05-15
+investor_type,last_5_sessions,mutual funds,35.017,2025-05-15
+investor_type,last_5_sessions,nbfc,0.033,2025-05-15
+investor_type,last_5_sessions,other organization,-3.554,2025-05-15
+investor_type,last_5_sessions,overseas pakistani,-2.662,2025-05-15
+sector,last_5_sessions,fipi | All other Sectors,-2.129,2025-05-15
+sector,last_5_sessions,fipi | Cement,1.768,2025-05-15
+sector,last_5_sessions,fipi | Commercial Banks,1.935,2025-05-15
+sector,last_5_sessions,fipi | Fertilizer,-1.312,2025-05-15
+sector,last_5_sessions,fipi | Food and Personal Care Products,-1.196,2025-05-15
+sector,last_5_sessions,fipi | Oil and Gas Exploration Companies,-6.825,2025-05-15
+sector,last_5_sessions,fipi | Oil and Gas Marketing Companies,0.066,2025-05-15
+sector,last_5_sessions,fipi | Power Generation and Distribution,-2.052,2025-05-15
+sector,last_5_sessions,fipi | Technology and Communication,-0.243,2025-05-15
+sector,last_5_sessions,fipi | Textile Composite,-0.823,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | All other Sectors,-3.689,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Cement,-3.903,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Commercial Banks,-2.308,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Debt Market,2.347,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Fertilizer,0.359,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Food and Personal Care Products,-2.188,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Oil and Gas Exploration Companies,0.736,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Oil and Gas Marketing Companies,1.319,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Power Generation and Distribution,-3.531,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Technology and Communication,-0.254,2025-05-15
+sector,last_5_sessions,lipi banks / dfi | Textile Composite,0.281,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | All other Sectors,1.049,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Cement,1.537,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Commercial Banks,0.852,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Fertilizer,-0.469,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Food and Personal Care Products,0.342,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Oil and Gas Exploration Companies,4.081,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Oil and Gas Marketing Companies,-0.227,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Power Generation and Distribution,0.148,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Technology and Communication,-0.198,2025-05-15
+sector,last_5_sessions,lipi broker proprietary trading | Textile Composite,0.044,2025-05-15
+sector,last_5_sessions,lipi companies | All other Sectors,0.288,2025-05-15
+sector,last_5_sessions,lipi companies | Cement,-0.473,2025-05-15
+sector,last_5_sessions,lipi companies | Commercial Banks,1.368,2025-05-15
+sector,last_5_sessions,lipi companies | Fertilizer,-0.933,2025-05-15
+sector,last_5_sessions,lipi companies | Food and Personal Care Products,0.214,2025-05-15
+sector,last_5_sessions,lipi companies | Oil and Gas Exploration Companies,-5.72,2025-05-15
+sector,last_5_sessions,lipi companies | Oil and Gas Marketing Companies,-0.528,2025-05-15
+sector,last_5_sessions,lipi companies | Power Generation and Distribution,-0.451,2025-05-15
+sector,last_5_sessions,lipi companies | Technology and Communication,-0.235,2025-05-15
+sector,last_5_sessions,lipi companies | Textile Composite,-0.192,2025-05-15
+sector,last_5_sessions,lipi individuals | All other Sectors,-3.018,2025-05-15
+sector,last_5_sessions,lipi individuals | Cement,-2.799,2025-05-15
+sector,last_5_sessions,lipi individuals | Commercial Banks,-4.782,2025-05-15
+sector,last_5_sessions,lipi individuals | Debt Market,-0.021,2025-05-15
+sector,last_5_sessions,lipi individuals | Fertilizer,-7.213,2025-05-15
+sector,last_5_sessions,lipi individuals | Food and Personal Care Products,0.863,2025-05-15
+sector,last_5_sessions,lipi individuals | Oil and Gas Exploration Companies,0.131,2025-05-15
+sector,last_5_sessions,lipi individuals | Oil and Gas Marketing Companies,-1.612,2025-05-15
+sector,last_5_sessions,lipi individuals | Power Generation and Distribution,1.794,2025-05-15
+sector,last_5_sessions,lipi individuals | Technology and Communication,0.316,2025-05-15
+sector,last_5_sessions,lipi individuals | Textile Composite,0.026,2025-05-15
+sector,last_5_sessions,lipi insurance companies | All other Sectors,-0.906,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Cement,-0.601,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Commercial Banks,-0.754,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Debt Market,1.794,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Fertilizer,7.704,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Food and Personal Care Products,-0.289,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Oil and Gas Exploration Companies,-0.461,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Oil and Gas Marketing Companies,-0.969,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Power Generation and Distribution,0.351,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Technology and Communication,0.035,2025-05-15
+sector,last_5_sessions,lipi insurance companies | Textile Composite,0.059,2025-05-15
+sector,last_5_sessions,lipi mutual funds | All other Sectors,7.996,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Cement,5.573,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Commercial Banks,4.012,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Debt Market,-4.289,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Fertilizer,1.799,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Food and Personal Care Products,2.249,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Oil and Gas Exploration Companies,10.071,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Oil and Gas Marketing Companies,2.563,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Power Generation and Distribution,3.855,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Technology and Communication,0.581,2025-05-15
+sector,last_5_sessions,lipi mutual funds | Textile Composite,0.606,2025-05-15
+sector,last_5_sessions,lipi nbfc | All other Sectors,0.116,2025-05-15
+sector,last_5_sessions,lipi nbfc | Cement,-0.041,2025-05-15
+sector,last_5_sessions,lipi nbfc | Commercial Banks,0.019,2025-05-15
+sector,last_5_sessions,lipi nbfc | Fertilizer,-0.0,2025-05-15
+sector,last_5_sessions,lipi nbfc | Food and Personal Care Products,-0.003,2025-05-15
+sector,last_5_sessions,lipi nbfc | Oil and Gas Exploration Companies,-0.052,2025-05-15
+sector,last_5_sessions,lipi nbfc | Oil and Gas Marketing Companies,0.026,2025-05-15
+sector,last_5_sessions,lipi nbfc | Power Generation and Distribution,-0.022,2025-05-15
+sector,last_5_sessions,lipi nbfc | Technology and Communication,-0.01,2025-05-15
+sector,last_5_sessions,lipi nbfc | Textile Composite,-0.001,2025-05-15
+sector,last_5_sessions,lipi other organization | All other Sectors,0.293,2025-05-15
+sector,last_5_sessions,lipi other organization | Cement,-1.062,2025-05-15
+sector,last_5_sessions,lipi other organization | Commercial Banks,-0.341,2025-05-15
+sector,last_5_sessions,lipi other organization | Debt Market,0.169,2025-05-15
+sector,last_5_sessions,lipi other organization | Fertilizer,0.064,2025-05-15
+sector,last_5_sessions,lipi other organization | Food and Personal Care Products,0.007,2025-05-15
+sector,last_5_sessions,lipi other organization | Oil and Gas Exploration Companies,-1.961,2025-05-15
+sector,last_5_sessions,lipi other organization | Oil and Gas Marketing Companies,-0.638,2025-05-15
+sector,last_5_sessions,lipi other organization | Power Generation and Distribution,-0.091,2025-05-15
+sector,last_5_sessions,lipi other organization | Technology and Communication,0.007,2025-05-15
+sector,last_5_sessions,lipi other organization | Textile Composite,-0.002,2025-05-15
+investor_type,last_20_sessions,banks / dfi,93.586,2025-05-15
+investor_type,last_20_sessions,broker proprietary trading,4.341,2025-05-15
+investor_type,last_20_sessions,companies,3.117,2025-05-15
+investor_type,last_20_sessions,foreign corporates,-13.567,2025-05-15
+investor_type,last_20_sessions,foreign individual,0.036,2025-05-15
+investor_type,last_20_sessions,individuals,-20.407,2025-05-15
+investor_type,last_20_sessions,insurance companies,-8.097,2025-05-15
+investor_type,last_20_sessions,mutual funds,-83.543,2025-05-15
+investor_type,last_20_sessions,nbfc,0.444,2025-05-15
+investor_type,last_20_sessions,other organization,22.966,2025-05-15
+investor_type,last_20_sessions,overseas pakistani,1.125,2025-05-15
+sector,last_20_sessions,fipi | All other Sectors,-2.942,2025-05-15
+sector,last_20_sessions,fipi | Cement,9.809,2025-05-15
+sector,last_20_sessions,fipi | Commercial Banks,-10.87,2025-05-15
+sector,last_20_sessions,fipi | Fertilizer,-1.917,2025-05-15
+sector,last_20_sessions,fipi | Food and Personal Care Products,-2.532,2025-05-15
+sector,last_20_sessions,fipi | Oil and Gas Exploration Companies,-7.029,2025-05-15
+sector,last_20_sessions,fipi | Oil and Gas Marketing Companies,4.98,2025-05-15
+sector,last_20_sessions,fipi | Power Generation and Distribution,-0.435,2025-05-15
+sector,last_20_sessions,fipi | Technology and Communication,-0.589,2025-05-15
+sector,last_20_sessions,fipi | Textile Composite,-0.881,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | All other Sectors,-2.005,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Cement,-8.294,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Commercial Banks,3.749,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Debt Market,100.087,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Fertilizer,0.605,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Food and Personal Care Products,-1.873,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Oil and Gas Exploration Companies,2.143,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Oil and Gas Marketing Companies,1.611,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Power Generation and Distribution,-2.754,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Technology and Communication,-0.376,2025-05-15
+sector,last_20_sessions,lipi banks / dfi | Textile Composite,0.693,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | All other Sectors,0.619,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Cement,1.998,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Commercial Banks,-0.225,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Debt Market,-0.013,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Fertilizer,-0.226,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Food and Personal Care Products,-0.666,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Oil and Gas Exploration Companies,3.846,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Oil and Gas Marketing Companies,-1.044,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Power Generation and Distribution,0.329,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Technology and Communication,-0.369,2025-05-15
+sector,last_20_sessions,lipi broker proprietary trading | Textile Composite,0.092,2025-05-15
+sector,last_20_sessions,lipi companies | All other Sectors,1.488,2025-05-15
+sector,last_20_sessions,lipi companies | Cement,2.517,2025-05-15
+sector,last_20_sessions,lipi companies | Commercial Banks,4.336,2025-05-15
+sector,last_20_sessions,lipi companies | Debt Market,-0.35,2025-05-15
+sector,last_20_sessions,lipi companies | Fertilizer,0.803,2025-05-15
+sector,last_20_sessions,lipi companies | Food and Personal Care Products,0.123,2025-05-15
+sector,last_20_sessions,lipi companies | Oil and Gas Exploration Companies,-3.034,2025-05-15
+sector,last_20_sessions,lipi companies | Oil and Gas Marketing Companies,-1.066,2025-05-15
+sector,last_20_sessions,lipi companies | Power Generation and Distribution,-1.33,2025-05-15
+sector,last_20_sessions,lipi companies | Technology and Communication,-0.046,2025-05-15
+sector,last_20_sessions,lipi companies | Textile Composite,-0.323,2025-05-15
+sector,last_20_sessions,lipi individuals | All other Sectors,-13.842,2025-05-15
+sector,last_20_sessions,lipi individuals | Cement,-2.779,2025-05-15
+sector,last_20_sessions,lipi individuals | Commercial Banks,-1.843,2025-05-15
+sector,last_20_sessions,lipi individuals | Debt Market,0.186,2025-05-15
+sector,last_20_sessions,lipi individuals | Fertilizer,-9.978,2025-05-15
+sector,last_20_sessions,lipi individuals | Food and Personal Care Products,2.784,2025-05-15
+sector,last_20_sessions,lipi individuals | Oil and Gas Exploration Companies,7.428,2025-05-15
+sector,last_20_sessions,lipi individuals | Oil and Gas Marketing Companies,-2.127,2025-05-15
+sector,last_20_sessions,lipi individuals | Power Generation and Distribution,0.094,2025-05-15
+sector,last_20_sessions,lipi individuals | Technology and Communication,-0.115,2025-05-15
+sector,last_20_sessions,lipi individuals | Textile Composite,-0.213,2025-05-15
+sector,last_20_sessions,lipi insurance companies | All other Sectors,1.604,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Cement,-0.59,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Commercial Banks,-14.18,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Debt Market,2.437,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Fertilizer,8.139,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Food and Personal Care Products,-0.256,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Oil and Gas Exploration Companies,-4.77,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Oil and Gas Marketing Companies,-1.144,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Power Generation and Distribution,-0.192,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Technology and Communication,0.586,2025-05-15
+sector,last_20_sessions,lipi insurance companies | Textile Composite,0.269,2025-05-15
+sector,last_20_sessions,lipi mutual funds | All other Sectors,8.674,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Cement,-2.779,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Commercial Banks,5.28,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Debt Market,-102.641,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Fertilizer,0.23,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Food and Personal Care Products,2.381,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Oil and Gas Exploration Companies,1.332,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Oil and Gas Marketing Companies,-0.214,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Power Generation and Distribution,3.926,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Technology and Communication,-0.014,2025-05-15
+sector,last_20_sessions,lipi mutual funds | Textile Composite,0.283,2025-05-15
+sector,last_20_sessions,lipi nbfc | All other Sectors,0.359,2025-05-15
+sector,last_20_sessions,lipi nbfc | Cement,-0.037,2025-05-15
+sector,last_20_sessions,lipi nbfc | Commercial Banks,0.148,2025-05-15
+sector,last_20_sessions,lipi nbfc | Fertilizer,-0.027,2025-05-15
+sector,last_20_sessions,lipi nbfc | Food and Personal Care Products,-0.009,2025-05-15
+sector,last_20_sessions,lipi nbfc | Oil and Gas Exploration Companies,0.002,2025-05-15
+sector,last_20_sessions,lipi nbfc | Oil and Gas Marketing Companies,0.033,2025-05-15
+sector,last_20_sessions,lipi nbfc | Power Generation and Distribution,-0.01,2025-05-15
+sector,last_20_sessions,lipi nbfc | Technology and Communication,-0.014,2025-05-15
+sector,last_20_sessions,lipi nbfc | Textile Composite,-0.001,2025-05-15
+sector,last_20_sessions,lipi other organization | All other Sectors,6.046,2025-05-15
+sector,last_20_sessions,lipi other organization | Cement,0.157,2025-05-15
+sector,last_20_sessions,lipi other organization | Commercial Banks,13.605,2025-05-15
+sector,last_20_sessions,lipi other organization | Debt Market,0.294,2025-05-15
+sector,last_20_sessions,lipi other organization | Fertilizer,2.371,2025-05-15
+sector,last_20_sessions,lipi other organization | Food and Personal Care Products,0.048,2025-05-15
+sector,last_20_sessions,lipi other organization | Oil and Gas Exploration Companies,0.082,2025-05-15
+sector,last_20_sessions,lipi other organization | Oil and Gas Marketing Companies,-1.028,2025-05-15
+sector,last_20_sessions,lipi other organization | Power Generation and Distribution,0.373,2025-05-15
+sector,last_20_sessions,lipi other organization | Technology and Communication,0.937,2025-05-15
+sector,last_20_sessions,lipi other organization | Textile Composite,0.082,2025-05-15

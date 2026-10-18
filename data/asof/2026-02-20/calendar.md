@@ -1,0 +1,118 @@
+# Calendar as of 2026-02-20
+
+- Next MPC: see SBP calendar
+
+## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
+
+- 2026-01-22 FFC: Board Meeting
+- 2026-01-22 ARPL: Board Meeting
+- 2026-01-22 JSML: Board Meeting
+- 2026-01-23 PRL: Board Meeting
+- 2026-01-26 EPQL: Board Meeting for the announcement of the financial results for the year ended December 31, 2025
+- 2026-01-26 GATI: Board Meeting Other Than Financial Results
+- 2026-01-26 HINOON: Board Meeting Other Then Financial Results
+- 2026-01-27 ILP: Notice of Board Meeting for the Half Year ended December 31, 2025 / Closed Period
+- 2026-01-28 MEBL: NOTICE OF BOARD MEETING AND CLOSED PERIOD
+- 2026-01-28 CSAP: NOTICE OF 203rd BOARD MEETING
+- 2026-01-30 WAFI: Board Meeting other than Financial Results
+- 2026-02-02 EFERT: Board Meeting for the announcement of the financial results for the year ended December 31, 2025
+- 2026-02-03 MACFL: Board Meeting
+- 2026-02-03 CPHL: Board Meeting REVOKED
+- 2026-02-03 CPHL: Board meeting
+- 2026-02-03 BWHL: Board Meeting
+- 2026-02-03 EPCL: Board Meeting for the announcement of the financial results for the year ended December 31, 2025 - Engro Polymer & Chemicals Ltd
+- 2026-02-03 PPL: Meeting of the Board of Directors and Closed Period
+- 2026-02-04 SGPL: Board Meeting Other Than Financial Results
+- 2026-02-04 POWER: Board Meeting
+- 2026-02-04 PIOC: Board Meeting
+- 2026-02-06 NETSOL: Board Meeting
+- 2026-02-06 SSGC: Board Meeting Other Than Financial Results
+- 2026-02-06 MACTER: Board Meeting
+- 2026-02-06 CLOV: Board Meeting Other Than Financial Results
+- 2026-02-06 ECOP: Intimation of the 150th Meeting of the Board of ECOP
+- 2026-02-06 FCL: Notice of Board Meeting/closed period of FCL
+- 2026-02-06 IPAK: Board Meeting for the Half Year ended 31st December 2025
+- 2026-02-09 FABL: Board of Directors Meeting of Faysal Bank Limited
+- 2026-02-09 BERG: Board Meetings
+- 2026-02-09 PIBTL: Board Meeting will be Held on February 16, 2026
+- 2026-02-09 LCI: Board Meeting Other Than Financial Results
+- 2026-02-10 PSO: Board Meeting
+- 2026-02-10 SPEL: Board Meeting
+- 2026-02-10 ICL: Board Meeting
+- 2026-02-10 TOMCL: Board Meeting
+- 2026-02-10 TRSM: Board of Directors Meeting for Half Year ended December 31, 2025.
+- 2026-02-10 FECTC: Board Meeting
+- 2026-02-10 GTYR: Board Meeting
+- 2026-02-10 MTL: Board meeting
+- 2026-02-10 LOADS: Board Meeting of Loads Limited
+- 2026-02-10 MFL: Board Meeting
+- 2026-02-10 CHCC: Board Meeting
+- 2026-02-10 CPPL: Board Meeting
+- 2026-02-11 PRL: Board Meeting other than Financial Results
+- 2026-02-11 GHNI: Board Meeting
+- 2026-02-11 GAL: Board Meeting
+- 2026-02-11 BIPL: Board Meeting - BankIslami Pakistan Limited
+- 2026-02-11 ACPL: Board Meeting
+- 2026-02-12 CEPB: BOARD MEETING
+- 2026-02-12 NRL: Board Meeting
+- 2026-02-12 KEL: Board Meeting Other Than Financial Results
+- 2026-02-12 SHFA: Board Meeting
+- 2026-02-12 PPL: Change in Time of the Meeting of the Board of Directors
+- 2026-02-13 OGDC: Board Meeting
+- 2026-02-13 EFERT: Board Meeting other than Financial Results (Shorter Notice)
+- 2026-02-13 BBFL: Board Meeting
+- 2026-02-16 DGKC: Board Meeting
+- 2026-02-16 SGPL: Board Meeting Other Than Financial Results held on February 16, 2026
+- 2026-02-16 BFAGRO: Board Meeting
+- 2026-02-16 TGL: Board Meeting
+- 2026-02-16 DOL: Board Meeting
+- 2026-02-16 TPLT: Board Meeting
+- 2026-02-16 HUBC: Board Meeting for the Half Year Ended December 31, 2025 - The Hub Power Company Limited
+- 2026-02-16 CNERGY: Board Meeting and Closed Period
+- 2026-02-17 MLCF: MLCF-Notice of Board Meeting 24.02.2026
+- 2026-02-17 ENGROH: Board Meeting for the Announcement of the Financial Results for the year ended December 31, 2025
+- 2026-02-17 IBLHL: Board Meeting
+- 2026-02-17 FLYNG: Board Meeting
+- 2026-02-17 LCI: Board Meeting Other Than Financial Results
+- 2026-02-18 EFERT: Board Meeting other than Financial Results-Shorter Notice
+- 2026-02-18 KOHC: Board Meeting
+- 2026-02-18 TPLP: Board Meeting
+- 2026-02-18 BFBIO: Board Meeting
+- 2026-02-18 GHGL: BOARD MEETING
+- 2026-02-18 ZAL: Board Meeting
+- 2026-02-18 ASL: BOARD MEETING / CLOSED PERIOD
+- 2026-02-18 KTML: KTML-Notice of Board Meeting 25.02.2026
+- 2026-02-18 TATM: Board of Directors Meeting - December 2025
+- 2026-02-18 QUICE: BOARD MEETING
+- 2026-02-18 WASL: Board Meeting
+- 2026-02-18 TBL: Notice of Board Meeting [Q2 FY 25-26]
+- 2026-02-18 DCL: Board Meeting
+- 2026-02-18 SSGC: Board Meeting
+- 2026-02-18 DCR: BOARD MEETING / CLOSED PERIOD
+- 2026-02-18 HTL: Board Meeting
+- 2026-02-19 PREMA: Board Meeting
+- 2026-02-19 IMAGE: Board Meeting
+- 2026-02-19 GATM: BOARD MEETING AND CLOSED PERIOD
+- 2026-02-19 FEROZ: Board Meeting
+- 2026-02-19 LIVEN: Board Meeting for Accounts for the Period Ended 31st December 2025
+- 2026-02-19 CLOV: Board of Directors Meeting and Closed Period
+- 2026-02-19 SNGP: Board Meeting
+- 2026-02-19 GGGL: Meeting of the Board of Directors - GHANI GLOBAL GLASS LIMITED
+- 2026-02-19 GCIL: Meeting of the Board of Directors - GHANI CHEMICAL INDUSTRIES LIMITED
+- 2026-02-19 GGL: Meeting of the Board of Directors - GHANI GLOBAL HOLDINGS LIMITED
+- 2026-02-19 GCWL: Meeting of the Board of Directors - GHANI CHEMWORLD LIMITED
+- 2026-02-19 SEARL: Board Meeting
+- 2026-02-19 CRTM: Board Meeting
+- 2026-02-19 DNCC: Board Meeting
+- 2026-02-19 TREET: Treet Corporation Limited - Notice of Board Meeting/ Closed Period
+- 2026-02-20 SYM: Board Meeting
+- 2026-02-20 OBOY: NOTICE OF BOARD MEETING
+- 2026-02-20 GATI: BOARD MEETING
+- 2026-02-20 MUGHAL: Notice of Board Meeting - HY 2026
+- 2026-02-20 NML: Board Meeting
+- 2026-02-20 SGPL: Board Meeting
+- 2026-02-20 GWLC: Board Meeting
+- 2026-02-20 ANL: Board Meeting
+- 2026-02-20 BECO: Board Meeting
+- 2026-02-20 TELE: Board Meeting to Review Half Yearly Accounts
+- 2026-02-20 BNL: Board Meeting

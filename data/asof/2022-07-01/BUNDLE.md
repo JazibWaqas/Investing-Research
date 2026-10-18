@@ -126,272 +126,49 @@ WAVES,12.83,-0.042,-0.11,-0.193,-0.523,-0.529,0.645,0,2022-03-31,,1,1,0,0,13.769
 
 === FILE: announcements_30d.csv ===
 date,symbol,klass,title
-2022-06-02,OGDC,material_info,Material Information
-2022-06-02,CLVL,material_info,Material Information
-2022-06-02,STPL,insider_trade,Insider trade disclosure
-2022-06-02,UNITY,insider_trade,Insider trade disclosure
-2022-06-02,PTL,insider_trade,Insider trade disclosure
-2022-06-02,MFFL,insider_trade,Insider trade disclosure
-2022-06-02,PPL,other,Continuation of Production from the Sui Mining Lease
-2022-06-02,MUGHAL,other,Credit of 5th Profit and 1st Principal Payment to Sukuk Certificate-1 Holde
-2022-06-02,MTL,other,Increase in Authorized Capital
-2022-06-02,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-03,TREET,material_info,Material Information
-2022-06-03,CRTM,insider_trade,Insider trade disclosure
-2022-06-03,STPL,insider_trade,Insider trade disclosure
-2022-06-03,YOUW,insider_trade,Insider trade disclosure
-2022-06-03,STPL,insider_trade,Insider trade disclosure
-2022-06-03,SAPT,insider_trade,Insider trade disclosure
-2022-06-03,NEXT,insider_trade,Insider trade disclosure
-2022-06-03,MFFL,insider_trade,Insider trade disclosure
-2022-06-03,LUCK,insider_trade,Insider trade disclosure
-2022-06-03,LUCK,insider_trade,Insider trade disclosure
-2022-06-03,MFFL,insider_trade,Insider trade disclosure
-2022-06-03,IBFL,insider_trade,Insider trade disclosure
-2022-06-03,MLCF,other,MLCFL-Report of buy back of shares 03.06.2022
-2022-06-03,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-03,MTL,agm,Notice of Extraordinary General Meeting
-2022-06-06,GEMUNSL,material_info,Material Information
-2022-06-06,HMM,material_info,Material Information
-2022-06-06,FRSM,material_info,Material Information
-2022-06-06,UNITY,material_info,Material Information
-2022-06-06,BIPLS,material_info,Material Information
-2022-06-06,STPL,insider_trade,Insider trade disclosure
-2022-06-06,GATM,insider_trade,Insider trade disclosure
-2022-06-06,ASHT,insider_trade,Insider trade disclosure
-2022-06-06,BECO,insider_trade,Insider trade disclosure
-2022-06-06,MFFL,insider_trade,Insider trade disclosure
-2022-06-06,GHNL,insider_trade,Insider trade disclosure
-2022-06-06,ILP,credit_rating,Material Information - VIS Reaffirms Entity Ratings of Interloop Limited
-2022-06-06,GHNI,other,Appointment of Director
-2022-06-06,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-06,KOHC,agm,Notice of Extraordinary General Meeting
-2022-06-07,MRNS,material_info,Material Information
-2022-06-07,HCAR,financial_result,Transmission of Annual Report for the Year Ended 2022-03-31
-2022-06-07,SPEL,insider_trade,Insider trade disclosure
-2022-06-07,AVN,insider_trade,Insider trade disclosure
-2022-06-07,IBFL,insider_trade,Insider trade disclosure
-2022-06-07,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-07,MLCF,other,MLCFL-Report of buy back of shares 07.06.2022
-2022-06-07,TREET,agm,Notice of Extra Ordinary general Meeting of Treet Corporation Limited REVOK
-2022-06-07,TREET,agm,Notice of Extraordinary General Meeting of the Company
-2022-06-07,HCAR,agm,Notice of Annual General Meeting
-2022-06-08,UNITY,material_info,Material Information
-2022-06-08,JSMFETF,material_info,Material Information - Resumption of iNAV JSMFETF
-2022-06-08,GLAXO,material_info,Material Information
-2022-06-08,HABSM,material_info,Material Information
-2022-06-08,UNITY,insider_trade,Insider trade disclosure
-2022-06-08,UNITY,insider_trade,Insider trade disclosure
-2022-06-08,OCTOPUS,insider_trade,Insider trade disclosure
-2022-06-08,PKGS,insider_trade,Insider trade disclosure
-2022-06-08,ASHT,insider_trade,Insider trade disclosure
-2022-06-08,TRG,insider_trade,Insider trade disclosure
-2022-06-08,MUREB,insider_trade,Insider trade disclosure
-2022-06-08,INIL,insider_trade,Insider trade disclosure
-2022-06-08,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-09,AWWAL,material_info,Material Information
-2022-06-09,COLG,insider_trade,Insider trade disclosure
-2022-06-09,ENGRO,insider_trade,Insider trade disclosure
-2022-06-09,STPL,insider_trade,Insider trade disclosure
-2022-06-09,SPWL,insider_trade,Insider trade disclosure
-2022-06-09,IGIHL,insider_trade,Insider trade disclosure
-2022-06-09,IGIHL,insider_trade,Insider trade disclosure
-2022-06-09,ASL,insider_trade,Insider trade disclosure
-2022-06-09,BIFO,insider_trade,Insider trade disclosure
-2022-06-09,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
 2022-06-10,EPQL,material_info,Material Information
 2022-06-10,GTECH,material_info,MATERIAL INFORMATION
 2022-06-10,GGL,material_info,Material Information - On behalf of Ghani Chemical Industries (one of the S
-2022-06-10,BHAT,material_info,Material Information - Scheme of Arrangement
-2022-06-10,LOTCHEM,material_info,Material Information
-2022-06-10,SRVI,material_info,Material Information
-2022-06-10,SYS,financial_result,Extracts of resolutions in the Board of Director Meeting for other than Fin
-2022-06-10,CRTM,insider_trade,Insider trade disclosure
-2022-06-10,OCTOPUS,insider_trade,Insider trade disclosure
-2022-06-10,TPLI,insider_trade,Insider trade disclosure
-2022-06-10,PTL,insider_trade,Insider trade disclosure
-2022-06-10,PKGS,insider_trade,Insider trade disclosure
-2022-06-10,PSEL,insider_trade,Insider trade disclosure
-2022-06-10,INIL,insider_trade,Insider trade disclosure
-2022-06-10,UBL,insider_trade,Insider trade disclosure
-2022-06-10,SPWL,insider_trade,Insider trade disclosure
-2022-06-10,IGIHL,insider_trade,Insider trade disclosure
-2022-06-10,IGIHL,insider_trade,Insider trade disclosure
-2022-06-10,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-10,SYS,agm,Notice of Extraordinary General Meeting
-2022-06-10,WAVES,agm,Extension in time for holding the Annual General Meeting
 2022-06-13,LUCK,material_info,MATERIAL INFORMATION
 2022-06-13,ICI,material_info,Material Information
-2022-06-13,ATRL,financial_result,ARL BOARD MEETING OTHER THAN FINANCIAL RESULTS
-2022-06-13,PKGI,insider_trade,Insider trade disclosure
-2022-06-13,DGKC,insider_trade,Insider trade disclosure
-2022-06-13,CLVL,insider_trade,Insider trade disclosure
-2022-06-13,ENGRO,insider_trade,Insider trade disclosure
-2022-06-13,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
 2022-06-14,TPLT,material_info,Material Information
 2022-06-14,TPLT,material_info,Material Information
-2022-06-14,ENGRO,insider_trade,Insider trade disclosure
-2022-06-14,MEBL,insider_trade,Insider trade disclosure
-2022-06-14,THALL,insider_trade,Insider trade disclosure
-2022-06-14,OBOY,insider_trade,Insider trade disclosure
-2022-06-14,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-14,MLCF,other,MLCF-Report of buy back of shares 14.06.2022
-2022-06-14,MARI,agm,Election of Directors
 2022-06-15,AGP,material_info,Material Information Disclosure
-2022-06-15,UNITY,insider_trade,Insider trade disclosure
-2022-06-15,TRG,insider_trade,Insider trade disclosure
-2022-06-15,HINOON,insider_trade,Insider trade disclosure
-2022-06-15,IBFL,insider_trade,Insider trade disclosure
-2022-06-15,DSIL,insider_trade,Insider trade disclosure
-2022-06-15,MFFL,insider_trade,Insider trade disclosure
-2022-06-15,OGDC,other,"GAS DISCOVERY AT UMAIR SOUTH EAST-1 WELL IN GUDDU BLOCK, SINDH, PROVINCE, P"
-2022-06-15,MLCF,other,MLCF-Report of buy back of shares 15.06.2022
 2022-06-16,UDPL,material_info,Material Information
 2022-06-16,MODAM,material_info,MATERIAL INFORMATION REVOKED
 2022-06-16,MODAM,material_info,MATERIAL INFORMATION REVOKED
 2022-06-16,SBL,material_info,Material Information
-2022-06-16,ENGRO,insider_trade,Insider trade disclosure
-2022-06-16,OCTOPUS,insider_trade,Insider trade disclosure
-2022-06-16,MFFL,insider_trade,Insider trade disclosure
-2022-06-16,HINOON,insider_trade,Insider trade disclosure
-2022-06-16,FRSM,insider_trade,Insider trade disclosure
-2022-06-16,MLCF,other,MLCF-Report of buy back of shares 16.06.2022
 2022-06-17,SNGP,material_info,DISCLOSURE OF MATERIAL INFORMATION
 2022-06-17,UNITY,material_info,Material Information
 2022-06-17,PSX,material_info,Disclosure of Material Information
-2022-06-17,FATIMA,insider_trade,Insider trade disclosure
-2022-06-17,HMM,insider_trade,Insider trade disclosure
-2022-06-17,JVDC,insider_trade,Insider trade disclosure
-2022-06-17,TGL,insider_trade,Insider trade disclosure
-2022-06-17,ENGRO,insider_trade,Insider trade disclosure
-2022-06-17,TRG,insider_trade,Insider trade disclosure
-2022-06-17,MFFL,insider_trade,Insider trade disclosure
-2022-06-17,ASHT,insider_trade,Insider trade disclosure
-2022-06-17,UBL,insider_trade,Insider trade disclosure
-2022-06-17,UBL,insider_trade,Insider trade disclosure
-2022-06-17,UBL,insider_trade,Insider trade disclosure
-2022-06-17,MARI,other,Corporate Briefing Session
-2022-06-17,MLCF,other,MLCF-Report of buy back of shares 17.06.2022
-2022-06-17,NETSOL,other,NETSOL | NetSol Technologies Limited - Purchase Repot of Buy Back of NetSol
 2022-06-20,TRG,material_info,Material Information
 2022-06-20,MODAM,material_info,Material Information
 2022-06-20,PIBTL,material_info,Disclosure of Material Information of Pakistan International Bulk Terminal 
-2022-06-20,ENGRO,insider_trade,Insider trade disclosure
-2022-06-20,KOSM,insider_trade,Insider trade disclosure
-2022-06-20,SPEL,insider_trade,Insider trade disclosure
-2022-06-20,TRG,insider_trade,Insider trade disclosure
-2022-06-20,IBFL,insider_trade,Insider trade disclosure
-2022-06-20,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-20,MLCF,other,MLCF-Report of buy back of shares 20.06.2022
-2022-06-20,UNITY,other,Miscellaneous Information
 2022-06-21,DGKC,material_info,Material Information
-2022-06-21,PSO,financial_result,Corporate Briefing Session on Business Results for the period ended March 3
-2022-06-21,JVDC,insider_trade,Insider trade disclosure
-2022-06-21,FATIMA,insider_trade,Insider trade disclosure
-2022-06-21,NETSOL,other,Purchase (Buy Back) by NetSol Technologies Limited of its own shares pursua
-2022-06-21,NETSOL,other,Public Announcement for Buy Back of Shares under regulation 10(g) of the Th
-2022-06-21,KOHC,agm,List of Persons intended to contest Election of Directors to be held on 29-
 2022-06-22,TPL,material_info,Disclosure of Material Information
 2022-06-22,KSTM,material_info,Material Information REVOKED
 2022-06-22,PAKL,material_info,DISCLOSURE OF MATERIAL INFORMATION
-2022-06-22,WAVES,financial_result,Emergent Board Meeting (Other Than Financial Results)
-2022-06-22,ATRL,financial_result,ARL BOARD MEETING OTHER THAN FINANCIAL RESULTS
-2022-06-22,GSKCH,insider_trade,Insider trade disclosure
-2022-06-22,HMM,insider_trade,Insider trade disclosure
-2022-06-22,SYS,insider_trade,Insider trade disclosure
-2022-06-22,UBL,insider_trade,Insider trade disclosure
-2022-06-22,SBL,insider_trade,Insider trade disclosure
-2022-06-22,OGDC,other,OIL AND GAS DISCOVERY AT NIM EAST 1 EXPLORATORY WELL IN NIM BLOCK DISTRICT 
-2022-06-22,OGDC,other,GAS DISCOVERY AT KALERI SHUM 01 IN KALCHAS BLOCK PUNJAB PROVINCE PAKISTAN
-2022-06-22,WAVES,other,Scheme of Arrangement sanctioned by the High Court
-2022-06-22,NETSOL,other,Newspapers Published copies of Public Announcement for Buy Back of Shares u
-2022-06-22,NRL,other,Approval of Company's Budget for the year 2022-23
-2022-06-22,MARI,agm,Certified true copy of resolution adopted at Extraordinary General Meeting 
 2022-06-23,KSTM,material_info,Material Information
 2022-06-23,ASTL,material_info,Material Information
-2022-06-23,AVN,insider_trade,Insider trade disclosure
-2022-06-23,UBL,insider_trade,Insider trade disclosure
-2022-06-23,UBL,insider_trade,Insider trade disclosure
-2022-06-23,INIL,insider_trade,Insider trade disclosure
-2022-06-23,SKRS,insider_trade,Insider trade disclosure
-2022-06-23,WAVES,other,Certified Copy of the Court Order (Waves & SMTM)
 2022-06-24,KML,material_info,Material Information
 2022-06-24,PSEL,material_info,Material Information
 2022-06-24,KASBM,material_info,Material Information
 2022-06-24,PAKMI,material_info,Material Information
 2022-06-24,PMI,material_info,Material Information
-2022-06-24,IBFL,insider_trade,Insider trade disclosure
-2022-06-24,LUCK,insider_trade,Insider trade disclosure
-2022-06-24,ASHT,insider_trade,Insider trade disclosure
-2022-06-24,MLCF,other,MLCF Report of Buy-Back of Shares 24.06.2022
 2022-06-27,TPLP,material_info,Disclosure of Material Information
 2022-06-27,ISL,material_info,DISCLOSURE OF MATERIAL INFORMATION - COMMISSIONING OF REWINDING LINE
 2022-06-27,ARM,material_info,Material Information
 2022-06-27,SMTM,material_info,Material Information
 2022-06-27,WAVES,material_info,Material Information
-2022-06-27,UNITY,insider_trade,Insider trade disclosure
-2022-06-27,TGL,insider_trade,Insider trade disclosure
-2022-06-27,ENGRO,insider_trade,Insider trade disclosure
-2022-06-27,TPL,insider_trade,Insider trade disclosure
-2022-06-27,IBFL,insider_trade,Insider trade disclosure
-2022-06-27,ISIL,insider_trade,Insider trade disclosure
-2022-06-27,AGHA,insider_trade,Insider trade disclosure
-2022-06-27,MTL,other,APPOINTMENT/CHANGE OF SHARE REGISTRAR / TRANSFER AGENT
-2022-06-27,MARI,other,Discovery of Hvdrocarbons from Bannu West-l Well
-2022-06-27,SNGP,other,CHANGE OF VENUE OF BOARD MEETING
-2022-06-27,MLCF,other,MLCF-Report of Buy-Back of shares 27.06.2022
 2022-06-28,TREET,material_info,Material information
 2022-06-28,KEL,material_info,Material Information - Intimation for Extension in timeline for Public Anno
-2022-06-28,SPEL,insider_trade,Insider trade disclosure
-2022-06-28,CRTM,insider_trade,Insider trade disclosure
-2022-06-28,MERIT,insider_trade,Insider trade disclosure
-2022-06-28,STPL,insider_trade,Insider trade disclosure
-2022-06-28,BNL,insider_trade,Insider trade disclosure
-2022-06-28,BNL,insider_trade,Insider trade disclosure
-2022-06-28,CHAS,insider_trade,Insider trade disclosure
-2022-06-28,BNL,insider_trade,Insider trade disclosure
-2022-06-28,BNL,insider_trade,Insider trade disclosure
-2022-06-28,YOUW,insider_trade,Insider trade disclosure
-2022-06-28,ARPAK,insider_trade,Insider trade disclosure
-2022-06-28,PMRS,insider_trade,Insider trade disclosure
-2022-06-28,FRSM,insider_trade,Insider trade disclosure
-2022-06-28,JDWS,insider_trade,Insider trade disclosure
-2022-06-28,AVN,insider_trade,Insider trade disclosure
-2022-06-28,JDWS,insider_trade,Insider trade disclosure
-2022-06-28,MLCF,other,MLCF- Report of Buy-Back of shares 28.06.2022
-2022-06-28,TREET,agm,EXTRACTS OF RESOLUTION PASSED AT THE EXTRA ORDINARY GENERAL MEETING
-2022-06-28,MTL,agm,Certified Copy of Special Resolution Passed in Extra Ordinary General Meeti
 2022-06-29,SAPL,material_info,Material Information
 2022-06-29,KOHC,material_info,Material Information
 2022-06-29,NETSOL,material_info,Material Information
-2022-06-29,AGHA,dividend_or_bonus,Book Closure Notice-Agha Steel Industries Limited-Sukuk Certificates-15th P
-2022-06-29,MERIT,insider_trade,Insider trade disclosure
-2022-06-29,EFUL,insider_trade,Insider trade disclosure
-2022-06-29,FRSM,insider_trade,Insider trade disclosure
-2022-06-29,CRTM,insider_trade,Insider trade disclosure
-2022-06-29,UBL,insider_trade,Insider trade disclosure
-2022-06-29,MLCF,other,MLCF- Report of Buy-Back of shares 29.06.2022
 2022-06-30,GLAXO,material_info,Material Information - Resignation of Mark Dawson as Director w.e.f. 30 Jun
-2022-06-30,POL,insider_trade,Insider trade disclosure
-2022-06-30,EFUL,insider_trade,Insider trade disclosure
-2022-06-30,TPL,insider_trade,Insider trade disclosure
-2022-06-30,MODAM,insider_trade,Insider trade disclosure
-2022-06-30,POL,insider_trade,Insider trade disclosure
-2022-06-30,FCCL,other,FCCL | Fauji Cement Company Limited
 2022-07-01,MEHT,material_info,Material Information
 2022-07-01,ICI,material_info,Material Information
-2022-07-01,SAZEW,material_info,Material Information
-2022-07-01,PKGS,insider_trade,Insider trade disclosure
-2022-07-01,OML,insider_trade,Insider trade disclosure
-2022-07-01,MRNS,insider_trade,Insider trade disclosure
-2022-07-01,INIL,insider_trade,Insider trade disclosure
-2022-07-01,EFUL,insider_trade,Insider trade disclosure
-2022-07-01,SURC,insider_trade,Insider trade disclosure
-2022-07-01,EFERT,other,ASSUMPTION OF CHARGE AS NEW CHIEF EXECUTIVE OFFICER
-2022-07-01,MUGHAL,other,Provisional Profit Payment and Musharakah Capital Repayment to Islamic Comm
-2022-07-01,NETSOL,other,Final Report on The Purchase to be Submitted to the Commission and the Secu
-2022-07-01,MARI,other,Nomination of Directors on MPCL Board
-2022-07-01,SYS,agm,Extracts of resolutions adopted in the Extra Ordinary General Meeting
+2022-07-01,SAZEW,material_info,Material Information
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -698,9 +475,170 @@ D7. Did I start work before the question was clear?
 | 17 | GIDC recovery | SC Aug 2020 | outcome not shown |
 
 === FILE: situations.md ===
-(no situation-library entry has an outcome that closed before this date, or the library has no INDEX.md)
+2020-01-13 (outcome_end) | 01_2019_bottom_imf_programme.md | Regime bottom: the IMF approval was not the low. The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak. Lesson: wait for it, not the headline.
+2021-06-14 (outcome_end) | 02_2020_covid_crash_rate_cut_rebound.md | Shock with a policy backstop: the first rate cut came before the March 2020 low, the rebound was +79% from the low by June 2021. Lesson: enter a third, add on confirmation, favour USD earners.
+2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-type,as_of_cutoff,n,hit_rate,median,p50plus,source
-none,,,,,,no base rates available
+# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
+shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
+shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)
+shock_index3_buy,20 sessions,20,70%,+3.7%,,-10.9%,+1.1%,no word given
+shock_index3_buy,60 sessions,20,50%,+0.7%,,-18.3%,+2.2%,no word given
+shock_3day_fall5_buy,20 sessions,14,79%,+5.3%,,,,no word given (file labels this row a placebo arm)
+shock_3day_fall5_buy,60 sessions,14,79%,+7.0%,,-15.5%,,no word given (file labels this row a placebo arm)
+shock_fall5_hindsight_day1,20 sessions,25,12%,-4.4%,,,,biased downward (hindsight selection)
+shock_fall5_hindsight_day1,60 sessions,25,38%,-4.2%,,,,biased downward (hindsight selection)
+shock_fall5_hindsight_day3,20 sessions,25,16%,-3.9%,,,,biased downward (hindsight selection)
+shock_fall5_hindsight_day3,60 sessions,25,46%,-2.4%,,,,biased downward (hindsight selection)
+shock_fall5_hindsight_firstup_after_day1,20 sessions,25,24%,-4.4%,,,,biased downward (hindsight selection)
+shock_fall5_hindsight_firstup_after_day1,60 sessions,25,46%,-2.0%,,,,biased downward (hindsight selection)
+shock_fall5_hindsight_firstup_after_bottom,20 sessions,25,76%,+3.1%,,,,needs hindsight (file)
+shock_fall5_hindsight_firstup_after_bottom,60 sessions,25,70%,+4.7%,,,,needs hindsight (file)
+oracle_top3_3m_mom_S1,24 months (window; rotation exits),41,46%,-3%,,,,no verdict word (file: nothing reached 3x)
+oracle_top3_6m_mom_skip1_S2,24 months (window; rotation exits),36,39%,-9%,,,,no verdict word (file: nothing reached 3x)
+breakout_252high_S3,24 months (window; rotation exits),12,58%,+17%,,,,a hypothesis from five windows (file)
+oracle_cheapest_pe_top_sector_S4,24 months (window; rotation exits),34,53%,+2%,,,,no verdict word (file: nothing reached 3x)
+oracle_dip20_uptrend_S5,24 months (window; rotation exits),56,54%,+1%,,,,no verdict word (file: nothing reached 3x)
+oracle_eps_jump50_S6,24 months (window; rotation exits),25,48%,-3%,,,,no verdict word (file: nothing reached 3x)
+oracle_top10_liquid_ew_S8,24 months (window; rotation exits),49,63%,+4%,,,,no verdict word (file: nothing reached 3x)
+codex_mom63,24 months (cohort 2024-26; rotation exits),44,55%,+2.5%,,,,suggestive (file-level)
+codex_mom252,24 months (cohort 2024-26; rotation exits),30,37%,-1.7%,,,,suggestive (file-level)
+breakout_252high_codex,24 months (cohort 2024-26; rotation exits),53,62%,+4.6%,,,,suggestive (file-level)
+codex_dip200,24 months (cohort 2024-26; rotation exits),58,47%,-0.6%,,,,suggestive (file-level)
+codex_sector63,24 months (cohort 2024-26; rotation exits),55,38%,-1.7%,,,,suggestive (file-level)
+codex_vol20,24 months (cohort 2024-26; rotation exits),51,33%,-2.0%,,,,suggestive (file-level)
+codex_eps_yoy,24 months (cohort 2024-26; rotation exits),39,44%,-2.2%,,,,suggestive (file-level)
+insider_cluster,63 sessions,37,46%,-0.4%,,-33.2%,-0.6%,not supported
+insider_cluster,21 sessions,44,,-0.9%,,,,not supported
+insider_cluster,126 sessions,33,,-5.3%,,,,not supported
+insider_cluster_net_sales,63 sessions,28,43%,-2.2%,,-33.2%,-0.1%,not supported
+insider_singles,63 sessions,97,57%,+2.3%,,-33.2%,-1.6%,not supported
+insider_singles,21 sessions,117,,-0.5%,,,,not supported
+insider_singles,126 sessions,83,,-0.0%,,,,not supported
+insider_sponsor_substantial,63 sessions,5,20%,-8.7%,,-13.3%,-2.2%,not supported (n too small)
+insider_sponsor_substantial,21 sessions,7,,-3.2%,,,,not supported (n too small)
+insider_sponsor_substantial,126 sessions,4,,-12.8%,,,,not supported (n too small)
+insider_director_ceo,63 sessions,42,57%,+2.5%,,-33.2%,-1.3%,not supported
+insider_director_ceo,21 sessions,51,,-1.4%,,,,not supported
+insider_director_ceo,126 sessions,33,,+2.7%,,,,not supported
+insider_executive,63 sessions,59,54%,+1.8%,,-22.7%,+0.9%,not supported
+insider_executive,21 sessions,81,,+0.4%,,,,not supported
+insider_executive,126 sessions,45,,+2.5%,,,,not supported
+insider_roundtrip,63 sessions,23,48%,-0.6%,,-22.7%,+1.2%,not supported
+insider_roundtrip,21 sessions,34,,-1.1%,,,,not supported
+insider_roundtrip,126 sessions,18,,-1.8%,,,,not supported
+insider_clean_buy,63 sessions,113,55%,+1.8%,,-33.2%,-1.5%,not supported
+insider_clean_buy,21 sessions,149,,-0.5%,,,,not supported
+insider_clean_buy,126 sessions,92,,-0.3%,,,,not supported
+insider_sell_single,63 sessions,102,46%,-2.7%,,-63.6%,-0.8%,not supported
+insider_sell_single,21 sessions,137,,-3.1%,,,,not supported
+insider_sell_single,126 sessions,83,,-4.2%,,,,not supported
+insider_sell_cluster,63 sessions,33,39%,-3.4%,,-45.5%,-0.5%,not supported
+insider_sell_cluster,21 sessions,40,,-2.4%,,,,not supported
+insider_sell_cluster,126 sessions,27,,-2.6%,,,,not supported
+results_yoy_POS,5 sessions,378,48%,-0.2%,,,,no tradable drift (H1)
+results_yoy_POS,20 sessions,366,38%,-2.0%,,,,no tradable drift (H1)
+results_yoy_POS,60 sessions,338,43%,-2.3%,,,,no tradable drift (H1)
+results_yoy_LTP,5 sessions,96,32%,-1.8%,,,,no tradable drift (H1)
+results_yoy_LTP,20 sessions,92,48%,-0.4%,,,,no tradable drift (H1)
+results_yoy_LTP,60 sessions,88,45%,-2.5%,,,,no tradable drift (H1)
+results_yoy_NEG,5 sessions,188,46%,-0.5%,,,,no tradable drift (H1)
+results_yoy_NEG,20 sessions,186,46%,-1.5%,,,,no tradable drift (H1)
+results_yoy_NEG,60 sessions,181,39%,-5.3%,,,,no tradable drift (H1)
+results_yoy_PTL,5 sessions,81,36%,-1.1%,,,,no tradable drift (H1)
+results_yoy_PTL,20 sessions,79,34%,-2.4%,,,,no tradable drift (H1)
+results_yoy_PTL,60 sessions,78,44%,-2.6%,,,,no tradable drift (H1)
+results_yoy_MID,5 sessions,318,37%,-1.1%,,,,no tradable drift (H1)
+results_yoy_MID,20 sessions,315,35%,-2.3%,,,,no tradable drift (H1)
+results_yoy_MID,60 sessions,291,36%,-4.9%,,,,no tradable drift (H1)
+results_yoy_positive,5 sessions,474,45%,-0.7%,,-22.2%,,no tradable drift (H1)
+results_yoy_positive,20 sessions,458,40%,-1.6%,,-39.1%,,no tradable drift (H1)
+results_yoy_positive,60 sessions,426,44%,-2.3%,,-91.6%,,no tradable drift (H1)
+results_yoy_negative,5 sessions,269,43%,-0.8%,,,,no tradable drift (H1)
+results_yoy_negative,20 sessions,265,42%,-2.1%,,,,no tradable drift (H1)
+results_yoy_negative,60 sessions,259,40%,-4.4%,,,,no tradable drift (H1)
+results_yoy_all,5 sessions,1061,42%,-0.8%,,,,no tradable drift (H1)
+results_yoy_all,20 sessions,1038,39%,-2.0%,,,,no tradable drift (H1)
+results_yoy_all,60 sessions,976,41%,-3.3%,,,,no tradable drift (H1)
+results_muted_pe_main_H3,60 sessions,47,57%,+2.4%,,-26.0%,-0.3%,not confirmed (worst mapped to horizon by position)
+results_muted_pe_main_H3,120 sessions,42,67%,+6.4%,,-47.4%,+1.4%,not confirmed (worst mapped to horizon by position)
+results_muted_pe_tercile_H3,60 sessions,47,47%,-2.0%,,,,not confirmed
+results_muted_pe_tercile_H3,120 sessions,40,55%,+1.0%,,,,not confirmed
+results_pe_below6_any_reaction_H3,60 sessions,88,56%,+2.4%,,,,not confirmed
+results_pe_below6_any_reaction_H3,120 sessions,80,61%,+7.2%,,,,not confirmed
+results_muted_pe_above6_H3,60 sessions,84,32%,-4.4%,,,,not confirmed
+results_muted_pe_above6_H3,120 sessions,78,41%,-4.3%,,,,not confirmed
+results_positive_reference_H3,60 sessions,425,42%,-2.6%,,,,reference (no verdict word)
+results_positive_reference_H3,120 sessions,389,47%,-2.4%,,,,reference (no verdict word)
+results_board_notice_leg,about 5 sessions (median leg),2688,41%,-0.9%,,,-1.0%,nothing (indistinguishable from placebo)
+first_rate_cut_kse100,20 sessions,3,100%,+7.1%,,+3.0%,+1.3%,weak (H1)
+first_rate_cut_kse100,60 sessions,3,67%,+8.4%,,-9.4%,+3.7%,weak (H1)
+first_rate_cut_kse100,120 sessions,3,100%,+39.8%,,+1.1%,+7.9%,weak (H1)
+first_rate_cut_ew,20 sessions,3,100%,+3.9%,,+3.3%,+0.8%,weak (H1)
+first_rate_cut_ew,60 sessions,3,67%,+11.9%,,-21.5%,+1.9%,weak (H1)
+first_rate_cut_ew,120 sessions,3,67%,+49.2%,,-7.0%,+5.1%,weak (H1)
+cpi_fall1pt_kse100,120 sessions,10,60%,+12.6%,,-18.7%,+8.1%,weak as a 12-month rule (H4)
+cpi_fall1pt_kse100,250 sessions,10,70%,+52.3%,,-21.1%,+19.8%,weak as a 12-month rule (H4)
+cpi_fall1pt_ew,250 sessions,10,60%,+53.1%,,-33.8%,+14.1%,weak as a 12-month rule (H4)
+first_rate_hike_kse100,120 sessions,2,,-5.6%,,,,weak (H3)
+first_rate_hike_ew,120 sessions,2,,-15.6%,,,,weak (H3)
+mpc_hold_kse100,20 sessions,39,54%,+0.3%,,,,no verdict given (in sample; overlapping)
+mpc_hold_kse100,60 sessions,37,62%,+5.5%,,,,no verdict given (in sample; overlapping)
+mpc_hold_kse100,120 sessions,36,61%,+4.4%,,,,no verdict given (in sample; overlapping)
+sector_momentum_ls,3 months,31.7,65%,+2.65%,,-21.64%,+0.03%,works modestly (H1; primary 6/0/3m)
+sector_regime_tilt_RT_net_minus_B,3 months,31.7,51%,+0.21%,,-16.02%,,no edge (placebo p 0.255 is not a median)
+sector_momentum_top3_net_minus_B,3 months,31.7,54%,+0.95%,,-15.91%,,fails offset and half checks (file)
+sector_regime_tilt_RT_net_abs,3 months,31.7,46%,-1.20%,,-28.10%,,no edge
+quality_top_third,12 months,26,92%,+57.7%,,-7.6%,,Weak not proven
+quality_bottom_third,12 months,26,92%,+37.8%,,-14.1%,,Weak not proven
+quality_top_minus_bottom,12 months,26,69%,+5.8%,,-33.2%,,Weak not proven (file placebo p 0.054 is not a median)
+quality_qarp_minus_ew_kmi,12 months,26,54%,+2.4%,,-22.2%,,Weak not proven
+quality_qarp_minus_kmi30,12 months,26,54%,+0.7%,,-14.5%,,Weak not proven
+quality_qarp_minus_all_scored,12 months,26,46%,-0.3%,,-26.3%,,Weak not proven
+quality_top_minus_bottom_ext_ab,12 months,36,67%,+8.2%,,-18.4%,,Weak not proven (extended a and b only)
+quality_qarp_minus_ew_kmi_ext_ab,12 months,36,72%,+7.3%,,-18.0%,,Weak not proven (extended a and b only)
+quality_qarp_minus_kmi30_ext_ab,12 months,36,69%,+9.6%,,-13.9%,,Weak not proven (extended a and b only)
+winners_model_top_decile,6 months,550,57%,+7.1%,,-94.8%,+8.7%,does not support fast rotation
+winners_rule_screen,6 months,229,62%,+7.6%,,-93.1%,+8.7%,does not support fast rotation
+winners_all_liquid_placebo,6 months,5299,62%,+8.7%,,-94.8%,,placebo baseline (no verdict word)
+winners_random_name_per_month_placebo,6 months,500,,+12.6%,,,,placebo (median of medians; 500 draws)
+deal_post_intention,to completion or withdrawal (completion median 207 days),54,48%,-1.2%,,-64.3%,,no verdict word (see What this changes)
+deal_post_intention_kmi,to completion or withdrawal (completion median 207 days),19,58%,+5.3%,,-25.9%,,no verdict word
+deal_post_intention_vs_kse100,to completion or withdrawal (completion median 207 days),46,39%,-14.3%,,-88.2%,,lagged the index (file)
+deal_post_intention_full_tender_upper_bound,to completion or withdrawal (completion median 207 days),19,84%,+12.5%,,-58.5%,,upper bound only (file)
+deal_post_offer,to completion (duration not stated),24,54%,+1.1%,,-35.8%,,no verdict word
+deal_post_offer_kmi,to completion (duration not stated),11,,+1.4%,,,,no verdict word
+deal_sponsor_delisting,about 205 days (median),8,75%,+64%,,-15%,,no verdict word
+volume_locks_V1_liq5,trail20 stop (variable),248,27%,-13.0%,7.7%,-46%,-6.9%,nothing
+volume_locks_V2_liq5,trail20 stop (variable),215,28%,-14.2%,6.5%,-46%,-7.0%,nothing
+volume_locks_V3_liq5,trail20 stop (variable),471,32%,-11.7%,7.4%,-46%,-5.0%,nothing
+volume_locks_V4_liq5,trail20 stop (variable),440,35%,-9.6%,11.6%,-32%,-8.3%,watch not tradable
+volume_locks_V1_liq5,60 sessions,237,38%,-10.3%,10.5%,-71%,+1.0%,nothing
+volume_locks_V2_liq5,60 sessions,208,39%,-11.0%,10.6%,-71%,+0.3%,nothing
+volume_locks_V3_liq5,60 sessions,465,42%,-7.1%,7.5%,-71%,+1.5%,nothing
+volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable
+volume_locks_V1_liq1,trail20 stop (variable),456,30%,-10.9%,9.2%,-43%,-6.2%,nothing
+volume_locks_V2_liq1,trail20 stop (variable),413,31%,-12.8%,9.0%,-43%,-7.2%,nothing
+volume_locks_V3_liq1,trail20 stop (variable),748,34%,-10.5%,8.7%,-43%,-4.5%,nothing
+volume_locks_V4_liq1,trail20 stop (variable),738,36%,-9.1%,12.3%,-32%,-7.3%,watch not tradable
+volume_locks_V1_liq1,60 sessions,446,39%,-6.8%,8.5%,-71%,+1.0%,nothing
+volume_locks_V2_liq1,60 sessions,406,41%,-8.7%,9.1%,-71%,+0.0%,nothing
+volume_locks_V3_liq1,60 sessions,736,43%,-5.2%,7.3%,-71%,+2.0%,nothing
+volume_locks_V4_liq1,60 sessions,734,46%,-1.7%,4.6%,-60%,-0.5%,watch not tradable
+volume_locks_V1_strict10_liq5,trail20 stop (variable),129,29%,-11.7%,,,,same conclusion (literal +10% sensitivity)
+volume_locks_V4_strict10_liq1,trail20 stop (variable),377,,-6.6%,,,,same conclusion (literal +10% sensitivity)
+results_gap_up,20 sessions,41,51%,+0.7%,5%,-23.7%,+1.7%,watch (20-day exit has no edge)
+results_gap_up,60 sessions,37,81%,+16.6%,14%,-44.1%,+10.0%,watch (p 0.11 vs same-year random)
+results_gap_up,120 sessions,37,78%,+18.4%,22%,-38.2%,+21.0%,watch (gone at 120d per file)
+results_gap_up_trail20,trail20 stop (variable),38,68%,+14.5%,26%,-20.9%,+9.6%,watch (exit that worked per file)
+results_upper_lock_results_day,60 sessions,31,61%,+5.8%,10%,-21.9%,+3.4%,nothing
+results_upper_lock_results_day,120 sessions,29,62%,+6.5%,21%,-48.8%,+10.2%,nothing
+results_upper_lock_results_day_trail20,trail20 stop (variable),33,48%,-2.0%,12%,-23.1%,-0.7%,nothing
+results_loss_to_profit,60 sessions,49,59%,+5.7%,12%,-32.5%,+4.0%,nothing as an entry rule
+results_loss_to_profit,120 sessions,47,60%,+8.8%,17%,-70.6%,+12.0%,nothing as an entry rule
+results_loss_to_profit_trail20,trail20 stop (variable),47,43%,-2.9%,19%,-24.0%,-1.3%,nothing as an entry rule
+results_all_liquid_baseline,60 sessions,1223,59%,+4.7%,7%,-72.1%,,baseline (no verdict word)
+results_all_liquid_baseline_trail20,trail20 stop (variable),1169,46%,-2.5%,16%,-38.5%,,baseline (no verdict word)
 === END ===

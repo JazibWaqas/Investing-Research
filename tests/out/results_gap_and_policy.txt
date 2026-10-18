@@ -1,0 +1,266 @@
+== R. RESULTS-DAY GAPS. Panel (2480, 456) 2016-10-17 to 2026-10-16
+Corporate-action repair on the adjusted series (one-day fall of 35%+, beyond the limit): 5 name-days in the EPS symbols: 2017-04-04 MUGHAL -44%, 2017-05-04 GHGL -42%, 2025-11-17 BECO -89%, 2025-12-08 BNL -89%, 2026-03-24 STL -91%
+Entry: close of the first session after the reaction session that is traded and not locked (upper or lower, within 0.5% of 10%), within 10 sessions, else no trade. Exits: fixed 20/60/120 sessions, or 20% trailing stop on closes (cap 250 sessions); an exit waits for the next session that is not lower-locked.
+Cost 0.5% round trip, plus 0.5% slippage when trailing-60-session median traded value < Rs20m. Universe: Rs5m median traded value (point in time). Returns: panel_close_adj (total return where the cash table has it).
+Upper-lock days among the 129 EPS symbols: 2097; lower-lock days: 804 (corporate-action ex-dates are not flagged as locks)
+EPS rows 2460, symbols 129; with a cleaned result timestamp and a reaction session on the panel: 1946
+Events with the reaction session traded and the name liquid (Rs5m): 1325 in 120 symbols; by year {2020: 2, 2021: 67, 2022: 178, 2023: 188, 2024: 262, 2025: 343, 2026: 285}
+Share of results announced before 09:15 or after 15:30 (pure opening-gap news): 24.5%; the other 75.5% is intraday news (reaction session = announcement day, so a '5% gap' is the day's close over the prior close)
+Signals before fills: (a) reaction-day return >=5% on 2x volume and EPS YoY >=30%: 43; (a-strict) opening gap >=5% on the first session that opens after the news, 2x volume, EPS >=30%: 22; (b) upper lock on the reaction session: 38; (c) EPS loss to profit with a positive reaction: 55
+Overlaps: a&b 18  a&c 0  b&c 5
+Context, all liquid events: share with day return >=5% on 2x volume 7.1%  share upper-locked 2.9%  share with EPS up >=30% YoY 27.8%
+
+---------------- SIGNAL a_gap_eps30: 43 reaction-session events, 36 symbols
+unfillable within 10 sessions: 1; filled 42; delay from signal day: {1.0: 38, 2.0: 3, 3.0: 1}
+independent episodes: 14 entry quarters, 35 symbols; entry years {2022.0: 1, 2023.0: 6, 2024.0: 16, 2025.0: 12, 2026.0: 7}; regime {'tb<=pr': 26, 'tb>pr': 16}
+
+[a_gap_eps30 | exit h20] censored (window past data end, excluded) 1. NET: n 41, mean +5.9%, median +0.7%, win 51%, >+50% 5%, <-30% 0%, worst -23.7%; gross median +1.2%
+   post-result placebo: median of medians +0.3% (5-95%: -2.7% to +4.1%), mean +3.1%, win 51%, >+50% 1.7%; event median minus placebo +0.5%; p(placebo median >= event) 0.430; p(placebo mean >= event) 0.117
+   same-year placebo: median of medians +1.7% (5-95%: -1.7% to +6.0%), mean +5.2%, win 56%, >+50% 2.6%; event median minus placebo -0.9%; p(placebo median >= event) 0.683; p(placebo mean >= event) 0.387
+   sleeve Rs50k, <=3 positions: final 1.86x, max drawdown -21%, invested 41% of days, trades taken 34 of 41
+
+[a_gap_eps30 | exit h60] censored (window past data end, excluded) 5. NET: n 37, mean +25.3%, median +16.6%, win 81%, >+50% 14%, <-30% 3%, worst -44.1%; gross median +17.2%
+   post-result placebo: median of medians +3.0% (5-95%: -2.3% to +10.1%), mean +8.5%, win 56%, >+50% 6.2%; event median minus placebo +13.5%; p(placebo median >= event) 0.000; p(placebo mean >= event) 0.000
+   same-year placebo: median of medians +10.0% (5-95%: +3.0% to +18.6%), mean +18.1%, win 66%, >+50% 13.4%; event median minus placebo +6.5%; p(placebo median >= event) 0.110; p(placebo mean >= event) 0.070
+   sleeve Rs50k, <=3 positions: final 5.17x, max drawdown -23%, invested 68% of days, trades taken 23 of 37
+   by entry year: 2022.0: n 1, mean -26.4%, median -26.4%, win 0%, >+50% 0%, <-30% 0%, worst -26.4%; 2023.0: n 6, mean +23.5%, median +23.9%, win 100%, >+50% 0%, <-30% 0%, worst +16.0%; 2024.0: n 16, mean +43.9%, median +27.9%, win 94%, >+50% 25%, <-30% 0%, worst -7.8%; 2025.0: n 12, mean +6.4%, median +2.0%, win 58%, >+50% 8%, <-30% 8%, worst -44.1%; 2026.0: n 2, mean +21.4%, median +21.4%, win 100%, >+50% 0%, <-30% 0%, worst +12.4%
+   by regime:     tb<=pr: n 26, mean +27.7%, median +13.1%, win 77%, >+50% 19%, <-30% 4%, worst -44.1%; tb>pr: n 11, mean +19.8%, median +26.0%, win 91%, >+50% 0%, <-30% 0%, worst -26.4%
+
+[a_gap_eps30 | exit h120] censored (window past data end, excluded) 5. NET: n 37, mean +37.4%, median +18.4%, win 78%, >+50% 22%, <-30% 8%, worst -38.2%; gross median +19.4%
+   post-result placebo: median of medians +6.2% (5-95%: -2.1% to +18.1%), mean +18.1%, win 60%, >+50% 15.4%; event median minus placebo +12.3%; p(placebo median >= event) 0.047; p(placebo mean >= event) 0.013
+   same-year placebo: median of medians +21.0% (5-95%: +11.8% to +31.5%), mean +37.1%, win 73%, >+50% 25.1%; event median minus placebo -2.6%; p(placebo median >= event) 0.630; p(placebo mean >= event) 0.437
+   sleeve Rs50k, <=3 positions: final 11.35x, max drawdown -31%, invested 100% of days, trades taken 19 of 37
+
+[a_gap_eps30 | exit trail] censored (window past data end, excluded) 4. NET: n 38, mean +40.4%, median +14.5%, win 68%, >+50% 26%, <-30% 0%, worst -20.9%; gross median +15.5%
+   post-result placebo: median of medians -3.0% (5-95%: -8.9% to +4.8%), mean +12.6%, win 46%, >+50% 13.4%; event median minus placebo +17.5%; p(placebo median >= event) 0.003; p(placebo mean >= event) 0.000
+   same-year placebo: median of medians +9.6% (5-95%: +0.5% to +20.7%), mean +33.7%, win 60%, >+50% 25.7%; event median minus placebo +4.9%; p(placebo median >= event) 0.187; p(placebo mean >= event) 0.233
+   sleeve Rs50k, <=3 positions: final 11.22x, max drawdown -23%, invested 87% of days, trades taken 16 of 38
+   by entry year: 2022.0: n 1, mean -20.2%, median -20.2%, win 0%, >+50% 0%, <-30% 0%, worst -20.2%; 2023.0: n 6, mean +60.9%, median +20.4%, win 100%, >+50% 33%, <-30% 0%, worst +8.7%; 2024.0: n 16, mean +66.7%, median +32.8%, win 75%, >+50% 44%, <-30% 0%, worst -17.0%; 2025.0: n 12, mean +8.8%, median +0.6%, win 50%, >+50% 8%, <-30% 0%, worst -20.9%; 2026.0: n 3, mean +6.4%, median +6.7%, win 67%, >+50% 0%, <-30% 0%, worst -6.6%
+   by regime:     tb<=pr: n 26, mean +44.5%, median +14.5%, win 62%, >+50% 31%, <-30% 0%, worst -20.9%; tb>pr: n 12, mean +31.5%, median +12.7%, win 83%, >+50% 17%, <-30% 0%, worst -20.2%
+   [h60] worst 3: TATM 2025-08-12 -44.1%, FABL 2022-10-28 -26.4%, NETSOL 2025-09-24 -12.1% | best 3: FFC 2024-07-31 +66.4%, HALEON 2024-08-27 +82.7%, SAZEW 2024-02-01 +267.3% | top-3 share of summed net return: 44%; median without the top 3: +16.1%
+   [trail] worst 3: NETSOL 2025-09-24 -20.9%, FABL 2022-10-28 -20.2%, TOMCL 2024-10-30 -17.0% | best 3: FFC 2024-07-31 +189.3%, SAZEW 2023-04-19 +216.4%, SAZEW 2024-02-01 +437.1% | top-3 share of summed net return: 55%; median without the top 3: +9.3%
+
+---------------- SIGNAL b_upperlock: 38 reaction-session events, 34 symbols
+unfillable within 10 sessions: 1; filled 37; delay from signal day: {1.0: 30, 2.0: 5, 3.0: 1, 9.0: 1}
+independent episodes: 8 entry quarters, 34 symbols; entry years {2024.0: 12, 2025.0: 15, 2026.0: 10}; regime {'tb<=pr': 22, 'tb>pr': 15}
+
+[b_upperlock | exit h20] censored (window past data end, excluded) 1. NET: n 36, mean +3.5%, median +1.9%, win 58%, >+50% 0%, <-30% 3%, worst -39.0%; gross median +2.6%
+   post-result placebo: median of medians -0.1% (5-95%: -3.1% to +3.3%), mean +2.7%, win 49%, >+50% 1.9%; event median minus placebo +2.0%; p(placebo median >= event) 0.140; p(placebo mean >= event) 0.337
+   same-year placebo: median of medians +0.3% (5-95%: -2.4% to +4.3%), mean +4.6%, win 51%, >+50% 3.6%; event median minus placebo +1.6%; p(placebo median >= event) 0.257; p(placebo mean >= event) 0.600
+   sleeve Rs50k, <=3 positions: final 1.27x, max drawdown -27%, invested 55% of days, trades taken 29 of 36
+
+[b_upperlock | exit h60] censored (window past data end, excluded) 6. NET: n 31, mean +14.0%, median +5.8%, win 61%, >+50% 10%, <-30% 0%, worst -21.9%; gross median +6.3%
+   post-result placebo: median of medians +0.0% (5-95%: -5.6% to +6.8%), mean +6.5%, win 50%, >+50% 6.4%; event median minus placebo +5.8%; p(placebo median >= event) 0.070; p(placebo mean >= event) 0.090
+   same-year placebo: median of medians +3.4% (5-95%: -2.8% to +11.6%), mean +14.6%, win 56%, >+50% 11.3%; event median minus placebo +2.4%; p(placebo median >= event) 0.300; p(placebo mean >= event) 0.490
+   sleeve Rs50k, <=3 positions: final 1.30x, max drawdown -24%, invested 63% of days, trades taken 12 of 31
+   by entry year: 2024.0: n 12, mean +35.3%, median +32.0%, win 92%, >+50% 25%, <-30% 0%, worst -2.6%; 2025.0: n 15, mean +1.2%, median -5.2%, win 40%, >+50% 0%, <-30% 0%, worst -18.5%; 2026.0: n 4, mean -1.9%, median +0.9%, win 50%, >+50% 0%, <-30% 0%, worst -21.9%
+   by regime:     tb<=pr: n 22, mean +16.9%, median +7.6%, win 64%, >+50% 14%, <-30% 0%, worst -21.9%; tb>pr: n 9, mean +6.8%, median +4.5%, win 56%, >+50% 0%, <-30% 0%, worst -18.5%
+
+[b_upperlock | exit h120] censored (window past data end, excluded) 8. NET: n 29, mean +14.0%, median +6.5%, win 62%, >+50% 21%, <-30% 17%, worst -48.8%; gross median +7.5%
+   post-result placebo: median of medians +0.1% (5-95%: -7.9% to +10.2%), mean +11.7%, win 50%, >+50% 12.7%; event median minus placebo +6.4%; p(placebo median >= event) 0.130; p(placebo mean >= event) 0.357
+   same-year placebo: median of medians +10.2% (5-95%: +0.1% to +23.5%), mean +25.4%, win 63%, >+50% 21.3%; event median minus placebo -3.7%; p(placebo median >= event) 0.687; p(placebo mean >= event) 0.927
+   sleeve Rs50k, <=3 positions: final 1.73x, max drawdown -28%, invested 99% of days, trades taken 11 of 29
+
+[b_upperlock | exit trail] censored (window past data end, excluded) 4. NET: n 33, mean +11.9%, median -2.0%, win 48%, >+50% 12%, <-30% 0%, worst -23.1%; gross median -1.0%
+   post-result placebo: median of medians -7.8% (5-95%: -13.3% to +2.4%), mean +5.4%, win 39%, >+50% 8.8%; event median minus placebo +5.8%; p(placebo median >= event) 0.147; p(placebo mean >= event) 0.140
+   same-year placebo: median of medians -0.7% (5-95%: -9.3% to +10.5%), mean +19.3%, win 49%, >+50% 18.6%; event median minus placebo -1.4%; p(placebo median >= event) 0.593; p(placebo mean >= event) 0.863
+   sleeve Rs50k, <=3 positions: final 1.56x, max drawdown -24%, invested 93% of days, trades taken 14 of 33
+   by entry year: 2024.0: n 12, mean +37.0%, median +28.1%, win 83%, >+50% 25%, <-30% 0%, worst -17.1%; 2025.0: n 15, mean -4.7%, median -11.6%, win 27%, >+50% 0%, <-30% 0%, worst -19.1%; 2026.0: n 6, mean +3.2%, median -5.0%, win 33%, >+50% 17%, <-30% 0%, worst -23.1%
+   by regime:     tb<=pr: n 22, mean +15.9%, median +3.7%, win 55%, >+50% 14%, <-30% 0%, worst -23.1%; tb>pr: n 11, mean +3.8%, median -3.5%, win 36%, >+50% 9%, <-30% 0%, worst -19.1%
+   [h60] worst 3: ZAL 2026-02-27 -21.9%, THCCL 2025-10-29 -18.5%, BECO 2025-11-03 -18.2% | best 3: CSAP 2024-08-12 +52.4%, PSO 2024-10-28 +63.0%, GLAXO 2024-08-27 +103.9% | top-3 share of summed net return: 51%; median without the top 3: +4.2%
+   [trail] worst 3: ZAL 2026-02-27 -23.1%, THCCL 2025-10-29 -19.1%, BNL 2025-10-07 -17.5% | best 3: EPQL 2024-08-02 +73.1%, MARI 2024-08-12 +91.0%, GLAXO 2024-08-27 +138.2% | top-3 share of summed net return: 77%; median without the top 3: -4.6%
+
+---------------- SIGNAL c_loss_to_profit: 55 reaction-session events, 38 symbols
+unfillable within 10 sessions: 0; filled 55; delay from signal day: {1: 51, 2: 3, 3: 1}
+independent episodes: 18 entry quarters, 38 symbols; entry years {2021: 2, 2022: 1, 2023: 10, 2024: 17, 2025: 13, 2026: 12}; regime {'tb>pr': 29, 'tb<=pr': 26}
+
+[c_loss_to_profit | exit h20] censored (window past data end, excluded) 3. NET: n 52, mean +2.0%, median -1.0%, win 44%, >+50% 0%, <-30% 0%, worst -19.9%; gross median -0.3%
+   post-result placebo: median of medians -0.5% (5-95%: -3.2% to +2.7%), mean +2.1%, win 48%, >+50% 1.4%; event median minus placebo -0.5%; p(placebo median >= event) 0.663; p(placebo mean >= event) 0.493
+   same-year placebo: median of medians +0.2% (5-95%: -2.8% to +3.2%), mean +2.7%, win 50%, >+50% 1.8%; event median minus placebo -1.2%; p(placebo median >= event) 0.747; p(placebo mean >= event) 0.620
+   sleeve Rs50k, <=3 positions: final 1.22x, max drawdown -21%, invested 37% of days, trades taken 43 of 52
+
+[c_loss_to_profit | exit h60] censored (window past data end, excluded) 6. NET: n 49, mean +17.3%, median +5.7%, win 59%, >+50% 12%, <-30% 2%, worst -32.5%; gross median +6.7%
+   post-result placebo: median of medians -1.3% (5-95%: -6.0% to +4.4%), mean +5.6%, win 47%, >+50% 7.6%; event median minus placebo +7.0%; p(placebo median >= event) 0.030; p(placebo mean >= event) 0.007
+   same-year placebo: median of medians +4.0% (5-95%: -1.1% to +10.0%), mean +12.1%, win 57%, >+50% 9.9%; event median minus placebo +1.7%; p(placebo median >= event) 0.283; p(placebo mean >= event) 0.100
+   sleeve Rs50k, <=3 positions: final 2.76x, max drawdown -23%, invested 63% of days, trades taken 27 of 49
+   by entry year: 2021: n 2, mean -3.7%, median -3.7%, win 0%, >+50% 0%, <-30% 0%, worst -6.4%; 2022: n 1, mean -32.5%, median -32.5%, win 0%, >+50% 0%, <-30% 100%, worst -32.5%; 2023: n 10, mean +32.6%, median +19.5%, win 80%, >+50% 10%, <-30% 0%, worst -5.1%; 2024: n 17, mean +25.2%, median +12.8%, win 71%, >+50% 24%, <-30% 0%, worst -21.6%; 2025: n 13, mean +3.0%, median -0.6%, win 38%, >+50% 8%, <-30% 0%, worst -23.0%; 2026: n 6, mean +15.9%, median +15.3%, win 67%, >+50% 0%, <-30% 0%, worst -5.2%
+   by regime:     tb<=pr: n 26, mean +11.0%, median +2.2%, win 50%, >+50% 15%, <-30% 0%, worst -23.0%; tb>pr: n 23, mean +24.5%, median +22.8%, win 70%, >+50% 9%, <-30% 4%, worst -32.5%
+
+[c_loss_to_profit | exit h120] censored (window past data end, excluded) 8. NET: n 47, mean +23.8%, median +8.8%, win 60%, >+50% 17%, <-30% 6%, worst -70.6%; gross median +9.3%
+   post-result placebo: median of medians +0.7% (5-95%: -5.9% to +9.0%), mean +11.8%, win 51%, >+50% 14.3%; event median minus placebo +8.1%; p(placebo median >= event) 0.060; p(placebo mean >= event) 0.040
+   same-year placebo: median of medians +12.0% (5-95%: +4.5% to +20.9%), mean +27.7%, win 66%, >+50% 21.5%; event median minus placebo -3.2%; p(placebo median >= event) 0.777; p(placebo mean >= event) 0.737
+   sleeve Rs50k, <=3 positions: final 3.07x, max drawdown -31%, invested 87% of days, trades taken 20 of 47
+
+[c_loss_to_profit | exit trail] censored (window past data end, excluded) 8. NET: n 47, mean +16.1%, median -2.9%, win 43%, >+50% 19%, <-30% 0%, worst -24.0%; gross median -1.9%
+   post-result placebo: median of medians -9.0% (5-95%: -13.3% to -1.7%), mean +5.5%, win 37%, >+50% 10.1%; event median minus placebo +6.0%; p(placebo median >= event) 0.107; p(placebo mean >= event) 0.043
+   same-year placebo: median of medians -1.3% (5-95%: -7.3% to +7.2%), mean +20.3%, win 48%, >+50% 18.6%; event median minus placebo -1.6%; p(placebo median >= event) 0.620; p(placebo mean >= event) 0.723
+   sleeve Rs50k, <=3 positions: final 3.87x, max drawdown -25%, invested 75% of days, trades taken 20 of 47
+   by entry year: 2021: n 2, mean -10.6%, median -10.6%, win 0%, >+50% 0%, <-30% 0%, worst -10.8%; 2022: n 1, mean -22.3%, median -22.3%, win 0%, >+50% 0%, <-30% 0%, worst -22.3%; 2023: n 10, mean +24.9%, median +7.8%, win 70%, >+50% 20%, <-30% 0%, worst -16.7%; 2024: n 17, mean +29.8%, median +1.7%, win 53%, >+50% 29%, <-30% 0%, worst -24.0%; 2025: n 13, mean -2.8%, median -13.0%, win 23%, >+50% 8%, <-30% 0%, worst -22.9%; 2026: n 4, mean +20.5%, median -6.9%, win 25%, >+50% 25%, <-30% 0%, worst -15.6%
+   by regime:     tb<=pr: n 25, mean +16.1%, median -2.9%, win 40%, >+50% 20%, <-30% 0%, worst -24.0%; tb>pr: n 22, mean +16.1%, median -3.1%, win 45%, >+50% 18%, <-30% 0%, worst -22.3%
+   [h60] worst 3: PRL 2022-10-24 -32.5%, UNITY 2025-09-30 -23.0%, CNERGY 2024-04-29 -21.6% | best 3: GAL 2024-10-24 +85.8%, GLAXO 2024-08-27 +103.9%, SAZEW 2023-09-08 +171.8% | top-3 share of summed net return: 43%; median without the top 3: +5.4%
+   [trail] worst 3: PIBTL 2024-04-24 -24.0%, UNITY 2025-09-30 -22.9%, PRL 2022-10-24 -22.3% | best 3: PSO 2024-08-28 +117.2%, SAZEW 2023-09-08 +120.3%, GLAXO 2024-08-27 +138.2% | top-3 share of summed net return: 50%; median without the top 3: -4.3%
+
+---------------- ROBUSTNESS: (a) with the strict opening-gap definition, events 22
+[strict a | h20] NET: n 21, mean +7.6%, median +2.0%, win 57%, >+50% 10%, <-30% 0%, worst -12.2%
+[strict a | h60] NET: n 19, mean +17.4%, median +9.3%, win 58%, >+50% 16%, <-30% 0%, worst -25.6%
+[strict a | h120] NET: n 18, mean +33.5%, median +10.4%, win 67%, >+50% 28%, <-30% 11%, worst -38.2%
+[strict a | trail] NET: n 18, mean +32.8%, median +7.3%, win 56%, >+50% 28%, <-30% 0%, worst -20.9%
+
+---------------- BASELINE: every liquid result event, same entry and exits
+[all results | h20] NET: n 1293, mean +1.1%, median -0.6%, win 48%, >+50% 1%, <-30% 0%, worst -39.2%
+[all results | h60] NET: n 1223, mean +9.0%, median +4.7%, win 59%, >+50% 7%, <-30% 2%, worst -72.1%
+[all results | h120] NET: n 1140, mean +15.2%, median +6.7%, win 59%, >+50% 13%, <-30% 6%, worst -78.5%
+[all results | trail] NET: n 1169, mean +13.6%, median -2.5%, win 46%, >+50% 16%, <-30% 0%, worst -38.5%
+
+---------------- LIVE SCREEN: reaction sessions in the last 20 sessions to 2026-10-16
+result events with a reaction session in the window: 36 (31 liquid); symbols with the latest EPS row in the file: 36
+  PIBTL reaction 2026-09-21 day return +3.0%, volume x3.7, EPS 0.7 vs -0.14, upper lock False, liquid True -> a False, b False, c True; total return since the reaction-day close -14.5%
+  STL reaction 2026-09-24 day return +0.4%, volume x12.1, EPS 1.14 vs -0.8, upper lock False, liquid True -> a False, b False, c True; total return since the reaction-day close -9.5%
+  PREMA reaction 2026-09-29 day return +10.0%, volume x7.9, EPS 1.86 vs 0.84, upper lock True, liquid True -> a True, b True, c False; total return since the reaction-day close -8.6%
+  QTECH reaction 2026-10-07 day return +4.4%, volume x4.7, EPS 1.06 vs -0.27, upper lock False, liquid True -> a False, b False, c True; total return since the reaction-day close -1.3%
+== P. SECTOR POLICY WINDOWS. Panel 2016-10-17 to 2026-10-16
+Baskets: equal-weight daily-rebalanced total-return (panel_close_adj, forward-filled, corporate-action repair) of the scripts/sector_momentum.py names present in the panel. Benchmark: KMI All Share total return (data/macro/kmiallshr.csv).
+Entry = close of the session AFTER the first session on or after the date (signal at close t, fill next close). Net = excess minus 1.0% (0.5% round trip plus 0.5% slippage for a multi-name basket). MARKET rows use the KMI All Share TR itself (absolute).
+  basket Oil refineries: 4 of 4 names in panel
+  basket E&P: 3 of 3 names in panel
+  basket OMC: 4 of 4 names in panel
+  basket Power: 6 of 6 names in panel
+  basket Fertilizer: 4 of 4 names in panel
+  basket Cement: 16 of 16 names in panel
+  basket Autos: 12 of 12 names in panel
+  basket Islamic banks & fin.: 10 of 10 names in panel
+  basket Gas utilities & misc: 13 of 13 names in panel
+
+REFPOL26 [policy approval; Oil refineries; expected +] first public 2026-07-13, decision 2026-07-28, lag 11 sessions. refinery policy fast-tracked 13 Jul (repo: unverified), CCoE approval 28 Jul (repo: Dawn 25 Sep)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +6.7% (net +5.7%, pctile 91%)  +20: +31.3% (net +30.3%, pctile 99%)  +60: +61.0% (net +60.0%, pctile 98%)  +120: n/a (past data end)
+   from decision date: +5: +2.6%  +20: +29.9%  +60: n/a  +120: n/a   | earned between first public and decision: +15.4%
+   path to +66: best in expected direction at +66 sessions = +73.0%; first session the excess is against the expected direction: +1; excess at end +73.0%
+
+DIESELCAP26 [regulated price; Oil refineries; expected -] first public 2026-08-20, decision 2026-08-20, lag 0 sessions. HSD crack cap effective 20 Aug 2026 (refineries.md); announcement date not found, so no lead
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +8.4% (net +7.4%, pctile 94%)  +20: +0.7% (net -0.3%, pctile 59%)  +60: n/a (past data end)  +120: n/a (past data end)
+   path to +39: best in expected direction at +10 sessions = -4.0%; first session the excess is against the expected direction: +5; excess at end +16.1%
+
+OMCDIESELCUT26 [regulated price; OMC; expected -] first public 2026-04-11, decision 2026-04-11, lag 0 sessions. diesel cut Rs135/l, OMC inventory loss est. Rs106bn (omc.md)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +13.5% (net +12.5%, pctile 100%)  +20: +29.5% (net +28.5%, pctile 100%)  +60: +19.7% (net +18.7%, pctile 96%)  +120: +19.0% (net +18.0%, pctile 95%)
+   path to +120: best in expected direction at +1 sessions = +3.4%; first session the excess is against the expected direction: +1; excess at end +19.0%
+
+OMCMARGIN23 [regulated price; OMC; expected +] first public 2023-09-07, decision 2023-09-15, lag 6 sessions. ECC margin rise Rs1.87/l: Geo article 7 Sep 2023 (meeting inferred 6 Sep), effective 15 Sep; later reported delayed
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +1.8% (net +0.8%, pctile 78%)  +20: -0.2% (net -1.2%, pctile 58%)  +60: -2.7% (net -3.7%, pctile 51%)  +120: -21.0% (net -22.0%, pctile 3%)
+   from decision date: +5: -2.7%  +20: -2.4%  +60: +1.4%  +120: -20.1%   | earned between first public and decision: +1.8%
+   path to +120: best in expected direction at +32 sessions = +8.0%; first session the excess is against the expected direction: +11; excess at end -21.0%
+
+SUPERTAXFCC26 [tax; E&P; expected +] first public 2026-01-27, decision 2026-01-27, lag 0 sessions. Federal Constitutional Court order on super tax, per-concession calculation (exploration_production.md)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -1.2% (net -2.2%, pctile 29%)  +20: -5.3% (net -6.3%, pctile 10%)  +60: -0.2% (net -1.2%, pctile 47%)  +120: -4.7% (net -5.7%, pctile 31%)
+   path to +120: best in expected direction at +27 sessions = +2.0%; first session the excess is against the expected direction: +1; excess at end -4.7%
+
+WELLHEAD26 [regulated price; E&P; expected +] first public 2026-09-04, decision 2026-09-04, lag 0 sessions. OGRA wellhead gas +8-10% Jul-Dec 2026, Nukta 4 Sep (exploration_production.md); some fields pending
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +1.3% (net +0.3%, pctile 74%)  +20: +2.1% (net +1.1%, pctile 69%)  +60: n/a (past data end)  +120: n/a (past data end)
+   path to +29: best in expected direction at +21 sessions = +3.1%; first session the excess is against the expected direction: never; excess at end +1.1%
+
+GIDC20 [tax; Fertilizer; expected -] first public 2020-08-13, decision 2020-08-13, lag 0 sessions. Supreme Court GIDC verdict Rs417bn, 13 Aug 2020 (ProPakistani, Profit)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +1.4% (net +0.4%, pctile 77%)  +20: -0.9% (net -1.9%, pctile 35%)  +60: +0.7% (net -0.3%, pctile 43%)  +120: -10.2% (net -11.2%, pctile 20%)
+   path to +120: best in expected direction at +120 sessions = -10.2%; first session the excess is against the expected direction: +2; excess at end -10.2%
+
+FEEDGAS24 [regulated price; Fertilizer; expected -] first public 2024-02-14, decision 2024-02-14, lag 0 sessions. ECC gas price rise incl. fertilizer feed/fuel gas, ProPakistani 14 Feb 2024; earlier proposal date not found
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +1.7% (net +0.7%, pctile 81%)  +20: +5.4% (net +4.4%, pctile 90%)  +60: +20.8% (net +19.8%, pctile 99%)  +120: +28.8% (net +27.8%, pctile 97%)
+   path to +120: best in expected direction at +7 sessions = +0.6%; first session the excess is against the expected direction: +1; excess at end +28.8%
+
+CONSTRPKG20 [policy approval; Cement; expected +] first public 2020-04-03, decision 2020-04-14, lag 7 sessions. construction package announced 3 Apr 2020 (KPMG), ordinance 14 Apr (Pakistan Today; ProPakistani says 19 Apr)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +1.8% (net +0.8%, pctile 77%)  +20: +5.3% (net +4.3%, pctile 81%)  +60: +3.1% (net +2.1%, pctile 56%)  +120: +27.7% (net +26.7%, pctile 90%)
+   from decision date: +5: +12.5%  +20: +3.2%  +60: +7.5%  +120: +27.0%   | earned between first public and decision: +4.6%
+   path to +120: best in expected direction at +103 sessions = +41.1%; first session the excess is against the expected direction: +52; excess at end +27.7%
+
+CEMFED24 [tax; Cement; expected -] first public 2024-06-12, decision 2024-06-28, lag 9 sessions. FY25 budget 12 Jun 2024 raises cement FED (to Rs4/kg; sources disagree on the old rate); NA passed Finance Bill 28 Jun
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -4.7% (net -5.7%, pctile 4%)  +20: -4.3% (net -5.3%, pctile 23%)  +60: +0.6% (net -0.4%, pctile 47%)  +120: +34.7% (net +33.7%, pctile 94%)
+   from decision date: +5: -0.4%  +20: -0.9%  +60: +4.9%  +120: +37.8%   | earned between first public and decision: -4.7%
+   path to +120: best in expected direction at +38 sessions = -7.9%; first session the excess is against the expected direction: +44; excess at end +34.7%
+
+SUPERTAX22 [tax; Cement; expected -] first public 2022-06-24, decision 2022-06-29, lag 3 sessions. 10% super tax on 13 sectors incl. cement: announced 24 Jun 2022, NA approval 29 Jun (Dawn, Business Recorder)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -2.0% (net -3.0%, pctile 23%)  +20: -0.7% (net -1.7%, pctile 49%)  +60: +13.3% (net +12.3%, pctile 88%)  +120: +2.3% (net +1.3%, pctile 54%)
+   from decision date: +5: -1.3%  +20: +1.3%  +60: +14.2%  +120: +2.9%   | earned between first public and decision: -1.0%
+   path to +120: best in expected direction at +15 sessions = -4.5%; first session the excess is against the expected direction: +23; excess at end +2.3%
+
+IPPPROBE20 [policy approval; Power; expected -] first public 2020-04-21, decision 2020-04-21, lag 0 sessions. cabinet decision to publish IPP inquiry report (power.md)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +1.2% (net +0.2%, pctile 76%)  +20: -4.1% (net -5.1%, pctile 20%)  +60: -8.6% (net -9.6%, pctile 17%)  +120: -18.2% (net -19.2%, pctile 10%)
+   path to +120: best in expected direction at +94 sessions = -19.7%; first session the excess is against the expected direction: +3; excess at end -18.2%
+
+IPPTERM24 [policy approval; Power; expected -] first public 2024-10-10, decision 2024-10-10, lag 0 sessions. cabinet/PM announce early termination of 5 IPP PPAs, Hub Power disclosure same day (Dawn 10 Oct 2024)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -1.7% (net -2.7%, pctile 22%)  +20: -2.1% (net -3.1%, pctile 35%)  +60: -21.2% (net -22.2%, pctile 1%)  +120: -22.8% (net -23.8%, pctile 6%)
+   path to +120: best in expected direction at +113 sessions = -28.1%; first session the excess is against the expected direction: never; excess at end -22.8%
+
+CIRCDEBT25 [settlement; Power; expected +] first public 2025-09-24, decision 2025-09-24, lag 0 sessions. Rs1.225tr bank financing signed ~24 Sep 2025; term sheets reported Jun 2025 (day not found); ECC guarantee Nov 2025 (day not found)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -1.5% (net -2.5%, pctile 27%)  +20: -2.1% (net -3.1%, pctile 34%)  +60: +15.7% (net +14.7%, pctile 97%)  +120: +17.5% (net +16.5%, pctile 91%)
+   path to +120: best in expected direction at +64 sessions = +20.9%; first session the excess is against the expected direction: +1; excess at end +17.5%
+
+GASCD26 [settlement; Gas utilities & misc; expected +] first public 2026-08-19, decision PENDING, lag n/a sessions. Rs1.495tr gas circular-debt plan unveiled 19 Aug 2026; decision pending at 16 Oct 2026
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -2.2% (net -3.2%, pctile 15%)  +20: -2.2% (net -3.2%, pctile 36%)  +60: n/a (past data end)  +120: n/a (past data end)
+   path to +40: best in expected direction at +13 sessions = -0.4%; first session the excess is against the expected direction: +1; excess at end -3.9%
+
+AUTOPOL26 [policy approval; Autos; expected mixed] first public 2026-09-14, decision PENDING, lag n/a sessions. 2026-31 auto policy draft approved by PM 14 Sep 2026 (catalyst_trade.md); final approval pending
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -3.2% (net -4.2%, pctile 11%)  +20: -3.9% (net -4.9%, pctile 29%)  +60: n/a (past data end)  +120: n/a (past data end)
+   path to +23: best in expected direction at +1 sessions = -0.8%; first session the excess is against the expected direction: +1; excess at end -1.9%
+
+AIDEP21 [policy approval; Autos; expected +] first public 2021-12-17, decision 2021-12-17, lag 0 sessions. AIDEP 2021-26 ECC approval, Business Recorder print 17 Dec 2021 (meeting a Thursday); approximate
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -1.1% (net -2.1%, pctile 36%)  +20: -0.6% (net -1.6%, pctile 54%)  +60: -10.3% (net -11.3%, pctile 17%)  +120: -4.4% (net -5.4%, pctile 51%)
+   path to +120: best in expected direction at +12 sessions = +2.8%; first session the excess is against the expected direction: +4; excess at end -4.4%
+
+RATECUT20 [rate cut; MARKET; expected +] first public 2020-03-17, decision 2020-03-17, lag 0 sessions. first cut of the 2020 cycle (policy_rate_decisions.csv)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -10.3% (net -11.3%, pctile 0%)  +20: +4.5% (net +3.5%, pctile 69%)  +60: +16.2% (net +15.2%, pctile 84%)  +120: +46.5% (net +45.5%, pctile 99%)
+   path to +120: best in expected direction at +118 sessions = +47.9%; first session the excess is against the expected direction: +1; excess at end +46.5%
+
+RATECUT24 [rate cut; MARKET; expected +] first public 2024-06-10, decision 2024-06-10, lag 0 sessions. first cut of the 2024-25 cycle (policy_rate_decisions.csv)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +5.1% (net +4.1%, pctile 97%)  +20: +6.5% (net +5.5%, pctile 81%)  +60: +6.8% (net +5.8%, pctile 69%)  +120: +41.8% (net +40.8%, pctile 97%)
+   path to +120: best in expected direction at +120 sessions = +41.8%; first session the excess is against the expected direction: never; excess at end +41.8%
+
+RATECUT25 [rate cut; MARKET; expected +] first public 2025-12-15, decision 2025-12-15, lag 0 sessions. cut after a pause, not a cycle start (policy_rate_decisions.csv)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -0.4% (net -1.4%, pctile 39%)  +20: +4.2% (net +3.2%, pctile 68%)  +60: -10.8% (net -11.8%, pctile 7%)  +120: +0.5% (net -0.5%, pctile 44%)
+   path to +120: best in expected direction at +27 sessions = +8.4%; first session the excess is against the expected direction: +1; excess at end +0.5%
+
+IMFSBA23 [macro deal; Islamic banks & fin.; expected +] first public 2023-06-30, decision 2023-07-12, lag 7 sessions. IMF SBA staff agreement 30 Jun 2023, board 12 Jul 2023 (islamic_banks_financials.md)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: +2.6% (net +1.6%, pctile 81%)  +20: +1.4% (net +0.4%, pctile 52%)  +60: +6.1% (net +5.1%, pctile 64%)  +120: +9.6% (net +8.6%, pctile 64%)
+   from decision date: +5: +0.6%  +20: -0.1%  +60: +6.1%  +120: +1.6%   | earned between first public and decision: +4.1%
+   path to +120: best in expected direction at +115 sessions = +13.1%; first session the excess is against the expected direction: +92; excess at end +9.6%
+
+MSCI21 [index; MARKET; expected -] first public 2021-09-07, decision 2021-11-30, lag 59 sessions. MSCI announces Pakistan EM to Frontier 7 Sep 2021, effective Nov 2021 review (Profit says 30 Nov, Pakistan Today 1 Dec)
+   from first public, excess vs KMI TR (gross; net = gross - 1.0%; percentile among all start dates for the same basket and horizon): +5: -0.0% (net -1.0%, pctile 45%)  +20: -5.7% (net -6.7%, pctile 11%)  +60: -8.2% (net -9.2%, pctile 12%)  +120: -5.4% (net -6.4%, pctile 27%)
+   from decision date: +5: -3.7%  +20: -1.2%  +60: +0.8%  +120: -6.0%   | earned between first public and decision: -3.5%
+   path to +120: best in expected direction at +67 sessions = -9.3%; first session the excess is against the expected direction: +1; excess at end -5.4%
+
+---------------- SUMMARY BY EVENT TYPE (signed so that + means the expected direction was right; gross excess; events with data to +h only; mixed-direction events excluded)
+   long-only note: for expected-negative events the useful action is to avoid or exit, not to short.
+   index            + 20: n 1, signed excess median +5.7%, mean +5.7%, right direction 100%
+   index            + 60: n 1, signed excess median +8.2%, mean +8.2%, right direction 100%
+   index            +120: n 1, signed excess median +5.4%, mean +5.4%, right direction 100%
+   macro deal       + 20: n 1, signed excess median +1.4%, mean +1.4%, right direction 100%; expected-positive only (n 1): median +1.4%, win 100%, mean +1.4%
+   macro deal       + 60: n 1, signed excess median +6.1%, mean +6.1%, right direction 100%; expected-positive only (n 1): median +6.1%, win 100%, mean +6.1%
+   macro deal       +120: n 1, signed excess median +9.6%, mean +9.6%, right direction 100%; expected-positive only (n 1): median +9.6%, win 100%, mean +9.6%
+   policy approval  + 20: n 5, signed excess median +4.1%, mean +8.4%, right direction 80%; expected-positive only (n 3): median +5.3%, win 67%, mean +12.0%
+   policy approval  + 60: n 5, signed excess median +8.6%, mean +16.7%, right direction 80%; expected-positive only (n 3): median +3.1%, win 67%, mean +17.9%
+   policy approval  +120: n 4, signed excess median +20.5%, mean +16.1%, right direction 75%; expected-positive only (n 2): median +11.7%, win 50%, mean +11.7%
+   rate cut         + 20: n 3, signed excess median +4.5%, mean +5.1%, right direction 100%; expected-positive only (n 3): median +4.5%, win 100%, mean +5.1%
+   rate cut         + 60: n 3, signed excess median +6.8%, mean +4.0%, right direction 67%; expected-positive only (n 3): median +6.8%, win 67%, mean +4.0%
+   rate cut         +120: n 3, signed excess median +41.8%, mean +29.6%, right direction 100%; expected-positive only (n 3): median +41.8%, win 100%, mean +29.6%
+   regulated price  + 20: n 5, signed excess median -0.7%, mean -6.7%, right direction 20%; expected-positive only (n 2): median +1.0%, win 50%, mean +1.0%
+   regulated price  + 60: n 3, signed excess median -19.7%, mean -14.4%, right direction 0%; expected-positive only (n 1): median -2.7%, win 0%, mean -2.7%
+   regulated price  +120: n 3, signed excess median -21.0%, mean -22.9%, right direction 0%; expected-positive only (n 1): median -21.0%, win 0%, mean -21.0%
+   settlement       + 20: n 2, signed excess median -2.2%, mean -2.2%, right direction 0%; expected-positive only (n 2): median -2.2%, win 0%, mean -2.2%
+   settlement       + 60: n 1, signed excess median +15.7%, mean +15.7%, right direction 100%; expected-positive only (n 1): median +15.7%, win 100%, mean +15.7%
+   settlement       +120: n 1, signed excess median +17.5%, mean +17.5%, right direction 100%; expected-positive only (n 1): median +17.5%, win 100%, mean +17.5%
+   tax              + 20: n 4, signed excess median +0.8%, mean +0.1%, right direction 75%; expected-positive only (n 1): median -5.3%, win 0%, mean -5.3%
+   tax              + 60: n 4, signed excess median -0.6%, mean -3.7%, right direction 0%; expected-positive only (n 1): median -0.2%, win 0%, mean -0.2%
+   tax              +120: n 4, signed excess median -3.5%, mean -7.9%, right direction 25%; expected-positive only (n 1): median -4.7%, win 0%, mean -4.7%
+   ALL expected-positive events, from first public +20: n 12, median +1.7%, mean +3.7%, win 58%, net median +0.7%
+   ALL expected-positive events, from first public +60: n 10, median +4.6%, mean +8.5%, win 60%, net median +3.6%
+   ALL expected-positive events, from first public +120: n 9, median +9.6%, mean +12.6%, win 67%, net median +8.6%
+   ALL expected-negative events, from first public +20: n 9, median excess -0.9%, mean +2.0%, fell (excess<0) 67%
+   ALL expected-negative events, from first public +60: n 8, median excess +0.6%, mean +2.1%, fell (excess<0) 38%
+   ALL expected-negative events, from first public +120: n 8, median excess -1.5%, mean +3.5%, fell (excess<0) 50%
+   expected-positive events +20: median percentile against all start dates of the same basket 63%; share above the 75th 25%; typical (median over start dates) excess of these baskets -0.2%
+   expected-positive events +60: median percentile against all start dates of the same basket 60%; share above the 75th 30%; typical (median over start dates) excess of these baskets +0.9%
+   expected-positive events +120: median percentile against all start dates of the same basket 64%; share above the 75th 44%; typical (median over start dates) excess of these baskets +0.6%
+
+---------------- EXPECTED-POSITIVE EVENTS WITH A LAG BETWEEN FIRST PUBLIC AND DECISION
+   REFPOL26: lag 11 sessions; excess earned in the lag +15.4%; from first public +60 +61.0%; from decision +60 -
+   OMCMARGIN23: lag 6 sessions; excess earned in the lag +1.8%; from first public +60 -2.7%; from decision +60 +1.4%
+   CONSTRPKG20: lag 7 sessions; excess earned in the lag +4.6%; from first public +60 +3.1%; from decision +60 +7.5%
+   IMFSBA23: lag 7 sessions; excess earned in the lag +4.1%; from first public +60 +6.1%; from decision +60 +6.1%

@@ -1,0 +1,468 @@
+datetime,symbol,title,klass
+2025-03-20 08:13,KSBP,Financial Results for the Year Ended 2024-12-31,financial_result
+2025-03-20 09:14,MFFL,Board Meeting other than Financial Results,board_meeting_notice
+2025-03-20 09:45,UNITY,Notice of Election of Directors and Ballot Paper,agm
+2025-03-20 10:02,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 10:42,HUBC,"Newspaper Advertisement of the Amendment in Notice dated February 28, 2025 regarding Withholding of Tax on Dividend.",dividend_or_bonus
+2025-03-20 10:44,PSYL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 10:58,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 10:59,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 10:59,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 11:01,MUREB,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 11:17,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 11:26,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-20 11:33,MUGHAL,"C-R1 (Right Issue Ordinary Class - C Shares) - Credit of Unpaid Letter of Right into (CDS), Payment Procedure and Schedule and Prior Notice of Newspaper Publication",dividend_or_bonus
+2025-03-20 11:36,SAZEW,"Credit of 2nd Interim Cash Dividend for the year ending June 30, 2025",dividend_or_bonus
+2025-03-20 11:45,HALEON,CTC of Resolutions Passed in the Annual General Meeting 2024,agm
+2025-03-20 11:49,OCTOPUS,Board Meeting,board_meeting_notice
+2025-03-20 12:09,MUGHAL,C-R1 (Right Issue Ordinary Class - C Shares) - Subscription status,dividend_or_bonus
+2025-03-20 12:11,ATLH,Board Meeting - Approval of Annual Budget,board_meeting_notice
+2025-03-20 12:21,MUGHAL,MUGHAL | Mughal Iron & Steel Industries Limited -CDC,other
+2025-03-20 12:55,TRG,Material Information,material_info
+2025-03-20 12:58,FFL,"Resolutions Passed at the Annual General Meeting held on March 20, 2025",agm
+2025-03-20 13:04,SAZEW,"Prior publication notice of credit of 2nd Interim cash dividend for the year ending June 30, 2025",dividend_or_bonus
+2025-03-20 13:15,GGGL,Newspaper Cuttings of Notice of EOGM - GHANI GLOBAL GLASS LIMITED,other
+2025-03-21 08:33,HALEON,(Re)Appointment of Chairperson and Chief Executive Officer,other
+2025-03-21 08:56,AGTL,Financial Results for the Year Ended 31 December 2024,financial_result
+2025-03-21 10:28,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-21 10:33,LPL,BOARD MEETING,board_meeting_notice
+2025-03-21 10:47,ILP,Notice to the Shareholders to File Claim for Unclaimed Dividend (D-6 & D-7),dividend_or_bonus
+2025-03-21 10:55,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-21 11:04,AGTL,Notice of Annual General Meeting,agm
+2025-03-21 11:05,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-21 11:17,IMAGE,Resolution Passed in EOGM,other
+2025-03-21 11:34,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-21 11:43,TREET,Corporate Briefing Session of Treet Corporation Limited,other
+2025-03-21 12:00,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-21 12:01,GWLC,Resignation of Head of Internal Audit & Outsourcing of Internal Audit Function,other
+2025-03-21 12:05,HALEON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-21 12:09,ALIFE,Material Information,material_info
+2025-03-21 12:13,UDPL,Material Information,material_info
+2025-03-21 12:15,SHCI,Material Information,material_info
+2025-03-21 12:22,SYS,Board Meeting In Progress,board_meeting_notice
+2025-03-21 12:22,MARI,Board Meeting In Progress,board_meeting_notice
+2025-03-24 08:00,LUCK,NOTICE OF BOOK CLOSURE FOR SUB-DIVISION OF SHARES OF LUCKY CEMENT LIMITED,dividend_or_bonus
+2025-03-24 08:57,MARI,Results of the Emergent Board Meeting,financial_result
+2025-03-24 09:04,MACTER,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-24 09:17,SYS,Financial Results for the Year Ended 2024-12-31,financial_result
+2025-03-24 11:22,FLYNG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-24 11:23,FLYNG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-24 11:53,OGDC,Credit of Second Interim Cash Dividend (D-93),dividend_or_bonus
+2025-03-24 11:57,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-24 11:59,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-24 12:01,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-24 12:21,TCORP,Material Information,material_info
+2025-03-24 12:30,FLYNG,Emergent Board Meeting Other Than Financial Results,financial_result
+2025-03-24 12:38,AIRLINK,Credit of Interim Cash Dividend (D-6),dividend_or_bonus
+2025-03-24 12:39,SYS,Change of Company Secretary,other
+2025-03-24 12:45,FTMM,Material Information,material_info
+2025-03-24 12:51,FFC,Material Information,material_info
+2025-03-24 13:07,GLAXO,Financial Results for the Year Ended 31st December 2024,financial_result
+2025-03-24 13:15,DCR,EMERGENT BOARD MEETING / CLOSED PERIOD,other
+2025-03-24 13:19,HUBC,Credit of Interim Cash Dividend,dividend_or_bonus
+2025-03-24 13:23,TREET,Presentation of Corporate Briefing Session - Treet Corporation Limited,other
+2025-03-24 13:25,SPEL,Material Information,material_info
+2025-03-25 08:08,SAPT,Material Information,material_info
+2025-03-25 08:18,EFERT,Extracts of Minutes of AGM,agm
+2025-03-25 08:46,ABOT,Notice of Annual General Meeting,agm
+2025-03-25 08:54,ABOT,Transmission of Annual Report for the Year Ended 31 December 2024,financial_result
+2025-03-25 09:01,MARI,Material Information,material_info
+2025-03-25 09:15,ALTN,Material Information,material_info
+2025-03-25 10:02,LSECL,Material Information.,material_info
+2025-03-25 10:31,KOSM,Material Information,material_info
+2025-03-25 10:39,SSGC,Transmission of Quarterly Report for the Period Ended 31 March 2024,financial_result
+2025-03-25 10:58,LOTCHEM,Notice of 27th Annual General Meeting _ Prior to Publication.,agm
+2025-03-25 11:39,LOTCHEM,Transmission of Annual Report for the year ended 31 December 2024,financial_result
+2025-03-25 12:10,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-25 12:23,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-25 12:55,TBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-25 13:08,PAEL,Financial Results for the Year Ended 31-12-2024,financial_result
+2025-03-25 13:12,PPL,PPL Partner Operated Joint Venture Gas Discovery in Kirthar Block,other
+2025-03-25 13:25,PABC,Board Meeting in progress,board_meeting_notice
+2025-03-25 13:25,PPL,Completion of the Feasibility Study of the Reko Diq Project and Associated Approvals,other
+2025-03-25 13:28,OGDC,Material Information,material_info
+2025-03-26 08:26,PABC,Financial Results for the Year Ended 31-Dec-2024,financial_result
+2025-03-26 08:30,TOMCL,Request for Issuance of NOC for release of Right Shares subscription money,dividend_or_bonus
+2025-03-26 09:22,FABL,Announcement,other
+2025-03-26 09:43,FABL,Resolutions passed in the 30th Annual General Meeting of Faysal Bank Ltd,agm
+2025-03-26 09:56,NATF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-26 10:29,CPHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-26 10:52,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-26 11:03,DHPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-26 11:52,FECM,Disclosure of Material Information,material_info
+2025-03-26 12:03,LOTCHEM,Notice of 27th Annual General Meeting - Newspaper Clipping,agm
+2025-03-26 12:06,ISL,Appointment of Chief Financial Officer,other
+2025-03-26 12:07,FLYNG,Announcement of Board Meeting,other
+2025-03-26 12:12,CLOV,Notice of Extraordinary General Meeting REVOKED,agm
+2025-03-26 12:19,LOTCHEM,Notice of Annual General Meeting,agm
+2025-03-26 12:22,KPUS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-26 12:32,BNL,Material Information,material_info
+2025-03-26 12:33,CLOV,Notice of Extraordinary General Meeting,agm
+2025-03-26 13:01,OBOY,SUBSCRIPTION OF RIGHT SHARES BY DIRECTORS AND SUBSTANTIAL SHAREHOLDERS OF THE COMPANY,insider_trade
+2025-03-26 13:02,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-26 13:07,HALEON,Prior Publication of Notice of Credit of Final Cash Dividend,dividend_or_bonus
+2025-03-26 13:29,HINOON,Financial Results for the Year Ended,financial_result
+2025-03-27 09:19,MFFL,Disclosure of the Agenda of the meeting other than the financial results,financial_result
+2025-03-27 09:26,EPCL,CERTIFIED COPY OF THE RESOLUTIONS PASSED BY THE MEMBERS AT THE 27th ANNUAL GENERAL MEETING - ENGRO POLYMER & CHEMICALS LTD,agm
+2025-03-27 09:30,NRSL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 09:31,CPHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 09:51,UNIC,Material Information,material_info
+2025-03-27 09:54,HALEON,Credit of Final Cash Dividend,dividend_or_bonus
+2025-03-27 10:04,HCAR,HCAR | Honda Atlas Cars (Pakistan) Limited Change of Director,other
+2025-03-27 10:05,FFL,Change of Director,other
+2025-03-27 10:15,SIEM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 10:33,ENGROH,Appointment of Company Secretary,other
+2025-03-27 10:35,EFERT,Credit of Final Cash Dividend,dividend_or_bonus
+2025-03-27 10:43,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 10:50,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 11:02,SEPL,"Disclosure of Material Information, Conclusion of 8th Reconvened EOGM scheduled for 27 March 2025, in compliance of the Sindh High Court Order dated 25.3.2025.",material_info
+2025-03-27 11:18,PPL,Credit of Interim Cash Dividend 2024-25,dividend_or_bonus
+2025-03-27 11:33,CASH,"Notice of Book Closure as required under Regulation 9 of the Listed Companies (Substantial Acquisition of Voting Shares and Takeovers) Regulations, 2017",insider_trade
+2025-03-27 11:35,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 11:49,TRG,Material Information,material_info
+2025-03-27 11:57,FCEPL,FCEPL Notice of Annual General Meeting,agm
+2025-03-27 11:57,FCEPL,Transmission of Annual Report for the Year Ended 2024,financial_result
+2025-03-27 12:09,SFL,Material Information,material_info
+2025-03-27 12:15,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 12:17,AGTL,Newspapers publication of Notice of Annual General Meeting,agm
+2025-03-27 12:25,GTYR,Material Information,material_info
+2025-03-27 12:38,NRSL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 12:46,UNITY,RESOLUTIONS PASSED AT THE EXTRA-ORDINARY GENERAL MEETING,agm
+2025-03-27 12:50,BIPL,Certified copy of the Resolutions passed in the 21st AGM of the Bank,agm
+2025-03-27 12:50,CLOV,Notice of EOGM through News paper,other
+2025-03-27 12:54,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 12:58,WAVES,Board Meeting- Annual Accounts for the Year Ended 31Dec24,board_meeting_notice
+2025-03-27 12:59,DCR,DECLARATION OF INTERIM DIVIDEND OF DOLMEN CITY REIT,dividend_or_bonus
+2025-03-27 13:00,TPLT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:01,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:01,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:03,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:04,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:05,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:09,YOUW,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-03-27 13:15,MEBL,CERTIFIED TRUE COPIES OF THE RESOLUTIONS ADOPTED IN 29TH ANNUAL GENERAL MEETING - MEEZAN BANK LIMITED,agm
+2025-03-27 13:22,AVN,Board Meeting In Progress,board_meeting_notice
+2025-04-03 08:00,TPLRF1,Material Information,material_info
+2025-04-03 08:01,TPLP,Material Information,material_info
+2025-04-03 08:02,TOMCL,Credit/Delivery of Shares--Right Issue,dividend_or_bonus
+2025-04-03 08:10,PKGP,Material Information,material_info
+2025-04-03 08:11,LPL,"Financial Results for the year ended December 31, 2024",financial_result
+2025-04-03 08:13,NPL,Material Information,material_info
+2025-04-03 08:25,AGTL,Transmission of Annual Report for the Year Ended 31 December 2024,financial_result
+2025-04-03 08:31,OCTOPUS,Financial Results for the Year Ended 31 December 2024,financial_result
+2025-04-03 08:34,AVN,Financial Results for the Year Ended 31 December 2024,financial_result
+2025-04-03 08:50,FATIMA,Notice of 22nd Annual General Meeting,agm
+2025-04-03 08:51,FATIMA,"Transmission of Annual Report for the Year Ended December 31, 2024",financial_result
+2025-04-03 08:56,LOTCHEM,Material Information,material_info
+2025-04-03 08:57,SLGL,Short Notice of Board Meeting,board_meeting_notice
+2025-04-03 09:01,NCPL,Material Information,material_info
+2025-04-03 09:16,MARI,Material Information,material_info
+2025-04-03 09:32,MUGHAL,Final Profit Payment and Principal Redemption to Sukuk Certificate-II Holders,other
+2025-04-03 09:50,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 09:57,KSBP,Notice of Annual General Meeting,agm
+2025-04-03 09:57,FCCL,164 Board Meeting of FCCL - 24 April 2025,other
+2025-04-03 10:07,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 10:12,SPEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 10:18,FIBLM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations REVOKED",insider_trade
+2025-04-03 10:21,KSBP,Transmission of Annual Report for the Year Ended 2024-12-31,financial_result
+2025-04-03 10:23,ILP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 10:41,AGP,CORRIGENDUM TO THE ANNUAL REPORT 2024,financial_result
+2025-04-03 10:41,TBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 10:57,SLGL,Results of the EOGM,financial_result
+2025-04-03 11:04,PMI,Material Information-Change of Name of First Prudential Modaraba,material_info
+2025-04-03 11:08,FRCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 11:59,OGDC,3rd Gas and Condensate Discovery at Spinwam-1 Well,other
+2025-04-03 12:08,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations REVOKED",insider_trade
+2025-04-03 12:15,INIL,Board Meeting Other Than Financial Results,board_meeting_notice
+2025-04-03 13:40,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 13:51,OGDC,PRODUCTION REVIVAL- CHAK # 2-2 WELL,other
+2025-04-03 14:12,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 14:17,CLOV,Resignation of Chairman & Director,other
+2025-04-03 14:31,PAEL,PAEL | Pak Elektron Limited REQUEST FOR DE-LISTING OF SECURITY PREFERENCE SHARES (PELPS),other
+2025-04-03 14:51,ATLH,Change of Director,other
+2025-04-03 15:05,SPWL,Material Information,material_info
+2025-04-03 15:11,PIOC,Resignation of Director,other
+2025-04-03 15:22,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-03 15:23,GGGL,POSTAL BALLOT PAPER AND PROVISION OF ELECTRONIC VOTING,other
+2025-04-03 15:25,LPL,"TRANSMISSION OF ANNUAL REPORT FOR THE YEAR ENDED DECEMBER 31, 2024 REVOKED",financial_result
+2025-04-03 15:26,LPL,Notice of Annual General Meeting,agm
+2025-04-04 09:27,PKGI,Material Information REVOKED,material_info
+2025-04-04 09:35,THCCL,Material Information - Wind Power Project,material_info
+2025-04-04 09:47,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-04 10:00,MUGHAL,Sukuk-IV - Notice of Book Closure,dividend_or_bonus
+2025-04-04 10:06,LPL,"TRANSMISSION OF ANNUAL REPORT FOR THE YEAR ENDED DECEMBER 31, 2024",financial_result
+2025-04-04 10:08,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-04 10:50,CSIL,Material Information,material_info
+2025-04-04 11:12,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-04 11:36,FIBLM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-04 11:37,ENGROH,"Transmission of Annual Report for the year ended December 31, 2024 - Engro Holdings Limited",financial_result
+2025-04-04 11:41,ENGROH,Notice of Annual General Meeting,agm
+2025-04-04 11:45,EFERT,"Board Meeting for the announcement of the financial results for the three months ended March 31, 2025",board_meeting_notice
+2025-04-04 11:53,ENGROH,Distribution of Sale Proceeds of Fractional Share Disposal among Entitled Shareholders,other
+2025-04-04 12:27,PABC,Transmission of Annual Report for the Year Ended 30-12-2024,financial_result
+2025-04-04 12:28,PABC,Notice of Annual General Meeting,agm
+2025-04-04 12:32,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-04 12:57,BAFL,Disclosure of Material Information,material_info
+2025-04-04 12:59,CHCC,Commissioning of Solar Power Plant,other
+2025-04-04 13:57,SLGL,Board Meeting in Progress,board_meeting_notice
+2025-04-04 14:30,GLAXO,Prior Publication of Annual General Meeting Notice,agm
+2025-04-04 14:36,SYS,Corporate Briefing Session for the Year Ended 2024,other
+2025-04-04 15:17,LUCK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-04 15:32,ZHCM,Material Information,material_info
+2025-04-04 15:57,FLYNG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 08:00,EPQL,Disclosure of Material Information,material_info
+2025-04-07 08:00,ENGROH,Disclosure of Material Information,material_info
+2025-04-07 08:22,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 09:44,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 09:57,SLGL,Financial Results for the Year Ended 2024-12-31,financial_result
+2025-04-07 10:03,SLGL,Transmission of Annual Report for the Year Ended 2024-12-31,financial_result
+2025-04-07 10:04,PREMA,Notice of Early Redemption of Sukuk Certificates And Notice of Book Closure for Final Payment,dividend_or_bonus
+2025-04-07 10:09,SLGL,Management Commentary on FY 2024 Financial Results,financial_result
+2025-04-07 11:27,GLAXO,Notice of Annual General Meeting,agm
+2025-04-07 11:47,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 11:47,ICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 12:32,OBOY,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 13:08,SYS,Notice of 48th Annual General Meeting,agm
+2025-04-07 13:19,FABL,"Credit of 25% Final Cash Dividend for the year ended December 31, 2024",dividend_or_bonus
+2025-04-07 13:24,SYS,Transmission of Annual Report for the Year Ended 2024-12-31,financial_result
+2025-04-07 13:24,GLAXO,"Transmission of Annual Report for the year ended December 31, 2024",financial_result
+2025-04-07 13:43,PREMA,Material Information,material_info
+2025-04-07 13:45,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 13:52,HINOON,Notice of Annual General Meeting,agm
+2025-04-07 14:16,HINOON,Transmission of Annual Report for the Year Ended REVOKED,financial_result
+2025-04-07 14:30,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 14:40,BPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 14:55,TBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-07 15:29,WAVES,Board Meeting In Progress,board_meeting_notice
+2025-04-08 09:42,FLYNG,Notice of Extraordinary General Meeting,agm
+2025-04-08 10:23,WAVES,Board Meeting In Progress,board_meeting_notice
+2025-04-08 10:28,PREMA,Material Information - Privately Placed Islamic Sukuk,material_info
+2025-04-08 10:32,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 10:43,MARI,Material Information,material_info
+2025-04-08 10:46,FABL,Notice of Corporate Briefing Session (CBS) of Faysal Bank Limited,other
+2025-04-08 11:31,OGDC,Resignation of Director,other
+2025-04-08 12:12,HINOON,Transmission of Annual Report for the Year Ended 2024,financial_result
+2025-04-08 12:27,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 12:28,OGDC,4th Gas and Condensate Discovery at Spinwam-1 Well,other
+2025-04-08 12:35,AHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 12:44,LUCK,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2025-04-08 12:50,FATIMA,Disclosure of Material Information,material_info
+2025-04-08 12:53,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 13:13,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 13:49,EPCL,Board Meeting for the announcement of the financial results - Engro Polymer & Chemicals Limited,board_meeting_notice
+2025-04-08 14:24,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 14:29,PAEL,Notice of Annual General Meeting dated 29-04-2025,agm
+2025-04-08 14:35,BNL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 14:41,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 14:47,IGIHL,Material Information,material_info
+2025-04-08 14:53,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 14:55,PAEL,Transmission of Annual Report for the Year Ended 31-12-2024,financial_result
+2025-04-08 14:57,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-08 14:58,WAFI,Notice of Annual General Meeting,agm
+2025-04-08 15:11,OCTOPUS,Notice of Annual General Meeting,agm
+2025-04-08 15:11,FLYNG,Notice of Extra Ordinary General Meeting (Pre-Publication in newspapers),agm
+2025-04-08 15:13,AVN,Notice of Annual General Meeting,agm
+2025-04-08 15:25,GGGL,GGGL | Ghani Global Glass Limited NEWSPAPER CUTTINGS - PUBLICATION OF POSTAL BALLOT PAPER AND PROVISION OF ELECTRONIC VOTING,other
+2025-04-09 08:00,WAFI,Transmission of Quarterly Report for the Period Ended 2024-12-31 REVOKED,financial_result
+2025-04-09 08:37,KOHC,Buy-Back of Shares,other
+2025-04-09 09:06,WAVES,Board Meeting In Progress,board_meeting_notice
+2025-04-09 09:29,MEBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 09:41,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 10:06,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 10:52,AHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 10:56,BWCL,Board Meeting,board_meeting_notice
+2025-04-09 11:11,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 11:26,TPLRF1,Material Information,material_info
+2025-04-09 11:27,TPLP,Material Information,material_info
+2025-04-09 11:31,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 11:42,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 12:15,SAZEW,Production and Sales data regarding Four Wheelers and Three Wheelers for the month of March 2025,other
+2025-04-09 12:33,PNSC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 13:11,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 13:27,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 14:27,LUCK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 14:42,UNITY,Appointment of the Chairman and Chief Executive Officer,other
+2025-04-09 14:56,ATLH,Material Information,material_info
+2025-04-09 14:57,PIBTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 15:07,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 15:11,EFUG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-09 15:24,SITC,Material Information,material_info
+2025-04-09 15:26,WAVES,Financial Results for the Year Ended 31 Dec 24,financial_result
+2025-04-09 15:27,WAVES,Notice of Annual General Meeting,agm
+2025-04-10 08:51,PPL,Material Information,material_info
+2025-04-10 08:56,KOHC,Buy-Back of Shares,other
+2025-04-10 09:29,KAPCO,Disclosure of Material Information,material_info
+2025-04-10 09:33,FATIMA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 09:40,WAVES,Financial Results for the Year Ended 31 Dec 24,financial_result
+2025-04-10 09:50,LOTCHEM,Board Meeting,board_meeting_notice
+2025-04-10 10:22,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 10:23,ISL,Appointment of Director,other
+2025-04-10 10:58,MEBL,NOTICE OF BOARD MEETING AND CLOSED PERIOD - MEEZAN BANK LIMITED,board_meeting_notice
+2025-04-10 11:12,MUREB,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 11:20,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 11:25,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 11:58,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 12:55,MFFL,Acknowledgement of the withdrawal of the PAI of IGI Securities,other
+2025-04-10 13:50,PPL,Commencement of Gas Production from Pateji X-1 (Shah Bandar Block) under EWT Arrangement,other
+2025-04-10 13:51,SYS,Investor Briefing Presentation FY 2024,other
+2025-04-10 14:17,HPL,DISCLOSURE OF INTEREST BY AN ASSOCIATED COMPANY OF A LISTED COMPANY U/S 5.6.4 OF PSX REGULATIONS,insider_trade
+2025-04-10 14:22,EFUG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 14:42,ISL,BOARD MEETING,board_meeting_notice
+2025-04-10 15:03,IGIL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 15:20,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-10 15:21,WAFI,Transmission of Annual Report for the Period Ended 2024-12-31,financial_result
+2025-04-10 15:26,AGP,Abstract of Resolution Passed in 11th Annual General Meeting,agm
+2025-04-10 15:26,WAFI,Dissemination of Annual Report,financial_result
+2025-04-10 15:29,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 08:12,SLGL,Notice of Annual General Meeting,agm
+2025-04-11 08:51,KOHC,Buy-Back of Shares,other
+2025-04-11 09:42,GHNI,Board Meeting,board_meeting_notice
+2025-04-11 10:48,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 11:20,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 11:32,POWER,Resignation of Director,other
+2025-04-11 11:34,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 11:42,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 11:44,HCAR,Material Information,material_info
+2025-04-11 12:00,FABL,"Presentation of Corporate Briefing Session of Faysal Bank Limited will be held on Monday, April 14, 2025",other
+2025-04-11 12:04,GAL,Board Meeting,board_meeting_notice
+2025-04-11 12:17,BIPL,BankIslami Pakistan Limited - Publication of Notice of Fina Cash Dividend (D-5),dividend_or_bonus
+2025-04-11 12:25,KEL,Book Closure of KE SUKUK-5,dividend_or_bonus
+2025-04-11 12:27,KEL,Book Closure of KE SUKUK-6.,dividend_or_bonus
+2025-04-11 14:26,FATIMA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 14:27,TBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 14:42,BFBIO,"Quarterly Progress Report for the Period Ended December 31, 2024",financial_result
+2025-04-11 14:51,SAZEW,Board Meeting,board_meeting_notice
+2025-04-11 15:03,BAPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 15:40,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 15:57,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 16:11,IGIL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 16:20,KOHC,Buy-Back of Shares,other
+2025-04-11 16:21,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-11 16:24,WAVES,Transmission of Annual Report for the Year Ended 31 Dec 24,financial_result
+2025-04-11 16:28,KOHC,"Intimation under Regulation 10(g) of the Listed Companies (Buy-Back of Shares) Regulations, 2019 regarding Completion of Purchase Period for Buy-Back of 12,000,000/- Shares of Kohat Cement Company Limited",other
+2025-04-14 08:20,KOHC,"KCCL-Notice of Completion of Purchase Period of Buy Back of 12,000,000 shares of Kohat Cement Company Limited published in English and Urdu Newspapers (Nationwide)",other
+2025-04-14 08:49,SNGP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 10:16,FABL,Board of Directors Meeting of Faysal Bank Limited,board_meeting_notice
+2025-04-14 10:33,FRCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 10:33,MACFL,Material Information,material_info
+2025-04-14 10:56,SITC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 11:09,PPL,Payment of Sui Lease Extension Bonus,dividend_or_bonus
+2025-04-14 11:57,GGGL,"RESOLUTIONS PASSED IN EXTRA ORDINARY GENERAL MEEETING HELD ON APRIL 12, 2025 - GHANI GLOBAL GLASS LIMITED",agm
+2025-04-14 12:13,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 12:21,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 12:22,LCI,BOARD MEETING / CLOSED PERIOD,board_meeting_notice
+2025-04-14 12:59,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 13:17,FCEPL,Board Meeting 1st Quarter 2025,board_meeting_notice
+2025-04-14 13:20,MEBL,CREDIT OF FINAL CASH DIVIDEND OF MEEZAN BANK LIMITED,dividend_or_bonus
+2025-04-14 13:48,HCAR,Board Meeting Other Than Financial Results,board_meeting_notice
+2025-04-14 13:51,PREMA,Material Information,material_info
+2025-04-14 14:26,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 14:34,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 14:36,CRTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 14:38,CLOV,Board of Directors Meeting and Closed Period,board_meeting_notice
+2025-04-14 14:45,KOSM,Material Information---Credit of Shares By CDC,material_info
+2025-04-14 15:13,PPL,Memorandum of Understanding between PPL and Metso Finland,other
+2025-04-14 15:16,EFUG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 15:16,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-14 15:23,GTYR,Board Meeting,board_meeting_notice
+2025-04-14 15:24,GGGL,PUBLIC ANNOUNCEMENT FOR BUY BACK OF SHARES OF GHANI GLOBAL GLASS LIMITED (THE COMPANY),other
+2025-04-15 08:22,PIBTL,Public Procurement Regulatory Authority (PPRA) Exemption to handle additional Commodities,other
+2025-04-15 09:01,WAVES,Transmission of Annual Report for the Year Ended 31 Dec 2024,financial_result
+2025-04-15 09:42,INIL,Board Meeting,board_meeting_notice
+2025-04-15 09:50,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 10:38,MEBL,"PUBLICATION OF NOTICES FOR THE CREDIT OF FINAL CASH DIVIDEND OF MEEZAN BANK FOR THE YEAR ENDED DECEMBER 31, 2024",dividend_or_bonus
+2025-04-15 11:20,SHDT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 11:21,EFUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 11:31,EFUG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 11:45,PRL,Board Meeting,board_meeting_notice
+2025-04-15 11:48,SAZEW,Board Meeting Rescheduled,board_meeting_notice
+2025-04-15 12:14,BIPL,Board Meeting - BankIslami Pakistan Limited,board_meeting_notice
+2025-04-15 12:28,IBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 12:40,MLCF,MLCF-Notice of Board Meeting 22.04.2025,board_meeting_notice
+2025-04-15 12:53,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 13:01,KSBP,Board Meeting,board_meeting_notice
+2025-04-15 13:07,JSCLPSA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 13:41,FCL,Disclosure of Material Information - Fast Cables Limited,material_info
+2025-04-15 14:08,IMAGE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 14:23,PIBTL,"Board Meeting - Tuesday, April 22, 2025",board_meeting_notice
+2025-04-15 14:29,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 14:44,WAFI,Annual Free Float Duly Verified by Auditors REVOKED,other
+2025-04-15 14:56,CLOV,Appointment of Director and Chairman,other
+2025-04-15 15:15,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-15 15:20,INIL,Board Meeting In Progress,board_meeting_notice
+2025-04-15 15:27,GGGL,NEWSPAPER CUTTINGS REGARDING PUBLIC ANNOUNCEMENT FOR BUY BACK OF SHARES OF THE COMPANY,other
+2025-04-16 08:06,INIL,BOARD MEETING - OTHER THAN FINANCIAL RESULTS,board_meeting_notice
+2025-04-16 08:55,SFL,Material Information,material_info
+2025-04-16 09:33,MUGHAL,C-R1 (Right Issue Ordinary Class - C Shares) - Subscription status,dividend_or_bonus
+2025-04-16 09:39,OML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-16 09:55,FFL,Board Meeting,board_meeting_notice
+2025-04-16 09:55,FATIMA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-16 10:02,FABL,Disclosure of Material Information - Termination of Acquisition Discussions,material_info
+2025-04-16 10:36,AGTL,Board Meeting,board_meeting_notice
+2025-04-16 10:38,TPLRF1,Material Information,material_info
+2025-04-16 10:39,AGP,Credit of Final Cash Dividend,dividend_or_bonus
+2025-04-16 10:44,TPLP,Material Information,material_info
+2025-04-16 12:13,ATRL,ENQUIRY ON NEWS PUBLISHED IN PRINT/ELECTRONIC MEDIA,other
+2025-04-16 12:21,ATRL,CLARIFICATION REGARDING NEWS REPORT ON CRUDE DISTILLATION UNIT SHUTDOWN,other
+2025-04-16 12:44,CPHL,Material Information,material_info
+2025-04-16 12:46,CPHL,EXTRACT OF RESOLUTION PASSED VIA CIRCULATION,other
+2025-04-16 12:50,LUCK,Board Meeting,board_meeting_notice
+2025-04-16 12:53,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations REVOKED",insider_trade
+2025-04-16 12:57,CWSM,Material Information,material_info
+2025-04-16 13:23,EFUL,Disclosure of Interest by Relevant Persons Holding Company's Shares under PSX Regulation 5.6.4,insider_trade
+2025-04-16 13:37,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-16 15:08,ENGROH,"Board Meeting for the Announcement of the Financial Results for the First Quarter ended March 31, 2025",board_meeting_notice
+2025-04-16 15:12,EFERT,Analyst Briefing,other
+2025-04-16 15:23,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 09:24,BWCL,"Financial Results for the Quarter Ended March 31, 2025",financial_result
+2025-04-17 09:35,MUGHAL,Request for Issuance of No Objection Certificate (NOC) for release of Rights Shares Subscription Amount,other
+2025-04-17 09:48,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 10:18,BFBIO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 11:01,PREMA,ADDENDUM,other
+2025-04-17 11:03,TPLP,Board Meeting,board_meeting_notice
+2025-04-17 11:04,MARI,Notice of Board of Directors Meeting,board_meeting_notice
+2025-04-17 11:07,GATM,BOARD MEETING,board_meeting_notice
+2025-04-17 11:09,HALEON,Material Information - Change of CEO,material_info
+2025-04-17 11:20,SNBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 11:47,POWER,Board Meeting,board_meeting_notice
+2025-04-17 12:10,CHAS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 12:31,PGLC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 12:36,FATIMA,Board Meeting and Closed Period,board_meeting_notice
+2025-04-17 12:41,GLAXO,"Board Meeting Quarter ended March 31, 2025",board_meeting_notice
+2025-04-17 12:49,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 13:01,ACPL,Board Meeting,board_meeting_notice
+2025-04-17 13:52,TBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 14:03,WAFI,Board Meeting,board_meeting_notice
+2025-04-17 14:30,LOTCHEM,Certified copy of resolutions adopted at the 27th Annual General Meeting.,agm
+2025-04-17 14:33,PACE,Material Information,material_info
+2025-04-17 14:40,LOTCHEM,Financial Results for the Quarter ended 31 March 2025,financial_result
+2025-04-17 14:46,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 14:47,CLOV,Credit/Dispatch of Bonus Share Certificates,dividend_or_bonus
+2025-04-17 14:55,SHFA,Board Meeting,board_meeting_notice
+2025-04-17 14:55,TREET,"Notice of Board Meeting for the 3rd Quarter ended March 31, 2025 / Closed Period",board_meeting_notice
+2025-04-17 15:15,PSYL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 15:19,ATRL,ARL BOARD MEETING & CLOSE PERIOD,other
+2025-04-17 15:25,EPCL,EPCL | Engro Polymer & Chemicals Limited Meeting in Progress,other
+2025-04-17 15:27,PSYL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-17 15:27,PSO,Withdrawal of Nomination,other
+2025-04-18 08:25,EPCL,"Financial Results for the Period Ended March 31, 2025",financial_result
+2025-04-18 08:36,MTL,Board Meeting,board_meeting_notice
+2025-04-18 09:05,CEPB,BOARD MEETING,board_meeting_notice
+2025-04-18 09:24,SPEL,Board Meeting,board_meeting_notice
+2025-04-18 09:39,THCCL,"Board Meeting for the quarter ended March 31, 2025",board_meeting_notice
+2025-04-18 09:45,CHAS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-18 09:55,NRL,Board Meeting,board_meeting_notice
+2025-04-18 10:21,SHDT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-18 10:44,TGL,Board Meeting,board_meeting_notice
+2025-04-18 10:48,GWLC,Notice of Board Meeting,board_meeting_notice
+2025-04-18 11:01,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-18 11:02,TRSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-18 11:56,HALEON,Notice of Board of Directors Meeting - (Q1-2025),board_meeting_notice
+2025-04-18 12:16,SUTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-18 12:40,CHCC,Board Meeting REVOKED,board_meeting_notice
+2025-04-18 12:59,OGDC,Board Meeting,board_meeting_notice
+2025-04-18 13:31,FLYNG,Board Meeting,board_meeting_notice
+2025-04-18 14:15,PPL,Meeting of the Board of Directors and Closed Period,board_meeting_notice
+2025-04-18 14:16,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-04-18 14:40,SYS,Board Meeting,board_meeting_notice
+2025-04-18 15:30,SNGP,Board Meeting,board_meeting_notice

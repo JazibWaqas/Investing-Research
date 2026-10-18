@@ -1,0 +1,313 @@
+====================================================================================================
+A. POPULATION
+====================================================================================================
+Data repair: 25 one-day moves of -60% or worse or +200% or better (unrecorded splits and consolidations; 21 names) were set to zero return.
+Panel: 614 names (453 listed in panel, 44 listed but missing from the panel, 117 delisted with price files); 2016-10-17 to 2026-10-16.
+CAUTION: cash dividends are in corporate_actions.csv only from about Nov 2024 (6 cash rows for 2017-2020), so before that these 'total return' multiples are price plus bonus/split only and understate true total return by the dividend yield (roughly 4 to 7 points a year). The KMI All Share TR comparator includes dividends in full.
+Total return = adjusted returns (cash dividends and bonus/split applied from corporate_actions.csv). The listed-missing and all delisted names have no corporate-action rows: their returns are price-only with moves beyond +-10.5% on normal volume zeroed (crude), so they are understated.
+
+5-year windows: 58 month-end starts, 2016-12-30 to 2021-09-30. Share of the liquid universe at the start that made at least k times (dividends reinvested):
+start        n_liq   >=2x   >=3x   >=5x  >=10x  names>=3x regime
+2016-12-30    155    5.2%   3.2%   1.3%   0.6%      5   bill>policy
+2017-12-29     85    4.7%   2.4%   0.0%   0.0%      2   bill<=policy
+2018-12-31     97   14.4%   5.2%   1.0%   1.0%      5   bill<=policy
+2019-12-31    111   43.2%  16.2%   7.2%   0.9%     18   bill>policy
+2020-12-31    124   40.3%  23.4%   7.3%   1.6%     29   bill>policy
+2021-09-30    137   41.6%  21.2%  12.4%   1.5%     29   bill>policy
+pooled (all 58 overlapping starts, mean of shares): n_liq avg 108; >=2x 24.7%, >=2.5x 16.7% (price-plus-bonus proxy for 3x with dividends), >=3x 12.1%, >=5x 4.5%, >=10x 0.7%
+  regime at start bill<=policy: 19 starts, mean n_liq 91, >=2x 17.1%, >=3x 7.0%, >=5x 2.3%
+  regime at start bill>policy: 39 starts, mean n_liq 116, >=2x 28.3%, >=3x 14.6%, >=5x 5.7%
+  starts in 2016: 1 months, >=3x share mean 3.2% (range 3.2-3.2)
+  starts in 2017: 12 months, >=3x share mean 2.5% (range 1.5-3.2)
+  starts in 2018: 12 months, >=3x share mean 1.6% (range 0.9-5.2)
+  starts in 2019: 12 months, >=3x share mean 15.8% (range 1.1-29.3)
+  starts in 2020: 12 months, >=3x share mean 23.9% (range 17.2-37.6)
+  starts in 2021: 9 months, >=3x share mean 19.4% (range 17.4-22.1)
+
+Decade (2016-12-30 to 2026-10-16, 9.8 years): liquid at start n=155; median multiple 1.14x; >=2x 28.4% (44), >=3x 20.0% (31), >=5x 5.2% (8), >=10x 3.2% (5). Ended before last date: 22 names.
+  KMI All Share TR over the same span: 2.89x
+
+Every name with a 3x+ five-year window (liquid at window start): 75 names. 'best' = the window start with the highest 5-year multiple.
+symbol   sector                         best_start  5y_mult  dec_mult  KMI_now KMI_at_start  ended  n3_windows
+THCCL    CEMENT                         2020-11-30    24.24     8.42x      Y          Y         5/12
+SAZEW    AUTOS                          2021-09-30    16.46    23.49x      Y          Y         17/38
+AGL      FERTILIZER                     2020-10-29    15.34     3.64x      N          N         8/19
+SYS      TECHNOLOGY & COMMUNICATION     2018-02-28    13.95    18.91x      Y        n/a         35/39
+GAL      AUTOS                          2020-03-31    12.20     1.51x      Y          Y         28/58
+GHNI     AUTOS                          2020-03-31    11.83     3.05x      Y          Y         24/58
+FFC      FERTILIZER                     2020-11-30    10.77    10.38x      Y          N         27/58
+PNSC     TRANSPORT                      2021-08-31    10.57     5.32x      N          Y         1/15
+MEBL     COMMERCIAL BANKS               2020-09-30    10.39    22.57x      Y          Y         38/45
+ATRL     REFINERY                       2020-03-31     9.83     3.70x      Y          Y         31/58
+PIOC     CEMENT                         2019-09-30     9.47     1.71x      Y          Y         18/58
+AHL      INV. BANKS / INV. COS. / SECUR 2021-09-30     9.02    10.61x      N          N         3/14
+FFBL     FERTILIZER                     2020-03-31     7.70     1.99x      N        n/a     Y   26/58
+UBL      COMMERCIAL BANKS               2021-07-30     7.58     3.45x      N          N         19/58
+NBP      COMMERCIAL BANKS               2021-02-26     7.34     2.54x      N          N         17/58
+CHCC     CEMENT                         2019-09-30     7.28     1.83x      Y          Y         15/58
+MARI     OIL & GAS EXPLORATION COMPANIE 2020-03-31     6.91     4.44x      Y          Y         26/58
+HUBC     POWER GENERATION & DISTRIBUTIO 2021-06-30     6.91     3.93x      Y          N         28/58
+TGL      GLASS & CERAMICS               2020-06-30     6.75     3.99x      Y          Y         14/44
+PTC      TECHNOLOGY & COMMUNICATION     2021-02-26     6.73     3.12x      N          Y         12/35
+AKBL     COMMERCIAL BANKS               2020-10-29     6.64     6.91x      N          N         13/39
+KTML     TEXTILE                        2020-09-30     6.42     1.75x      Y          Y         11/17
+KOHC     CEMENT                         2019-10-31     6.38     2.00x      Y          Y         11/57
+AVN      TECHNOLOGY & COMMUNICATION     2016-12-30     6.31     3.00x      Y        n/a         15/48
+FABL     COMMERCIAL BANKS               2021-07-30     6.22     4.99x      Y          N         11/36
+PIAA     nan                            2020-03-31     6.11     2.42x      N        n/a     Y   9/21
+ICL      CHEMICAL                       2020-12-31     6.09     4.61x      Y          Y         7/19
+FLYNG    CEMENT                         2020-09-30     5.88     2.61x      Y          Y         4/17
+LPL      POWER GENERATION & DISTRIBUTIO 2020-11-30     5.59     2.52x      N          N         3/9
+OGDC     OIL & GAS EXPLORATION COMPANIE 2021-09-30     5.57     2.82x      Y          Y         15/58
+PRL      REFINERY                       2021-09-30     5.54     3.15x      Y          N         3/51
+PIAHCLA  INV. BANKS / INV. COS. / SECUR 2021-06-30     5.47     2.44x      N          N         6/21
+MUGHAL   ENGINEERING                    2019-07-31     5.11     0.90x      Y          Y         5/58
+KAPCO    POWER GENERATION & DISTRIBUTIO 2020-03-31     5.00     1.11x      N          N         12/58
+SRVI     LEATHER & TANNERIES            2019-12-31     4.97     4.61x      Y          N         15/22
+BIPL     COMMERCIAL BANKS               2020-09-30     4.76       nan      Y          Y         4/13
+TRG      TECHNOLOGY & COMMUNICATION     2020-03-31     4.75     1.27x      N          N         22/58
+NETSOL   TECHNOLOGY & COMMUNICATION     2020-03-31     4.72     2.26x      Y          Y         1/55
+PSMC     AUTOS                          2020-03-31     4.54     0.99x      N        n/a     Y   12/57
+MTL      AUTOS                          2020-03-31     4.47     3.52x      Y          Y         17/58
+LOTCHEM  CHEMICAL                       2017-11-30     4.41     3.86x      Y        n/a         5/58
+BOP      COMMERCIAL BANKS               2021-04-30     4.39     1.63x      N          N         12/58
+EPCL     CHEMICAL                       2017-04-28     4.22     3.23x      Y        n/a         10/58
+HMB      COMMERCIAL BANKS               2021-02-26     4.21       nan      N          N         7/22
+NPL      POWER GENERATION & DISTRIBUTIO 2021-08-31     4.18       nan      N        n/a         2/5
+BAFL     COMMERCIAL BANKS               2021-04-30     4.13     3.86x      N          N         13/58
+BAHL     COMMERCIAL BANKS               2020-09-30     4.11     3.34x      N          N         18/58
+EPQL     POWER GENERATION & DISTRIBUTIO 2021-09-30     4.09     2.24x      Y          N         1/5
+LUCK     CEMENT                         2020-03-31     4.04     2.36x      Y          Y         11/58
+EFERT    FERTILIZER                     2021-01-29     4.03     3.26x      Y          Y         18/58
+FATIMA   FERTILIZER                     2020-07-30     4.02     4.12x      Y          Y         1/11
+DCR      REAL ESTATE INVESTMENT TRUST   2021-03-31     3.91       nan      Y          Y         1/1
+ECOP     MISCELLANEOUS                  2020-08-31     3.78       nan      Y          N         4/8
+NCPL     POWER GENERATION & DISTRIBUTIO 2020-10-29     3.76     1.77x      N        n/a         2/12
+SPL      CHEMICAL                       2020-11-30     3.67     1.54x      Y          Y         2/31
+GWLC     CEMENT                         2020-01-31     3.65       nan      Y          Y         1/15
+SERF     TEXTILE                        2021-01-29     3.63       nan      N        n/a     Y   2/6
+UNITY    FOOD & PERSONAL CARE PRODUCTS  2019-08-30     3.63       nan      Y          N         2/44
+SNGP     OIL & GAS MARKETING COMPANIES  2020-11-30     3.60     1.60x      Y          Y         7/58
+MACFL    PAPER, BOARD & PACKAGING       2021-09-30     3.54       nan      Y          Y         1/11
+TELE     TECHNOLOGY & COMMUNICATION     2017-02-28     3.53     1.50x      Y        n/a         4/12
+PSO      OIL & GAS MARKETING COMPANIES  2020-03-31     3.46     1.62x      Y          Y         1/58
+FEROZ    PHARMACEUTICALS                2019-06-28     3.35     0.68x      Y          Y         1/53
+PSX      INV. BANKS / INV. COS. / SECUR 2021-01-29     3.28       nan      N          N         4/26
+JSBL     COMMERCIAL BANKS               2020-10-29     3.25     1.14x      N          N         2/9
+MLCF     CEMENT                         2020-06-30     3.24     0.71x      Y          Y         3/58
+PPL      OIL & GAS EXPLORATION COMPANIE 2021-09-30     3.22     1.74x      Y          Y         3/58
+SSGC     OIL & GAS MARKETING COMPANIES  2020-06-30     3.21     0.64x      Y          Y         3/57
+POWER    CEMENT                         2021-09-30     3.21     1.90x      Y          Y         1/52
+FCCL     CEMENT                         2020-09-30     3.14     1.21x      Y          Y         3/58
+ABOT     PHARMACEUTICALS                2020-01-31     3.08     1.04x      Y          Y         1/27
+NRL      REFINERY                       2020-03-31     3.07     1.17x      Y          Y         1/58
+SPEL     PAPER, BOARD & PACKAGING       2020-09-30     3.06       nan      Y          Y         1/9
+JVDC     PROPERTY                       2021-08-31     3.05       nan      Y          Y         1/2
+HASCOL   OIL & GAS MARKETING COMPANIES  2021-07-30     3.01     0.17x      N        n/a         1/58
+
+Of the 75: KMI now 51; delisted/ended 4; best-window multiple median 4.72x, >=5x 34, >=10x 9.
+By sector (n names / liquid names ever in a 5y window / share):
+  COMMERCIAL BANKS                    11 /  18   61.1%
+  CEMENT                              10 /  16   62.5%
+  POWER GENERATION & DISTRIBUTION      6 /   9   66.7%
+  TECHNOLOGY & COMMUNICATION           6 /  12   50.0%
+  AUTOS                                5 /  16   31.2%
+  FERTILIZER                           5 /   7   71.4%
+  CHEMICAL                             4 /  15   26.7%
+  OIL & GAS MARKETING COMPANIES        4 /   8   50.0%
+  INV. BANKS / INV. COS. / SECURITIE   3 /  15   20.0%
+  OIL & GAS EXPLORATION COMPANIES      3 /   4   75.0%
+  REFINERY                             3 /   5   60.0%
+  TEXTILE                              2 /  20   10.0%
+  PHARMACEUTICALS                      2 /  10   20.0%
+  PAPER, BOARD & PACKAGING             2 /   8   25.0%
+  all sectors: 74 / 229 = 32.3% of 234 names ever liquid at a start
+Independent episodes: 39 sector x start-year clusters from 75 names; 22 sectors; best-window start years: 2016:1, 2017:3, 2018:1, 2019:7, 2020:38, 2021:25
+Decade >=3x names (31): SAZEW 23.5x, MEBL 22.6x, SYS 18.9x, AHL 10.6x, FFC 10.4x, THCCL 8.4x, AKBL 6.9x, PNSC 5.3x, FABL 5.0x, ICL 4.6x, SRVI 4.6x, MARI 4.4x, FATIMA 4.1x, HINOON 4.0x, TGL 4.0x, HUBC 3.9x, BAFL 3.9x, LOTCHEM 3.9x, AHCL 3.8x, ATRL 3.7x, AGL 3.6x, MTL 3.5x, UBL 3.4x, BAHL 3.3x, QUICE 3.3x, EFERT 3.3x, EPCL 3.2x, DOL 3.2x, PRL 3.1x, PTC 3.1x, GHNI 3.0x
+
+====================================================================================================
+B. EARLY FEATURES
+====================================================================================================
+Cohorts (annual, start dates): 2016-12-30, 2017-12-29, 2018-12-31, 2019-12-31, 2020-12-31, 2021-09-30
+cohort      liquid  winners(>=3x 5y)  winner share
+2016-12-30    155      5    3.2%
+2017-12-29     85      2    2.4%
+2018-12-31     97      5    5.2%
+2019-12-31    111     18   16.2%
+2020-12-31    124     29   23.4%
+2021-09-30    137     29   21.2%
+pooled: 709 name-cohorts, 88 winners, 52 distinct names
+
+B1. Price-only features at the window start. Percentile of each winner among same-cohort same-sector non-winners (0.50 = no information; 1.0 = winner highest). Permutation p = labels shuffled inside each cohort-sector group (5000 draws). Groups need >=1 winner, >=1 control, >=3 names.
+feature              winners  groups  mean_percentile   perm_p   mean_diff(win-ctl)
+12m momentum (TR)         76     36     0.511         0.834    -0.045 (median diff -0.021)
+log median traded value    81     39     0.435         0.215    -0.109 (median diff -0.292)
+(Momentum is undefined for the 2016-12-30 cohort: prices start 2016-10-17.)
+Momentum level: winners median -7% (n=83), non-winners median -3% (n=457); share of winners with 12m momentum above the cohort's median: 39%
+Winner counts by sector vs liquid names, pooled cohorts (winners / name-cohorts):
+  COMMERCIAL BANKS                    17 /   65   26.2%
+  TECHNOLOGY & COMMUNICATION          11 /   41   26.8%
+  AUTOS                               10 /   72   13.9%
+  FERTILIZER                           9 /   29   31.0%
+  CEMENT                               8 /   64   12.5%
+  OIL & GAS EXPLORATION COMPANIES      6 /   24   25.0%
+  POWER GENERATION & DISTRIBUTION      5 /   23   21.7%
+  REFINERY                             4 /   30   13.3%
+  CHEMICAL                             4 /   45    8.9%
+  LEATHER & TANNERIES                  3 /    5   60.0%
+
+B2. Fundamental features: only one cohort is possible. quarterly_eps.csv holds 20 quarters (2021Q3 to 2026Q2 for 108 of 129 names), so a 1-year trailing EPS growth first exists for the TTM ending 2023-06. The cohort starts 2023-10-31 and runs to the last date (2.96 years); winner = total return >= 2.0x (about 29% a year). One regime, one episode: exploratory only.
+Names with fundamentals, liquid and sector-tagged at 2023-10-31: 52; winners (>=2x): 31 (60%); >=3x: 15. Median multiple 2.25x. KMI All Share TR over the span: 2.59x.
+Percentile of each winner among same-sector non-winners (0.50 = no information). Permutation p: labels shuffled inside each sector, 5000 draws. No correction for 7 features.
+feature                              winners groups  mean_pctile  perm_p   median winners | non-winners
+TTM EPS growth, 1y                       6     3     0.667      0.621        0.297 |    -0.068
+ROE (latest FY known)                    8     5     0.479      0.907        0.129 |     0.134
+payout (reinvestment = 1 - payout)       8     5     0.521      0.944        0.018 |     0.052
+TTM revenue growth, 1y                   9     5     0.556      0.793        0.212 |     0.126
+log median traded value                  9     5     0.537      0.879       17.613 |    16.909
+P/E (price / TTM EPS)                    6     3     0.278      0.405        5.425 |     5.921
+12m momentum                             9     5     0.519      0.952        1.114 |     0.939
+Continuous version, all names: Spearman correlation between the within-sector percentile of the feature and the sector-demeaned log 3-year multiple (permutation p: feature shuffled inside each sector, 5000 draws).
+feature                              n    rho     perm_p
+TTM EPS growth, 1y                    38  -0.03   0.873
+ROE (latest FY known)                 49  +0.06   0.713
+payout (reinvestment = 1 - payout)    46  -0.07   0.677
+TTM revenue growth, 1y                47  +0.28   0.102
+log median traded value               50  -0.08   0.647
+P/E (price / TTM EPS)                 41  -0.24   0.192
+12m momentum                          50  -0.01   0.956
+Winners / names by sector: AUTOS 3/5, CABLE & ELECTRICAL GOODS 1/2, CEMENT 7/7, COMMERCIAL BANKS 2/2, FERTILIZER 2/2, FOOD & PERSONAL CARE PRODUCTS 1/4, OIL & GAS EXPLORATION COMPANIES 3/3, OIL & GAS MARKETING COMPANIES 2/4, PHARMACEUTICALS 2/2, POWER GENERATION & DISTRIBUTION 1/2, REFINERY 4/4, TECHNOLOGY & COMMUNICATION 1/4, TEXTILE 2/3
+
+Decomposition of the total return into EPS growth x re-rating (P/E) x dividends. Shares of ln(total multiple), per winner.
+4-year, 3x: start 2022-10-17, winners (TR >= 3x) 17, with usable EPS at both ends 16
+  median share of ln(multiple): EPS growth 56% (mean 67%), re-rating 31% (mean 25%), dividends 4% (mean 8%)
+  EPS ratio median 2.44x; P/E start median 4.7 -> end 6.2; re-rating supplied more than half in 5 of 16; EPS growth supplied more than half in 9
+  GAL 9.2x (eps 141% / rerate -43% / div 2%); FFC 8.5x (eps 27% / rerate 50% / div 22%); ATRL 7.9x (eps 34% / rerate 65% / div 2%); MEBL 7.7x (eps 51% / rerate 28% / div 21%); GHNI 7.4x (eps 113% / rerate -14% / div 1%); PRL 6.2x (eps 12% / rerate 88% / div -0%); OGDC 5.6x (eps 35% / rerate 48% / div 18%); HUBC 5.1x (eps 34% / rerate 34% / div 32%); FABL 4.3x (eps 67% / rerate 21% / div 12%); PPL 4.1x (eps 42% / rerate 54% / div 4%); FCCL 3.8x (eps 60% / rerate 36% / div 4%); MARI 3.8x (eps 73% / rerate 22% / div 5%)
+3-year, 2x: start 2023-10-31, winners (TR >= 2x) 31, with usable EPS at both ends 27
+  median share of ln(multiple): EPS growth 38% (mean 47%), re-rating 59% (mean 47%), dividends 4% (mean 6%)
+  EPS ratio median 1.56x; P/E start median 5.4 -> end 7.3; re-rating supplied more than half in 15 of 27; EPS growth supplied more than half in 12
+  GAL 11.4x (eps 138% / rerate -40% / div 2%); SAZEW 9.9x (eps 116% / rerate -19% / div 2%); GHNI 7.8x (eps 183% / rerate -84% / div 1%); FFC 7.3x (eps 28% / rerate 54% / div 17%); MEBL 5.2x (eps 12% / rerate 71% / div 17%); PRL 5.2x (eps 131% / rerate -31% / div 0%); FABL 4.4x (eps 24% / rerate 64% / div 12%); ATRL 4.2x (eps -21% / rerate 119% / div 2%); FCCL 3.9x (eps 56% / rerate 40% / div 4%); MARI 3.9x (eps 24% / rerate 70% / div 5%); OGDC 3.6x (eps 6% / rerate 79% / div 16%); AIRLINK 3.3x (eps 123% / rerate -27% / div 4%)
+Not possible: a 5-year decomposition. A start EPS needs 4 quarters before the start, and quarters begin 2021-09 for 108 of 129 names, so no 5-year window has a start EPS.
+
+====================================================================================================
+C. GROWTH-CORE RULE
+====================================================================================================
+Data limits first. sa_ratios.csv has fiscal years from 2020-06 (a handful of names) and mostly FY2022 onward; quarterly_eps.csv has 20 quarters (2021Q3 to 2026Q2 for 108 of 129 names, 2019Q3 for one). A trailing 3-year EPS CAGR therefore first exists for the TTM ending 2025-06 (base TTM 2022-06), known from about Oct 2025. Every 5-year window and the decade: 0 are testable. The 2-year and 1-year versions run beside the 3-year one so the rule can be seen over a longer span; they are NOT the pre-registered horizon and carry the same single-regime caveat. Announcement lag for rows with no announcement match: 95 days after quarter end (95th percentile of the matched lags).
+Eligible names (KMI All Share, liquid > Rs5m, EPS positive now and at the base, ROE and payout known) by quarter-end:
+quarter-end   h=3y all/qual  h=2y all/qual  h=1y all/qual
+2023-09-28     0/  0           0/  0          31/ 19   
+2023-12-29     0/  0           1/  0          49/ 27   
+2024-03-29     0/  0           1/  1          36/ 20   
+2024-06-28     0/  0           4/  1          41/ 29   
+2024-09-30     1/  1          40/ 29          44/ 30   
+2024-12-31     1/  1          48/ 28          47/ 27   
+2025-03-27     1/  1          47/ 30          51/ 32   
+2025-06-30     0/  0          43/ 27          49/ 30   
+2025-09-30    42/ 24          49/ 28          55/ 30   
+2025-12-31    52/ 29          56/ 31          59/ 33   
+2026-03-31    51/ 26          55/ 28          61/ 33   
+2026-06-30    56/ 33          63/ 37          65/ 39   
+2026-09-30    59/ 33          65/ 33          67/ 34   
+2026-10-16    61/ 32          67/ 32          69/ 32   
+Start dates (first quarter-end with >= 30 eligible names): h=3y: 2025-09-30, h=2y: 2024-09-30, h=1y: 2023-09-28
+
+Results. 'dep' = Rs50k, Rs50k, then Rs100k a month (first deposit on the start date); 'fixed' = Rs50k once. Money-weighted CAGR for dep, plain CAGR for fixed. Max DD is on the time-weighted index (deposits removed). Turnover = (buys+sells)/2 / average equity / year. Costs and lock rule as pre-registered. Benchmarks take the same deposits at the next close.
+variant                      mode   start       yrs  deposited   final       multiple  CAGR   TWR_total  maxDD  turnover |  KMI TR: multiple CAGR TWR maxDD | EW: multiple CAGR TWR maxDD
+rule h=3y                  dep   2025-09-30 1.04  1,300,000   1,260,174   0.969x   -5.6%    -13.2%  -28.2%  2.17x |  0.987x   -2.3%    -4.3%  -21.8% |  0.952x   -8.8%   -11.6%  -23.5%
+rule h=3y                  fixed 2025-09-30 1.04     50,000      43,931   0.879x  -11.7%    -12.1%  -27.9%  1.73x |  0.962x   -3.7%    -3.8%  -21.3% |  0.882x  -11.3%   -11.8%  -23.3%
+rule h=3y +quality         dep   2025-09-30 1.04  1,300,000   1,257,236   0.967x   -6.0%    -18.7%  -35.8%  2.13x |  0.987x   -2.3%    -4.3%  -21.8% |  0.952x   -8.8%   -11.6%  -23.5%
+rule h=3y +quality         fixed 2025-09-30 1.04     50,000      40,729   0.815x  -17.8%    -18.5%  -35.5%  1.53x |  0.962x   -3.7%    -3.8%  -21.3% |  0.882x  -11.3%   -11.8%  -23.3%
+rule h=2y                  dep   2024-09-30 2.04  2,500,000   2,712,058   1.085x   +8.0%    +70.2%  -28.9%  1.67x |  1.159x  +14.8%   +78.3%  -21.4% |  1.043x   +4.1%   +47.5%  -23.3%
+rule h=2y                  fixed 2024-09-30 2.04     50,000      86,298   1.726x  +30.6%    +72.6%  -28.6%  1.22x |  1.807x  +33.6%   +80.7%  -21.3% |  1.497x  +21.9%   +49.7%  -23.3%
+rule h=2y +quality         dep   2024-09-30 2.04  2,500,000   2,811,339   1.125x  +11.7%    +68.3%  -33.5%  1.61x |  1.159x  +14.8%   +78.3%  -21.4% |  1.043x   +4.1%   +47.5%  -23.3%
+rule h=2y +quality         fixed 2024-09-30 2.04     50,000      85,480   1.710x  +30.0%    +71.0%  -33.4%  1.31x |  1.807x  +33.6%   +80.7%  -21.3% |  1.497x  +21.9%   +49.7%  -23.3%
+rule h=1y                  dep   2023-09-28 3.05  3,700,000   4,951,829   1.338x  +19.8%   +170.9%  -33.2%  1.63x |  1.468x  +26.5%  +181.9%  -21.4% |  1.263x  +15.8%  +114.8%  -23.3%
+rule h=1y                  fixed 2023-09-28 3.05     50,000     140,111   2.802x  +40.2%   +180.2%  -33.1%  1.46x |  2.866x  +41.2%  +186.6%  -21.3% |  2.188x  +29.3%  +118.8%  -23.3%
+rule h=1y +quality         dep   2023-09-28 3.05  3,700,000   4,780,888   1.292x  +17.3%   +172.8%  -35.7%  1.56x |  1.468x  +26.5%  +181.9%  -21.4% |  1.263x  +15.8%  +114.8%  -23.3%
+rule h=1y +quality         fixed 2023-09-28 3.05     50,000     140,936   2.819x  +40.5%   +181.9%  -35.7%  1.36x |  2.866x  +41.2%  +186.6%  -21.3% |  2.188x  +29.3%  +118.8%  -23.3%
+
+Per-position returns (net of costs; an open position is marked at the last close), fixed-capital runs:
+variant                      n   mean    median  win   >+50%  <-30%  worst   best   open
+rule h=3y                   17    -4.7    -8.0   24%     0%     0%   -29.7  +34.4  8
+rule h=3y +quality          16    -7.3   -11.1   31%     6%    12%   -44.9  +55.6  8
+rule h=2y                   23   +24.6   +10.1   61%    26%     4%   -52.6 +159.1  8
+rule h=2y +quality          25   +21.8   +11.0   64%    20%     0%   -28.1 +189.1  8
+rule h=1y                   39   +26.3    +6.6   51%    26%     8%   -35.3 +201.5  8
+rule h=1y +quality          36   +29.1   +13.0   69%    25%     6%   -34.2 +145.5  8
+
+Placebo: 200 random-entry runs per variant, fixed capital, same dates, same fill, lock and cost rules, same quarter-end exits for KMI or liquidity loss, and each held name exits with the probability the rule itself showed (exits / holdings at its reviews). Final multiple of the rule vs the placebo distribution:
+variant                      rule_mult  placebo_median  p5     p95    rule_percentile
+rule h=3y                     0.879x      0.926x    0.774  1.245    29.5%
+rule h=3y +quality            0.815x      0.859x    0.736  1.067    34.5%
+rule h=2y                     1.726x      1.876x    1.455  2.580    30.0%
+rule h=2y +quality            1.710x      1.908x    1.482  2.519    24.0%
+rule h=1y                     2.802x      2.798x    1.971  3.770    50.5%
+rule h=1y +quality            2.819x      2.694x    2.065  3.967    56.0%
+
+Year and regime split, longest run (rule h=1y, fixed capital, 2023-09-28 to 2026-10-16), time-weighted returns:
+  2023: rule +44.3%  KMI TR +35.5%  EW basket +29.9%  (63 days)
+  2024: rule +65.3%  KMI TR +64.8%  EW basket +59.0%  (246 days)
+  2025: rule +37.6%  KMI TR +34.3%  EW basket +17.6%  (250 days)
+  2026: rule -14.6%  KMI TR -3.5%  EW basket -9.9%  (196 days)
+  regime bill<=policy: 506 days; rule +126.2%  KMI TR +118.8%  EW +81.1%
+  regime bill>policy: 249 days; rule +23.9%  KMI TR +32.2%  EW +20.8%
+  6M T-bill 12.40% vs policy rate 11.50% on the last date: regime bill>policy
+
+Cohort check: equal-weight top-8 of each quarter-end ranking, forward return to the next quarter-end (gross), vs KMI TR and the EW basket (h=2y, the longest span with a stable universe):
+  2024-09-30 -> 2024-12-31: top-8 +65.1%  all eligible EW +53.0%  KMI TR +41.3%
+  2024-12-31 -> 2025-03-27: top-8 -2.2%  all eligible EW +3.6%  KMI TR +2.0%
+  2025-03-27 -> 2025-06-30: top-8 +6.4%  all eligible EW +5.0%  KMI TR +4.3%
+  2025-06-30 -> 2025-09-30: top-8 +31.4%  all eligible EW +26.8%  KMI TR +25.9%
+  2025-09-30 -> 2025-12-31: top-8 -6.9%  all eligible EW -1.0%  KMI TR +0.3%
+  2025-12-31 -> 2026-03-31: top-8 -25.1%  all eligible EW -22.8%  KMI TR -14.0%
+  2026-03-31 -> 2026-06-30: top-8 +35.6%  all eligible EW +33.3%  KMI TR +21.3%
+  2026-06-30 -> 2026-09-30: top-8 -10.4%  all eligible EW -5.6%  KMI TR -5.8%
+  2026-09-30 -> 2026-10-16: top-8 -1.4%  all eligible EW -1.8%  KMI TR -1.8%
+
+LIVE SCREEN as of 2026-10-16 (information known by then; KMI list of 2026-06-05):
+
+  growth horizon 3y: 61 eligible names. Top 12:
+  rank symbol   sector                       score  EPS_CAGR   ROE   payout OCF/NI   P/E  12m_mom  latest_qtr
+    1  IPAK     PAPER, BOARD & PACKAGING    1.000   +25.8%   26.3%     8%   0.44    4.7  +42.7%  2026-06-30
+    2  PRL      REFINERY                    1.000  +105.4%   45.5%     0%   1.01    4.3 +188.0%  2026-06-30
+    3  THCCL    CEMENT                      0.917  +203.0%   32.9%     5%   0.76    9.1  -28.6%  2026-03-31
+    4  FABL     COMMERCIAL BANKS            0.833   +15.7%   19.7%    46% -11.73    6.1   +4.8%  2026-06-30
+    5  GGL      CHEMICAL                    0.833  +116.6%   16.1%     0%   0.74    2.0  -23.9%  2026-03-31
+    6  GHNI     AUTOS                       0.833  +238.3%   38.6%     6%   0.96    6.3  +18.9%  2026-06-30
+    7  GLAXO    PHARMACEUTICALS             0.833   +90.4%   32.4%    47%   0.84    9.6  -21.9%  2026-06-30
+    8  HALEON   PHARMACEUTICALS             0.833  +163.6%   47.6%    55%   0.49   12.1  -22.8%  2026-06-30
+    9  ISL      ENGINEERING                 0.833    +1.4%   14.1%    53%  -1.08    9.4  -23.2%  2026-06-30
+   10  PSO      OIL & GAS MARKETING COMPANI 0.833   +39.8%   11.4%    18%  -2.42    6.8  -22.6%  2026-06-30
+   11  TATM     TEXTILE                     0.833  +140.3%   14.2%     0%   1.63    2.3   +2.0%  2026-06-30
+   12  MARI     OIL & GAS EXPLORATION COMPA 0.778   +15.7%   28.8%    41%   1.14    8.7  -13.5%  2026-06-30
+  Names in the 3y top 20 that are also in the quality top 20 and the 2y top 20: FATIMA, GGL, GHNI, GLAXO, PRL, THCCL
+
+  growth horizon 3y, quality variant (OCF/NI > 0.7): 32 eligible names. Top 12:
+  rank symbol   sector                       score  EPS_CAGR   ROE   payout OCF/NI   P/E  12m_mom  latest_qtr
+    1  GLAXO    PHARMACEUTICALS             1.000   +90.4%   32.4%    47%   0.84    9.6  -21.9%  2026-06-30
+    2  PRL      REFINERY                    1.000  +105.4%   45.5%     0%   1.01    4.3 +188.0%  2026-06-30
+    3  THCCL    CEMENT                      0.944  +203.0%   32.9%     5%   0.76    9.1  -28.6%  2026-03-31
+    4  GGL      CHEMICAL                    0.889  +116.6%   16.1%     0%   0.74    2.0  -23.9%  2026-03-31
+    5  COLG     FOOD & PERSONAL CARE PRODUC 0.833   +21.4%   47.3%    76%   0.86   14.5   -8.8%  2026-06-30
+    6  FATIMA   FERTILIZER                  0.833   +47.9%   26.8%    39%   0.81    6.4   -1.4%  2026-06-30
+    7  GHNI     AUTOS                       0.833  +238.3%   38.6%     6%   0.96    6.3  +18.9%  2026-06-30
+    8  MARI     OIL & GAS EXPLORATION COMPA 0.833   +15.7%   28.8%    41%   1.14    8.7  -13.5%  2026-06-30
+    9  NETSOL   TECHNOLOGY & COMMUNICATION  0.833   +32.0%   19.5%     0%   1.16    4.5  -17.6%  2026-06-30
+   10  TATM     TEXTILE                     0.833  +140.3%   14.2%     0%   1.63    2.3   +2.0%  2026-06-30
+   11  FFC      FERTILIZER                  0.667   +26.0%   33.3%    85%   1.32    8.8  +20.4%  2026-06-30
+   12  MTL      AUTOS                       0.667   +32.9%   80.1%    88%   1.45   15.2  +21.9%  2026-06-30
+
+  growth horizon 2y: 67 eligible names. Top 12:
+  rank symbol   sector                       score  EPS_CAGR   ROE   payout OCF/NI   P/E  12m_mom  latest_qtr
+    1  IPAK     PAPER, BOARD & PACKAGING    1.000  +498.7%   26.3%     8%   0.44    4.7  +42.7%  2026-06-30
+    2  PIBTL    TRANSPORT                   0.917   +38.2%   19.7%     0%   1.39    7.2   -8.8%  2026-06-30
+    3  THCCL    CEMENT                      0.889   +97.2%   32.9%     5%   0.76    9.1  -28.6%  2026-03-31
+    4  GLAXO    PHARMACEUTICALS             0.867  +103.6%   32.4%    47%   0.84    9.6  -21.9%  2026-06-30
+    5  GGL      CHEMICAL                    0.833  +163.1%   16.1%     0%   0.74    2.0  -23.9%  2026-03-31
+    6  INIL     ENGINEERING                 0.833   +15.5%   10.2%    27%  -0.99    7.1  -24.5%  2026-06-30
+    7  MEBL     COMMERCIAL BANKS            0.833    -6.3%   34.0%    55%  -0.27   10.7  +28.7%  2026-06-30
+    8  NML      TEXTILE                     0.800   +35.4%    8.3%     7%   0.10    3.1  -17.7%  2026-06-30
+    9  GHNI     AUTOS                       0.778  +197.8%   38.6%     6%   0.96    6.3  +18.9%  2026-06-30
+   10  NRSL     CHEMICAL                    0.778   +36.7%   13.3%     0%  -0.38    9.3   +4.6%  2026-06-30
+   11  CNERGY   REFINERY                    0.778  +724.6%    5.2%     0%   0.66    6.3  +57.9%  2026-06-30
+   12  FATIMA   FERTILIZER                  0.778   +20.5%   26.8%    39%   0.81    6.4   -1.4%  2026-06-30

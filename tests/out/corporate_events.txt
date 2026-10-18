@@ -1,0 +1,991 @@
+CORPORATE EVENTS TEST  (run date 2026-10-18; price data to 2026-10-16 )
+Sessions 2480; symbols with prices 771 (delisted 315); placebo draws per event 200; seed 20261018
+Costs: 0.5% round trip, +0.5% slippage when 60-day median traded value < Rs20m. Trailing stop 20% on closes, cap 250 sessions.
+
+EVENT COUNTS (raw announcement matches reduced by anchored de-duplication; events with a price history from Oct 2016):
+                                                         events  symbols  kmi  entered  delisted_names  entry_delayed_by_lock      first       last
+type                                                                                                                                               
+E1a buyback approval                                         23       19   13       23               1                      1 2019-06-03 2026-06-11
+E1b buyback first purchase                                   28       22   17       28               3                      1 2019-09-11 2026-10-15
+E2a bonus                                                   149       85   91      148               0                      7 2017-03-08 2026-10-02
+E2b split                                                    19       19   10       19               0                      0 2021-04-22 2026-08-06
+E3a CEO or chairman appointed/changed                      1103      403  552     1038             141                    157 2016-11-29 2026-10-13
+E3b CEO or chairman resigns                                  76       59   29       72              14                      7 2016-11-28 2026-09-21
+E3c role-change form (any of 5 roles)                         8        7    6        8               0                      4 2018-09-11 2024-07-12
+E3d control: takeover disclosure / change of management     168       85   76      155              35                     31 2016-12-07 2026-08-24
+E4a PSX unusual-movement letter                             743      314  424      734              49                     91 2017-02-13 2026-10-16
+E4b company reply to PSX letter                              63       43   30       62               6                      8 2016-12-05 2026-09-02
+E5 credit-rating upgrade                                     12       11    7       12               1                      1 2021-04-30 2026-07-28
+E6 rights issue declared                                    149      111   79      142              10                     14 2016-11-30 2026-09-24
+E7 KMI All Share addition                                   420      256  420      388              37                     82 2019-01-16 2026-07-15
+
+========================================================================================================================
+E1a buyback approval | events 23, entered 23, KMI 13, syms 19, months 17
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n   23 | mean +1.9% med +0.7% win 52% >+50% 0% <-30% 0% worst -12% best +35% || P1 same-symbol: mean +0.3% med -1.3% p(mean) 0.299 p(med) 0.214 (n 23) || P2 matched-market: mean +0.4% med -1.4% p(mean) 0.284 p(med) 0.199 (n 23)
+  All            h60   n   23 | mean -0.4% med -4.3% win 43% >+50% 4% <-30% 0% worst -28% best +54% || P1 same-symbol: mean +4.9% med +0.2% p(mean) 0.851 p(med) 0.871 (n 23) || P2 matched-market: mean +3.9% med -1.2% p(mean) 0.726 p(med) 0.751 (n 23)
+  All            h120  n   21 | mean +6.9% med +4.5% win 57% >+50% 5% <-30% 5% worst -38% best +77% || P1 same-symbol: mean +15.4% med +5.1% p(mean) 0.811 p(med) 0.537 (n 21) || P2 matched-market: mean +12.2% med +1.4% p(mean) 0.657 p(med) 0.358 (n 21)
+  All            stop  n   22 | mean +26.8% med -11.8% win 36% >+50% 18% <-30% 0% worst -25% best +545% || P1 same-symbol: mean +27.4% med -0.7% p(mean) 0.433 p(med) 0.891 (n 22) || P2 matched-market: mean +10.4% med -7.2% p(mean) 0.090 p(med) 0.811 (n 22)
+  KMI member     h20   n   13 | mean +1.7% med +0.7% win 54% >+50% 0% <-30% 0% worst -12% best +35% || P1 same-symbol: mean +0.6% med -1.1% p(mean) 0.358 p(med) 0.284 (n 13) || P2 matched-market: mean +0.2% med -1.5% p(mean) 0.333 p(med) 0.269 (n 13)
+  KMI member     h60   n   13 | mean +1.2% med +0.7% win 54% >+50% 0% <-30% 0% worst -19% best +15% || P1 same-symbol: mean +5.9% med +2.0% p(mean) 0.751 p(med) 0.592 (n 13) || P2 matched-market: mean +2.7% med -1.2% p(mean) 0.552 p(med) 0.398 (n 13)
+  KMI member     h120  n   11 | mean +12.3% med +4.8% win 64% >+50% 0% <-30% 0% worst -14% best +39% || P1 same-symbol: mean +18.9% med +6.9% p(mean) 0.597 p(med) 0.602 (n 11) || P2 matched-market: mean +10.2% med +2.1% p(mean) 0.393 p(med) 0.368 (n 11)
+  KMI member     stop  n   12 | mean +46.3% med -3.5% win 42% >+50% 17% <-30% 0% worst -23% best +545% || P1 same-symbol: mean +41.2% med -0.1% p(mean) 0.353 p(med) 0.597 (n 12) || P2 matched-market: mean +11.0% med -6.8% p(mean) 0.055 p(med) 0.353 (n 12)
+  KMI & TV>=5m   h20   n   10 | mean +2.8% med +2.8% win 60% >+50% 0% <-30% 0% worst -12% best +35% || P1 same-symbol: mean +0.3% med -0.9% p(mean) 0.219 p(med) 0.159 (n 10) || P2 matched-market: mean -0.5% med -1.8% p(mean) 0.229 p(med) 0.114 (n 10)
+  KMI & TV>=5m   h60   n   10 | mean +1.2% med +0.1% win 50% >+50% 0% <-30% 0% worst -19% best +15% || P1 same-symbol: mean +3.0% med +1.3% p(mean) 0.637 p(med) 0.567 (n 10) || P2 matched-market: mean +1.0% med -2.2% p(mean) 0.433 p(med) 0.363 (n 10)
+  KMI & TV>=5m   h120  n    8 | mean +11.5% med +13.3% win 62% >+50% 0% <-30% 0% worst -14% best +33% || P1 same-symbol: mean +7.9% med +5.5% p(mean) 0.308 p(med) 0.284 (n 8) || P2 matched-market: mean +6.3% med -1.7% p(mean) 0.254 p(med) 0.109 (n 8)
+  KMI & TV>=5m   stop  n    9 | mean -7.8% med -9.4% win 22% >+50% 0% <-30% 0% worst -23% best +17% || P1 same-symbol: mean +13.4% med -4.8% p(mean) 0.960 p(med) 0.706 (n 9) || P2 matched-market: mean +6.2% med -10.4% p(mean) 0.826 p(med) 0.453 (n 9)
+  KMI & TV>=20m  h20   n    8 | mean -1.2% med -1.4% win 50% >+50% 0% <-30% 0% worst -12% best +9%
+  KMI & TV>=20m  h60   n    8 | mean -2.1% med -2.6% win 38% >+50% 0% <-30% 0% worst -19% best +15%
+  KMI & TV>=20m  h120  n    6 | mean +7.6% med +1.0% win 50% >+50% 0% <-30% 0% worst -14% best +33%
+  KMI & TV>=20m  stop  n    7 | mean -14.2% med -18.6% win 0% >+50% 0% <-30% 0% worst -23% best -2%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n    8 | mean -2.1% med -2.6% win 38% >+50% 0% <-30% 0% worst -19% best +15%
+  h60   TV>=20m   non-KMI  n    2 | mean -13.2% med -13.2% win 0% >+50% 0% <-30% 0% worst -21% best -5%
+  h60   TV 5-20m  KMI      n    2 | mean +14.8% med +14.8% win 100% >+50% 0% <-30% 0% worst +14% best +15%
+  h60   TV 5-20m  non-KMI  n    1 | mean -4.3% med -4.3% win 0% >+50% 0% <-30% 0% worst -4% best -4%
+  h60   TV<5m     KMI      n    3 | mean +0.9% med +4.6% win 67% >+50% 0% <-30% 0% worst -7% best +5%
+  h60   TV<5m     non-KMI  n    7 | mean +0.9% med -9.2% win 43% >+50% 14% <-30% 0% worst -28% best +54%
+  stop  TV>=20m   KMI      n    7 | mean -14.2% med -18.6% win 0% >+50% 0% <-30% 0% worst -23% best -2%
+  stop  TV>=20m   non-KMI  n    2 | mean -17.7% med -17.7% win 0% >+50% 0% <-30% 0% worst -21% best -14%
+  stop  TV 5-20m  KMI      n    2 | mean +14.6% med +14.6% win 100% >+50% 0% <-30% 0% worst +12% best +17%
+  stop  TV 5-20m  non-KMI  n    1 | mean +57.2% med +57.2% win 100% >+50% 100% <-30% 0% worst +57% best +57%
+  stop  TV<5m     KMI      n    3 | mean +208.6% med +66.7% win 100% >+50% 67% <-30% 0% worst +14% best +545%
+  stop  TV<5m     non-KMI  n    7 | mean +1.9% med -16.3% win 29% >+50% 14% <-30% 0% worst -25% best +71%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2019: n   3 mean -4.1% med -9.2% win 33%
+  2021: n   1 mean +54.3% med +54.3% win 100%
+  2022: n   5 mean -2.9% med -4.3% win 20%
+  2023: n   6 mean +3.4% med +4.9% win 67%
+  2024: n   2 mean +11.6% med +11.6% win 100%
+  2025: n   4 mean -18.3% med -20.1% win 0%
+  2026: n   2 mean -3.8% med -3.8% win 50%
+  h60   bill<=policy  n    6 | mean -0.2% med -0.1% win 50% >+50% 0% <-30% 0% worst -19% best +14%
+  h60   bill>policy   n   17 | mean -0.5% med -4.3% win 41% >+50% 6% <-30% 0% worst -28% best +54%
+  stop  bill<=policy  n    6 | mean +15.9% med +1.4% win 50% >+50% 33% <-30% 0% worst -23% best +71%
+  stop  bill>policy   n   16 | mean +30.9% med -12.4% win 31% >+50% 12% <-30% 0% worst -25% best +545%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n    6 | mean -13.4% med -13.6% win 17% >+50% 0% <-30% 0% worst -28% best +1% || P1 same-symbol: mean +1.2% med +0.4% p(mean) 0.970 p(med) 0.965 (n 6) || P2 matched-market: mean +8.1% med +3.3% p(mean) 0.965 p(med) 0.985 (n 6)
+  stop  n    5 | mean -20.2% med -21.8% win 0% >+50% 0% <-30% 0% worst -25% best -9% || P1 same-symbol: mean -6.5% med -9.9% p(mean) 0.975 p(med) 0.970 (n 5) || P2 matched-market: mean +13.1% med -2.6% p(mean) 0.985 p(med) 0.995 (n 5)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 23 mean +6.7% median +3.1% share>+20% 17% | P1 same-symbol random-day run-up median -0.2%
+  reaction day R: n 23 mean +1.0% median +0.5% share>+5% 17%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   10 | mean -0.1% med +2.6% win 60% >+50% 0% <-30% 0% worst -21% best +15%
+                stop n    9 | mean +77.3% med +17.0% win 56% >+50% 44% <-30% 0% worst -23% best +545%
+  runup<0       h60 n    9 | mean -5.5% med -8.2% win 22% >+50% 0% <-30% 0% worst -28% best +15%
+                stop n    9 | mean -11.1% med -18.0% win 22% >+50% 0% <-30% 0% worst -25% best +14%
+  runup>=+20%   h60 n    4 | mean +10.3% med +1.6% win 50% >+50% 25% <-30% 0% worst -16% best +54%
+                stop n    4 | mean -1.2% med -10.0% win 25% >+50% 0% <-30% 0% worst -22% best +37%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x1.13  maxDD -16%  taken 23  (2019-06-10 to 2026-07-14) | placebo sleeve x p10 0.87 med 1.02 p90 1.35, share >= actual 0.30
+  All            h60   x0.88  maxDD -31%  taken 22  (2019-06-10 to 2026-09-10) | placebo sleeve x p10 0.75 med 1.09 p90 1.99, share >= actual 0.75
+  All            h120  x1.25  maxDD -35%  taken 17  (2019-06-10 to 2026-05-15) | placebo sleeve x p10 0.94 med 1.61 p90 2.57, share >= actual 0.70
+  All            stop  x1.96  maxDD -27%  taken 19  (2019-06-10 to 2026-09-11) | placebo sleeve x p10 0.76 med 1.40 p90 2.31, share >= actual 0.25
+  KMI member     h20   x1.07  maxDD -11%  taken 13  (2022-05-12 to 2026-07-14) | placebo sleeve x p10 0.85 med 1.01 p90 1.20, share >= actual 0.33
+  KMI member     h60   x1.04  maxDD -21%  taken 13  (2022-05-12 to 2026-09-10) | placebo sleeve x p10 0.78 med 1.10 p90 1.40, share >= actual 0.62
+  KMI member     h120  x1.51  maxDD -22%  taken 11  (2022-05-12 to 2025-09-01) | placebo sleeve x p10 1.05 med 1.38 p90 2.06, share >= actual 0.40
+  KMI member     stop  x0.97  maxDD -28%  taken 11  (2022-05-12 to 2026-09-11) | placebo sleeve x p10 0.82 med 1.28 p90 2.07, share >= actual 0.78
+  KMI & TV>=5m   h20   x1.09  maxDD -11%  taken 10  (2022-05-12 to 2026-07-14) | placebo sleeve x p10 0.85 med 0.99 p90 1.14, share >= actual 0.15
+  KMI & TV>=5m   h60   x1.03  maxDD -21%  taken 10  (2022-05-12 to 2026-09-10) | placebo sleeve x p10 0.83 med 1.02 p90 1.26, share >= actual 0.45
+  KMI & TV>=5m   h120  x1.32  maxDD -22%  taken 8  (2022-05-12 to 2025-09-01) | placebo sleeve x p10 0.96 med 1.18 p90 2.00, share >= actual 0.38
+  KMI & TV>=5m   stop  x0.77  maxDD -33%  taken 9  (2022-05-12 to 2026-09-11) | placebo sleeve x p10 0.84 med 1.16 p90 1.58, share >= actual 0.93
+
+========================================================================================================================
+E1b buyback first purchase | events 28, entered 28, KMI 17, syms 22, months 23
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n   26 | mean -0.5% med -1.7% win 35% >+50% 0% <-30% 0% worst -20% best +33% || P1 same-symbol: mean +1.9% med -0.4% p(mean) 0.806 p(med) 0.751 (n 26) || P2 matched-market: mean +0.8% med -1.1% p(mean) 0.657 p(med) 0.617 (n 26)
+  All            h60   n   26 | mean -0.0% med -2.4% win 38% >+50% 0% <-30% 4% worst -33% best +47% || P1 same-symbol: mean +7.6% med +1.7% p(mean) 0.940 p(med) 0.871 (n 26) || P2 matched-market: mean +4.2% med -0.4% p(mean) 0.771 p(med) 0.692 (n 26)
+  All            h120  n   24 | mean +5.3% med -2.8% win 38% >+50% 4% <-30% 4% worst -36% best +152% || P1 same-symbol: mean +19.7% med +6.6% p(mean) 0.955 p(med) 0.970 (n 24) || P2 matched-market: mean +11.9% med +4.2% p(mean) 0.776 p(med) 0.826 (n 24)
+  All            stop  n   25 | mean +40.9% med -1.0% win 40% >+50% 16% <-30% 0% worst -23% best +897% || P1 same-symbol: mean +27.4% med -0.7% p(mean) 0.164 p(med) 0.562 (n 25) || P2 matched-market: mean +10.3% med -6.0% p(mean) 0.010 p(med) 0.259 (n 25)
+  KMI member     h20   n   15 | mean -1.5% med -1.8% win 33% >+50% 0% <-30% 0% worst -15% best +7% || P1 same-symbol: mean +1.7% med -0.1% p(mean) 0.866 p(med) 0.771 (n 15) || P2 matched-market: mean +1.1% med -0.8% p(mean) 0.811 p(med) 0.632 (n 15)
+  KMI member     h60   n   15 | mean +0.1% med -2.4% win 47% >+50% 0% <-30% 0% worst -17% best +27% || P1 same-symbol: mean +6.6% med +2.4% p(mean) 0.896 p(med) 0.826 (n 15) || P2 matched-market: mean +4.9% med +0.6% p(mean) 0.781 p(med) 0.741 (n 15)
+  KMI member     h120  n   13 | mean +17.6% med +5.7% win 62% >+50% 8% <-30% 0% worst -22% best +152% || P1 same-symbol: mean +18.1% med +5.4% p(mean) 0.428 p(med) 0.498 (n 13) || P2 matched-market: mean +13.3% med +7.5% p(mean) 0.289 p(med) 0.557 (n 13)
+  KMI member     stop  n   14 | mean +62.0% med -6.5% win 36% >+50% 14% <-30% 0% worst -23% best +897% || P1 same-symbol: mean +35.7% med -0.4% p(mean) 0.134 p(med) 0.731 (n 14) || P2 matched-market: mean +12.8% med -4.1% p(mean) 0.010 p(med) 0.627 (n 14)
+  KMI & TV>=5m   h20   n   12 | mean -1.6% med -2.1% win 33% >+50% 0% <-30% 0% worst -15% best +7% || P1 same-symbol: mean +1.9% med -0.0% p(mean) 0.851 p(med) 0.776 (n 12) || P2 matched-market: mean +0.5% med -0.8% p(mean) 0.741 p(med) 0.657 (n 12)
+  KMI & TV>=5m   h60   n   12 | mean +1.7% med +0.9% win 58% >+50% 0% <-30% 0% worst -17% best +27% || P1 same-symbol: mean +6.6% med +2.1% p(mean) 0.692 p(med) 0.622 (n 12) || P2 matched-market: mean +3.5% med -0.3% p(mean) 0.552 p(med) 0.413 (n 12)
+  KMI & TV>=5m   h120  n   10 | mean +21.1% med +6.0% win 60% >+50% 10% <-30% 0% worst -22% best +152% || P1 same-symbol: mean +17.7% med +6.4% p(mean) 0.368 p(med) 0.527 (n 10) || P2 matched-market: mean +11.1% med +5.0% p(mean) 0.164 p(med) 0.463 (n 10)
+  KMI & TV>=5m   stop  n   11 | mean +72.8% med -13.1% win 27% >+50% 9% <-30% 0% worst -23% best +897% || P1 same-symbol: mean +39.3% med -0.3% p(mean) 0.134 p(med) 0.896 (n 11) || P2 matched-market: mean +10.5% med -7.1% p(mean) 0.005 p(med) 0.816 (n 11)
+  KMI & TV>=20m  h20   n    9 | mean -3.6% med -2.6% win 11% >+50% 0% <-30% 0% worst -15% best +7%
+  KMI & TV>=20m  h60   n    9 | mean -4.6% med -5.6% win 44% >+50% 0% <-30% 0% worst -17% best +11%
+  KMI & TV>=20m  h120  n    7 | mean -0.1% med -0.6% win 43% >+50% 0% <-30% 0% worst -22% best +23%
+  KMI & TV>=20m  stop  n    8 | mean -14.1% med -14.8% win 0% >+50% 0% <-30% 0% worst -23% best -0%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n    9 | mean -4.6% med -5.6% win 44% >+50% 0% <-30% 0% worst -17% best +11%
+  h60   TV>=20m   non-KMI  n    2 | mean -18.9% med -18.9% win 0% >+50% 0% <-30% 0% worst -28% best -9%
+  h60   TV 5-20m  KMI      n    3 | mean +20.4% med +19.9% win 100% >+50% 0% <-30% 0% worst +15% best +27%
+  h60   TV 5-20m  non-KMI  n    2 | mean -1.7% med -1.7% win 0% >+50% 0% <-30% 0% worst -2% best -1%
+  h60   TV<5m     KMI      n    3 | mean -6.3% med -4.5% win 0% >+50% 0% <-30% 0% worst -12% best -2%
+  h60   TV<5m     non-KMI  n    7 | mean +5.6% med -1.0% win 43% >+50% 0% <-30% 14% worst -33% best +47%
+  stop  TV>=20m   KMI      n    8 | mean -14.1% med -14.8% win 0% >+50% 0% <-30% 0% worst -23% best -0%
+  stop  TV>=20m   non-KMI  n    2 | mean -18.6% med -18.6% win 0% >+50% 0% <-30% 0% worst -19% best -18%
+  stop  TV 5-20m  KMI      n    3 | mean +304.6% med +11.4% win 100% >+50% 33% <-30% 0% worst +5% best +897%
+  stop  TV 5-20m  non-KMI  n    2 | mean +27.9% med +27.9% win 50% >+50% 50% <-30% 0% worst -1% best +57%
+  stop  TV<5m     KMI      n    3 | mean +22.3% med +18.3% win 67% >+50% 33% <-30% 0% worst -3% best +52%
+  stop  TV<5m     non-KMI  n    7 | mean +19.6% med +1.9% win 57% >+50% 14% <-30% 0% worst -19% best +82%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2019: n   2 mean +41.8% med +41.8% win 100%
+  2020: n   1 mean -1.0% med -1.0% win 0%
+  2021: n   1 mean +11.4% med +11.4% win 100%
+  2022: n   6 mean -6.2% med -1.7% win 33%
+  2023: n   6 mean +1.5% med -3.4% win 33%
+  2024: n   3 mean +4.0% med -2.9% win 33%
+  2025: n   5 mean -14.6% med -17.5% win 20%
+  2026: n   2 mean -3.1% med -3.1% win 50%
+  h60   bill<=policy  n    9 | mean -7.4% med -8.9% win 22% >+50% 0% <-30% 11% worst -33% best +27%
+  h60   bill>policy   n   17 | mean +3.8% med -1.0% win 47% >+50% 0% <-30% 0% worst -20% best +47%
+  stop  bill<=policy  n    9 | mean +100.1% med -13.1% win 33% >+50% 22% <-30% 0% worst -21% best +897%
+  stop  bill>policy   n   16 | mean +7.6% med -0.7% win 44% >+50% 12% <-30% 0% worst -23% best +57%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n    7 | mean -11.3% med -8.9% win 29% >+50% 0% <-30% 14% worst -33% best +15% || P1 same-symbol: mean +2.9% med +1.5% p(mean) 0.985 p(med) 0.945 (n 7) || P2 matched-market: mean +5.7% med +0.3% p(mean) 0.970 p(med) 0.905 (n 7)
+  stop  n    6 | mean -11.9% med -16.4% win 17% >+50% 0% <-30% 0% worst -21% best +11% || P1 same-symbol: mean -0.8% med -5.5% p(mean) 0.905 p(med) 0.910 (n 6) || P2 matched-market: mean +9.3% med -6.3% p(mean) 0.910 p(med) 0.881 (n 6)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 28 mean +1.1% median +0.3% share>+20% 0% | P1 same-symbol random-day run-up median +0.0%
+  reaction day R: n 28 mean +1.0% median +0.0% share>+5% 14%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   14 | mean +2.8% med -2.0% win 43% >+50% 0% <-30% 0% worst -16% best +47%
+                stop n   13 | mean +72.3% med -3.2% win 38% >+50% 15% <-30% 0% worst -23% best +897%
+  runup<0       h60 n   12 | mean -3.3% med -2.4% win 33% >+50% 0% <-30% 8% worst -33% best +37%
+                stop n   12 | mean +7.0% med -0.7% win 42% >+50% 17% <-30% 0% worst -21% best +57%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.94  maxDD -26%  taken 26  (2019-09-12 to 2026-07-21) | placebo sleeve x p10 0.75 med 1.09 p90 1.38, share >= actual 0.68
+  All            h60   x0.95  maxDD -36%  taken 25  (2019-09-12 to 2026-09-17) | placebo sleeve x p10 0.77 med 1.23 p90 2.22, share >= actual 0.72
+  All            h120  x1.20  maxDD -45%  taken 20  (2019-09-12 to 2026-06-11) | placebo sleeve x p10 1.11 med 1.64 p90 3.13, share >= actual 0.88
+  All            stop  x4.30  maxDD -34%  taken 21  (2019-09-12 to 2026-08-25) | placebo sleeve x p10 0.87 med 1.43 p90 2.57, share >= actual 0.03
+  KMI member     h20   x0.92  maxDD -14%  taken 15  (2022-05-31 to 2026-07-21) | placebo sleeve x p10 0.88 med 1.00 p90 1.30, share >= actual 0.72
+  KMI member     h60   x0.99  maxDD -20%  taken 15  (2022-05-31 to 2026-09-17) | placebo sleeve x p10 0.84 med 1.06 p90 1.68, share >= actual 0.55
+  KMI member     h120  x1.87  maxDD -21%  taken 13  (2022-05-31 to 2025-10-16) | placebo sleeve x p10 0.83 med 1.36 p90 2.13, share >= actual 0.17
+  KMI member     stop  x3.42  maxDD -30%  taken 13  (2022-05-31 to 2026-08-25) | placebo sleeve x p10 0.83 med 1.20 p90 2.29, share >= actual 0.03
+  KMI & TV>=5m   h20   x0.94  maxDD -13%  taken 12  (2022-05-31 to 2026-07-21) | placebo sleeve x p10 0.86 med 0.99 p90 1.26, share >= actual 0.70
+  KMI & TV>=5m   h60   x1.06  maxDD -16%  taken 12  (2022-05-31 to 2026-09-17) | placebo sleeve x p10 0.77 med 1.02 p90 1.58, share >= actual 0.45
+  KMI & TV>=5m   h120  x1.76  maxDD -21%  taken 10  (2022-05-31 to 2025-10-16) | placebo sleeve x p10 0.85 med 1.21 p90 1.76, share >= actual 0.10
+  KMI & TV>=5m   stop  x2.90  maxDD -29%  taken 11  (2022-05-31 to 2026-08-25) | placebo sleeve x p10 0.80 med 1.25 p90 2.06, share >= actual 0.00
+
+========================================================================================================================
+E2a bonus | events 149, entered 148, KMI 91, syms 85, months 55
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n  147 | mean +0.3% med -2.0% win 42% >+50% 1% <-30% 1% worst -33% best +113% || P1 same-symbol: mean +0.2% med -1.4% p(mean) 0.458 p(med) 0.736 (n 147) || P2 matched-market: mean +0.0% med -1.8% p(mean) 0.403 p(med) 0.612 (n 147)
+  All            h60   n  146 | mean +0.5% med -5.1% win 39% >+50% 5% <-30% 6% worst -40% best +97% || P1 same-symbol: mean +3.1% med -1.2% p(mean) 0.886 p(med) 0.985 (n 146) || P2 matched-market: mean +1.1% med -3.5% p(mean) 0.517 p(med) 0.831 (n 146)
+  All            h120  n  145 | mean +1.5% med -7.2% win 41% >+50% 11% <-30% 18% worst -76% best +154% || P1 same-symbol: mean +7.1% med -1.6% p(mean) 0.960 p(med) 0.985 (n 145) || P2 matched-market: mean +3.0% med -5.5% p(mean) 0.537 p(med) 0.756 (n 145)
+  All            stop  n  146 | mean +3.0% med -12.1% win 34% >+50% 12% <-30% 0% worst -28% best +183% || P1 same-symbol: mean +4.2% med -9.8% p(mean) 0.697 p(med) 0.905 (n 146) || P2 matched-market: mean +1.7% med -10.9% p(mean) 0.338 p(med) 0.741 (n 146)
+  KMI member     h20   n   90 | mean -1.7% med -2.9% win 42% >+50% 0% <-30% 1% worst -33% best +31% || P1 same-symbol: mean -0.5% med -1.9% p(mean) 0.826 p(med) 0.826 (n 90) || P2 matched-market: mean -0.4% med -1.8% p(mean) 0.796 p(med) 0.796 (n 90)
+  KMI member     h60   n   89 | mean -1.6% med -6.0% win 39% >+50% 2% <-30% 4% worst -35% best +90% || P1 same-symbol: mean +1.4% med -2.2% p(mean) 0.900 p(med) 0.960 (n 89) || P2 matched-market: mean -0.6% med -3.9% p(mean) 0.637 p(med) 0.836 (n 89)
+  KMI member     h120  n   88 | mean +0.5% med -7.4% win 39% >+50% 10% <-30% 18% worst -53% best +154% || P1 same-symbol: mean +3.1% med -3.9% p(mean) 0.796 p(med) 0.846 (n 88) || P2 matched-market: mean -0.4% med -6.9% p(mean) 0.388 p(med) 0.587 (n 88)
+  KMI member     stop  n   89 | mean +0.5% med -12.8% win 31% >+50% 8% <-30% 0% worst -28% best +183% || P1 same-symbol: mean +1.1% med -12.0% p(mean) 0.642 p(med) 0.731 (n 89) || P2 matched-market: mean +0.5% med -11.7% p(mean) 0.468 p(med) 0.716 (n 89)
+  KMI & TV>=5m   h20   n   44 | mean -2.5% med -2.2% win 43% >+50% 0% <-30% 2% worst -33% best +27% || P1 same-symbol: mean +0.2% med -1.0% p(mean) 0.915 p(med) 0.741 (n 44) || P2 matched-market: mean -0.9% med -1.9% p(mean) 0.821 p(med) 0.537 (n 44)
+  KMI & TV>=5m   h60   n   44 | mean -1.0% med -5.1% win 41% >+50% 2% <-30% 7% worst -35% best +90% || P1 same-symbol: mean +3.6% med -0.2% p(mean) 0.910 p(med) 0.955 (n 44) || P2 matched-market: mean -1.3% med -4.0% p(mean) 0.468 p(med) 0.627 (n 44)
+  KMI & TV>=5m   h120  n   43 | mean -2.0% med -8.7% win 30% >+50% 9% <-30% 21% worst -53% best +154% || P1 same-symbol: mean +6.9% med -0.3% p(mean) 0.955 p(med) 0.960 (n 43) || P2 matched-market: mean -2.0% med -8.9% p(mean) 0.493 p(med) 0.498 (n 43)
+  KMI & TV>=5m   stop  n   44 | mean +2.9% med -11.4% win 25% >+50% 9% <-30% 0% worst -26% best +183% || P1 same-symbol: mean +4.7% med -11.2% p(mean) 0.622 p(med) 0.527 (n 44) || P2 matched-market: mean -0.7% med -13.2% p(mean) 0.219 p(med) 0.209 (n 44)
+  KMI & TV>=20m  h20   n   29 | mean -0.1% med +1.2% win 52% >+50% 0% <-30% 0% worst -19% best +27%
+  KMI & TV>=20m  h60   n   29 | mean -0.0% med -4.8% win 41% >+50% 3% <-30% 10% worst -35% best +90%
+  KMI & TV>=20m  h120  n   28 | mean -5.9% med -12.5% win 25% >+50% 7% <-30% 21% worst -53% best +154%
+  KMI & TV>=20m  stop  n   29 | mean +3.6% med -10.1% win 24% >+50% 10% <-30% 0% worst -26% best +183%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   29 | mean -0.0% med -4.8% win 41% >+50% 3% <-30% 10% worst -35% best +90%
+  h60   TV>=20m   non-KMI  n   10 | mean +12.4% med +8.7% win 60% >+50% 10% <-30% 10% worst -40% best +56%
+  h60   TV 5-20m  KMI      n   15 | mean -2.8% med -5.4% win 40% >+50% 0% <-30% 0% worst -25% best +19%
+  h60   TV 5-20m  non-KMI  n    7 | mean +4.7% med -5.9% win 43% >+50% 14% <-30% 14% worst -34% best +97%
+  h60   TV<5m     KMI      n   45 | mean -2.1% med -7.6% win 38% >+50% 2% <-30% 2% worst -33% best +50%
+  h60   TV<5m     non-KMI  n   40 | mean +1.4% med -3.6% win 32% >+50% 8% <-30% 8% worst -37% best +68%
+  stop  TV>=20m   KMI      n   29 | mean +3.6% med -10.1% win 24% >+50% 10% <-30% 0% worst -26% best +183%
+  stop  TV>=20m   non-KMI  n   10 | mean +16.4% med +15.1% win 60% >+50% 30% <-30% 0% worst -21% best +60%
+  stop  TV 5-20m  KMI      n   15 | mean +1.7% med -16.6% win 27% >+50% 7% <-30% 0% worst -26% best +115%
+  stop  TV 5-20m  non-KMI  n    7 | mean -6.6% med -19.8% win 14% >+50% 14% <-30% 0% worst -28% best +61%
+  stop  TV<5m     KMI      n   45 | mean -2.0% med -13.0% win 38% >+50% 7% <-30% 0% worst -28% best +94%
+  stop  TV<5m     non-KMI  n   40 | mean +6.9% med -13.0% win 38% >+50% 15% <-30% 0% worst -28% best +179%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2017: n   9 mean +0.2% med -7.4% win 33%
+  2018: n  24 mean -4.9% med -8.5% win 29%
+  2019: n  19 mean +19.5% med +9.2% win 53%
+  2020: n  14 mean +2.0% med -1.3% win 50%
+  2021: n  27 mean -4.4% med -5.9% win 41%
+  2022: n  20 mean -7.9% med -12.2% win 20%
+  2023: n  21 mean -3.8% med -3.4% win 33%
+  2024: n   4 mean +17.0% med +7.3% win 100%
+  2025: n   6 mean +17.6% med +16.6% win 67%
+  2026: n   2 mean -14.1% med -14.1% win 0%
+  h60   bill<=policy  n   16 | mean +4.4% med -1.7% win 44% >+50% 12% <-30% 0% worst -20% best +68%
+  h60   bill>policy   n  130 | mean +0.0% med -5.6% win 38% >+50% 4% <-30% 7% worst -40% best +97%
+  stop  bill<=policy  n   16 | mean +12.9% med -3.3% win 44% >+50% 19% <-30% 0% worst -25% best +91%
+  stop  bill>policy   n  130 | mean +1.7% med -12.6% win 33% >+50% 11% <-30% 0% worst -28% best +183%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n    8 | mean +9.7% med +5.0% win 50% >+50% 12% <-30% 0% worst -20% best +68% || P1 same-symbol: mean +13.4% med +6.7% p(mean) 0.627 p(med) 0.562 (n 8) || P2 matched-market: mean +9.1% med +1.6% p(mean) 0.378 p(med) 0.373 (n 8)
+  stop  n    8 | mean +1.2% med -8.0% win 38% >+50% 12% <-30% 0% worst -25% best +71% || P1 same-symbol: mean +5.7% med -4.6% p(mean) 0.557 p(med) 0.602 (n 8) || P2 matched-market: mean +8.3% med -6.7% p(mean) 0.607 p(med) 0.567 (n 8)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 149 mean +3.0% median +2.4% share>+20% 7% | P1 same-symbol random-day run-up median -0.7%
+  reaction day R: n 149 mean +2.0% median +2.0% share>+5% 24%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   76 | mean +2.4% med -2.2% win 43% >+50% 4% <-30% 5% worst -37% best +68%
+                stop n   76 | mean +4.8% med -9.4% win 41% >+50% 14% <-30% 0% worst -28% best +115%
+  runup<0       h60 n   59 | mean -2.3% med -8.8% win 31% >+50% 7% <-30% 7% worst -40% best +97%
+                stop n   59 | mean +1.2% med -15.8% win 27% >+50% 8% <-30% 0% worst -28% best +183%
+  runup>=+20%   h60 n   11 | mean +2.5% med +8.8% win 55% >+50% 0% <-30% 9% worst -35% best +35%
+                stop n   11 | mean -0.3% med -10.1% win 27% >+50% 9% <-30% 0% worst -22% best +71%
+-- F. sub-labels (extra) (exit h60 and stop, All)
+  explicit|big>=20%            h60 n   24 | mean -1.9% med -3.5% win 33% >+50% 4% <-30% 8% worst -40% best +56%
+                               stop n   24 | mean +10.2% med -4.3% win 42% >+50% 17% <-30% 0% worst -26% best +115%
+  explicit|small<20%           h60 n   20 | mean -1.0% med -0.1% win 45% >+50% 0% <-30% 0% worst -25% best +29%
+                               stop n   20 | mean +1.9% med -15.8% win 25% >+50% 10% <-30% 0% worst -28% best +112%
+  results-proxy|big>=20%       h60 n   66 | mean +3.0% med -4.8% win 41% >+50% 6% <-30% 6% worst -34% best +97%
+                               stop n   66 | mean +0.1% med -14.2% win 32% >+50% 12% <-30% 0% worst -28% best +91%
+  results-proxy|small<20%      h60 n   36 | mean -1.7% med -9.1% win 36% >+50% 6% <-30% 8% worst -36% best +90%
+                               stop n   36 | mean +3.9% med -14.0% win 39% >+50% 8% <-30% 0% worst -28% best +183%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x1.14  maxDD -28%  taken 92  (2017-03-09 to 2026-10-13) | placebo sleeve x p10 0.47 med 0.85 p90 1.54, share >= actual 0.28
+  All            h60   x1.50  maxDD -49%  taken 58  (2017-03-09 to 2026-10-07) | placebo sleeve x p10 0.46 med 0.99 p90 2.35, share >= actual 0.30
+  All            h120  x0.89  maxDD -56%  taken 45  (2017-03-09 to 2026-07-22) | placebo sleeve x p10 0.67 med 1.21 p90 2.87, share >= actual 0.62
+  All            stop  x1.78  maxDD -56%  taken 51  (2017-03-09 to 2026-09-02) | placebo sleeve x p10 0.39 med 1.08 p90 1.83, share >= actual 0.12
+  KMI member     h20   x0.75  maxDD -36%  taken 62  (2017-05-31 to 2026-10-13) | placebo sleeve x p10 0.50 med 0.82 p90 1.24, share >= actual 0.55
+  KMI member     h60   x1.31  maxDD -35%  taken 43  (2017-05-31 to 2026-10-07) | placebo sleeve x p10 0.38 med 0.77 p90 1.47, share >= actual 0.17
+  KMI member     h120  x0.60  maxDD -50%  taken 37  (2017-05-31 to 2026-03-30) | placebo sleeve x p10 0.51 med 1.02 p90 1.64, share >= actual 0.80
+  KMI member     stop  x1.19  maxDD -56%  taken 39  (2017-05-31 to 2026-09-02) | placebo sleeve x p10 0.32 med 0.94 p90 1.80, share >= actual 0.35
+  KMI & TV>=5m   h20   x0.90  maxDD -30%  taken 36  (2017-08-09 to 2026-08-10) | placebo sleeve x p10 0.62 med 0.79 p90 1.06, share >= actual 0.40
+  KMI & TV>=5m   h60   x1.25  maxDD -40%  taken 32  (2017-08-09 to 2026-10-07) | placebo sleeve x p10 0.47 med 0.75 p90 1.17, share >= actual 0.05
+  KMI & TV>=5m   h120  x1.29  maxDD -49%  taken 29  (2017-08-09 to 2026-03-30) | placebo sleeve x p10 0.44 med 0.88 p90 1.34, share >= actual 0.12
+  KMI & TV>=5m   stop  x1.69  maxDD -42%  taken 32  (2017-08-09 to 2026-09-02) | placebo sleeve x p10 0.35 med 0.78 p90 1.92, share >= actual 0.15
+
+========================================================================================================================
+E2b split | events 19, entered 19, KMI 10, syms 19, months 11
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n   19 | mean +16.1% med +8.3% win 63% >+50% 11% <-30% 0% worst -12% best +84% || P1 same-symbol: mean +3.1% med +0.4% p(mean) 0.025 p(med) 0.025 (n 19) || P2 matched-market: mean +2.1% med -1.0% p(mean) 0.040 p(med) 0.005 (n 19)
+  All            h60   n   18 | mean +18.6% med +13.2% win 72% >+50% 6% <-30% 6% worst -51% best +178% || P1 same-symbol: mean +13.6% med +5.4% p(mean) 0.264 p(med) 0.139 (n 18) || P2 matched-market: mean +7.6% med -0.4% p(mean) 0.114 p(med) 0.035 (n 18)
+  All            h120  n   16 | mean +35.6% med +14.9% win 69% >+50% 19% <-30% 6% worst -49% best +306% || P1 same-symbol: mean +30.1% med +17.4% p(mean) 0.303 p(med) 0.562 (n 16) || P2 matched-market: mean +16.0% med +2.0% p(mean) 0.114 p(med) 0.109 (n 16)
+  All            stop  n   17 | mean +26.1% med +13.2% win 71% >+50% 18% <-30% 0% worst -23% best +163% || P1 same-symbol: mean +25.1% med +0.8% p(mean) 0.448 p(med) 0.179 (n 17) || P2 matched-market: mean +8.1% med -7.5% p(mean) 0.085 p(med) 0.015 (n 17)
+  KMI member     h20   n   10 | mean +10.6% med +2.0% win 50% >+50% 10% <-30% 0% worst -12% best +71% || P1 same-symbol: mean +2.0% med -0.0% p(mean) 0.065 p(med) 0.284 (n 10) || P2 matched-market: mean -0.7% med -1.8% p(mean) 0.015 p(med) 0.119 (n 10)
+  KMI member     h60   n    9 | mean +14.8% med +13.9% win 89% >+50% 0% <-30% 0% worst -13% best +41% || P1 same-symbol: mean +7.9% med +1.6% p(mean) 0.239 p(med) 0.070 (n 9) || P2 matched-market: mean +0.7% med -3.4% p(mean) 0.060 p(med) 0.040 (n 9)
+  KMI member     h120  n    8 | mean +23.0% med +12.9% win 62% >+50% 25% <-30% 0% worst -22% best +111% || P1 same-symbol: mean +22.0% med +8.3% p(mean) 0.368 p(med) 0.403 (n 8) || P2 matched-market: mean +5.3% med -2.9% p(mean) 0.104 p(med) 0.134 (n 8)
+  KMI member     stop  n    9 | mean +20.1% med +11.3% win 67% >+50% 11% <-30% 0% worst -23% best +101% || P1 same-symbol: mean +16.2% med -4.7% p(mean) 0.323 p(med) 0.244 (n 9) || P2 matched-market: mean -1.2% med -11.6% p(mean) 0.055 p(med) 0.025 (n 9)
+  KMI & TV>=5m   h20   n    8 | mean +14.5% med +11.3% win 62% >+50% 12% <-30% 0% worst -12% best +71% || P1 same-symbol: mean +2.9% med +0.9% p(mean) 0.035 p(med) 0.020 (n 8) || P2 matched-market: mean -1.0% med -1.9% p(mean) 0.010 p(med) 0.005 (n 8)
+  KMI & TV>=5m   h60   n    7 | mean +20.8% med +18.3% win 100% >+50% 0% <-30% 0% worst +4% best +41% || P1 same-symbol: mean +10.5% med +2.5% p(mean) 0.189 p(med) 0.100 (n 7) || P2 matched-market: mean -0.2% med -3.7% p(mean) 0.035 p(med) 0.030 (n 7)
+  KMI & TV>=5m   h120  n    6 | mean +32.1% med +21.4% win 67% >+50% 33% <-30% 0% worst -16% best +111% || P1 same-symbol: mean +28.9% med +16.3% p(mean) 0.308 p(med) 0.418 (n 6) || P2 matched-market: mean +5.6% med -1.7% p(mean) 0.065 p(med) 0.104 (n 6)
+  KMI & TV>=5m   stop  n    7 | mean +29.4% med +24.7% win 86% >+50% 14% <-30% 0% worst -14% best +101% || P1 same-symbol: mean +22.6% med +4.5% p(mean) 0.294 p(med) 0.139 (n 7) || P2 matched-market: mean -2.0% med -12.1% p(mean) 0.020 p(med) 0.005 (n 7)
+  KMI & TV>=20m  h20   n    6 | mean +4.7% med +0.2% win 50% >+50% 0% <-30% 0% worst -12% best +30%
+  KMI & TV>=20m  h60   n    5 | mean +20.2% med +18.3% win 100% >+50% 0% <-30% 0% worst +13% best +33%
+  KMI & TV>=20m  h120  n    4 | mean +54.0% med +46.2% win 100% >+50% 50% <-30% 0% worst +12% best +111%
+  KMI & TV>=20m  stop  n    5 | mean +33.0% med +24.7% win 80% >+50% 20% <-30% 0% worst -14% best +101%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n    5 | mean +20.2% med +18.3% win 100% >+50% 0% <-30% 0% worst +13% best +33%
+  h60   TV>=20m   non-KMI  n    4 | mean -1.4% med -1.3% win 50% >+50% 0% <-30% 25% worst -51% best +48%
+  h60   TV 5-20m  KMI      n    2 | mean +22.5% med +22.5% win 100% >+50% 0% <-30% 0% worst +4% best +41%
+  h60   TV 5-20m  non-KMI  n    1 | mean +18.4% med +18.4% win 100% >+50% 0% <-30% 0% worst +18% best +18%
+  h60   TV<5m     KMI      n    2 | mean -6.5% med -6.5% win 50% >+50% 0% <-30% 0% worst -13% best +0%
+  h60   TV<5m     non-KMI  n    4 | mean +47.4% med +10.3% win 50% >+50% 25% <-30% 0% worst -9% best +178%
+  stop  TV>=20m   KMI      n    5 | mean +33.0% med +24.7% win 80% >+50% 20% <-30% 0% worst -14% best +101%
+  stop  TV>=20m   non-KMI  n    3 | mean +20.2% med +1.4% win 67% >+50% 33% <-30% 0% worst -4% best +63%
+  stop  TV 5-20m  KMI      n    2 | mean +20.5% med +20.5% win 100% >+50% 0% <-30% 0% worst +4% best +37%
+  stop  TV 5-20m  non-KMI  n    1 | mean +14.2% med +14.2% win 100% >+50% 0% <-30% 0% worst +14% best +14%
+  stop  TV<5m     KMI      n    2 | mean -12.5% med -12.5% win 0% >+50% 0% <-30% 0% worst -23% best -2%
+  stop  TV<5m     non-KMI  n    4 | mean +47.1% med +22.6% win 75% >+50% 25% <-30% 0% worst -20% best +163%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2021: n   2 mean +13.7% med +13.7% win 50%
+  2025: n  11 mean +24.9% med +18.3% win 82%
+  2026: n   5 mean +6.8% med +0.4% win 60%
+  h60   bill<=policy  n    7 | mean +9.0% med +4.1% win 86% >+50% 0% <-30% 0% worst -3% best +23%
+  h60   bill>policy   n   11 | mean +24.7% med +13.9% win 64% >+50% 9% <-30% 9% worst -51% best +178%
+  stop  bill<=policy  n    7 | mean +15.0% med +13.2% win 86% >+50% 0% <-30% 0% worst -2% best +42%
+  stop  bill>policy   n   10 | mean +33.9% med +18.0% win 60% >+50% 30% <-30% 0% worst -23% best +163%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n   16 | mean +19.2% med +13.2% win 75% >+50% 6% <-30% 6% worst -51% best +178% || P1 same-symbol: mean +15.6% med +6.5% p(mean) 0.313 p(med) 0.234 (n 16) || P2 matched-market: mean +8.8% med -0.1% p(mean) 0.124 p(med) 0.045 (n 16)
+  stop  n   15 | mean +28.7% med +13.2% win 73% >+50% 20% <-30% 0% worst -20% best +163% || P1 same-symbol: mean +29.8% med +6.8% p(mean) 0.512 p(med) 0.289 (n 15) || P2 matched-market: mean +10.1% med -5.7% p(mean) 0.104 p(med) 0.025 (n 15)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 19 mean +4.6% median +3.4% share>+20% 5% | P1 same-symbol random-day run-up median +1.1%
+  reaction day R: n 19 mean +1.6% median +0.9% share>+5% 16%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   14 | mean +27.1% med +16.1% win 86% >+50% 7% <-30% 0% worst -13% best +178%
+                stop n   12 | mean +36.2% med +18.9% win 83% >+50% 25% <-30% 0% worst -23% best +163%
+  runup<0       h60 n    3 | mean -13.8% med -8.8% win 33% >+50% 0% <-30% 33% worst -51% best +18%
+                stop n    4 | mean -5.7% med -8.7% win 25% >+50% 0% <-30% 0% worst -20% best +14%
+  runup>=+20%   h60 n    1 | mean -2.9% med -2.9% win 0% >+50% 0% <-30% 0% worst -3% best -3%
+                stop n    1 | mean +32.1% med +32.1% win 100% >+50% 0% <-30% 0% worst +32% best +32%
+-- F. sub-labels (extra) (exit h60 and stop, All)
+  explicit|                    h60 n   16 | mean +17.5% med +8.3% win 69% >+50% 6% <-30% 6% worst -51% best +178%
+                               stop n   16 | mean +25.4% med +12.2% win 69% >+50% 19% <-30% 0% worst -23% best +163%
+  results-proxy|               h60 n    2 | mean +27.4% med +27.4% win 100% >+50% 0% <-30% 0% worst +14% best +41%
+                               stop n    1 | mean +36.9% med +36.9% win 100% >+50% 0% <-30% 0% worst +37% best +37%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x2.49  maxDD -11%  taken 18  (2021-04-23 to 2026-09-08) | placebo sleeve x p10 0.83 med 1.00 p90 1.38, share >= actual 0.03
+  All            h60   x1.28  maxDD -28%  taken 14  (2021-04-23 to 2026-08-27) | placebo sleeve x p10 0.88 med 1.08 p90 1.42, share >= actual 0.23
+  All            h120  x1.15  maxDD -33%  taken 8  (2021-04-23 to 2026-10-07) | placebo sleeve x p10 0.76 med 1.08 p90 1.79, share >= actual 0.47
+  All            stop  x1.27  maxDD -27%  taken 8  (2021-04-23 to 2026-09-11) | placebo sleeve x p10 0.80 med 1.11 p90 1.65, share >= actual 0.30
+  KMI member     h20   x1.37  maxDD -9%  taken 10  (2021-04-23 to 2026-09-08) | placebo sleeve x p10 0.84 med 0.98 p90 1.17, share >= actual 0.03
+  KMI member     h60   x1.50  maxDD -18%  taken 9  (2021-04-23 to 2026-07-31) | placebo sleeve x p10 0.79 med 0.98 p90 1.21, share >= actual 0.03
+  KMI member     h120  x1.57  maxDD -34%  taken 7  (2021-04-23 to 2026-10-01) | placebo sleeve x p10 0.79 med 1.04 p90 1.31, share >= actual 0.00
+  KMI member     stop  x1.57  maxDD -21%  taken 8  (2021-04-23 to 2026-09-11) | placebo sleeve x p10 0.74 med 0.90 p90 1.16, share >= actual 0.03
+  KMI & TV>=5m   h20   x1.42  maxDD -9%  taken 8  (2021-04-23 to 2026-09-08) | placebo sleeve x p10 0.87 med 0.96 p90 1.07, share >= actual 0.00
+  KMI & TV>=5m   h60   x1.57  maxDD -14%  taken 7  (2021-04-23 to 2026-07-31) | placebo sleeve x p10 0.84 med 0.96 p90 1.14, share >= actual 0.03
+  KMI & TV>=5m   h120  x1.65  maxDD -28%  taken 5  (2021-04-23 to 2026-10-01) | placebo sleeve x p10 0.81 med 1.00 p90 1.34, share >= actual 0.00
+  KMI & TV>=5m   stop  x1.71  maxDD -17%  taken 6  (2021-04-23 to 2026-09-11) | placebo sleeve x p10 0.72 med 0.90 p90 1.18, share >= actual 0.00
+
+========================================================================================================================
+E3a CEO or chairman appointed/changed | events 1103, entered 1038, KMI 552, syms 403, months 120
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n 1034 | mean +0.8% med -1.4% win 42% >+50% 2% <-30% 2% worst -96% best +147% || P1 same-symbol: mean +0.9% med -1.4% p(mean) 0.572 p(med) 0.468 (n 1033) || P2 matched-market: mean +1.1% med -1.3% p(mean) 0.677 p(med) 0.597 (n 1033)
+  All            h60   n 1022 | mean +3.8% med -1.2% win 47% >+50% 6% <-30% 6% worst -97% best +340% || P1 same-symbol: mean +4.6% med -1.7% p(mean) 0.746 p(med) 0.259 (n 1021) || P2 matched-market: mean +5.1% med -1.3% p(mean) 0.871 p(med) 0.388 (n 1021)
+  All            h120  n  972 | mean +10.1% med -0.2% win 50% >+50% 12% <-30% 12% worst -99% best +412% || P1 same-symbol: mean +10.2% med -1.3% p(mean) 0.507 p(med) 0.090 (n 971) || P2 matched-market: mean +11.8% med -0.5% p(mean) 0.721 p(med) 0.368 (n 971)
+  All            stop  n  997 | mean +6.9% med -9.1% win 37% >+50% 10% <-30% 1% worst -90% best +524% || P1 same-symbol: mean +5.7% med -8.9% p(mean) 0.174 p(med) 0.612 (n 996) || P2 matched-market: mean +7.1% med -7.7% p(mean) 0.557 p(med) 0.930 (n 996)
+  KMI member     h20   n  532 | mean +0.9% med -1.5% win 42% >+50% 2% <-30% 1% worst -96% best +140% || P1 same-symbol: mean +0.6% med -1.3% p(mean) 0.299 p(med) 0.647 (n 532) || P2 matched-market: mean +0.7% med -1.3% p(mean) 0.363 p(med) 0.567 (n 532)
+  KMI member     h60   n  526 | mean +2.9% med -0.5% win 49% >+50% 5% <-30% 6% worst -97% best +210% || P1 same-symbol: mean +3.4% med -1.7% p(mean) 0.677 p(med) 0.075 (n 526) || P2 matched-market: mean +4.0% med -1.6% p(mean) 0.781 p(med) 0.139 (n 526)
+  KMI member     h120  n  496 | mean +6.3% med -2.1% win 47% >+50% 10% <-30% 11% worst -99% best +248% || P1 same-symbol: mean +7.0% med -1.8% p(mean) 0.642 p(med) 0.637 (n 496) || P2 matched-market: mean +9.1% med -0.6% p(mean) 0.915 p(med) 0.896 (n 496)
+  KMI member     stop  n  511 | mean +6.1% med -8.5% win 36% >+50% 10% <-30% 1% worst -90% best +524% || P1 same-symbol: mean +5.4% med -9.4% p(mean) 0.358 p(med) 0.234 (n 511) || P2 matched-market: mean +6.9% med -8.3% p(mean) 0.612 p(med) 0.557 (n 511)
+  KMI & TV>=5m   h20   n  211 | mean +0.6% med -1.8% win 39% >+50% 2% <-30% 1% worst -43% best +72% || P1 same-symbol: mean +0.9% med -0.8% p(mean) 0.582 p(med) 0.886 (n 211) || P2 matched-market: mean +0.1% med -1.5% p(mean) 0.254 p(med) 0.662 (n 211)
+  KMI & TV>=5m   h60   n  206 | mean +0.6% med -2.4% win 45% >+50% 3% <-30% 5% worst -40% best +103% || P1 same-symbol: mean +4.4% med -0.4% p(mean) 0.985 p(med) 0.905 (n 206) || P2 matched-market: mean +2.2% med -2.0% p(mean) 0.816 p(med) 0.577 (n 206)
+  KMI & TV>=5m   h120  n  193 | mean +4.0% med -2.0% win 47% >+50% 8% <-30% 11% worst -54% best +231% || P1 same-symbol: mean +8.3% med -0.6% p(mean) 0.955 p(med) 0.741 (n 193) || P2 matched-market: mean +5.9% med -2.1% p(mean) 0.731 p(med) 0.488 (n 193)
+  KMI & TV>=5m   stop  n  199 | mean +3.7% med -12.3% win 31% >+50% 10% <-30% 1% worst -34% best +306% || P1 same-symbol: mean +6.4% med -9.3% p(mean) 0.866 p(med) 0.955 (n 199) || P2 matched-market: mean +5.6% med -10.4% p(mean) 0.731 p(med) 0.851 (n 199)
+  KMI & TV>=20m  h20   n  151 | mean +1.0% med -1.3% win 43% >+50% 3% <-30% 1% worst -43% best +72%
+  KMI & TV>=20m  h60   n  149 | mean +1.0% med -2.0% win 46% >+50% 3% <-30% 5% worst -40% best +103%
+  KMI & TV>=20m  h120  n  142 | mean +5.1% med -2.3% win 48% >+50% 8% <-30% 9% worst -54% best +231%
+  KMI & TV>=20m  stop  n  144 | mean +3.9% med -12.2% win 31% >+50% 11% <-30% 1% worst -34% best +189%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n  149 | mean +1.0% med -2.0% win 46% >+50% 3% <-30% 5% worst -40% best +103%
+  h60   TV>=20m   non-KMI  n   66 | mean -1.6% med -3.2% win 44% >+50% 5% <-30% 5% worst -92% best +108%
+  h60   TV 5-20m  KMI      n   57 | mean -0.5% med -6.1% win 42% >+50% 5% <-30% 5% worst -39% best +64%
+  h60   TV 5-20m  non-KMI  n   73 | mean +7.8% med +4.8% win 55% >+50% 11% <-30% 8% worst -56% best +173%
+  h60   TV<5m     KMI      n  320 | mean +4.5% med +0.9% win 52% >+50% 6% <-30% 6% worst -97% best +210%
+  h60   TV<5m     non-KMI  n  357 | mean +5.3% med -2.2% win 44% >+50% 6% <-30% 6% worst -48% best +340%
+  stop  TV>=20m   KMI      n  144 | mean +3.9% med -12.2% win 31% >+50% 11% <-30% 1% worst -34% best +189%
+  stop  TV>=20m   non-KMI  n   65 | mean +1.8% med -11.2% win 34% >+50% 8% <-30% 0% worst -28% best +280%
+  stop  TV 5-20m  KMI      n   55 | mean +3.2% med -13.0% win 31% >+50% 7% <-30% 0% worst -29% best +306%
+  stop  TV 5-20m  non-KMI  n   70 | mean +8.3% med -11.6% win 43% >+50% 16% <-30% 0% worst -26% best +105%
+  stop  TV<5m     KMI      n  312 | mean +7.7% med -6.3% win 40% >+50% 10% <-30% 2% worst -90% best +524%
+  stop  TV<5m     non-KMI  n  351 | mean +8.6% med -8.9% win 37% >+50% 11% <-30% 2% worst -48% best +321%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2016: n   8 mean +8.6% med +4.8% win 62%
+  2017: n  92 mean -6.7% med -10.4% win 30%
+  2018: n  82 mean -1.9% med -4.5% win 33%
+  2019: n  83 mean -6.0% med -11.2% win 36%
+  2020: n 135 mean +11.8% med +5.3% win 60%
+  2021: n 105 mean +5.2% med -2.7% win 43%
+  2022: n  88 mean -6.7% med -8.6% win 25%
+  2023: n 132 mean +10.4% med +4.7% win 60%
+  2024: n  95 mean +9.3% med +7.9% win 63%
+  2025: n  98 mean +11.7% med +5.4% win 61%
+  2026: n 104 mean +1.3% med -2.0% win 44%
+  h60   bill<=policy  n  300 | mean +6.5% med +1.3% win 52% >+50% 7% <-30% 4% worst -92% best +210%
+  h60   bill>policy   n  722 | mean +2.7% med -1.9% win 45% >+50% 5% <-30% 6% worst -97% best +340%
+  stop  bill<=policy  n  291 | mean +11.2% med -4.2% win 44% >+50% 14% <-30% 1% worst -35% best +321%
+  stop  bill>policy   n  706 | mean +5.1% med -10.8% win 34% >+50% 9% <-30% 1% worst -90% best +524%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n  220 | mean +6.6% med +2.6% win 54% >+50% 6% <-30% 6% worst -97% best +213% || P1 same-symbol: mean +9.6% med +1.9% p(mean) 0.881 p(med) 0.338 (n 220) || P2 matched-market: mean +10.9% med +1.6% p(mean) 0.920 p(med) 0.274 (n 219)
+  stop  n  195 | mean +6.6% med -9.0% win 38% >+50% 11% <-30% 2% worst -90% best +321% || P1 same-symbol: mean +11.5% med -4.5% p(mean) 0.915 p(med) 0.970 (n 195) || P2 matched-market: mean +12.8% med -4.6% p(mean) 0.925 p(med) 0.886 (n 194)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 1077 mean +2.5% median +0.0% share>+20% 10% | P1 same-symbol random-day run-up median -0.3%
+  reaction day R: n 1078 mean +0.3% median +0.0% share>+5% 7%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n  438 | mean +3.4% med -1.6% win 45% >+50% 5% <-30% 5% worst -97% best +213%
+                stop n  427 | mean +8.7% med -8.4% win 38% >+50% 11% <-30% 1% worst -90% best +524%
+  runup<0       h60 n  483 | mean +3.6% med -0.7% win 48% >+50% 6% <-30% 5% worst -72% best +340%
+                stop n  469 | mean +4.8% med -10.5% win 36% >+50% 9% <-30% 1% worst -55% best +306%
+  runup>=+20%   h60 n  101 | mean +6.5% med +1.5% win 50% >+50% 10% <-30% 9% worst -92% best +245%
+                stop n  101 | mean +8.8% med -8.0% win 41% >+50% 13% <-30% 4% worst -65% best +255%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.46  maxDD -73%  taken 311  (2016-11-30 to 2026-10-15) | placebo sleeve x p10 0.39 med 1.36 p90 3.24, share >= actual 0.85
+  All            h60   x1.02  maxDD -74%  taken 112  (2016-11-30 to 2026-10-12) | placebo sleeve x p10 1.12 med 2.75 p90 6.84, share >= actual 0.93
+  All            h120  x4.44  maxDD -72%  taken 59  (2016-11-30 to 2026-10-09) | placebo sleeve x p10 1.31 med 3.36 p90 10.02, share >= actual 0.42
+  All            stop  x0.41  maxDD -85%  taken 81  (2016-11-30 to 2026-10-14) | placebo sleeve x p10 0.74 med 2.22 p90 5.98, share >= actual 0.97
+  KMI member     h20   x0.81  maxDD -60%  taken 255  (2016-11-30 to 2026-10-15) | placebo sleeve x p10 0.33 med 1.23 p90 3.84, share >= actual 0.70
+  KMI member     h60   x1.52  maxDD -67%  taken 109  (2016-11-30 to 2026-10-12) | placebo sleeve x p10 0.70 med 1.68 p90 3.79, share >= actual 0.57
+  KMI member     h120  x1.44  maxDD -70%  taken 57  (2016-11-30 to 2026-10-07) | placebo sleeve x p10 0.83 med 1.47 p90 4.73, share >= actual 0.53
+  KMI member     stop  x0.82  maxDD -71%  taken 66  (2016-11-30 to 2026-10-14) | placebo sleeve x p10 0.65 med 1.64 p90 5.79, share >= actual 0.85
+  KMI & TV>=5m   h20   x0.56  maxDD -58%  taken 164  (2017-01-04 to 2026-10-15) | placebo sleeve x p10 0.49 med 0.86 p90 1.66, share >= actual 0.78
+  KMI & TV>=5m   h60   x0.56  maxDD -76%  taken 94  (2017-01-04 to 2026-10-12) | placebo sleeve x p10 0.55 med 1.02 p90 2.04, share >= actual 0.88
+  KMI & TV>=5m   h120  x1.40  maxDD -75%  taken 55  (2017-01-04 to 2026-10-06) | placebo sleeve x p10 0.41 med 1.10 p90 2.53, share >= actual 0.40
+  KMI & TV>=5m   stop  x0.76  maxDD -80%  taken 62  (2017-01-04 to 2026-10-14) | placebo sleeve x p10 0.45 med 1.18 p90 3.72, share >= actual 0.70
+
+========================================================================================================================
+E3b CEO or chairman resigns | events 76, entered 72, KMI 29, syms 59, months 49
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n   71 | mean -1.6% med -2.3% win 41% >+50% 1% <-30% 4% worst -54% best +93% || P1 same-symbol: mean +1.8% med -1.2% p(mean) 0.945 p(med) 0.811 (n 71) || P2 matched-market: mean +1.5% med -0.9% p(mean) 0.930 p(med) 0.821 (n 71)
+  All            h60   n   70 | mean -1.9% med -4.2% win 46% >+50% 4% <-30% 9% worst -66% best +110% || P1 same-symbol: mean +8.5% med -1.6% p(mean) 0.965 p(med) 0.871 (n 70) || P2 matched-market: mean +6.9% med -0.4% p(mean) 0.980 p(med) 0.925 (n 70)
+  All            h120  n   69 | mean +17.6% med -5.3% win 45% >+50% 17% <-30% 14% worst -67% best +387% || P1 same-symbol: mean +12.1% med -2.4% p(mean) 0.239 p(med) 0.836 (n 69) || P2 matched-market: mean +14.8% med +1.2% p(mean) 0.308 p(med) 0.945 (n 69)
+  All            stop  n   68 | mean +5.6% med -12.7% win 31% >+50% 13% <-30% 0% worst -30% best +269% || P1 same-symbol: mean +6.5% med -9.1% p(mean) 0.507 p(med) 0.900 (n 68) || P2 matched-market: mean +8.5% med -7.1% p(mean) 0.692 p(med) 0.950 (n 68)
+  KMI member     h20   n   27 | mean +0.4% med -1.5% win 48% >+50% 4% <-30% 4% worst -54% best +93% || P1 same-symbol: mean +0.5% med -1.0% p(mean) 0.453 p(med) 0.577 (n 27) || P2 matched-market: mean +0.4% med -0.9% p(mean) 0.448 p(med) 0.577 (n 27)
+  KMI member     h60   n   27 | mean -2.5% med -4.9% win 48% >+50% 4% <-30% 4% worst -66% best +76% || P1 same-symbol: mean +4.2% med -1.6% p(mean) 0.811 p(med) 0.791 (n 27) || P2 matched-market: mean +5.7% med +0.1% p(mean) 0.925 p(med) 0.900 (n 27)
+  KMI member     h120  n   26 | mean -1.9% med -6.9% win 35% >+50% 15% <-30% 15% worst -52% best +71% || P1 same-symbol: mean +12.0% med -3.7% p(mean) 0.776 p(med) 0.751 (n 26) || P2 matched-market: mean +11.6% med +0.5% p(mean) 0.925 p(med) 0.896 (n 26)
+  KMI member     stop  n   25 | mean -3.2% med -13.0% win 20% >+50% 12% <-30% 0% worst -30% best +101% || P1 same-symbol: mean +0.6% med -12.8% p(mean) 0.701 p(med) 0.542 (n 25) || P2 matched-market: mean +7.4% med -8.5% p(mean) 0.881 p(med) 0.811 (n 25)
+  KMI & TV>=5m   h20   n   16 | mean +2.7% med +3.6% win 56% >+50% 0% <-30% 0% worst -24% best +32% || P1 same-symbol: mean +0.6% med -0.1% p(mean) 0.254 p(med) 0.065 (n 16) || P2 matched-market: mean +0.1% med -1.4% p(mean) 0.234 p(med) 0.095 (n 16)
+  KMI & TV>=5m   h60   n   16 | mean +0.4% med +0.6% win 56% >+50% 0% <-30% 0% worst -23% best +37% || P1 same-symbol: mean +6.1% med +0.0% p(mean) 0.637 p(med) 0.433 (n 16) || P2 matched-market: mean +5.5% med +0.8% p(mean) 0.746 p(med) 0.507 (n 16)
+  KMI & TV>=5m   h120  n   16 | mean +2.7% med -5.4% win 38% >+50% 19% <-30% 6% worst -50% best +71% || P1 same-symbol: mean +15.5% med -1.5% p(mean) 0.532 p(med) 0.711 (n 16) || P2 matched-market: mean +12.7% med +2.2% p(mean) 0.791 p(med) 0.851 (n 16)
+  KMI & TV>=5m   stop  n   15 | mean -2.2% med -13.0% win 20% >+50% 13% <-30% 0% worst -29% best +82% || P1 same-symbol: mean +0.7% med -11.1% p(mean) 0.597 p(med) 0.662 (n 15) || P2 matched-market: mean +9.3% med -9.8% p(mean) 0.841 p(med) 0.731 (n 15)
+  KMI & TV>=20m  h20   n   12 | mean +5.9% med +7.2% win 67% >+50% 0% <-30% 0% worst -18% best +32%
+  KMI & TV>=20m  h60   n   12 | mean +3.7% med +0.9% win 58% >+50% 0% <-30% 0% worst -21% best +37%
+  KMI & TV>=20m  h120  n   12 | mean +10.8% med -3.2% win 42% >+50% 25% <-30% 0% worst -23% best +71%
+  KMI & TV>=20m  stop  n   11 | mean +2.5% med -13.0% win 27% >+50% 18% <-30% 0% worst -29% best +82%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   12 | mean +3.7% med +0.9% win 58% >+50% 0% <-30% 0% worst -21% best +37%
+  h60   TV>=20m   non-KMI  n    9 | mean -14.4% med -14.2% win 22% >+50% 0% <-30% 11% worst -48% best +8%
+  h60   TV 5-20m  KMI      n    4 | mean -9.7% med -9.5% win 50% >+50% 0% <-30% 0% worst -23% best +3%
+  h60   TV 5-20m  non-KMI  n    3 | mean +7.3% med +17.4% win 67% >+50% 0% <-30% 0% worst -16% best +21%
+  h60   TV<5m     KMI      n   11 | mean -6.7% med -15.2% win 36% >+50% 9% <-30% 9% worst -66% best +76%
+  h60   TV<5m     non-KMI  n   31 | mean +1.3% med -1.0% win 48% >+50% 6% <-30% 13% worst -45% best +110%
+  stop  TV>=20m   KMI      n   11 | mean +2.5% med -13.0% win 27% >+50% 18% <-30% 0% worst -29% best +82%
+  stop  TV>=20m   non-KMI  n    9 | mean -13.1% med -18.6% win 22% >+50% 0% <-30% 0% worst -26% best +9%
+  stop  TV 5-20m  KMI      n    4 | mean -14.9% med -15.3% win 0% >+50% 0% <-30% 0% worst -26% best -3%
+  stop  TV 5-20m  non-KMI  n    3 | mean -4.8% med -0.9% win 33% >+50% 0% <-30% 0% worst -15% best +2%
+  stop  TV<5m     KMI      n   10 | mean -4.7% med -16.4% win 20% >+50% 10% <-30% 0% worst -30% best +101%
+  stop  TV<5m     non-KMI  n   31 | mean +19.2% med -7.0% win 42% >+50% 19% <-30% 0% worst -26% best +269%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2016: n   3 mean +2.6% med -5.8% win 33%
+  2017: n   3 mean -21.1% med -28.9% win 0%
+  2018: n   5 mean -3.3% med +2.4% win 60%
+  2019: n   5 mean -28.9% med -30.0% win 20%
+  2020: n   9 mean +13.9% med -4.9% win 44%
+  2021: n   9 mean +1.4% med -12.0% win 22%
+  2022: n   5 mean -10.6% med -16.2% win 40%
+  2023: n   2 mean -8.2% med -8.2% win 50%
+  2024: n  10 mean -5.6% med -3.4% win 50%
+  2025: n  11 mean +5.1% med +10.7% win 73%
+  2026: n   8 mean +1.4% med +4.4% win 62%
+  h60   bill<=policy  n   29 | mean -8.3% med -6.7% win 41% >+50% 0% <-30% 10% worst -66% best +33%
+  h60   bill>policy   n   41 | mean +2.6% med -0.6% win 49% >+50% 7% <-30% 7% worst -45% best +110%
+  stop  bill<=policy  n   28 | mean -6.7% med -15.4% win 21% >+50% 7% <-30% 0% worst -30% best +91%
+  stop  bill>policy   n   40 | mean +14.3% med -8.2% win 38% >+50% 18% <-30% 0% worst -30% best +269%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n   21 | mean +0.9% med +7.3% win 62% >+50% 0% <-30% 10% worst -48% best +33% || P1 same-symbol: mean +18.1% med +1.7% p(mean) 0.846 p(med) 0.164 (n 21) || P2 matched-market: mean +14.0% med +4.1% p(mean) 0.945 p(med) 0.279 (n 21)
+  stop  n   19 | mean -4.2% med -15.6% win 32% >+50% 11% <-30% 0% worst -29% best +61% || P1 same-symbol: mean +12.5% med -10.0% p(mean) 0.905 p(med) 0.861 (n 19) || P2 matched-market: mean +17.6% med -0.5% p(mean) 0.970 p(med) 0.990 (n 19)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 75 mean -2.4% median -2.0% share>+20% 4% | P1 same-symbol random-day run-up median -0.3%
+  reaction day R: n 75 mean -0.2% median -0.1% share>+5% 7%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   26 | mean -4.6% med -8.8% win 35% >+50% 4% <-30% 8% worst -45% best +76%
+                stop n   25 | mean -1.6% med -13.4% win 36% >+50% 8% <-30% 0% worst -30% best +101%
+  runup<0       h60 n   41 | mean +1.0% med +1.0% win 54% >+50% 5% <-30% 7% worst -66% best +110%
+                stop n   40 | mean +12.0% med -11.6% win 30% >+50% 18% <-30% 0% worst -30% best +269%
+  runup>=+20%   h60 n    3 | mean -19.8% med -25.4% win 33% >+50% 0% <-30% 33% worst -36% best +2%
+                stop n    3 | mean -18.9% med -17.7% win 0% >+50% 0% <-30% 0% worst -25% best -14%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.46  maxDD -56%  taken 65  (2016-11-29 to 2026-09-16) | placebo sleeve x p10 0.67 med 1.18 p90 2.28, share >= actual 1.00
+  All            h60   x0.22  maxDD -81%  taken 56  (2016-11-29 to 2026-08-19) | placebo sleeve x p10 0.87 med 1.53 p90 5.81, share >= actual 1.00
+  All            h120  x0.86  maxDD -71%  taken 39  (2016-11-29 to 2026-09-01) | placebo sleeve x p10 0.90 med 1.81 p90 6.61, share >= actual 0.90
+  All            stop  x0.70  maxDD -67%  taken 50  (2016-11-29 to 2026-09-02) | placebo sleeve x p10 0.85 med 1.61 p90 3.46, share >= actual 0.95
+  KMI member     h20   x0.94  maxDD -41%  taken 27  (2018-03-29 to 2026-06-19) | placebo sleeve x p10 0.79 med 0.95 p90 1.30, share >= actual 0.55
+  KMI member     h60   x0.62  maxDD -48%  taken 25  (2018-03-29 to 2026-08-19) | placebo sleeve x p10 0.74 med 1.21 p90 1.92, share >= actual 0.93
+  KMI member     h120  x0.69  maxDD -51%  taken 20  (2018-03-29 to 2026-09-01) | placebo sleeve x p10 0.74 med 1.38 p90 2.64, share >= actual 0.90
+  KMI member     stop  x0.72  maxDD -53%  taken 23  (2018-03-29 to 2026-03-03) | placebo sleeve x p10 0.69 med 1.02 p90 2.31, share >= actual 0.80
+  KMI & TV>=5m   h20   x1.13  maxDD -32%  taken 16  (2018-03-29 to 2026-04-02) | placebo sleeve x p10 0.83 med 0.94 p90 1.25, share >= actual 0.23
+  KMI & TV>=5m   h60   x0.98  maxDD -39%  taken 16  (2018-03-29 to 2026-06-03) | placebo sleeve x p10 0.81 med 1.14 p90 1.66, share >= actual 0.68
+  KMI & TV>=5m   h120  x1.05  maxDD -39%  taken 14  (2018-03-29 to 2026-09-01) | placebo sleeve x p10 0.80 med 1.26 p90 1.88, share >= actual 0.70
+  KMI & TV>=5m   stop  x0.81  maxDD -43%  taken 14  (2018-03-29 to 2026-03-03) | placebo sleeve x p10 0.73 med 1.03 p90 1.65, share >= actual 0.82
+
+========================================================================================================================
+E3c role-change form (any of 5 roles) | events 8, entered 8, KMI 6, syms 7, months 8
+  *** n is small: read as anecdote, not odds ***
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n    8 | mean -4.1% med -3.2% win 12% >+50% 0% <-30% 0% worst -10% best +1% || P1 same-symbol: mean +2.6% med +0.1% p(mean) 0.910 p(med) 0.801 (n 8) || P2 matched-market: mean -0.1% med -2.0% p(mean) 0.751 p(med) 0.612 (n 8)
+  All            h60   n    8 | mean +1.2% med -6.1% win 25% >+50% 0% <-30% 0% worst -21% best +43% || P1 same-symbol: mean +7.9% med +1.6% p(mean) 0.761 p(med) 0.905 (n 8) || P2 matched-market: mean +1.6% med -2.6% p(mean) 0.438 p(med) 0.701 (n 8)
+  All            h120  n    8 | mean +11.9% med +8.9% win 62% >+50% 12% <-30% 0% worst -10% best +51% || P1 same-symbol: mean +15.3% med +3.7% p(mean) 0.547 p(med) 0.348 (n 8) || P2 matched-market: mean +5.3% med -2.5% p(mean) 0.249 p(med) 0.129 (n 8)
+  All            stop  n    8 | mean -10.1% med -15.3% win 25% >+50% 0% <-30% 12% worst -38% best +22% || P1 same-symbol: mean +21.2% med -0.5% p(mean) 0.985 p(med) 0.940 (n 8) || P2 matched-market: mean +3.8% med -9.2% p(mean) 0.846 p(med) 0.806 (n 8)
+  KMI member     h20   n    6 | mean -5.5% med -4.7% win 0% >+50% 0% <-30% 0% worst -10% best -1% || P1 same-symbol: mean +1.2% med +0.4% p(mean) 0.910 p(med) 0.841 (n 6) || P2 matched-market: mean -0.9% med -2.5% p(mean) 0.806 p(med) 0.701 (n 6)
+  KMI member     h60   n    6 | mean +3.7% med -5.9% win 33% >+50% 0% <-30% 0% worst -21% best +43% || P1 same-symbol: mean +3.4% med -0.1% p(mean) 0.512 p(med) 0.821 (n 6) || P2 matched-market: mean +0.7% med -3.1% p(mean) 0.279 p(med) 0.657 (n 6)
+  KMI member     h120  n    6 | mean +12.9% med +8.3% win 50% >+50% 17% <-30% 0% worst -10% best +51% || P1 same-symbol: mean +8.4% med +2.2% p(mean) 0.368 p(med) 0.269 (n 6) || P2 matched-market: mean +4.4% med -3.1% p(mean) 0.244 p(med) 0.149 (n 6)
+  KMI member     stop  n    6 | mean -7.8% med -15.3% win 33% >+50% 0% <-30% 17% worst -38% best +22% || P1 same-symbol: mean +6.4% med -1.0% p(mean) 0.910 p(med) 0.935 (n 6) || P2 matched-market: mean +3.2% med -9.7% p(mean) 0.751 p(med) 0.766 (n 6)
+  KMI & TV>=5m   h20   n=0
+  KMI & TV>=5m   h60   n=0
+  KMI & TV>=5m   h120  n=0
+  KMI & TV>=5m   stop  n=0
+  KMI & TV>=20m  h20   n=0
+  KMI & TV>=20m  h60   n=0
+  KMI & TV>=20m  h120  n=0
+  KMI & TV>=20m  stop  n=0
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV<5m     KMI      n    6 | mean +3.7% med -5.9% win 33% >+50% 0% <-30% 0% worst -21% best +43%
+  h60   TV<5m     non-KMI  n    2 | mean -6.1% med -6.1% win 0% >+50% 0% <-30% 0% worst -10% best -2%
+  stop  TV<5m     KMI      n    6 | mean -7.8% med -15.3% win 33% >+50% 0% <-30% 17% worst -38% best +22%
+  stop  TV<5m     non-KMI  n    2 | mean -16.9% med -16.9% win 0% >+50% 0% <-30% 0% worst -24% best -10%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2018: n   1 mean -10.9% med -10.9% win 0%
+  2019: n   1 mean -20.6% med -20.6% win 0%
+  2020: n   1 mean +26.9% med +26.9% win 100%
+  2021: n   1 mean -15.6% med -15.6% win 0%
+  2022: n   2 mean -1.4% med -1.4% win 0%
+  2023: n   1 mean +43.2% med +43.2% win 100%
+  2024: n   1 mean -10.4% med -10.4% win 0%
+  h60   bill<=policy  n    1 | mean -10.4% med -10.4% win 0% >+50% 0% <-30% 0% worst -10% best -10%
+  h60   bill>policy   n    7 | mean +2.9% med -1.9% win 29% >+50% 0% <-30% 0% worst -21% best +43%
+  stop  bill<=policy  n    1 | mean -23.9% med -23.9% win 0% >+50% 0% <-30% 0% worst -24% best -24%
+  stop  bill>policy   n    7 | mean -8.1% med -14.0% win 29% >+50% 0% <-30% 14% worst -38% best +22%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n=0
+  stop  n=0
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 8 mean +1.9% median +0.3% share>+20% 0% | P1 same-symbol random-day run-up median +1.7%
+  reaction day R: n 8 mean -3.0% median -2.3% share>+5% 0%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n    4 | mean +4.0% med -5.7% win 25% >+50% 0% <-30% 0% worst -16% best +43%
+                stop n    4 | mean +1.4% med +3.7% win 50% >+50% 0% <-30% 0% worst -24% best +22%
+  runup<0       h60 n    4 | mean -1.6% med -6.4% win 25% >+50% 0% <-30% 0% worst -21% best +27%
+                stop n    4 | mean -21.6% med -19.3% win 0% >+50% 0% <-30% 25% worst -38% best -10%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.90  maxDD -20%  taken 8  (2018-09-26 to 2024-08-15) | placebo sleeve x p10 0.86 med 1.01 p90 1.18, share >= actual 0.78
+  All            h60   x1.01  maxDD -21%  taken 8  (2018-09-26 to 2024-10-11) | placebo sleeve x p10 0.79 med 0.98 p90 1.33, share >= actual 0.38
+  All            h120  x1.33  maxDD -19%  taken 8  (2018-09-26 to 2025-01-06) | placebo sleeve x p10 0.76 med 1.02 p90 1.50, share >= actual 0.23
+  All            stop  x0.75  maxDD -29%  taken 8  (2018-09-26 to 2024-07-23) | placebo sleeve x p10 0.77 med 0.95 p90 1.42, share >= actual 0.90
+  KMI member     h20   x0.90  maxDD -16%  taken 6  (2018-09-26 to 2023-09-19) | placebo sleeve x p10 0.87 med 0.98 p90 1.11, share >= actual 0.78
+  KMI member     h60   x1.06  maxDD -21%  taken 6  (2018-09-26 to 2023-11-16) | placebo sleeve x p10 0.77 med 0.97 p90 1.22, share >= actual 0.30
+  KMI member     h120  x1.26  maxDD -17%  taken 6  (2018-09-26 to 2024-02-13) | placebo sleeve x p10 0.78 med 1.01 p90 1.40, share >= actual 0.20
+  KMI member     stop  x0.84  maxDD -28%  taken 6  (2018-09-26 to 2024-01-31) | placebo sleeve x p10 0.74 med 0.93 p90 1.29, share >= actual 0.78
+  KMI & TV>=5m   h20   none
+  KMI & TV>=5m   h60   none
+  KMI & TV>=5m   h120  none
+  KMI & TV>=5m   stop  none
+
+========================================================================================================================
+E3d control: takeover disclosure / change of management | events 168, entered 155, KMI 76, syms 85, months 91
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n  155 | mean +1.8% med -2.1% win 34% >+50% 3% <-30% 2% worst -55% best +113% || P1 same-symbol: mean +2.0% med -1.2% p(mean) 0.532 p(med) 0.846 (n 155) || P2 matched-market: mean +1.0% med -1.4% p(mean) 0.174 p(med) 0.776 (n 154)
+  All            h60   n  154 | mean +6.4% med -2.4% win 46% >+50% 8% <-30% 6% worst -66% best +340% || P1 same-symbol: mean +7.8% med -1.2% p(mean) 0.652 p(med) 0.801 (n 154) || P2 matched-market: mean +4.4% med -1.7% p(mean) 0.169 p(med) 0.592 (n 153)
+  All            h120  n  148 | mean +12.9% med -0.5% win 49% >+50% 13% <-30% 9% worst -65% best +331% || P1 same-symbol: mean +16.7% med -0.3% p(mean) 0.796 p(med) 0.537 (n 148) || P2 matched-market: mean +9.9% med -1.2% p(mean) 0.199 p(med) 0.353 (n 147)
+  All            stop  n  152 | mean +8.1% med -10.0% win 40% >+50% 12% <-30% 1% worst -53% best +337% || P1 same-symbol: mean +8.4% med -8.2% p(mean) 0.507 p(med) 0.801 (n 152) || P2 matched-market: mean +6.0% med -8.4% p(mean) 0.239 p(med) 0.731 (n 151)
+  KMI member     h20   n   75 | mean +0.1% med -2.1% win 35% >+50% 1% <-30% 1% worst -55% best +56% || P1 same-symbol: mean +0.6% med -1.2% p(mean) 0.607 p(med) 0.736 (n 75) || P2 matched-market: mean +0.8% med -1.3% p(mean) 0.493 p(med) 0.756 (n 74)
+  KMI member     h60   n   74 | mean +1.4% med +0.0% win 50% >+50% 5% <-30% 7% worst -66% best +118% || P1 same-symbol: mean +4.0% med -1.1% p(mean) 0.806 p(med) 0.259 (n 74) || P2 matched-market: mean +4.0% med -1.4% p(mean) 0.647 p(med) 0.239 (n 73)
+  KMI member     h120  n   71 | mean +4.1% med -0.6% win 49% >+50% 7% <-30% 10% worst -49% best +136% || P1 same-symbol: mean +8.3% med -0.5% p(mean) 0.846 p(med) 0.522 (n 71) || P2 matched-market: mean +8.1% med -1.2% p(mean) 0.731 p(med) 0.363 (n 70)
+  KMI member     stop  n   72 | mean +4.4% med -7.8% win 40% >+50% 8% <-30% 1% worst -53% best +277% || P1 same-symbol: mean +6.1% med -9.3% p(mean) 0.607 p(med) 0.373 (n 72) || P2 matched-market: mean +5.4% med -8.7% p(mean) 0.458 p(med) 0.363 (n 71)
+  KMI & TV>=5m   h20   n   27 | mean -0.7% med -4.8% win 22% >+50% 4% <-30% 0% worst -15% best +56% || P1 same-symbol: mean -0.2% med -1.5% p(mean) 0.537 p(med) 0.920 (n 27) || P2 matched-market: mean -0.0% med -1.2% p(mean) 0.562 p(med) 0.925 (n 27)
+  KMI & TV>=5m   h60   n   26 | mean -3.0% med -4.5% win 42% >+50% 4% <-30% 0% worst -27% best +54% || P1 same-symbol: mean +2.6% med -2.4% p(mean) 0.886 p(med) 0.756 (n 26) || P2 matched-market: mean +0.7% med -2.5% p(mean) 0.791 p(med) 0.632 (n 26)
+  KMI & TV>=5m   h120  n   26 | mean -8.3% med -9.5% win 46% >+50% 0% <-30% 15% worst -41% best +35% || P1 same-symbol: mean +5.6% med -2.2% p(mean) 0.985 p(med) 0.891 (n 26) || P2 matched-market: mean +3.5% med -4.4% p(mean) 0.975 p(med) 0.831 (n 26)
+  KMI & TV>=5m   stop  n   26 | mean -3.2% med -12.4% win 31% >+50% 4% <-30% 0% worst -24% best +55% || P1 same-symbol: mean +6.1% med -11.7% p(mean) 0.905 p(med) 0.612 (n 26) || P2 matched-market: mean +2.4% med -11.5% p(mean) 0.771 p(med) 0.602 (n 26)
+  KMI & TV>=20m  h20   n   16 | mean +2.2% med -2.9% win 31% >+50% 6% <-30% 0% worst -14% best +56%
+  KMI & TV>=20m  h60   n   16 | mean -0.4% med +1.4% win 56% >+50% 0% <-30% 0% worst -25% best +17%
+  KMI & TV>=20m  h120  n   16 | mean -1.9% med +2.3% win 56% >+50% 0% <-30% 6% worst -33% best +35%
+  KMI & TV>=20m  stop  n   16 | mean +1.4% med -7.9% win 38% >+50% 6% <-30% 0% worst -24% best +55%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   16 | mean -0.4% med +1.4% win 56% >+50% 0% <-30% 0% worst -25% best +17%
+  h60   TV>=20m   non-KMI  n   17 | mean +0.8% med -5.8% win 41% >+50% 6% <-30% 0% worst -23% best +60%
+  h60   TV 5-20m  KMI      n   10 | mean -7.2% med -13.5% win 20% >+50% 10% <-30% 0% worst -27% best +54%
+  h60   TV 5-20m  non-KMI  n    6 | mean -12.4% med -11.4% win 17% >+50% 0% <-30% 17% worst -31% best +5%
+  h60   TV<5m     KMI      n   48 | mean +3.8% med +1.9% win 54% >+50% 6% <-30% 10% worst -66% best +118%
+  h60   TV<5m     non-KMI  n   57 | mean +16.5% med -1.1% win 46% >+50% 12% <-30% 5% worst -40% best +340%
+  stop  TV>=20m   KMI      n   16 | mean +1.4% med -7.9% win 38% >+50% 6% <-30% 0% worst -24% best +55%
+  stop  TV>=20m   non-KMI  n   17 | mean +3.0% med -17.0% win 29% >+50% 18% <-30% 0% worst -24% best +94%
+  stop  TV 5-20m  KMI      n   10 | mean -10.5% med -20.0% win 20% >+50% 0% <-30% 0% worst -22% best +31%
+  stop  TV 5-20m  non-KMI  n    6 | mean -14.5% med -17.1% win 17% >+50% 0% <-30% 0% worst -24% best +9%
+  stop  TV<5m     KMI      n   46 | mean +8.6% med -0.7% win 46% >+50% 11% <-30% 2% worst -53% best +277%
+  stop  TV<5m     non-KMI  n   57 | mean +16.6% med -5.0% win 46% >+50% 16% <-30% 2% worst -32% best +337%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2016: n   2 mean +90.3% med +90.3% win 50%
+  2017: n  17 mean +2.6% med -11.8% win 29%
+  2018: n  11 mean -5.9% med -7.0% win 18%
+  2019: n  16 mean -9.7% med -9.5% win 38%
+  2020: n  23 mean +5.5% med +1.9% win 57%
+  2021: n  14 mean +27.1% med -0.4% win 50%
+  2022: n  15 mean +5.1% med +2.1% win 60%
+  2023: n  21 mean +6.9% med +2.7% win 57%
+  2024: n  11 mean +6.3% med -4.1% win 45%
+  2025: n  15 mean +15.6% med +3.4% win 53%
+  2026: n   9 mean -5.7% med -5.9% win 33%
+  h60   bill<=policy  n   39 | mean +4.5% med -3.0% win 44% >+50% 5% <-30% 8% worst -66% best +144%
+  h60   bill>policy   n  115 | mean +7.1% med -1.8% win 47% >+50% 9% <-30% 5% worst -52% best +340%
+  stop  bill<=policy  n   37 | mean +15.5% med -4.1% win 49% >+50% 14% <-30% 3% worst -53% best +277%
+  stop  bill>policy   n  115 | mean +5.7% med -11.4% win 37% >+50% 11% <-30% 1% worst -32% best +337%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n   28 | mean +9.2% med -0.2% win 50% >+50% 7% <-30% 0% worst -20% best +144% || P1 same-symbol: mean +10.4% med +3.0% p(mean) 0.547 p(med) 0.766 (n 28) || P2 matched-market: mean +11.9% med +1.9% p(mean) 0.572 p(med) 0.721 (n 28)
+  stop  n   26 | mean +4.3% med -7.6% win 38% >+50% 12% <-30% 0% worst -24% best +67% || P1 same-symbol: mean +15.7% med +1.1% p(mean) 0.915 p(med) 0.836 (n 26) || P2 matched-market: mean +15.4% med -2.9% p(mean) 0.811 p(med) 0.721 (n 26)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 159 mean +5.1% median +0.3% share>+20% 15% | P1 same-symbol random-day run-up median -0.1%
+  reaction day R: n 160 mean +0.9% median +0.0% share>+5% 16%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   61 | mean +9.1% med +1.7% win 52% >+50% 7% <-30% 3% worst -40% best +340%
+                stop n   61 | mean +11.4% med -4.7% win 43% >+50% 16% <-30% 2% worst -32% best +278%
+  runup<0       h60 n   69 | mean +6.2% med -1.1% win 46% >+50% 9% <-30% 6% worst -66% best +144%
+                stop n   67 | mean +10.0% med -10.5% win 45% >+50% 9% <-30% 1% worst -53% best +337%
+  runup>=+20%   h60 n   24 | mean +0.1% med -11.9% win 29% >+50% 8% <-30% 12% worst -42% best +193%
+                stop n   24 | mean -5.9% med -15.5% win 21% >+50% 8% <-30% 0% worst -25% best +78%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x1.81  maxDD -48%  taken 132  (2016-12-08 to 2026-09-23) | placebo sleeve x p10 0.50 med 1.18 p90 2.95, share >= actual 0.25
+  All            h60   x9.32  maxDD -58%  taken 89  (2016-12-08 to 2026-10-05) | placebo sleeve x p10 1.13 med 1.99 p90 4.69, share >= actual 0.00
+  All            h120  x2.87  maxDD -67%  taken 51  (2016-12-08 to 2026-08-12) | placebo sleeve x p10 0.87 med 1.84 p90 6.29, share >= actual 0.35
+  All            stop  x2.00  maxDD -62%  taken 66  (2016-12-08 to 2026-10-02) | placebo sleeve x p10 0.70 med 1.24 p90 4.04, share >= actual 0.35
+  KMI member     h20   x0.90  maxDD -59%  taken 74  (2017-02-09 to 2026-09-23) | placebo sleeve x p10 0.68 med 1.07 p90 1.85, share >= actual 0.70
+  KMI member     h60   x1.66  maxDD -54%  taken 60  (2017-02-09 to 2026-10-05) | placebo sleeve x p10 0.72 med 1.65 p90 2.95, share >= actual 0.50
+  KMI member     h120  x0.63  maxDD -71%  taken 42  (2017-02-09 to 2026-08-12) | placebo sleeve x p10 0.63 med 1.56 p90 3.22, share >= actual 0.90
+  KMI member     stop  x0.89  maxDD -73%  taken 49  (2017-02-09 to 2026-09-01) | placebo sleeve x p10 0.64 med 1.15 p90 2.28, share >= actual 0.60
+  KMI & TV>=5m   h20   x0.91  maxDD -29%  taken 27  (2017-02-09 to 2026-09-23) | placebo sleeve x p10 0.69 med 0.93 p90 1.18, share >= actual 0.53
+  KMI & TV>=5m   h60   x0.75  maxDD -43%  taken 26  (2017-02-09 to 2026-02-16) | placebo sleeve x p10 0.61 med 0.92 p90 1.52, share >= actual 0.70
+  KMI & TV>=5m   h120  x0.46  maxDD -66%  taken 25  (2017-02-09 to 2026-05-14) | placebo sleeve x p10 0.57 med 1.04 p90 1.88, share >= actual 1.00
+  KMI & TV>=5m   stop  x0.80  maxDD -55%  taken 22  (2017-02-09 to 2026-04-21) | placebo sleeve x p10 0.57 med 0.93 p90 1.86, share >= actual 0.62
+
+========================================================================================================================
+E4a PSX unusual-movement letter | events 743, entered 734, KMI 424, syms 314, months 57
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n  728 | mean +1.2% med -3.6% win 41% >+50% 5% <-30% 7% worst -74% best +325% || P1 same-symbol: mean +4.1% med -1.0% p(mean) 1.000 p(med) 1.000 (n 727) || P2 matched-market: mean +3.1% med -1.8% p(mean) 0.950 p(med) 1.000 (n 725)
+  All            h60   n  670 | mean +4.4% med -4.7% win 42% >+50% 9% <-30% 13% worst -82% best +456% || P1 same-symbol: mean +19.9% med +3.9% p(mean) 1.000 p(med) 1.000 (n 669) || P2 matched-market: mean +11.1% med -0.2% p(mean) 1.000 p(med) 1.000 (n 667)
+  All            h120  n  583 | mean +15.4% med -0.5% win 49% >+50% 20% <-30% 15% worst -97% best +1023% || P1 same-symbol: mean +44.8% med +15.9% p(mean) 1.000 p(med) 1.000 (n 581) || P2 matched-market: mean +21.9% med +3.9% p(mean) 0.985 p(med) 1.000 (n 580)
+  All            stop  n  694 | mean +9.0% med -11.9% win 36% >+50% 11% <-30% 4% worst -80% best +1260% || P1 same-symbol: mean +21.6% med -2.4% p(mean) 1.000 p(med) 1.000 (n 693) || P2 matched-market: mean +12.0% med -6.5% p(mean) 0.856 p(med) 1.000 (n 691)
+  KMI member     h20   n  417 | mean +2.2% med -4.0% win 41% >+50% 6% <-30% 6% worst -74% best +325% || P1 same-symbol: mean +3.5% med -1.0% p(mean) 0.896 p(med) 1.000 (n 417) || P2 matched-market: mean +2.8% med -1.9% p(mean) 0.642 p(med) 1.000 (n 417)
+  KMI member     h60   n  373 | mean +4.6% med -3.7% win 43% >+50% 8% <-30% 10% worst -82% best +456% || P1 same-symbol: mean +18.7% med +3.6% p(mean) 1.000 p(med) 1.000 (n 373) || P2 matched-market: mean +9.6% med -0.6% p(mean) 0.980 p(med) 1.000 (n 373)
+  KMI member     h120  n  318 | mean +17.5% med +0.7% win 52% >+50% 19% <-30% 12% worst -97% best +1023% || P1 same-symbol: mean +41.5% med +15.6% p(mean) 1.000 p(med) 1.000 (n 318) || P2 matched-market: mean +19.5% med +3.0% p(mean) 0.647 p(med) 0.846 (n 318)
+  KMI member     stop  n  394 | mean +9.3% med -12.6% win 34% >+50% 11% <-30% 4% worst -80% best +1260% || P1 same-symbol: mean +20.8% med -3.0% p(mean) 1.000 p(med) 1.000 (n 394) || P2 matched-market: mean +10.8% med -7.2% p(mean) 0.672 p(med) 1.000 (n 394)
+  KMI & TV>=5m   h20   n  116 | mean +0.3% med -3.8% win 41% >+50% 5% <-30% 6% worst -53% best +93% || P1 same-symbol: mean +4.1% med -0.1% p(mean) 0.950 p(med) 1.000 (n 116) || P2 matched-market: mean +1.1% med -1.3% p(mean) 0.627 p(med) 0.970 (n 116)
+  KMI & TV>=5m   h60   n  106 | mean -0.5% med -3.9% win 43% >+50% 6% <-30% 10% worst -75% best +146% || P1 same-symbol: mean +21.8% med +4.3% p(mean) 1.000 p(med) 1.000 (n 106) || P2 matched-market: mean +5.5% med -0.1% p(mean) 0.955 p(med) 0.910 (n 106)
+  KMI & TV>=5m   h120  n   95 | mean +7.7% med -2.5% win 45% >+50% 18% <-30% 15% worst -79% best +149% || P1 same-symbol: mean +49.3% med +16.0% p(mean) 1.000 p(med) 1.000 (n 95) || P2 matched-market: mean +13.0% med +3.2% p(mean) 0.851 p(med) 0.935 (n 95)
+  KMI & TV>=5m   stop  n  109 | mean +2.8% med -13.8% win 32% >+50% 11% <-30% 3% worst -47% best +175% || P1 same-symbol: mean +31.5% med -2.1% p(mean) 1.000 p(med) 1.000 (n 109) || P2 matched-market: mean +10.9% med -6.9% p(mean) 0.925 p(med) 1.000 (n 109)
+  KMI & TV>=20m  h20   n   56 | mean +0.7% med -3.8% win 39% >+50% 7% <-30% 7% worst -37% best +74%
+  KMI & TV>=20m  h60   n   50 | mean -0.5% med -3.6% win 42% >+50% 4% <-30% 12% worst -75% best +146%
+  KMI & TV>=20m  h120  n   47 | mean +6.6% med -5.0% win 45% >+50% 17% <-30% 19% worst -76% best +149%
+  KMI & TV>=20m  stop  n   51 | mean +5.6% med -11.8% win 35% >+50% 14% <-30% 4% worst -44% best +164%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   50 | mean -0.5% med -3.6% win 42% >+50% 4% <-30% 12% worst -75% best +146%
+  h60   TV>=20m   non-KMI  n   34 | mean -2.2% med -8.6% win 41% >+50% 6% <-30% 15% worst -60% best +104%
+  h60   TV 5-20m  KMI      n   56 | mean -0.6% med -4.2% win 45% >+50% 7% <-30% 9% worst -59% best +97%
+  h60   TV 5-20m  non-KMI  n   32 | mean -8.9% med -12.6% win 22% >+50% 6% <-30% 25% worst -54% best +110%
+  h60   TV<5m     KMI      n  267 | mean +6.6% med -3.7% win 43% >+50% 9% <-30% 10% worst -82% best +456%
+  h60   TV<5m     non-KMI  n  231 | mean +6.9% med -4.6% win 43% >+50% 12% <-30% 14% worst -63% best +253%
+  stop  TV>=20m   KMI      n   51 | mean +5.6% med -11.8% win 35% >+50% 14% <-30% 4% worst -44% best +164%
+  stop  TV>=20m   non-KMI  n   34 | mean +0.9% med -14.3% win 32% >+50% 9% <-30% 3% worst -31% best +148%
+  stop  TV 5-20m  KMI      n   58 | mean +0.2% med -14.8% win 29% >+50% 9% <-30% 2% worst -47% best +175%
+  stop  TV 5-20m  non-KMI  n   36 | mean -13.4% med -17.1% win 8% >+50% 0% <-30% 0% worst -28% best +33%
+  stop  TV<5m     KMI      n  285 | mean +11.8% med -11.8% win 34% >+50% 11% <-30% 4% worst -80% best +1260%
+  stop  TV<5m     non-KMI  n  230 | mean +13.3% med -6.3% win 43% >+50% 13% <-30% 4% worst -63% best +510%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2017: n   1 mean +54.6% med +54.6% win 100%
+  2021: n  76 mean -1.2% med -6.9% win 38%
+  2022: n   6 mean +8.6% med +0.3% win 50%
+  2023: n  61 mean +11.6% med -1.0% win 48%
+  2024: n 147 mean +4.7% med -3.5% win 42%
+  2025: n 256 mean +4.0% med -6.1% win 40%
+  2026: n 123 mean +4.2% med -3.7% win 44%
+  h60   bill<=policy  n  398 | mean +4.5% med -5.5% win 39% >+50% 10% <-30% 12% worst -82% best +456%
+  h60   bill>policy   n  272 | mean +4.2% med -2.6% win 45% >+50% 9% <-30% 13% worst -75% best +179%
+  stop  bill<=policy  n  396 | mean +13.6% med -11.9% win 37% >+50% 13% <-30% 4% worst -80% best +1260%
+  stop  bill>policy   n  298 | mean +3.0% med -12.1% win 34% >+50% 8% <-30% 3% worst -63% best +510%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n  422 | mean +3.8% med -5.0% win 42% >+50% 10% <-30% 14% worst -82% best +456% || P1 same-symbol: mean +20.2% med +3.9% p(mean) 1.000 p(med) 1.000 (n 422) || P2 matched-market: mean +13.0% med +0.5% p(mean) 1.000 p(med) 1.000 (n 422)
+  stop  n  446 | mean +8.3% med -12.4% win 35% >+50% 11% <-30% 3% worst -80% best +510% || P1 same-symbol: mean +21.6% med -2.8% p(mean) 1.000 p(med) 1.000 (n 446) || P2 matched-market: mean +11.6% med -6.9% p(mean) 0.831 p(med) 1.000 (n 446)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 739 mean +48.0% median +34.5% share>+20% 63% | P1 same-symbol random-day run-up median +0.0%
+  reaction day R: n 742 mean +0.2% median +0.0% share>+5% 19%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n  150 | mean +4.3% med -2.6% win 45% >+50% 7% <-30% 7% worst -75% best +125%
+                stop n  153 | mean +4.9% med -10.3% win 37% >+50% 10% <-30% 2% worst -44% best +187%
+  runup<0       h60 n   85 | mean +11.7% med +2.7% win 53% >+50% 12% <-30% 8% worst -65% best +144%
+                stop n   86 | mean +27.8% med -2.7% win 47% >+50% 16% <-30% 2% worst -47% best +1260%
+  runup>=+20%   h60 n  435 | mean +3.0% med -7.0% win 38% >+50% 9% <-30% 15% worst -82% best +456%
+                stop n  455 | mean +6.8% med -13.6% win 33% >+50% 10% <-30% 4% worst -80% best +510%
+-- F. prior-10-session move before R (exit h60 and stop, All)
+  pre10>=+15%          h60 n  302 | mean +1.6% med -7.5% win 38% >+50% 9% <-30% 18% worst -73% best +456% || P1 same-symbol: mean +21.2% med +3.7% p(mean) 1.000 p(med) 1.000 (n 302) || P2 matched-market: mean +11.5% med -1.0% p(mean) 1.000 p(med) 1.000 (n 301)
+                       stop n  316 | mean +4.6% med -13.9% win 32% >+50% 9% <-30% 5% worst -48% best +385% || P1 same-symbol: mean +22.7% med -2.9% p(mean) 1.000 p(med) 1.000 (n 316) || P2 matched-market: mean +10.7% med -8.2% p(mean) 0.960 p(med) 1.000 (n 315)
+                       by year n: 2017:1, 2021:24, 2022:2, 2023:27, 2024:54, 2025:129, 2026:94
+  pre10 in -15..+15%   h60 n  312 | mean +5.2% med -3.8% win 43% >+50% 8% <-30% 7% worst -82% best +179% || P1 same-symbol: mean +18.4% med +4.3% p(mean) 1.000 p(med) 1.000 (n 312) || P2 matched-market: mean +10.4% med +0.3% p(mean) 0.965 p(med) 0.995 (n 311)
+                       stop n  321 | mean +12.5% med -11.4% win 36% >+50% 13% <-30% 2% worst -80% best +1260% || P1 same-symbol: mean +21.9% med -1.5% p(mean) 0.990 p(med) 1.000 (n 321) || P2 matched-market: mean +12.8% med -5.2% p(mean) 0.522 p(med) 1.000 (n 320)
+                       by year n: 2021:48, 2022:5, 2023:31, 2024:75, 2025:112, 2026:79
+  pre10<=-15%          h60 n   55 | mean +16.0% med +1.3% win 56% >+50% 16% <-30% 13% worst -53% best +168% || P1 same-symbol: mean +21.7% med +3.6% p(mean) 0.677 p(med) 0.637 (n 54) || P2 matched-market: mean +13.0% med +1.8% p(mean) 0.279 p(med) 0.547 (n 55)
+                       stop n   56 | mean +14.9% med +2.7% win 55% >+50% 12% <-30% 2% worst -31% best +234% || P1 same-symbol: mean +13.9% med -5.2% p(mean) 0.393 p(med) 0.104 (n 55) || P2 matched-market: mean +15.3% med -2.4% p(mean) 0.463 p(med) 0.139 (n 56)
+                       by year n: 2021:6, 2022:1, 2023:3, 2024:18, 2025:17, 2026:15
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.69  maxDD -66%  taken 135  (2017-02-14 to 2026-10-16) | placebo sleeve x p10 0.39 med 1.00 p90 4.10, share >= actual 0.72
+  All            h60   x1.01  maxDD -41%  taken 55  (2017-02-14 to 2026-10-16) | placebo sleeve x p10 1.11 med 1.96 p90 9.63, share >= actual 0.90
+  All            h120  x5.23  maxDD -52%  taken 29  (2017-02-14 to 2026-10-15) | placebo sleeve x p10 0.83 med 2.08 p90 6.16, share >= actual 0.15
+  All            stop  x1.16  maxDD -47%  taken 63  (2017-02-14 to 2026-10-15) | placebo sleeve x p10 0.79 med 1.92 p90 6.67, share >= actual 0.72
+  KMI member     h20   x2.54  maxDD -51%  taken 116  (2017-02-14 to 2026-10-16) | placebo sleeve x p10 0.59 med 1.62 p90 3.77, share >= actual 0.25
+  KMI member     h60   x4.15  maxDD -49%  taken 51  (2017-02-14 to 2026-10-15) | placebo sleeve x p10 0.94 med 2.25 p90 7.71, share >= actual 0.20
+  KMI member     h120  x1.85  maxDD -65%  taken 27  (2017-02-14 to 2026-10-15) | placebo sleeve x p10 1.02 med 2.64 p90 6.52, share >= actual 0.70
+  KMI member     stop  x1.44  maxDD -59%  taken 60  (2017-02-14 to 2026-10-15) | placebo sleeve x p10 0.89 med 2.21 p90 5.37, share >= actual 0.78
+  KMI & TV>=5m   h20   x1.12  maxDD -59%  taken 70  (2021-01-18 to 2026-10-16) | placebo sleeve x p10 0.65 med 1.15 p90 2.33, share >= actual 0.53
+  KMI & TV>=5m   h60   x1.11  maxDD -69%  taken 33  (2021-01-18 to 2026-10-06) | placebo sleeve x p10 1.06 med 1.85 p90 3.11, share >= actual 0.85
+  KMI & TV>=5m   h120  x2.26  maxDD -58%  taken 19  (2021-01-18 to 2026-10-15) | placebo sleeve x p10 1.33 med 2.18 p90 4.25, share >= actual 0.45
+  KMI & TV>=5m   stop  x0.91  maxDD -52%  taken 35  (2021-01-18 to 2026-10-12) | placebo sleeve x p10 0.94 med 1.72 p90 3.34, share >= actual 0.93
+
+========================================================================================================================
+E4b company reply to PSX letter | events 63, entered 62, KMI 30, syms 43, months 33
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n   62 | mean -4.1% med -6.9% win 31% >+50% 2% <-30% 6% worst -39% best +106% || P1 same-symbol: mean +5.0% med -0.7% p(mean) 1.000 p(med) 1.000 (n 62) || P2 matched-market: mean +2.7% med -1.2% p(mean) 0.985 p(med) 0.995 (n 62)
+  All            h60   n   58 | mean +6.0% med -1.6% win 45% >+50% 7% <-30% 16% worst -58% best +253% || P1 same-symbol: mean +25.6% med +5.6% p(mean) 0.990 p(med) 0.995 (n 58) || P2 matched-market: mean +9.9% med +0.0% p(mean) 0.672 p(med) 0.657 (n 58)
+  All            h120  n   50 | mean +51.9% med -2.0% win 46% >+50% 10% <-30% 16% worst -61% best +1259% || P1 same-symbol: mean +48.3% med +17.5% p(mean) 0.368 p(med) 1.000 (n 50) || P2 matched-market: mean +21.0% med +5.1% p(mean) 0.035 p(med) 0.891 (n 50)
+  All            stop  n   60 | mean -2.4% med -14.6% win 23% >+50% 3% <-30% 3% worst -35% best +264% || P1 same-symbol: mean +26.6% med -2.0% p(mean) 1.000 p(med) 1.000 (n 60) || P2 matched-market: mean +12.0% med -6.1% p(mean) 0.970 p(med) 0.990 (n 60)
+  KMI member     h20   n   30 | mean +1.7% med -3.9% win 43% >+50% 3% <-30% 3% worst -39% best +106% || P1 same-symbol: mean +4.8% med -0.9% p(mean) 0.647 p(med) 0.925 (n 30) || P2 matched-market: mean +2.1% med -1.0% p(mean) 0.478 p(med) 0.876 (n 30)
+  KMI member     h60   n   29 | mean +20.4% med +4.0% win 59% >+50% 14% <-30% 10% worst -58% best +253% || P1 same-symbol: mean +26.0% med +4.8% p(mean) 0.388 p(med) 0.547 (n 29) || P2 matched-market: mean +7.6% med -0.2% p(mean) 0.085 p(med) 0.219 (n 29)
+  KMI member     h120  n   25 | mean +113.0% med +4.7% win 56% >+50% 16% <-30% 16% worst -50% best +1259% || P1 same-symbol: mean +45.8% med +15.3% p(mean) 0.020 p(med) 0.915 (n 25) || P2 matched-market: mean +17.1% med +4.6% p(mean) 0.005 p(med) 0.502 (n 25)
+  KMI member     stop  n   29 | mean +11.2% med -7.7% win 41% >+50% 7% <-30% 0% worst -26% best +264% || P1 same-symbol: mean +18.4% med -2.9% p(mean) 0.701 p(med) 0.751 (n 29) || P2 matched-market: mean +11.1% med -6.1% p(mean) 0.463 p(med) 0.607 (n 29)
+  KMI & TV>=5m   h20   n   16 | mean -2.7% med -5.0% win 38% >+50% 0% <-30% 0% worst -27% best +31% || P1 same-symbol: mean +5.2% med +0.6% p(mean) 0.965 p(med) 0.970 (n 16) || P2 matched-market: mean +1.6% med -0.0% p(mean) 0.896 p(med) 0.910 (n 16)
+  KMI & TV>=5m   h60   n   15 | mean +15.0% med +4.0% win 60% >+50% 7% <-30% 0% worst -15% best +105% || P1 same-symbol: mean +14.2% med +5.4% p(mean) 0.403 p(med) 0.572 (n 15) || P2 matched-market: mean +6.1% med +1.9% p(mean) 0.114 p(med) 0.373 (n 15)
+  KMI & TV>=5m   h120  n   12 | mean +10.8% med -5.0% win 42% >+50% 8% <-30% 8% worst -36% best +167% || P1 same-symbol: mean +29.2% med +14.7% p(mean) 0.866 p(med) 1.000 (n 12) || P2 matched-market: mean +13.7% med +7.6% p(mean) 0.567 p(med) 0.900 (n 12)
+  KMI & TV>=5m   stop  n   15 | mean +8.2% med -9.2% win 40% >+50% 7% <-30% 0% worst -26% best +186% || P1 same-symbol: mean +16.0% med -4.0% p(mean) 0.647 p(med) 0.756 (n 15) || P2 matched-market: mean +14.2% med -3.2% p(mean) 0.607 p(med) 0.721 (n 15)
+  KMI & TV>=20m  h20   n   13 | mean -3.3% med -7.9% win 31% >+50% 0% <-30% 0% worst -27% best +31%
+  KMI & TV>=20m  h60   n   12 | mean +11.5% med +0.5% win 50% >+50% 8% <-30% 0% worst -15% best +105%
+  KMI & TV>=20m  h120  n   11 | mean +10.3% med -8.8% win 36% >+50% 9% <-30% 9% worst -36% best +167%
+  KMI & TV>=20m  stop  n   12 | mean +9.5% med -12.4% win 33% >+50% 8% <-30% 0% worst -25% best +186%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   12 | mean +11.5% med +0.5% win 50% >+50% 8% <-30% 0% worst -15% best +105%
+  h60   TV>=20m   non-KMI  n    8 | mean +3.9% med +7.6% win 62% >+50% 0% <-30% 12% worst -30% best +26%
+  h60   TV 5-20m  KMI      n    3 | mean +28.8% med +26.7% win 100% >+50% 0% <-30% 0% worst +16% best +43%
+  h60   TV 5-20m  non-KMI  n    5 | mean -24.0% med -14.5% win 0% >+50% 0% <-30% 40% worst -45% best -7%
+  h60   TV<5m     KMI      n   14 | mean +26.2% med +4.3% win 57% >+50% 21% <-30% 21% worst -58% best +253%
+  h60   TV<5m     non-KMI  n   16 | mean -9.6% med -11.3% win 25% >+50% 0% <-30% 19% worst -39% best +32%
+  stop  TV>=20m   KMI      n   12 | mean +9.5% med -12.4% win 33% >+50% 8% <-30% 0% worst -25% best +186%
+  stop  TV>=20m   non-KMI  n    8 | mean -9.8% med -10.1% win 12% >+50% 0% <-30% 0% worst -21% best +2%
+  stop  TV 5-20m  KMI      n    3 | mean +2.9% med +7.6% win 67% >+50% 0% <-30% 0% worst -26% best +27%
+  stop  TV 5-20m  non-KMI  n    4 | mean -20.0% med -21.4% win 0% >+50% 0% <-30% 0% worst -27% best -10%
+  stop  TV<5m     KMI      n   14 | mean +14.4% med -7.2% win 43% >+50% 7% <-30% 0% worst -26% best +264%
+  stop  TV<5m     non-KMI  n   19 | mean -16.4% med -19.6% win 5% >+50% 0% <-30% 11% worst -35% best +16%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2016: n   1 mean +23.4% med +23.4% win 100%
+  2017: n   2 mean +0.9% med +0.9% win 50%
+  2020: n   1 mean +0.5% med +0.5% win 100%
+  2023: n   6 mean -3.2% med -5.5% win 33%
+  2024: n  13 mean +7.8% med -0.3% win 46%
+  2025: n  21 mean -5.2% med -5.3% win 38%
+  2026: n  14 mean +25.0% med +0.0% win 50%
+  h60   bill<=policy  n   31 | mean +4.7% med -5.7% win 39% >+50% 6% <-30% 10% worst -58% best +192%
+  h60   bill>policy   n   27 | mean +7.5% med +0.5% win 52% >+50% 7% <-30% 22% worst -56% best +253%
+  stop  bill<=policy  n   30 | mean -5.1% med -16.0% win 23% >+50% 3% <-30% 3% worst -35% best +186%
+  stop  bill>policy   n   30 | mean +0.3% med -9.7% win 23% >+50% 3% <-30% 3% worst -33% best +264%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n   41 | mean +6.4% med -3.9% win 44% >+50% 7% <-30% 17% worst -56% best +253% || P1 same-symbol: mean +29.6% med +6.6% p(mean) 0.980 p(med) 0.995 (n 41) || P2 matched-market: mean +9.8% med +0.3% p(mean) 0.612 p(med) 0.816 (n 41)
+  stop  n   43 | mean -4.7% med -15.6% win 21% >+50% 2% <-30% 2% worst -35% best +264% || P1 same-symbol: mean +27.3% med -1.6% p(mean) 1.000 p(med) 1.000 (n 43) || P2 matched-market: mean +10.7% med -6.5% p(mean) 0.970 p(med) 0.960 (n 43)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 63 mean +55.7% median +38.1% share>+20% 65% | P1 same-symbol random-day run-up median -0.0%
+  reaction day R: n 63 mean +0.4% median +0.0% share>+5% 17%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   13 | mean +4.3% med +4.0% win 62% >+50% 0% <-30% 0% worst -17% best +26%
+                stop n   13 | mean -6.4% med -7.7% win 31% >+50% 0% <-30% 8% worst -35% best +33%
+  runup<0       h60 n    6 | mean +43.1% med -0.9% win 33% >+50% 17% <-30% 0% worst -15% best +253%
+                stop n    7 | mean +33.4% med -7.2% win 29% >+50% 14% <-30% 0% worst -25% best +264%
+  runup>=+20%   h60 n   39 | mean +0.9% med -7.2% win 41% >+50% 8% <-30% 23% worst -58% best +192%
+                stop n   40 | mean -7.4% med -16.3% win 20% >+50% 2% <-30% 2% worst -33% best +186%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.51  maxDD -54%  taken 51  (2016-12-06 to 2026-10-01) | placebo sleeve x p10 0.71 med 1.06 p90 1.94, share >= actual 0.97
+  All            h60   x2.31  maxDD -47%  taken 31  (2016-12-06 to 2026-10-09) | placebo sleeve x p10 0.88 med 1.70 p90 3.20, share >= actual 0.28
+  All            h120  x7.95  maxDD -37%  taken 20  (2016-12-06 to 2026-10-14) | placebo sleeve x p10 0.83 med 1.59 p90 3.89, share >= actual 0.03
+  All            stop  x1.53  maxDD -38%  taken 30  (2016-12-06 to 2026-09-21) | placebo sleeve x p10 0.82 med 1.73 p90 3.55, share >= actual 0.65
+  KMI member     h20   x1.09  maxDD -27%  taken 28  (2016-12-06 to 2026-09-02) | placebo sleeve x p10 0.65 med 0.98 p90 1.47, share >= actual 0.35
+  KMI member     h60   x4.42  maxDD -34%  taken 21  (2016-12-06 to 2026-09-21) | placebo sleeve x p10 0.71 med 1.28 p90 2.16, share >= actual 0.00
+  KMI member     h120  x9.65  maxDD -30%  taken 15  (2016-12-06 to 2026-10-14) | placebo sleeve x p10 0.81 med 1.44 p90 2.45, share >= actual 0.00
+  KMI member     stop  x2.33  maxDD -34%  taken 21  (2016-12-06 to 2026-09-09) | placebo sleeve x p10 0.77 med 1.33 p90 2.63, share >= actual 0.12
+  KMI & TV>=5m   h20   x0.85  maxDD -27%  taken 16  (2023-08-10 to 2026-09-02) | placebo sleeve x p10 0.88 med 1.07 p90 1.39, share >= actual 0.90
+  KMI & TV>=5m   h60   x2.02  maxDD -27%  taken 13  (2023-08-10 to 2026-09-21) | placebo sleeve x p10 0.90 med 1.23 p90 1.74, share >= actual 0.05
+  KMI & TV>=5m   h120  x1.52  maxDD -29%  taken 9  (2023-08-10 to 2026-04-13) | placebo sleeve x p10 0.88 med 1.36 p90 2.08, share >= actual 0.33
+  KMI & TV>=5m   stop  x1.60  maxDD -32%  taken 12  (2023-08-10 to 2026-09-09) | placebo sleeve x p10 0.90 med 1.49 p90 2.13, share >= actual 0.33
+
+========================================================================================================================
+E5 credit-rating upgrade | events 12, entered 12, KMI 7, syms 11, months 9
+  *** n is small: read as anecdote, not odds ***
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n   12 | mean +3.7% med -0.8% win 50% >+50% 8% <-30% 0% worst -22% best +53% || P1 same-symbol: mean +2.4% med +0.0% p(mean) 0.358 p(med) 0.567 (n 12) || P2 matched-market: mean +0.1% med -2.2% p(mean) 0.184 p(med) 0.333 (n 12)
+  All            h60   n   11 | mean -5.3% med -14.8% win 36% >+50% 0% <-30% 0% worst -29% best +33% || P1 same-symbol: mean +8.1% med +1.9% p(mean) 0.915 p(med) 1.000 (n 11) || P2 matched-market: mean +2.8% med -3.0% p(mean) 0.856 p(med) 0.990 (n 11)
+  All            h120  n    7 | mean +0.9% med -9.6% win 29% >+50% 14% <-30% 29% worst -43% best +74% || P1 same-symbol: mean +13.2% med +7.5% p(mean) 0.786 p(med) 0.881 (n 7) || P2 matched-market: mean +7.7% med -4.6% p(mean) 0.602 p(med) 0.687 (n 7)
+  All            stop  n   12 | mean +5.6% med -12.6% win 33% >+50% 17% <-30% 0% worst -21% best +108% || P1 same-symbol: mean +3.9% med -7.3% p(mean) 0.373 p(med) 0.841 (n 12) || P2 matched-market: mean +7.8% med -10.0% p(mean) 0.458 p(med) 0.642 (n 12)
+  KMI member     h20   n    7 | mean +3.3% med +2.1% win 57% >+50% 0% <-30% 0% worst -22% best +43% || P1 same-symbol: mean +1.7% med +0.1% p(mean) 0.348 p(med) 0.333 (n 7) || P2 matched-market: mean +1.9% med -0.6% p(mean) 0.313 p(med) 0.303 (n 7)
+  KMI member     h60   n    7 | mean +3.1% med +8.5% win 57% >+50% 0% <-30% 0% worst -28% best +33% || P1 same-symbol: mean +5.5% med +1.3% p(mean) 0.587 p(med) 0.229 (n 7) || P2 matched-market: mean +6.0% med +0.2% p(mean) 0.488 p(med) 0.154 (n 7)
+  KMI member     h120  n    6 | mean +6.8% med -5.7% win 33% >+50% 17% <-30% 17% worst -43% best +74% || P1 same-symbol: mean +10.1% med +5.6% p(mean) 0.562 p(med) 0.771 (n 6) || P2 matched-market: mean +9.9% med -2.0% p(mean) 0.493 p(med) 0.652 (n 6)
+  KMI member     stop  n    7 | mean +4.6% med -8.4% win 43% >+50% 14% <-30% 0% worst -21% best +52% || P1 same-symbol: mean +0.2% med -8.8% p(mean) 0.274 p(med) 0.493 (n 7) || P2 matched-market: mean +13.6% med -3.6% p(mean) 0.677 p(med) 0.682 (n 7)
+  KMI & TV>=5m   h20   n    5 | mean +9.7% med +4.0% win 80% >+50% 0% <-30% 0% worst -9% best +43% || P1 same-symbol: mean +2.1% med +1.3% p(mean) 0.090 p(med) 0.269 (n 5) || P2 matched-market: mean +0.9% med -0.9% p(mean) 0.095 p(med) 0.209 (n 5)
+  KMI & TV>=5m   h60   n    5 | mean +3.4% med +8.5% win 60% >+50% 0% <-30% 0% worst -17% best +18% || P1 same-symbol: mean +7.6% med +3.7% p(mean) 0.642 p(med) 0.328 (n 5) || P2 matched-market: mean +3.1% med -1.9% p(mean) 0.428 p(med) 0.139 (n 5)
+  KMI & TV>=5m   h120  n    5 | mean +1.1% med -9.6% win 20% >+50% 20% <-30% 20% worst -43% best +74% || P1 same-symbol: mean +13.4% med +9.3% p(mean) 0.746 p(med) 0.866 (n 5) || P2 matched-market: mean +4.0% med -6.0% p(mean) 0.498 p(med) 0.637 (n 5)
+  KMI & TV>=5m   stop  n    5 | mean +5.3% med -8.4% win 40% >+50% 20% <-30% 0% worst -19% best +52% || P1 same-symbol: mean +3.1% med -5.9% p(mean) 0.378 p(med) 0.612 (n 5) || P2 matched-market: mean +13.3% med -6.0% p(mean) 0.577 p(med) 0.557 (n 5)
+  KMI & TV>=20m  h20   n    5 | mean +9.7% med +4.0% win 80% >+50% 0% <-30% 0% worst -9% best +43%
+  KMI & TV>=20m  h60   n    5 | mean +3.4% med +8.5% win 60% >+50% 0% <-30% 0% worst -17% best +18%
+  KMI & TV>=20m  h120  n    5 | mean +1.1% med -9.6% win 20% >+50% 20% <-30% 20% worst -43% best +74%
+  KMI & TV>=20m  stop  n    5 | mean +5.3% med -8.4% win 40% >+50% 20% <-30% 0% worst -19% best +52%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n    5 | mean +3.4% med +8.5% win 60% >+50% 0% <-30% 0% worst -17% best +18%
+  h60   TV>=20m   non-KMI  n    2 | mean -18.3% med -18.3% win 0% >+50% 0% <-30% 0% worst -19% best -18%
+  h60   TV 5-20m  non-KMI  n    1 | mean -14.8% med -14.8% win 0% >+50% 0% <-30% 0% worst -15% best -15%
+  h60   TV<5m     KMI      n    2 | mean +2.4% med +2.4% win 50% >+50% 0% <-30% 0% worst -28% best +33%
+  h60   TV<5m     non-KMI  n    1 | mean -29.2% med -29.2% win 0% >+50% 0% <-30% 0% worst -29% best -29%
+  stop  TV>=20m   KMI      n    5 | mean +5.3% med -8.4% win 40% >+50% 20% <-30% 0% worst -19% best +52%
+  stop  TV>=20m   non-KMI  n    2 | mean -20.1% med -20.1% win 0% >+50% 0% <-30% 0% worst -20% best -20%
+  stop  TV 5-20m  non-KMI  n    1 | mean -10.6% med -10.6% win 0% >+50% 0% <-30% 0% worst -11% best -11%
+  stop  TV<5m     KMI      n    2 | mean +2.7% med +2.7% win 50% >+50% 0% <-30% 0% worst -21% best +26%
+  stop  TV<5m     non-KMI  n    2 | mean +43.3% med +43.3% win 50% >+50% 50% <-30% 0% worst -21% best +108%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2021: n   3 mean +5.1% med +14.1% win 67%
+  2022: n   1 mean -29.2% med -29.2% win 0%
+  2024: n   2 mean +0.9% med +0.9% win 50%
+  2025: n   1 mean +32.5% med +32.5% win 100%
+  2026: n   4 mean -19.8% med -18.3% win 0%
+  h60   bill<=policy  n    3 | mean +11.4% med +8.5% win 67% >+50% 0% <-30% 0% worst -7% best +33%
+  h60   bill>policy   n    8 | mean -11.6% med -17.6% win 25% >+50% 0% <-30% 0% worst -29% best +18%
+  stop  bill<=policy  n    3 | mean +21.2% med +26.4% win 67% >+50% 33% <-30% 0% worst -15% best +52%
+  stop  bill>policy   n    9 | mean +0.4% med -19.1% win 22% >+50% 11% <-30% 0% worst -21% best +108%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n    5 | mean -9.3% med -18.2% win 20% >+50% 0% <-30% 0% worst -28% best +33% || P1 same-symbol: mean +6.2% med +0.1% p(mean) 0.871 p(med) 0.990 (n 5) || P2 matched-market: mean +4.3% med -3.0% p(mean) 0.856 p(med) 0.955 (n 5)
+  stop  n    6 | mean +10.4% med -15.2% win 33% >+50% 17% <-30% 0% worst -21% best +108% || P1 same-symbol: mean +4.3% med -8.0% p(mean) 0.363 p(med) 0.876 (n 6) || P2 matched-market: mean +3.6% med -10.5% p(mean) 0.244 p(med) 0.657 (n 6)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 12 mean +2.7% median +4.2% share>+20% 0% | P1 same-symbol random-day run-up median +0.6%
+  reaction day R: n 12 mean +0.9% median +1.0% share>+5% 17%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n    7 | mean -8.4% med -14.8% win 29% >+50% 0% <-30% 0% worst -28% best +18%
+                stop n    8 | mean +11.2% med -12.6% win 38% >+50% 25% <-30% 0% worst -21% best +108%
+  runup<0       h60 n    4 | mean +0.1% med -1.5% win 50% >+50% 0% <-30% 0% worst -29% best +33%
+                stop n    4 | mean -5.5% med -13.7% win 25% >+50% 0% <-30% 0% worst -21% best +26%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.97  maxDD -20%  taken 10  (2021-05-03 to 2026-08-28) | placebo sleeve x p10 0.78 med 0.98 p90 1.19, share >= actual 0.53
+  All            h60   x0.84  maxDD -32%  taken 10  (2021-05-03 to 2026-09-30) | placebo sleeve x p10 0.77 med 0.96 p90 1.21, share >= actual 0.75
+  All            h120  x0.97  maxDD -40%  taken 7  (2021-05-03 to 2025-10-14) | placebo sleeve x p10 0.77 med 1.09 p90 1.60, share >= actual 0.60
+  All            stop  x1.21  maxDD -25%  taken 11  (2021-05-03 to 2026-10-06) | placebo sleeve x p10 0.73 med 1.04 p90 1.53, share >= actual 0.40
+  KMI member     h20   x1.07  maxDD -12%  taken 7  (2021-05-03 to 2026-07-31) | placebo sleeve x p10 0.86 med 1.00 p90 1.17, share >= actual 0.25
+  KMI member     h60   x1.06  maxDD -21%  taken 7  (2021-05-03 to 2026-09-29) | placebo sleeve x p10 0.82 med 1.00 p90 1.30, share >= actual 0.38
+  KMI member     h120  x1.09  maxDD -32%  taken 6  (2021-05-03 to 2025-10-14) | placebo sleeve x p10 0.81 med 1.09 p90 1.53, share >= actual 0.50
+  KMI member     stop  x1.09  maxDD -20%  taken 7  (2021-05-03 to 2026-07-27) | placebo sleeve x p10 0.81 med 1.18 p90 1.63, share >= actual 0.65
+  KMI & TV>=5m   h20   x1.16  maxDD -4%  taken 5  (2021-05-03 to 2024-08-20) | placebo sleeve x p10 0.88 med 0.96 p90 1.08, share >= actual 0.03
+  KMI & TV>=5m   h60   x1.05  maxDD -12%  taken 5  (2021-05-03 to 2024-10-16) | placebo sleeve x p10 0.82 med 0.95 p90 1.14, share >= actual 0.23
+  KMI & TV>=5m   h120  x0.98  maxDD -32%  taken 5  (2021-05-03 to 2025-01-09) | placebo sleeve x p10 0.78 med 0.98 p90 1.22, share >= actual 0.47
+  KMI & TV>=5m   stop  x1.07  maxDD -20%  taken 5  (2021-05-03 to 2025-02-10) | placebo sleeve x p10 0.84 med 1.09 p90 1.57, share >= actual 0.53
+
+========================================================================================================================
+E6 rights issue declared | events 149, entered 142, KMI 79, syms 111, months 81
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n  141 | mean -4.1% med -5.3% win 33% >+50% 3% <-30% 6% worst -55% best +68% || P1 same-symbol: mean +1.1% med -1.6% p(mean) 1.000 p(med) 1.000 (n 141) || P2 matched-market: mean +0.6% med -1.7% p(mean) 1.000 p(med) 0.995 (n 139)
+  All            h60   n  137 | mean -4.3% med -9.1% win 34% >+50% 7% <-30% 14% worst -66% best +131% || P1 same-symbol: mean +5.5% med -2.6% p(mean) 1.000 p(med) 1.000 (n 137) || P2 matched-market: mean +3.1% med -2.9% p(mean) 0.995 p(med) 1.000 (n 135)
+  All            h120  n  131 | mean -3.6% med -14.4% win 30% >+50% 9% <-30% 21% worst -68% best +222% || P1 same-symbol: mean +8.4% med -2.4% p(mean) 1.000 p(med) 1.000 (n 131) || P2 matched-market: mean +6.0% med -4.6% p(mean) 0.985 p(med) 1.000 (n 129)
+  All            stop  n  138 | mean -2.1% med -15.0% win 24% >+50% 6% <-30% 3% worst -50% best +399% || P1 same-symbol: mean +4.3% med -10.2% p(mean) 0.970 p(med) 1.000 (n 138) || P2 matched-market: mean +3.1% med -10.5% p(mean) 0.925 p(med) 1.000 (n 136)
+  KMI member     h20   n   77 | mean -3.4% med -4.5% win 34% >+50% 3% <-30% 4% worst -55% best +68% || P1 same-symbol: mean +1.3% med -1.6% p(mean) 0.995 p(med) 0.975 (n 77) || P2 matched-market: mean -0.1% med -1.7% p(mean) 0.960 p(med) 0.955 (n 76)
+  KMI member     h60   n   76 | mean -4.6% med -9.1% win 33% >+50% 7% <-30% 14% worst -66% best +91% || P1 same-symbol: mean +5.2% med -2.9% p(mean) 1.000 p(med) 0.990 (n 76) || P2 matched-market: mean +1.5% med -3.8% p(mean) 0.970 p(med) 0.985 (n 75)
+  KMI member     h120  n   72 | mean -4.4% med -15.4% win 28% >+50% 7% <-30% 19% worst -59% best +222% || P1 same-symbol: mean +5.9% med -4.1% p(mean) 0.990 p(med) 1.000 (n 72) || P2 matched-market: mean +2.3% med -5.8% p(mean) 0.940 p(med) 1.000 (n 71)
+  KMI member     stop  n   75 | mean -6.9% med -15.2% win 25% >+50% 4% <-30% 1% worst -37% best +98% || P1 same-symbol: mean +3.0% med -10.6% p(mean) 0.990 p(med) 0.970 (n 75) || P2 matched-market: mean +1.7% med -11.7% p(mean) 0.965 p(med) 0.935 (n 74)
+  KMI & TV>=5m   h20   n   39 | mean -1.6% med -4.5% win 38% >+50% 3% <-30% 0% worst -24% best +64% || P1 same-symbol: mean +1.5% med -1.0% p(mean) 0.851 p(med) 0.945 (n 39) || P2 matched-market: mean -0.1% med -1.3% p(mean) 0.731 p(med) 0.940 (n 39)
+  KMI & TV>=5m   h60   n   38 | mean -0.2% med -6.9% win 39% >+50% 8% <-30% 11% worst -53% best +91% || P1 same-symbol: mean +5.8% med -3.0% p(mean) 0.826 p(med) 0.851 (n 38) || P2 matched-market: mean +1.7% med -2.7% p(mean) 0.647 p(med) 0.881 (n 38)
+  KMI & TV>=5m   h120  n   36 | mean -1.4% med -10.4% win 31% >+50% 8% <-30% 17% worst -52% best +142% || P1 same-symbol: mean +5.7% med -5.0% p(mean) 0.831 p(med) 0.801 (n 36) || P2 matched-market: mean +3.3% med -5.0% p(mean) 0.741 p(med) 0.841 (n 36)
+  KMI & TV>=5m   stop  n   38 | mean -3.7% med -9.0% win 26% >+50% 3% <-30% 0% worst -25% best +98% || P1 same-symbol: mean +2.1% med -12.0% p(mean) 0.791 p(med) 0.184 (n 38) || P2 matched-market: mean +1.9% med -11.8% p(mean) 0.816 p(med) 0.224 (n 38)
+  KMI & TV>=20m  h20   n   26 | mean +0.3% med -2.5% win 42% >+50% 4% <-30% 0% worst -21% best +64%
+  KMI & TV>=20m  h60   n   25 | mean +3.3% med -3.0% win 44% >+50% 8% <-30% 4% worst -41% best +91%
+  KMI & TV>=20m  h120  n   24 | mean -2.0% med -10.4% win 29% >+50% 8% <-30% 12% worst -52% best +142%
+  KMI & TV>=20m  stop  n   25 | mean -1.3% med -8.5% win 28% >+50% 4% <-30% 0% worst -24% best +98%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   25 | mean +3.3% med -3.0% win 44% >+50% 8% <-30% 4% worst -41% best +91%
+  h60   TV>=20m   non-KMI  n   12 | mean -9.4% med -11.8% win 25% >+50% 8% <-30% 25% worst -46% best +61%
+  h60   TV 5-20m  KMI      n   13 | mean -6.8% med -12.3% win 31% >+50% 8% <-30% 23% worst -53% best +86%
+  h60   TV 5-20m  non-KMI  n    7 | mean -8.9% med -12.8% win 29% >+50% 14% <-30% 29% worst -46% best +59%
+  h60   TV<5m     KMI      n   38 | mean -9.1% med -9.9% win 26% >+50% 5% <-30% 18% worst -66% best +82%
+  h60   TV<5m     non-KMI  n   42 | mean -1.5% med -8.0% win 38% >+50% 7% <-30% 7% worst -64% best +131%
+  stop  TV>=20m   KMI      n   25 | mean -1.3% med -8.5% win 28% >+50% 4% <-30% 0% worst -24% best +98%
+  stop  TV>=20m   non-KMI  n   12 | mean -14.5% med -16.7% win 8% >+50% 8% <-30% 17% worst -50% best +56%
+  stop  TV 5-20m  KMI      n   13 | mean -8.4% med -17.9% win 23% >+50% 0% <-30% 0% worst -25% best +45%
+  stop  TV 5-20m  non-KMI  n    7 | mean -11.0% med -12.8% win 14% >+50% 0% <-30% 0% worst -28% best +28%
+  stop  TV<5m     KMI      n   37 | mean -10.1% med -15.6% win 24% >+50% 5% <-30% 3% worst -37% best +59%
+  stop  TV<5m     non-KMI  n   44 | mean +10.8% med -14.2% win 27% >+50% 9% <-30% 2% worst -30% best +399%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2016: n   3 mean -9.5% med -13.9% win 33%
+  2017: n  22 mean -13.0% med -16.3% win 18%
+  2018: n  16 mean -1.7% med -8.8% win 25%
+  2019: n  12 mean -9.4% med -11.9% win 33%
+  2020: n  18 mean +9.5% med -4.3% win 39%
+  2021: n  18 mean -5.0% med -9.7% win 28%
+  2022: n   8 mean -23.0% med -22.5% win 12%
+  2023: n   6 mean +6.7% med +2.6% win 50%
+  2024: n  14 mean -1.6% med +4.6% win 64%
+  2025: n   8 mean +5.6% med +5.1% win 62%
+  2026: n  12 mean -8.0% med -8.6% win 25%
+  h60   bill<=policy  n   31 | mean -2.2% med +0.5% win 52% >+50% 6% <-30% 6% worst -66% best +59%
+  h60   bill>policy   n  106 | mean -4.9% med -11.3% win 28% >+50% 8% <-30% 16% worst -64% best +131%
+  stop  bill<=policy  n   30 | mean +2.9% med -8.6% win 30% >+50% 3% <-30% 3% worst -42% best +308%
+  stop  bill>policy   n  108 | mean -3.5% med -15.6% win 22% >+50% 6% <-30% 3% worst -50% best +399%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n   23 | mean -2.8% med -6.1% win 39% >+50% 9% <-30% 9% worst -53% best +91% || P1 same-symbol: mean +17.7% med +5.6% p(mean) 0.975 p(med) 0.965 (n 23) || P2 matched-market: mean +11.2% med +0.8% p(mean) 0.891 p(med) 0.861 (n 23)
+  stop  n   24 | mean -6.8% med -12.6% win 21% >+50% 4% <-30% 4% worst -42% best +98% || P1 same-symbol: mean +11.7% med -2.9% p(mean) 0.975 p(med) 0.920 (n 24) || P2 matched-market: mean +13.9% med -6.5% p(mean) 0.960 p(med) 0.826 (n 24)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 146 mean +5.3% median +0.0% share>+20% 18% | P1 same-symbol random-day run-up median -0.5%
+  reaction day R: n 147 mean +0.4% median +0.0% share>+5% 14%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n   43 | mean -0.5% med -10.7% win 35% >+50% 12% <-30% 14% worst -49% best +131%
+                stop n   44 | mean +7.1% med -15.6% win 23% >+50% 11% <-30% 7% worst -50% best +399%
+  runup<0       h60 n   69 | mean -6.1% med -7.9% win 35% >+50% 3% <-30% 12% worst -64% best +61%
+                stop n   68 | mean -7.0% med -15.1% win 24% >+50% 3% <-30% 1% worst -42% best +102%
+  runup>=+20%   h60 n   25 | mean -6.1% med -11.2% win 28% >+50% 12% <-30% 20% worst -66% best +91%
+                stop n   26 | mean -5.0% med -13.1% win 27% >+50% 4% <-30% 0% worst -28% best +98%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x0.13  maxDD -90%  taken 127  (2016-12-01 to 2026-10-14) | placebo sleeve x p10 0.38 med 0.93 p90 2.18, share >= actual 1.00
+  All            h60   x0.14  maxDD -91%  taken 80  (2016-12-01 to 2026-09-23) | placebo sleeve x p10 0.55 med 1.39 p90 4.29, share >= actual 1.00
+  All            h120  x0.27  maxDD -79%  taken 47  (2016-12-01 to 2026-09-14) | placebo sleeve x p10 0.52 med 1.63 p90 6.62, share >= actual 1.00
+  All            stop  x1.12  maxDD -65%  taken 73  (2016-12-01 to 2026-10-13) | placebo sleeve x p10 0.48 med 1.20 p90 2.85, share >= actual 0.57
+  KMI member     h20   x0.37  maxDD -72%  taken 75  (2016-12-23 to 2026-10-14) | placebo sleeve x p10 0.42 med 0.81 p90 1.49, share >= actual 0.95
+  KMI member     h60   x0.42  maxDD -66%  taken 64  (2016-12-23 to 2026-09-09) | placebo sleeve x p10 0.43 med 0.91 p90 1.83, share >= actual 0.90
+  KMI member     h120  x0.36  maxDD -74%  taken 41  (2016-12-23 to 2026-09-14) | placebo sleeve x p10 0.65 med 1.11 p90 2.80, share >= actual 1.00
+  KMI member     stop  x0.18  maxDD -88%  taken 60  (2016-12-23 to 2026-09-10) | placebo sleeve x p10 0.36 med 0.92 p90 2.23, share >= actual 1.00
+  KMI & TV>=5m   h20   x0.77  maxDD -42%  taken 39  (2016-12-23 to 2026-10-14) | placebo sleeve x p10 0.63 med 0.83 p90 1.23, share >= actual 0.62
+  KMI & TV>=5m   h60   x0.80  maxDD -46%  taken 36  (2016-12-23 to 2026-08-31) | placebo sleeve x p10 0.51 med 1.03 p90 1.75, share >= actual 0.75
+  KMI & TV>=5m   h120  x0.47  maxDD -73%  taken 31  (2016-12-23 to 2026-09-14) | placebo sleeve x p10 0.47 med 0.93 p90 2.31, share >= actual 0.88
+  KMI & TV>=5m   stop  x0.52  maxDD -59%  taken 36  (2016-12-23 to 2026-09-10) | placebo sleeve x p10 0.54 med 0.83 p90 2.12, share >= actual 0.95
+
+========================================================================================================================
+E7 KMI All Share addition | events 420, entered 388, KMI 420, syms 256, months 17
+-- A. exits x sample (net of costs; P1 = same symbol random day, P2 = matched random market day)
+  All            h20   n  388 | mean +3.2% med +0.2% win 51% >+50% 3% <-30% 1% worst -42% best +165% || P1 same-symbol: mean +1.4% med -1.3% p(mean) 0.025 p(med) 0.005 (n 388) || P2 matched-market: mean +1.3% med -1.0% p(mean) 0.025 p(med) 0.015 (n 385)
+  All            h60   n  388 | mean +0.7% med -4.9% win 36% >+50% 3% <-30% 4% worst -62% best +703% || P1 same-symbol: mean +5.9% med -1.0% p(mean) 1.000 p(med) 1.000 (n 388) || P2 matched-market: mean +6.2% med -0.2% p(mean) 1.000 p(med) 1.000 (n 385)
+  All            h120  n  352 | mean +2.6% med -5.1% win 41% >+50% 9% <-30% 11% worst -77% best +183% || P1 same-symbol: mean +11.2% med +0.3% p(mean) 1.000 p(med) 1.000 (n 352) || P2 matched-market: mean +13.5% med +3.4% p(mean) 1.000 p(med) 1.000 (n 349)
+  All            stop  n  378 | mean +5.5% med -10.3% win 33% >+50% 10% <-30% 1% worst -42% best +557% || P1 same-symbol: mean +7.9% med -7.2% p(mean) 0.891 p(med) 0.995 (n 378) || P2 matched-market: mean +10.5% med -5.4% p(mean) 0.940 p(med) 0.995 (n 375)
+  KMI member     h20   n  388 | mean +3.2% med +0.2% win 51% >+50% 3% <-30% 1% worst -42% best +165% || P1 same-symbol: mean +1.4% med -1.3% p(mean) 0.025 p(med) 0.005 (n 388) || P2 matched-market: mean +1.3% med -1.0% p(mean) 0.025 p(med) 0.015 (n 385)
+  KMI member     h60   n  388 | mean +0.7% med -4.9% win 36% >+50% 3% <-30% 4% worst -62% best +703% || P1 same-symbol: mean +5.9% med -1.0% p(mean) 1.000 p(med) 1.000 (n 388) || P2 matched-market: mean +6.2% med -0.2% p(mean) 1.000 p(med) 1.000 (n 385)
+  KMI member     h120  n  352 | mean +2.6% med -5.1% win 41% >+50% 9% <-30% 11% worst -77% best +183% || P1 same-symbol: mean +11.2% med +0.3% p(mean) 1.000 p(med) 1.000 (n 352) || P2 matched-market: mean +13.5% med +3.4% p(mean) 1.000 p(med) 1.000 (n 349)
+  KMI member     stop  n  378 | mean +5.5% med -10.3% win 33% >+50% 10% <-30% 1% worst -42% best +557% || P1 same-symbol: mean +7.9% med -7.2% p(mean) 0.891 p(med) 0.995 (n 378) || P2 matched-market: mean +10.5% med -5.4% p(mean) 0.940 p(med) 0.995 (n 375)
+  KMI & TV>=5m   h20   n   99 | mean +1.6% med -1.3% win 46% >+50% 2% <-30% 1% worst -39% best +58% || P1 same-symbol: mean +0.9% med -1.5% p(mean) 0.348 p(med) 0.438 (n 99) || P2 matched-market: mean +0.8% med -0.9% p(mean) 0.269 p(med) 0.627 (n 99)
+  KMI & TV>=5m   h60   n   99 | mean -6.8% med -9.8% win 30% >+50% 0% <-30% 7% worst -62% best +40% || P1 same-symbol: mean +5.9% med -1.2% p(mean) 1.000 p(med) 1.000 (n 99) || P2 matched-market: mean +4.1% med -0.2% p(mean) 1.000 p(med) 1.000 (n 99)
+  KMI & TV>=5m   h120  n   91 | mean -6.5% med -12.4% win 26% >+50% 4% <-30% 14% worst -53% best +160% || P1 same-symbol: mean +11.6% med +0.1% p(mean) 1.000 p(med) 1.000 (n 91) || P2 matched-market: mean +10.6% med +2.7% p(mean) 1.000 p(med) 1.000 (n 91)
+  KMI & TV>=5m   stop  n   98 | mean -5.2% med -13.9% win 22% >+50% 3% <-30% 1% worst -33% best +156% || P1 same-symbol: mean +6.4% med -9.6% p(mean) 1.000 p(med) 0.990 (n 98) || P2 matched-market: mean +8.8% med -8.2% p(mean) 1.000 p(med) 1.000 (n 98)
+  KMI & TV>=20m  h20   n   61 | mean -0.2% med -1.9% win 39% >+50% 0% <-30% 0% worst -22% best +37%
+  KMI & TV>=20m  h60   n   61 | mean -8.6% med -12.2% win 23% >+50% 0% <-30% 8% worst -36% best +40%
+  KMI & TV>=20m  h120  n   59 | mean -10.2% med -14.5% win 22% >+50% 3% <-30% 12% worst -53% best +77%
+  KMI & TV>=20m  stop  n   61 | mean -8.2% med -16.8% win 18% >+50% 2% <-30% 0% worst -28% best +156%
+-- B. liquidity x KMI (exits h60 and stop)
+  h60   TV>=20m   KMI      n   61 | mean -8.6% med -12.2% win 23% >+50% 0% <-30% 8% worst -36% best +40%
+  h60   TV 5-20m  KMI      n   38 | mean -3.9% med -3.9% win 42% >+50% 0% <-30% 5% worst -62% best +37%
+  h60   TV<5m     KMI      n  289 | mean +3.3% med -3.6% win 38% >+50% 4% <-30% 3% worst -47% best +703%
+  stop  TV>=20m   KMI      n   61 | mean -8.2% med -16.8% win 18% >+50% 2% <-30% 0% worst -28% best +156%
+  stop  TV 5-20m  KMI      n   37 | mean -0.3% med -10.8% win 30% >+50% 5% <-30% 3% worst -33% best +156%
+  stop  TV<5m     KMI      n  280 | mean +9.2% med -8.3% win 36% >+50% 12% <-30% 1% worst -42% best +557%
+-- C. by signal year (exit h60, All) and by regime (h60 and stop, All)
+  2019: n  36 mean -11.0% med -11.0% win 22%
+  2020: n  51 mean -0.9% med -4.3% win 39%
+  2021: n  61 mean -5.8% med -8.6% win 28%
+  2022: n  27 mean -3.0% med -6.2% win 30%
+  2023: n  77 mean -0.0% med -2.4% win 39%
+  2024: n  51 mean +0.3% med -7.0% win 37%
+  2025: n  49 mean +2.0% med -1.5% win 41%
+  2026: n  36 mean +29.3% med +0.7% win 50%
+  h60   bill<=policy  n  116 | mean +3.0% med -3.5% win 42% >+50% 5% <-30% 2% worst -42% best +138%
+  h60   bill>policy   n  272 | mean -0.2% med -5.7% win 33% >+50% 3% <-30% 5% worst -62% best +703%
+  stop  bill<=policy  n  116 | mean +14.6% med -6.7% win 36% >+50% 17% <-30% 2% worst -42% best +284%
+  stop  bill>policy   n  262 | mean +1.5% med -10.8% win 31% >+50% 6% <-30% 0% worst -33% best +557%
+-- C2. signals from 2024-11-01 only (cash dividends complete in the adjusted prices), All events
+  h60   n  109 | mean +9.9% med -1.5% win 43% >+50% 6% <-30% 3% worst -62% best +703% || P1 same-symbol: mean +12.3% med +1.9% p(mean) 0.622 p(med) 0.960 (n 109) || P2 matched-market: mean +11.1% med +1.8% p(mean) 0.572 p(med) 0.915 (n 109)
+  stop  n   99 | mean +9.5% med -6.1% win 43% >+50% 11% <-30% 0% worst -27% best +557% || P1 same-symbol: mean +10.6% med -5.7% p(mean) 0.517 p(med) 0.532 (n 99) || P2 matched-market: mean +14.2% med -4.3% p(mean) 0.716 p(med) 0.642 (n 99)
+-- D. leakage: 20-session run-up before R and reaction-day return (All events)
+  run-up: n 405 mean +4.2% median +0.0% share>+20% 12% | P1 same-symbol random-day run-up median -0.1%
+  reaction day R: n 408 mean +0.2% median +0.0% share>+5% 9%
+-- E. by run-up bucket (exit h60 and stop, All)
+  runup 0..20%  h60 n  153 | mean -0.2% med -4.3% win 42% >+50% 1% <-30% 5% worst -42% best +141%
+                stop n  148 | mean +4.0% med -10.9% win 29% >+50% 10% <-30% 2% worst -42% best +284%
+  runup<0       h60 n  189 | mean -0.1% med -5.6% win 29% >+50% 3% <-30% 4% worst -62% best +703%
+                stop n  184 | mean +5.2% med -10.2% win 34% >+50% 8% <-30% 0% worst -29% best +557%
+  runup>=+20%   h60 n   46 | mean +7.6% med -3.5% win 46% >+50% 11% <-30% 4% worst -38% best +138%
+                stop n   46 | mean +11.3% med -7.9% win 37% >+50% 13% <-30% 0% worst -26% best +279%
+-- G. Rs50k sleeve, every signal, max 3 positions (final multiple, max drawdown, trades taken)
+  All            h20   x1.05  maxDD -26%  taken 49  (2019-01-18 to 2026-08-17) | placebo sleeve x p10 0.89 med 1.70 p90 3.94, share >= actual 0.78
+  All            h60   x1.03  maxDD -51%  taken 48  (2019-01-18 to 2026-10-13) | placebo sleeve x p10 1.51 med 2.90 p90 7.93, share >= actual 0.97
+  All            h120  x1.23  maxDD -59%  taken 33  (2019-01-18 to 2026-05-22) | placebo sleeve x p10 0.99 med 2.49 p90 6.42, share >= actual 0.82
+  All            stop  x0.59  maxDD -54%  taken 39  (2019-01-18 to 2026-10-14) | placebo sleeve x p10 0.97 med 2.92 p90 5.57, share >= actual 1.00
+  KMI member     h20   x1.05  maxDD -26%  taken 49  (2019-01-18 to 2026-08-17) | placebo sleeve x p10 0.89 med 1.70 p90 3.94, share >= actual 0.78
+  KMI member     h60   x1.03  maxDD -51%  taken 48  (2019-01-18 to 2026-10-13) | placebo sleeve x p10 1.51 med 2.90 p90 7.93, share >= actual 0.97
+  KMI member     h120  x1.23  maxDD -59%  taken 33  (2019-01-18 to 2026-05-22) | placebo sleeve x p10 0.99 med 2.49 p90 6.42, share >= actual 0.82
+  KMI member     stop  x0.59  maxDD -54%  taken 39  (2019-01-18 to 2026-10-14) | placebo sleeve x p10 0.97 med 2.92 p90 5.57, share >= actual 1.00
+  KMI & TV>=5m   h20   x1.40  maxDD -24%  taken 43  (2019-01-18 to 2026-07-02) | placebo sleeve x p10 0.72 med 0.98 p90 1.90, share >= actual 0.25
+  KMI & TV>=5m   h60   x0.41  maxDD -70%  taken 43  (2019-01-18 to 2026-08-31) | placebo sleeve x p10 0.83 med 1.64 p90 3.60, share >= actual 1.00
+  KMI & TV>=5m   h120  x0.19  maxDD -84%  taken 32  (2019-01-18 to 2026-05-22) | placebo sleeve x p10 0.95 med 1.91 p90 3.60, share >= actual 1.00
+  KMI & TV>=5m   stop  x0.50  maxDD -71%  taken 38  (2019-01-18 to 2026-10-14) | placebo sleeve x p10 0.81 med 1.70 p90 4.45, share >= actual 0.97
+
+========================================================================================================================
+TODAY'S SCREEN: events with a reaction day in the last 15 sessions (last 60 for splits and rights); price data to 2026-10-16
+-- E1b buyback first purchase: 2 events, 2 KMI
+   2026-10-09 CHCC     KMI Y TV>=20m   runup20 +1% react -0.6% 
+   2026-10-15 AGP      KMI Y TV>=20m   runup20 +6% react +1.3% 
+-- E2a bonus: 1 events, 1 KMI
+   2026-10-02 CLOV     KMI Y TV 5-20m  runup20 +8% react -2.9% explicit|small<20%
+-- E2b split: 1 events, 1 KMI
+   2026-08-06 SRVI     KMI Y TV>=20m   runup20 -3% react -0.0% explicit|
+-- E3a CEO or chairman appointed/changed: 4 events, 3 KMI
+   2026-10-06 FATIMA   KMI Y TV>=20m   runup20 -6% react +0.0% 
+   2026-10-06 SZTM     KMI Y TV<5m     runup20 -7% react -2.8% 
+   2026-10-12 FCIBL    KMI n TV<5m     runup20 +31% react +10.0% 
+   2026-10-13 EPQL     KMI Y TV 5-20m  runup20 +2% react -0.8% 
+-- E4a PSX unusual-movement letter: 7 events, 5 KMI
+   2026-09-25 ASTM     KMI Y TV 5-20m  runup20 -38% react +9.8% 
+   2026-09-25 GEMPACRA KMI Y TV<5m     runup20 +18% react +2.3% 
+   2026-10-08 CLVL     KMI n TV>=20m   runup20 -34% react -9.1% 
+   2026-10-14 DSIL     KMI n TV>=20m   runup20 +115% react +10.0% 
+   2026-10-14 DWSM     KMI Y TV<5m     runup20 +32% react +1.5% 
+   2026-10-14 NONS     KMI Y TV<5m     runup20 +3% react -0.1% 
+   2026-10-16 BUXL     KMI Y TV 5-20m  runup20 -41% react -1.0% 
+-- E6 rights issue declared: 5 events, 1 KMI
+   2026-08-21 EFUL     KMI n TV<5m     runup20 +9% react +1.2% 
+   2026-09-03 BAPL     KMI n TV<5m     runup20 +19% react +3.0% 
+   2026-09-14 LSEFSL   KMI n TV<5m     runup20 +60% react +0.3% 
+   2026-09-15 GCIL     KMI Y TV>=20m   runup20 -13% react -0.7% 
+   2026-09-24 PINL     KMI n TV<5m     runup20 -12% react +7.5% 

@@ -1,0 +1,449 @@
+datetime,symbol,title,klass
+2025-11-13 08:16,SPL,MATERIAL INFORMATION,material_info
+2025-11-13 10:10,MARI,Material Information,material_info
+2025-11-13 10:12,WASL,Presentation of Corporate Briefing Session -2025,other
+2025-11-13 10:18,KEL,"Book Closure of Rated Unsecured and Retail Listed, Shirkat-ul-Aqd Sukuk.",dividend_or_bonus
+2025-11-13 11:44,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-13 12:13,GHNI,Presentation of Corporate Briefing Session - FY2025,other
+2025-11-13 12:24,DOL,Corporate Briefing flyer and presentation 2025,other
+2025-11-13 12:31,CPHL,Certified True Copy of the Resolutions Passed in the Annual General Meeting,agm
+2025-11-13 12:40,MLCF,MLCF-Disclosure of Material Information,material_info
+2025-11-13 13:08,PAKL,PAKL - MATERIAL INFORMATION,material_info
+2025-11-13 13:22,OGDC,Provisional Award of New Offshore Exploration Blocks,other
+2025-11-13 14:40,PPL,Material Information - Provisional Award of Eight New Blocks,material_info
+2025-11-13 14:43,ANL,Material Information,material_info
+2025-11-13 14:51,GAL,Presentation of Corporate Briefing Session - FY2025,other
+2025-11-13 14:52,HALEON,Prior Publication of Notice of Credit of Second Interim Cash Dividend,dividend_or_bonus
+2025-11-13 15:04,FFC,Dispatch of Third Interim Dividend Warrants,dividend_or_bonus
+2025-11-13 15:05,GGGL,CORPORATE BRIEFING SESSION 2025 - GHANI GLOBAL GLASS LIMITED,other
+2025-11-13 15:08,JVDC,Presentation for Corporate Briefing Session FY 2025,other
+2025-11-13 15:09,GGL,CORPORATE BRIEFING SESSION 2025 - GHANI GLOBAL HOLDINGS LIMITED,other
+2025-11-13 15:10,KEL,Board Meeting Other Than Financial Results,board_meeting_notice
+2025-11-14 08:59,PSEL,Material Information,material_info
+2025-11-14 09:03,MTL,CORPORATE BRIEFING SESSION-2025,other
+2025-11-14 09:18,DNCC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-14 09:52,PIOC,Material Information,material_info
+2025-11-14 10:04,TPLRF1,Material Information,material_info
+2025-11-14 10:09,MUGHAL,Sukuk - I - Notice of Book Closure,dividend_or_bonus
+2025-11-14 11:29,FFC,Notice of Extraordinary General Meeting,agm
+2025-11-14 11:36,MFL,Corporate Briefing Session,other
+2025-11-14 11:41,HUBC,Disclosure of Material Information,material_info
+2025-11-14 11:51,HRPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-14 12:02,REDCO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-14 12:13,EPQL,Credit of Third Interim Cash Dividend,dividend_or_bonus
+2025-11-14 12:13,PPL,"PPL Partner Operated Joint Venture, Gas Discovery in Sawan Field - Sindh Province",other
+2025-11-14 12:20,TPLP,"Financial Results for the Year Ended June 30, 2025",financial_result
+2025-11-14 13:04,HALEON,Credit of Second Interim Cash Dividend,dividend_or_bonus
+2025-11-14 13:11,HALEON,Notice of Corporate Briefing Session 2025,other
+2025-11-14 13:30,FATIMA,Disclosure of Material Information,material_info
+2025-11-14 14:23,TPLP,"Financial Results for the Quarter Ended September 30, 2025",financial_result
+2025-11-14 14:29,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-14 14:52,OGDC,PRODUCTION COMMENCEMENT - DEVELOPMENT WELL PASAKHI 14,other
+2025-11-14 15:06,GWLC,Credit of Interim Cash Dividend,dividend_or_bonus
+2025-11-14 15:13,PIBTL,CORPORATE BRIEFING SESSION OF PAKISTAN INTERNATIONAL BULK TERMINAL LIMITED,other
+2025-11-14 15:22,GCIL,Presentation of Corporate Briefing Session - Ghani Chemical Industries Limited REVOKED,other
+2025-11-14 15:26,SGF,Corporate Briefing Session,other
+2025-11-14 15:31,FECTC,CORPORATE BREIFING SESSION - 2025 REVOKED,other
+2025-11-14 15:51,CRTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-14 16:07,GCIL,MEETING OF THE BOARD OF DIRECTORS OTHER THAN FINANCIAL RESULTS - GHANI CHEMICAL INDUSTRIES LIMITED,board_meeting_notice
+2025-11-14 16:20,TOMCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-14 16:22,TATM,Corporate Briefing Session 2025,other
+2025-11-14 16:29,GCWL,GCWL | Ghani ChemWorld Limited POSTPONMENT OF CORPORATE BRIEFING SESSION - GHANI CHEMWORLD LIMTED,other
+2025-11-17 08:30,GCIL,RESCHEDULING OF CORPORATE BRIEFING SESSION - GHANI CHEMICAL INDUSTRIES LIMITED,other
+2025-11-17 09:43,CSAP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 09:57,MTL,Presentation of Corporate Briefing Session-2025,other
+2025-11-17 10:21,MUGHAL,"Issuance of Rated, Secured, Listed and Privately Placed Short-term Sukuk Certificates",other
+2025-11-17 10:29,MEBL,CREDIT OF INTERIM CASH DIVIDEND OF MEEZAN BANK LIMITED,dividend_or_bonus
+2025-11-17 10:33,SPWL,Credited Interim Cash Dividend,dividend_or_bonus
+2025-11-17 10:38,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 10:39,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 10:48,FABL,"Credit of Interim Cash Dividend for the Third Quarter ended September 30, 2025",financial_result
+2025-11-17 11:05,WASL,Video Recording- Corporate Briefing Session-2025,other
+2025-11-17 11:07,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 11:11,FECTC,CORPORATE BRIEFING SESSION 2025,other
+2025-11-17 11:13,ITTEFAQ,CORPORATE BRIEF SESSION 2025,other
+2025-11-17 11:13,AGTL,Change of Registered Office REVOKED,other
+2025-11-17 11:16,MUGHALC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 11:23,KML,Corporate Briefing Session 2025,other
+2025-11-17 11:29,MUGHAL,Disclosure of Interest,insider_trade
+2025-11-17 11:47,AGTL,Change of Registered Office,other
+2025-11-17 12:10,IBLHL,Corporate Briefing Session 2025,other
+2025-11-17 12:33,GGL,RESCHEDULING OF CORPORATE BRIEFING SESSION 2025 - GHANI GLOBAL HOLDINGS LIMITED,other
+2025-11-17 12:35,SHDT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 12:48,MFL,Disclosure of Material Information - Execution of Business Transfer Agreement,material_info
+2025-11-17 12:51,SYS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 12:58,MFL,Presentation of Corporate Briefing Session,other
+2025-11-17 13:08,OGDC,CORPORATE BRIEFING SESSION-2025,other
+2025-11-17 14:56,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-17 14:59,PIBTL,Presentation of Corporate Briefing Session of Pakistan International Bulk Terminal Limited,other
+2025-11-17 15:02,TREET,"Notice of Corporate Briefing Session for the year ended June 30, 2025",other
+2025-11-17 15:04,MFL,Material Information - Allotment of Plot in Special Economic Zone,material_info
+2025-11-17 15:07,TBL,Corporate Briefing Session (FY 2024-2025),other
+2025-11-17 15:16,GGGL,PRESENTATION OF CORPORATE BRIEFING SESSION - GHANI GLOBAL GLASS LIMITED REVOKED,other
+2025-11-17 15:19,SGF,Revised Presentation of Corporate Briefing Session,other
+2025-11-17 15:22,TSBL,Material Information,material_info
+2025-11-17 15:25,PREMA,Corporate Briefing Session,other
+2025-11-17 16:40,GGGL,GGGL | Ghani Global Glass Limited PRESENTATION OF CORPORATE BRIEFING SESSION - GHANI GLOBAL GLASS LIMITED,other
+2025-11-18 09:13,NETSOL,Material Information,material_info
+2025-11-18 10:04,MEBL,"PUBLICATION OF NOTICES FOR THE CREDIT OF INTERIM CASH DIVIDEND OF MEEZAN BANK FOR THE YEAR ENDING DECEMBER 31, 2025",dividend_or_bonus
+2025-11-18 10:14,CEPB,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-18 10:20,MUGHAL,Notice of Book Closure - Sukuk VI,dividend_or_bonus
+2025-11-18 10:41,IMS,Disclosure of Interest by substantial shareholder under rule 5.6.4 of the rule book,insider_trade
+2025-11-18 11:07,IPAK,Credit / Dispatch of Bonus Shares (B-1),dividend_or_bonus
+2025-11-18 11:21,MFL,Disclosure of Material Information,material_info
+2025-11-18 11:26,NATF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-18 11:34,AIRLINK,Credit of Interim Cash Dividend (D-8),dividend_or_bonus
+2025-11-18 11:41,RPL,CORPORATE BRIEFING SESSION-2025,other
+2025-11-18 12:36,786,786 | 786 Investments Limited Material Information,material_info
+2025-11-18 12:48,KML,CBS 2025 presentation,other
+2025-11-18 13:36,LIVEN,Right Share - Offer Document,dividend_or_bonus
+2025-11-18 13:50,LIVEN,Notice of Book Closure - Issuance of Right Shares,dividend_or_bonus
+2025-11-18 14:31,BFBIO,Corporate Briefing Session,other
+2025-11-18 14:34,GCWL,Presentation of Corporate Briefing Session - Ghani ChemWorld Limited,other
+2025-11-18 14:51,TATM,Tata Corporate Briefing Presentation FY 2025,other
+2025-11-18 14:52,FEROZ,Corporate Briefing Session,other
+2025-11-18 15:05,BFAGRO,Material information,material_info
+2025-11-18 15:27,GHGL,Corporate Briefing Session Ghani Glass Limited,other
+2025-11-19 10:28,SPWL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-19 10:37,PIOC,"PIOC | Pioneer Cement Limited Disclosure Under Listed Companies (Substantial Acqusition of Voting Shares and Takeovers) Regulations,2017",other
+2025-11-19 10:38,SURC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-19 11:40,BML,Material Information,material_info
+2025-11-19 12:28,MARI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-19 13:01,BML,Material Information,material_info
+2025-11-19 13:30,DSIL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-19 13:31,TREET,Material Information,material_info
+2025-11-19 14:44,BFAGRO,Barkat Frisian Agro Limited - Corporate Briefing Session - 2025,other
+2025-11-19 14:46,ELCM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-19 14:53,SHSML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-19 15:04,GCIL,DECISIONS OF BOARD MEETING - GHANI CHEMICAL INDUSTRIES LIMITED,other
+2025-11-19 15:09,FECTC,Corporate Briefing Session Presentation - FY 2025,other
+2025-11-19 15:13,HALEON,Presentation for Corporate Briefing Session 2025,other
+2025-11-19 15:13,IBLHL,Presentation of Corporate Briefing Session,other
+2025-11-19 15:14,PIBTL,Disclosure of Election of the Directors of Pakistan International Bulk Terminal Limited,other
+2025-11-19 15:15,SCL,MATERIAL INFORMATION - DELISTING OF SHARES FROM THE PSX,material_info
+2025-11-19 15:21,WAFI,"Transmission of Quarterly Report of the Period Ended September 30, 2025 REVOKED",financial_result
+2025-11-19 15:27,GCIL,Presentation of Corporate Briefing Session - GHANI CHEMICAL INDUSTRIES LIMITED,other
+2025-11-19 15:28,GGL,Presentation of Corporate Briefing Session 2025 - Ghani Global Holdings Limited,other
+2025-11-19 15:28,TREET,Presentation of Corporate Briefing Session,other
+2025-11-19 15:28,WAFI,"WAFI | Wafi Energy Pakistan Limited (Formerly : Shell Pakistan Limited) Transmission of Quarterly Report of the Period Ended September 30, 2025",financial_result
+2025-11-19 15:29,TBL,Presentation for Corporate Briefing Session,other
+2025-11-19 15:29,WAFI,Transmission of Quarterly Report for the Period Ended 2025-06-30,financial_result
+2025-11-20 09:17,MARI,"Execution of Joint Venture Agreement with Ghani Chemical Industries Ltd. (GCI) for jointly setting up a Project Company to process vent/exhaust gas from the Sachal Gas Processing Complex, Daharki, Sindh.",other
+2025-11-20 10:15,GATM,MATERIAL INFORMATION,material_info
+2025-11-20 10:32,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 10:38,BFBIO,Corporate Briefing Session - Presentation,other
+2025-11-20 11:23,ANL,Intimation of Corporate Briefing Session,other
+2025-11-20 11:27,PREMA,Corporate Briefing Presentation,other
+2025-11-20 11:29,FEROZ,Corporate Briefing Session - Presentation,other
+2025-11-20 11:55,BML,Material Information,material_info
+2025-11-20 12:00,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 12:07,HCAR,"Financial Results for the Quarter Ended September 30, 2025",financial_result
+2025-11-20 14:22,MCBIM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 14:33,TOMCL,Material Information REVOKED,material_info
+2025-11-20 14:35,FHAM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 14:37,AKBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 14:40,TOMCL,Material Information,material_info
+2025-11-20 14:41,CPPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 14:54,MTL,Recording of CBS-2025,other
+2025-11-20 15:08,MFFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-20 15:19,PPL,Clarification on the News Regarding Reclaiming Land from Sea and Artificial Island,other
+2025-11-20 15:28,ECOP,Corporate Briefing Session of EcoPack Limited - FY 2025,other
+2025-11-21 08:45,SNGP,Board Meeting,board_meeting_notice
+2025-11-21 10:21,SAIF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 10:23,DGKC,Holding of Corporate Briefing Session of D.G. Khan Cement Co. Ltd. FY 2025 in Compliance with the requirements of Clause 5.7.3 of the Rule Book,other
+2025-11-21 10:39,NML,Holding of Corporate Briefing Session of Nishat Mills Ltd. FY 2025 in Compliance with the requirements of Clause 5.7.3 of the Rule Book,other
+2025-11-21 10:49,ADMM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 10:52,ADMM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 10:54,ENGROH,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 10:55,ADMM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 11:53,QUICE,Intimation of Corporate Briefing Session - 2025,other
+2025-11-21 12:07,SPWL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 12:15,OGDC,CREDIT OF FIRST INTERIM CASH DIVIDEND D-96,dividend_or_bonus
+2025-11-21 12:24,KOIL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 12:35,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 14:11,MWMP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 14:42,FFLM,SUBSTANTIAL SHAREHOLDER,insider_trade
+2025-11-21 14:47,KSBP,Notice for Corporate Briefing Session for the Year 2025,other
+2025-11-21 15:04,KSBP,Transmission of Quarterly Report for the Period Ended 30-09-2025,financial_result
+2025-11-21 15:10,CRTM,Corporate Briefing Session,other
+2025-11-21 15:21,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 15:22,FNEL,Material Information,material_info
+2025-11-21 15:31,SHDT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 15:36,OGDC,CORPORATE BRIEFING SESSION-2025 REVOKED,other
+2025-11-21 15:39,TRSM,Election of Directors,agm
+2025-11-21 15:40,BECO,Corporate Briefing Session - 2025,other
+2025-11-21 15:50,TRSM,Resignation of Chief Financial Officer,other
+2025-11-21 15:57,SSGC,Board Meeting,board_meeting_notice
+2025-11-21 16:00,ILP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 16:03,UNITY,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 16:03,SEARL,Corporate Briefing Session for the year 2025,other
+2025-11-21 16:08,UNITY,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-21 16:11,AGP,"CORPORATE BRIEFING SESSION - SEPTEMBER 30, 2025",other
+2025-11-21 16:12,OGDC,PRESENTATION FOR CORPORATE BRIEFING SESSION-2025,other
+2025-11-21 16:21,GHGL,CBS Presentation Ghani Glass Ltd,other
+2025-11-21 16:25,IMAGE,Credit of final cash dividend,dividend_or_bonus
+2025-11-24 08:00,KSBP,Presentation for Corporate Briefing Session Year 2025,other
+2025-11-24 09:16,ANL,Corporate Briefing Session Presentation 2025,other
+2025-11-24 10:04,MFFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 10:41,ALNRS,DISCLOSURE OF INTEREST BY AN ASSOCIATED COMPANY,insider_trade
+2025-11-24 11:35,GHGL,Credit of Interim Cash Dividend,dividend_or_bonus
+2025-11-24 11:44,PPL,Credit of Interim Cash Dividend 2025-26,dividend_or_bonus
+2025-11-24 11:50,BFAGRO,PRESENTATION FOR CORPORATE BRIEFING SESSION-2025,other
+2025-11-24 12:02,NICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 12:06,KSBP,Unusual Movement in Volume of KSB Pumps Company Limited,other
+2025-11-24 12:09,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 12:14,SPL,Material Information,material_info
+2025-11-24 12:36,SPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 13:10,NESTLE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 13:16,ECOP,Corporate Briefing Session Presentation of EcoPack Limited - FY25,other
+2025-11-24 13:21,TBL,"Corporate Briefing Session Weblinks to Notice, Presentation and Video Recording of CBS Session",other
+2025-11-24 13:50,TELE,Corporate Briefing Session FY Ended 30 June 2025,other
+2025-11-24 13:50,ASC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 14:03,PPL,Successful Workover Operations in Adam West X-1 ST well (Hala Block),other
+2025-11-24 14:05,TREET,"Corporate Briefing Session Weblinks to Notice, Presentation and Video Recording of CBS Session",other
+2025-11-24 14:07,AIRLINK,25th Board Meeting (other than Financial Results),financial_result
+2025-11-24 14:32,QUICE,Presentation on CBS 2025,other
+2025-11-24 14:34,RPL,CORPORATE BRIEFING SESSION PRESENTATION-2025,other
+2025-11-24 14:39,NESTLE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 15:04,BBFL,Corporate Briefing Session,other
+2025-11-24 15:11,PRET,Material Information REVOKED,material_info
+2025-11-24 15:13,AGP,"Corporate Briefing Session - September 30, 2025 (Presentation)",other
+2025-11-24 15:14,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 15:27,BECO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-24 15:29,SNGP,RESCHEDULING OF BOARD MEETING,other
+2025-11-25 09:19,NESTLE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-25 09:29,PRET,Material Information,material_info
+2025-11-25 09:46,MFFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-25 10:14,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-25 10:42,ABOT,Appointment of Director,other
+2025-11-25 11:07,OBOY,Material Information - Decision of Board of Directors passed through Circulation,material_info
+2025-11-25 12:00,OBOY,NOTICE OF EXTRA ORDINARY GENERAL MEETING REVOKED,agm
+2025-11-25 12:02,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-25 13:02,LIVEN,Notice of Declaration of CDS Eligibility of Letter of Rights (Right Entitlements) of Ordinary Shares of Liven Pharma Limited,dividend_or_bonus
+2025-11-25 13:15,BNL,Material Information,material_info
+2025-11-25 14:29,ANL,Material Information,material_info
+2025-11-25 14:34,OBOY,NOTICE OF EXTRA ORDINARY GENERAL MEETING,agm
+2025-11-25 14:40,DGKC,Holding of Corporate Briefing Session of D. G. Khan Cement Co. Ltd. FY 2025 in Compliance with the requirements of Clause 5.7.3 of the Rule Book - Submission of Presentation for CBS 2025,other
+2025-11-25 14:46,HUBC,Credit of First Interim Cash Dividend (D-57),dividend_or_bonus
+2025-11-25 14:58,BECO,Credit of Sub-divided Ordinary Shares,other
+2025-11-25 15:04,OGDC,RECEIPT OF FIFTH INTEREST PAYMENT UNDER TERM FINANCE CERTIFICATES (TFCs) BY POWER HOLDING LIMITED,other
+2025-11-25 15:14,DCR,Corporate Briefing Session 2025 - Dolmen City REIT,other
+2025-11-25 15:19,DIIL,DIIL | Diamond Industries Limited Material Information,material_info
+2025-11-25 15:26,WAFI,Credit of Interim Cash Dividend (D-49),dividend_or_bonus
+2025-11-25 15:28,BECO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-26 08:00,FATIMA,Notice of Extraordinary General Meeting and Ballot Paper,agm
+2025-11-26 09:07,KAPCO,Material Information,material_info
+2025-11-26 09:31,FCCL,Material Information in respect of Intimation for Extension in Timeline for Public Announcement of Offer to Acquire Shares and Joint Control of Attock Cement Pakistan Limited by Fauji Cement Company Limited and Kot Addu Power Company Limited under the Sec,material_info
+2025-11-26 09:35,LCI,Disclosure in Response to a Rumor,other
+2025-11-26 09:35,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-26 11:52,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-26 12:01,SGPL,CBS 2025,other
+2025-11-26 12:28,ALTN,Material Information,material_info
+2025-11-26 12:38,CRTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-26 13:16,ASTL,Material Information,material_info
+2025-11-26 13:18,ENGROH,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-26 13:41,SPL,Material Information,material_info
+2025-11-26 14:40,ACPL,Extension in Timeline for Public Announcement of Offer to acquire,other
+2025-11-26 14:42,TOMCL,Material Information,material_info
+2025-11-26 14:44,ITTEFAQ,CORPORATE BRIEF SESSION 2025,other
+2025-11-26 14:53,CRTM,Presentation for the Corporate Briefing Session 2025,other
+2025-11-26 15:04,BECO,BECO | Beco Steel Limited Presentation for Corporate Briefing Session REVOKED,other
+2025-11-26 15:11,NML,Holding of Corporate Briefing Session of Nishat Mills Limited Ltd. FY 2025 in Compliance with the requirements of Clause 5.7.3 of the Rule Book - Submission of Presentation for CBS 2025,other
+2025-11-26 15:25,BECO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 08:30,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 08:32,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 09:22,BECO,BECO | Beco Steel Limited Presentation for Corporate Briefing Session-Revised REVISED,other
+2025-11-27 09:24,SEARL,Presentation of Corporate Briefing Session for the year 2025,other
+2025-11-27 09:34,HCAR,"Transmission of Half Yearly Report for the Period Ended September 30, 2025",financial_result
+2025-11-27 09:41,LOTCHEM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 10:44,DEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 10:52,BBFL,Corporate Briefing Session of Big Bird Foods Limited REVOKED,other
+2025-11-27 11:11,OBOY,Material Information - Cutting of Notice of EOGM in Newspapers.,material_info
+2025-11-27 12:11,BBFL,Corporate Briefing Session of Big Bird Foods Limited,other
+2025-11-27 12:43,SPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 13:41,TELE,Corporate Briefing Session Presentation FY ended 30 June 2025,other
+2025-11-27 13:49,DNCC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 13:53,LIVEN,LIVEN | Liven Pharma Limited Issue Right Shares @ 21.496% at Par Value Rs.10/- Each Per Ordinary Share,dividend_or_bonus
+2025-11-27 13:57,BNL,Material Information,material_info
+2025-11-27 14:18,SNGP,61ST ANNUAL GENERAL MEETING,agm
+2025-11-27 14:19,SNGP,OPENING OF SHARE TRANSFER BOOKS OF THE COMPANY,other
+2025-11-27 14:30,SSGC,Certified Resolutions Passed in the 71st AGM of SSGC,agm
+2025-11-27 14:48,NCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 15:11,BNL,Notice of Book Closure,dividend_or_bonus
+2025-11-27 15:23,FNEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-27 15:25,DCR,Corporate Briefing Session FY 2025 Presentation,other
+2025-11-28 08:02,NATF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-28 08:03,TPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-28 09:22,SYS,Board Meeting Other Than Financial Results,board_meeting_notice
+2025-11-28 09:33,LSECL,Material Information,material_info
+2025-11-28 09:48,LSEFSL,Material Information - Public Notice published in newspaper for credit of shares as per Scheme,material_info
+2025-11-28 11:17,MWMP,"Certified True Copy Of Resolutions Adopted In Annual General Meeting Of The Company Held On November 27, 2025.",agm
+2025-11-28 11:40,SSGC,Material Information,material_info
+2025-11-28 14:12,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-28 14:43,LIVEN,LIVEN | Liven Pharma Limited Right Issue Subscription Amount Received From Substantial Shareholders and Directors,insider_trade
+2025-11-28 14:49,LIVEN,,other
+2025-11-28 15:15,GHNI,Material Information,material_info
+2025-11-28 15:26,SNGP,"Financial Results for the Quarter Ended September 30, 2025",financial_result
+2025-11-28 15:29,TPLP,"Transmission of Quarterly Report for the Period Ended September 30, 2025",financial_result
+2025-11-28 15:34,SNGP,"Transmission of Quarterly Financial Statements for the Period Ended September 30, 2025",financial_result
+2025-11-28 15:52,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-28 15:54,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-11-28 16:15,SSGC,EOGM Notice for Publication in Accordance with Clause 5.6.9(b),other
+2025-12-01 08:00,PSEL,Material Information REVOKED,material_info
+2025-12-01 08:13,PSEL,Material Information,material_info
+2025-12-01 08:16,SSGC,Disclosure for Board Meeting held on 29 November 2025,board_meeting_notice
+2025-12-01 11:20,NETSOL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-01 11:26,FABL,Board Meeting other than Financial Results of Faysal Bank Limited,board_meeting_notice
+2025-12-01 12:23,SPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-01 12:55,LIVEN,CREDIT OF UNPAID RIGHTS OF LIVEN INTO CDS,other
+2025-12-01 12:58,LIVEN,SCHEDULE FOR HANDLING UNPAID RIGHTS - LIVENR,other
+2025-12-01 13:15,SEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-01 13:42,SSGC,"Publication of EOGM Notice - December 1, 2025",other
+2025-12-01 14:28,STYLERS,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2025-12-01 15:09,LIVEN,DISPATCH OF LETTER OF RIGHTS AND CDC INTIMATION LETTER,other
+2025-12-01 15:09,LUCK,MATERIAL INFORMATION,material_info
+2025-12-01 15:13,AIRLINK,Material Information,material_info
+2025-12-01 15:17,BOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 09:02,SPEL,"CLEAN, GREEN PAKISTAN - SPEL ESG INITIATIVE RENEWABLE - ENERGY",other
+2025-12-02 09:44,NICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 10:09,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 10:20,NRSL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 11:29,PAKL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 11:38,PACE,Material Information,material_info
+2025-12-02 12:03,LSEFSL,LSEFSL | LSE Financial Services Limited Material Information,material_info
+2025-12-02 12:51,OBOY,Resignation & Appointment of Chief Financial Officer,other
+2025-12-02 13:13,STCL,Appointment of Director,other
+2025-12-02 14:27,SINDM,Material Information,material_info
+2025-12-02 14:46,OLPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 14:51,SHFA,Corporate Briefing Session 2025,other
+2025-12-02 14:57,BNWM,DISCLOSURE OF MATERIAL INFORMATION - COMMISSIONING OF 1.0 MW ON-GRID SOLAR POWER PLANT,material_info
+2025-12-02 15:06,MTL,Change of Company Secretary,other
+2025-12-02 15:09,COLG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 15:11,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-02 15:12,LOTCHEM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 08:01,HALEON,Disclosure of Material Information,material_info
+2025-12-03 09:19,PPL,,other
+2025-12-03 09:33,MARI,Signing of Agreements for Three Offshore & Two Onshore Exploration Blocks,other
+2025-12-03 10:04,MUGHAL,Sukuk-I Redemption - Profit & Principal Payment,other
+2025-12-03 11:29,OGDC,Signing of Agreements for One Offshore and Two Onshore Exploration Blocks,other
+2025-12-03 12:01,KEL,Disclosure of Material Information.,material_info
+2025-12-03 12:45,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 12:51,SPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 13:00,GLAXO,Notice of Corporate Briefing Session - 2025,other
+2025-12-03 13:07,PREMA,Material Information,material_info
+2025-12-03 13:49,LOTCHEM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 14:10,BWHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 14:54,SSGC,CREDIT OF FINAL CASH DIVIDEND (D-68),dividend_or_bonus
+2025-12-03 15:07,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 15:15,TPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 15:20,DFML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations REVOKED",insider_trade
+2025-12-03 15:25,FCL,Credit/Dispatch of Bonus Share Certificates,dividend_or_bonus
+2025-12-03 15:29,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-03 15:29,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-04 08:48,PSEL,Material Information,material_info
+2025-12-04 09:08,DFML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-04 09:34,MEHT,Material Information,material_info
+2025-12-04 09:50,MUGHAL,Sukuk VI - Bullet principal and profit redemption,other
+2025-12-04 09:52,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-04 10:01,BBFL,Material Information,material_info
+2025-12-04 12:07,NICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-04 12:41,BAFL,Disclosure of Material Information,material_info
+2025-12-04 13:16,PSEL,Material Information,material_info
+2025-12-04 14:39,THCCL,Material Information-False Circulation of Information on Social Media,material_info
+2025-12-04 15:03,JSCL,Material Information - Intimation about disposal of Suit No. 1696/2025 (old H.C Suit No. 1589 of 2022) Filed by TRG Pakistan Limited and Others,material_info
+2025-12-04 15:03,FATIMA,Disclosure of Material Information,material_info
+2025-12-04 15:08,MLCF,MLCF- Notice of Extraordinary General Meeting,agm
+2025-12-04 15:10,SHFA,Corporate Briefing Session 2025 (Presentation),other
+2025-12-05 08:00,TPLP,Notice of Annual General Meeting,agm
+2025-12-05 09:37,SBL,Disclosure of Material Information,material_info
+2025-12-05 10:06,PACE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-05 11:18,GEMBLUEX,Material Information,material_info
+2025-12-05 11:20,SRVI,Material Information,material_info
+2025-12-05 11:43,BRRG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-05 11:48,JSBL,Material Information,material_info
+2025-12-05 12:17,SPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-05 13:07,SGF,Material Information,material_info
+2025-12-05 13:33,MACTER,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-05 14:12,GLAXO,Presentation for Corporate Briefing Session -2025,other
+2025-12-05 15:03,WAFI,Credit of Interim Cash Dividend,dividend_or_bonus
+2025-12-05 15:40,SNGP,CORPORATE BRIEFING SESSION (CBS) - FY 2024-25 OF SUI NORTHERN GAS PIPELINES LIMITED,other
+2025-12-05 15:40,JSGCL,Material Information,material_info
+2025-12-05 15:50,TOMCL,Credit/Dispatch of Remaining Bonus Share Certificates (Earlier withheld for Tax collection purpose),dividend_or_bonus
+2025-12-05 16:00,FECM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-05 16:15,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-05 16:17,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-08 08:04,ZUMA,MATERIAL INFORMATION,material_info
+2025-12-08 08:05,TPLP,Transmission of Annual Report for the Year Ended 30-06-2025,financial_result
+2025-12-08 08:15,PTC,Material Information,material_info
+2025-12-08 09:04,SYS,Result of Board Meeting Other Than Financial Results,financial_result
+2025-12-08 09:44,TPLP,Newspaper clippings of the Notice of Annual General Meeting for TPL Properties Limited,agm
+2025-12-08 09:54,OBOY,Material Information - Newspaper Advertisement for Ballot Paper,material_info
+2025-12-08 09:59,STYLERS,"Disclosure of Interest by a Director CEO, or Executive of a Listed Company and their Spouses and the Substantial Shareholders u/c 5.6.4 of PSX Regulations.",insider_trade
+2025-12-08 10:20,FFL,Board Meeting Other Than Financial Results,board_meeting_notice
+2025-12-08 10:23,ZUMA,MATERIAL INFORMATION,material_info
+2025-12-08 10:33,CWSM,CWSM | Chakwal Spinning Mills Limited Material Information,material_info
+2025-12-08 11:17,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-08 11:26,DNCC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-08 11:56,SNBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-08 12:28,LIVEN,Certified True Copy of Passed/Adopted in the 34th Annual General Meeting of Liven Pharma Limited,agm
+2025-12-08 12:49,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-08 13:02,SNGP,Corporate Briefing Session - 2025 (Presentation),other
+2025-12-08 13:04,LIVEN,Disclosure of Material Information - Commissioning of Automatic Blistering Packing Line Machine,material_info
+2025-12-08 14:42,FFC,Extraordinary General Meeting (EOGM) of Fauji Fertilizer Company Limited,agm
+2025-12-09 10:05,KEL,Disclosure of Material Information,material_info
+2025-12-09 11:25,PRET,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-09 12:12,MCBIM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-09 12:20,JKSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations REVOKED",insider_trade
+2025-12-09 12:59,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-09 13:13,PRET,Disclosure of Material Information,material_info
+2025-12-09 13:27,SNGP,Credit of final cash dividend for FY 2024-25,dividend_or_bonus
+2025-12-09 14:35,PABC,Material Information,material_info
+2025-12-09 15:13,KEL,Disclosure of Material Information.,material_info
+2025-12-09 15:17,MFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-09 15:24,KEL,Disclosure of Material Information,material_info
+2025-12-09 15:25,DINT,Material Information - Solar Energy,material_info
+2025-12-10 09:28,LIVEN,,other
+2025-12-10 09:33,KAPCO,Disclosure of Material Information,material_info
+2025-12-10 10:13,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 10:14,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 10:48,KML,Material Information,material_info
+2025-12-10 11:15,KEL,"Addendum to disclosure dated December 09, 2025",other
+2025-12-10 12:07,THALL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 12:30,HINOON,Resignation of Head of Internal Audit,other
+2025-12-10 13:44,JKSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 14:40,OBOY,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 14:43,NONS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 14:43,SNGP,CORPORATE BRIEFING SESSION (CBS)- 2025 OF SUI NORTHERN GAS PIPELINES LIMITED,other
+2025-12-10 14:56,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 15:12,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-10 15:16,OGDC,"OIL AND GAS DISCOVERY AT BARAGZAI X-01 SLANT, NASHPA BLOCK, KHYBER PAKHTUNKHWA",other
+2025-12-11 08:00,OGDC,RECEIPT OF RS 41.8 BILLION FROM UCH POWER (PRIVATE) LIMITED,other
+2025-12-11 09:13,SYS,Material Information,material_info
+2025-12-11 09:40,LIVEN,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 09:41,LIVEN,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 09:42,LIVEN,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 09:43,LIVEN,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 09:47,LIVEN,,other
+2025-12-11 10:02,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 10:20,LOTCHEM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 10:27,PPL,"Discovery of Hydrocarbons from Exploratory Well Baragzai X-01 (Slant) from Kingriali Formation, Nashpa Block",other
+2025-12-11 10:46,WASL,Publication of Notice in Newspaper,other
+2025-12-11 11:00,THALL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 11:21,MCBIM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 11:48,SAZEW,Production and Sales data regarding Four Wheelers and Three Wheelers for the month of November 2025,other
+2025-12-11 11:56,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 12:54,PABC,Material Information -Conclusion of Sunset Review and Continuation of Anti-Dumping Duties on Aluminium Beverage Cans Imported into Pakistan,material_info
+2025-12-11 13:12,ASHT,Material information,material_info
+2025-12-11 14:55,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 14:59,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-11 15:01,BAPL,Material Information,material_info
+2025-12-11 15:14,FABL,ANNOUNCEMENT OF FAYSAL BANK LIMITED,other
+2025-12-11 15:23,LSECL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-12 10:00,LPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-12 10:06,PKGP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-12 11:17,FABL,Appointment of Chief Financial Officer of Faysal Bank Limited,other
+2025-12-12 11:35,BBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-12 11:36,SPWL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-12 12:09,REDCO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2025-12-12 12:31,TATM,Material Information,material_info
+2025-12-12 13:52,KEL,"Book Closure of Rated Unsecured & Retail Listed, Shirkat-ulAqd Sukuk.",dividend_or_bonus

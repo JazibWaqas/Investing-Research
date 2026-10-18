@@ -1,0 +1,65 @@
+# Calendar as of 2022-04-22
+
+- Next MPC: see SBP calendar
+
+## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
+
+- 2022-03-24 EPCL: BOARD MEETING (OTHER THAN FINANCIAL RESULTS)
+- 2022-03-24 AVN: Board Meeting
+- 2022-03-24 SGF: Board Meeting
+- 2022-03-25 NETSOL: Board Meeting Other Than Financial Results
+- 2022-03-29 KEL: Board Meeting Other Than Financial Results
+- 2022-03-31 NETSOL: Board Meeting Rescheduled
+- 2022-04-04 EFERT: Board Meeting for the announcement of the financial results for the first quarter ended March 31, 2022
+- 2022-04-05 EFERT: Board Meeting Rescheduled
+- 2022-04-05 PTC: Board Meeting
+- 2022-04-05 KEL: Board Meeting Other Than Financial Results
+- 2022-04-06 MARI: Notice of Board of Directors Meeting
+- 2022-04-06 EPCL: Board Meeting for the announcement of the financial results for the first quarter ended March 31, 2022
+- 2022-04-06 FLYNG: Board Meeting Other Than Financial Results REVOKED
+- 2022-04-07 FLYNG: Board Meeting Other Than Financial Results
+- 2022-04-07 FCEPL: Board Meeting 1st Quarter
+- 2022-04-08 FLYNG: EXTRACT OF BOARD OF DIRECTORS MEETING
+- 2022-04-11 ISL: BOARD MEETING
+- 2022-04-12 MLCF: Board Meeting
+- 2022-04-13 MEBL: NOTICE OF BOARD MEETING AND CLOSED PERIOD - MEEZAN BANK LIMITED
+- 2022-04-13 INIL: Board Meeting
+- 2022-04-13 KTML: Board Meeting
+- 2022-04-14 NRL: Board Meeting
+- 2022-04-15 CHCC: Board Meeting
+- 2022-04-15 DGKC: BOARD MEETING
+- 2022-04-15 HTL: Board Meeting
+- 2022-04-18 PPL: Board Meeting and Closed Period
+- 2022-04-18 SGF: Board Meeting
+- 2022-04-18 MARI: Notice of Board of Directors Meeting
+- 2022-04-18 TGL: Board Meeting
+- 2022-04-18 LUCK: BOARD MEETING
+- 2022-04-18 ILP: Notice of Board Meeting for the Third Quarter ended March 31, 2022 / Closed Period
+- 2022-04-19 KOHC: Board Meeting
+- 2022-04-19 IMAGE: Board Meeting
+- 2022-04-19 SAZEW: Board Meeting
+- 2022-04-19 TREET: Board Meeting
+- 2022-04-19 HUBC: Intimation for Board Meeting - The Hub Power Company Limited
+- 2022-04-20 GHNI: Board Meeting
+- 2022-04-20 PPL: Board Meeting Rescheduled
+- 2022-04-20 ANL: Board Meeting
+- 2022-04-20 SYS: Board Meeting
+- 2022-04-20 NML: BOARD MEETING
+- 2022-04-20 UNITY: Board Meeting
+- 2022-04-21 MTL: Board Meeting
+- 2022-04-21 PSO: Board Meeting
+- 2022-04-21 AVN: Board Meeting
+- 2022-04-21 FLYNG: Board Meeting
+- 2022-04-21 PIBTL: NOTICE OF PIBT BOARD MEETING - APRIL 28, 2022
+- 2022-04-21 MUGHAL: Notice of Board Meeting - QIII - FY 2022
+- 2022-04-21 SEARL: Board Meeting
+- 2022-04-21 AGHA: Board Meeting
+- 2022-04-21 ASL: BOARD MEETING / CLOSED PERIOD
+- 2022-04-21 NETSOL: Board Meeting
+- 2022-04-21 OGDC: Board meeting and closed period
+- 2022-04-21 CNERGY: Board Meeting and Closed Period
+- 2022-04-21 ASC: Board Meeting
+- 2022-04-21 KEL: Board Meeting
+- 2022-04-22 PIOC: Board Meeting
+- 2022-04-22 PAEL: Board Meeting for the 1st Quarter ended March 31, 2022 (Un-Audited)
+- 2022-04-22 TELE: Board Meeting

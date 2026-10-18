@@ -1,0 +1,306 @@
+Panel 2480 days 2016-10-17 to 2026-10-16; 456 survivors + 284 delisted (crude); 308 names flagged KMI All Share (list of 5 Jun 2026, hindsight flag)
+Adjusted-series clean-up: 1479 one-day drops beyond the limit (price >= Rs20) or over 40% (any price) set to zero return (unadjusted splits, data breaks); 393 upward moves beyond the limit on prices >= Rs20 left in
+Upper-lock closes in panel: 59022, lower-lock closes: 41389 (mode limit in force: 5% / 7.5% / 10%; lock = move at or beyond (limit less 0.5%); capped at limit +1.5% for prices >= Rs20, +30% below Rs20; upper on raw close, lower on adjusted close)
+Placebo pools: up to 50000 random (symbol, day) entries per universe and exit, same fill rule, exits and costs, resampled in the signals' own fill-quarter mix, 1000 draws
+
+=== SIGNAL COUNTS (first day after 60 sessions of no signal state, per symbol) ===
+liq5 V1: signals 285, fillable within 10 sessions and free of data breaks 256 (90%), symbols 162, calendar quarters 37, KMI 196; median move signal close -> fill close +0.4% (mean +1.4%)
+liq5 V2: signals 250, fillable within 10 sessions and free of data breaks 223 (89%), symbols 153, calendar quarters 34, KMI 177; median move signal close -> fill close +0.3% (mean +1.2%)
+liq5 V3: signals 539, fillable within 10 sessions and free of data breaks 484 (90%), symbols 222, calendar quarters 36, KMI 382; median move signal close -> fill close -0.2% (mean +0.7%)
+liq5 V4: signals 493, fillable within 10 sessions and free of data breaks 465 (94%), symbols 160, calendar quarters 38, KMI 355; median move signal close -> fill close +0.6% (mean +1.5%)
+liq1 V1: signals 529, fillable within 10 sessions and free of data breaks 478 (90%), symbols 247, calendar quarters 38, KMI 344; median move signal close -> fill close +0.7% (mean +2.7%)
+liq1 V2: signals 483, fillable within 10 sessions and free of data breaks 434 (90%), symbols 244, calendar quarters 38, KMI 315; median move signal close -> fill close +0.4% (mean +2.6%)
+liq1 V3: signals 860, fillable within 10 sessions and free of data breaks 773 (90%), symbols 307, calendar quarters 39, KMI 567; median move signal close -> fill close -0.1% (mean +1.6%)
+liq1 V4: signals 823, fillable within 10 sessions and free of data breaks 777 (94%), symbols 230, calendar quarters 39, KMI 571; median move signal close -> fill close +0.8% (mean +2.2%)
+
+=== HEADLINE, universe liq5 (60-session median traded value above Rs5m), net returns in % ===
+variant exit   |   n syms qtrs | mean   median  win%  >+50% <-30%  worst | plc.med plc.mean p(med) p(mean) plc.win plc>50 plc<-30 | sleeve   maxDD taken skip | open/ended
+V1   trail20 | 248  148   36 |   +0.0  -13.0   27   7.7   1.6   -46 |   -6.9   +9.8  1.000  1.000     38   10.3     0.6 |  1.16x    -59%   75  173 | 2/1
+V1   T20     | 253  151   35 |   -1.3   -4.9   38   3.6   3.6   -69 |   +0.4   +2.8  1.000  1.000     51    1.3     0.6 |  0.53x    -79%  140  116 | 0/1
+V1   T60     | 237  143   35 |   +4.2  -10.3   38  10.5  13.5   -71 |   +1.0   +6.0  1.000  0.863     52    5.9     4.0 |  1.89x    -55%   76  176 | 0/2
+V1   T120    | 209  128   34 |   +3.3  -11.1   39  14.4  20.1   -64 |   -0.7   +8.2  1.000  0.987     49   11.9    10.7 |  0.72x    -77%   46  190 | 0/3
+V1   lock    | 255  154   36 |   -1.0   -8.3   32   6.7  11.4   -49 |   -4.5  +10.4  0.999  1.000     41   11.4     8.0 |  1.69x    -44%   66  189 | 16/1
+V2   trail20 | 215  138   32 |   -2.9  -14.2   28   6.5   2.3   -46 |   -7.0   +8.9  1.000  1.000     38   10.1     0.6 |  0.53x    -77%   81  134 | 2/1
+V2   T20     | 221  142   32 |   -2.4   -7.2   38   3.6   5.0   -69 |   +0.1   +2.4  1.000  1.000     50    1.3     0.6 |  0.38x    -74%  130   93 | 0/1
+V2   T60     | 208  136   32 |   +2.3  -11.0   39  10.6  13.9   -71 |   +0.3   +5.3  1.000  0.965     51    5.8     4.5 |  1.67x    -69%   69  151 | 0/1
+V2   T120    | 177  118   29 |   -0.9  -14.0   36  12.4  26.6   -67 |   -0.8   +8.4  1.000  1.000     49   12.0    11.5 |  0.65x    -82%   43  159 | 0/3
+V2   lock    | 221  143   33 |   -3.6   -8.5   31   3.6  10.9   -52 |   -4.6   +9.8  0.999  1.000     40   11.3     8.3 |  0.71x    -58%   80  141 | 14/1
+V3   trail20 | 471  214   33 |   +1.2  -11.7   32   7.4   0.6   -46 |   -5.0  +13.9  1.000  1.000     42   12.2     0.5 |  0.58x    -61%   72  399 | 6/3
+V3   T20     | 483  216   33 |   -1.2   -3.5   39   1.9   2.1   -69 |   +0.6   +3.1  1.000  1.000     52    1.4     0.6 |  0.25x    -81%  164  320 | 0/3
+V3   T60     | 465  208   33 |   +2.3   -7.1   42   7.5   8.2   -71 |   +1.5   +7.4  1.000  1.000     53    6.5     3.4 |  1.85x    -59%   82  398 | 0/3
+V3   T120    | 407  194   32 |   +7.0   -3.1   46  12.3  16.7   -61 |   +3.3  +12.6  1.000  0.998     54   13.8     8.9 |  0.37x    -85%   48  409 | 0/6
+V3   lock    | 480  215   33 |   +1.8   -8.0   35   8.8  12.9   -55 |   -3.8  +14.2  1.000  1.000     43   13.9     9.0 |  2.20x    -52%   68  412 | 42/3
+V4   trail20 | 440  156   37 |   +9.4   -9.6   35  11.6   0.9   -32 |   -8.3  +13.9  0.893  0.912     37   12.2     0.6 |  1.45x    -71%   43  397 | 27/2
+V4   T20     | 461  155   37 |   +0.4   -1.0   46   0.7   0.9   -47 |   -1.0   +1.0  0.548  0.819     46    1.1     0.7 |  0.38x    -78%  199  266 | 0/1
+V4   T60     | 445  152   37 |   +1.3   -2.3   44   4.0   4.5   -60 |   -0.8   +4.2  0.956  0.992     48    5.2     4.3 |  0.44x    -76%   97  362 | 0/2
+V4   T120    | 435  151   35 |   +3.7   -3.8   44   7.8  10.3   -63 |   -0.6   +8.4  0.993  0.997     49   11.2    10.1 |  0.50x    -60%   54  398 | 0/3
+V4   lock    | 442  156   38 |  +15.7   -6.2   40  16.7  12.9   -65 |   -4.9  +17.9  0.891  0.725     42   15.4     8.8 |  1.02x    -77%   44  398 | 54/3
+
+=== HEADLINE, universe liq1 (60-session median traded value above Rs1m), net returns in % ===
+variant exit   |   n syms qtrs | mean   median  win%  >+50% <-30%  worst | plc.med plc.mean p(med) p(mean) plc.win plc>50 plc<-30 | sleeve   maxDD taken skip | open/ended
+V1   trail20 | 456  224   38 |   +2.8  -10.9   30   9.2   2.0   -43 |   -6.2  +11.4  1.000  1.000     39   10.7     0.7 |  0.30x    -78%  100  356 | 10/2
+V1   T20     | 474  231   37 |   +1.2   -3.3   41   4.6   2.7   -59 |   +0.1   +2.7  1.000  0.989     51    1.4     0.6 |  1.16x    -77%  189  289 | 0/1
+V1   T60     | 446  225   37 |   +4.8   -6.8   39   8.5  11.4   -71 |   +1.0   +6.4  1.000  0.895     52    6.0     4.1 |  1.03x    -76%   92  378 | 0/3
+V1   T120    | 380  195   36 |   +3.5   -8.8   40  12.1  19.2   -70 |   +0.3  +10.0  1.000  1.000     50   12.1    10.2 |  0.24x    -83%   53  386 | 0/4
+V1   lock    | 474  234   38 |   +2.6   -5.9   37   8.9  10.8   -61 |   -3.6  +12.9  0.996  1.000     43   12.1     7.0 |  0.87x    -74%  102  372 | 35/1
+V2   trail20 | 413  221   38 |   +0.6  -12.8   31   9.0   2.7   -43 |   -7.2   +9.6  1.000  1.000     38   10.0     0.7 |  1.04x    -65%   94  319 | 8/3
+V2   T20     | 432  230   37 |   +0.6   -3.4   41   4.6   3.9   -59 |   -0.2   +2.3  1.000  0.988     49    1.4     0.7 |  0.98x    -74%  176  258 | 0/1
+V2   T60     | 406  220   37 |   +4.4   -8.7   41   9.1  12.3   -71 |   +0.0   +5.4  1.000  0.745     50    5.7     4.5 |  0.51x    -76%   91  335 | 0/3
+V2   T120    | 341  186   36 |   +0.8  -11.1   38  10.9  21.4   -70 |   -1.3   +8.1  1.000  1.000     48   11.3    11.6 |  0.16x    -88%   51  341 | 0/8
+V2   lock    | 428  228   38 |   +1.4   -6.5   36   7.2   9.6   -61 |   -4.3  +11.3  0.998  1.000     42   11.4     7.1 |  0.76x    -83%  109  319 | 23/1
+V3   trail20 | 748  296   37 |   +5.1  -10.5   34   8.7   1.5   -43 |   -4.5  +15.6  1.000  1.000     43   12.6     0.6 |  0.61x    -77%   85  663 | 14/4
+V3   T20     | 772  298   37 |   +1.0   -2.9   41   3.2   2.3   -59 |   +0.4   +3.3  1.000  1.000     52    1.6     0.6 |  3.53x    -67%  208  565 | 0/2
+V3   T60     | 736  286   37 |   +4.2   -5.2   43   7.3   7.3   -71 |   +2.0   +7.9  1.000  1.000     54    6.6     3.3 |  0.85x    -79%   95  668 | 0/3
+V3   T120    | 642  266   34 |   +8.8   -2.5   47  12.6  15.4   -70 |   +3.0  +13.1  1.000  0.994     54   13.3     8.7 |  0.09x    -96%   54  669 | 0/10
+V3   lock    | 765  297   38 |   +7.1   -5.3   39  10.1  11.1   -62 |   -2.5  +17.2  1.000  1.000     46   14.8     7.9 |  0.36x    -86%   88  677 | 56/2
+V4   trail20 | 738  229   38 |  +12.9   -9.1   36  12.3   0.7   -32 |   -7.3  +16.0  0.980  0.888     39   13.2     0.8 |  0.74x    -81%   46  692 | 48/5
+V4   T20     | 765  225   38 |   +1.1   -1.2   45   2.0   1.0   -47 |   -0.9   +1.3  0.766  0.648     46    1.2     0.7 |  0.58x    -85%  250  527 | 0/1
+V4   T60     | 734  220   38 |   +2.4   -1.7   46   4.6   4.8   -60 |   -0.5   +4.7  0.980  0.992     49    5.4     3.9 |  0.89x    -78%  105  661 | 0/3
+V4   T120    | 705  217   37 |   +7.5   -2.3   47   9.1   8.7   -65 |   +0.3  +10.2  0.993  0.951     50   11.8     9.3 |  0.48x    -80%   57  692 | 0/6
+V4   lock    | 744  228   39 |  +18.7   -4.6   44  16.9  10.1   -74 |   -3.3  +21.0  0.924  0.819     45   16.6     7.7 |  2.21x    -64%   53  691 | 92/6
+
+p(med), p(mean) = share of 1000 placebo draws (random liquid entries, same quarters, same exit) at or above the real median / mean; near 0 = better than random, near 1 = worse.
+
+=== CLUSTER CHECK: signals grouped by fill quarter; mean of quarter means, share of quarters with positive mean, overall mean without the best quarter ===
+liq5 trail20 V1: quarters 36; mean of quarter means -3.5; median quarter mean -6.0; positive quarters 33%; best quarter 20243 (n 10, mean +42.1); overall mean without it -1.8
+liq5 trail20 V2: quarters 32; mean of quarter means -3.2; median quarter mean -5.1; positive quarters 38%; best quarter 20232 (n 1, mean +64.2); overall mean without it -3.3
+liq5 trail20 V3: quarters 33; mean of quarter means -0.2; median quarter mean -3.9; positive quarters 42%; best quarter 20224 (n 3, mean +42.1); overall mean without it +0.9
+liq5 trail20 V4: quarters 37; mean of quarter means +4.1; median quarter mean -5.9; positive quarters 38%; best quarter 20232 (n 12, mean +100.2); overall mean without it +6.9
+liq5 T60 V1: quarters 35; mean of quarter means -1.4; median quarter mean -1.9; positive quarters 43%; best quarter 20252 (n 4, mean +56.6); overall mean without it +3.3
+liq5 T60 V2: quarters 32; mean of quarter means +0.2; median quarter mean -2.3; positive quarters 44%; best quarter 20232 (n 1, mean +69.2); overall mean without it +2.0
+liq5 T60 V3: quarters 33; mean of quarter means -0.2; median quarter mean -1.1; positive quarters 48%; best quarter 20232 (n 1, mean +28.0); overall mean without it +2.3
+liq5 T60 V4: quarters 37; mean of quarter means -1.6; median quarter mean -4.0; positive quarters 46%; best quarter 20241 (n 8, mean +31.1); overall mean without it +0.8
+liq1 trail20 V1: quarters 38; mean of quarter means -2.5; median quarter mean -7.6; positive quarters 47%; best quarter 20193 (n 2, mean +30.5); overall mean without it +2.7
+liq1 trail20 V2: quarters 38; mean of quarter means -3.4; median quarter mean -6.2; positive quarters 42%; best quarter 20193 (n 2, mean +27.0); overall mean without it +0.4
+liq1 trail20 V3: quarters 37; mean of quarter means +0.3; median quarter mean -0.1; positive quarters 49%; best quarter 20234 (n 65, mean +33.5); overall mean without it +2.4
+liq1 trail20 V4: quarters 38; mean of quarter means +7.6; median quarter mean -6.9; positive quarters 37%; best quarter 20202 (n 2, mean +135.8); overall mean without it +12.6
+liq1 T60 V1: quarters 37; mean of quarter means -2.0; median quarter mean -0.1; positive quarters 49%; best quarter 20211 (n 11, mean +39.6); overall mean without it +3.9
+liq1 T60 V2: quarters 37; mean of quarter means -0.2; median quarter mean +2.4; positive quarters 54%; best quarter 20193 (n 3, mean +38.1); overall mean without it +4.2
+liq1 T60 V3: quarters 37; mean of quarter means -0.5; median quarter mean -0.8; positive quarters 49%; best quarter 20251 (n 7, mean +29.2); overall mean without it +4.0
+liq1 T60 V4: quarters 38; mean of quarter means -1.3; median quarter mean -3.2; positive quarters 45%; best quarter 20244 (n 45, mean +27.4); overall mean without it +0.8
+
+--- split by fill year, universe liq5, exit trail20: n/median%/mean%/win% ---
+V1: 2017: 6/-22/-20/0; 2018: 22/-17/-5/18; 2019: 28/-18/-12/18; 2020: 16/-16/-2/25; 2021: 22/-4/+5/45; 2022: 3/-16/-14/33; 2023: 27/-10/+2/33; 2024: 38/-8/+19/37; 2025: 53/-10/+5/34; 2026: 33/-15/-14/9
+V2: 2017: 6/-13/-17/0; 2018: 22/-17/-4/18; 2019: 20/-14/-11/20; 2020: 13/-16/-6/31; 2021: 22/-5/+3/45; 2022: 1/+0/+0/100; 2023: 21/-10/+1/43; 2024: 34/-13/+2/26; 2025: 45/-14/+3/36; 2026: 31/-15/-15/10
+V3: 2017: 5/-20/-21/0; 2018: 28/-15/-5/29; 2019: 26/-15/-12/12; 2020: 30/-14/-2/30; 2021: 44/-11/-3/30; 2022: 9/-15/+14/33; 2023: 69/-11/+3/33; 2024: 85/-5/+14/46; 2025: 113/-10/+3/37; 2026: 62/-16/-10/16
+V4: 2017: 18/-18/-14/17; 2018: 29/-16/-15/7; 2019: 12/-21/-19/0; 2020: 18/-7/+1/39; 2021: 58/-17/-7/17; 2022: 39/-19/-11/13; 2023: 62/+18/+55/65; 2024: 76/+9/+36/57; 2025: 67/-9/+2/36; 2026: 61/-8/-7/31
+
+--- split by fill year, universe liq5, exit T60: n/median%/mean%/win% ---
+V1: 2017: 6/-23/-21/0; 2018: 21/-10/+2/33; 2019: 33/-15/-11/27; 2020: 15/-7/+2/33; 2021: 22/+13/+16/59; 2022: 4/-8/-4/25; 2023: 27/-5/+16/48; 2024: 38/+1/+16/53; 2025: 53/-10/+7/38; 2026: 18/-23/-19/17
+V2: 2017: 6/-17/-18/0; 2018: 21/-10/+3/43; 2019: 25/-13/-5/36; 2020: 13/-7/-5/23; 2021: 22/-10/+11/45; 2022: 2/+14/+14/50; 2023: 21/+0/+15/52; 2024: 34/-10/+7/41; 2025: 45/-13/+6/44; 2026: 19/-29/-19/21
+V3: 2017: 5/-29/-16/20; 2018: 27/-5/-2/44; 2019: 34/-12/-7/32; 2020: 30/-7/+2/40; 2021: 44/-13/-0/39; 2022: 10/-12/-8/10; 2023: 70/-5/+4/41; 2024: 85/+3/+12/58; 2025: 113/-1/+6/48; 2026: 47/-16/-12/21
+V4: 2017: 19/-15/-11/32; 2018: 33/-3/-4/36; 2019: 20/-7/-4/35; 2020: 19/+4/+5/58; 2021: 59/-9/-7/25; 2022: 42/-14/-13/12; 2023: 63/+3/+9/57; 2024: 76/+2/+14/59; 2025: 67/-2/+4/48; 2026: 47/+1/-1/53
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq5, exit trail20: n/median%/mean%/win% ---
+V1: bill<=policy: 100/-11/+5/32; bill>policy: 148/-13/-3/24
+V2: bill<=policy: 82/-17/-3/29; bill>policy: 133/-13/-3/27
+V3: bill<=policy: 235/-8/+6/39; bill>policy: 236/-14/-4/25
+V4: bill<=policy: 169/-4/+24/44; bill>policy: 271/-13/+0/29
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq5, exit T20: n/median%/mean%/win% ---
+V1: bill<=policy: 100/-5/-1/38; bill>policy: 153/-5/-2/39
+V2: bill<=policy: 82/-9/-4/32; bill>policy: 139/-7/-2/42
+V3: bill<=policy: 236/-3/+0/41; bill>policy: 247/-4/-2/37
+V4: bill<=policy: 170/+1/+3/54; bill>policy: 291/-2/-1/41
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq5, exit T60: n/median%/mean%/win% ---
+V1: bill<=policy: 100/-12/+7/41; bill>policy: 137/-10/+2/36
+V2: bill<=policy: 82/-13/+1/37; bill>policy: 126/-10/+3/40
+V3: bill<=policy: 236/-4/+4/45; bill>policy: 229/-8/+1/39
+V4: bill<=policy: 170/-3/+4/42; bill>policy: 275/-2/-0/44
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq5, exit T120: n/median%/mean%/win% ---
+V1: bill<=policy: 95/-3/+8/46; bill>policy: 114/-15/-1/32
+V2: bill<=policy: 77/-11/-4/42; bill>policy: 100/-15/+1/32
+V3: bill<=policy: 224/+1/+8/52; bill>policy: 183/-9/+6/38
+V4: bill<=policy: 168/+13/+15/58; bill>policy: 267/-7/-4/36
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq5, exit lock: n/median%/mean%/win% ---
+V1: bill<=policy: 99/-9/+2/35; bill>policy: 156/-8/-3/30
+V2: bill<=policy: 82/-12/-6/28; bill>policy: 139/-7/-2/33
+V3: bill<=policy: 235/-6/+2/39; bill>policy: 245/-9/+1/31
+V4: bill<=policy: 168/+7/+31/54; bill>policy: 274/-8/+6/32
+
+--- split by fill year, universe liq1, exit trail20: n/median%/mean%/win% ---
+V1: 2017: 14/-20/-19/0; 2018: 37/-14/-3/22; 2019: 47/-13/-8/23; 2020: 32/-8/+2/38; 2021: 35/-9/+4/31; 2022: 13/-19/-16/15; 2023: 55/-10/+17/36; 2024: 58/-8/+15/36; 2025: 97/-8/+5/37; 2026: 68/-14/-4/26
+V2: 2017: 20/-19/-18/0; 2018: 42/-15/-4/24; 2019: 41/-12/-7/22; 2020: 23/-14/-6/30; 2021: 38/-13/+1/34; 2022: 10/-20/-13/30; 2023: 36/-9/+17/47; 2024: 61/-13/+2/25; 2025: 83/-8/+9/43; 2026: 59/-14/-3/31
+V3: 2017: 14/-21/-16/7; 2018: 41/-14/-0/32; 2019: 47/-12/-8/26; 2020: 50/-8/-1/36; 2021: 68/-12/-0/26; 2022: 23/-15/-4/22; 2023: 111/-9/+22/36; 2024: 130/-9/+11/40; 2025: 168/-5/+8/43; 2026: 96/-16/-6/25
+V4: 2017: 30/-19/-15/10; 2018: 46/-16/-14/13; 2019: 21/-22/-19/0; 2020: 28/-5/+12/43; 2021: 90/-15/-7/20; 2022: 71/-18/-11/13; 2023: 116/+17/+60/65; 2024: 134/+8/+41/57; 2025: 94/-9/+2/36; 2026: 108/-7/-4/31
+
+--- split by fill year, universe liq1, exit T60: n/median%/mean%/win% ---
+V1: 2017: 15/-24/-25/7; 2018: 36/-5/+2/36; 2019: 60/-9/-1/40; 2020: 32/-6/+1/38; 2021: 35/-11/+12/43; 2022: 14/-19/-15/21; 2023: 56/-4/+8/43; 2024: 58/-2/+11/50; 2025: 96/-4/+15/43; 2026: 44/-10/-5/32
+V2: 2017: 21/-25/-26/0; 2018: 41/-2/+2/46; 2019: 52/-9/-0/42; 2020: 23/-1/-0/39; 2021: 38/-14/+5/34; 2022: 11/-8/-8/27; 2023: 37/-1/+13/49; 2024: 61/-7/+6/46; 2025: 83/+3/+20/51; 2026: 39/-14/-8/31
+V3: 2017: 15/-26/-25/7; 2018: 40/-3/+3/48; 2019: 59/-9/-2/36; 2020: 50/-5/+3/44; 2021: 68/-11/+3/38; 2022: 24/-12/-9/21; 2023: 114/-4/+4/44; 2024: 130/+2/+11/55; 2025: 167/-1/+12/50; 2026: 69/-11/-7/29
+V4: 2017: 30/-12/-12/30; 2018: 51/-3/-4/37; 2019: 34/-6/-5/38; 2020: 29/+2/+4/55; 2021: 93/-7/-5/34; 2022: 75/-13/-12/13; 2023: 117/+4/+10/62; 2024: 135/+1/+15/59; 2025: 94/-1/+6/49; 2026: 76/+1/-1/53
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq1, exit trail20: n/median%/mean%/win% ---
+V1: bill<=policy: 174/-8/+10/36; bill>policy: 282/-13/-2/27
+V2: bill<=policy: 149/-12/+4/32; bill>policy: 264/-13/-1/30
+V3: bill<=policy: 346/-7/+9/39; bill>policy: 402/-13/+2/30
+V4: bill<=policy: 279/-3/+27/48; bill>policy: 459/-12/+4/29
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq1, exit T20: n/median%/mean%/win% ---
+V1: bill<=policy: 175/-4/+4/43; bill>policy: 299/-3/-0/40
+V2: bill<=policy: 151/-4/+3/39; bill>policy: 281/-3/-1/42
+V3: bill<=policy: 348/-2/+2/43; bill>policy: 424/-3/-0/40
+V4: bill<=policy: 281/+1/+4/54; bill>policy: 484/-2/-1/40
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq1, exit T60: n/median%/mean%/win% ---
+V1: bill<=policy: 174/-5/+10/44; bill>policy: 272/-8/+1/37
+V2: bill<=policy: 150/-8/+11/45; bill>policy: 256/-9/+1/39
+V3: bill<=policy: 347/-4/+7/47; bill>policy: 389/-6/+2/40
+V4: bill<=policy: 281/-1/+6/49; bill>policy: 453/-2/-0/44
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq1, exit T120: n/median%/mean%/win% ---
+V1: bill<=policy: 166/-3/+10/48; bill>policy: 214/-12/-2/34
+V2: bill<=policy: 142/-4/+5/44; bill>policy: 199/-14/-2/34
+V3: bill<=policy: 333/+3/+12/55; bill>policy: 309/-9/+5/39
+V4: bill<=policy: 279/+13/+23/64; bill>policy: 426/-7/-3/36
+
+--- split by regime (6M T-bill vs policy rate, at fill), universe liq1, exit lock: n/median%/mean%/win% ---
+V1: bill<=policy: 172/-7/+8/40; bill>policy: 302/-6/-0/35
+V2: bill<=policy: 148/-8/+5/37; bill>policy: 280/-6/-0/35
+V3: bill<=policy: 345/-4/+7/44; bill>policy: 420/-6/+7/35
+V4: bill<=policy: 276/+13/+35/58; bill>policy: 468/-7/+9/36
+
+=== KMI flag (hindsight membership), net %, n/median/mean/win%/worst ===
+liq5 trail20 V1: KMI 165/-10.7/+3.4/29/-46 | non-KMI 83/-15.8/-6.8/24/-35
+liq5 trail20 V2: KMI 147/-12.8/-0.3/29/-46 | non-KMI 68/-15.9/-8.7/25/-35
+liq5 trail20 V3: KMI 329/-12.3/+0.9/31/-46 | non-KMI 142/-10.2/+1.8/33/-35
+liq5 trail20 V4: KMI 332/-9.7/+9.9/34/-32 | non-KMI 108/-9.3/+7.8/36/-31
+liq5 T60 V1: KMI 159/-7.5/+6.6/41/-69 | non-KMI 78/-16.1/-0.6/33/-71
+liq5 T60 V2: KMI 143/-9.7/+4.1/41/-69 | non-KMI 65/-14.0/-1.6/34/-71
+liq5 T60 V3: KMI 326/-6.0/+2.9/44/-69 | non-KMI 139/-7.8/+0.9/38/-71
+liq5 T60 V4: KMI 327/-2.2/+2.0/44/-39 | non-KMI 118/-2.9/-0.7/42/-60
+liq5 V1 KMI-only trail20 sleeve: 0.85x, max drawdown -55%, taken 67, skipped 98
+liq5 V2 KMI-only trail20 sleeve: 0.77x, max drawdown -60%, taken 70, skipped 77
+liq5 V3 KMI-only trail20 sleeve: 2.38x, max drawdown -54%, taken 55, skipped 274
+liq5 V4 KMI-only trail20 sleeve: 0.86x, max drawdown -74%, taken 40, skipped 292
+liq1 trail20 V1: KMI 293/-10.2/+3.6/32/-43 | non-KMI 163/-13.4/+1.2/28/-35
+liq1 trail20 V2: KMI 268/-11.9/+0.6/32/-43 | non-KMI 145/-14.3/+0.5/30/-35
+liq1 trail20 V3: KMI 490/-10.8/+5.5/34/-43 | non-KMI 258/-10.0/+4.3/34/-35
+liq1 trail20 V4: KMI 526/-9.3/+13.3/36/-32 | non-KMI 212/-8.4/+12.1/37/-31
+liq1 T60 V1: KMI 288/-5.0/+6.7/42/-60 | non-KMI 158/-11.2/+1.4/35/-71
+liq1 T60 V2: KMI 262/-7.3/+5.0/42/-60 | non-KMI 144/-10.0/+3.4/38/-71
+liq1 T60 V3: KMI 481/-4.0/+5.3/45/-60 | non-KMI 255/-7.1/+2.2/39/-71
+liq1 T60 V4: KMI 514/-1.7/+2.9/46/-46 | non-KMI 220/-1.7/+1.5/46/-60
+liq1 V1 KMI-only trail20 sleeve: 1.22x, max drawdown -67%, taken 70, skipped 223
+liq1 V2 KMI-only trail20 sleeve: 1.11x, max drawdown -64%, taken 73, skipped 195
+liq1 V3 KMI-only trail20 sleeve: 0.92x, max drawdown -78%, taken 72, skipped 418
+liq1 V4 KMI-only trail20 sleeve: 1.47x, max drawdown -71%, taken 40, skipped 486
+
+=== 30 largest winners and 30 largest losers: signal from any variant, universe liq1, 20% trailing stop, net % ===
+Episodes (same symbol, fills within 60 sessions merged): 1395; status 1 = still open, 2 = delisted
+WINNERS
+   sym        sig      filld      exitd    net          vs   kmi  st
+ THCCL 2023-09-25 2023-09-26 2024-12-23 1348.0       V3+V4  True   0
+ THCCL 2024-04-09 2024-04-15 2024-12-23  792.8          V4  True   0
+  MEBL 2023-07-03 2023-07-04 2026-10-16  699.8          V4  True   1
+FATIMA 2023-12-12 2023-12-13 2026-02-25  379.2          V4  True   0
+  LUCK 2023-05-02 2023-05-03 2026-02-24  364.0          V4  True   0
+  PNSC 2023-09-18 2023-09-20 2025-01-30  351.0          V4 False   0
+ GLAXO 2024-02-20 2024-02-22 2025-05-02  338.0          V4  True   0
+   AHL 2023-11-23 2023-11-24 2025-03-04  334.9       V1+V3 False   0
+  BAHL 2023-04-20 2023-04-26 2026-02-17  312.1          V4 False   0
+   DCR 2020-04-17 2020-04-20 2026-10-16  298.9          V4  True   1
+  FCCL 2023-07-03 2023-07-04 2026-03-03  286.1          V4  True   0
+  ATLH 2023-12-01 2023-12-04 2026-03-10  281.8    V1+V2+V3 False   0
+ THCCL 2024-08-15 2024-08-16 2024-12-23  264.6       V1+V3  True   0
+  SHFA 2023-03-29 2023-03-30 2025-04-25  253.1          V4  True   0
+  SSGC 2024-10-23 2024-10-25 2025-01-08  247.3 V1+V2+V3+V4  True   0
+  BAHL 2023-08-23 2023-08-24 2026-02-17  247.2          V4 False   0
+  AHCL 2024-05-17 2024-05-20 2026-03-03  243.3          V4 False   0
+   UBL 2024-06-20 2024-06-21 2026-03-03  214.7          V4 False   0
+   AHL 2024-05-17 2024-05-20 2025-03-04  209.4          V4 False   0
+PAKOXY 2024-08-12 2024-08-13 2026-03-03  196.2 V1+V2+V3+V4  True   0
+  SIEM 2024-09-16 2024-09-18 2026-10-16  195.9 V1+V2+V3+V4  True   1
+  FCCL 2023-11-14 2023-11-15 2026-03-03  192.6          V3  True   0
+  FCSC 2025-06-25 2025-06-26 2025-11-03  189.7          V3 False   0
+  HUBC 2021-01-01 2021-01-04 2024-09-27  188.9          V4  True   0
+  ATLH 2024-05-17 2024-05-20 2026-03-10  187.7          V3 False   0
+ POWER 2024-08-21 2024-08-22 2026-03-03  183.6       V3+V4  True   0
+ MACFL 2025-06-10 2025-06-11 2025-07-22  180.7    V1+V2+V3  True   0
+  HUBC 2022-10-03 2022-10-04 2024-09-27  179.4       V3+V4  True   0
+  PACE 2025-08-29 2025-09-01 2025-11-26  177.9    V1+V2+V3 False   0
+  MSOT 2026-04-30 2026-05-04 2026-10-16  175.4    V1+V2+V3 False   1
+LOSERS
+   sym        sig      filld      exitd   net          vs   kmi  st
+ QTECH 2017-10-04 2017-10-10 2017-10-26 -43.1    V1+V2+V3  True   0
+ QTECH 2024-01-17 2024-01-18 2024-02-01 -35.6       V2+V3  True   0
+  CSIL 2026-01-01 2026-01-06 2026-01-16 -35.4    V1+V2+V3 False   0
+  JSML 2026-04-24 2026-04-27 2026-05-08 -34.8    V1+V2+V3  True   0
+  GLPL 2025-10-22 2025-10-23 2025-11-18 -33.7       V2+V3 False   0
+   ASC 2025-08-19 2025-08-27 2025-10-02 -33.4    V1+V2+V3  True   0
+  STPL 2017-06-06 2017-06-08 2017-06-30 -33.3    V1+V2+V3 False   0
+  TOWL 2026-09-04 2026-09-08 2026-09-14 -31.9    V1+V2+V3  True   0
+   ASC 2026-06-24 2026-06-30 2026-09-02 -31.8          V4  True   0
+  DSIL 2024-11-15 2024-11-19 2024-11-27 -31.7          V3 False   0
+   786 2020-08-18 2020-08-20 2020-08-27 -31.5          V4 False   0
+  FABL 2019-02-20 2019-02-21 2019-08-16 -31.4          V4  True   0
+  ECOP 2026-01-12 2026-01-13 2026-02-17 -31.4          V4  True   0
+  DHPL 2025-11-04 2025-11-06 2025-12-22 -31.4          V4 False   0
+  CLVL 2026-08-27 2026-09-07 2026-09-11 -31.4    V1+V2+V3 False   0
+  BAPL 2025-05-26 2025-05-27 2025-06-04 -30.9    V1+V2+V3 False   0
+  FTSM 2026-08-21 2026-08-25 2026-09-10 -29.7       V2+V3  True   0
+   BGL 2022-04-11 2022-04-12 2022-05-12 -29.6 V1+V2+V3+V4 False   0
+   SYM 2025-12-30 2025-12-31 2026-02-24 -29.5          V4  True   0
+  FANM 2025-09-26 2025-09-29 2026-02-17 -29.2    V1+V2+V3  True   0
+ ICIBL 2025-07-10 2025-07-14 2025-07-31 -29.0    V1+V2+V3 False   0
+   BGL 2017-05-04 2017-05-08 2017-06-22 -29.0       V2+V3 False   0
+ PREMA 2026-02-04 2026-02-06 2026-02-24 -28.8          V4  True   0
+   RPL 2025-12-18 2025-12-19 2026-02-20 -28.7          V4  True   0
+  BUXL 2021-09-08 2021-09-15 2021-10-01 -28.5    V1+V2+V3  True   0
+NETSOL 2022-10-12 2022-10-14 2022-12-22 -28.5          V4  True   0
+ JLICL 2026-01-27 2026-01-28 2026-02-26 -28.4          V3 False   0
+  OTSU 2026-02-26 2026-02-27 2026-03-09 -28.4          V4  True   0
+   CTM 2021-06-28 2021-06-29 2021-09-24 -28.0          V3 False   0
+ GLAXO 2018-07-30 2018-07-31 2018-10-10 -28.0          V4  True   0
+All 1395 episodes: mean +8.1%, median -10.0%, win 34%; top 5 winners hold 14% of all positive net returns; mean with the top 5 removed +5.5%
+
+=== SSGC ===
+liq5 V1 signal 2023-11-17 (vol ratio 3.0, locks5 2, locks10 2, ret20 +11%, KMI True): trail20: 2023-11-20->2023-12-27 -10%; T20: 2023-11-20->2023-12-18 +3%; T60: 2023-11-20->2024-02-15 -11%; T120: 2023-11-20->2024-05-16 -18%; lock: 2023-11-20->2023-12-20 -7%
+liq5 V1 signal 2024-10-25 (vol ratio 3.5, locks5 2, locks10 2, ret20 +42%, KMI True): trail20: 2024-10-28->2025-01-08 +224%; T20: 2024-10-28->2024-11-26 +75%; T60: 2024-10-28->2025-01-21 +218%; T120: 2024-10-28->2025-04-22 +227%; lock: 2024-10-28->2024-11-26 +75%
+liq5 V2 signal 2024-11-01 (vol ratio 7.2, locks5 1, locks10 3, ret20 +61%, KMI True): trail20: 2024-11-06->2025-01-08 +144%; T20: 2024-11-06->2024-12-04 +90%; T60: 2024-11-06->2025-01-30 +128%; T120: 2024-11-06->2025-05-02 +135%; lock: 2024-11-06->2024-11-26 +32%
+liq5 V3 signal 2023-12-05 (vol ratio 4.8, locks5 0, locks10 0, ret20 +25%, KMI True): trail20: 2023-12-06->2023-12-27 -15%; T20: 2023-12-06->2024-01-04 -11%; T60: 2023-12-06->2024-03-04 -14%; T120: 2023-12-06->2024-06-04 -25%; lock: 2023-12-06->2023-12-20 -12%
+liq5 V3 signal 2024-10-25 (vol ratio 3.5, locks5 2, locks10 2, ret20 +42%, KMI True): trail20: 2024-10-28->2025-01-08 +224%; T20: 2024-10-28->2024-11-26 +75%; T60: 2024-10-28->2025-01-21 +218%; T120: 2024-10-28->2025-04-22 +227%; lock: 2024-10-28->2024-11-26 +75%
+liq5 V3 signal 2026-05-04 (vol ratio 3.1, locks5 0, locks10 0, ret20 +25%, KMI True): trail20: 2026-05-05->2026-07-24 -11%; T20: 2026-05-05->2026-06-05 -3%; T60: 2026-05-05->2026-08-04 -4%; T120: 2026-05-05->2026-10-16 -18% (open); lock: 2026-05-05->2026-10-16 -18% (open)
+liq5 V4 signal 2023-10-19 (vol ratio 1.8, locks5 1, locks10 1, ret20 +20%, KMI True): trail20: 2023-10-20->2023-12-27 +4%; T20: 2023-10-20->2023-11-20 +15%; T60: 2023-10-20->2024-01-16 +12%; T120: 2023-10-20->2024-04-17 +2%; lock: 2023-10-20->2023-12-20 +8%
+liq5 V4 signal 2024-10-23 (vol ratio 1.5, locks5 1, locks10 1, ret20 +16%, KMI True): trail20: 2024-10-25->2025-01-08 +247%; T20: 2024-10-25->2024-11-26 +88%; T60: 2024-10-25->2025-01-20 +255%; T120: 2024-10-25->2025-04-21 +261%; lock: 2024-10-25->2024-11-26 +88%
+liq5 V4 signal 2025-11-27 (vol ratio 0.4, locks5 1, locks10 1, ret20 +4%, KMI True): trail20: 2025-12-01->2025-12-24 -15%; T20: 2025-12-01->2025-12-30 -10%; T60: 2025-12-01->2026-02-25 -36%; T120: 2025-12-01->2026-05-25 -34%; lock: 2025-12-01->2026-03-03 -50%
+liq1 V1 signal 2023-11-17 (vol ratio 3.0, locks5 2, locks10 2, ret20 +11%, KMI True): trail20: 2023-11-20->2023-12-27 -10%; T20: 2023-11-20->2023-12-18 +3%; T60: 2023-11-20->2024-02-15 -11%; T120: 2023-11-20->2024-05-16 -18%; lock: 2023-11-20->2023-12-20 -7%
+liq1 V1 signal 2024-10-25 (vol ratio 3.5, locks5 2, locks10 2, ret20 +42%, KMI True): trail20: 2024-10-28->2025-01-08 +224%; T20: 2024-10-28->2024-11-26 +75%; T60: 2024-10-28->2025-01-21 +218%; T120: 2024-10-28->2025-04-22 +227%; lock: 2024-10-28->2024-11-26 +75%
+liq1 V2 signal 2024-11-01 (vol ratio 7.2, locks5 1, locks10 3, ret20 +61%, KMI True): trail20: 2024-11-06->2025-01-08 +144%; T20: 2024-11-06->2024-12-04 +90%; T60: 2024-11-06->2025-01-30 +128%; T120: 2024-11-06->2025-05-02 +135%; lock: 2024-11-06->2024-11-26 +32%
+liq1 V3 signal 2023-12-05 (vol ratio 4.8, locks5 0, locks10 0, ret20 +25%, KMI True): trail20: 2023-12-06->2023-12-27 -15%; T20: 2023-12-06->2024-01-04 -11%; T60: 2023-12-06->2024-03-04 -14%; T120: 2023-12-06->2024-06-04 -25%; lock: 2023-12-06->2023-12-20 -12%
+liq1 V3 signal 2024-10-25 (vol ratio 3.5, locks5 2, locks10 2, ret20 +42%, KMI True): trail20: 2024-10-28->2025-01-08 +224%; T20: 2024-10-28->2024-11-26 +75%; T60: 2024-10-28->2025-01-21 +218%; T120: 2024-10-28->2025-04-22 +227%; lock: 2024-10-28->2024-11-26 +75%
+liq1 V3 signal 2026-05-04 (vol ratio 3.1, locks5 0, locks10 0, ret20 +25%, KMI True): trail20: 2026-05-05->2026-07-24 -11%; T20: 2026-05-05->2026-06-05 -3%; T60: 2026-05-05->2026-08-04 -4%; T120: 2026-05-05->2026-10-16 -18% (open); lock: 2026-05-05->2026-10-16 -18% (open)
+liq1 V4 signal 2023-10-19 (vol ratio 1.8, locks5 1, locks10 1, ret20 +20%, KMI True): trail20: 2023-10-20->2023-12-27 +4%; T20: 2023-10-20->2023-11-20 +15%; T60: 2023-10-20->2024-01-16 +12%; T120: 2023-10-20->2024-04-17 +2%; lock: 2023-10-20->2023-12-20 +8%
+liq1 V4 signal 2024-10-23 (vol ratio 1.5, locks5 1, locks10 1, ret20 +16%, KMI True): trail20: 2024-10-25->2025-01-08 +247%; T20: 2024-10-25->2024-11-26 +88%; T60: 2024-10-25->2025-01-20 +255%; T120: 2024-10-25->2025-04-21 +261%; lock: 2024-10-25->2024-11-26 +88%
+liq1 V4 signal 2025-11-27 (vol ratio 0.4, locks5 1, locks10 1, ret20 +4%, KMI True): trail20: 2025-12-01->2025-12-24 -15%; T20: 2025-12-01->2025-12-30 -10%; T60: 2025-12-01->2026-02-25 -36%; T120: 2025-12-01->2026-05-25 -34%; lock: 2025-12-01->2026-03-03 -50%
+SSGC upper-lock days Oct 2024 to Jan 2025: 2024-10-23, 2024-10-24, 2024-11-01, 2024-11-04, 2024-11-05, 2024-11-11, 2024-11-12, 2024-11-13, 2024-11-14, 2024-11-25, 2024-11-27, 2024-11-29, 2024-12-03, 2024-12-05, 2024-12-11, 2025-01-13, 2025-01-24
+
+=== Round trips: share of signals that gave back the whole run or fell hard within 60 sessions of the fill ===
+liq5 V1: n 237; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 16%; fell 30%+ from fill: 11%; rose 20%+ after fill first, then erased the whole run: 1%
+liq5 V2: n 208; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 12%; fell 30%+ from fill: 13%; rose 20%+ after fill first, then erased the whole run: 0%
+liq5 V3: n 465; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 8%; fell 30%+ from fill: 7%; rose 20%+ after fill first, then erased the whole run: 0%
+liq5 V4: n 445; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 38%; fell 30%+ from fill: 4%; rose 20%+ after fill first, then erased the whole run: 1%
+liq5 random entries, T60: net below -30%: 5.3% (n 42983)
+liq1 V1: n 446; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 16%; fell 30%+ from fill: 10%; rose 20%+ after fill first, then erased the whole run: 2%
+liq1 V2: n 406; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 14%; fell 30%+ from fill: 11%; rose 20%+ after fill first, then erased the whole run: 1%
+liq1 V3: n 736; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 9%; fell 30%+ from fill: 7%; rose 20%+ after fill first, then erased the whole run: 0%
+liq1 V4: n 734; close at fill+60 at or below the pre-run price (close 20 sessions before signal): 34%; fell 30%+ from fill: 4%; rose 20%+ after fill first, then erased the whole run: 1%
+liq1 random entries, T60: net below -30%: 4.9% (n 43224)
+
+=== TODAY'S SCREEN, 2026-10-16 (universe liq1; condition true on any of the last 5 sessions; * = KMI All Share) ===
+   sym var latest_true  volratio  locks5  locks10  ret20%  medTV_Rs_m       note
+ EMCO*  V1  2026-10-16       7.2       3        3      -3         2.6           
+ MWMP*  V1  2026-10-13       9.6       2        4      25         5.1           
+  PIM*  V1  2026-10-16       5.7       2        4      46         2.3 locked now
+ EMCO*  V2  2026-10-16       7.2       3        3      -3         2.6           
+ MWMP*  V2  2026-10-15       8.2       0        3       2         8.4           
+  PIM*  V2  2026-10-16       5.7       2        4      46         2.3 locked now
+ MWMP*  V3  2026-10-12       9.3       2        4      33         3.3           
+  PIM*  V3  2026-10-16       5.7       2        4      46         2.3 locked now
+ ATBA*  V4  2026-10-16       0.5       1        1       5         1.3 locked now
+EXIDE*  V4  2026-10-16       0.4       1        1      -2         1.1 locked now
+ GTYR*  V4  2026-10-14       0.3       1        1       8         6.6           
+  JSCL  V4  2026-10-14       1.1       1        1      15         2.6           
