@@ -1,0 +1,330 @@
+type,horizon,as_of_cutoff,n,hit_rate,median,p50plus,worst,placebo_median,verdict,source
+shock_index5_buy,20 sessions,2026-10-16,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger),noise_map_shock_rebound.md
+shock_index5_buy,60 sessions,2026-10-16,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger),noise_map_shock_rebound.md
+shock_index3_buy,20 sessions,2026-10-16,20,70%,+3.7%,,-10.9%,+1.1%,no word given,noise_map_shock_rebound.md
+shock_index3_buy,60 sessions,2026-10-16,20,50%,+0.7%,,-18.3%,+2.2%,no word given,noise_map_shock_rebound.md
+shock_3day_fall5_buy,20 sessions,2026-10-16,14,79%,+5.3%,,,,no word given (file labels this row a placebo arm),noise_map_shock_rebound.md
+shock_3day_fall5_buy,60 sessions,2026-10-16,14,79%,+7.0%,,-15.5%,,no word given (file labels this row a placebo arm),noise_map_shock_rebound.md
+shock_fall5_hindsight_day1,20 sessions,2026-10-16,25,12%,-4.4%,,,,biased downward (hindsight selection),noise_map_shock_rebound.md
+shock_fall5_hindsight_day1,60 sessions,2026-10-16,25,38%,-4.2%,,,,biased downward (hindsight selection),noise_map_shock_rebound.md
+shock_fall5_hindsight_day3,20 sessions,2026-10-16,25,16%,-3.9%,,,,biased downward (hindsight selection),noise_map_shock_rebound.md
+shock_fall5_hindsight_day3,60 sessions,2026-10-16,25,46%,-2.4%,,,,biased downward (hindsight selection),noise_map_shock_rebound.md
+shock_fall5_hindsight_firstup_after_day1,20 sessions,2026-10-16,25,24%,-4.4%,,,,biased downward (hindsight selection),noise_map_shock_rebound.md
+shock_fall5_hindsight_firstup_after_day1,60 sessions,2026-10-16,25,46%,-2.0%,,,,biased downward (hindsight selection),noise_map_shock_rebound.md
+shock_fall5_hindsight_firstup_after_bottom,20 sessions,2026-10-16,25,76%,+3.1%,,,,needs hindsight (file),noise_map_shock_rebound.md
+shock_fall5_hindsight_firstup_after_bottom,60 sessions,2026-10-16,25,70%,+4.7%,,,,needs hindsight (file),noise_map_shock_rebound.md
+oracle_top3_3m_mom_S1,24 months (window; rotation exits),2026-10-16,41,46%,-3%,,,,no verdict word (file: nothing reached 3x),oracle_and_good_case.md
+oracle_top3_6m_mom_skip1_S2,24 months (window; rotation exits),2026-10-16,36,39%,-9%,,,,no verdict word (file: nothing reached 3x),oracle_and_good_case.md
+breakout_252high_S3,24 months (window; rotation exits),2026-10-16,12,58%,+17%,,,,a hypothesis from five windows (file),oracle_and_good_case.md
+oracle_cheapest_pe_top_sector_S4,24 months (window; rotation exits),2026-10-16,34,53%,+2%,,,,no verdict word (file: nothing reached 3x),oracle_and_good_case.md
+oracle_dip20_uptrend_S5,24 months (window; rotation exits),2026-10-16,56,54%,+1%,,,,no verdict word (file: nothing reached 3x),oracle_and_good_case.md
+oracle_eps_jump50_S6,24 months (window; rotation exits),2026-10-16,25,48%,-3%,,,,no verdict word (file: nothing reached 3x),oracle_and_good_case.md
+oracle_top10_liquid_ew_S8,24 months (window; rotation exits),2026-10-16,49,63%,+4%,,,,no verdict word (file: nothing reached 3x),oracle_and_good_case.md
+codex_mom63,24 months (cohort 2024-26; rotation exits),2026-10-16,44,55%,+2.5%,,,,suggestive (file-level),active_trading_codex.md
+codex_mom252,24 months (cohort 2024-26; rotation exits),2026-10-16,30,37%,-1.7%,,,,suggestive (file-level),active_trading_codex.md
+breakout_252high_codex,24 months (cohort 2024-26; rotation exits),2026-10-16,53,62%,+4.6%,,,,suggestive (file-level),active_trading_codex.md
+codex_dip200,24 months (cohort 2024-26; rotation exits),2026-10-16,58,47%,-0.6%,,,,suggestive (file-level),active_trading_codex.md
+codex_sector63,24 months (cohort 2024-26; rotation exits),2026-10-16,55,38%,-1.7%,,,,suggestive (file-level),active_trading_codex.md
+codex_vol20,24 months (cohort 2024-26; rotation exits),2026-10-16,51,33%,-2.0%,,,,suggestive (file-level),active_trading_codex.md
+codex_eps_yoy,24 months (cohort 2024-26; rotation exits),2026-10-16,39,44%,-2.2%,,,,suggestive (file-level),active_trading_codex.md
+insider_cluster,63 sessions,2026-10-16,37,46%,-0.4%,,-33.2%,-0.6%,not supported,insider_cluster_buying.md
+insider_cluster,21 sessions,2026-10-16,44,,-0.9%,,,,not supported,insider_cluster_buying.md
+insider_cluster,126 sessions,2026-10-16,33,,-5.3%,,,,not supported,insider_cluster_buying.md
+insider_cluster_net_sales,63 sessions,2026-10-16,28,43%,-2.2%,,-33.2%,-0.1%,not supported,insider_cluster_buying.md
+insider_singles,63 sessions,2026-10-16,97,57%,+2.3%,,-33.2%,-1.6%,not supported,insider_cluster_buying.md
+insider_singles,21 sessions,2026-10-16,117,,-0.5%,,,,not supported,insider_cluster_buying.md
+insider_singles,126 sessions,2026-10-16,83,,-0.0%,,,,not supported,insider_cluster_buying.md
+insider_sponsor_substantial,63 sessions,2026-10-16,5,20%,-8.7%,,-13.3%,-2.2%,not supported (n too small),insider_cluster_buying.md
+insider_sponsor_substantial,21 sessions,2026-10-16,7,,-3.2%,,,,not supported (n too small),insider_cluster_buying.md
+insider_sponsor_substantial,126 sessions,2026-10-16,4,,-12.8%,,,,not supported (n too small),insider_cluster_buying.md
+insider_director_ceo,63 sessions,2026-10-16,42,57%,+2.5%,,-33.2%,-1.3%,not supported,insider_cluster_buying.md
+insider_director_ceo,21 sessions,2026-10-16,51,,-1.4%,,,,not supported,insider_cluster_buying.md
+insider_director_ceo,126 sessions,2026-10-16,33,,+2.7%,,,,not supported,insider_cluster_buying.md
+insider_executive,63 sessions,2026-10-16,59,54%,+1.8%,,-22.7%,+0.9%,not supported,insider_cluster_buying.md
+insider_executive,21 sessions,2026-10-16,81,,+0.4%,,,,not supported,insider_cluster_buying.md
+insider_executive,126 sessions,2026-10-16,45,,+2.5%,,,,not supported,insider_cluster_buying.md
+insider_roundtrip,63 sessions,2026-10-16,23,48%,-0.6%,,-22.7%,+1.2%,not supported,insider_cluster_buying.md
+insider_roundtrip,21 sessions,2026-10-16,34,,-1.1%,,,,not supported,insider_cluster_buying.md
+insider_roundtrip,126 sessions,2026-10-16,18,,-1.8%,,,,not supported,insider_cluster_buying.md
+insider_clean_buy,63 sessions,2026-10-16,113,55%,+1.8%,,-33.2%,-1.5%,not supported,insider_cluster_buying.md
+insider_clean_buy,21 sessions,2026-10-16,149,,-0.5%,,,,not supported,insider_cluster_buying.md
+insider_clean_buy,126 sessions,2026-10-16,92,,-0.3%,,,,not supported,insider_cluster_buying.md
+insider_sell_single,63 sessions,2026-10-16,102,46%,-2.7%,,-63.6%,-0.8%,not supported,insider_cluster_buying.md
+insider_sell_single,21 sessions,2026-10-16,137,,-3.1%,,,,not supported,insider_cluster_buying.md
+insider_sell_single,126 sessions,2026-10-16,83,,-4.2%,,,,not supported,insider_cluster_buying.md
+insider_sell_cluster,63 sessions,2026-10-16,33,39%,-3.4%,,-45.5%,-0.5%,not supported,insider_cluster_buying.md
+insider_sell_cluster,21 sessions,2026-10-16,40,,-2.4%,,,,not supported,insider_cluster_buying.md
+insider_sell_cluster,126 sessions,2026-10-16,27,,-2.6%,,,,not supported,insider_cluster_buying.md
+dividend_runup_H1a_high,20 sessions (before pre-news; descriptive),2026-10-16,23,65%,+1.5%,,-11.8%,-0.5%,not testable (4 clusters),dividend_runup_exdate.md
+dividend_runup_H1a_yield_le8pct,20 sessions (before pre-news),2026-10-16,345,50%,+0.2%,,,-1.1%,not testable (comparator),dividend_runup_exdate.md
+dividend_runup_H1b_high,notice to pre-news (variable),2026-10-16,24,62%,+1.4%,,-7.5%,-0.7%,weak evidence for (net),dividend_runup_exdate.md
+dividend_runup_H1b_yield_le8pct,notice to pre-news (variable),2026-10-16,334,37%,-1.1%,,,-1.0%,comparator (net),dividend_runup_exdate.md
+dividend_ex10_ex1_H2a_net,10 sessions,2026-10-16,106,50%,0.0%,,-16.1%,-1.3%,marginal (worst label not specified in file),dividend_runup_exdate.md
+dividend_ex10_ex1_H2a_gross,10 sessions,2026-10-16,106,53%,+0.5%,,,-0.6%,marginal (gross),dividend_runup_exdate.md
+dividend_ex10_ex1_H2a_yield_ge2pct_net,10 sessions,2026-10-16,63,51%,+0.1%,,,-1.2%,marginal,dividend_runup_exdate.md
+dividend_ex10_ex1_H2a_yield_lt2pct_net,10 sessions,2026-10-16,43,49%,-0.1%,,,-1.0%,marginal,dividend_runup_exdate.md
+dividend_buy_exday_hold10_H2d,10 sessions,2026-10-16,185,32%,-1.7%,,-14.6%,-0.9%,rejected as a long entry,dividend_runup_exdate.md
+dividend_capture_H2c_gross,not stated,2026-10-16,200,36%,-0.6%,,,-0.6%,rejected,dividend_runup_exdate.md
+dividend_capture_H2c_after_tax,not stated,2026-10-16,200,30%,-1.0%,,,-0.5%,rejected,dividend_runup_exdate.md
+dividend_capture_H2c_yield_ge2pct_after_tax,not stated,2026-10-16,93,29%,-1.0%,,,-0.6%,rejected,dividend_runup_exdate.md
+dividend_capture_H2c_yield_gt5pct_after_tax,not stated,2026-10-16,18,22%,-2.8%,,,-0.7%,rejected,dividend_runup_exdate.md
+dividend_H4_cut_T0,0 sessions (announcement day),2026-10-16,20,45%,-0.6%,,-7.6%,-0.1%,negative reaction; cannot be traded (file),dividend_runup_exdate.md
+dividend_H4_omission_T0,0 sessions (announcement day),2026-10-16,26,35%,-0.7%,,,-0.2%,negative reaction; cannot be traded (file),dividend_runup_exdate.md
+dividend_H4_pooled_T0,0 sessions (announcement day),2026-10-16,46,39%,-0.7%,,-7.6%,0.0%,negative reaction; cannot be traded (file),dividend_runup_exdate.md
+dividend_H4_control_T0,0 sessions (announcement day),2026-10-16,64,50%,0.0%,,,-0.1%,control,dividend_runup_exdate.md
+dividend_H4_cut_plus5,5 sessions,2026-10-16,20,45%,-0.8%,,,-0.2%,weak,dividend_runup_exdate.md
+dividend_H4_omission_plus5,5 sessions,2026-10-16,26,42%,-0.9%,,,-0.1%,weak,dividend_runup_exdate.md
+dividend_H4_pooled_plus5,5 sessions,2026-10-16,46,43%,-0.9%,,,-0.3%,weak,dividend_runup_exdate.md
+dividend_H4_control_plus5,5 sessions,2026-10-16,64,50%,0.0%,,,-0.2%,control,dividend_runup_exdate.md
+dividend_H4_cut_plus20,20 sessions,2026-10-16,19,53%,+1.7%,,-6.1%,-0.4%,not testable,dividend_runup_exdate.md
+dividend_H4_pooled_plus20,20 sessions,2026-10-16,45,49%,-0.2%,,,-0.7%,not testable,dividend_runup_exdate.md
+dividend_H4_cut_plus60,60 sessions,2026-10-16,11,73%,+2.1%,,-13.3%,+7.4%,not testable,dividend_runup_exdate.md
+dividend_H4_pooled_plus60,60 sessions,2026-10-16,24,50%,+0.2%,,,-0.2%,not testable,dividend_runup_exdate.md
+dividend_H4_exit_rule_pooled,5 sessions (exit rule as labelled),2026-10-16,46,54%,+0.4%,,,-0.2%,no value after cost,dividend_runup_exdate.md
+results_yoy_POS,5 sessions,2026-10-16,378,48%,-0.2%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_POS,20 sessions,2026-10-16,366,38%,-2.0%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_POS,60 sessions,2026-10-16,338,43%,-2.3%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_LTP,5 sessions,2026-10-16,96,32%,-1.8%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_LTP,20 sessions,2026-10-16,92,48%,-0.4%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_LTP,60 sessions,2026-10-16,88,45%,-2.5%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_NEG,5 sessions,2026-10-16,188,46%,-0.5%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_NEG,20 sessions,2026-10-16,186,46%,-1.5%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_NEG,60 sessions,2026-10-16,181,39%,-5.3%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_PTL,5 sessions,2026-10-16,81,36%,-1.1%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_PTL,20 sessions,2026-10-16,79,34%,-2.4%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_PTL,60 sessions,2026-10-16,78,44%,-2.6%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_MID,5 sessions,2026-10-16,318,37%,-1.1%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_MID,20 sessions,2026-10-16,315,35%,-2.3%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_MID,60 sessions,2026-10-16,291,36%,-4.9%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_positive,5 sessions,2026-10-16,474,45%,-0.7%,,-22.2%,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_positive,20 sessions,2026-10-16,458,40%,-1.6%,,-39.1%,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_positive,60 sessions,2026-10-16,426,44%,-2.3%,,-91.6%,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_negative,5 sessions,2026-10-16,269,43%,-0.8%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_negative,20 sessions,2026-10-16,265,42%,-2.1%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_negative,60 sessions,2026-10-16,259,40%,-4.4%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_all,5 sessions,2026-10-16,1061,42%,-0.8%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_all,20 sessions,2026-10-16,1038,39%,-2.0%,,,,no tradable drift (H1),results_surprise_drift.md
+results_yoy_all,60 sessions,2026-10-16,976,41%,-3.3%,,,,no tradable drift (H1),results_surprise_drift.md
+results_muted_pe_main_H3,60 sessions,2026-10-16,47,57%,+2.4%,,-26.0%,-0.3%,not confirmed (worst mapped to horizon by position),results_surprise_drift.md
+results_muted_pe_main_H3,120 sessions,2026-10-16,42,67%,+6.4%,,-47.4%,+1.4%,not confirmed (worst mapped to horizon by position),results_surprise_drift.md
+results_muted_pe_tercile_H3,60 sessions,2026-10-16,47,47%,-2.0%,,,,not confirmed,results_surprise_drift.md
+results_muted_pe_tercile_H3,120 sessions,2026-10-16,40,55%,+1.0%,,,,not confirmed,results_surprise_drift.md
+results_pe_below6_any_reaction_H3,60 sessions,2026-10-16,88,56%,+2.4%,,,,not confirmed,results_surprise_drift.md
+results_pe_below6_any_reaction_H3,120 sessions,2026-10-16,80,61%,+7.2%,,,,not confirmed,results_surprise_drift.md
+results_muted_pe_above6_H3,60 sessions,2026-10-16,84,32%,-4.4%,,,,not confirmed,results_surprise_drift.md
+results_muted_pe_above6_H3,120 sessions,2026-10-16,78,41%,-4.3%,,,,not confirmed,results_surprise_drift.md
+results_positive_reference_H3,60 sessions,2026-10-16,425,42%,-2.6%,,,,reference (no verdict word),results_surprise_drift.md
+results_positive_reference_H3,120 sessions,2026-10-16,389,47%,-2.4%,,,,reference (no verdict word),results_surprise_drift.md
+results_board_notice_leg,about 5 sessions (median leg),2026-10-16,2688,41%,-0.9%,,,-1.0%,nothing (indistinguishable from placebo),results_surprise_drift.md
+index_addition_ftse_pk,20 sessions before notice (PRE),2026-10-16,5/1,60.00%,2.73%,,-4.76%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_ftse_pk,notice to effective (ANN; variable),2026-10-16,5/1,60.00%,0.10%,,-1.79%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_ftse_pk,1 session (EFF effective day),2026-10-16,5/1,60.00%,0.09%,,-0.72%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_ftse_pk,20 sessions after notice (POST),2026-10-16,5/1,20.00%,-6.42%,,-9.53%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi30,20 sessions before notice (PRE),2026-10-16,60/13,43.33%,-1.95%,,-18.92%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi30,notice to effective (ANN; variable),2026-10-16,60/13,60.00%,0.98%,,-15.77%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi30,1 session (EFF effective day),2026-10-16,60/13,51.67%,0.04%,,-5.10%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi30,20 sessions after notice (POST),2026-10-16,60/13,35.00%,-3.01%,,-21.72%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi30,20 sessions before notice (PRE),2026-10-16,56/13,41.07%,-1.00%,,-16.32%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi30,notice to effective (ANN; variable),2026-10-16,56/13,37.50%,-1.89%,,-14.41%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi30,1 session (EFF effective day),2026-10-16,56/13,53.57%,0.19%,,-4.90%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi30,20 sessions after notice (POST),2026-10-16,55/13,30.91%,-3.15%,,-15.07%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi_all,20 sessions before notice (PRE),2026-10-16,144/17,48.61%,-0.11%,,-26.80%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi_all,notice to effective (ANN; variable),2026-10-16,152/17,45.39%,-0.53%,,-23.95%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi_all,1 session (EFF effective day),2026-10-16,152/17,44.08%,-0.38%,,-9.88%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kmi_all,20 sessions after notice (POST),2026-10-16,148/17,41.89%,-1.64%,,-37.55%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi_all,20 sessions before notice (PRE),2026-10-16,103/16,48.54%,-0.29%,,-19.57%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi_all,notice to effective (ANN; variable),2026-10-16,105/16,47.62%,-0.19%,,-11.07%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi_all,1 session (EFF effective day),2026-10-16,107/16,54.21%,0.06%,,-5.56%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kmi_all,20 sessions after notice (POST),2026-10-16,105/16,34.29%,-3.04%,,-18.29%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse100,20 sessions before notice (PRE),2026-10-16,24/7,29.17%,-4.96%,,-24.30%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse100,notice to effective (ANN; variable),2026-10-16,24/7,50.00%,0.57%,,-15.20%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse100,1 session (EFF effective day),2026-10-16,24/7,50.00%,-0.01%,,-3.62%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse100,20 sessions after notice (POST),2026-10-16,24/7,45.83%,-2.57%,,-19.08%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse100,20 sessions before notice (PRE),2026-10-16,20/8,15.00%,-6.74%,,-40.41%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse100,notice to effective (ANN; variable),2026-10-16,20/8,50.00%,0.32%,,-9.33%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse100,1 session (EFF effective day),2026-10-16,20/8,65.00%,0.18%,,-5.72%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse100,20 sessions after notice (POST),2026-10-16,20/8,40.00%,-3.91%,,-37.37%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse30,20 sessions before notice (PRE),2026-10-16,44/11,36.36%,-2.84%,,-23.06%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse30,notice to effective (ANN; variable),2026-10-16,44/11,43.18%,-1.16%,,-13.54%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse30,1 session (EFF effective day),2026-10-16,44/11,59.09%,0.51%,,-2.36%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_kse30,20 sessions after notice (POST),2026-10-16,44/11,50.00%,-0.04%,,-23.41%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse30,20 sessions before notice (PRE),2026-10-16,45/11,44.44%,-1.24%,,-16.14%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse30,notice to effective (ANN; variable),2026-10-16,45/11,40.00%,-0.81%,,-16.28%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse30,1 session (EFF effective day),2026-10-16,45/11,48.89%,-0.13%,,-4.47%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_kse30,20 sessions after notice (POST),2026-10-16,45/11,42.22%,-0.58%,,-18.62%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk,20 sessions before notice (PRE),2026-10-16,22/9,81.82%,5.10%,,-15.95%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk,notice to effective (ANN; variable),2026-10-16,22/9,22.73%,-4.72%,,-15.09%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk,1 session (EFF effective day),2026-10-16,22/9,18.18%,-0.92%,,-5.75%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk,20 sessions after notice (POST),2026-10-16,22/9,54.55%,0.20%,,-11.09%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk,20 sessions before notice (PRE),2026-10-16,6/5,16.67%,-6.19%,,-16.39%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk,notice to effective (ANN; variable),2026-10-16,6/5,100.00%,5.84%,,0.23%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk,1 session (EFF effective day),2026-10-16,6/5,33.33%,-1.20%,,-2.46%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk,20 sessions after notice (POST),2026-10-16,6/5,33.33%,-1.72%,,-10.16%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk_sc,20 sessions before notice (PRE),2026-10-16,54/12,42.59%,-2.60%,,-16.39%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk_sc,notice to effective (ANN; variable),2026-10-16,55/12,43.64%,-0.74%,,-25.84%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk_sc,1 session (EFF effective day),2026-10-16,55/12,45.45%,-0.12%,,-5.09%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_addition_msci_pk_sc,20 sessions after notice (POST),2026-10-16,55/12,30.91%,-3.04%,,-28.02%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk_sc,20 sessions before notice (PRE),2026-10-16,23/11,56.52%,3.12%,,-22.77%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk_sc,notice to effective (ANN; variable),2026-10-16,23/11,26.09%,-3.00%,,-13.86%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk_sc,1 session (EFF effective day),2026-10-16,23/11,39.13%,-0.29%,,-5.75%,,no dependable recomposition trade (file),index_recomposition_events.md
+index_deletion_msci_pk_sc,20 sessions after notice (POST),2026-10-16,23/11,26.09%,-4.41%,,-13.96%,,no dependable recomposition trade (file),index_recomposition_events.md
+first_rate_cut_kse100,20 sessions,2026-10-16,3,100%,+7.1%,,+3.0%,+1.3%,weak (H1),rate_cycle_episodes.md
+first_rate_cut_kse100,60 sessions,2026-10-16,3,67%,+8.4%,,-9.4%,+3.7%,weak (H1),rate_cycle_episodes.md
+first_rate_cut_kse100,120 sessions,2026-10-16,3,100%,+39.8%,,+1.1%,+7.9%,weak (H1),rate_cycle_episodes.md
+first_rate_cut_ew,20 sessions,2026-10-16,3,100%,+3.9%,,+3.3%,+0.8%,weak (H1),rate_cycle_episodes.md
+first_rate_cut_ew,60 sessions,2026-10-16,3,67%,+11.9%,,-21.5%,+1.9%,weak (H1),rate_cycle_episodes.md
+first_rate_cut_ew,120 sessions,2026-10-16,3,67%,+49.2%,,-7.0%,+5.1%,weak (H1),rate_cycle_episodes.md
+cpi_fall1pt_kse100,120 sessions,2026-10-16,10,60%,+12.6%,,-18.7%,+8.1%,weak as a 12-month rule (H4),rate_cycle_episodes.md
+cpi_fall1pt_kse100,250 sessions,2026-10-16,10,70%,+52.3%,,-21.1%,+19.8%,weak as a 12-month rule (H4),rate_cycle_episodes.md
+cpi_fall1pt_ew,250 sessions,2026-10-16,10,60%,+53.1%,,-33.8%,+14.1%,weak as a 12-month rule (H4),rate_cycle_episodes.md
+first_rate_hike_kse100,120 sessions,2026-10-16,2,,-5.6%,,,,weak (H3),rate_cycle_episodes.md
+first_rate_hike_ew,120 sessions,2026-10-16,2,,-15.6%,,,,weak (H3),rate_cycle_episodes.md
+mpc_hold_kse100,20 sessions,2026-10-16,39,54%,+0.3%,,,,no verdict given (in sample; overlapping),rate_cycle_episodes.md
+mpc_hold_kse100,60 sessions,2026-10-16,37,62%,+5.5%,,,,no verdict given (in sample; overlapping),rate_cycle_episodes.md
+mpc_hold_kse100,120 sessions,2026-10-16,36,61%,+4.4%,,,,no verdict given (in sample; overlapping),rate_cycle_episodes.md
+sector_momentum_ls,3 months,2026-10-16,31.7,65%,+2.65%,,-21.64%,+0.03%,works modestly (H1; primary 6/0/3m),sector_momentum_regime.md
+sector_momentum_ls_grid_3_0_3m,3 months,2026-10-16,31.7,61%,+2.88%,,-21.53%,,robustness only (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_12_0_3m,3 months,2026-10-16,31.7,64%,+3.19%,,-49.82%,,robustness only (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_3_1_3m,3 months,2026-10-16,31.7,53%,+1.08%,,-59.59%,,robustness only (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_6_1_3m,3 months,2026-10-16,31.7,67%,+3.12%,,-51.31%,,robustness only (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_12_1_3m,3 months,2026-10-16,31.7,60%,+1.57%,,-49.82%,,robustness only (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_3_0_1m,1 month,2026-10-16,97,59%,+0.76%,,-11.34%,,robustness only; fails conservative costs (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_6_0_1m,1 month,2026-10-16,97,57%,+0.79%,,-11.20%,,robustness only; fails conservative costs (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_12_0_1m,1 month,2026-10-16,97,59%,+0.81%,,-17.56%,,robustness only; fails conservative costs (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_3_1_1m,1 month,2026-10-16,97,53%,+0.37%,,-12.58%,,robustness only; fails conservative costs (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_6_1_1m,1 month,2026-10-16,97,58%,+0.69%,,-14.90%,,robustness only; fails conservative costs (grid; gross),sector_momentum_regime.md
+sector_momentum_ls_grid_12_1_1m,1 month,2026-10-16,97,54%,+0.81%,,-17.56%,,robustness only; fails conservative costs (grid; gross),sector_momentum_regime.md
+sector_regime_tilt_RT_net_minus_B,3 months,2026-10-16,31.7,51%,+0.21%,,-16.02%,,no edge (placebo p 0.255 is not a median),sector_momentum_regime.md
+sector_momentum_top3_net_minus_B,3 months,2026-10-16,31.7,54%,+0.95%,,-15.91%,,fails offset and half checks (file),sector_momentum_regime.md
+sector_regime_tilt_RT_net_abs,3 months,2026-10-16,31.7,46%,-1.20%,,-28.10%,,no edge,sector_momentum_regime.md
+regime_autos_cuts_priced,3 months (next-3m excess vs B),2026-10-16,5.3,78%,+13.2%,,,,insufficient,sector_momentum_regime.md
+regime_autos_neutral,3 months (next-3m excess vs B),2026-10-16,16.3,33%,-4.4%,,,,no verdict given,sector_momentum_regime.md
+regime_autos_hikes_priced,3 months (next-3m excess vs B),2026-10-16,10.0,40%,-2.3%,,,,no verdict given,sector_momentum_regime.md
+regime_islamic_banks_cuts_priced,3 months (next-3m excess vs B),2026-10-16,5.0,67%,+3.8%,,,,insufficient,sector_momentum_regime.md
+regime_islamic_banks_neutral,3 months (next-3m excess vs B),2026-10-16,9.7,51%,+0.2%,,,,no verdict given,sector_momentum_regime.md
+regime_islamic_banks_hikes_priced,3 months (next-3m excess vs B),2026-10-16,4.7,51%,-1.2%,,,,insufficient,sector_momentum_regime.md
+regime_power_cuts_priced,3 months (next-3m excess vs B),2026-10-16,5.3,36%,-2.6%,,,,insufficient,sector_momentum_regime.md
+regime_power_neutral,3 months (next-3m excess vs B),2026-10-16,13.0,52%,-0.1%,,,,no verdict given,sector_momentum_regime.md
+regime_power_hikes_priced,3 months (next-3m excess vs B),2026-10-16,7.0,85%,+7.2%,,,,no verdict given,sector_momentum_regime.md
+regime_fertilizer_cuts_priced,3 months (next-3m excess vs B),2026-10-16,4.3,72%,+0.7%,,,,insufficient,sector_momentum_regime.md
+regime_fertilizer_neutral,3 months (next-3m excess vs B),2026-10-16,9.7,58%,+1.1%,,,,no verdict given,sector_momentum_regime.md
+regime_fertilizer_hikes_priced,3 months (next-3m excess vs B),2026-10-16,1.5,25%,-10.4%,,,,insufficient,sector_momentum_regime.md
+regime_pharma_cuts_priced,3 months (next-3m excess vs B),2026-10-16,5.3,83%,+5.8%,,,,insufficient,sector_momentum_regime.md
+regime_pharma_neutral,3 months (next-3m excess vs B),2026-10-16,16.3,31%,-2.6%,,,,no verdict given,sector_momentum_regime.md
+regime_pharma_hikes_priced,3 months (next-3m excess vs B),2026-10-16,6.3,21%,-5.7%,,,,no verdict given,sector_momentum_regime.md
+regime_cement_cuts_priced,3 months (next-3m excess vs B),2026-10-16,5.3,69%,+3.3%,,,,insufficient,sector_momentum_regime.md
+regime_cement_neutral,3 months (next-3m excess vs B),2026-10-16,16.3,49%,+0.5%,,,,no verdict given,sector_momentum_regime.md
+regime_cement_hikes_priced,3 months (next-3m excess vs B),2026-10-16,10.0,46%,-0.9%,,,,no verdict given,sector_momentum_regime.md
+regime_omc_cuts_priced,3 months (next-3m excess vs B),2026-10-16,5.3,17%,-5.2%,,,,insufficient,sector_momentum_regime.md
+regime_omc_neutral,3 months (next-3m excess vs B),2026-10-16,16.3,41%,-2.1%,,,,no verdict given,sector_momentum_regime.md
+regime_omc_hikes_priced,3 months (next-3m excess vs B),2026-10-16,10.0,53%,-0.4%,,,,no verdict given,sector_momentum_regime.md
+quality_top_third,12 months,2026-10-16,26,92%,+57.7%,,-7.6%,,Weak not proven,quality_within_sector.md
+quality_bottom_third,12 months,2026-10-16,26,92%,+37.8%,,-14.1%,,Weak not proven,quality_within_sector.md
+quality_top_minus_bottom,12 months,2026-10-16,26,69%,+5.8%,,-33.2%,,Weak not proven (file placebo p 0.054 is not a median),quality_within_sector.md
+quality_qarp_minus_ew_kmi,12 months,2026-10-16,26,54%,+2.4%,,-22.2%,,Weak not proven,quality_within_sector.md
+quality_qarp_minus_kmi30,12 months,2026-10-16,26,54%,+0.7%,,-14.5%,,Weak not proven,quality_within_sector.md
+quality_qarp_minus_all_scored,12 months,2026-10-16,26,46%,-0.3%,,-26.3%,,Weak not proven,quality_within_sector.md
+quality_top_minus_bottom_ext_ab,12 months,2026-10-16,36,67%,+8.2%,,-18.4%,,Weak not proven (extended a and b only),quality_within_sector.md
+quality_qarp_minus_ew_kmi_ext_ab,12 months,2026-10-16,36,72%,+7.3%,,-18.0%,,Weak not proven (extended a and b only),quality_within_sector.md
+quality_qarp_minus_kmi30_ext_ab,12 months,2026-10-16,36,69%,+9.6%,,-13.9%,,Weak not proven (extended a and b only),quality_within_sector.md
+winners_model_top_decile,6 months,2026-10-16,550,57%,+7.1%,,-94.8%,+8.7%,does not support fast rotation,winners_case_control.md
+winners_rule_screen,6 months,2026-10-16,229,62%,+7.6%,,-93.1%,+8.7%,does not support fast rotation,winners_case_control.md
+winners_all_liquid_placebo,6 months,2026-10-16,5299,62%,+8.7%,,-94.8%,,placebo baseline (no verdict word),winners_case_control.md
+winners_random_name_per_month_placebo,6 months,2026-10-16,500,,+12.6%,,,,placebo (median of medians; 500 draws),winners_case_control.md
+deal_post_intention,to completion or withdrawal (completion median 207 days),2026-10-16,54,48%,-1.2%,,-64.3%,,no verdict word (see What this changes),deals.md
+deal_post_intention_kmi,to completion or withdrawal (completion median 207 days),2026-10-16,19,58%,+5.3%,,-25.9%,,no verdict word,deals.md
+deal_post_intention_vs_kse100,to completion or withdrawal (completion median 207 days),2026-10-16,46,39%,-14.3%,,-88.2%,,lagged the index (file),deals.md
+deal_post_intention_full_tender_upper_bound,to completion or withdrawal (completion median 207 days),2026-10-16,19,84%,+12.5%,,-58.5%,,upper bound only (file),deals.md
+deal_post_offer,to completion (duration not stated),2026-10-16,24,54%,+1.1%,,-35.8%,,no verdict word,deals.md
+deal_post_offer_kmi,to completion (duration not stated),2026-10-16,11,,+1.4%,,,,no verdict word,deals.md
+deal_sponsor_delisting,about 205 days (median),2026-10-16,8,75%,+64%,,-15%,,no verdict word,deals.md
+volume_locks_V1_liq5,trail20 stop (variable),2026-10-16,248,27%,-13.0%,7.7%,-46%,-6.9%,nothing,volume_ignition_upper_locks.md
+volume_locks_V2_liq5,trail20 stop (variable),2026-10-16,215,28%,-14.2%,6.5%,-46%,-7.0%,nothing,volume_ignition_upper_locks.md
+volume_locks_V3_liq5,trail20 stop (variable),2026-10-16,471,32%,-11.7%,7.4%,-46%,-5.0%,nothing,volume_ignition_upper_locks.md
+volume_locks_V4_liq5,trail20 stop (variable),2026-10-16,440,35%,-9.6%,11.6%,-32%,-8.3%,watch not tradable,volume_ignition_upper_locks.md
+volume_locks_V1_liq5,60 sessions,2026-10-16,237,38%,-10.3%,10.5%,-71%,+1.0%,nothing,volume_ignition_upper_locks.md
+volume_locks_V2_liq5,60 sessions,2026-10-16,208,39%,-11.0%,10.6%,-71%,+0.3%,nothing,volume_ignition_upper_locks.md
+volume_locks_V3_liq5,60 sessions,2026-10-16,465,42%,-7.1%,7.5%,-71%,+1.5%,nothing,volume_ignition_upper_locks.md
+volume_locks_V4_liq5,60 sessions,2026-10-16,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable,volume_ignition_upper_locks.md
+volume_locks_V1_liq1,trail20 stop (variable),2026-10-16,456,30%,-10.9%,9.2%,-43%,-6.2%,nothing,volume_ignition_upper_locks.md
+volume_locks_V2_liq1,trail20 stop (variable),2026-10-16,413,31%,-12.8%,9.0%,-43%,-7.2%,nothing,volume_ignition_upper_locks.md
+volume_locks_V3_liq1,trail20 stop (variable),2026-10-16,748,34%,-10.5%,8.7%,-43%,-4.5%,nothing,volume_ignition_upper_locks.md
+volume_locks_V4_liq1,trail20 stop (variable),2026-10-16,738,36%,-9.1%,12.3%,-32%,-7.3%,watch not tradable,volume_ignition_upper_locks.md
+volume_locks_V1_liq1,60 sessions,2026-10-16,446,39%,-6.8%,8.5%,-71%,+1.0%,nothing,volume_ignition_upper_locks.md
+volume_locks_V2_liq1,60 sessions,2026-10-16,406,41%,-8.7%,9.1%,-71%,+0.0%,nothing,volume_ignition_upper_locks.md
+volume_locks_V3_liq1,60 sessions,2026-10-16,736,43%,-5.2%,7.3%,-71%,+2.0%,nothing,volume_ignition_upper_locks.md
+volume_locks_V4_liq1,60 sessions,2026-10-16,734,46%,-1.7%,4.6%,-60%,-0.5%,watch not tradable,volume_ignition_upper_locks.md
+volume_locks_V1_strict10_liq5,trail20 stop (variable),2026-10-16,129,29%,-11.7%,,,,same conclusion (literal +10% sensitivity),volume_ignition_upper_locks.md
+volume_locks_V4_strict10_liq1,trail20 stop (variable),2026-10-16,377,,-6.6%,,,,same conclusion (literal +10% sensitivity),volume_ignition_upper_locks.md
+results_gap_up,20 sessions,2026-10-16,41,51%,+0.7%,5%,-23.7%,+1.7%,watch (20-day exit has no edge),results_gap_and_policy.md
+results_gap_up,60 sessions,2026-10-16,37,81%,+16.6%,14%,-44.1%,+10.0%,watch (p 0.11 vs same-year random),results_gap_and_policy.md
+results_gap_up,120 sessions,2026-10-16,37,78%,+18.4%,22%,-38.2%,+21.0%,watch (gone at 120d per file),results_gap_and_policy.md
+results_gap_up_trail20,trail20 stop (variable),2026-10-16,38,68%,+14.5%,26%,-20.9%,+9.6%,watch (exit that worked per file),results_gap_and_policy.md
+results_upper_lock_results_day,60 sessions,2026-10-16,31,61%,+5.8%,10%,-21.9%,+3.4%,nothing,results_gap_and_policy.md
+results_upper_lock_results_day,120 sessions,2026-10-16,29,62%,+6.5%,21%,-48.8%,+10.2%,nothing,results_gap_and_policy.md
+results_upper_lock_results_day_trail20,trail20 stop (variable),2026-10-16,33,48%,-2.0%,12%,-23.1%,-0.7%,nothing,results_gap_and_policy.md
+results_loss_to_profit,60 sessions,2026-10-16,49,59%,+5.7%,12%,-32.5%,+4.0%,nothing as an entry rule,results_gap_and_policy.md
+results_loss_to_profit,120 sessions,2026-10-16,47,60%,+8.8%,17%,-70.6%,+12.0%,nothing as an entry rule,results_gap_and_policy.md
+results_loss_to_profit_trail20,trail20 stop (variable),2026-10-16,47,43%,-2.9%,19%,-24.0%,-1.3%,nothing as an entry rule,results_gap_and_policy.md
+results_all_liquid_baseline,60 sessions,2026-10-16,1223,59%,+4.7%,7%,-72.1%,,baseline (no verdict word),results_gap_and_policy.md
+results_all_liquid_baseline_trail20,trail20 stop (variable),2026-10-16,1169,46%,-2.5%,16%,-38.5%,,baseline (no verdict word),results_gap_and_policy.md
+policy_refinery_upgrade_2026,20 sessions,2026-10-16,1,,+31.3%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_refinery_upgrade_2026,60 sessions,2026-10-16,1,,+61.0%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_circular_debt_signed_2025,20 sessions,2026-10-16,1,,-2.1%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_circular_debt_signed_2025,60 sessions,2026-10-16,1,,+15.7%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_circular_debt_signed_2025,120 sessions,2026-10-16,1,,+17.5%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_construction_package_2020,20 sessions,2026-10-16,1,,+5.3%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_construction_package_2020,60 sessions,2026-10-16,1,,+3.1%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_construction_package_2020,120 sessions,2026-10-16,1,,+27.7%,,,,candidate thin (single event; file),results_gap_and_policy.md
+policy_imf_sba_2023,20 sessions,2026-10-16,1,,+1.4%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_imf_sba_2023,60 sessions,2026-10-16,1,,+6.1%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_imf_sba_2023,120 sessions,2026-10-16,1,,+9.6%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_omc_margin_2023,20 sessions,2026-10-16,1,,-0.2%,,,,not tradable (file: lost 21% at 120d),results_gap_and_policy.md
+policy_omc_margin_2023,60 sessions,2026-10-16,1,,-2.7%,,,,not tradable (file: lost 21% at 120d),results_gap_and_policy.md
+policy_omc_margin_2023,120 sessions,2026-10-16,1,,-21.0%,,,,not tradable (file: lost 21% at 120d),results_gap_and_policy.md
+policy_super_tax_ruling_2026,20 sessions,2026-10-16,1,,-5.3%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_super_tax_ruling_2026,60 sessions,2026-10-16,1,,-0.2%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_super_tax_ruling_2026,120 sessions,2026-10-16,1,,-4.7%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_auto_aidep_2021,20 sessions,2026-10-16,1,,-0.6%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_auto_aidep_2021,60 sessions,2026-10-16,1,,-10.3%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_auto_aidep_2021,120 sessions,2026-10-16,1,,-4.4%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_wellhead_gas_2026,20 sessions,2026-10-16,1,,+2.1%,,,,none reliable (60 and 120 sessions open),results_gap_and_policy.md
+policy_gas_circular_debt_plan_2026,20 sessions,2026-10-16,1,,-2.2%,,,,pending (file: mirrors CIRCDEBT25),results_gap_and_policy.md
+policy_ipp_probe_2020,20 sessions,2026-10-16,1,,-4.1%,,,,negative power policy worth exiting (file),results_gap_and_policy.md
+policy_ipp_probe_2020,60 sessions,2026-10-16,1,,-8.6%,,,,negative power policy worth exiting (file),results_gap_and_policy.md
+policy_ipp_probe_2020,120 sessions,2026-10-16,1,,-18.2%,,,,negative power policy worth exiting (file),results_gap_and_policy.md
+policy_ipp_ppa_terminations_2024,20 sessions,2026-10-16,1,,-2.1%,,,,negative power policy worth exiting (file),results_gap_and_policy.md
+policy_ipp_ppa_terminations_2024,60 sessions,2026-10-16,1,,-21.2%,,,,negative power policy worth exiting (file),results_gap_and_policy.md
+policy_ipp_ppa_terminations_2024,120 sessions,2026-10-16,1,,-22.8%,,,,negative power policy worth exiting (file),results_gap_and_policy.md
+policy_super_tax_10pct_2022,20 sessions,2026-10-16,1,,-0.7%,,,,not tradable (file: tax announcements),results_gap_and_policy.md
+policy_super_tax_10pct_2022,60 sessions,2026-10-16,1,,+13.3%,,,,not tradable (file: tax announcements),results_gap_and_policy.md
+policy_super_tax_10pct_2022,120 sessions,2026-10-16,1,,+2.3%,,,,not tradable (file: tax announcements),results_gap_and_policy.md
+policy_cement_fed_2024,20 sessions,2026-10-16,1,,-4.3%,,,,not tradable (file: tax announcements),results_gap_and_policy.md
+policy_cement_fed_2024,60 sessions,2026-10-16,1,,+0.6%,,,,not tradable (file: tax announcements),results_gap_and_policy.md
+policy_cement_fed_2024,120 sessions,2026-10-16,1,,+34.7%,,,,not tradable (file: tax announcements),results_gap_and_policy.md
+policy_gidc_verdict_2020,20 sessions,2026-10-16,1,,-0.9%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_gidc_verdict_2020,60 sessions,2026-10-16,1,,+0.7%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_gidc_verdict_2020,120 sessions,2026-10-16,1,,-10.2%,,,,none reliable (file P verdict),results_gap_and_policy.md
+policy_feed_gas_rise_2024,20 sessions,2026-10-16,1,,+5.4%,,,,rose against the expected sign (file),results_gap_and_policy.md
+policy_feed_gas_rise_2024,60 sessions,2026-10-16,1,,+20.8%,,,,rose against the expected sign (file),results_gap_and_policy.md
+policy_feed_gas_rise_2024,120 sessions,2026-10-16,1,,+28.8%,,,,rose against the expected sign (file),results_gap_and_policy.md
+policy_diesel_crack_cap_2026,20 sessions,2026-10-16,1,,+0.7%,,,,pending (60 and 120 sessions open),results_gap_and_policy.md
+policy_diesel_cut_2026,20 sessions,2026-10-16,1,,+29.5%,,,,rose against the expected sign (file),results_gap_and_policy.md
+policy_diesel_cut_2026,60 sessions,2026-10-16,1,,+19.7%,,,,rose against the expected sign (file),results_gap_and_policy.md
+policy_diesel_cut_2026,120 sessions,2026-10-16,1,,+19.0%,,,,rose against the expected sign (file),results_gap_and_policy.md
+policy_auto_policy_2026_31,20 sessions,2026-10-16,1,,-3.9%,,,,pending (no measured analogue),results_gap_and_policy.md
+policy_first_cut_2020_kmi,20 sessions,2026-10-16,1,,+4.5%,,,,candidate (first cut of a cycle; file),results_gap_and_policy.md
+policy_first_cut_2020_kmi,60 sessions,2026-10-16,1,,+16.2%,,,,candidate (first cut of a cycle; file),results_gap_and_policy.md
+policy_first_cut_2020_kmi,120 sessions,2026-10-16,1,,+46.5%,,,,candidate (first cut of a cycle; file),results_gap_and_policy.md
+policy_first_cut_2024_kmi,20 sessions,2026-10-16,1,,+6.5%,,,,candidate (first cut of a cycle; file),results_gap_and_policy.md
+policy_first_cut_2024_kmi,60 sessions,2026-10-16,1,,+6.8%,,,,candidate (first cut of a cycle; file),results_gap_and_policy.md
+policy_first_cut_2024_kmi,120 sessions,2026-10-16,1,,+41.8%,,,,candidate (first cut of a cycle; file),results_gap_and_policy.md
+policy_cut_after_pause_2025_kmi,20 sessions,2026-10-16,1,,+4.2%,,,,the third cut was nothing (file),results_gap_and_policy.md
+policy_cut_after_pause_2025_kmi,60 sessions,2026-10-16,1,,-10.8%,,,,the third cut was nothing (file),results_gap_and_policy.md
+policy_cut_after_pause_2025_kmi,120 sessions,2026-10-16,1,,+0.5%,,,,the third cut was nothing (file),results_gap_and_policy.md
+policy_msci_frontier_2021_kmi,20 sessions,2026-10-16,1,,-5.7%,,,,no verdict word (file P verdict: none reliable),results_gap_and_policy.md
+policy_msci_frontier_2021_kmi,60 sessions,2026-10-16,1,,-8.2%,,,,no verdict word (file P verdict: none reliable),results_gap_and_policy.md
+policy_msci_frontier_2021_kmi,120 sessions,2026-10-16,1,,-5.4%,,,,no verdict word (file P verdict: none reliable),results_gap_and_policy.md
+policy_sector_expected_positive_group,20 sessions,2026-10-16,9,,-0.2%,,,,nothing net of 1.0% cost (file),results_gap_and_policy.md
+policy_sector_expected_positive_group,60 sessions,2026-10-16,7,,+3.1%,,,,nothing net of 1.0% cost (file),results_gap_and_policy.md
+policy_sector_expected_positive_group,120 sessions,2026-10-16,6,,+2.6%,,,,nothing net of 1.0% cost (file),results_gap_and_policy.md
