@@ -114,3 +114,84 @@ From a chat with web search only: reading PLAYBOOK.md, CATALOGUE.md, REGIME_TURN
 ## 11. File map
 
 See section 12 below, generated from `git ls-files` with one line per file or group and a tag. CORE files, the six that go into the orchestrator's project knowledge: PLAYBOOK.md, PICKS.md, knowledge/HOW_TO_THINK.md, knowledge/CATALOGUE.md, knowledge/REGIME_TURN_PLAYBOOK.md, and this file. REPORT.md and tests/FACTS.md are the first REFERENCE files to open when a number is needed.
+
+
+## 12. File map (2,436 tracked files; `git ls-files`, 19 Oct 2026)
+
+Tags: **CORE** goes into the orchestrator's project knowledge (six files); **REFERENCE** stays in the repo and is opened when needed; **ARCHIVE** is superseded, historical or raw output. data/raw/ (filings, PDFs) is gitignored and not in the repo.
+
+### Root
+
+| Path | What it is | Tag |
+|---|---|---|
+| PLAYBOOK.md | The operating rules on one page: the book, the six-check reflex, the regime-turn checklist, exits, the weekly loop, what not to do | CORE |
+| PICKS.md | v4 buy report (19 Oct): core LUCK, MEBL, MARI; reserve for the turn; one conditional opportunity; triggers; dates; plain language | CORE |
+| ORCHESTRATOR_HANDOFF.md | This file | CORE |
+| REPORT.md | The evidence-backed account of how money is made on PSX, 11 sections, every number from a test file | REFERENCE, first to open for a number |
+| knowledge/HOW_TO_THINK.md | How the investor thinks, how the research went wrong and was corrected, the thinking rules, the alignment questions, what each phase taught (13 sections) | CORE |
+| knowledge/CATALOGUE.md | The if-then casebook of nine situation types with paths, entry and exit hypotheses, failure twins and cases; read its status box first | CORE |
+| knowledge/REGIME_TURN_PLAYBOOK.md | Four real turns vs four false bottoms, the signal checklist, leader sequence, entry in thirds, exits, today's reading | CORE |
+| CLAUDE.md | Entry point and reading order for any model; rules; environment and the PSX API trick | REFERENCE |
+| AGENTS.md | Same brief for non-Claude agents | REFERENCE |
+| HANDOFF.md | Session state and continue points, dated updates to 19 Oct | REFERENCE |
+| RUNBOOK.md | The weekly loop step by step (refresh, score, scan, calendar, underwrite, freeze, email format, maintenance) | REFERENCE |
+| DECISIONS.md | Dated log of every course change with reason | REFERENCE |
+| sector_map.md | 16-sector ranking and verdicts, 17 Oct | REFERENCE |
+| PLAN.md | The original plan (17 Oct), superseded by HOW_TO_THINK | ARCHIVE |
+| .claude/skills/psx-weekly/SKILL.md; knowledge/SKILL_psx_weekly.md (identical copy) | The weekly judgment loop as a skill a chat can run | REFERENCE |
+
+### knowledge/
+
+| Path | What it is | Tag |
+|---|---|---|
+| knowledge/lessons.md | 25 lessons, each a mistake made and the rule it produced | REFERENCE, read before any analysis |
+| knowledge/QUESTIONS.md | 42 questions an experienced investor asks before a call, with evidence weights | REFERENCE |
+| knowledge/winners/ (49 cases + 6 syntheses `_*.md`) | Hindsight case studies of big runs by type; the syntheses hold each type's shared signature and rules | REFERENCE |
+| knowledge/regime_turns/ (4) | The 2019, 2020, 2022-23 and 2024 turns week by week, with the present read | REFERENCE |
+| knowledge/situations/ (12 cases + INDEX.md) | Dated point-in-time situation cases (2019 bottom to EPCL 2026) | REFERENCE |
+| knowledge/companies/ (13 cards, 20 `*_quality.md`, quality_scores.csv, QUALITY_README.md) | Underwriting cards with red-team sections; business-quality records and scores | REFERENCE |
+| knowledge/sectors/ (16 notes + _unresolved_gaps.md) | Sector levers, state, catalysts, exposed names, past episodes, with Codex gap resolutions | REFERENCE |
+| knowledge/playbooks/ (17) | strategy.md, strategy_candidates.md (pre-registered rules), active_trading.md, short_term.md, deals.md, holdco_discounts.md, sector_rotation.md, catalyst_trade.md (refiner retrospective), situation_engine.md, replay_exam.md, practitioner_signals.md, actors_and_incentives.md; reviews: critic_review.md (Codex), consultant_review.md (Fable), astra_peer_review.md, astra_catalogue_review.md, picks_redteam_codex.md | REFERENCE (reviews: REFERENCE, they changed decisions) |
+
+### tests/
+
+| Path | What it is | Tag |
+|---|---|---|
+| tests/FACTS.md | Headline numbers from all 19+ tests, verbatim, with verdict words | REFERENCE, first to open for a number |
+| tests/BASE_RATES.csv | 395 rows of measured odds by situation type and horizon | REFERENCE |
+| tests/*.md (30 write-ups) | One per test: seed_audit, refiner_steel_retrospective, sector_momentum_regime, commodity_pkr_sensitivity, flows_predict_sectors, rate_cycle_episodes, index_recomposition_events, calendar_effects, size_liquidity, value_timestamped, results_surprise_drift, insider_cluster_buying, dividend_runup_exdate, quality_within_sector, compounders, corporate_events, results_gap_and_policy, volume_ignition_upper_locks, noise_map_shock_rebound, winners_case_control, winners_population, winners_2026_postmortem, system_walkforward (with audit and rebench), fixed_capital_runs, oracle_and_good_case, active_trading_codex, rs50k_last_year, pattern_mining_daily, informed_capital, replay_pilot_postmortem | REFERENCE |
+| tests/out/ (103 raw outputs, incl. replay_pilot/, replay_2026/, replay_2026_v2/, engine scans) | Raw run output behind every write-up | ARCHIVE |
+
+### catalysts/
+
+| Path | What it is | Tag |
+|---|---|---|
+| catalysts/frozen_predictions.csv | 42 frozen calls with probabilities; append-only; outcome columns filled as events land | REFERENCE |
+| catalysts/scorecard.md | Brier scoring rules and the (empty) record | REFERENCE |
+| catalysts/catalyst_calendar.csv (126 rows), dividend_calendar.csv (69) | Dated events by sector and ticker; expected ex-dates and net amounts | REFERENCE |
+| catalysts/draft_predictions.csv | Drafts before freezing | ARCHIVE |
+
+### data/ and scripts/
+
+| Path | What it is | Tag |
+|---|---|---|
+| data/prices_raw/ (313), prices_delisted/ (315), prices_listed_missing/ (55) | Daily OHLCV from the PSX portal | REFERENCE |
+| data/panel_close*.parquet, panel_volume.parquet; data/corporate_actions.csv and notes | Price panels, raw and adjusted; the corporate-actions table | REFERENCE |
+| data/announcements.parquet (225,594 rows) | Timestamped PSX announcements 2005 to 2026 with classes | REFERENCE |
+| data/daily_table.parquet/ (10 partitions) + DAILY_TABLE_NOTES.md | 577,794 stock-days of features and forward paths | REFERENCE |
+| data/fundamentals/ | quarterly_eps.csv (129 names) and notes | REFERENCE |
+| data/macro/ (40 series + README, INDEX_NOTES) | Rates, bills, CPI, reserves, current account, FX, oil, commodities, indices (TR vs PR), NCCPL flows | REFERENCE |
+| data/index_changes.csv, index_recomp_log.csv, index_members/ (50), kmi_allshare_2026-06-05.csv, INDEX_DATA_NOTES.md | Index membership history | REFERENCE |
+| data/winners_library.csv (382 liquid runs), winners_library_thin.csv (1,376) | The winners population with path metrics | REFERENCE |
+| data/deals_history.csv, delistings.csv, insider_trades.csv (+ docs, universe), events_shocks*.csv, costs.md, symbols.csv, payouts_raw.csv | Supporting datasets with their notes | REFERENCE |
+| data/asof/ (42 date folders) | Point-in-time packs and bundles; REPLY*.json are replay outputs | REFERENCE (REPLY files ARCHIVE) |
+| data/intraday/ | Tick archive from the 16 Oct 2026 session | REFERENCE |
+| scripts/psx_api.py, prices.py, asof.py, replay_bundle.py, score_replay.py, daily_table.py, engine.py, walkforward.py, walkforward_rebench.py, screen_breakout.py, sector_momentum.py, collect_intraday.py, refresh_prices.py, fetch_*.py, macro_*.py, idx_*.py, build_*.py, survivorship.py | The pipeline (CLAUDE.md Environment lists the entry points) | REFERENCE |
+| scripts/tests/ (28), scripts/ca/ (9), scripts/codex/ (5) | One script per test; the corporate-actions pipeline; Codex's independent engines | REFERENCE |
+| scripts/audit/ (17), scripts/walkforward_v0.py, scripts/refetch_ids.py, scripts/insider_sample.py, insider_dl.py, _tmp_kmi.json, data/insider_trades_run1.csv, data/insider_pdf_reads.txt, picks/PICKS_v3.md | Seed-era audit scripts, earlier versions, one-off fixes | ARCHIVE |
+
+### seed/
+
+| Path | What it is | Tag |
+|---|---|---|
+| seed/CLAUDE.md, DATA_README.md, LESSONS.md, FORECAST_REGISTER.md, PSX_STATE (living state, read first).md, scripts/ (10), data/ (538) | The orchestrator's original brief, state, register, scripts and data, untouched | ARCHIVE (FORECAST_REGISTER.md stays referenced for scoring) |

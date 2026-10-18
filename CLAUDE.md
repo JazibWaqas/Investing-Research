@@ -2,7 +2,7 @@
 
 This repo is the memory of a research program on how money is made on the Pakistan Stock Exchange, for a 22-year-old Karachi investor with Rs50k now and Rs50k a month, KMI All Share names only, high risk appetite. Any model (Claude, GPT, other) starting a fresh session should read, in order (and should not launch work before mirroring its understanding back to the user and getting an explicit go):
 
-0. `knowledge/HOW_TO_THINK.md` — how this investor thinks, how the research went wrong and was corrected, the thinking rules, and the questions to ask him. Read it first and whole; it is the lens for everything below.
+0. `ORCHESTRATOR_HANDOFF.md` (the dense summary of everything established) and `PLAYBOOK.md` (the operating rules on one page), then `knowledge/HOW_TO_THINK.md` — how this investor thinks, how the research went wrong and was corrected, the thinking rules, and the questions to ask him. Read it first and whole; it is the lens for everything below.
 1. `knowledge/CATALOGUE.md` (read its status box first) and `knowledge/REGIME_TURN_PLAYBOOK.md` — the if-then catalogue of situation types with their measured paths, entries, exits and cases; the operating knowledge. `knowledge/winners/` holds the 55 cases behind it.
 2. `REPORT.md` — the model of how money is made on PSX, with evidence.
 3. `PICKS.md` — current positions and watchlist, frozen with probabilities.
