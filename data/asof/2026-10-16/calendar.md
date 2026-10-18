@@ -1,0 +1,75 @@
+# Calendar as of 2026-10-16
+
+- Next MPC: see SBP calendar
+
+## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
+
+- 2026-09-17 BIFO: Meeting of the Board of Directors
+- 2026-09-17 TRSM: Board of Directors Meeting for the year ended June 30, 2026.
+- 2026-09-17 BBFL: Board Meeting
+- 2026-09-18 PSO: Board Meeting
+- 2026-09-18 SEARL: Board Meeting
+- 2026-09-18 GATM: BOARD MEETING AND CLOSED PERIOD
+- 2026-09-18 GCIL: Meeting of the Board of Directors - GHANI CHEMICAL INDUSTRIES LIMITED
+- 2026-09-18 GCWL: Meeting of the Board of Directors - GHANI CHEMWORLD LIMITED
+- 2026-09-21 DCL: Board Meeting
+- 2026-09-21 DFSM: Board Meeting
+- 2026-09-21 BFBIO: Board Meeting
+- 2026-09-21 NETSOL: Board Meeting
+- 2026-09-21 JDMT: Board Meeting Rescheduled
+- 2026-09-22 PREMA: Board Meeting
+- 2026-09-22 GGL: Meeting of the Board of Directors - GHANI GLOBAL HOLDINGS LIMITED
+- 2026-09-22 GDL: Board Meeting
+- 2026-09-23 SYM: Board Meeting
+- 2026-09-23 SGPL: Board Meeting
+- 2026-09-23 KOHTM: Board Meeting
+- 2026-09-23 NML: Board Meeting
+- 2026-09-23 TREET: Notice of Board Meeting of Treet Corporation Limited FY 25-26
+- 2026-09-23 TOMCL: Board Meeting
+- 2026-09-23 ZAL: Board Meeting
+- 2026-09-24 CLOV: Board of Directors Meeting and Closed Period
+- 2026-09-25 KEL: Board Meeting Other Than Financial Results REVOKED
+- 2026-09-28 CPHL: Board Meeting
+- 2026-09-28 WASL: Board Meeting
+- 2026-09-28 QTECH: Board Meeting
+- 2026-09-28 BNL: Board Meeting
+- 2026-09-29 IMAGE: Board Meeting
+- 2026-09-29 ASTM: Board Meeting
+- 2026-09-29 MEHT: Board Meeting
+- 2026-09-30 BECO: Board Meeting
+- 2026-10-01 KEL: Board Meeting Other Than Financial Results
+- 2026-10-01 MWMP: Board Meeting
+- 2026-10-02 MARI: Notice of Emergent Board Meeting
+- 2026-10-02 EFERT: BOARD MEETING FOR THE ANNOUNCEMENT OF THE FINANCIAL RESULTS FOR THE NINE MONTHS ENDED SEPTEMBER 30, 2026
+- 2026-10-05 GCWL: EMERGENT (SHORT NOTICE) BOARD OF DIRECTORS MEETING OTHER THAN FINANCIAL RESULTS
+- 2026-10-06 EPQL: Board Meeting for the announcement of the financial results for the nine months ended September 30, 2026
+- 2026-10-07 EPCL: Board Meeting - Engro Polymer & Chemicals Limited
+- 2026-10-08 ATRL: BOARD MEETING AND CLOSED PERIOD
+- 2026-10-08 ACPL: Board Meeting
+- 2026-10-08 LOTCHEM: Board Meeting / Closed Period
+- 2026-10-09 NRL: Board Meeting
+- 2026-10-12 MEBL: NOTICE OF BOARD MEETING AND CLOSED PERIOD - MEEZAN BANK LIMITED
+- 2026-10-12 FABL: Board of Directors Meeting of Faysal Bank Limited
+- 2026-10-12 PRL: Board Meeting
+- 2026-10-12 KSBP: Board Meeting
+- 2026-10-13 NRSL: Board Meeting and Closed Period
+- 2026-10-13 ISL: Board Meeting
+- 2026-10-14 POWER: Board Meeting
+- 2026-10-14 ILP: Notice of Board Meeting for the First Quarter ended September 30, 2026 / Closed Period
+- 2026-10-14 SEARL: Board Meeting
+- 2026-10-15 FCEPL: Board Meeting 3rd Quarter 2026
+- 2026-10-15 CHCC: Board Meeting
+- 2026-10-15 BIFO: Meeting of the Board of Directors
+- 2026-10-15 SPEL: Board Meeting
+- 2026-10-15 INIL: Board Meeting
+- 2026-10-15 MTL: Board Meeting
+- 2026-10-15 ITANZ: Board Meeting
+- 2026-10-16 GATM: BOARD MEETING AND CLOSED PERIOD
+- 2026-10-16 SGF: Board Meeting
+- 2026-10-16 SRVI: Board Meeting
+- 2026-10-16 TOWL: BOARD MEETING
+- 2026-10-16 PRL: Board Meeting Rescheduled
+- 2026-10-16 PIOC: Notice of Board Meeting
+- 2026-10-16 LCI: Board Meeting / Closed Period
+- 2026-10-16 JDMT: Board Meeting
+- 2026-10-16 BIPL: Board Meeting - BankIslami Pakistan Limited

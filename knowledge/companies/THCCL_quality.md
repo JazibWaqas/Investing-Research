@@ -1,10 +1,10 @@
 # THCCL (Thatta Cement): quality of management and sponsor
 
-Written 18 Oct 2026. Sources: annual reports FY2021 to FY2025 (AR), corporate briefing decks Nov 2023, Nov 2024, Oct 2025 (CBS), PSX notices, VIS report 18 Sep 2025, all in `data/raw/filings/quality/THCCL/`, never executed. Notices are scanned and were OCR'd; AR2025 financial statements are images and were not read. No existing card.
+Written 18 Oct 2026. Sources: annual reports FY2021 to FY2025 (AR), briefing decks 2023 to 2025 (CBS), PSX notices (scanned, OCR'd), VIS report 18 Sep 2025, in `data/raw/filings/quality/THCCL/`, never executed. AR2025 financial statements are images and were not read. No existing card.
 
 ## People and record
 
-- **CEO Kamran Munir Ansari.** Director since 15 Oct 2021, CEO since 1 Oct 2023 (PSX 28 Sep 2023; Simply Wall St). Prior career: unverified. Predecessor Muhammad Aslam Shaikh served from Dec 2019 (Cemnet), so five CEO changes since 2016 (PSX titles); the current one is the longest-lasting in years.
+- **CEO Kamran Munir Ansari.** Director since 15 Oct 2021, CEO since 1 Oct 2023 (PSX 28 Sep 2023; Simply Wall St). Prior career: unverified. Predecessor Muhammad Aslam Shaikh served from Dec 2019 (Cemnet). PSX shows CEO appointment notices in Oct 2016, Mar 2018, Nov 2018, Dec 2019, Oct 2021 and Sep 2023.
 - **Sponsors.** Sky Pak Holding (21.2%) and Al-Miftah Holding (14.9%), with Golden Globe and Rising Star, hold about 54% (AR2024); they bought from Arif Habib in 2012 (World Cement). The people behind the holdcos: unverified. Chair Khawaja Muhammad Salman Younis.
 - **CFO churn.** PSX notices show changes in Jan 2020, Oct 2022, Oct 2023, Nov 2024, Jul 2026 and Sep 2026.
 - **Skin in the game.** Ansari bought 1.01m shares at Rs14 to 17 in Oct-Nov 2023 (Rs16m) and 375k at Rs199.6 in Feb 2025 (Rs75m). Younis bought seven times, Mar 2024 to Sep 2026 (`insider_trades.csv`).
@@ -20,14 +20,13 @@ Written 18 Oct 2026. Sources: annual reports FY2021 to FY2025 (AR), corporate br
 | Sep 2025 | Rs5.5bn sukuk for expansion or a listed operating company | Closed 13 Oct 2025; 28% of Pakistan Services (PC Hotels) bought that day | VIS, PSX 13 and 14 Oct 2025 |
 | Dec 2025 | Extra 7.5MW wind; stake "nearly doubled" | Wind status unverified; PSEL 1,240 vs cost 710 on 31 Dec (+75%) | PSX 4 and 31 Dec 2025 |
 
-Operational promises were kept. The cement outlook sections are boilerplate and carry no numbers.
+Operational promises were kept; the outlook sections carry no numbers.
 
 ## Big capital decisions
 
 - **Buyback.** Rs277m at about Rs3.7 split-adjusted; the stock reached Rs99.4 (Oct 2025), now Rs66. The 75m treasury shares (about Rs5bn) were not cancelled and back the sukuk (VIS).
 - **Renewables.** Cost-to-sales moved only 71.2% to 71.6% in FY25, so savings are not yet visible; capex Rs1.5bn in FY25.
-- **Pakistan Services (PSEL).** 9.1m shares at Rs710, Rs6.47bn, a discount to Rs890 to 1,125 market that week; now Rs990, +39% on paper (about Rs9.0bn, a third of the Rs28bn market cap). But no board seat, an Islamabad High Court freeze (CEO notice 4 Dec 2025), and a Sep 2026 in-principle "restructuring" that press says would hand over PC Karachi and Rawalpindi (unverified). Funded half by debt at 6M KIBOR + 2.5%.
-- **Small.** Bought 26.09% of Thatta Power, to 88.52%, Dec 2024 (price unverified); tractor assembly subsidiary (Rs500m capital; loans up to Rs750m approved).
+- **Pakistan Services (PSEL).** 9.1m shares at Rs710, Rs6.47bn, below the Rs890 to 1,125 traded around the deal; now Rs990, +39% on paper (about Rs9.0bn, a third of the Rs28bn market cap). But no board seat, an Islamabad High Court freeze (CEO notice 4 Dec 2025), and a Sep 2026 in-principle "restructuring" that press says would hand over PC Karachi and Rawalpindi (unverified). Funded half by debt at 6M KIBOR + 2.5%.
 
 ## Minorities
 
@@ -38,7 +37,7 @@ Operational promises were kept. The cement outlook sections are boilerplate and 
 
 ## Disclosure
 
-Quarterly results arrive in about 4 weeks; yearly briefings with decks since 2022; prompt notices on projects and rumours (21 Nov 2024, 4 Dec 2025). Negatives: the FY24 annual-report transmission was revoked (24 Sep 2024); AR2025 has placeholders ("Note ____") and an impossible asset valuation (Rs10.030 million); AGM extension sought 30 Sep 2026 and FY26 results not out; no guidance; PSEL economics undisclosed.
+Results in about 4 weeks; yearly briefings with decks; prompt notices on projects and rumours (21 Nov 2024, 4 Dec 2025). Negatives: the FY24 annual-report transmission was revoked (24 Sep 2024); AR2025 has placeholders ("Note ____") and an impossible asset valuation (Rs10.030 million); AGM extension sought 30 Sep 2026 and FY26 results not out; no guidance; PSEL economics undisclosed.
 
 ## Growth engine and what breaks it
 
