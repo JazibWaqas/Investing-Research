@@ -1,0 +1,111 @@
+date|type|subtype|rule|first_public|event|src|status
+2019-02-14|geopolitical|india_pakistan|N|attack ~14:45 PKT, news after close|Pulwama attack|rec|R
+2019-02-26|geopolitical|india_pakistan|S|~05:00 PKT ISPR statement, before open|Indian airstrike at Balakot|rec|R
+2019-02-27|geopolitical|india_pakistan|S|morning PKT, before open|Jets downed, pilot Abhinandan captured|rec|R
+2019-02-28|geopolitical|india_pakistan|N|~15:00-16:00 PKT in parliament, near close|Imran Khan announces Abhinandan release|rec|R
+2019-08-05|geopolitical|india_pakistan|S|~10:30 PKT, intraday|India revokes Article 370|rec|R
+2020-01-03|geopolitical|middle_east|S|~03:00 PKT, before open|US kills Soleimani|rec|R
+2021-08-15|geopolitical|afghan_iran_border|N|Sunday|Taliban take Kabul|rec|R
+2022-02-24|geopolitical|global|S|~08:00 PKT, before open|Russia invades Ukraine|rec|R
+2023-10-07|geopolitical|middle_east|N|Saturday|Hamas attack on Israel|rec|R
+2024-01-17|geopolitical|afghan_iran_border|S|Iranian strike night of 16 Jan, Pakistan statement morning 17 Jan|Iran strikes Panjgur, Pakistan condemns|rec|R
+2024-01-18|geopolitical|afghan_iran_border|S|~04:30 PKT, before open|Pakistan strikes inside Iran|rec|R
+2024-04-13|geopolitical|middle_east|N|Saturday night|Iran drone and missile attack on Israel|rec|R
+2024-10-01|geopolitical|middle_east|N|~21:30 PKT, after close|Iran missile barrage on Israel|rec|R
+2025-04-22|geopolitical|india_pakistan|N|~14:30 PKT, late intraday|Pahalgam attack|rec|R
+2025-04-23|geopolitical|india_pakistan|N|evening IST, after close|India suspends Indus Waters Treaty|rec|R
+2025-05-07|geopolitical|india_pakistan|S|~00:35 PKT, before open|Operation Sindoor (Indian strikes)|rec|R
+2025-05-10|geopolitical|india_pakistan|N|Saturday ~17:00 PKT|India-Pakistan ceasefire|rec|R
+2025-06-13|geopolitical|middle_east|S|~05:00 PKT, before open|Israel strikes Iran|rec|R
+2025-06-22|geopolitical|middle_east|N|Saturday night US, Sunday PKT|US strikes Iranian nuclear sites|rec|R
+2025-06-24|geopolitical|middle_east|S|early morning PKT, before open|Israel-Iran ceasefire|rec|R
+2025-10-12|geopolitical|afghan_iran_border|N|Sunday|Pakistan-Afghanistan border clashes|oct25|W
+2026-02-27|geopolitical|afghan_iran_border|S|early hours PKT, before open|Pakistan declares open war on Afghan Taliban (Operation Ghazab lil-Haq)|afg|W
+2026-02-28|geopolitical|middle_east|N|Saturday; PSX reacts Monday 2 Mar, circuit halt|US-Israel war on Iran begins, Hormuz closed|ians|W
+2026-03-09|geopolitical|middle_east|S|overnight oil spike, halt in first 7 minutes|Oil price shock, KSE-30 halt|mar9|W
+2026-04-12|geopolitical|middle_east|N|Sunday; talks ended after 21 hours, US port blockade|Islamabad US-Iran talks fail|apr13|W
+2026-07-08|geopolitical|middle_east|S|time not collected|US-Iran truce collapses|hz|R
+2026-07-14|geopolitical|middle_east|S|time not collected|Hormuz blockade reinstated (14-15 Jul)|hz|R
+2017-04-20|political|courts|S|time not collected|Panama case split verdict|rec|R
+2017-07-10|political|courts|N|JIT report filed; public 11 Jul|Panama JIT report|rec|R
+2017-07-28|political|courts|S|~11:30 PKT, intraday|Supreme Court disqualifies Nawaz Sharif|rec|R
+2018-07-25|political|election|N|election day (holiday), results night|General election 2018|rec|R
+2018-08-18|political|election|N|Saturday|Imran Khan sworn in|rec|R
+2022-03-08|political|no_confidence|N|afternoon, after close|No-confidence motion filed against Imran Khan|rec|R
+2022-04-03|political|no_confidence|N|Sunday|Deputy Speaker dismisses motion, assembly dissolved|rec|R
+2022-04-10|political|no_confidence|N|Sunday ~00:00 PKT|No-confidence succeeds, Imran Khan ousted|rec|R
+2022-05-25|political|protest|S|intraday|PTI long march|rec|R
+2022-09-28|political|finance_minister|N|evening|Miftah Ismail resigns, Dar returns|rec|R
+2022-11-03|political|protest|N|~16:00 PKT, after close|Imran Khan shot at rally|rec|R
+2022-11-24|political|military|N|afternoon|Asim Munir named army chief|rec|R
+2023-05-09|political|arrest|S|~13:30 PKT, intraday|Imran Khan arrested|rec|R
+2023-08-05|political|arrest|N|Saturday|Imran Khan convicted in Toshakhana case and arrested|rec|R
+2023-08-09|political|election|N|evening|National Assembly dissolved|rec|R
+2023-10-21|political|election|N|Saturday|Nawaz Sharif returns|rec|R
+2024-02-08|political|election|N|election day (holiday), result delay 9-11 Feb|General election 2024|rec|R
+2024-10-21|political|constitution|N|night|26th Amendment passed|rec|R
+2024-11-24|political|protest|N|Sunday|PTI Islamabad march|rec|R
+2024-11-26|political|protest|N|night|D-Chowk crackdown|rec|R
+2019-05-12|IMF|SLA|N|announcement time not collected, treated as after close|Staff-level agreement 2019 EFF|imff|F
+2019-07-03|IMF|board|N|as above|Board approves 2019 EFF|imff|F
+2021-02-16|IMF|SLA|N|as above|SLA, 2019 EFF resumes|imff|F
+2022-08-29|IMF|board|N|as above|Board 7th-8th reviews|imff|F
+2023-06-30|IMF|SLA|N|Friday night|SLA 2023 SBA|imff|F
+2023-07-12|IMF|board|N|as above|Board approves 2023 SBA|imff|F
+2023-11-15|IMF|SLA|N|as above|SLA SBA review|imff|F
+2024-07-12|IMF|SLA|N|as above|SLA 2024 EFF|imff|F
+2024-09-25|IMF|board|N|as above|Board approves 2024 EFF|imff|F
+2025-03-25|IMF|SLA|N|as above|SLA EFF review 1|imff|F
+2025-10-14|IMF|SLA|N|as above|SLA EFF review 2|imff|F
+2026-03-27|IMF|SLA|N|as above|SLA EFF review 3|imff|F
+2026-10-08|IMF|SLA|N|as above|SLA EFF review 4 (board pending)|imff|F
+2025-12-09|IMF|board|N|Reuters 9 Dec|Board completes review 2 (about USD 1.2bn)|imf25|W
+2018-10-08|IMF|decision|S|announced during 8 Oct session (index -3.4% that day)|Govt says it will approach the IMF|rec|R
+2022-07-13|IMF|SLA|N|13-14 Jul (sources differ)|Staff-level agreement, 7th-8th reviews|imf22|W
+2023-02-09|IMF|stall|N|mission ended without agreement|9th review mission ends with no SLA (default scare)|imf22|W
+2024-03-21|IMF|board|N|after close|Board completes SBA final review|rec|R
+2025-05-09|IMF|board|N|Friday evening; Monday also had the ceasefire|Board approves EFF review 1 and RSF|rec|R
+2018-02-23|external_policy|FATF|N|Paris plenary outcome after close|FATF decides to grey-list Pakistan|rec|R
+2018-06-29|external_policy|FATF|N|plenary closes|Pakistan placed on FATF grey list|rec|R
+2022-10-21|external_policy|FATF|N|evening PKT|FATF removes Pakistan from grey list|rec|R
+2024-12-18|external_policy|US|N|US morning, evening PKT|US sanctions on Pakistan missile programme entities|rec|R
+2025-04-02|external_policy|tariff|N|US evening|US Liberation Day tariffs (29% on Pakistan announced)|rec|R
+2025-07-31|external_policy|tariff|S|early PKT|US-Pakistan trade deal (19% tariff)|rec|R
+2020-02-26|covid|first_case|S|intraday|First Covid case in Pakistan|rec|R
+2020-03-11|covid|WHO|N|WHO declaration evening PKT|WHO declares pandemic|rec|R
+2020-03-16|covid|global_crash|S|global sell-off Monday|Global crash day|rec|R
+2020-03-23|covid|lockdown|S|Sindh lockdown starts|Provincial lockdowns|rec|R
+2017-05-31|MSCI|upgrade_effective|S|flows at the close|Pakistan joins MSCI Emerging Markets (effective)|rec|R
+2021-09-07|MSCI|downgrade_announce|N|US evening 7 Sep, PKT 8 Sep early|MSCI announces move to Frontier|msci|W
+2021-11-30|MSCI|downgrade_effective|S|flows at the close (Dawn: effective 1 Dec)|Pakistan leaves MSCI EM (effective)|msci|W
+2017-05-26|budget|budget|N|speech afternoon/evening, treated as after close|Budget FY18|rec|R
+2018-04-27|budget|budget|N|as above|Budget FY19|rec|R
+2018-09-18|budget|mini_budget|N|as above|Mini-budget|rec|R
+2019-06-11|budget|budget|N|as above|Budget FY20|rec|R
+2020-06-12|budget|budget|N|as above|Budget FY21|rec|R
+2021-06-11|budget|budget|N|as above|Budget FY22|rec|R
+2022-06-10|budget|budget|N|as above|Budget FY23|rec|R
+2023-02-14|budget|mini_budget|N|as above|Mini-budget|rec|R
+2023-06-09|budget|budget|N|as above|Budget FY24|rec|R
+2024-06-12|budget|budget|N|as above|Budget FY25|rec|R
+2025-06-10|budget|budget|N|as above|Budget FY26|rec|R
+2026-06-12|budget|budget|N|as above|Budget FY27|bud26|W
+2018-06-20|rating|downgrade|N|release time not collected, treated as after close|Moodys B3 stable to negative|fx|W
+2018-12-14|rating|downgrade|N|as above|Fitch B (negative) to B-|fx|W
+2019-02-04|rating|downgrade|N|as above|S&P B to B-|fx|W
+2019-12-02|rating|upgrade|N|as above|Moodys B3 negative to stable|fx|W
+2020-05-14|rating|downgrade|N|as above|Moodys B3 placed under review|fx|W
+2022-06-02|rating|downgrade|N|as above|Moodys B3 stable to negative|fx|W
+2022-07-28|rating|downgrade|N|as above|S&P B- stable to negative|fx|W
+2022-10-06|rating|downgrade|N|as above|Moodys B3 to Caa1|fx|W
+2022-10-21|rating|downgrade|N|as above (same day as FATF exit)|Fitch B- to CCC+|fx|W
+2022-12-22|rating|downgrade|N|as above|S&P B- to CCC+|fx|W
+2023-02-14|rating|downgrade|N|as above|Fitch CCC+ to CCC-|fx|W
+2023-02-28|rating|downgrade|N|as above|Moodys Caa1 to Caa3|fx|W
+2023-07-10|rating|upgrade|N|as above|Fitch CCC- to CCC|fx|W
+2024-07-29|rating|upgrade|N|as above|Fitch CCC to CCC+|fx|W
+2024-08-28|rating|upgrade|N|as above|Moodys Caa3 to Caa2 positive|fx|W
+2025-07-24|rating|upgrade|N|as above|S&P CCC+ to B-|fx|W
+2025-08-13|rating|upgrade|N|as above|Moodys Caa2 to Caa1|fx|W
+2026-07-22|rating|upgrade|N|as above|S&P B- to B|fx|W
+2026-08-24|rating|upgrade|N|as above|Moodys Caa1 to B3|fx|W

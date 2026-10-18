@@ -1,0 +1,520 @@
+NOISE MAP AND SHOCK REBOUND. Data to 2026-10-16 | KSE100 = total return index (INDEX_NOTES.md), KMIALLSHR total return. Panel: survivors only (flatters name and sector results).
+157 events 2016-10-18 to 2026-10-16; day 1 = first session that can price the news; base = close the session before; fall/bottom = lowest close in the first 20 sessions (day 1 = 1).
+Status: F repo file, W web-verified this run, R date recalled and not re-verified: {'R': 67, 'F': 59, 'W': 31}
+
+## Events by type
+type
+IMF                19
+MSCI                3
+SBP                34
+budget             12
+covid               4
+external_policy     6
+geopolitical       27
+political          20
+rating             19
+rupee              13
+
+## Event table (KSE100; reb = rise from the bottom; rev = sessions from bottom to regain the pre-event close; n/a where the window runs past 16 Oct 2026)
+| id | date | react | type/sub | event | d1 | fall20 | sess | reb5 | reb10 | reb20 | reb60 | rev | KMI d1 | KMI fall | breadth up | st |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 2017-04-20 | 2017-04-20 | political/courts | Panama case split verdict | +2.4% | +2.1% | 9 | +5.1% | +6.0% | +4.1% | -4.3% | 1 | +1.9% | +1.5% | 58% | R |
+| 2 | 2017-05-26 | 2017-05-29 | budget/budget | Budget FY18 | -0.9% | -14.7% | 17 | -0.6% | +3.0% | +1.4% | -4.8% | n/a | -0.5% | -13.7% | 41% | R |
+| 3 | 2017-05-31 | 2017-05-31 | MSCI/upgrade_effective | Pakistan joins MSCI Emerging Markets (effective) | -1.7% | -13.2% | 20 | +3.6% | -0.3% | +3.0% | -5.2% | n/a | -1.5% | -13.8% | 78% | R |
+| 4 | 2017-07-05 | 2017-07-05 | rupee/devaluation | USD/PKR +1.5% in one day | +0.0% | -3.5% | 7 | +2.9% | +4.8% | +4.2% | -7.2% | 3 | -0.1% | -3.5% | 89% | F |
+| 5 | 2017-07-10 | 2017-07-11 | political/courts | Panama JIT report | -4.7% | -5.4% | 3 | +2.9% | +4.8% | +4.2% | -7.2% | 13 | -4.2% | -5.3% | 89% | R |
+| 6 | 2017-07-28 | 2017-07-28 | political/courts | Supreme Court disqualifies Nawaz Sharif | +0.0% | -8.5% | 17 | -1.8% | -2.4% | +1.9% | -2.8% | n/a | +0.8% | -7.9% | 58% | R |
+| 7 | 2018-01-29 | 2018-01-30 | SBP/hike | MPC +25bp to 6.0% | -0.5% | -3.5% | 19 | +2.1% | +1.2% | +4.9% | -0.3% | 17 | -0.0% | -3.7% | 76% | F |
+| 8 | 2018-02-23 | 2018-02-26 | external_policy/FATF | FATF decides to grey-list Pakistan | -0.8% | -0.8% | 1 | +2.1% | +1.2% | +4.9% | -0.3% | 3 | -0.9% | -0.9% | 77% | R |
+| 9 | 2018-03-20 | 2018-03-20 | rupee/devaluation | USD/PKR +2.1% in one day | +1.8% | +1.8% | 1 | +1.9% | +4.0% | +2.6% | -1.4% | 1 | +0.9% | +0.9% | 62% | F |
+| 10 | 2018-04-27 | 2018-04-30 | budget/budget | Budget FY19 | -0.1% | -8.6% | 14 | +1.1% | +3.1% | +3.3% | +2.0% | n/a | -0.1% | -7.0% | 64% | R |
+| 11 | 2018-05-25 | 2018-05-28 | SBP/hike | MPC +50bp to 6.5% | +0.2% | -2.6% | 18 | +1.8% | -4.1% | -1.3% | -0.2% | 22 | -0.0% | -3.7% | 58% | F |
+| 12 | 2018-06-11 | 2018-06-11 | rupee/devaluation | USD/PKR +1.7% in one day | -0.0% | -10.6% | 19 | +1.0% | +3.0% | +8.8% | -1.3% | n/a | -0.3% | -9.7% | 99% | F |
+| 13 | 2018-06-20 | 2018-06-21 | rating/downgrade | Moodys B3 stable to negative | -1.5% | -8.6% | 13 | +1.0% | +3.0% | +8.8% | -1.3% | 14 | -1.2% | -8.5% | 99% | W |
+| 14 | 2018-06-29 | 2018-07-02 | external_policy/FATF | Pakistan placed on FATF grey list | -0.4% | -6.3% | 6 | +1.0% | +3.0% | +8.8% | -1.3% | 12 | -0.5% | -6.2% | 99% | R |
+| 15 | 2018-07-14 | 2018-07-16 | SBP/hike | MPC +100bp to 7.5% | -1.5% | -1.5% | 1 | +2.0% | +7.7% | +7.0% | -5.1% | 2 | -1.2% | -1.2% | 92% | F |
+| 16 | 2018-07-16 | 2018-07-16 | rupee/devaluation | USD/PKR +2.7% in one day | -1.5% | -1.5% | 1 | +2.0% | +7.7% | +7.0% | -5.1% | 2 | -1.2% | -1.2% | 92% | F |
+| 17 | 2018-07-25 | 2018-07-26 | political/election | General election 2018 | +1.8% | +1.5% | 15 | +1.4% | -0.5% | -1.7% | -1.3% | 1 | +1.4% | +1.4% | 27% | R |
+| 18 | 2018-08-18 | 2018-08-20 | political/election | Imran Khan sworn in | -0.1% | -4.5% | 18 | +1.0% | +0.1% | -7.1% | -6.2% | n/a | -0.0% | -5.3% | 6% | R |
+| 19 | 2018-09-18 | 2018-09-19 | budget/mini_budget | Mini-budget | +0.2% | -11.1% | 18 | +2.9% | +13.5% | +12.2% | +6.6% | 9 | +0.2% | -10.6% | 94% | R |
+| 20 | 2018-09-29 | 2018-10-01 | SBP/hike | MPC +100bp to 8.5% | -0.2% | -10.6% | 12 | +2.9% | +13.5% | +12.2% | +6.6% | 9 | -0.4% | -9.5% | 94% | F |
+| 21 | 2018-10-08 | 2018-10-08 | IMF/decision | Govt says it will approach the IMF | -3.4% | -6.5% | 7 | +2.9% | +13.5% | +12.2% | +6.6% | 6 | -3.4% | -5.6% | 94% | R |
+| 22 | 2018-10-09 | 2018-10-09 | rupee/devaluation | USD/PKR +5.3% in one day | +1.6% | -3.3% | 6 | +2.9% | +13.5% | +12.2% | +6.6% | 2 | +2.0% | -2.3% | 94% | F |
+| 23 | 2018-11-30 | 2018-12-03 | SBP/hike | MPC +150bp to 10.0% | -3.3% | -8.5% | 20 | +4.0% | +6.3% | +9.0% | +3.4% | 21 | -3.0% | -7.7% | 77% | F |
+| 24 | 2018-11-30 | 2018-11-30 | rupee/devaluation | USD/PKR +3.3% in one day | -0.4% | -8.5% | 20 | +1.0% | +5.1% | +8.3% | +2.6% | 24 | -0.1% | -7.8% | 78% | F |
+| 25 | 2018-12-14 | 2018-12-17 | rating/downgrade | Fitch B (negative) to B- | -0.7% | -3.9% | 10 | +4.0% | +6.3% | +9.0% | +3.4% | 6 | -0.4% | -3.9% | 76% | W |
+| 26 | 2019-01-31 | 2019-02-01 | SBP/hike | MPC +25bp to 10.25% | +0.8% | -5.2% | 18 | +2.3% | +0.6% | +0.7% | -8.0% | n/a | +0.5% | -4.4% | 47% | F |
+| 27 | 2019-02-04 | 2019-02-06 | rating/downgrade | S&P B to B- | -0.3% | -7.0% | 16 | +2.3% | +0.6% | +0.7% | -8.0% | n/a | -0.3% | -6.3% | 47% | W |
+| 28 | 2019-02-14 | 2019-02-15 | geopolitical/india_pakistan | Pulwama attack | -0.1% | -4.5% | 9 | +2.3% | +0.6% | +0.7% | -8.0% | n/a | -0.2% | -5.0% | 46% | R |
+| 29 | 2019-02-26 | 2019-02-26 | geopolitical/india_pakistan | Indian airstrike at Balakot | -2.0% | -3.7% | 20 | +0.6% | -3.2% | -3.2% | -10.3% | n/a | -2.3% | -6.2% | 24% | R |
+| 30 | 2019-02-27 | 2019-02-27 | geopolitical/india_pakistan | Jets downed, pilot Abhinandan captured | -0.3% | -1.8% | 19 | +0.6% | -3.2% | -3.2% | -10.3% | 2 | -0.8% | -4.0% | 24% | R |
+| 31 | 2019-02-28 | 2019-03-01 | geopolitical/india_pakistan | Imran Khan announces Abhinandan release | +1.2% | -2.4% | 17 | +0.6% | -3.2% | -3.2% | -10.3% | n/a | +1.2% | -4.3% | 24% | R |
+| 32 | 2019-03-29 | 2019-04-01 | SBP/hike | MPC +50bp to 10.75% | -0.8% | -5.8% | 17 | +1.0% | -3.8% | -4.9% | -11.0% | n/a | -1.0% | -6.5% | 18% | F |
+| 33 | 2019-05-12 | 2019-05-13 | IMF/SLA | Staff-level agreement 2019 EFF | -2.4% | -4.5% | 5 | +7.6% | +7.1% | +5.9% | -3.9% | 4 | -2.8% | -5.1% | 88% | F |
+| 34 | 2019-05-16 | 2019-05-16 | rupee/devaluation | USD/PKR +2.0% in one day | -0.9% | -3.3% | 2 | +7.6% | +7.1% | +5.9% | -3.9% | 3 | -1.1% | -4.1% | 88% | F |
+| 35 | 2019-05-20 | 2019-05-21 | SBP/hike | MPC +150bp to 12.25% | +0.6% | +0.6% | 1 | +4.5% | +3.6% | +2.2% | -8.7% | 1 | +1.5% | +1.5% | 68% | F |
+| 36 | 2019-06-11 | 2019-06-12 | budget/budget | Budget FY20 | +0.8% | -2.6% | 19 | -2.3% | -3.4% | -7.6% | -0.8% | n/a | +0.7% | -2.9% | 4% | R |
+| 37 | 2019-06-17 | 2019-06-17 | rupee/devaluation | USD/PKR +1.9% in one day | -1.1% | -5.3% | 20 | -3.6% | -4.7% | -12.6% | +1.5% | n/a | -1.2% | -5.8% | 0% | F |
+| 38 | 2019-07-03 | 2019-07-04 | IMF/board | Board approves 2019 EFF | -0.9% | -9.3% | 19 | -2.1% | -6.6% | -5.1% | +6.6% | n/a | -1.3% | -10.4% | 42% | F |
+| 39 | 2019-07-16 | 2019-07-17 | SBP/hike | MPC +100bp to 13.25% | +0.0% | -12.8% | 19 | +9.0% | +3.2% | +10.9% | +27.8% | 33 | -0.2% | -12.1% | 93% | F |
+| 40 | 2019-08-05 | 2019-08-05 | geopolitical/india_pakistan | India revokes Article 370 | -1.5% | -9.2% | 6 | +9.0% | +3.2% | +10.9% | +27.8% | 4 | -1.2% | -8.9% | 94% | R |
+| 41 | 2019-12-02 | 2019-12-03 | rating/upgrade | Moodys B3 negative to stable | -0.8% | -0.8% | 1 | +2.2% | +5.0% | +4.0% | -4.3% | 1 | -1.1% | -1.1% | 53% | W |
+| 42 | 2020-01-03 | 2020-01-03 | geopolitical/middle_east | US kills Soleimani | -0.4% | -2.8% | 2 | +4.7% | +3.5% | -2.1% | -28.6% | 3 | -0.2% | -2.9% | 40% | R |
+| 43 | 2020-02-26 | 2020-02-26 | covid/first_case | First Covid case in Pakistan | -1.3% | -29.9% | 20 | +8.4% | +13.7% | +19.2% | +25.0% | n/a | -1.1% | -27.6% | 100% | R |
+| 44 | 2020-03-11 | 2020-03-12 | covid/WHO | WHO declares pandemic | -4.6% | -27.7% | 9 | +8.4% | +13.7% | +19.2% | +25.0% | n/a | -4.6% | -26.1% | 99% | R |
+| 45 | 2020-03-16 | 2020-03-16 | covid/global_crash | Global crash day | -6.6% | -24.5% | 7 | +8.4% | +13.7% | +19.2% | +25.0% | n/a | -6.0% | -23.3% | 99% | R |
+| 46 | 2020-03-17 | 2020-03-18 | SBP/cut | MPC -75bp to 12.5% off-cycle/emergency (recalled | -6.7% | -16.5% | 5 | +8.4% | +13.7% | +19.2% | +25.0% | 17 | -6.5% | -16.1% | 100% | F |
+| 47 | 2020-03-23 | 2020-03-24 | covid/lockdown | Provincial lockdowns | -6.9% | -11.2% | 2 | +8.4% | +13.7% | +19.2% | +25.0% | 6 | -6.6% | -10.5% | 100% | R |
+| 48 | 2020-03-24 | 2020-03-25 | SBP/cut | MPC -150bp to 11.0% off-cycle/emergency (recalle | -4.7% | -4.7% | 1 | +8.4% | +13.7% | +19.2% | +25.0% | 4 | -3.7% | -4.1% | 100% | F |
+| 49 | 2020-03-26 | 2020-03-26 | rupee/devaluation | USD/PKR +2.0% in one day | +0.1% | +0.1% | 1 | +12.9% | +16.8% | +20.5% | +23.6% | 1 | -0.4% | -0.4% | 100% | F |
+| 50 | 2020-04-16 | 2020-04-17 | SBP/cut | MPC -200bp to 9.0% | +4.8% | +3.1% | 7 | +5.2% | +4.0% | +5.3% | +18.3% | 1 | +5.4% | +3.0% | 82% | F |
+| 51 | 2020-05-14 | 2020-05-15 | rating/downgrade | Moodys B3 placed under review | +0.6% | -0.3% | 6 | +1.3% | +4.3% | +0.0% | +18.1% | 1 | +1.2% | +1.0% | 32% | W |
+| 52 | 2020-05-15 | 2020-05-18 | SBP/cut | MPC -100bp to 8.0% | -0.6% | -1.4% | 20 | +0.5% | +4.3% | +10.3% | +26.8% | 3 | +0.2% | -0.3% | 96% | F |
+| 53 | 2020-06-12 | 2020-06-15 | budget/budget | Budget FY21 | -2.3% | -3.4% | 5 | +1.5% | +4.8% | +11.6% | +26.6% | 8 | -2.0% | -2.4% | 96% | R |
+| 54 | 2020-06-25 | 2020-06-26 | SBP/cut | MPC -100bp to 7.0% | +0.7% | +0.7% | 1 | +3.3% | +6.6% | +10.8% | +23.2% | 1 | +0.5% | +0.5% | 95% | F |
+| 55 | 2021-02-16 | 2021-02-17 | IMF/SLA | SLA, 2019 EFF resumes | -0.2% | -8.7% | 17 | +4.5% | +6.4% | +5.6% | +13.9% | 49 | +0.1% | -8.7% | 80% | F |
+| 56 | 2021-06-11 | 2021-06-14 | budget/budget | Budget FY22 | +0.9% | -2.7% | 11 | +0.9% | +0.9% | +0.7% | -4.6% | n/a | +1.6% | -2.9% | 42% | R |
+| 57 | 2021-08-15 | 2021-08-16 | geopolitical/afghan_iran_border | Taliban take Kabul | -0.5% | -1.6% | 16 | +0.7% | -1.7% | -4.4% | -6.8% | 2 | -0.6% | -0.6% | 13% | R |
+| 58 | 2021-09-07 | 2021-09-08 | MSCI/downgrade_announce | MSCI announces move to Frontier | -0.7% | -5.1% | 16 | +0.0% | -2.6% | +3.6% | -0.2% | 22 | -1.1% | -7.6% | 53% | W |
+| 59 | 2021-09-20 | 2021-09-21 | SBP/hike | MPC +25bp to 7.25% | -1.1% | -7.1% | 17 | +6.0% | +6.3% | +7.2% | +4.3% | 12 | -1.7% | -6.9% | 81% | F |
+| 60 | 2021-11-19 | 2021-11-22 | SBP/hike | MPC +150bp to 8.75% | -1.6% | -7.8% | 16 | +3.4% | +2.4% | +7.0% | +0.9% | n/a | -1.4% | -7.9% | 95% | F |
+| 61 | 2021-11-30 | 2021-11-30 | MSCI/downgrade_effective | Pakistan leaves MSCI EM (effective) | -0.6% | -5.4% | 10 | +3.4% | +2.4% | +7.0% | +0.9% | 16 | +0.1% | -5.5% | 94% | W |
+| 62 | 2021-12-14 | 2021-12-15 | SBP/hike | MPC +100bp to 9.75% | +2.6% | +1.1% | 2 | +1.2% | +1.6% | +4.6% | +0.3% | 1 | +3.2% | +1.4% | 88% | F |
+| 63 | 2022-02-24 | 2022-02-24 | geopolitical/global | Russia invades Ukraine | -2.9% | -5.0% | 9 | +2.0% | +0.8% | +2.9% | -3.1% | 17 | -2.8% | -4.9% | 64% | R |
+| 64 | 2022-03-08 | 2022-03-09 | political/no_confidence | No-confidence motion filed against Imran Khan | +0.4% | +0.4% | 8 | +2.1% | +2.0% | +8.2% | -2.9% | 1 | +0.2% | -1.1% | 97% | R |
+| 65 | 2022-04-03 | 2022-04-04 | political/no_confidence | Deputy Speaker dismisses motion, assembly dissol | -2.8% | -3.0% | 4 | +6.2% | +4.3% | -2.0% | -5.6% | 2 | -2.7% | -2.8% | 24% | R |
+| 66 | 2022-04-07 | 2022-04-08 | SBP/hike | MPC +250bp to 12.25% off-cycle/emergency (recall | +1.5% | -2.1% | 19 | +0.4% | -2.0% | -3.1% | -0.9% | n/a | +1.1% | -3.1% | 41% | F |
+| 67 | 2022-04-10 | 2022-04-11 | political/no_confidence | No-confidence succeeds, Imran Khan ousted | +3.8% | -3.6% | 18 | +0.4% | -2.0% | -3.1% | -0.9% | n/a | +3.6% | -4.2% | 41% | R |
+| 68 | 2022-05-23 | 2022-05-24 | SBP/hike | MPC +150bp to 13.75% | -1.2% | -3.7% | 15 | +2.2% | +2.4% | +3.6% | +2.4% | 6 | -0.9% | -1.6% | 90% | F |
+| 69 | 2022-05-25 | 2022-05-25 | political/protest | PTI long march | +0.1% | -2.6% | 14 | +2.2% | +2.4% | +3.6% | +2.4% | 4 | +0.1% | -0.7% | 89% | R |
+| 70 | 2022-06-02 | 2022-06-03 | rating/downgrade | Moodys B3 stable to negative | -2.2% | -3.2% | 7 | +2.2% | +2.4% | +3.6% | +2.4% | 6 | -2.0% | -2.0% | 89% | W |
+| 71 | 2022-06-10 | 2022-06-13 | budget/budget | Budget FY23 | -2.7% | -2.7% | 1 | +2.2% | +2.4% | +3.6% | +2.4% | 4 | -2.4% | -2.4% | 89% | R |
+| 72 | 2022-07-07 | 2022-07-13 | SBP/hike | MPC +125bp to 15.0% | +1.3% | -3.7% | 7 | +1.1% | +4.0% | +7.5% | +4.8% | 10 | +1.4% | -3.1% | 93% | F |
+| 73 | 2022-07-13 | 2022-07-14 | IMF/SLA | Staff-level agreement, 7th-8th reviews | +1.2% | -4.9% | 6 | +1.1% | +4.0% | +7.5% | +4.8% | 11 | +1.1% | -4.4% | 93% | W |
+| 74 | 2022-07-19 | 2022-07-19 | rupee/devaluation | USD/PKR +2.8% in one day | -2.4% | -3.7% | 3 | +1.1% | +4.0% | +7.5% | +4.8% | 10 | -1.9% | -3.5% | 93% | F |
+| 75 | 2022-07-28 | 2022-07-29 | rating/downgrade | S&P B- stable to negative | -0.3% | -0.5% | 2 | +6.0% | +9.0% | +5.7% | +3.7% | 2 | -0.5% | -0.5% | 87% | W |
+| 76 | 2022-08-29 | 2022-08-30 | IMF/board | Board 7th-8th reviews | -0.7% | -4.4% | 19 | +1.3% | +3.6% | +3.9% | +0.9% | 33 | -0.6% | -4.8% | 71% | F |
+| 77 | 2022-09-28 | 2022-09-29 | political/finance_minister | Miftah Ismail resigns, Dar returns | -1.0% | -1.0% | 1 | +2.8% | +2.6% | +1.4% | -3.3% | 4 | -0.5% | -0.5% | 28% | R |
+| 78 | 2022-10-06 | 2022-10-07 | rating/downgrade | Moodys B3 to Caa1 | -0.2% | -2.4% | 16 | +1.7% | +4.2% | +2.3% | -6.6% | 7 | -0.2% | -2.3% | 44% | W |
+| 79 | 2022-10-21 | 2022-10-24 | external_policy/FATF | FATF removes Pakistan from grey list | +0.3% | -2.5% | 5 | +1.7% | +4.2% | +2.3% | -6.6% | 7 | +0.2% | -2.7% | 46% | R |
+| 80 | 2022-10-21 | 2022-10-24 | rating/downgrade | Fitch B- to CCC+ | +0.3% | -2.5% | 5 | +1.7% | +4.2% | +2.3% | -6.6% | 7 | +0.2% | -2.7% | 46% | W |
+| 81 | 2022-11-03 | 2022-11-04 | political/protest | Imran Khan shot at rally | -0.6% | -0.6% | 1 | +2.4% | +2.2% | -0.6% | -4.7% | 2 | -0.6% | -1.8% | 18% | R |
+| 82 | 2022-11-24 | 2022-11-25 | political/military | Asim Munir named army chief | +0.1% | -8.3% | 19 | -0.2% | +3.0% | -1.4% | +6.4% | n/a | +0.0% | -9.7% | 19% | R |
+| 83 | 2022-11-25 | 2022-11-28 | SBP/hike | MPC +100bp to 16.0% | -2.0% | -8.4% | 18 | -0.2% | +3.0% | -1.4% | +6.4% | n/a | -2.4% | -9.7% | 20% | F |
+| 84 | 2022-12-22 | 2022-12-23 | rating/downgrade | S&P B- to CCC+ | -0.4% | -3.8% | 18 | +1.9% | +6.1% | +7.3% | +4.7% | 7 | -0.7% | -3.0% | 89% | W |
+| 85 | 2023-01-23 | 2023-01-24 | SBP/hike | MPC +100bp to 17.0% | +1.6% | +1.6% | 1 | +4.1% | +6.3% | +4.8% | +5.0% | 1 | +1.4% | +1.4% | 68% | F |
+| 86 | 2023-01-26 | 2023-01-26 | rupee/devaluation | USD/PKR +5.6% in one day | +2.7% | +0.2% | 3 | +3.3% | +4.6% | +2.3% | +5.2% | 1 | +1.7% | -0.3% | 45% | F |
+| 87 | 2023-02-09 | 2023-02-10 | IMF/stall | 9th review mission ends with no SLA (default sca | -1.7% | -4.8% | 14 | +2.3% | +3.6% | -1.4% | +2.1% | n/a | -1.5% | -6.5% | 59% | W |
+| 88 | 2023-02-14 | 2023-02-15 | budget/mini_budget | Mini-budget | +0.4% | -1.8% | 11 | +2.3% | +3.6% | -1.4% | +2.1% | 2 | +0.0% | -3.3% | 58% | R |
+| 89 | 2023-02-14 | 2023-02-15 | rating/downgrade | Fitch CCC+ to CCC- | +0.4% | -1.8% | 11 | +2.3% | +3.6% | -1.4% | +2.1% | 2 | +0.0% | -3.3% | 58% | W |
+| 90 | 2023-02-28 | 2023-03-01 | rating/downgrade | Moodys Caa1 to Caa3 | -0.2% | -1.6% | 20 | -0.4% | +0.6% | +5.5% | +10.1% | 15 | -0.2% | -1.8% | 76% | W |
+| 91 | 2023-03-02 | 2023-03-03 | SBP/hike | MPC +300bp to 20.0% | +1.6% | -2.0% | 19 | +1.3% | +0.9% | +5.6% | +9.3% | 14 | +1.8% | -1.9% | 77% | F |
+| 92 | 2023-03-02 | 2023-03-02 | rupee/devaluation | USD/PKR +4.7% in one day | +0.6% | -1.4% | 20 | +1.3% | +0.9% | +5.6% | +9.3% | 12 | +0.2% | -1.7% | 77% | F |
+| 93 | 2023-04-04 | 2023-04-05 | SBP/hike | MPC +100bp to 21.0% | +0.1% | +0.1% | 1 | +1.0% | +3.2% | +3.4% | +12.3% | 1 | -0.0% | -0.0% | 49% | F |
+| 94 | 2023-05-09 | 2023-05-09 | political/arrest | Imran Khan arrested | -1.1% | -2.1% | 14 | +0.9% | +2.3% | -2.2% | +16.4% | 7 | -1.0% | -1.6% | 23% | R |
+| 95 | 2023-05-11 | 2023-05-11 | rupee/devaluation | USD/PKR +2.0% in one day | +0.6% | -0.3% | 12 | +0.9% | +2.3% | -2.2% | +16.4% | 1 | +0.4% | +0.4% | 23% | F |
+| 96 | 2023-06-09 | 2023-06-12 | budget/budget | Budget FY24 | -0.3% | -4.4% | 10 | +8.7% | +13.6% | +16.5% | +15.9% | 3 | +0.6% | -3.7% | 100% | R |
+| 97 | 2023-06-26 | 2023-06-27 | SBP/hike | MPC +100bp to 22.0% | +0.0% | +0.0% | 1 | +6.6% | +8.7% | +15.9% | +11.6% | 1 | +0.1% | +0.1% | 98% | F |
+| 98 | 2023-06-30 | 2023-07-03 | IMF/SLA | SLA 2023 SBA | +5.9% | +5.1% | 3 | +4.5% | +3.5% | +11.6% | +7.1% | 1 | +5.3% | +4.2% | 93% | F |
+| 99 | 2023-07-10 | 2023-07-11 | rating/upgrade | Fitch CCC- to CCC | +1.3% | +1.0% | 6 | +3.1% | +8.3% | +7.4% | +10.0% | 1 | +1.7% | +1.7% | 56% | W |
+| 100 | 2023-07-12 | 2023-07-13 | IMF/board | Board approves 2023 SBA | -0.5% | -1.1% | 4 | +3.1% | +8.3% | +7.4% | +10.0% | 3 | -0.2% | -0.8% | 57% | F |
+| 101 | 2023-08-05 | 2023-08-07 | political/arrest | Imran Khan convicted in Toshakhana case and arre | -0.4% | -7.4% | 18 | +1.7% | +1.4% | +2.7% | +32.9% | 29 | -0.3% | -8.7% | 73% | R |
+| 102 | 2023-08-09 | 2023-08-10 | political/election | National Assembly dissolved | -0.9% | -6.7% | 15 | +1.7% | +1.4% | +2.7% | +32.9% | 28 | -0.7% | -7.4% | 74% | R |
+| 103 | 2023-10-07 | 2023-10-09 | geopolitical/middle_east | Hamas attack on Israel | +0.5% | +0.5% | 1 | +4.2% | +7.0% | +12.9% | +35.5% | 1 | +0.1% | +0.1% | 90% | R |
+| 104 | 2023-10-21 | 2023-10-23 | political/election | Nawaz Sharif returns | +0.7% | +0.4% | 5 | +4.3% | +11.0% | +17.4% | +26.5% | 1 | +1.1% | +0.4% | 98% | R |
+| 105 | 2023-11-15 | 2023-11-16 | IMF/SLA | SLA SBA review | +1.3% | +0.7% | 2 | +3.5% | +8.1% | +15.9% | +8.9% | 1 | +2.2% | +1.8% | 97% | F |
+| 106 | 2024-01-17 | 2024-01-17 | geopolitical/afghan_iran_border | Iran strikes Panjgur, Pakistan condemns | -0.3% | -4.3% | 20 | +1.5% | +5.8% | +6.6% | +22.8% | 10 | -0.5% | -5.8% | 73% | R |
+| 107 | 2024-01-18 | 2024-01-18 | geopolitical/afghan_iran_border | Pakistan strikes inside Iran | -0.6% | -5.8% | 20 | +4.9% | +9.1% | +8.3% | +25.8% | 8 | -0.8% | -7.3% | 83% | R |
+| 108 | 2024-02-08 | 2024-02-09 | political/election | General election 2024 | -1.9% | -6.7% | 6 | +4.9% | +9.1% | +8.3% | +25.8% | 9 | -2.0% | -8.1% | 83% | R |
+| 109 | 2024-03-21 | 2024-03-22 | IMF/board | Board completes SBA final review | -0.4% | -0.4% | 1 | +2.8% | +6.9% | +10.5% | +20.5% | 1 | -0.5% | -0.5% | 88% | R |
+| 110 | 2024-04-13 | 2024-04-15 | geopolitical/middle_east | Iran drone and missile attack on Israel | +0.3% | -0.0% | 4 | +2.4% | +2.3% | +7.2% | +11.7% | 1 | +0.6% | +0.2% | 67% | R |
+| 111 | 2024-06-10 | 2024-06-11 | SBP/cut | MPC -150bp to 20.5% | -0.9% | -0.9% | 1 | +8.6% | +8.1% | +10.1% | +8.4% | 2 | -1.0% | -1.0% | 75% | F |
+| 112 | 2024-06-12 | 2024-06-13 | budget/budget | Budget FY25 | +4.7% | +4.7% | 1 | +2.3% | +4.4% | +7.4% | +4.1% | 1 | +3.6% | +3.6% | 60% | R |
+| 113 | 2024-07-12 | 2024-07-15 | IMF/SLA | SLA 2024 EFF | +1.5% | -3.6% | 14 | +1.2% | +0.9% | +1.6% | +17.1% | 30 | +1.1% | -3.1% | 60% | F |
+| 114 | 2024-07-29 | 2024-07-30 | SBP/cut | MPC -100bp to 19.5% | -0.3% | -2.2% | 5 | +1.2% | +0.9% | +1.6% | +17.1% | 21 | -0.5% | -1.6% | 60% | F |
+| 115 | 2024-07-29 | 2024-07-30 | rating/upgrade | Fitch CCC to CCC+ | -0.3% | -2.2% | 5 | +1.2% | +0.9% | +1.6% | +17.1% | 21 | -0.5% | -1.6% | 60% | W |
+| 116 | 2024-08-28 | 2024-08-29 | rating/upgrade | Moodys Caa3 to Caa2 positive | +0.5% | +0.4% | 3 | +0.4% | +1.5% | +4.5% | +20.8% | 1 | +0.5% | -0.0% | 40% | W |
+| 117 | 2024-09-12 | 2024-09-13 | SBP/cut | MPC -200bp to 17.5% | +0.4% | +0.4% | 1 | +3.2% | +2.2% | +7.5% | +38.6% | 1 | +0.0% | +0.0% | 43% | F |
+| 118 | 2024-09-25 | 2024-09-26 | IMF/board | Board approves 2024 EFF | -0.7% | -1.4% | 3 | +4.7% | +5.1% | +11.2% | +40.4% | 3 | -0.8% | -1.7% | 81% | F |
+| 119 | 2024-10-01 | 2024-10-02 | geopolitical/middle_east | Iran missile barrage on Israel | +0.2% | +0.2% | 1 | +4.5% | +5.2% | +10.1% | +34.7% | 1 | -0.3% | -0.3% | 73% | R |
+| 120 | 2024-10-21 | 2024-10-22 | political/constitution | 26th Amendment passed | +0.5% | +0.5% | 1 | +5.1% | +6.8% | +10.9% | +32.4% | 1 | +1.1% | +1.1% | 80% | R |
+| 121 | 2024-11-04 | 2024-11-05 | SBP/cut | MPC -250bp to 15.0% | +0.4% | +0.1% | 2 | +1.4% | +3.8% | +14.2% | +23.0% | 1 | +0.4% | +0.4% | 90% | F |
+| 122 | 2024-11-24 | 2024-11-25 | political/protest | PTI Islamabad march | +0.3% | -3.3% | 2 | +10.6% | +15.1% | +18.9% | +20.3% | 1 | +0.1% | -5.0% | 90% | R |
+| 123 | 2024-11-26 | 2024-11-27 | political/protest | D-Chowk crackdown | +5.0% | +5.0% | 1 | +5.9% | +11.6% | +11.2% | +13.6% | 1 | +4.2% | +4.2% | 83% | R |
+| 124 | 2024-12-16 | 2024-12-17 | SBP/cut | MPC -200bp to 13.0% | -1.1% | -8.5% | 3 | +4.8% | +10.6% | +8.5% | +9.3% | 8 | -2.7% | -10.6% | 77% | F |
+| 125 | 2024-12-18 | 2024-12-19 | external_policy/US | US sanctions on Pakistan missile programme entit | -4.3% | -4.3% | 1 | +4.8% | +10.6% | +8.5% | +9.3% | 2 | -4.5% | -4.5% | 78% | R |
+| 126 | 2025-01-27 | 2025-01-28 | SBP/cut | MPC -100bp to 12.0% | -1.3% | -2.8% | 7 | +2.1% | +3.1% | +3.1% | -6.1% | 10 | -1.4% | -2.6% | 49% | F |
+| 127 | 2025-03-25 | 2025-03-26 | IMF/SLA | SLA EFF review 1 | +1.0% | -2.2% | 20 | -0.4% | +4.0% | +3.7% | +22.0% | 9 | +1.1% | -3.3% | 73% | F |
+| 128 | 2025-04-02 | 2025-04-03 | external_policy/tariff | US Liberation Day tariffs (29% on Pakistan annou | +1.0% | -5.5% | 20 | -7.0% | +7.8% | +7.5% | +23.9% | 8 | +0.7% | -6.9% | 80% | R |
+| 129 | 2025-04-22 | 2025-04-23 | geopolitical/india_pakistan | Pahalgam attack | -1.0% | -12.6% | 11 | +15.9% | +15.1% | +17.9% | +38.2% | 3 | -0.6% | -14.4% | 99% | R |
+| 130 | 2025-04-23 | 2025-04-24 | geopolitical/india_pakistan | India suspends Indus Waters Treaty | -1.9% | -11.7% | 10 | +15.9% | +15.1% | +17.9% | +38.2% | 2 | -1.9% | -13.8% | 99% | R |
+| 131 | 2025-05-05 | 2025-05-06 | SBP/cut | MPC -100bp to 11.0% | -0.5% | -9.3% | 3 | +15.9% | +15.1% | +17.9% | +38.2% | 2 | -0.4% | -10.3% | 99% | F |
+| 132 | 2025-05-07 | 2025-05-07 | geopolitical/india_pakistan | Operation Sindoor (Indian strikes) | -3.1% | -8.8% | 2 | +15.9% | +15.1% | +17.9% | +38.2% | 2 | -3.5% | -9.9% | 99% | R |
+| 133 | 2025-05-09 | 2025-05-12 | IMF/board | Board approves EFF review 1 and RSF | +9.4% | +9.4% | 1 | +2.0% | +0.8% | +5.8% | +24.2% | 1 | +9.0% | +9.0% | 85% | R |
+| 134 | 2025-05-10 | 2025-05-12 | geopolitical/india_pakistan | India-Pakistan ceasefire | +9.4% | +9.4% | 1 | +2.0% | +0.8% | +5.8% | +24.2% | 1 | +9.0% | +9.0% | 85% | R |
+| 135 | 2025-06-10 | 2025-06-11 | budget/budget | Budget FY26 | +1.9% | -4.8% | 9 | +8.1% | +14.8% | +19.0% | +34.4% | 1 | +2.0% | -5.1% | 99% | R |
+| 136 | 2025-06-13 | 2025-06-13 | geopolitical/middle_east | Israel strikes Iran | -1.6% | -6.4% | 7 | +8.1% | +14.8% | +19.0% | +34.4% | 4 | -1.7% | -6.7% | 99% | R |
+| 137 | 2025-06-22 | 2025-06-23 | geopolitical/middle_east | US strikes Iranian nuclear sites | -3.2% | -3.2% | 1 | +8.1% | +14.8% | +19.0% | +34.4% | 1 | -3.8% | -3.8% | 98% | R |
+| 138 | 2025-06-24 | 2025-06-24 | geopolitical/middle_east | Israel-Iran ceasefire | +5.2% | +5.1% | 3 | +7.1% | +9.6% | +13.6% | +29.5% | 1 | +6.0% | +6.0% | 78% | R |
+| 139 | 2025-07-24 | 2025-07-25 | rating/upgrade | S&P CCC+ to B- | +0.4% | -0.5% | 3 | +3.7% | +6.6% | +6.9% | +20.7% | 2 | +0.5% | +0.2% | 67% | W |
+| 140 | 2025-07-31 | 2025-07-31 | external_policy/tariff | US-Pakistan trade deal (19% tariff) | +0.7% | +0.7% | 1 | +4.5% | +5.1% | +6.6% | +17.2% | 1 | +1.0% | +1.0% | 70% | R |
+| 141 | 2025-08-13 | 2025-08-15 | rating/upgrade | Moodys Caa2 to Caa1 | -0.0% | -0.0% | 1 | +2.0% | +1.5% | +5.4% | +8.9% | 1 | -0.1% | -0.1% | 71% | W |
+| 142 | 2025-10-12 | 2025-10-13 | geopolitical/afghan_iran_border | Pakistan-Afghanistan border clashes | -2.9% | -3.9% | 14 | +1.5% | +2.5% | +5.5% | +20.7% | 19 | -3.3% | -4.7% | 64% | W |
+| 143 | 2025-10-14 | 2025-10-15 | IMF/SLA | SLA EFF review 2 | +0.1% | -5.3% | 12 | +1.5% | +2.5% | +5.5% | +20.7% | 21 | +0.2% | -5.9% | 64% | F |
+| 144 | 2025-12-09 | 2025-12-10 | IMF/board | Board completes review 2 (about USD 1.2bn) | -0.0% | -0.5% | 2 | +2.0% | +2.3% | +9.4% | -13.1% | 1 | +0.1% | -0.2% | 68% | W |
+| 145 | 2025-12-15 | 2025-12-16 | SBP/cut | MPC -50bp to 10.5% SURPRISE (all 12 in a Reuters | -0.2% | -0.3% | 2 | +0.3% | +3.5% | +6.5% | -9.7% | 1 | -0.5% | -1.2% | 52% | W |
+| 146 | 2026-02-27 | 2026-02-27 | geopolitical/afghan_iran_border | Pakistan declares open war on Afghan Taliban (Op | -0.5% | -13.3% | 7 | +1.8% | +8.1% | +13.2% | +16.3% | 26 | -0.5% | -11.3% | 95% | W |
+| 147 | 2026-02-28 | 2026-03-02 | geopolitical/middle_east | US-Israel war on Iran begins, Hormuz closed | -9.6% | -12.8% | 6 | +1.8% | +8.1% | +13.2% | +16.3% | 25 | -9.2% | -10.9% | 95% | W |
+| 148 | 2026-03-09 | 2026-03-09 | geopolitical/middle_east | Oil price shock, KSE-30 halt | -7.0% | -7.0% | 1 | +1.8% | +8.1% | +13.2% | +16.3% | 10 | -5.8% | -5.8% | 95% | W |
+| 149 | 2026-03-27 | 2026-03-30 | IMF/SLA | SLA EFF review 3 | -3.2% | -3.2% | 1 | +3.0% | +9.4% | +15.4% | +22.8% | 2 | -3.1% | -3.1% | 96% | F |
+| 150 | 2026-04-12 | 2026-04-13 | geopolitical/middle_east | Islamabad US-Iran talks fail | -3.9% | -3.9% | 1 | +7.2% | +5.5% | +5.2% | +8.0% | 2 | -3.7% | -3.7% | 79% | W |
+| 151 | 2026-04-27 | 2026-04-28 | SBP/hike | MPC +100bp to 11.5% | -0.6% | -4.5% | 14 | +6.1% | +5.8% | +12.1% | +10.0% | 5 | -0.5% | -3.6% | 95% | F |
+| 152 | 2026-06-12 | 2026-06-15 | budget/budget | Budget FY27 | +2.7% | +0.6% | 20 | +1.5% | +2.4% | +3.6% | -3.5% | 1 | +2.5% | +0.4% | 71% | W |
+| 153 | 2026-07-08 | 2026-07-08 | geopolitical/middle_east | US-Iran truce collapses | -2.5% | -8.2% | 13 | +3.0% | +6.1% | +3.5% | n/a | n/a | -2.3% | -7.9% | 60% | R |
+| 154 | 2026-07-14 | 2026-07-14 | geopolitical/middle_east | Hormuz blockade reinstated (14-15 Jul) | -3.6% | -4.9% | 9 | +3.0% | +6.1% | +3.5% | n/a | n/a | -3.3% | -5.1% | 60% | R |
+| 155 | 2026-07-22 | 2026-07-23 | rating/upgrade | S&P B- to B | -1.5% | -2.0% | 2 | +3.0% | +6.1% | +3.5% | n/a | n/a | -1.4% | -1.6% | 61% | W |
+| 156 | 2026-08-24 | 2026-08-25 | rating/upgrade | Moodys Caa1 to B3 | +0.2% | -5.1% | 14 | +1.9% | +1.5% | -1.7% | n/a | n/a | +0.0% | -5.3% | 35% | W |
+| 157 | 2026-10-08 | 2026-10-09 | IMF/SLA | SLA EFF review 4 (board pending) | -0.2% | n/a | n/a | n/a | n/a | n/a | n/a | n/a | -0.1% | n/a | n/a | F |
+
+## Noise map per type. Verdict rule fixed before the run: a type REPRICES if its median day-1 move or median 20-session return from base lies outside the 5th-95th percentile of medians of the same number of random dates; otherwise IGNORED.
+| group | n | med d1 | med max fall | med sess to bottom | med ret20 from base | med reb20 | med reb60 | fall>=3% regained base <=60s of bottom | placebo d1 5-95 | placebo ret20 5-95 | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| SBP | 34 | -0.2% | -2.7% | 7.0 | +0.0% | +7.0% | +6.5% | 75% (12/16) | -0.3..+0.4 | -0.9..+3.5 | ignored |
+| geopolitical | 27 | -1.0% | -4.3% | 7.0 | -1.3% | +7.2% | +20.7% | 88% (14/16) | -0.3..+0.4 | -1.3..+3.7 | REPRICES |
+| political | 20 | +0.0% | -2.8% | 8.5 | +0.3% | +2.7% | +0.8% | 60% (6/10) | -0.3..+0.5 | -1.6..+3.9 | ignored |
+| IMF | 19 | -0.2% | -3.4% | 5.5 | +3.8% | +6.6% | +9.4% | 80% (8/10) | -0.3..+0.5 | -1.7..+4.2 | ignored |
+| rating | 19 | -0.2% | -2.0% | 6.0 | +1.2% | +4.0% | +3.7% | 80% (4/5) | -0.3..+0.5 | -1.7..+4.2 | ignored |
+| rupee | 13 | +0.0% | -3.3% | 6.0 | +2.6% | +5.9% | +2.6% | 71% (5/7) | -0.4..+0.6 | -2.3..+5.0 | ignored |
+| budget | 12 | +0.3% | -3.0% | 11.0 | +0.1% | +3.6% | +2.3% | 67% (4/6) | -0.4..+0.6 | -2.3..+4.9 | ignored |
+| external_policy | 6 | -0.1% | -3.4% | 3.0 | +3.2% | +7.1% | +4.5% | 100% (3/3) | -0.6..+0.8 | -3.2..+6.2 | ignored |
+| covid | 4 | -5.6% | -26.1% | 8.0 | -14.7% | +19.2% | +25.0% | 25% (1/4) | -0.8..+1.0 | -3.8..+6.8 | REPRICES |
+| MSCI | 3 | -0.7% | -5.4% | 16.0 | -4.4% | +3.6% | -0.2% | 67% (2/3) | -1.0..+1.1 | -4.6..+8.2 | ignored |
+
+Placebo reference classes (KSE100, every session as day 1; windows overlap):
+| group | n | med d1 | med max fall | med sess to bottom | med ret20 from base | med reb20 | med reb60 | fall>=3% regained base <=60s of bottom |
+|---|---|---|---|---|---|---|---|---|
+| all random sessions | 2460 | +0.1% | -2.3% | 8.0 | +1.1% | +5.0% | +6.5% | 69% |
+| random sessions with d1 <= -3% | 43 | -3.6% | -6.8% | 6.0 | -0.4% | +9.0% | +16.3% | 79% |
+| random sessions with d1 <= -5% | 6 | -6.8% | -12.0% | 3.5 | -4.0% | +18.5% | +25.0% | 83% |
+
+Subtypes with n>=4:
+| group | n | med d1 | med max fall | med sess to bottom | med ret20 from base | med reb20 | med reb60 | fall>=3% regained base <=60s of bottom | placebo d1 5-95 | placebo ret20 5-95 | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| IMF/SLA | 10 | +0.6% | -3.6% | 6.0 | +2.4% | +5.9% | +13.9% | 100% (6/6) | -0.5..+0.7 | -2.2..+5.2 | ignored |
+| IMF/board | 7 | -0.5% | -1.1% | 3.0 | +6.0% | +7.4% | +10.0% | 50% (1/2) | -0.6..+0.8 | -3.3..+5.8 | REPRICES |
+| SBP/cut | 13 | -0.5% | -1.4% | 3.0 | +7.7% | +10.1% | +23.0% | 100% (4/4) | -0.4..+0.6 | -2.4..+4.8 | REPRICES |
+| SBP/hike | 21 | +0.0% | -3.7% | 16.0 | -1.6% | +4.9% | +3.4% | 67% (8/12) | -0.3..+0.5 | -1.6..+4.0 | ignored |
+| budget/budget | 10 | +0.3% | -3.0% | 10.5 | +0.1% | +3.6% | +2.2% | 60% (3/5) | -0.5..+0.6 | -2.5..+5.2 | ignored |
+| geopolitical/afghan_iran_border | 5 | -0.5% | -4.3% | 16.0 | -4.3% | +6.6% | +20.7% | 100% (4/4) | -0.7..+0.9 | -3.8..+6.9 | REPRICES |
+| geopolitical/india_pakistan | 9 | -1.0% | -4.5% | 10.0 | -1.3% | +5.8% | +24.2% | 67% (4/6) | -0.6..+0.7 | -2.6..+5.6 | REPRICES |
+| geopolitical/middle_east | 12 | -2.0% | -3.6% | 2.5 | +3.5% | +11.5% | +22.9% | 100% (5/5) | -0.4..+0.6 | -2.3..+5.0 | REPRICES |
+| political/election | 5 | -0.1% | -4.5% | 15.0 | +2.3% | +2.7% | +25.8% | 67% (2/3) | -0.8..+0.9 | -3.8..+7.2 | ignored |
+| political/protest | 4 | +0.2% | -1.6% | 1.5 | +6.7% | +7.4% | +8.0% | 100% (1/1) | -0.8..+0.9 | -3.9..+6.9 | ignored |
+| rating/downgrade | 11 | -0.3% | -2.5% | 11.0 | -0.2% | +3.6% | +2.4% | 80% (4/5) | -0.5..+0.7 | -2.7..+5.2 | ignored |
+| rating/upgrade | 8 | +0.1% | -0.7% | 3.0 | +3.1% | +4.3% | +13.5% | n/a (0/0) | -0.5..+0.7 | -2.7..+5.2 | ignored |
+| rupee/devaluation | 13 | +0.0% | -3.3% | 6.0 | +2.6% | +5.9% | +2.6% | 71% (5/7) | -0.4..+0.6 | -2.1..+4.9 | ignored |
+
+Same on KMIALLSHR by type:
+| type | n | KMI med d1 | KMI med fall | KMI med reb20 | KMI med reb60 |
+|---|---|---|---|---|---|
+| IMF | 19 | -0.1% | -3.2% | +6.2% | +9.0% |
+| MSCI | 3 | -1.1% | -7.6% | +5.6% | +1.8% |
+| SBP | 34 | -0.3% | -2.8% | +5.9% | +5.0% |
+| budget | 12 | +0.4% | -3.1% | +3.7% | +3.3% |
+| covid | 4 | -5.3% | -24.7% | +22.3% | +30.1% |
+| external_policy | 6 | -0.2% | -3.6% | +6.6% | +4.2% |
+| geopolitical | 27 | -0.8% | -5.0% | +7.2% | +16.2% |
+| political | 20 | +0.0% | -2.3% | +4.7% | +3.0% |
+| rating | 19 | -0.2% | -1.8% | +5.1% | +4.0% |
+| rupee | 13 | -0.1% | -2.3% | +6.3% | +2.6% |
+
+Direction check: day-1 move for good-news vs bad-news subtypes
+| group | n | med d1 | mean d1 | share d1>0 |
+|---|---|---|---|---|
+| IMF SLA/board | 17 | -0.2% | +0.7% | 41% |
+| IMF stall/decision | 2 | -2.5% | -2.5% | 0% |
+| rating upgrade | 8 | +0.1% | -0.0% | 50% |
+| rating downgrade | 11 | -0.3% | -0.4% | 27% |
+| SBP cut | 13 | -0.5% | -0.8% | 31% |
+| SBP hike | 21 | +0.0% | -0.1% | 52% |
+| ceasefire events | 2 | +7.3% | +7.3% | 100% |
+
+Coverage check: 22 sessions fell 3.5% or more; 8 are not within a session of any event above (candidate misses, unexplained):
+2017-06-12 -3.7%, 2017-06-20 -3.6%, 2017-07-03 -4.1%, 2021-12-02 -4.7%, 2022-06-24 -3.9%, 2023-12-19 -3.6%, 2023-12-26 -4.1%, 2026-02-19 -3.7%
+
+## Shocks with a 20-session fall of 5%+: 49 events, 25 after keeping the first event of any cluster (events within 20 sessions of an included one dropped)
+| id | date | type | event | fall | bottom date | reb20 | reb60 | cluster kept |
+|---|---|---|---|---|---|---|---|---|
+| 2 | 2017-05-26 | budget | Budget FY18 | -14.7% | 2017-06-20 | +1.4% | -4.8% | yes |
+| 3 | 2017-05-31 | MSCI | Pakistan joins MSCI Emerging Markets (effective) | -13.2% | 2017-07-03 | +3.0% | -5.2% |  |
+| 5 | 2017-07-10 | political | Panama JIT report | -5.4% | 2017-07-13 | +4.2% | -7.2% | yes |
+| 6 | 2017-07-28 | political | Supreme Court disqualifies Nawaz Sharif | -8.5% | 2017-08-22 | +1.9% | -2.8% |  |
+| 10 | 2018-04-27 | budget | Budget FY19 | -8.6% | 2018-05-18 | +3.3% | +2.0% | yes |
+| 12 | 2018-06-11 | rupee | USD/PKR +1.7% in one day | -10.6% | 2018-07-09 | +8.8% | -1.3% | yes |
+| 13 | 2018-06-20 | rating | Moodys B3 stable to negative | -8.6% | 2018-07-09 | +8.8% | -1.3% |  |
+| 14 | 2018-06-29 | external_policy | Pakistan placed on FATF grey list | -6.3% | 2018-07-09 | +8.8% | -1.3% |  |
+| 19 | 2018-09-18 | budget | Mini-budget | -11.1% | 2018-10-16 | +12.2% | +6.6% | yes |
+| 20 | 2018-09-29 | SBP | MPC +100bp to 8.5% | -10.6% | 2018-10-16 | +12.2% | +6.6% |  |
+| 21 | 2018-10-08 | IMF | Govt says it will approach the IMF | -6.5% | 2018-10-16 | +12.2% | +6.6% |  |
+| 23 | 2018-11-30 | SBP | MPC +150bp to 10.0% | -8.5% | 2018-12-31 | +9.0% | +3.4% |  |
+| 24 | 2018-11-30 | rupee | USD/PKR +3.3% in one day | -8.5% | 2018-12-28 | +8.3% | +2.6% | yes |
+| 26 | 2019-01-31 | SBP | MPC +25bp to 10.25% | -5.2% | 2019-02-27 | +0.7% | -8.0% | yes |
+| 27 | 2019-02-04 | rating | S&P B to B- | -7.0% | 2019-02-27 | +0.7% | -8.0% |  |
+| 32 | 2019-03-29 | SBP | MPC +50bp to 10.75% | -5.8% | 2019-04-23 | -4.9% | -11.0% | yes |
+| 37 | 2019-06-17 | rupee | USD/PKR +1.9% in one day | -5.3% | 2019-07-12 | -12.6% | +1.5% | yes |
+| 38 | 2019-07-03 | IMF | Board approves 2019 EFF | -9.3% | 2019-07-30 | -5.1% | +6.6% |  |
+| 39 | 2019-07-16 | SBP | MPC +100bp to 13.25% | -12.8% | 2019-08-16 | +10.9% | +27.8% | yes |
+| 40 | 2019-08-05 | geopolitical | India revokes Article 370 | -9.2% | 2019-08-16 | +10.9% | +27.8% |  |
+| 43 | 2020-02-26 | covid | First Covid case in Pakistan | -29.9% | 2020-03-25 | +19.2% | +25.0% | yes |
+| 44 | 2020-03-11 | covid | WHO declares pandemic | -27.7% | 2020-03-25 | +19.2% | +25.0% |  |
+| 45 | 2020-03-16 | covid | Global crash day | -24.5% | 2020-03-25 | +19.2% | +25.0% |  |
+| 46 | 2020-03-17 | SBP | MPC -75bp to 12.5% off-cycle/emergency (recalled) | -16.5% | 2020-03-25 | +19.2% | +25.0% |  |
+| 47 | 2020-03-23 | covid | Provincial lockdowns | -11.2% | 2020-03-25 | +19.2% | +25.0% |  |
+| 55 | 2021-02-16 | IMF | SLA, 2019 EFF resumes | -8.7% | 2021-03-11 | +5.6% | +13.9% | yes |
+| 58 | 2021-09-07 | MSCI | MSCI announces move to Frontier | -5.1% | 2021-09-29 | +3.6% | -0.2% | yes |
+| 59 | 2021-09-20 | SBP | MPC +25bp to 7.25% | -7.1% | 2021-10-13 | +7.2% | +4.3% |  |
+| 60 | 2021-11-19 | SBP | MPC +150bp to 8.75% | -7.8% | 2021-12-13 | +7.0% | +0.9% | yes |
+| 61 | 2021-11-30 | MSCI | Pakistan leaves MSCI EM (effective) | -5.4% | 2021-12-13 | +7.0% | +0.9% |  |
+| 82 | 2022-11-24 | political | Asim Munir named army chief | -8.3% | 2022-12-21 | -1.4% | +6.4% | yes |
+| 83 | 2022-11-25 | SBP | MPC +100bp to 16.0% | -8.4% | 2022-12-21 | -1.4% | +6.4% |  |
+| 101 | 2023-08-05 | political | Imran Khan convicted in Toshakhana case and arrest | -7.4% | 2023-08-31 | +2.7% | +32.9% | yes |
+| 102 | 2023-08-09 | political | National Assembly dissolved | -6.7% | 2023-08-31 | +2.7% | +32.9% |  |
+| 107 | 2024-01-18 | geopolitical | Pakistan strikes inside Iran | -5.8% | 2024-02-16 | +8.3% | +25.8% | yes |
+| 108 | 2024-02-08 | political | General election 2024 | -6.7% | 2024-02-16 | +8.3% | +25.8% |  |
+| 124 | 2024-12-16 | SBP | MPC -200bp to 13.0% | -8.5% | 2024-12-19 | +8.5% | +9.3% | yes |
+| 128 | 2025-04-02 | external_policy | US Liberation Day tariffs (29% on Pakistan announc | -5.5% | 2025-04-30 | +7.5% | +23.9% | yes |
+| 129 | 2025-04-22 | geopolitical | Pahalgam attack | -12.6% | 2025-05-08 | +17.9% | +38.2% |  |
+| 130 | 2025-04-23 | geopolitical | India suspends Indus Waters Treaty | -11.7% | 2025-05-08 | +17.9% | +38.2% |  |
+| 131 | 2025-05-05 | SBP | MPC -100bp to 11.0% | -9.3% | 2025-05-08 | +17.9% | +38.2% | yes |
+| 132 | 2025-05-07 | geopolitical | Operation Sindoor (Indian strikes) | -8.8% | 2025-05-08 | +17.9% | +38.2% |  |
+| 136 | 2025-06-13 | geopolitical | Israel strikes Iran | -6.4% | 2025-06-23 | +19.0% | +34.4% | yes |
+| 143 | 2025-10-14 | IMF | SLA EFF review 2 | -5.3% | 2025-10-30 | +5.5% | +20.7% | yes |
+| 146 | 2026-02-27 | geopolitical | Pakistan declares open war on Afghan Taliban (Oper | -13.3% | 2026-03-09 | +13.2% | +16.3% | yes |
+| 147 | 2026-02-28 | geopolitical | US-Israel war on Iran begins, Hormuz closed | -12.8% | 2026-03-09 | +13.2% | +16.3% |  |
+| 148 | 2026-03-09 | geopolitical | Oil price shock, KSE-30 halt | -7.0% | 2026-03-09 | +13.2% | +16.3% |  |
+| 153 | 2026-07-08 | geopolitical | US-Iran truce collapses | -8.2% | 2026-07-24 | +3.5% | n/a | yes |
+| 156 | 2026-08-24 | rating | Moodys Caa1 to B3 | -5.1% | 2026-09-14 | -1.7% | n/a | yes |
+
+Rebound pattern across the clustered shocks (KSE100):
+  day 1: n=25 median -0.005 mean -0.007 min -0.047 max 0.010
+  max fall: n=25 median -0.082 mean -0.089 min -0.299 max -0.051
+  sessions to bottom: n=25 median 17.000 mean 14.800 min 3.000 max 20.000
+  reb5: n=25 median 0.019 mean 0.028 min -0.070 max 0.159
+  reb10: n=25 median 0.032 mean 0.051 min -0.047 max 0.151
+  reb20: n=25 median 0.056 mean 0.060 min -0.126 max 0.192
+  reb60: n=23 median 0.066 mean 0.111 min -0.110 max 0.382
+  regained pre-event close within 60 sessions of the bottom: 14/23; median sessions 17.0
+  breadth: share of liquid names up in the 20 sessions after the bottom, median 0.78; share down at the bottom vs base, median 0.95
+
+Leaders: top-10 liquid names by 20-session return from the bottom, clustered shocks
+| id | event | bottom | top-10 names (20-session return from bottom) | top sectors (return) | top sectors (breadth) | breadth up |
+|---|---|---|---|---|---|---|
+| 2 | Budget FY18 | 2017-06-20 | PPL(+21%) SSGC(+18%) NETSOL(+15%) NML(+12%) ANL(+10%) OGDC(+10%) AKBL(+8%) GAL(+8%) BML(+8%) BAFL(+7%) | E&P +11%; Fertilizer +5%; Gas utilities & misc +3% | E&P 100%; Fertilizer 100%; OMC 100% | 41% |
+| 5 | Panama JIT report | 2017-07-13 | STPL(+54%) ANL(+43%) FLYNG(+40%) DFSM(+32%) GAL(+32%) FFL(+29%) AVN(+27%) PSO(+24%) TRG(+23%) CNERGY(+23%) | Tech & telecom +21%; Oil refineries +18%; Textiles +17% | Tech & telecom 100%; Oil refineries 100%; Textiles 100% | 89% |
+| 10 | Budget FY19 | 2018-05-18 | CLOV(+45%) NETSOL(+38%) DOL(+25%) NRL(+24%) UNITY(+22%) LOTCHEM(+21%) BAHL(+20%) SEARL(+17%) ANL(+17%) BOP(+16%) | Tech & telecom +21%; Textiles +9%; Oil refineries +8% | Tech & telecom 100%; Pharma 100%; OMC 100% | 64% |
+| 12 | USD/PKR +1.7% in one day | 2018-07-09 | AGL(+56%) WAVES(+46%) ASTL(+40%) STPL(+39%) BGL(+37%) MLCF(+33%) STCL(+28%) AVN(+27%) NRSL(+27%) TRG(+27%) | Gas utilities & misc +25%; Cement +23%; Steel & engineering +22% | Gas utilities & misc 100%; Cement 100%; Steel & engineering 100% | 99% |
+| 19 | Mini-budget | 2018-10-16 | ATRL(+60%) PIAHCLA(+59%) DCL(+56%) GAL(+54%) TRG(+53%) PIBTL(+50%) FFL(+48%) FEROZ(+48%) CNERGY(+48%) LOTCHEM(+44%) | Oil refineries +42%; Gas utilities & misc +38%; Pharma +37% | Oil refineries 100%; Gas utilities & misc 100%; Pharma 100% | 94% |
+| 24 | USD/PKR +3.3% in one day | 2018-12-28 | HCAR(+34%) PIAHCLA(+31%) PPL(+25%) HBL(+24%) FEROZ(+24%) UBL(+19%) NRSL(+16%) BAHL(+16%) OGDC(+16%) FFC(+16%) | E&P +16%; Fertilizer +11%; Textiles +11% | E&P 100%; Fertilizer 100%; Textiles 100% | 78% |
+| 26 | MPC +25bp to 10.25% | 2019-02-27 | HCAR(+16%) MFL(+16%) FEROZ(+15%) PRL(+11%) DCL(+10%) WAVES(+9%) INDU(+9%) POWER(+8%) BOP(+7%) NETSOL(+7%) | Tech & telecom +6%; Pharma +5%; Gas utilities & misc +3% | Tech & telecom 100%; Islamic banks & fin. 100%; Gas utilities & misc 80% | 47% |
+| 32 | MPC +50bp to 10.75% | 2019-04-23 | SPL(+12%) PIBTL(+9%) UBL(+6%) HUBC(+5%) PAEL(+4%) ABL(+4%) BOP(+3%) BAFL(+3%) HBL(+2%) NBP(+1%) | Gas utilities & misc +1%; Power -1%; E&P -5% | Gas utilities & misc 50%; Power 50%; E&P 33% | 18% |
+| 37 | USD/PKR +1.9% in one day | 2019-07-12 | LOTCHEM(-1%) FFC(-4%) HCAR(-5%) EFERT(-6%) ATRL(-6%) ILP(-8%) DGKC(-8%) GATM(-8%) LUCK(-8%) MEBL(-9%) | Fertilizer -5%; Oil refineries -12%; Tech & telecom -12% | Fertilizer 0%; Oil refineries 0%; Tech & telecom 0% | 0% |
+| 39 | MPC +100bp to 13.25% | 2019-08-16 | GHNI(+46%) MUGHAL(+43%) GAL(+41%) NML(+28%) NRL(+28%) ASTL(+27%) ISL(+24%) PIOC(+21%) PPL(+21%) ATRL(+20%) | Steel & engineering +26%; Oil refineries +24%; Autos +22% | Steel & engineering 100%; Oil refineries 100%; Autos 100% | 93% |
+| 43 | First Covid case in Pakistan | 2020-03-25 | PIOC(+113%) CHCC(+95%) KOHC(+88%) DOL(+78%) ACPL(+68%) DCL(+63%) DGKC(+62%) MLCF(+62%) TGL(+61%) MUGHAL(+58%) | Cement +69%; Tech & telecom +52%; Glass, packaging, paper +49% | Cement 100%; Tech & telecom 100%; Glass, packaging, paper 100% | 100% |
+| 55 | SLA, 2019 EFF resumes | 2021-03-11 | TELE(+51%) SRVI(+49%) DSL(+37%) EPCL(+33%) TRG(+33%) ATRL(+29%) AVN(+29%) GGL(+28%) LOTCHEM(+28%) NRSL(+26%) | Oil refineries +20%; Tech & telecom +17%; Chemicals +17% | Oil refineries 100%; Chemicals 100%; Steel & engineering 100% | 80% |
+| 58 | MSCI announces move to Frontier | 2021-09-29 | THCCL(+28%) UBL(+21%) HUMNL(+18%) EPCL(+16%) SEARL(+16%) MACFL(+14%) TRIPF(+13%) FEROZ(+13%) KOHC(+13%) FCCL(+13%) | Cement +7%; E&P +7%; Islamic banks & fin. +5% | E&P 100%; Islamic banks & fin. 100%; Power 100% | 53% |
+| 60 | MPC +150bp to 8.75% | 2021-12-13 | KOSM(+55%) GHNI(+41%) TELE(+39%) ANL(+39%) UNITY(+38%) BGL(+35%) PRL(+35%) PACE(+34%) PIOC(+32%) IMAGE(+32%) | Oil refineries +28%; Tech & telecom +24%; Steel & engineering +23% | Oil refineries 100%; Tech & telecom 100%; Steel & engineering 100% | 95% |
+| 82 | Asim Munir named army chief | 2022-12-21 | PPL(+35%) ATRL(+23%) SSGC(+13%) LOTCHEM(+12%) OGDC(+9%) MTL(+5%) PSO(+4%) HUMNL(+4%) SNGP(+4%) ASC(+3%) | E&P +11%; Oil refineries +2%; Chemicals +1% | E&P 67%; Chemicals 67%; Gas utilities & misc 50% | 19% |
+| 101 | Imran Khan convicted in Toshakha | 2023-08-31 | SAZEW(+41%) LOTCHEM(+26%) GHNI(+23%) ILP(+23%) PNSC(+22%) FFL(+19%) BIPL(+18%) HCAR(+18%) ATRL(+16%) BOP(+16%) | Autos +16%; Oil refineries +13%; Textiles +10% | Oil refineries 100%; Textiles 100%; Gas utilities & misc 100% | 73% |
+| 107 | Pakistan strikes inside Iran | 2024-02-16 | PIAHCLA(+103%) CSAP(+73%) SAZEW(+69%) KOSM(+49%) PTC(+44%) GAL(+40%) NETSOL(+35%) TOMCL(+35%) CNERGY(+34%) NRL(+29%) | Oil refineries +25%; Autos +21%; Tech & telecom +18% | Oil refineries 100%; Tech & telecom 100%; Steel & engineering 100% | 83% |
+| 124 | MPC -200bp to 13.0% | 2024-12-19 | GAL(+68%) QTECH(+49%) JSCL(+43%) MFFL(+43%) AHL(+40%) FFL(+35%) PSX(+30%) TRG(+29%) CLOV(+23%) HMB(+21%) | Autos +15%; Food & staples +12%; Fertilizer +12% | Fertilizer 100%; Islamic banks & fin. 100%; Steel & engineering 100% | 77% |
+| 128 | US Liberation Day tariffs (29% o | 2025-04-30 | FLYNG(+110%) KSBP(+58%) BFBIO(+47%) PNSC(+35%) CEPB(+35%) KEL(+33%) ATRL(+33%) NRL(+33%) PTC(+31%) DGKC(+29%) | Oil refineries +25%; Steel & engineering +23%; Power +19% | Oil refineries 100%; Power 100%; Glass, packaging, paper 100% | 80% |
+| 131 | MPC -100bp to 11.0% | 2025-05-08 | FLYNG(+89%) BNL(+77%) DCL(+72%) GGL(+59%) PIAHCLA(+58%) FEROZ(+58%) PNSC(+55%) ATRL(+55%) NRL(+53%) ASC(+52%) | Oil refineries +48%; Steel & engineering +39%; Chemicals +34% | Oil refineries 100%; Steel & engineering 100%; Chemicals 100% | 99% |
+| 136 | Israel strikes Iran | 2025-06-23 | BNL(+78%) ZAL(+69%) SSOM(+50%) AICL(+49%) GGL(+48%) ABL(+48%) GCIL(+47%) GATM(+46%) PABC(+45%) IMAGE(+44%) | Textiles +33%; Islamic banks & fin. +27%; Fertilizer +24% | Textiles 100%; Islamic banks & fin. 100%; Fertilizer 100% | 99% |
+| 143 | SLA EFF review 2 | 2025-10-30 | IMS(+78%) MFL(+75%) PIOC(+60%) PIAHCLA(+46%) TATM(+36%) FFC(+27%) IBLHL(+27%) CEPB(+26%) FECTC(+25%) KML(+24%) | Fertilizer +14%; Cement +9%; Textiles +8% | Fertilizer 100%; Oil refineries 100%; E&P 100% | 64% |
+| 146 | Pakistan declares open war on Af | 2026-03-09 | TRSM(+94%) SGPL(+86%) JSML(+75%) TRG(+47%) KOSM(+46%) QTECH(+45%) SYS(+45%) FCSC(+43%) KOIL(+42%) OCTOPUS(+38%) | Islamic banks & fin. +35%; Tech & telecom +26%; Oil refineries +24% | Islamic banks & fin. 100%; Tech & telecom 100%; Oil refineries 100% | 95% |
+| 153 | US-Iran truce collapses | 2026-07-24 | PRL(+63%) FCEPL(+41%) CNERGY(+38%) TATM(+31%) OBOY(+29%) PREMA(+29%) THCCL(+27%) NRL(+22%) TRSM(+22%) TPL(+21%) | Oil refineries +36%; E&P +10%; Food & staples +10% | Oil refineries 100%; E&P 100%; OMC 100% | 60% |
+| 156 | Moodys Caa1 to B3 | 2026-09-14 | DSIL(+110%) MACFL(+55%) DFSM(+36%) ASTL(+26%) NRL(+21%) BML(+21%) MFL(+19%) KOIL(+18%) FFLM(+16%) PNSC(+14%) | Oil refineries +9%; Glass, packaging, paper +5%; Textiles +1% | Oil refineries 75%; Glass, packaging, paper 50%; Pharma 44% | 35% |
+
+Names most often in the top 10 (of 25 clustered shocks): ATRL 8, NRL 7, GAL 6, TRG 6, LOTCHEM 6, PIAHCLA 5, FEROZ 5, PPL 4, NETSOL 4, ANL 4, FFL 4, CNERGY 4, BOP 4, DCL 4, HCAR 4
+
+Sector baskets, 20-session return from the bottom, clustered shocks (liquid members, equal-weight buy-and-hold); beat = share of shocks where the sector beat that shock median sector:
+| sector | n shocks | median reb20 | beat |
+|---|---|---|---|
+| Oil refineries | 25 | +11.2% | 72% |
+| Food & staples | 25 | +9.3% | 64% |
+| Textiles | 25 | +8.9% | 56% |
+| Steel & engineering | 25 | +7.2% | 56% |
+| Cement | 25 | +7.1% | 44% |
+| OMC | 22 | +6.7% | 45% |
+| E&P | 25 | +6.6% | 48% |
+| Pharma | 24 | +6.5% | 46% |
+| Glass, packaging, paper | 22 | +5.9% | 45% |
+| Tech & telecom | 24 | +5.9% | 54% |
+| Fertilizer | 25 | +5.7% | 40% |
+| Chemicals | 25 | +5.6% | 48% |
+| Autos | 25 | +5.5% | 44% |
+| Power | 25 | +5.1% | 32% |
+| Gas utilities & misc | 25 | +5.1% | 44% |
+| Islamic banks & fin. | 18 | +4.7% | 44% |
+
+Does the leader repeat? mean overlap of one shock top 3 names with the next shock top 10: 0.38 of 3 (random expectation about 0.26)
+
+## Who sold and who bought: net USD mn by investor type, clustered shocks since 2017-01 (fall = day 1 to bottom; rebound = 20 sessions after bottom).
+| investor type | n | fall median | net buyer in fall | fall total | rebound median | net buyer in rebound | rebound total |
+|---|---|---|---|---|---|---|---|
+| banks / dfi | 25 | 11.3 | 20/25 | 458 | 0.7 | 14/25 | -191 |
+| broker proprietary trading | 25 | -3.2 | 4/25 | -100 | 0.8 | 14/25 | 35 |
+| companies | 25 | 9.4 | 20/25 | 284 | 3.1 | 15/25 | 52 |
+| foreign corporates | 25 | -23.5 | 7/25 | -655 | -20.0 | 6/25 | -563 |
+| foreign individual | 25 | 0.1 | 17/25 | 1 | 0.0 | 15/25 | 0 |
+| individuals | 25 | 7.9 | 20/25 | 329 | 13.9 | 20/25 | 304 |
+| insurance companies | 25 | 5.8 | 18/25 | 275 | 6.2 | 18/25 | 258 |
+| mutual funds | 25 | -25.6 | 0/25 | -787 | -4.3 | 10/25 | 10 |
+| nbfc | 25 | 0.1 | 14/25 | -4 | 0.2 | 15/25 | 5 |
+| other organization | 25 | 1.8 | 15/25 | 81 | 2.9 | 14/25 | 39 |
+| overseas pakistani | 25 | 4.2 | 22/25 | 119 | 0.4 | 13/25 | 52 |
+
+Foreign (corporates + individual): fall median -23.4, rebound median -19.5; net sellers in the fall in 18/25 shocks, net buyers in the rebound in 7/25.
+Check: daily sum of net flows across types, median abs 0.00 USD mn (should be near 0)
+
+Per shock (fall/rebound, USD mn):
+  2 2017-05-26 Budget FY18                        foreign c -133/+37 | mutual fu -5/-3 | individua +48/-86 | banks / d +31/+2 | companies +5/-6 | insurance +47/+40 | broker pr -7/+16
+  5 2017-07-10 Panama JIT report                  foreign c +4/-80 | mutual fu -24/+11 | individua +7/+37 | banks / d -1/+17 | companies +1/-2 | insurance +13/+21 | broker pr -3/-2
+  10 2018-04-27 Budget FY19                        foreign c -24/-89 | mutual fu -15/-4 | individua -1/+1 | banks / d +15/+1 | companies +9/+10 | insurance +5/+73 | broker pr -10/-5
+  12 2018-06-11 USD/PKR +1.7% in one day           foreign c -55/-70 | mutual fu -35/-24 | individua +5/+63 | banks / d +15/-21 | companies +36/+11 | insurance +39/+35 | broker pr -9/+0
+  19 2018-09-18 Mini-budget                        foreign c -59/-46 | mutual fu -3/+20 | individua -12/+27 | banks / d +13/-9 | companies +35/+6 | insurance +25/+1 | broker pr -3/+6
+  24 2018-11-30 USD/PKR +3.3% in one day           foreign c -67/+10 | mutual fu -29/+20 | individua +27/-8 | banks / d +7/-5 | companies +22/-1 | insurance +39/-23 | broker pr -0/+6
+  26 2019-01-31 MPC +25bp to 10.25%                foreign c +30/-20 | mutual fu -33/-14 | individua -4/+11 | banks / d +10/+4 | companies -6/+3 | insurance +11/+9 | broker pr -9/+10
+  32 2019-03-29 MPC +50bp to 10.75%                foreign c -4/+23 | mutual fu -16/-53 | individua +8/+14 | banks / d +12/+7 | companies +14/+10 | insurance -3/-10 | broker pr -5/+2
+  37 2019-06-17 USD/PKR +1.9% in one day           foreign c +8/+17 | mutual fu -27/-53 | individua +7/+23 | banks / d +11/+7 | companies -1/-1 | insurance -6/+6 | broker pr -1/+1
+  39 2019-07-16 MPC +100bp to 13.25%               foreign c +17/-0 | mutual fu -44/-17 | individua +17/+16 | banks / d +6/+0 | companies +1/+1 | insurance +3/-15 | broker pr +0/-1
+  43 2020-02-26 First Covid case in Pakistan       foreign c -76/-72 | mutual fu -26/+31 | individua +7/+17 | banks / d +26/+2 | companies -3/+10 | insurance +75/+21 | broker pr -1/-4
+  55 2021-02-16 SLA, 2019 EFF resumes              foreign c -16/-19 | mutual fu -30/+9 | individua +16/-0 | banks / d +10/-7 | companies +10/-8 | insurance +3/+18 | broker pr -13/-1
+  58 2021-09-07 MSCI announces move to Frontier    foreign c -31/-61 | mutual fu -8/+8 | individua +23/+2 | banks / d +11/+10 | companies -10/-16 | insurance +6/+18 | broker pr -7/+1
+  60 2021-11-19 MPC +150bp to 8.75%                foreign c -109/+31 | mutual fu -1/-17 | individua +33/-18 | banks / d +15/+4 | companies +43/+7 | insurance +8/+2 | broker pr -3/-5
+  82 2022-11-24 Asim Munir named army chief        foreign c -40/-13 | mutual fu -17/-17 | individua +8/+0 | banks / d +22/+21 | companies +8/+9 | insurance -3/-5 | broker pr -5/-3
+  101 2023-08-05 Imran Khan convicted in Toshakhana foreign c +11/-10 | mutual fu -13/-1 | individua -8/+10 | banks / d -24/-16 | companies +10/+3 | insurance +35/+6 | broker pr -3/-1
+  107 2024-01-18 Pakistan strikes inside Iran       foreign c -26/+28 | mutual fu -6/+6 | individua +6/-4 | banks / d -2/-7 | companies +7/-14 | insurance +26/-5 | broker pr -5/+1
+  124 2024-12-16 MPC -200bp to 13.0%                foreign c -11/-31 | mutual fu -35/-11 | individua +22/+41 | banks / d +7/+1 | companies +6/+10 | insurance +6/+11 | broker pr +3/-11
+  128 2025-04-02 US Liberation Day tariffs (29% on  foreign c -24/-16 | mutual fu -113/-7 | individua +10/+0 | banks / d +120/-6 | companies +26/-4 | insurance -45/+21 | broker pr -12/+12
+  131 2025-05-05 MPC -100bp to 11.0%                foreign c +0/-33 | mutual fu -5/+41 | individua -8/+9 | banks / d -6/-45 | companies +8/-1 | insurance +2/+28 | broker pr -1/+9
+  136 2025-06-13 Israel strikes Iran                foreign c -3/-35 | mutual fu -33/+89 | individua +29/+27 | banks / d +1/-68 | companies +12/+2 | insurance -6/-1 | broker pr -3/+2
+  143 2025-10-14 SLA EFF review 2                   foreign c -16/-36 | mutual fu -107/-84 | individua +18/+20 | banks / d +109/+94 | companies +18/+11 | insurance -23/+3 | broker pr +4/+7
+  146 2026-02-27 Pakistan declares open war on Afgh foreign c -38/-44 | mutual fu -42/-33 | individua +4/+49 | banks / d +29/+38 | companies +15/-15 | insurance +7/-7 | broker pr +1/-2
+  153 2026-07-08 US-Iran truce collapses            foreign c +32/-23 | mutual fu -104/-14 | individua +37/+24 | banks / d +24/-24 | companies -3/+15 | insurance +18/+2 | broker pr -6/+3
+  156 2026-08-24 Moodys Caa1 to B3                  foreign c -27/-12 | mutual fu -16/+128 | individua +27/+28 | banks / d -3/-193 | companies +21/+13 | insurance -6/+10 | broker pr -2/-6
+
+## Playbook: buy after a shock with a 5%+ fall (KSE100 total return as the index; sectors from the sector_momentum baskets)
+Selecting events by the realised 20-session fall uses hindsight; rule (a) is tradable only if you would have bought every shock. Entry (c) uses the hindsight bottom, (d) is the tradable stand-in. pit sectors = three least-fallen sectors from base to the entry date (known at entry). hindsight sectors = three broadest rebounds from bottom to bottom+20 (a ceiling, not tradable). Returns are from the entry close.
+All clustered shocks (n=25), KSE100:
+| entry | buy | n20 | med 20 | win 20 | worst 20 | n60 | mean 60 | med 60 | win 60 | worst 60 | med worst drawdown in 60 | worst drawdown in 60 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a day-1 close | hindsight sectors | 25 | -5.1% | 24% | -31.9% | 24 | +2.8% | +2.5% | 62% | -18.0% | -13.2% | -31.9% |
+| a day-1 close | index | 25 | -4.4% | 12% | -28.9% | 24 | -0.6% | -4.2% | 38% | -19.5% | -9.7% | -29.0% |
+| a day-1 close | pit sectors | 25 | -6.5% | 20% | -28.5% | 24 | -0.6% | -1.7% | 42% | -22.1% | -12.1% | -28.5% |
+| b day-3 close | hindsight sectors | 25 | -2.7% | 32% | -25.6% | 24 | +5.5% | +4.6% | 62% | -16.4% | -11.4% | -32.2% |
+| b day-3 close | index | 25 | -3.9% | 16% | -26.2% | 24 | +1.5% | -2.4% | 46% | -18.3% | -8.7% | -28.3% |
+| b day-3 close | pit sectors | 25 | -5.2% | 28% | -20.0% | 24 | +3.2% | +1.6% | 58% | -23.3% | -10.5% | -25.9% |
+| c first up-day after bottom (hindsight) | hindsight sectors | 25 | +12.4% | 88% | -7.4% | 23 | +15.2% | +12.1% | 74% | -19.5% | +0.0% | -32.0% |
+| c first up-day after bottom (hindsight) | index | 25 | +3.1% | 76% | -10.3% | 23 | +9.2% | +4.7% | 70% | -11.1% | -2.3% | -15.1% |
+| c first up-day after bottom (hindsight) | pit sectors | 25 | +4.8% | 84% | -9.0% | 23 | +11.6% | +7.5% | 74% | -17.3% | -2.0% | -22.7% |
+| d first up-day after day 1 (tradable) | hindsight sectors | 25 | -2.9% | 36% | -25.7% | 24 | +4.9% | +3.6% | 58% | -16.3% | -11.3% | -35.8% |
+| d first up-day after day 1 (tradable) | index | 25 | -4.4% | 24% | -25.6% | 24 | +1.2% | -2.0% | 46% | -17.4% | -8.9% | -30.7% |
+| d first up-day after day 1 (tradable) | pit sectors | 25 | -4.5% | 28% | -21.3% | 24 | +3.8% | +2.3% | 67% | -20.5% | -9.6% | -27.9% |
+
+Same on KMIALLSHR (index only):
+| entry | buy | n20 | med 20 | win 20 | worst 20 | n60 | mean 60 | med 60 | win 60 | worst 60 | med worst drawdown in 60 | worst drawdown in 60 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a day-1 close | index | 25 | -5.7% | 12% | -27.1% | 24 | -1.5% | -3.8% | 38% | -18.3% | -9.9% | -27.1% |
+| b day-3 close | index | 25 | -3.8% | 20% | -24.5% | 24 | +0.7% | -2.2% | 42% | -17.1% | -8.9% | -25.9% |
+| c first up-day after bottom (hindsight) | index | 25 | +4.7% | 76% | -4.1% | 23 | +8.0% | +4.0% | 70% | -13.9% | -2.9% | -18.5% |
+| d first up-day after day 1 (tradable) | index | 25 | -4.2% | 20% | -24.4% | 24 | +0.5% | -3.2% | 42% | -15.0% | -8.5% | -28.8% |
+
+Tradable trigger instead (day-1 return <= -3%, a placeholder; clustered n=10), KSE100 index only:
+| entry | buy | n20 | med 20 | win 20 | worst 20 | n60 | mean 60 | med 60 | win 60 | worst 60 | med worst drawdown in 60 | worst drawdown in 60 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a day-1 close | index | 10 | +4.7% | 80% | -10.9% | 10 | +7.8% | +3.9% | 50% | -6.4% | -4.0% | -24.3% |
+| b day-3 close | index | 10 | +1.0% | 60% | -7.3% | 10 | +6.7% | +2.3% | 70% | -7.3% | -5.6% | -19.2% |
+| c first up-day after bottom (hindsight) | index | 10 | +6.4% | 90% | -0.5% | 9 | +11.7% | +6.8% | 89% | -8.6% | -1.2% | -8.7% |
+| d first up-day after day 1 (tradable) | index | 10 | +2.5% | 70% | -13.9% | 10 | +6.1% | +2.2% | 50% | -8.6% | -5.1% | -24.5% |
+
+Placebo, buy the KSE100 on any random close: 20-session median +1.1%, win 57%, worst -29.9%; 60-session median +2.2%, win 59%, worst -34.0%.
+Placebo, buy the close of any day that fell 3%+ (n=43, overlapping): 20-session median +3.0%, win 67%; 60-session median +4.7%, win 65%, worst -15.5%.
+
+Sector picks minus the index, 20-session return, same entry (clustered shocks):
+  a day-1 close: pit sectors minus index median -1.5%, beat index 40% (n=25); hindsight sectors minus index median -0.6%, beat 48%
+  b day-3 close: pit sectors minus index median -0.2%, beat index 48% (n=25); hindsight sectors minus index median -0.2%, beat 48%
+  d first up-day after day 1 (tradable): pit sectors minus index median +0.0%, beat index 56% (n=25); hindsight sectors minus index median +0.6%, beat 52%
+
+## By regime (T-bill 6M minus policy rate; band +-0.5pt is a placeholder). Index and pit sectors, clustered 5%+ shocks
+hike-expected: n=3 shocks: 2025-05-05, 2023-08-05, 2019-07-16
+| entry | buy | n20 | med 20 | win 20 | worst 20 | n60 | mean 60 | med 60 | win 60 | worst 60 | med worst drawdown in 60 | worst drawdown in 60 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a day-1 close | index | 3 | -6.0% | 33% | -7.8% | 3 | +11.7% | +8.2% | 100% | +2.8% | -8.8% | -12.8% |
+| a day-1 close | pit sectors | 3 | -11.6% | 33% | -11.6% | 3 | +9.5% | +14.8% | 67% | -2.0% | -12.6% | -16.5% |
+| b day-3 close | index | 3 | -1.8% | 33% | -5.1% | 3 | +16.7% | +10.2% | 100% | +1.9% | -6.7% | -11.4% |
+| b day-3 close | pit sectors | 3 | -1.8% | 33% | -9.5% | 3 | +23.1% | +20.6% | 100% | +0.7% | -11.5% | -11.8% |
+| c first up-day after bottom (hindsight) | index | 3 | +6.7% | 100% | +2.9% | 3 | +31.7% | +34.0% | 100% | +25.7% | +0.0% | +0.0% |
+| c first up-day after bottom (hindsight) | pit sectors | 3 | +6.6% | 100% | +3.3% | 3 | +31.9% | +31.1% | 100% | +30.3% | +0.0% | +0.0% |
+| d first up-day after day 1 (tradable) | index | 3 | -1.8% | 33% | -5.1% | 3 | +15.8% | +10.2% | 100% | +1.9% | -6.7% | -11.4% |
+| d first up-day after day 1 (tradable) | pit sectors | 3 | -1.8% | 33% | -9.5% | 3 | +17.5% | +20.6% | 100% | +0.7% | -11.5% | -11.8% |
+
+neutral: n=19 shocks: 2017-05-26, 2017-07-10, 2025-06-13, 2018-04-27, 2018-06-11, 2025-10-14, 2026-02-27, 2018-09-18, 2026-07-08, 2019-01-31, 2026-08-24, 2019-03-29, 2019-06-17, 2020-02-26, 2021-02-16, 2021-09-07, 2021-11-19, 2022-11-24, 2025-04-02
+| entry | buy | n20 | med 20 | win 20 | worst 20 | n60 | mean 60 | med 60 | win 60 | worst 60 | med worst drawdown in 60 | worst drawdown in 60 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a day-1 close | index | 19 | -4.4% | 11% | -28.9% | 18 | -3.1% | -6.6% | 22% | -19.5% | -11.0% | -29.0% |
+| a day-1 close | pit sectors | 19 | -6.0% | 21% | -28.5% | 18 | -2.0% | -2.0% | 39% | -22.1% | -13.1% | -28.5% |
+| b day-3 close | index | 19 | -3.9% | 11% | -26.2% | 18 | -1.9% | -6.5% | 33% | -18.3% | -9.6% | -28.3% |
+| b day-3 close | pit sectors | 19 | -5.2% | 26% | -20.0% | 18 | +0.3% | +0.8% | 50% | -23.3% | -10.5% | -25.9% |
+| c first up-day after bottom (hindsight) | index | 19 | +2.7% | 68% | -10.3% | 17 | +4.9% | +3.7% | 59% | -11.1% | -4.5% | -15.1% |
+| c first up-day after bottom (hindsight) | pit sectors | 19 | +4.6% | 79% | -9.0% | 17 | +8.2% | +6.8% | 71% | -17.3% | -4.6% | -22.7% |
+| d first up-day after day 1 (tradable) | index | 19 | -4.4% | 21% | -25.6% | 18 | -2.0% | -6.6% | 33% | -17.4% | -9.6% | -30.7% |
+| d first up-day after day 1 (tradable) | pit sectors | 19 | -5.2% | 26% | -21.3% | 18 | +0.8% | +1.9% | 56% | -20.5% | -11.9% | -27.9% |
+
+cut-expected: n=3 shocks: 2024-01-18, 2024-12-16, 2018-11-30
+| entry | buy | n20 | med 20 | win 20 | worst 20 | n60 | mean 60 | med 60 | win 60 | worst 60 | med worst drawdown in 60 | worst drawdown in 60 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a day-1 close | index | 3 | -4.3% | 0% | -8.5% | 3 | +2.8% | +0.2% | 67% | -4.1% | -7.5% | -8.5% |
+| a day-1 close | pit sectors | 3 | -7.1% | 0% | -10.9% | 3 | -2.4% | -6.0% | 33% | -8.9% | -8.6% | -11.6% |
+| b day-3 close | index | 3 | -3.7% | 33% | -4.6% | 3 | +6.5% | +9.3% | 67% | -1.4% | -6.4% | -6.4% |
+| b day-3 close | pit sectors | 3 | -6.3% | 33% | -11.6% | 3 | +0.3% | +0.5% | 67% | -2.9% | -8.2% | -16.1% |
+| c first up-day after bottom (hindsight) | index | 3 | +6.9% | 100% | +5.8% | 3 | +11.2% | +6.8% | 100% | +2.6% | +0.0% | -1.2% |
+| c first up-day after bottom (hindsight) | pit sectors | 3 | +5.2% | 100% | +1.3% | 3 | +10.5% | +2.3% | 67% | -1.7% | -0.9% | -6.4% |
+| d first up-day after day 1 (tradable) | index | 3 | -4.5% | 33% | -4.6% | 3 | +6.1% | +6.8% | 67% | -1.4% | -5.4% | -6.4% |
+| d first up-day after day 1 (tradable) | pit sectors | 3 | -4.4% | 33% | -6.3% | 3 | +8.1% | +2.3% | 100% | +0.5% | -5.1% | -8.2% |
+
+Cross-tab, realised policy-rate cycle over the previous 180 days (rows) vs T-bill label (columns), clustered shocks:
+regime_tbill  cut-expected  hike-expected  neutral
+regime_cycle                                      
+cut cycle                1              1        4
+flat                     1              0        5
+hike cycle               1              2       10
+
+All 5%+ events by regime:
+| regime | n | med fall | med sess | med reb20 | med reb60 |
+|---|---|---|---|---|---|
+| hike-expected | 7 | -9.2% | 6.0 | +10.9% | +32.9% |
+| neutral | 33 | -8.3% | 16.0 | +5.6% | +4.3% |
+| cut-expected | 9 | -8.5% | 9.0 | +9.0% | +9.3% |
+
+Regime at all events (count): {'neutral': 83, 'hike-expected': 47, 'cut-expected': 27}
+
+## Clean version: trigger known at entry. Buy at the entry close only if the KSE100 is already 5%+ below the pre-event close at that moment (any event type; first trigger per 20 sessions). No hindsight in the selection.
+Trigger: down 5%+ from the pre-event close at the entry close. 9 trades (20-session windows apart). 20-session: median +4.2%, mean +3.4%, win 78%, worst -7.7%. 60-session (n=9): median +3.5%, mean +7.4%, win 67%, worst -14.0%; median worst drawdown inside 60 -3.6%, worst -19.2%.
+| entry date | rule | event | down from base | ret20 | ret60 | worst dd in 60 |
+|---|---|---|---|---|---|---|
+| 2017-06-02 | b | Pakistan joins MSCI Emerging Markets (ef | -5.6% | -7.7% | -14.0% | -15.1% |
+| 2017-07-13 | b | Panama JIT report | -5.4% | +4.2% | -7.2% | -7.6% |
+| 2018-10-09 | d | MPC +100bp to 8.5% | -6.1% | +6.4% | -2.5% | -4.8% |
+| 2019-08-19 | d | India revokes Article 370 | -6.6% | +6.7% | +25.7% | +0.0% |
+| 2020-03-16 | a | Global crash day | -6.6% | -7.3% | +1.0% | -19.2% |
+| 2021-11-26 | d | MPC +150bp to 8.75% | -5.1% | +0.0% | +3.5% | -2.8% |
+| 2024-12-19 | b | MPC -200bp to 13.0% | -8.5% | +8.5% | +9.3% | +0.0% |
+| 2025-05-08 | b | MPC -100bp to 11.0% | -9.3% | +17.9% | +38.2% | +0.0% |
+| 2026-03-02 | a | US-Israel war on Iran begins, Hormuz clo | -9.6% | +2.3% | +12.5% | -3.6% |
+
+Trigger: down 3%+ from the pre-event close at the entry close. 20 trades (20-session windows apart). 20-session: median +3.7%, mean +2.6%, win 70%, worst -10.9%. 60-session (n=20): median +0.7%, mean +5.0%, win 50%, worst -18.3%; median worst drawdown inside 60 -4.3%, worst -24.3%.
+Placebo reference, any session after a 1-day fall of 5%+ (first per 20 sessions, n=3): 20-session median +2.3%, win 67%; 60-session median +12.5%, win 100%, worst +1.0%.
+Placebo reference, any session after a 1-day fall of 3%+ (first per 20 sessions, n=21): 20-session median +2.3%, win 62%; 60-session median +1.4%, win 52%, worst -15.5%.
+Placebo reference, any session after a 3-day fall of 5%+ (first per 20 sessions, n=14): 20-session median +5.3%, win 79%; 60-session median +7.0%, win 79%, worst -15.5%.
+Placebo reference, any session after a 3-day fall of 3%+ (first per 20 sessions, n=42): 20-session median +1.7%, win 57%; 60-session median +3.1%, win 57%, worst -24.0%.

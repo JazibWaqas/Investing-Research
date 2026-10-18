@@ -1,0 +1,158 @@
+id,date,type,subtype,event,first_public,react_date,rule,source,status
+1,2017-04-20,political,courts,Panama case split verdict,time not collected,2017-04-20,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+2,2017-05-26,budget,budget,Budget FY18,"speech afternoon/evening, treated as after close",2017-05-29,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+3,2017-05-31,MSCI,upgrade_effective,Pakistan joins MSCI Emerging Markets (effective),flows at the close,2017-05-31,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+4,2017-07-05,rupee,devaluation,USD/PKR +1.5% in one day,SBP daily bank-average rate for that day,2017-07-05,S,data/macro/usdpkr.csv,F
+5,2017-07-10,political,courts,Panama JIT report,JIT report filed; public 11 Jul,2017-07-11,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+6,2017-07-28,political,courts,Supreme Court disqualifies Nawaz Sharif,"~11:30 PKT, intraday",2017-07-28,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+7,2018-01-29,SBP,hike,MPC +25bp to 6.0%,"announcement time not collected, treated as after close",2018-01-30,N,data/macro/policy_rate_decisions.csv,F
+8,2018-02-23,external_policy,FATF,FATF decides to grey-list Pakistan,Paris plenary outcome after close,2018-02-26,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+9,2018-03-20,rupee,devaluation,USD/PKR +2.1% in one day,SBP daily bank-average rate for that day,2018-03-20,S,data/macro/usdpkr.csv,F
+10,2018-04-27,budget,budget,Budget FY19,as above,2018-04-30,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+11,2018-05-25,SBP,hike,MPC +50bp to 6.5%,"announcement time not collected, treated as after close",2018-05-28,N,data/macro/policy_rate_decisions.csv,F
+12,2018-06-11,rupee,devaluation,USD/PKR +1.7% in one day,SBP daily bank-average rate for that day,2018-06-11,S,data/macro/usdpkr.csv,F
+13,2018-06-20,rating,downgrade,Moodys B3 stable to negative,"release time not collected, treated as after close",2018-06-21,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+14,2018-06-29,external_policy,FATF,Pakistan placed on FATF grey list,plenary closes,2018-07-02,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+15,2018-07-14,SBP,hike,MPC +100bp to 7.5%,"announcement time not collected, treated as after close",2018-07-16,N,data/macro/policy_rate_decisions.csv,F
+16,2018-07-16,rupee,devaluation,USD/PKR +2.7% in one day,SBP daily bank-average rate for that day,2018-07-16,S,data/macro/usdpkr.csv,F
+17,2018-07-25,political,election,General election 2018,"election day (holiday), results night",2018-07-26,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+18,2018-08-18,political,election,Imran Khan sworn in,Saturday,2018-08-20,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+19,2018-09-18,budget,mini_budget,Mini-budget,as above,2018-09-19,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+20,2018-09-29,SBP,hike,MPC +100bp to 8.5%,"announcement time not collected, treated as after close",2018-10-01,N,data/macro/policy_rate_decisions.csv,F
+21,2018-10-08,IMF,decision,Govt says it will approach the IMF,announced during 8 Oct session (index -3.4% that day),2018-10-08,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+22,2018-10-09,rupee,devaluation,USD/PKR +5.3% in one day,SBP daily bank-average rate for that day,2018-10-09,S,data/macro/usdpkr.csv,F
+23,2018-11-30,SBP,hike,MPC +150bp to 10.0%,"announcement time not collected, treated as after close",2018-12-03,N,data/macro/policy_rate_decisions.csv,F
+24,2018-11-30,rupee,devaluation,USD/PKR +3.3% in one day,SBP daily bank-average rate for that day,2018-11-30,S,data/macro/usdpkr.csv,F
+25,2018-12-14,rating,downgrade,Fitch B (negative) to B-,as above,2018-12-17,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+26,2019-01-31,SBP,hike,MPC +25bp to 10.25%,"announcement time not collected, treated as after close",2019-02-01,N,data/macro/policy_rate_decisions.csv,F
+27,2019-02-04,rating,downgrade,S&P B to B-,as above,2019-02-06,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+28,2019-02-14,geopolitical,india_pakistan,Pulwama attack,"attack ~14:45 PKT, news after close",2019-02-15,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+29,2019-02-26,geopolitical,india_pakistan,Indian airstrike at Balakot,"~05:00 PKT ISPR statement, before open",2019-02-26,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+30,2019-02-27,geopolitical,india_pakistan,"Jets downed, pilot Abhinandan captured","morning PKT, before open",2019-02-27,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+31,2019-02-28,geopolitical,india_pakistan,Imran Khan announces Abhinandan release,"~15:00-16:00 PKT in parliament, near close",2019-03-01,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+32,2019-03-29,SBP,hike,MPC +50bp to 10.75%,"announcement time not collected, treated as after close",2019-04-01,N,data/macro/policy_rate_decisions.csv,F
+33,2019-05-12,IMF,SLA,Staff-level agreement 2019 EFF,"announcement time not collected, treated as after close",2019-05-13,N,seed/data/macro/imf_events.csv,F
+34,2019-05-16,rupee,devaluation,USD/PKR +2.0% in one day,SBP daily bank-average rate for that day,2019-05-16,S,data/macro/usdpkr.csv,F
+35,2019-05-20,SBP,hike,MPC +150bp to 12.25%,"announcement time not collected, treated as after close",2019-05-21,N,data/macro/policy_rate_decisions.csv,F
+36,2019-06-11,budget,budget,Budget FY20,as above,2019-06-12,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+37,2019-06-17,rupee,devaluation,USD/PKR +1.9% in one day,SBP daily bank-average rate for that day,2019-06-17,S,data/macro/usdpkr.csv,F
+38,2019-07-03,IMF,board,Board approves 2019 EFF,as above,2019-07-04,N,seed/data/macro/imf_events.csv,F
+39,2019-07-16,SBP,hike,MPC +100bp to 13.25%,"announcement time not collected, treated as after close",2019-07-17,N,data/macro/policy_rate_decisions.csv,F
+40,2019-08-05,geopolitical,india_pakistan,India revokes Article 370,"~10:30 PKT, intraday",2019-08-05,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+41,2019-12-02,rating,upgrade,Moodys B3 negative to stable,as above,2019-12-03,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+42,2020-01-03,geopolitical,middle_east,US kills Soleimani,"~03:00 PKT, before open",2020-01-03,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+43,2020-02-26,covid,first_case,First Covid case in Pakistan,intraday,2020-02-26,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+44,2020-03-11,covid,WHO,WHO declares pandemic,WHO declaration evening PKT,2020-03-12,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+45,2020-03-16,covid,global_crash,Global crash day,global sell-off Monday,2020-03-16,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+46,2020-03-17,SBP,cut,MPC -75bp to 12.5% off-cycle/emergency (recalled),"announcement time not collected, treated as after close",2020-03-18,N,data/macro/policy_rate_decisions.csv,F
+47,2020-03-23,covid,lockdown,Provincial lockdowns,Sindh lockdown starts,2020-03-24,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+48,2020-03-24,SBP,cut,MPC -150bp to 11.0% off-cycle/emergency (recalled),"announcement time not collected, treated as after close",2020-03-25,N,data/macro/policy_rate_decisions.csv,F
+49,2020-03-26,rupee,devaluation,USD/PKR +2.0% in one day,SBP daily bank-average rate for that day,2020-03-26,S,data/macro/usdpkr.csv,F
+50,2020-04-16,SBP,cut,MPC -200bp to 9.0%,"announcement time not collected, treated as after close",2020-04-17,N,data/macro/policy_rate_decisions.csv,F
+51,2020-05-14,rating,downgrade,Moodys B3 placed under review,as above,2020-05-15,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+52,2020-05-15,SBP,cut,MPC -100bp to 8.0%,"announcement time not collected, treated as after close",2020-05-18,N,data/macro/policy_rate_decisions.csv,F
+53,2020-06-12,budget,budget,Budget FY21,as above,2020-06-15,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+54,2020-06-25,SBP,cut,MPC -100bp to 7.0%,"announcement time not collected, treated as after close",2020-06-26,N,data/macro/policy_rate_decisions.csv,F
+55,2021-02-16,IMF,SLA,"SLA, 2019 EFF resumes",as above,2021-02-17,N,seed/data/macro/imf_events.csv,F
+56,2021-06-11,budget,budget,Budget FY22,as above,2021-06-14,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+57,2021-08-15,geopolitical,afghan_iran_border,Taliban take Kabul,Sunday,2021-08-16,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+58,2021-09-07,MSCI,downgrade_announce,MSCI announces move to Frontier,"US evening 7 Sep, PKT 8 Sep early",2021-09-08,N,profit.pakistantoday.com.pk/2021/09/08/msci-downgrades-pakistan-to-frontier-markets; businesswire.com/news/home/20210907005911/en,W
+59,2021-09-20,SBP,hike,MPC +25bp to 7.25%,"announcement time not collected, treated as after close",2021-09-21,N,data/macro/policy_rate_decisions.csv,F
+60,2021-11-19,SBP,hike,MPC +150bp to 8.75%,"announcement time not collected, treated as after close",2021-11-22,N,data/macro/policy_rate_decisions.csv,F
+61,2021-11-30,MSCI,downgrade_effective,Pakistan leaves MSCI EM (effective),flows at the close (Dawn: effective 1 Dec),2021-11-30,S,profit.pakistantoday.com.pk/2021/09/08/msci-downgrades-pakistan-to-frontier-markets; businesswire.com/news/home/20210907005911/en,W
+62,2021-12-14,SBP,hike,MPC +100bp to 9.75%,"announcement time not collected, treated as after close",2021-12-15,N,data/macro/policy_rate_decisions.csv,F
+63,2022-02-24,geopolitical,global,Russia invades Ukraine,"~08:00 PKT, before open",2022-02-24,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+64,2022-03-08,political,no_confidence,No-confidence motion filed against Imran Khan,"afternoon, after close",2022-03-09,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+65,2022-04-03,political,no_confidence,"Deputy Speaker dismisses motion, assembly dissolved",Sunday,2022-04-04,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+66,2022-04-07,SBP,hike,MPC +250bp to 12.25% off-cycle/emergency (recalled),"announcement time not collected, treated as after close",2022-04-08,N,data/macro/policy_rate_decisions.csv,F
+67,2022-04-10,political,no_confidence,"No-confidence succeeds, Imran Khan ousted",Sunday ~00:00 PKT,2022-04-11,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+68,2022-05-23,SBP,hike,MPC +150bp to 13.75%,"announcement time not collected, treated as after close",2022-05-24,N,data/macro/policy_rate_decisions.csv,F
+69,2022-05-25,political,protest,PTI long march,intraday,2022-05-25,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+70,2022-06-02,rating,downgrade,Moodys B3 stable to negative,as above,2022-06-03,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+71,2022-06-10,budget,budget,Budget FY23,as above,2022-06-13,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+72,2022-07-07,SBP,hike,MPC +125bp to 15.0%,"announcement time not collected, treated as after close",2022-07-13,N,data/macro/policy_rate_decisions.csv,F
+73,2022-07-13,IMF,SLA,"Staff-level agreement, 7th-8th reviews",13-14 Jul (sources differ),2022-07-14,N,dawn.com/news/amp/1762368; arynews.tv/pakistan-imf-reach-staff-level-agreement-sources/,W
+74,2022-07-19,rupee,devaluation,USD/PKR +2.8% in one day,SBP daily bank-average rate for that day,2022-07-19,S,data/macro/usdpkr.csv,F
+75,2022-07-28,rating,downgrade,S&P B- stable to negative,as above,2022-07-29,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+76,2022-08-29,IMF,board,Board 7th-8th reviews,as above,2022-08-30,N,seed/data/macro/imf_events.csv,F
+77,2022-09-28,political,finance_minister,"Miftah Ismail resigns, Dar returns",evening,2022-09-29,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+78,2022-10-06,rating,downgrade,Moodys B3 to Caa1,as above,2022-10-07,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+79,2022-10-21,external_policy,FATF,FATF removes Pakistan from grey list,evening PKT,2022-10-24,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+80,2022-10-21,rating,downgrade,Fitch B- to CCC+,as above (same day as FATF exit),2022-10-24,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+81,2022-11-03,political,protest,Imran Khan shot at rally,"~16:00 PKT, after close",2022-11-04,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+82,2022-11-24,political,military,Asim Munir named army chief,afternoon,2022-11-25,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+83,2022-11-25,SBP,hike,MPC +100bp to 16.0%,"announcement time not collected, treated as after close",2022-11-28,N,data/macro/policy_rate_decisions.csv,F
+84,2022-12-22,rating,downgrade,S&P B- to CCC+,as above,2022-12-23,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+85,2023-01-23,SBP,hike,MPC +100bp to 17.0%,"announcement time not collected, treated as after close",2023-01-24,N,data/macro/policy_rate_decisions.csv,F
+86,2023-01-26,rupee,devaluation,USD/PKR +5.6% in one day,SBP daily bank-average rate for that day,2023-01-26,S,data/macro/usdpkr.csv,F
+87,2023-02-09,IMF,stall,9th review mission ends with no SLA (default scare),mission ended without agreement,2023-02-10,N,dawn.com/news/amp/1762368; arynews.tv/pakistan-imf-reach-staff-level-agreement-sources/,W
+88,2023-02-14,budget,mini_budget,Mini-budget,as above,2023-02-15,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+89,2023-02-14,rating,downgrade,Fitch CCC+ to CCC-,as above,2023-02-15,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+90,2023-02-28,rating,downgrade,Moodys Caa1 to Caa3,as above,2023-03-01,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+91,2023-03-02,SBP,hike,MPC +300bp to 20.0%,"announcement time not collected, treated as after close",2023-03-03,N,data/macro/policy_rate_decisions.csv,F
+92,2023-03-02,rupee,devaluation,USD/PKR +4.7% in one day,SBP daily bank-average rate for that day,2023-03-02,S,data/macro/usdpkr.csv,F
+93,2023-04-04,SBP,hike,MPC +100bp to 21.0%,"announcement time not collected, treated as after close",2023-04-05,N,data/macro/policy_rate_decisions.csv,F
+94,2023-05-09,political,arrest,Imran Khan arrested,"~13:30 PKT, intraday",2023-05-09,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+95,2023-05-11,rupee,devaluation,USD/PKR +2.0% in one day,SBP daily bank-average rate for that day,2023-05-11,S,data/macro/usdpkr.csv,F
+96,2023-06-09,budget,budget,Budget FY24,as above,2023-06-12,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+97,2023-06-26,SBP,hike,MPC +100bp to 22.0%,"announcement time not collected, treated as after close",2023-06-27,N,data/macro/policy_rate_decisions.csv,F
+98,2023-06-30,IMF,SLA,SLA 2023 SBA,Friday night,2023-07-03,N,seed/data/macro/imf_events.csv,F
+99,2023-07-10,rating,upgrade,Fitch CCC- to CCC,as above,2023-07-11,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+100,2023-07-12,IMF,board,Board approves 2023 SBA,as above,2023-07-13,N,seed/data/macro/imf_events.csv,F
+101,2023-08-05,political,arrest,Imran Khan convicted in Toshakhana case and arrested,Saturday,2023-08-07,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+102,2023-08-09,political,election,National Assembly dissolved,evening,2023-08-10,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+103,2023-10-07,geopolitical,middle_east,Hamas attack on Israel,Saturday,2023-10-09,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+104,2023-10-21,political,election,Nawaz Sharif returns,Saturday,2023-10-23,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+105,2023-11-15,IMF,SLA,SLA SBA review,as above,2023-11-16,N,seed/data/macro/imf_events.csv,F
+106,2024-01-17,geopolitical,afghan_iran_border,"Iran strikes Panjgur, Pakistan condemns","Iranian strike night of 16 Jan, Pakistan statement morning 17 Jan",2024-01-17,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+107,2024-01-18,geopolitical,afghan_iran_border,Pakistan strikes inside Iran,"~04:30 PKT, before open",2024-01-18,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+108,2024-02-08,political,election,General election 2024,"election day (holiday), result delay 9-11 Feb",2024-02-09,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+109,2024-03-21,IMF,board,Board completes SBA final review,after close,2024-03-22,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+110,2024-04-13,geopolitical,middle_east,Iran drone and missile attack on Israel,Saturday night,2024-04-15,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+111,2024-06-10,SBP,cut,MPC -150bp to 20.5%,"announcement time not collected, treated as after close",2024-06-11,N,data/macro/policy_rate_decisions.csv,F
+112,2024-06-12,budget,budget,Budget FY25,as above,2024-06-13,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+113,2024-07-12,IMF,SLA,SLA 2024 EFF,as above,2024-07-15,N,seed/data/macro/imf_events.csv,F
+114,2024-07-29,SBP,cut,MPC -100bp to 19.5%,"announcement time not collected, treated as after close",2024-07-30,N,data/macro/policy_rate_decisions.csv,F
+115,2024-07-29,rating,upgrade,Fitch CCC to CCC+,as above,2024-07-30,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+116,2024-08-28,rating,upgrade,Moodys Caa3 to Caa2 positive,as above,2024-08-29,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+117,2024-09-12,SBP,cut,MPC -200bp to 17.5%,"announcement time not collected, treated as after close",2024-09-13,N,data/macro/policy_rate_decisions.csv,F
+118,2024-09-25,IMF,board,Board approves 2024 EFF,as above,2024-09-26,N,seed/data/macro/imf_events.csv,F
+119,2024-10-01,geopolitical,middle_east,Iran missile barrage on Israel,"~21:30 PKT, after close",2024-10-02,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+120,2024-10-21,political,constitution,26th Amendment passed,night,2024-10-22,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+121,2024-11-04,SBP,cut,MPC -250bp to 15.0%,"announcement time not collected, treated as after close",2024-11-05,N,data/macro/policy_rate_decisions.csv,F
+122,2024-11-24,political,protest,PTI Islamabad march,Sunday,2024-11-25,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+123,2024-11-26,political,protest,D-Chowk crackdown,night,2024-11-27,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+124,2024-12-16,SBP,cut,MPC -200bp to 13.0%,"announcement time not collected, treated as after close",2024-12-17,N,data/macro/policy_rate_decisions.csv,F
+125,2024-12-18,external_policy,US,US sanctions on Pakistan missile programme entities,"US morning, evening PKT",2024-12-19,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+126,2025-01-27,SBP,cut,MPC -100bp to 12.0%,"announcement time not collected, treated as after close",2025-01-28,N,data/macro/policy_rate_decisions.csv,F
+127,2025-03-25,IMF,SLA,SLA EFF review 1,as above,2025-03-26,N,seed/data/macro/imf_events.csv,F
+128,2025-04-02,external_policy,tariff,US Liberation Day tariffs (29% on Pakistan announced),US evening,2025-04-03,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+129,2025-04-22,geopolitical,india_pakistan,Pahalgam attack,"~14:30 PKT, late intraday",2025-04-23,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+130,2025-04-23,geopolitical,india_pakistan,India suspends Indus Waters Treaty,"evening IST, after close",2025-04-24,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+131,2025-05-05,SBP,cut,MPC -100bp to 11.0%,"announcement time not collected, treated as after close",2025-05-06,N,data/macro/policy_rate_decisions.csv,F
+132,2025-05-07,geopolitical,india_pakistan,Operation Sindoor (Indian strikes),"~00:35 PKT, before open",2025-05-07,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+133,2025-05-09,IMF,board,Board approves EFF review 1 and RSF,Friday evening; Monday also had the ceasefire,2025-05-12,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+134,2025-05-10,geopolitical,india_pakistan,India-Pakistan ceasefire,Saturday ~17:00 PKT,2025-05-12,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+135,2025-06-10,budget,budget,Budget FY26,as above,2025-06-11,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+136,2025-06-13,geopolitical,middle_east,Israel strikes Iran,"~05:00 PKT, before open",2025-06-13,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+137,2025-06-22,geopolitical,middle_east,US strikes Iranian nuclear sites,"Saturday night US, Sunday PKT",2025-06-23,N,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+138,2025-06-24,geopolitical,middle_east,Israel-Iran ceasefire,"early morning PKT, before open",2025-06-24,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+139,2025-07-24,rating,upgrade,S&P CCC+ to B-,as above,2025-07-25,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+140,2025-07-31,external_policy,tariff,US-Pakistan trade deal (19% tariff),early PKT,2025-07-31,S,"public record; date recalled, not re-verified in this run (Dawn, Business Recorder, Wikipedia timelines carry it)",R
+141,2025-08-13,rating,upgrade,Moodys Caa2 to Caa1,as above,2025-08-15,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+142,2025-10-12,geopolitical,afghan_iran_border,Pakistan-Afghanistan border clashes,Sunday,2025-10-13,N,en.dailypakistan.com.pk/13-Oct-2025/kse-100-tanks-nearly-3000-points-as-pak-afghan-clashes-shake-market-sentiment,W
+143,2025-10-14,IMF,SLA,SLA EFF review 2,as above,2025-10-15,N,seed/data/macro/imf_events.csv,F
+144,2025-12-09,IMF,board,Board completes review 2 (about USD 1.2bn),Reuters 9 Dec,2025-12-10,N,"Stratfor sitrep citing Reuters, 9 Dec 2025 (paywalled)",W
+145,2025-12-15,SBP,cut,MPC -50bp to 10.5% SURPRISE (all 12 in a Reuters poll expected a hold),"announcement time not collected, treated as after close",2025-12-16,N,pkrevenue.com/sbp-surprises-markets-cuts-policy-rate-by-50-basis-points-to-10-5/,W
+146,2026-02-27,geopolitical,afghan_iran_border,Pakistan declares open war on Afghan Taliban (Operation Ghazab lil-Haq),"early hours PKT, before open",2026-02-27,S,theweek.in/news/world/2026/02/27/open-war-between-pakistan-and-afghanistan...; thenews.pk/story/1404311,W
+147,2026-02-28,geopolitical,middle_east,"US-Israel war on Iran begins, Hormuz closed","Saturday; PSX reacts Monday 2 Mar, circuit halt",2026-03-02,N,ianslive.in/pakistans-benchmark-index-plunges-nearly-10-pc-amid-us-iran-war-afghan-tensions--20260302163714,W
+148,2026-03-09,geopolitical,middle_east,"Oil price shock, KSE-30 halt","overnight oil spike, halt in first 7 minutes",2026-03-09,S,profit.pakistantoday.com.pk/2026/03/09/psx-plunges-over-7-as-oil-price-shock-triggers-market-halt/,W
+149,2026-03-27,IMF,SLA,SLA EFF review 3,as above,2026-03-30,N,seed/data/macro/imf_events.csv,F
+150,2026-04-12,geopolitical,middle_east,Islamabad US-Iran talks fail,"Sunday; talks ended after 21 hours, US port blockade",2026-04-13,N,timesofislamabad.com/13-04-2026/psx-kse-100-crashes-by-6600-points-as-us-iran-talks-collapse/,W
+151,2026-04-27,SBP,hike,MPC +100bp to 11.5%,"announcement time not collected, treated as after close",2026-04-28,N,data/macro/policy_rate_decisions.csv,F
+152,2026-06-12,budget,budget,Budget FY27,as above,2026-06-15,N,app.com.pk/?p=1224991 (Rs18.771tn FY27 budget presented 12 Jun 2026),W
+153,2026-07-08,geopolitical,middle_east,US-Iran truce collapses,time not collected,2026-07-08,S,knowledge/sectors/exploration_production.md (cites en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign),R
+154,2026-07-14,geopolitical,middle_east,Hormuz blockade reinstated (14-15 Jul),time not collected,2026-07-14,S,knowledge/sectors/exploration_production.md (cites en.wikipedia.org/wiki/2026_Strait_of_Hormuz_campaign),R
+155,2026-07-22,rating,upgrade,S&P B- to B,as above,2026-07-23,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+156,2026-08-24,rating,upgrade,Moodys Caa1 to B3,as above,2026-08-25,N,"fxempire.com/credit-ratings/pakistan (rating history table, fetched 2026-10-18; aggregator, not the agencies)",W
+157,2026-10-08,IMF,SLA,SLA EFF review 4 (board pending),as above,2026-10-09,N,seed/data/macro/imf_events.csv,F
