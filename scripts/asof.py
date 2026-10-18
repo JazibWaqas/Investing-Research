@@ -50,6 +50,49 @@ def asof_val(s, d):
     return s.iloc[-1] if len(s) else np.nan
 
 
+def external(T):
+    """Reserves, current account, import cover, P/E and earnings-yield gap, each as of T. A monthly row counts only once
+    published: current account and the BoP-based import cover on the 20th of the next month; P/E and gap at month-end."""
+    L = []
+    f = M / "fx_reserves.csv"
+    if f.exists():
+        fx = pd.read_csv(f, parse_dates=["date"]).set_index("date")
+        fx = fx[fx.index <= T]
+        r, p = fx.iloc[-1], fx[fx.index <= fx.index[-1] - pd.DateOffset(months=3)].iloc[-1]
+        L.append(f"- SBP reserves {r.sbp_reserves_usd_mn:,.0f} USD mn, total {r.total_reserves_usd_mn:,.0f} USD mn, week to {fx.index[-1].date()}; "
+                 f"3-month change SBP {r.sbp_reserves_usd_mn / p.sbp_reserves_usd_mn - 1:+.1%}, total {r.total_reserves_usd_mn / p.total_reserves_usd_mn - 1:+.1%}")
+    else:
+        L.append("- FX reserves: not available in this repository (no data file)")
+    f = M / "current_account.csv"
+    if f.exists():
+        ca = pd.read_csv(f)
+        ca["pub"] = pd.to_datetime(ca.month) + pd.offsets.MonthBegin(1) + pd.Timedelta(days=19)
+        ca = ca[ca.pub <= T]
+        L.append(f"- Current account {ca.month.iloc[-1]}: {ca.cab_usd_mn.iloc[-1]:,.0f} USD mn (published {ca.pub.iloc[-1].date()}); "
+                 f"trailing 12 months {ca.cab_usd_mn.iloc[-12:].sum():+,.0f} USD mn")
+    else:
+        L.append("- Current account: not available in this repository (no data file)")
+    f = M / "import_cover.csv"
+    if f.exists():
+        ic = pd.read_csv(f)
+        bop = pd.to_datetime(ic.month) + pd.offsets.MonthBegin(1) + pd.Timedelta(days=19)   # imports come from the BoP file, out with the current account
+        ic["avail"] = pd.concat([pd.to_datetime(ic.reserves_asof), bop], axis=1).max(axis=1)
+        ic = ic[ic.avail <= T].iloc[-1]
+        L.append(f"- Import cover (SBP only) {ic.import_cover_sbp_months:.2f} months at {ic.month} (reserves as of {ic.reserves_asof}; usable from {ic.avail.date()})")
+    else:
+        L.append("- Import cover: not available in this repository (no data file)")
+    pe, gap = M / "kse100_pe.csv", M / "earnings_yield_vs_tbill.csv"
+    if pe.exists() and gap.exists():
+        k = pd.read_csv(pe)
+        k = k[pd.to_datetime(k.month) + pd.offsets.MonthEnd(0) <= T].iloc[-1]
+        g = pd.read_csv(gap)
+        g = g[g.month == k.month].gap_pct_points.iloc[0]
+        L.append(f"- KSE100 trailing P/E {k.pe:.2f} at {k.month} month-end; earnings yield minus 6M T-bill {g:+.2f}pp")
+    else:
+        L.append("- KSE100 P/E and earnings-yield gap: not available in this repository (no data file)")
+    return L
+
+
 def market(T):
     L = [f"# Market as of {T.date()} close (public information only)\n"]
     for nm, f in (("KSE100", "kse100"), ("KMI All Share", "kmiallshr")):
@@ -72,7 +115,7 @@ def market(T):
         s = s[s.index <= T]
         prev = asof_val(s, s.index[-1] - pd.DateOffset(months=3))
         L.append(f"- {nm}: {s.iloc[-1]:,.2f} {unit} on {s.index[-1].date()}; 3-month change {s.iloc[-1] / prev - 1:+.1%}")
-    L.append("- FX reserves, current account: not available in this repository (no data file)")
+    L += external(T)
     sp = tb.y6m.iloc[-1] - last.rate
     ch = c.yoy - c3.yoy
     L.append(f"- Regime: 6M T-bill minus policy rate {sp:+.2f}pp ({'market pricing hikes' if sp > 0.5 else 'market pricing cuts' if sp < -0.5 else 'market near policy rate'}); "
@@ -192,7 +235,7 @@ def main():
 
     if a.check:
         lim = pd.Timestamp(a.date) + pd.Timedelta(days=1)
-        for f in sorted(out.iterdir()):
+        for f in sorted(x for x in out.iterdir() if x.suffix in (".md", ".csv")):   # REPLY*.json and other replay outputs are not checked
             if f.suffix == ".md":
                 txt = f.read_text(encoding="utf-8")
                 mx = pd.to_datetime(pd.Series(re.findall(r"\d{4}-\d{2}-\d{2}", txt))).max()

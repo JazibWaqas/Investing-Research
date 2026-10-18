@@ -158,11 +158,15 @@ def main(date):
     fl_txt = fl.to_csv(index=False)
     act = actors(T).split("\n")
 
+    qf = ROOT / "knowledge" / "companies" / "quality_scores.csv"
+    qual = [("quality_scores.csv", "business-quality scores from public records, judged by a model on 2026-10-18; not point in time\n"
+             + qf.read_text(encoding="utf-8"))] if qf.exists() else []
+
     def assemble(nan, nact, flows):
         a = an.head(nan)[["date", "symbol", "klass", "title"]].sort_values("date").to_csv(index=False)
         secs = [("BRIEF", brief()), ("market.md", (A / "market.md").read_text(encoding="utf-8")), ("sectors.csv", (A / "sectors.csv").read_text(encoding="utf-8")),
                 ("screens.csv", sc_txt), ("announcements_30d.csv", a), ("flows.csv", flows), ("calendar.md", (A / "calendar.md").read_text(encoding="utf-8")),
-                ("questions.md", questions()), ("actors.md", "\n".join(act[:nact])), ("situations.md", situations(T)), ("base_rates.csv", base_rates(T))]
+                ("questions.md", questions()), ("actors.md", "\n".join(act[:nact])), ("situations.md", situations(T))] + qual + [("base_rates.csv", base_rates(T))]
         return f"# Replay bundle, close of {date} (brief v2)\n\n" + "\n\n".join(f"=== FILE: {n} ===\n{t.rstrip()}" for n, t in secs) + "\n=== END ===\n"
 
     nan, nact = len(an), len(act)
