@@ -1,0 +1,61 @@
+{"date": "2026-04-24",
+ "regime": {"rates_phase": "holding", "stance": "neutral", "p_kmi_up_60": 0.5,
+  "summary": "Policy rate held at 10.5% but bills price hikes: 6M cutoff 0.65pp above policy, CPI up 1.7pp in three months, Brent +64% in three months. Index bounced 11.6% in a month after a 9.1% three-month fall, so the rebound is partly done. Tightening plus oil shock resembles the 2021-22 episode, but only partly; no timing edge is claimed.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 10.5%; last MPC decision 2026-03-09: hold (+0bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate +0.65pp (market pricing hikes); CPI rising over 3 months (+1.7pp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Brent: 111.86 USD/bbl on 2026-04-24; 3-month change +64.1%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 170,672 on 2026-04-24; 1m +11.6%, 3m -9.1%, 6m +4.5%, 12m +48.4%"},
+   {"file": "situations.md", "row": null, "field": null, "quote": "Tightening plus external stress: rate up 800bp in ten months with CPI above it."}
+  ]},
+ "core": [
+  {"symbol": "MARI", "weight_pct": 25, "thesis": "Oil link I can hold while Brent is 111.86: quarterly EPS up 31% year on year, P/E 11.5, 15.9% below its 252-day high. Nine-month results and a material-information filing are both in the bundle. Business quality of sponsor and reinvestment is not documented in the bundle.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MARI", "field": "eps_yoy", "quote": "0.311"},
+    {"file": "screens.csv", "row": "MARI", "field": "dist_from_252_high", "quote": "-0.159"},
+    {"file": "announcements_30d.csv", "row": null, "field": null, "quote": "Financial Results for the Nine Months Ended on March 31, 2026"},
+    {"file": "questions.md", "row": null, "field": null, "quote": "A8. Oil: where is Brent, and which link do I actually hold?"}
+   ]},
+  {"symbol": "GHNI", "weight_pct": 20, "thesis": "Growth showing in numbers: EPS up 54% year on year for the quarter to 2026-03-31 at P/E 6.0, while price is still 18% below its 252-day high. Quarterly report was transmitted 2026-04-23. Judged on numbers only; business and sponsor not documented in the bundle.",
+   "evidence": [
+    {"file": "screens.csv", "row": "GHNI", "field": "eps_yoy", "quote": "0.541"},
+    {"file": "screens.csv", "row": "GHNI", "field": "pe", "quote": "6.046"},
+    {"file": "screens.csv", "row": "GHNI", "field": "dist_from_252_high", "quote": "-0.181"},
+    {"file": "announcements_30d.csv", "row": null, "field": null, "quote": "Transmission of Quarterly Report for the Period Ended March 31, 2026"}
+   ]},
+  {"symbol": "IPAK", "weight_pct": 10, "thesis": "Quarter EPS up 101% year on year at P/E 13.4, within 8% of its 252-day high and up 15% over six months, so the market already agrees. Small weight because business quality and balance sheet are not in the bundle and an insider trade disclosure was filed 2026-04-24.",
+   "evidence": [
+    {"file": "screens.csv", "row": "IPAK", "field": "eps_yoy", "quote": "1.015"},
+    {"file": "screens.csv", "row": "IPAK", "field": "dist_from_252_high", "quote": "-0.08"},
+    {"file": "screens.csv", "row": "IPAK", "field": "r6m", "quote": "0.15"},
+    {"file": "announcements_30d.csv", "row": null, "field": null, "quote": "Insider trade disclosure"}
+   ]}
+ ],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next SBP MPC decision (hike risk priced in bills)", "trigger": "A hike, or 6M bill cutoff moving further above 10.5%, cuts exposure toward situation-03 posture; a hold with bills easing back adds to the core.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "6M T-bill cutoff 11.15% (auction 2026-04-15); 3M 11.44%, 12M 11.89%"},
+    {"file": "calendar.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"}
+   ]},
+  {"type": "other", "subject": "OGDC as second oil link", "trigger": "Add to core if its quarterly result shows EPS no longer falling year on year while Brent holds near 111; today EPS is down 16%.",
+   "evidence": [
+    {"file": "screens.csv", "row": "OGDC", "field": "eps_yoy", "quote": "-0.162"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dist_from_252_high", "quote": "-0.009"}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "SGPL (5 upper locks, 238% in a month)", "trigger": "Not tradable: base rates show nothing for volume with upper locks; watch only for a filing that explains the move.",
+   "evidence": [
+    {"file": "screens.csv", "row": "SGPL", "field": "upper_locks_10d", "quote": "5"},
+    {"file": "screens.csv", "row": "SGPL", "field": "r1m", "quote": "2.379"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "ISL (EPS +90%, P/E 25.9, price 34.6% below high)", "trigger": "Consider only if P/E case is explained by a business reason; high P/E is against the 'muted reaction, low P/E' pattern.",
+   "evidence": [
+    {"file": "screens.csv", "row": "ISL", "field": "eps_yoy", "quote": "0.896"},
+    {"file": "screens.csv", "row": "ISL", "field": "dist_from_252_high", "quote": "-0.346"}
+   ]}
+ ],
+ "entries": [],
+ "exposure_pct": 55,
+ "exposure_reason": "Below the 75% default by 20 points, argued on regime rather than timing: bills price hikes (6M cutoff 0.65pp over policy), CPI is rising, Brent is up 64% in three months, and the index has already bounced 11.6% in a month, which is the shape of the tightening-plus-stress episode in situations.md. Not zero: no timing edge is measured, the core rests on business and earnings, and the oil-linked name hedges the shock. The 45% reserve is for a hike-driven drop or a new live opportunity; I would return to 75% if bills ease or the MPC holds.",
+ "core_default_considered": true,
+ "not_known": "Reserves, current account and IMF status are not in the bundle. No business-quality, sponsor or balance-sheet facts exist for GHNI or IPAK, so those weights rest on reported EPS and P/E only. Consolidated versus unconsolidated EPS is unknown.",
+ "contamination_note": "I have some general recollection of the period after 2026-04-24 and discarded it; no figure or judgment here uses it. base_rates.csv warns it is measured past this date, so I cited none of its numbers and relied on screens, market.md, situations.md and questions.md only."}

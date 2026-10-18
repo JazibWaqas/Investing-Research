@@ -1,0 +1,55 @@
+{"date":"2026-01-23",
+"regime":{"rates_phase":"cutting","stance":"neutral","p_kmi_up_60":0.58,
+"summary":"Easing cycle with room: policy rate 10.5% after a 50bp cut, CPI flat at 5.6%, 6M bill 0.55pp below the policy rate so more cuts are priced. But the index is extended after +64% in 12 months and +10.7% in one month, and foreign corporates and banks are net sellers while mutual funds buy. Tide is supportive, price is not cheap: stay invested, keep some cash.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2025-12-15: cut (-50bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 5.6% for 2025-12 (published by 2026-01-03); three months earlier (2025-09) 5.6%"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate -0.55pp (market pricing cuts); CPI flat over 3 months (+0.0pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 189,167 on 2026-01-23; 1m +10.7%, 3m +16.7%, 6m +37.1%, 12m +64.4%"},
+{"file":"flows.csv","row":"last_20_sessions|foreign corporates","field":"net_usd_mn","quote":"foreign corporates,-76.3"},
+{"file":"flows.csv","row":"last_20_sessions|mutual funds","field":"net_usd_mn","quote":"mutual funds,174.713"}]},
+"core":[
+{"symbol":"LUCK","weight_pct":30,"thesis":"Largest weight because it is the one core name that has not run: 1m +0.3% against an index +10.7%, 252-high distance -4%, volume calm. EPS up 22.6% year on year at a P/E of 6.8, dividend yield only 1.1% so the return is meant to come from capital gain. Builder and sponsor quality is not testable from the pack.","evidence":[
+{"file":"screens.csv","row":"LUCK","field":"eps_yoy","quote":"0.226"},
+{"file":"screens.csv","row":"LUCK","field":"r1m","quote":"0.003"},
+{"file":"screens.csv","row":"LUCK","field":"pe","quote":"6.763"},
+{"file":"screens.csv","row":"LUCK","field":"dy","quote":"0.011"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"SYS","weight_pct":20,"thesis":"Software exporter with EPS up 26.7% year on year, a growth business rather than a yield name (dy 1%). Price is 9.6% below its 252-day high and 1m -4.9%, so it did not chase the rally. P/E 24 is the price of growth and the main risk. A USD earner suits an easing, rupee-stable setting.","evidence":[
+{"file":"screens.csv","row":"SYS","field":"eps_yoy","quote":"0.267"},
+{"file":"screens.csv","row":"SYS","field":"dist_from_252_high","quote":"-0.096"},
+{"file":"screens.csv","row":"SYS","field":"pe","quote":"24.356"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: enter a third, add on confirmation, favour USD earners."},
+{"file":"market.md","row":null,"field":null,"quote":"USD/PKR: 280.07  on 2026-01-23; 3-month change -0.4%"}]},
+{"symbol":"AIRLINK","weight_pct":20,"thesis":"EPS up 88% year on year while 12m price is flat (-0.3%), so growth looks less priced than elsewhere; P/E 12.7. It filed material information on 2026-01-22, content unknown. Risk: the 88% is a quarterly figure that may include a one-off, and the pack has no detail.","evidence":[
+{"file":"screens.csv","row":"AIRLINK","field":"eps_yoy","quote":"0.883"},
+{"file":"screens.csv","row":"AIRLINK","field":"r12m","quote":"-0.003"},
+{"file":"screens.csv","row":"AIRLINK","field":"pe","quote":"12.707"},
+{"file":"announcements_30d.csv","row":"AIRLINK","field":"title","quote":"2026-01-22,AIRLINK,material_info,Material Information"},
+{"file":"questions.md","row":null,"field":null,"quote":"B1. What is five-year earnings power on consolidated EPS, one-offs stripped?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"Date is not in the pack (calendar says see SBP calendar). A hold with CPI still near 5.6% and the 6M bill near 9.95% would end the cutting phase; another cut keeps the stance. Re-assess exposure on the decision.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 9.95% (auction 2026-01-21)"}]},
+{"type":"other","subject":"Fertilizer: FFC, EFERT, FATIMA, ENGROH","trigger":"All four at 252-day highs but EPS year on year is negative for FFC (-2.7%) and EFERT (-32.1%): rerating, not earnings. Consider only on a pullback with earnings turning up.","evidence":[
+{"file":"sectors.csv","row":"Fertilizer","field":"n_at_252_high","quote":"Fertilizer,4,0.1814,0.2794,0.4437,4,4"},
+{"file":"screens.csv","row":"EFERT","field":"eps_yoy","quote":"-0.321"}]},
+{"type":"volume_with_upper_locks","subject":"QUICE","trigger":"r1m +90.9% and r6m +364% with 2 upper locks, no filing in the pack. Measured rows say locks are not tradable; watch only.","evidence":[
+{"file":"screens.csv","row":"QUICE","field":"r1m","quote":"0.909"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"JVDC","trigger":"r1m +60%, 3m +100%, upper locks 1, EPS year on year -21%. Extended and unsupported by earnings; revisit only if earnings turn.","evidence":[
+{"file":"screens.csv","row":"JVDC","field":"r1m","quote":"0.6"},
+{"file":"screens.csv","row":"JVDC","field":"eps_yoy","quote":"-0.214"}]},
+{"type":"earnings_inflection_ignored","subject":"OBOY","trigger":"Results for quarter ended 2025-09-30 were filed 2026-01-22 and 2026-01-23; 5 results and 1 material item in the screen, but price is already +60% in 3m. Wait for a base before entry.","evidence":[
+{"file":"announcements_30d.csv","row":"OBOY","field":"title","quote":"2026-01-23,OBOY,financial_result"},
+{"file":"screens.csv","row":"OBOY","field":"r3m","quote":"0.597"}]},
+{"type":"earnings_inflection_ignored","subject":"GAL, DGKC, HCAR","trigger":"EPS year on year +178%, +167%, +189% but price flat or lower over 3m (GAL -5.4%, HCAR -9.8%, DGKC +0.3%). Need to know whether the jump is a one-off before any entry.","evidence":[
+{"file":"screens.csv","row":"GAL","field":"eps_yoy","quote":"1.78"},
+{"file":"screens.csv","row":"HCAR","field":"eps_yoy","quote":"1.889"},
+{"file":"screens.csv","row":"DGKC","field":"eps_yoy","quote":"1.672"}]}],
+"entries":[],
+"exposure_pct":70,
+"exposure_reason":"Slightly under the 75% default. The tide supports holding (cutting phase, policy rate 10.5% against CPI 5.6%, more cuts priced), so this is not a sit-out. But the index is up 10.7% in a month and 64% in a year, foreign corporates and banks are selling, and the 2025 shock lesson says keep cash ready for a gap. Holding 30% back costs little if the rally continues, and funds a rebound entry.",
+"core_default_considered":true,
+"not_known":"No data on FX reserves, current account, IMF status, politics or the MPC date. Builder quality, sponsor record, consolidated five-year EPS and one-offs for the three core names are not in the pack. The date of the next MPC is unknown.",
+"contamination_note":"No recollection of post-2026-01-23 events was used. base_rates.csv is flagged as measured partly after this date, so it was cited only for a type label and not for sizing or probabilities."}

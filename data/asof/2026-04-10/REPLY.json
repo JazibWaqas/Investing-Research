@@ -1,0 +1,75 @@
+{"date": "2026-04-10",
+ "regime": {"rates_phase": "holding", "stance": "neutral", "p_kmi_up_60": 0.52,
+  "summary": "Policy rate held at 10.5% but the bill curve prices hikes, CPI is rising and Brent is up 83% in three months: an oil shock for an importer. KMI fell 8.4% in 3m and has rebounded 7% in 1m, so part of the fear is priced. Hike risk is the main unknown; the closest analogue is the 2021-22 tightening where the median stock fell 52%.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 10.5%; last MPC decision 2026-03-09: hold (+0bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate +0.97pp (market pricing hikes); CPI rising over 3 months (+1.7pp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Brent: 119.07 USD/bbl on 2026-04-10; 3-month change +82.9%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "KMI All Share: 65,152 on 2026-04-10; 1m +7.0%, 3m -8.4%, 6m -1.0%, 12m +28.5%"},
+   {"file": "situations.md", "row": null, "field": null, "quote": "Tightening plus external stress: rate up 800bp in ten months with CPI above it. To June 2023 the median liquid stock fell 52% and 4 of 95 names rose."},
+   {"file": "base_rates.csv", "row": "mpc_hold_kse100", "field": "median", "quote": "mpc_hold_kse100,60 sessions,37,62%,+5.5%"}
+  ]},
+ "core": [
+  {"symbol": "ATRL", "weight_pct": 20,
+   "thesis": "Refinery sitting at its 252-day high (dist -0.1%) while most sectors fell over 3m; +16% 3m and +27% 6m into an oil shock. P/E 8.1. Open business question: refining margin sustainability and policy. Held as the oil-linked resting place, not as a trade.",
+   "evidence": [
+    {"file": "screens.csv", "row": "ATRL", "field": "dist_from_252_high", "quote": "-0.001"},
+    {"file": "screens.csv", "row": "ATRL", "field": "r3m", "quote": "0.16"},
+    {"file": "screens.csv", "row": "ATRL", "field": "pe", "quote": "8.095"},
+    {"file": "sectors.csv", "row": "Oil refineries", "field": "r1m", "quote": "Oil refineries,4,0.126,-0.0446,0.0122,0,1"}
+   ]},
+  {"symbol": "ENGROH", "weight_pct": 20,
+   "thesis": "Sponsor-led holding company within 4.6% of its 252-day high, +66% over 12m, P/E 9.7, up 11% over 3m against a falling market. Latest EPS yoy is -16.6%, treated as the open business question (one-offs vs earning power), not a reason to leave. Annual accounts transmitted 2026-04-07.",
+   "evidence": [
+    {"file": "screens.csv", "row": "ENGROH", "field": "r12m", "quote": "0.66"},
+    {"file": "screens.csv", "row": "ENGROH", "field": "dist_from_252_high", "quote": "-0.046"},
+    {"file": "screens.csv", "row": "ENGROH", "field": "eps_yoy", "quote": "-0.166"},
+    {"file": "announcements_30d.csv", "row": "ENGROH", "field": "title", "quote": "Transmission of Annual Financial Statements for the Year Ended December 31,"}
+   ]},
+  {"symbol": "MEBL", "weight_pct": 10,
+   "thesis": "Largest Islamic bank franchise in the pack, near its high (-3.5%), +113% over 12m and +6.7% over 3m while Islamic banks as a sector fell 13%. Rising rates are not a threat to a bank. EPS yoy -14% and a board notice with closed period are the watch points; half weight for that reason.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MEBL", "field": "r12m", "quote": "1.134"},
+    {"file": "screens.csv", "row": "MEBL", "field": "dist_from_252_high", "quote": "-0.035"},
+    {"file": "screens.csv", "row": "MEBL", "field": "eps_yoy", "quote": "-0.143"},
+    {"file": "calendar.md", "row": null, "field": null, "quote": "2026-04-10 MEBL: NOTICE OF BOARD MEETING AND CLOSED PERIOD - MEEZAN BANK LIMITED"}
+   ]}
+ ],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next SBP MPC decision", "trigger": "A hike (the curve already prices one) cuts exposure toward 30 percent; a hold with Brent falling lifts the book back to the 75 percent default.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "6M T-bill cutoff 11.47% (auction 2026-04-01)"},
+    {"file": "calendar.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"}
+   ]},
+  {"type": "shock_and_rebound", "subject": "KSE100 and Brent oil shock", "trigger": "Brent rolls over from 119 and the index holds the 1m rebound on a pullback; re-add toward the default core then.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 167,191 on 2026-04-10; 1m +7.1%, 3m -9.9%, 6m +2.5%, 12m +43.9%"},
+    {"file": "base_rates.csv", "row": "shock_index3_buy", "field": "hit_rate", "quote": "shock_index3_buy,60 sessions,20,50%,+0.7%"}
+   ]},
+  {"type": "deal_after_offer", "subject": "ACPL offer letters", "trigger": "Terms of the offer disclosed; judge what fraction of a holding the offer buys and the stub value before any entry.",
+   "evidence": [
+    {"file": "announcements_30d.csv", "row": "ACPL", "field": "title", "quote": "Material Information - Circulation of offer letters"}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "CRTM", "trigger": "Watch only: five locks and +84% in 1m, but the measured result for this type is nothing; act only if a filing explains it.",
+   "evidence": [
+    {"file": "screens.csv", "row": "CRTM", "field": "upper_locks_10d", "quote": "5"},
+    {"file": "base_rates.csv", "row": "volume_locks_V1_liq5", "field": "verdict", "quote": "volume_locks_V1_liq5,60 sessions,237,38%,-10.3%"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "INIL", "trigger": "EPS yoy +489% while P/E is 26 and price is 29% under its high; needs consolidated, one-off-stripped earnings from the accounts before it becomes an entry.",
+   "evidence": [
+    {"file": "screens.csv", "row": "INIL", "field": "eps_yoy", "quote": "4.885"},
+    {"file": "calendar.md", "row": null, "field": null, "quote": "2026-04-08 INIL: Board Meeting"}
+   ]},
+  {"type": "other", "subject": "Foreign selling and mutual fund buying", "trigger": "Foreign corporates sold 37mn USD in 20 sessions; if the 5-session mutual fund buying persists and foreigners stop selling, raise exposure.",
+   "evidence": [
+    {"file": "flows.csv", "row": "foreign corporates", "field": "net_usd_mn", "quote": "investor_type,last_20_sessions,foreign corporates,-37.22,2026-04-09"},
+    {"file": "flows.csv", "row": "mutual funds", "field": "net_usd_mn", "quote": "investor_type,last_5_sessions,mutual funds,39.284,2026-04-09"}
+   ]}
+ ],
+ "entries": [],
+ "exposure_pct": 50,
+ "exposure_reason": "50 percent rather than the 75 percent default because the bill curve prices a hike the SBP has not made, CPI is rising and Brent is up 83 percent, the same shape as the tightening-plus-external-stress episode where the median stock fell 52 percent. The core is tilted to oil-linked and bank names that gain or hold up in that case. I stay half invested because the index already fell 9.9 percent in 3m and rebounded, and mpc_hold has been positive over 60 sessions. The other 50 percent is dry powder for a post-decision entry, not a call that nothing is worth owning.",
+ "core_default_considered": true,
+ "not_known": "FX reserves, current account and IMF status are not in the bundle. No SBP meeting date, no read on whether Brent is spiking or sustained, and no consolidated one-off-stripped EPS for the core names.",
+ "contamination_note": "No knowledge of events after 2026-04-10 was used. The base_rates.csv warning about post-date measurement was noted, and rows were used only as rough odds for a situation type."
+}

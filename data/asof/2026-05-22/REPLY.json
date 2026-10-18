@@ -1,0 +1,50 @@
+{"date":"2026-05-22",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.48,
+"summary":"SBP hiked 100bp on 2026-04-27 to 11.5%; the 6M bill at 12.50% prices more hikes. CPI 10.91% and rising, Brent 106.90 (+46.9% in 3m). KSE100 is -2.2% over 1m but +40.9% over 12m. This resembles the 2021-22 tightening, except CPI sits just under the policy rate, not above it. Neutral: keep a reduced core, hold bills for the rest.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-04-27: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +1.00pp (market pricing hikes); CPI rising over 3 months (+5.1pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 106.90 USD/bbl on 2026-05-22; 3-month change +46.9%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 167,844 on 2026-05-22; 1m -2.2%, 3m -2.5%, 6m +3.0%, 12m +40.9%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Tightening plus external stress: rate up 800bp in ten months with CPI above it."}]},
+"core":[
+{"symbol":"GHNI","weight_pct":20,"thesis":"Growing earnings at a low multiple with a minimal dividend, so the return is capital gain. EPS up 54% yoy on a P/E of 6, price 17.9% under its 252-day high. Business questions B1, B3, B5, B6 (consolidated EPS, sponsor record) are still open and are the next work.","evidence":[
+{"file":"screens.csv","row":"GHNI","field":"eps_yoy","quote":"0.541"},
+{"file":"screens.csv","row":"GHNI","field":"pe","quote":"6.046"},
+{"file":"screens.csv","row":"GHNI","field":"dist_from_252_high","quote":"-0.179"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"ENGROH","weight_pct":20,"thesis":"Holding company with EPS up 427% yoy on a P/E of 5.1, no dividend yield shown, price 12.7% under its high. Part of that jump may be one-offs and holding-company earnings, so B1 must be checked before adding. Held as a growth and capital-gain name, not a yield name.","evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"4.27"},
+{"file":"screens.csv","row":"ENGROH","field":"pe","quote":"5.136"},
+{"file":"screens.csv","row":"ENGROH","field":"dist_from_252_high","quote":"-0.127"},
+{"file":"questions.md","row":null,"field":null,"quote":"B1. What is five-year earnings power on consolidated EPS, one-offs stripped?"}]},
+{"symbol":"OGDC","weight_pct":20,"thesis":"The oil link I hold while Brent is 106.90 and inflation is rising. P/E 5.6, price +17% over 3m and 2.1% under its high, so it is confirmed, not extended. EPS is -10% yoy, so this is a hedge and an energy-price position, not a growth thesis. Cut first if capital is needed.","evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"-0.021"},
+{"file":"screens.csv","row":"OGDC","field":"eps_yoy","quote":"-0.104"},
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"Date is not in the pack (see SBP calendar). A further hike or a hold with CPI still rising sets the exposure; a hold with CPI falling lets me raise exposure toward the 75% default.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 10.91% for 2026-04 (published by 2026-05-03); three months earlier (2026-01) 5.79%"}]},
+{"type":"deal_after_offer","subject":"SYM acquisition","trigger":"Only act if terms are public: what fraction of my holding the offer buys and the stub value (C6). SYM EPS is -80% yoy, so the price may not hold.","evidence":[
+{"file":"announcements_30d.csv","row":"SYM","field":"title","quote":"Material Information - Acquisition"},
+{"file":"questions.md","row":null,"field":null,"quote":"C6. If a takeover: what fraction of my holding does the offer buy, and what is the stub worth?"}]},
+{"type":"volume_with_upper_locks","subject":"MACFL","trigger":"4 upper locks in 10 days and +152% in a month. The base rate says nothing, so it is not tradable. Watch only; look for a filing that explains the move.","evidence":[
+{"file":"screens.csv","row":"MACFL","field":"upper_locks_10d","quote":"4"},
+{"file":"screens.csv","row":"MACFL","field":"r1m","quote":"1.519"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}]},
+{"type":"other","subject":"SGPL rights issue","trigger":"Draft rights offer document filed 2026-05-20. Rights issues have a poor base rate (60-session median -9.1%), so avoid and do not buy the dip.","evidence":[
+{"file":"announcements_30d.csv","row":"SGPL","field":"title","quote":"Draft Offer Document - Right Issue."},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"corp_E6_rights_issue,60 sessions (KMI members),76,33%,-9.1%"}]},
+{"type":"earnings_inflection_ignored","subject":"PSO","trigger":"EPS +680% yoy but the price is -11% over 1m and 23.6% under its high. Check whether the profit is a one-off or a real inflection (B1, B8) before any entry.","evidence":[
+{"file":"screens.csv","row":"PSO","field":"eps_yoy","quote":"6.803"},
+{"file":"screens.csv","row":"PSO","field":"r1m","quote":"-0.114"}]},
+{"type":"earnings_inflection_ignored","subject":"GHNI add","trigger":"Add to GHNI only if the B-questions pass and the price falls toward its range lows; a drawdown on its own is not a reason to leave.","evidence":[
+{"file":"screens.csv","row":"GHNI","field":"r3m","quote":"-0.055"}]}],
+"entries":[],
+"exposure_pct":60,
+"exposure_reason":"60% rather than the 75% default. The SBP is hiking and the 6M bill at 12.50% prices more; CPI and Brent are rising; foreign corporates sold 21.2mn USD and mutual funds 47.1mn USD over 20 sessions. The nearest analogue in situations.md, the 2021-22 tightening, saw the median liquid stock fall 52%. Cash at 12.50% also beats CPI of 10.91%. Not lower, because 'first_rate_hike' has only n=2 episodes (weak), KSE100 is down only 2.2% in a month, the three names are intact, and cutting further needs a timing signal I lack. Use the rest as dry powder for a trigger.",
+"core_default_considered":true,
+"not_known":"No data on FX reserves, current account or IMF status. No MPC date. No consolidated EPS, one-off detail, sponsor record or balance-sheet debt for any name. No view on how much the market has already priced for the oil shock.",
+"contamination_note":"I have no usable memory of Pakistan or its market after 2026-05-22. Nothing after that date was used. base_rates.csv is stamped as measured through 2026-10-16, so I used it only as rough odds for a situation type and did not draw on it for any specific name or date."}

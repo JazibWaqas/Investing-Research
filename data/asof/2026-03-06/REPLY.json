@@ -1,0 +1,70 @@
+{"date":"2026-03-06",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.58,
+"summary":"Index fell 16.2% in a month on an oil shock (Brent +48.6% in 3 months) with CPI rising 0.8pp, while the policy rate is on hold at 10.5% and the rupee is steady. That resembles the 2025 shock with intact rates more than the 2022 stress with a falling rupee, but hike risk is live and reserves data are missing. Hold most of the core, keep dry powder for a trigger.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 157,496 on 2026-03-06; 1m -16.2%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 95.74 USD/bbl on 2026-03-06; 3-month change +48.6%"},
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2026-01-26: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+0.8pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"3-month change -0.4%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Geopolitical shock, intact IMF and rates: KSE fell 12.6%, rebounded 13% in two sessions"},
+{"file":"situations.md","row":null,"field":null,"quote":"Tightening plus external stress: rate up 800bp in ten months with CPI above it."},
+{"file":"base_rates.csv","row":"shock_index5_buy,60 sessions","field":"hit_rate","quote":"67%"}]},
+"core":[
+{"symbol":"ILP","weight_pct":25,"thesis":"Quarterly EPS up 184% year on year (2025-12-31) while the price is only 1.5% higher over 3 months and 17.9% below its 252-day high. That is growth the price is not paying for; P/E 17 is not cheap, so the business questions (reinvestment, sponsor record) carry the case.","evidence":[
+{"file":"screens.csv","row":"ILP","field":"eps_yoy","quote":"1.842"},
+{"file":"screens.csv","row":"ILP","field":"r3m","quote":"0.015"},
+{"file":"screens.csv","row":"ILP","field":"dist_from_252_high","quote":"-0.179"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"SAZEW","weight_pct":20,"thesis":"EPS up 67% year on year at a P/E of 4.2, price up 110% over 12 months and only 13% below its high, so it fell less than the market in the crash. Growing and cheap; whether growth is a one-off and what it earns on new capital are unverified.","evidence":[
+{"file":"screens.csv","row":"SAZEW","field":"eps_yoy","quote":"0.671"},
+{"file":"screens.csv","row":"SAZEW","field":"pe","quote":"4.217"},
+{"file":"screens.csv","row":"SAZEW","field":"r1m","quote":"-0.055"},
+{"file":"questions.md","row":null,"field":null,"quote":"C10. What is the trap: one episode counted as many, a one-off, a corporate-action gap, lookahead in my sample?"}]},
+{"symbol":"MARI","weight_pct":15,"thesis":"The oil link I hold: EPS up 14% year on year, P/E 11.5, and a 1m fall of 12.6% against the index fall of 16.2% while Brent is up 48.6% in 3 months. Smaller weight because growth is modest and the E&P sector is still down in the sell-off.","evidence":[
+{"file":"screens.csv","row":"MARI","field":"eps_yoy","quote":"0.144"},
+{"file":"screens.csv","row":"MARI","field":"r1m","quote":"-0.126"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 95.74 USD/bbl on 2026-03-06; 3-month change +48.6%"},
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC: hold or hike with CPI rising and Brent high","trigger":"A hike, or a 6M T-bill cutoff clearly above 10.74%, cuts exposure toward 55; a hold with Brent falling lets me add toward 85.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 10.74% (auction 2026-03-04)"},
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"questions.md","row":null,"field":null,"quote":"A2. Is the curve pricing a move the SBP has not made?"}]},
+{"type":"shock_and_rebound","subject":"KSE100 after a 16.2% one-month fall","trigger":"First up close after a low with USD/PKR steady: add in thirds (about 5 points each) up to 85% exposure; no add while the low is unknown.","evidence":[
+{"file":"sectors.csv","row":"Cement","field":"r1m","quote":"-0.2222"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: enter a third, add on confirmation, favour USD earners."},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold the core; keep cash ready for a weekend gap."}]},
+{"type":"earnings_inflection_ignored","subject":"FABL: EPS +95% at P/E 3.1","trigger":"Two stable closes and Islamic banks sector stops falling; then consider an entry of up to 10% with a stop 25% below.","evidence":[
+{"file":"screens.csv","row":"FABL","field":"eps_yoy","quote":"0.953"},
+{"file":"screens.csv","row":"FABL","field":"pe","quote":"3.08"},
+{"file":"sectors.csv","row":"Islamic banks & fin.","field":"r3m","quote":"-0.23"}]},
+{"type":"earnings_inflection_ignored","subject":"HUBC: EPS +159% at P/E 3.9 (yield name, not core)","trigger":"Index stabilises and the price holds within 13% of its high; buy only as a gains play.","evidence":[
+{"file":"screens.csv","row":"HUBC","field":"eps_yoy","quote":"1.592"},
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.875"}]},
+{"type":"earnings_inflection_ignored","subject":"ZAL: EPS +235% at P/E 6.3 after a 39% one-month fall","trigger":"Stabilisation after the sell-off and confirmation that the EPS jump is not a one-off.","evidence":[
+{"file":"screens.csv","row":"ZAL","field":"eps_yoy","quote":"2.354"},
+{"file":"screens.csv","row":"ZAL","field":"r1m","quote":"-0.391"},
+{"file":"questions.md","row":null,"field":null,"quote":"C10. What is the trap: one episode counted as many, a one-off, a corporate-action gap, lookahead in my sample?"}]},
+{"type":"volume_with_upper_locks","subject":"SSOM: two upper locks and volume 2x its 120-day average in a falling market","trigger":"Watch only; the measured base rate gives no tradable edge. Revisit only with a filed insider buy.","evidence":[
+{"file":"screens.csv","row":"SSOM","field":"upper_locks_10d","quote":"2"},
+{"file":"screens.csv","row":"SSOM","field":"vol20_over_vol120","quote":"2.069"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5,60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"Brent and the rupee as the BoP read","trigger":"Brent above 110 or USD/PKR weakening past 285 moves me toward the 2022 pattern and a cut toward 50% exposure; Brent back below 85 supports adding.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"FX reserves, current account: not available in this repository (no data file)"},
+{"file":"market.md","row":null,"field":null,"quote":"USD/PKR: 279.59"}]}],
+"entries":[
+{"symbol":"GAL","type":"earnings_inflection_ignored","entry_price":398.02,"stop_price":278.61,"stop_type":"fixed","size_pct":10,"horizon_sessions":120,
+"p_gain":0.55,
+"reason":"EPS up 166% year on year at a P/E of 5.3, yet the price is down 28.6% over 3 months and 34.8% below its high, so the improvement is being ignored. Measured odds for P/E below 6 at 120 sessions are 61% with median +7.2% (not confirmed). Stop 30% below caps the loss at 3% of the book.",
+"evidence":[
+{"file":"screens.csv","row":"GAL","field":"eps_yoy","quote":"1.662"},
+{"file":"screens.csv","row":"GAL","field":"pe","quote":"5.252"},
+{"file":"screens.csv","row":"GAL","field":"r3m","quote":"-0.286"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3,120 sessions","field":"hit_rate","quote":"61%"},
+{"file":"questions.md","row":null,"field":null,"quote":"C9. What is the exit: stop, target, time, and the loss in rupees if wrong?"}]}],
+"exposure_pct":70,
+"exposure_reason":"Core default of about 75% considered. Going to 70% (core 60 plus a 10% entry) holds back 30% because the index fell 16.2% in a month, CPI is rising, hike risk is open and reserves data are missing; the 2025 shock lesson says hold the core and keep cash for a gap. I stay near the default because selling after the fall is selling low and the rate is on hold with a steady rupee.",
+"core_default_considered":true,
+"not_known":"FX reserves, current account, IMF status, the next MPC date, sponsor and reinvestment record of each core name, whether EPS jumps are one-offs, and whether the KSE100 low is in.",
+"contamination_note":"I have some general recall of the Pakistan market after this date; I discarded it and used only the bundle. base_rates.csv is flagged as measured partly after 2026-03-06, so I used it only as rough odds for situation types, not for specific names."}

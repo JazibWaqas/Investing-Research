@@ -1,0 +1,84 @@
+{"date": "2026-02-06",
+ "regime": {"rates_phase": "holding", "stance": "neutral", "p_kmi_up_60": 0.58,
+  "summary": "Policy rate held at 10.5% on 2026-01-26, CPI falling (5.79% vs 6.25% three months earlier), T-bills sit just under the policy rate so a cut is partly priced. Index +63% in 12m but -1.3% in 1m, with foreign corporates and banks/DFI selling and Islamic banks weak. Tide is benign, not stressed; no timing signal either way.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 10.5%; last MPC decision 2026-01-26: hold (+0bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "CPI YoY 5.79% for 2026-01 (published by 2026-02-03); three months earlier (2025-10) 6.25%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate -0.18pp (market near policy rate); CPI falling over 3 months (-0.5pp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 184,130 on 2026-02-06; 1m -1.3%, 3m +15.4%, 6m +25.3%, 12m +63.3%"},
+   {"file": "flows.csv", "row": "foreign corporates (last_20_sessions)", "field": "net_usd_mn", "quote": "-58.615"},
+   {"file": "sectors.csv", "row": "Islamic banks & fin.", "field": "r3m", "quote": "-0.1197"},
+   {"file": "base_rates.csv", "row": "mpc_hold_kse100 (60 sessions)", "field": "hit_rate", "quote": "62%"}
+  ]},
+ "core": [
+  {"symbol": "ENGROH", "weight_pct": 25,
+   "thesis": "Held as a growth-business resting place, judged on the business, not timing. Earnings still rising (eps_yoy 0.043), price within 2% of its 252-day high, P/E 9.7 with modest 4% yield. Builder and sponsor quality (B4-B6) are not testable from the bundle and are assumed, not verified. Drawdown of 40-60% is tolerable if business intact.",
+   "evidence": [
+    {"file": "screens.csv", "row": "ENGROH", "field": "eps_yoy", "quote": "0.043"},
+    {"file": "screens.csv", "row": "ENGROH", "field": "dist_from_252_high", "quote": "-0.017"},
+    {"file": "screens.csv", "row": "ENGROH", "field": "pe", "quote": "9.7"}
+   ]},
+  {"symbol": "LUCK", "weight_pct": 25,
+   "thesis": "Diversified compounder held for capital gain: yield only 1.1% (earnings reinvested), P/E 6.76, quarter ended Dec 2025 reported with eps_yoy +5.5%. Price is 8.6% below its high after a -8.5% month, a pullback not a thesis break. Cement weakness (sector 1m -6%) is the risk; sponsor and builder quality unverified here.",
+   "evidence": [
+    {"file": "screens.csv", "row": "LUCK", "field": "dy", "quote": "0.011"},
+    {"file": "screens.csv", "row": "LUCK", "field": "pe", "quote": "6.763"},
+    {"file": "announcements_30d.csv", "row": "LUCK", "field": "title", "quote": "Financial Results for the Quarter Ended - December 31, 2025"},
+    {"file": "sectors.csv", "row": "Cement", "field": "r1m", "quote": "-0.0625"}
+   ]},
+  {"symbol": "MARI", "weight_pct": 25,
+   "thesis": "Reinvesting E&P with fresh quarter (Dec 2025) earnings up 14.4% yoy, P/E 11.5, yield 3.5%. Pulled back 10% from its high with E&P sector 3m +23.6% behind it. Material information filed 2026-01-30; content not in bundle. Oil Brent 70.45, +11.1% in 3m, supports the sector. Management quality unverified here.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MARI", "field": "eps_yoy", "quote": "0.144"},
+    {"file": "screens.csv", "row": "MARI", "field": "dist_from_252_high", "quote": "-0.101"},
+    {"file": "announcements_30d.csv", "row": "MARI", "field": "title", "quote": "Material Information"},
+    {"file": "market.md", "row": null, "field": null, "quote": "Brent: 70.45 USD/bbl on 2026-02-06; 3-month change +11.1%"}
+   ]}
+ ],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next SBP MPC decision",
+   "trigger": "Date is not in the bundle. If a cut is delivered with CPI still falling and 6M cutoff under 10.2%, consider adding to core; if CPI turns up and T-bills rise above 10.5%, cut exposure.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"},
+    {"file": "market.md", "row": null, "field": null, "quote": "6M T-bill cutoff 10.32% (auction 2026-02-04)"}
+   ]},
+  {"type": "other", "subject": "KEL",
+   "trigger": "Several material-information and board-meeting notices in a week after a +36.5% month and a 252-day high. Do not chase. Re-type as deal_after_offer or buyback_or_sponsor_move only if a notice states an offer or sponsor transaction.",
+   "evidence": [
+    {"file": "announcements_30d.csv", "row": "KEL", "field": "title", "quote": "Emergent Board Meeting Other Than Financial Results"},
+    {"file": "screens.csv", "row": "KEL", "field": "r1m", "quote": "0.365"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "PRL",
+   "trigger": "Half-year result shows eps_yoy +2.296 but price is down 6.6% in 1m. Enter only if consolidated one-off-free earnings are confirmed and price stops falling; base rates say results alone give no tradable drift.",
+   "evidence": [
+    {"file": "screens.csv", "row": "PRL", "field": "eps_yoy", "quote": "2.296"},
+    {"file": "announcements_30d.csv", "row": "PRL", "field": "title", "quote": "Financial Results for the Half Year ended December 31, 2025"},
+    {"file": "base_rates.csv", "row": "results_yoy_positive (60 sessions)", "field": "verdict", "quote": "no tradable drift (H1)"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "GAL",
+   "trigger": "eps_yoy +1.78 on a P/E of 5.3 with price down 9% in 1m and no result in the last 30 days of announcements. Wait for the quarter's result and a price floor.",
+   "evidence": [
+    {"file": "screens.csv", "row": "GAL", "field": "eps_yoy", "quote": "1.78"},
+    {"file": "screens.csv", "row": "GAL", "field": "pe", "quote": "5.252"}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "SGPL",
+   "trigger": "Two upper locks, +258% in 6m, insider-trade disclosure on 2026-02-06. Base rate for this type is nothing or watch-only, so no entry unless a filing explains the move and the move is not extended.",
+   "evidence": [
+    {"file": "screens.csv", "row": "SGPL", "field": "upper_locks_10d", "quote": "2"},
+    {"file": "screens.csv", "row": "SGPL", "field": "r6m", "quote": "2.581"},
+    {"file": "base_rates.csv", "row": "volume_locks_V4_liq5 (60 sessions)", "field": "verdict", "quote": "watch not tradable"}
+   ]},
+  {"type": "shock_and_rebound", "subject": "KSE100",
+   "trigger": "Buy only if the index falls 5% or more in 3 sessions and a known trigger (rate decision, IMF) is in place; stage in at a third. No shock exists today (1m -1.3%).",
+   "evidence": [
+    {"file": "base_rates.csv", "row": "shock_index5_buy (60 sessions)", "field": "verdict", "quote": "no word given (Verdict 3: buy only on a known trigger)"},
+    {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: enter a third, add on confirmation, favour USD earners."}
+   ]}
+ ],
+ "entries": [],
+ "exposure_pct": 75,
+ "exposure_reason": "Core default of 75% kept (3 x 25%), no entries. Every situation type in the pack gives no timing edge (volume_locks 'nothing', results 'no tradable drift'), which per the posture means no timing signal, not hold cash. Not cutting: policy on hold, CPI falling, 3m index +15.4%. Not adding: index -1.3% in 1m, foreign corporates -58.6mn and banks/DFI -131.9mn over 20 sessions, Islamic banks 3m -12%, no catalyst until the next MPC.",
+ "core_default_considered": true,
+ "not_known": "FX reserves, current account, IMF status and next MPC date are not in the bundle. Also unknown: consolidated EPS, balance sheets, float, sponsor and builder track records for the core names, and the content of material-information notices. Core weights rest on screens only.",
+ "contamination_note": "Read only BUNDLE.md. I hold some general knowledge of the period after 2026-02-06 and used none of it; no post-date price or event shaped any pick. base_rates.csv warns it is measured through 2026-10-16, so I used it only as rough odds for a situation type, discounted p_kmi_up_60 from 62% to 0.58, and cited no name-level result from it."
+}

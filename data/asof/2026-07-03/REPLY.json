@@ -1,0 +1,45 @@
+{"date":"2026-07-03",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate held at 11.5% while CPI jumped from 7.29% to 11.08% in three months, so the real rate is about zero and bills sit above the policy rate: some hike risk. Offsetting: Brent down 46% and the last hold type has positive odds. Index is +26% in 3 months, foreign corporates sold. Neutral, trim from default, no cash dogma.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-06-15: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.08% for 2026-06 (published by 2026-07-03); three months earlier (2026-03) 7.29%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 11.75% (auction 2026-06-23); 3M 11.75%, 12M 11.84%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 185,372 on 2026-07-03; 1m +8.4%, 3m +26.2%, 6m +7.5%, 12m +44.6%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 68.68 USD/bbl on 2026-07-03; 3-month change -46.2%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-201.41"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"}]},
+"core":[
+{"symbol":"ENGROH","weight_pct":25,"thesis":"Holding company at 5.1 times earnings with EPS up 4.27x year on year and price at its 252-day high. Material information filed 2026-06-18. Business quality (builder, sponsor record) is not in the bundle, so this is a screen-based holding to be tested on B-questions.","evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"4.27"},
+{"file":"screens.csv","row":"ENGROH","field":"pe","quote":"5.136"},
+{"file":"screens.csv","row":"ENGROH","field":"dist_from_252_high","quote":"-0.02"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"MEBL","weight_pct":20,"thesis":"Islamic bank at its 252-day high, 8.8 times earnings, 12m +74.5%, in a sector with 2 names at highs. EPS growth is flat (0.6%), so it is a quality-franchise holding not an inflection; rate holds suit it. Growth proof is missing from the bundle.","evidence":[
+{"file":"screens.csv","row":"MEBL","field":"pe","quote":"8.82"},
+{"file":"screens.csv","row":"MEBL","field":"r12m","quote":"0.745"},
+{"file":"screens.csv","row":"MEBL","field":"eps_yoy","quote":"0.006"},
+{"file":"sectors.csv","row":"Islamic banks & fin.","field":"n_at_252_high","quote":"Islamic banks & fin.,10,0.0817,0.2708,0.0483,2,3"}]},
+{"symbol":"NETSOL","weight_pct":15,"thesis":"Software exporter, a USD earner, EPS up 3.39x year on year at 8.2 times earnings, 17.6% below its high on low relative volume, so not extended. The past rate-stress lesson favours USD earners.","evidence":[
+{"file":"screens.csv","row":"NETSOL","field":"eps_yoy","quote":"3.392"},
+{"file":"screens.csv","row":"NETSOL","field":"pe","quote":"8.173"},
+{"file":"screens.csv","row":"NETSOL","field":"vol20_over_vol120","quote":"0.656"},
+{"file":"situations.md","row":null,"field":null,"quote":"favour USD earners"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC with CPI at 11.08% against a policy rate of 11.5%","trigger":"A hike, or a 12M bill cutoff well above 11.84%, cuts exposure toward 40%; a hold with CPI turning down adds back toward 75%.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.25pp (market near policy rate); CPI rising over 3 months (+3.8pp)"},
+{"file":"situations.md","row":null,"field":null,"quote":"Tightening plus external stress: rate up 800bp in ten months with CPI above it."}]},
+{"type":"deal_after_offer","subject":"ATRL, offer to acquire 70% of shares disclosed 2026-06-17","trigger":"Offer price and tender terms published; buy only if the price is below the offer with the stub valued (C6). Terms are not in the bundle.","evidence":[
+{"file":"announcements_30d.csv","row":"ATRL","field":"title","quote":"Disclosure of Material Information - Receipt of an offer to acquire 70% sha"},
+{"file":"base_rates.csv","row":"deal_post_intention","field":"median","quote":"-1.2%"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL, KOHTM, DFSM (huge 3m runs with upper locks)","trigger":"No entry; this type measured as nothing and trailed-stop outcomes were negative. Revisit only if a filing explains the move.","evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"9"},
+{"file":"base_rates.csv","row":"volume_locks_V1_liq5","field":"verdict","quote":"nothing"}]},
+{"type":"other","subject":"Brent after a 46% fall and its effect on E&P and OMC earnings","trigger":"Re-examine E&P exposure if Brent falls further; Brent down also eases CPI, a case for a hold.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 68.68 USD/bbl on 2026-07-03; 3-month change -46.2%"}]}],
+"entries":[],
+"exposure_pct":60,
+"exposure_reason":"Below the 75% default by 15 points, not cash: the index is +26.2% in 3 months, CPI rose 3.8pp to 11.08% against a policy rate of 11.5%, and bills sit above the policy rate, which is the early shape of the tightening-with-CPI lesson. The hold-base rate and falling Brent keep me from cutting further; the three core names are screen-based, so I size them below full.",
+"core_default_considered":true,
+"not_known":"Reserves, current account and IMF status are not in the bundle. No business-quality evidence (sponsor, builder record, balance sheet) for core names. ATRL offer terms unknown. Next MPC date unknown.",
+"contamination_note":"I applied no recalled post-2026-07-03 knowledge. base_rates.csv warns it was measured through 2026-10-16, so I used it only as rough type-level odds and chose nothing from it for specific names."}

@@ -1,0 +1,65 @@
+{"date":"2026-06-05",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"SBP hiked 100bp on 2026-04-27 to 11.5%, CPI is 11.64% and rose 4.7pp in three months, and the 6M bill sits 1.00pp above the policy rate, so the market prices more hikes. Equities have rallied anyway (KSE100 3m +12.2%). Hike-cycle analogues in the pack were severe, but the two measured first-hike samples are tiny and weak, so this gives caution on size, not a timing signal.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-04-27: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.64% for 2026-05 (published by 2026-06-03); three months earlier (2026-02) 6.99%"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +1.00pp (market pricing hikes); CPI rising over 3 months (+4.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 170,479 on 2026-06-05; 1m +4.0%, 3m +12.2%, 6m +1.4%, 12m +41.5%"},
+{"file":"situations.md","row":null,"field":null,"quote":"rate up 800bp in ten months with CPI above it"},
+{"file":"situations.md","row":null,"field":null,"quote":"Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"median","quote":"-5.6%"},
+{"file":"questions.md","row":null,"field":null,"quote":"A1. Where is the policy rate against inflation, and which way is it likelier to move?"}]},
+"core":[
+{"symbol":"MARI","weight_pct":15,"thesis":"Earnings are growing, not merely stable: EPS up 31.1% yoy for the quarter to 2026-03-31 at P/E 11.5, 16.6% below its 252-day high, so the rally has not run away from it. Business questions B1 to B9 cannot be answered from the pack, so size is moderate.",
+"evidence":[
+{"file":"screens.csv","row":"MARI","field":"eps_yoy","quote":"0.311"},
+{"file":"screens.csv","row":"MARI","field":"pe","quote":"11.514"},
+{"file":"screens.csv","row":"MARI","field":"dist_from_252_high","quote":"-0.166"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"SYS","weight_pct":15,"thesis":"EPS up 19.9% yoy with Q1 2026 results filed 2026-05-29; 12.4% below its high with a muted 1m move of 0.6%. P/E 22.8 is the price paid for growth, so a drawdown is possible and accepted under the posture.",
+"evidence":[
+{"file":"screens.csv","row":"SYS","field":"eps_yoy","quote":"0.199"},
+{"file":"screens.csv","row":"SYS","field":"pe","quote":"22.795"},
+{"file":"announcements_30d.csv","row":"SYS","field":"title","quote":"Financial Results for the First Quarter ended 31 March 2026"},
+{"file":"questions.md","row":null,"field":null,"quote":"B11. What is priced in: P/E relative to market and own history, P/B against ROE for banks, and what must go right?"}]},
+{"symbol":"GHNI","weight_pct":10,"thesis":"EPS up 54.1% yoy at P/E 6.0, only 7.1% below its 252-day high. After a 1m gain of 17.6% the entry is extended, so weight is the smallest of the three. Needs a business check (B4, B5) that the pack cannot provide.",
+"evidence":[
+{"file":"screens.csv","row":"GHNI","field":"eps_yoy","quote":"0.541"},
+{"file":"screens.csv","row":"GHNI","field":"pe","quote":"6.046"},
+{"file":"screens.csv","row":"GHNI","field":"r1m","quote":"0.176"},
+{"file":"questions.md","row":null,"field":null,"quote":"B4. Is the business trying to become big, with a builder culture?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"A hold with CPI no longer rising is the trigger to move exposure back toward the 75% core default; a further hike keeps exposure near 55%.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100,60 sessions","field":"median","quote":"+5.5%"}]},
+{"type":"volume_with_upper_locks","subject":"HCAR","trigger":"Watch only; do not buy a lock-up run. Revisit only if a filing explains the move.",
+"evidence":[
+{"file":"screens.csv","row":"HCAR","field":"vol20_over_vol120","quote":"3.127"},
+{"file":"screens.csv","row":"HCAR","field":"upper_locks_10d","quote":"1"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5,60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"earnings_inflection_ignored","subject":"NETSOL","trigger":"EPS up 339% yoy but P/E 8.2 is above 6; revisit if price falls to P/E below 6 with the profit still intact.",
+"evidence":[
+{"file":"screens.csv","row":"NETSOL","field":"eps_yoy","quote":"3.392"},
+{"file":"screens.csv","row":"NETSOL","field":"pe","quote":"8.173"},
+{"file":"base_rates.csv","row":"results_muted_pe_above6_H3,120 sessions","field":"median","quote":"-4.3%"}]},
+{"type":"other","subject":"SGPL","trigger":"Avoid: a rights issue is in draft and the type has a negative measured base rate; revisit only after the issue completes.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"SGPL","field":"title","quote":"Draft Offer Document - Right Issue."},
+{"file":"base_rates.csv","row":"corp_E6_rights_issue,60 sessions (KMI members)","field":"verdict","quote":"avoid; mean -4.6%; <-30% 14%; p(med) 0.99; placebo is matched P2 median"}]}],
+"entries":[
+{"symbol":"ENGROH","type":"earnings_inflection_ignored","entry_price":262.21,"stop_price":209.77,"stop_type":"fixed","size_pct":15,"horizon_sessions":120,
+"p_gain":0.55,
+"reason":"EPS up 427% yoy at P/E 5.1, while the price did not follow: 1m -4.5% against KSE100 +4.0%. Cheap-and-ignored names (P/E below 6) had a 120-session median of +7.2% in the pack, labelled not confirmed and measured partly after T. Stop is 20% below entry, risk 3.0% of book.",
+"evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"4.27"},
+{"file":"screens.csv","row":"ENGROH","field":"pe","quote":"5.136"},
+{"file":"screens.csv","row":"ENGROH","field":"r1m","quote":"-0.045"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3,120 sessions","field":"median","quote":"+7.2%"},
+{"file":"questions.md","row":null,"field":null,"quote":"C9. What is the exit: stop, target, time, and the loss in rupees if wrong?"}]}],
+"exposure_pct":55,
+"exposure_reason":"Below the 75% core default by 20pp: policy was hiked 100bp, CPI at 11.64% is above the 11.5% policy rate, and bills price more hikes, which matches the 2021-23 pattern where the median liquid stock fell 52%. Not zero: the hike-sample base rates are tiny and weak, the market is rising, and no edge for timing does not mean hold cash.",
+"core_default_considered":true,
+"not_known":"Reserves, current account and IMF status are absent from the pack. Business quality, sponsor conduct, balance sheet, float and debt-threshold questions (B3 to B10) cannot be answered from the pack, so core names rest on EPS growth and price only.",
+"contamination_note":"I hold general training knowledge of Pakistan but used none of it past 2026-06-05 and cited only the bundle. base_rates.csv is flagged as measured partly after the replay date and used only as rough odds for a situation type. Could not rule out subtle influence on the choice of names."}

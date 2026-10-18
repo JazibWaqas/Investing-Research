@@ -1,0 +1,41 @@
+{"date":"2026-07-17",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate held at 11.5% on 2026-06-15, but CPI has jumped from 7.29% to 11.08% in three months, so the real policy rate is about zero and the next move is likelier up than down. The T-bill sits at policy, so the curve prices no move. Index is -2.5% over 1m but +29% over 12m. Neutral: no timing signal, core rests on business questions.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-06-15: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.08% for 2026-06 (published by 2026-07-03); three months earlier (2026-03) 7.29%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.06pp (market near policy rate)"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"mpc_hold_kse100,60 sessions,37,62%,+5.5%"}]},
+"core":[
+{"symbol":"ENGROH","weight_pct":25,"thesis":"Screen shows a large earnings jump and a low multiple, 7.5% below its 252-day high. Business questions (builder culture, sponsor record, reinvestment returns) are not answerable from this pack, so weight is moderate and rests on growth plus cheapness only.","evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"4.27"},
+{"file":"screens.csv","row":"ENGROH","field":"pe","quote":"5.136"},
+{"file":"screens.csv","row":"ENGROH","field":"dist_from_252_high","quote":"-0.075"}]},
+{"symbol":"MEBL","weight_pct":25,"thesis":"Islamic bank sector is the one rate-resilient, positively trending group (3m +19.8%, 6m +1.2%), and MEBL is 4.6% below its high with 12m +60%. EPS growth is flat, so this is a quality resting place, not a growth bet. Insiders filed repeatedly in July.","evidence":[
+{"file":"sectors.csv","row":null,"field":null,"quote":"Islamic banks & fin.,10,0.0398,0.1978,0.0119,0,0"},
+{"file":"screens.csv","row":"MEBL","field":"dist_from_252_high","quote":"-0.046"},
+{"file":"screens.csv","row":"MEBL","field":"r12m","quote":"0.603"},
+{"file":"screens.csv","row":"MEBL","field":"pe","quote":"8.82"}]},
+{"symbol":"GHNI","weight_pct":15,"thesis":"Earnings up 54% year on year, P/E near 6, price up 60% over 3m and 8% under its high with an upper lock. Extended after a run, so held smaller; a board meeting was noticed on 2026-06-29. Business and sponsor quality unknown from the pack.","evidence":[
+{"file":"screens.csv","row":"GHNI","field":"eps_yoy","quote":"0.541"},
+{"file":"screens.csv","row":"GHNI","field":"pe","quote":"6.046"},
+{"file":"screens.csv","row":"GHNI","field":"r3m","quote":"0.604"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2026-06-29 GHNI: Board Meeting Other than Financial Results"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision, rate hike risk","trigger":"CPI stays above policy rate or MPC raises; then cut exposure toward 50% and shift weight to the least rate-sensitive core name","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+3.8pp)"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"median","quote":"first_rate_hike_kse100,120 sessions,2,,-5.6%"}]},
+{"type":"earnings_inflection_ignored","subject":"EFERT H1 results","trigger":"Results due after the 2026-07-17 board meeting; add only if EPS growth continues and price does not extend","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"2026-07-17 EFERT: BOARD MEETING FOR THE ANNOUNCEMENT OF THE FINANCIAL RESULTS FOR THE SIX MONTHS ENDED JUNE 30, 2026"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Watch only: 12m +11.3x with upper locks and 3 material notices; base rate says not tradable","evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"2"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"PICT","trigger":"Watch: 1m +31% with 2 upper locks; revisit after the board meeting outcome and if volume fades","evidence":[
+{"file":"screens.csv","row":"PICT","field":"upper_locks_10d","quote":"2"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2026-07-16 PICT: Board Meeting Other Than Financial Results"}]}],
+"entries":[],
+"exposure_pct":65,
+"exposure_reason":"Trimmed 10 points from the 75% default: CPI +3.8pp in three months against a policy rate near zero real, mutual funds net sold 46.3mn USD in 5 sessions, and the index is -2.5% over 1m. The base rate for hikes is thin (n=2), so no deeper cut; the core stays because no type here gives a timing signal.",
+"core_default_considered":true,
+"not_known":"Reserves, current account, IMF status and the rupee outlook are not in the pack. Business quality (sponsor record, reinvestment returns, balance sheet) for every core name is unassessed; only screens, sectors and flows were available.",
+"contamination_note":"No specific memory of post-2026-07-17 events was used; the knowledge cutoff makes any recollection of that period unreliable and none was relied on."}

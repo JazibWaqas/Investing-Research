@@ -1,0 +1,48 @@
+{"date":"2026-05-08",
+"regime":{"rates_phase":"hiking","stance":"risk_off","p_kmi_up_60":0.5,
+"summary":"The SBP hiked 100bp on 2026-04-27 to 11.5% while CPI roughly doubled in three months to 10.91% and Brent is up 46.9%. The index is -8.9% over 3m but +65.3% over 12m. Real policy rate is only about 0.6pp. Closest analogues are tightening-plus-external-stress episodes, which fell hard, but a first hike has only n=2 and no timing edge, so I trim rather than exit.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-04-27: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 10.91% for 2026-04 (published by 2026-05-03); three months earlier (2026-01) 5.79%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 103.48 USD/bbl on 2026-05-08; 3-month change +46.9%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 171,116 on 2026-05-08; 1m +3.2%, 3m -8.9%, 6m +7.6%, 12m +65.3%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Tightening plus external stress: rate up 800bp in ten months with CPI above it."},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"120 sessions","quote":"first_rate_hike_kse100,120 sessions,2,,-5.6%,,,,weak (H3)"}]},
+"core":[
+{"symbol":"ENGROH","weight_pct":20,"thesis":"Holding company priced at 5.1x earnings with quarterly EPS up 4.27x year on year, close to its 252-day high while the index fell over 3m. Relative strength in a falling market. Business questions B1, B3 and B13 (growth, not mere stability) are the test; the EPS jump may include one-offs, so I size at 20 not more.","evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"4.27"},
+{"file":"screens.csv","row":"ENGROH","field":"pe","quote":"5.136"},
+{"file":"screens.csv","row":"ENGROH","field":"dist_from_252_high","quote":"-0.062"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"MARI","weight_pct":20,"thesis":"The oil link I actually hold, with Brent up 46.9% in 3m while the E&P sector's 3m return is still negative. Quarterly EPS up 31.1% year on year at 11.5x. Hedges the oil and inflation leg of the regime risk inside the core. Dividend yield is low priority; case is earnings growth.","evidence":[
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 103.48 USD/bbl on 2026-05-08; 3-month change +46.9%"},
+{"file":"screens.csv","row":"MARI","field":"eps_yoy","quote":"0.311"},
+{"file":"sectors.csv","row":"E&P","field":"r3m","quote":"E&P,3,0.0135,-0.072,0.196"}]},
+{"symbol":"GHNI","weight_pct":15,"thesis":"Quarterly EPS up 54.1% year on year at 6.0x earnings with a 1.5% yield, so profits are retained to compound. Price is 15% below its 252-day high after a 25.8% one-month jump, so it is extended short term; I accept that and size below the other two. Sponsor quality is not in the bundle (B5, B6 unanswered).","evidence":[
+{"file":"screens.csv","row":"GHNI","field":"eps_yoy","quote":"0.541"},
+{"file":"screens.csv","row":"GHNI","field":"pe","quote":"6.046"},
+{"file":"screens.csv","row":"GHNI","field":"r1m","quote":"0.258"},
+{"file":"questions.md","row":null,"field":null,"quote":"B6. How does the sponsor treat minorities?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision and monthly CPI","trigger":"Add toward the 75% core default when CPI stops rising and the SBP holds; cut further if another hike lands with CPI still accelerating.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.48pp (market near policy rate); CPI rising over 3 months (+5.1pp)"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."}]},
+{"type":"earnings_inflection_ignored","subject":"PSO","trigger":"Quarterly EPS up 6.8x yet price is -24.6% over 3m; enter only if price confirms and P/E case holds, since muted reaction above 6x P/E has a poor measured record.","evidence":[
+{"file":"screens.csv","row":"PSO","field":"eps_yoy","quote":"6.803"},
+{"file":"screens.csv","row":"PSO","field":"r3m","quote":"-0.246"},
+{"file":"base_rates.csv","row":"results_muted_pe_above6_H3","field":"60 sessions","quote":"results_muted_pe_above6_H3,60 sessions,84,32%,-4.4%,,,,not confirmed"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Seven upper locks in 10 days and +193% in 1m. Measured record for this type is nothing; do not chase, revisit only if the filings explain the move.","evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"7"},
+{"file":"screens.csv","row":"SGPL","field":"r1m","quote":"1.93"},
+{"file":"base_rates.csv","row":"volume_locks_V1_liq5","field":"60 sessions","quote":"volume_locks_V1_liq5,60 sessions,237,38%,-10.3%,10.5%,-71%,+1.0%,nothing"}]},
+{"type":"earnings_inflection_ignored","subject":"NETSOL","trigger":"Quarterly EPS up 3.39x with a revoked then revised material-information notice on 2026-05-04; wait for the revised disclosure to be understood before sizing.","evidence":[
+{"file":"screens.csv","row":"NETSOL","field":"eps_yoy","quote":"3.392"},
+{"file":"announcements_30d.csv","row":"NETSOL","field":"title","quote":"2026-05-04,NETSOL,material_info,Material Information REVOKED"}]}],
+"entries":[],
+"exposure_pct":55,
+"exposure_reason":"Below the 75% default because a 100bp hike, CPI doubling in 3m and Brent up 47% match the tightening-plus-stress analogues, where the median stock fell hard; the 20 points held back is dry powder for the MPC/CPI trigger. Not lower because no timing edge exists for a first hike (n=2), real rates are only about 0.6pp, and the core rests on business questions.",
+"core_default_considered":true,
+"not_known":"FX reserves and current account, IMF status, political risk, sponsor and balance-sheet quality of the core names, and the next MPC date are not in the bundle. EPS growth may contain one-offs.",
+"contamination_note":"I have a training cutoff after this date; I noticed no recalled post-2026-05-08 facts and used only the bundle. The base_rates.csv warning says it is measured partly after this date, so I used it only as rough type-level odds."}

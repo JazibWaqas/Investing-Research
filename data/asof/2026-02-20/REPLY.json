@@ -1,0 +1,60 @@
+{"date":"2026-02-20",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.57,
+"summary":"Policy rate held at 10.5% with the 6M bill at the policy rate, so no cut is priced. CPI is falling. The index is down 7.4% in a month with every sector lower and foreign corporates selling, but the 3m, 6m and 12m trends are positive. This is a pullback inside a holding phase, not a regime break; there is no measured timing edge either way.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2026-01-26: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI falling over 3 months (-0.5pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 173,170 on 2026-02-20; 1m -7.4%, 3m +6.8%, 6m +16.7%, 12m +53.1%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-72.333"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"},
+{"file":"questions.md","row":null,"field":null,"quote":"A1. Where is the policy rate against inflation, and which way is it likelier to move?"}]},
+"core":[
+{"symbol":"SAZEW","weight_pct":25,"thesis":"Earnings growing fast (EPS +67% yoy) at a P/E near 4, 12m price +112% with the trend intact. Judged on the business first: B13 asks growing, not merely stable. Autos sector is weak, so a falling price alone is not an exit reason. Sponsor and builder quality are not in the bundle.","evidence":[
+{"file":"screens.csv","row":"SAZEW","field":"eps_yoy","quote":"0.671"},
+{"file":"screens.csv","row":"SAZEW","field":"pe","quote":"4.217"},
+{"file":"screens.csv","row":"SAZEW","field":"r12m","quote":"1.121"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"ENGROH","weight_pct":25,"thesis":"Holding company of a sponsor group with a record in fertilizer and chemicals, still within 7.2% of its 252-day high after a 31% three-month gain, the strongest large name in a weak tape. EPS growth is only 4%, so this is a sponsor-quality hold, not an earnings-inflection one.","evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"dist_from_252_high","quote":"-0.072"},
+{"file":"screens.csv","row":"ENGROH","field":"r3m","quote":"0.31"},
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"0.043"},
+{"file":"questions.md","row":null,"field":null,"quote":"B4. Is the business trying to become big, with a builder culture?"}]},
+{"symbol":"ILP","weight_pct":20,"thesis":"Quarterly EPS up 184% yoy, three-month gain 12%, 12m gain 41%, and flat over one month while the market fell 7.4%. P/E 17 prices in growth, so the question is whether it keeps compounding. No reason to leave while the business is intact.","evidence":[
+{"file":"screens.csv","row":"ILP","field":"eps_yoy","quote":"1.842"},
+{"file":"screens.csv","row":"ILP","field":"r1m","quote":"-0.003"},
+{"file":"screens.csv","row":"ILP","field":"pe","quote":"17.114"},
+{"file":"questions.md","row":null,"field":null,"quote":"B11. What is priced in: P/E relative to market and own history, P/B against ROE for banks, and what must go right?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC","trigger":"Date confirmed from the SBP calendar and CPI keeps falling with the 6M bill below the policy rate; the first cut would be the policy event.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 10.44% (auction 2026-02-18)"}]},
+{"type":"deal_after_offer","subject":"FCCL","trigger":"Offer terms and the fraction of the holding bought are readable in a filing (C6) before any entry.","evidence":[
+{"file":"announcements_30d.csv","row":"FCCL","field":"title","quote":"Material Information - Newspapers Publication of Public Announcement of Off"},
+{"file":"questions.md","row":null,"field":null,"quote":"C6. If a takeover: what fraction of my holding does the offer buy, and what is the stub worth?"}]},
+{"type":"buyback_or_sponsor_move","subject":"EPCL","trigger":"Content of the Material Information notice is a buyback or sponsor action rather than routine news.","evidence":[
+{"file":"announcements_30d.csv","row":"EPCL","field":"title","quote":"Material Information - Engro Polymer & Chemicals Limited"}]},
+{"type":"volume_with_upper_locks","subject":"AGP","trigger":"Only watch: base rate says nothing tradable for this type; act only if a filed explanation appears.","evidence":[
+{"file":"screens.csv","row":"AGP","field":"upper_locks_10d","quote":"1"},
+{"file":"screens.csv","row":"AGP","field":"vol20_over_vol120","quote":"2.401"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"earnings_inflection_ignored","subject":"INIL","trigger":"EPS up 489% yoy with flat price over one month; enter only if P/E and business quality justify it.","evidence":[
+{"file":"screens.csv","row":"INIL","field":"eps_yoy","quote":"4.885"},
+{"file":"screens.csv","row":"INIL","field":"r1m","quote":"-0.004"}]},
+{"type":"shock_and_rebound","subject":"KSE100 after a -7.4% month","trigger":"Add only on a known trigger such as the first policy cut; index shock buys show 50% hit and +0.7% median at 60 sessions.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 66,507 on 2026-02-20; 1m -8.0%, 3m +3.9%, 6m +9.6%, 12m +38.1%"},
+{"file":"base_rates.csv","row":"shock_index3_buy","field":"hit_rate","quote":"50%"}]}],
+"entries":[
+{"symbol":"GAL","type":"earnings_inflection_ignored","entry_price":479.36,"stop_price":383.49,"stop_type":"fixed","size_pct":5,"horizon_sessions":120,
+"p_gain":0.55,
+"reason":"Half-year results are out with EPS up 166% yoy and P/E 5.3, yet price fell 10.7% in a month and 13.6% in three. Muted reaction at a low P/E has a rough 67% hit and +6.4% median at 120 sessions, marked not confirmed. Small size, 20% stop, risk 1.0% of book.",
+"evidence":[
+{"file":"screens.csv","row":"GAL","field":"eps_yoy","quote":"1.662"},
+{"file":"screens.csv","row":"GAL","field":"pe","quote":"5.252"},
+{"file":"screens.csv","row":"GAL","field":"r1m","quote":"-0.107"},
+{"file":"announcements_30d.csv","row":"GAL","field":"title","quote":"Financial Results for the Half Year ended December 31, 2025"},
+{"file":"base_rates.csv","row":"results_muted_pe_main_H3","field":"median","quote":"+6.4%"}]}],
+"exposure_pct":75,
+"exposure_reason":"Held at the 75% default. Rates are holding, CPI is falling, and trends over 3m to 12m are positive, so cash has no argued edge. The one-month fall and foreign selling give no measured timing signal, and index shock buys show 50% hit at 60 sessions. Drawdowns are accepted, so there is no case for cutting to cash.",
+"core_default_considered":true,
+"not_known":"FX reserves and current account are not in the bundle. IMF status, politics, sponsor quality, balance sheets and cash conversion for each name are not in the bundle. Next MPC date is not given. Single-name business judgments here rest only on screen numbers.",
+"contamination_note":"No specific post-2026-02-20 memory was used. base_rates.csv is flagged as measured partly after this date, so it is used only as rough odds for a type, with no inference about specific names."}

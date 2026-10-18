@@ -1,0 +1,87 @@
+Replay summary: 15 dates scored (0 fake). Pilot-size samples give no verdict (replay_exam s7 minimum sample).
+
+Validity: 100% of replies valid; citations resolving 86% (475 cited)
+  2026-01-09 HF n/a: errors [] cite_rate 85%
+  2026-01-23 HF n/a: errors [] cite_rate 82%
+  2026-02-06 HF n/a: errors [] cite_rate 84%
+  2026-02-20 HF pre: errors [] cite_rate 86%
+  2026-03-06 HF n/a: errors [] cite_rate 93%
+  2026-03-20 HF n/a: errors [] cite_rate 86%
+  2026-03-27 HF post: errors [] cite_rate 85%
+  2026-04-10 HF n/a: errors [] cite_rate 79%
+  2026-04-24 HF policy: errors [] cite_rate 100%
+  2026-05-08 HF n/a: errors [] cite_rate 83%
+  2026-05-22 HF post: errors [] cite_rate 93%
+  2026-06-05 HF n/a: errors [] cite_rate 83%
+  2026-06-19 HF n/a: errors [] cite_rate 91%
+  2026-07-03 HF pre-top: errors [] cite_rate 81%
+  2026-07-17 HF n/a: errors [] cite_rate 82%
+
+== 20 sessions ==
+  book            n=15 mean=-0.2% median=+0.6% win=53% worst=-10.4%
+  KMI TR          n=15 mean=-0.5% median=-0.7% win=47% worst=-15.0%
+  S3              n=15 mean=+0.4% median=-1.8% win=33% worst=-21.2%
+  S3 scaled       n=15 mean=+0.4% median=-0.6% win=47% worst=-13.5%
+  placebo median  n=15 mean=-0.3% median=+0.1% win=60% worst=-16.7%
+  core            n=15 mean=+0.2% median=+0.7% win=53% worst=-15.0%
+  entries         n=4 mean=-4.5% median=-7.1% win=50% worst=-15.6%
+  judgment-add D  mean -0.6%  95% block-bootstrap CI [-4.4%, +5.0%]
+    selection     mean -0.6%  95% block-bootstrap CI [-2.3%, +3.0%]
+    exposure      mean +0.1%  95% block-bootstrap CI [-2.2%, +2.5%]
+  D in HF: n=15 mean=-0.6% median=+2.4% win=60% worst=-34.0%
+  D role n/a: n=10 mean=-1.1% median=+4.2% win=60% worst=-34.0%
+  D role policy: n=1 mean=+2.4% median=+2.4% win=100% worst=+2.4%
+  D role post: n=2 mean=-6.1% median=-6.1% win=50% worst=-19.9%
+  D role pre: n=1 mean=-5.1% median=-5.1% win=0% worst=-5.1%
+  D role pre-top: n=1 mean=+17.9% median=+17.9% win=100% worst=+17.9%
+  core minus KMI TR: n=15 mean=+0.7% median=+0.1% win=53% worst=-4.8%
+  book above placebo median on 53% of dates; mean placebo percentile 50%
+== 60 sessions ==
+  book            n=15 mean=+2.8% median=+3.8% win=60% worst=-10.0%
+  KMI TR          n=15 mean=+1.2% median=+2.4% win=53% worst=-9.5%
+  S3              n=15 mean=+1.5% median=-4.2% win=47% worst=-21.3%
+  S3 scaled       n=15 mean=+1.5% median=-1.1% win=47% worst=-15.4%
+  placebo median  n=15 mean=+1.4% median=+1.7% win=53% worst=-12.7%
+  core            n=15 mean=+3.8% median=+8.5% win=60% worst=-16.2%
+  entries         n=4 mean=+9.1% median=+12.4% win=75% worst=-15.6%
+  judgment-add D  mean +1.3%  95% block-bootstrap CI [-3.6%, +8.9%]
+    selection     mean +1.3%  95% block-bootstrap CI [-1.5%, +6.5%]
+    exposure      mean +0.0%  95% block-bootstrap CI [-2.5%, +2.9%]
+  D in HF: n=15 mean=+1.3% median=+4.5% win=67% worst=-40.0%
+  D role n/a: n=10 mean=+1.9% median=+7.4% win=70% worst=-40.0%
+  D role policy: n=1 mean=+15.9% median=+15.9% win=100% worst=+15.9%
+  D role post: n=2 mean=-12.1% median=-12.1% win=0% worst=-23.6%
+  D role pre: n=1 mean=+4.5% median=+4.5% win=100% worst=+4.5%
+  D role pre-top: n=1 mean=+4.8% median=+4.8% win=100% worst=+4.8%
+  core minus KMI TR: n=15 mean=+2.6% median=+2.3% win=67% worst=-8.3%
+  book above placebo median on 67% of dates; mean placebo percentile 59%
+== 120 sessions ==
+  book            n=8 mean=+4.4% median=+2.7% win=75% worst=-10.2%
+  KMI TR          n=8 mean=+3.5% median=+1.9% win=62% worst=-8.8%
+  S3              n=8 mean=+11.7% median=+8.1% win=75% worst=-6.0%
+  S3 scaled       n=8 mean=+9.3% median=+7.1% win=88% worst=-2.7%
+  placebo median  n=8 mean=+4.5% median=+4.3% win=62% worst=-8.3%
+  core            n=8 mean=+3.0% median=+2.2% win=62% worst=-17.5%
+  entries         n=2 mean=+32.0% median=+32.0% win=50% worst=-15.6%
+  judgment-add D  mean -7.3%  95% block-bootstrap CI [-15.2%, -5.9%]
+    selection     mean -5.0%  95% block-bootstrap CI [-10.3%, -3.3%]
+    exposure      mean -2.4%  95% block-bootstrap CI [-7.3%, +0.3%]
+  D in HF: n=8 mean=-7.3% median=-7.1% win=25% worst=-25.9%
+  D role n/a: n=6 mean=-2.5% median=-1.6% win=33% worst=-25.9%
+  D role policy: n=0
+  D role post: n=1 mean=-18.5% median=-18.5% win=0% worst=-18.5%
+  D role pre: n=1 mean=-25.3% median=-25.3% win=0% worst=-25.3%
+  D role pre-top: n=0
+  core minus KMI TR: n=8 mean=-0.5% median=+0.1% win=50% worst=-13.5%
+  book above placebo median on 20% of dates; mean placebo percentile 46%
+
+== entries ==
+  filled 4 of 4; 60-session n=4 mean=+9.1% median=+12.4% win=75% worst=-15.6%; hit rate 75%
+  share above +50% at 120: 25%; worst entry -15.6%; stopped 25%
+  regime HF: n=4 mean=+9.1% median=+12.4% win=75% worst=-15.6%
+  Brier p_gain 0.227 (n=4) vs pooled placebo win rate 47% constant 0.267, vs 0.5 0.250
+  Brier p_kmi_up_60 0.274 (n=15) vs 0.5 0.250
+
+== sit-out == fall dates (KMI 60-session min at least 10% below T close): 4 of 15; mean exposure 72% on fall dates vs 58% on others; gap -14 points (the exam wants 20+)
+
+== surprise log == 8 rows in data/replay/surprises.csv: exposure>=60 on a fall date 4; watched name rose 50%+ in 120 sessions, not entered 2; stance contradicted by a 10% move 2

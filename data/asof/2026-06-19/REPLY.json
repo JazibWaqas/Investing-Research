@@ -1,0 +1,57 @@
+{"date":"2026-06-19",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.52,
+"summary":"SBP held at 11.5% on 2026-06-15 but the 6M bill cutoff is 0.99pp above the policy rate, so the curve prices a hike not yet made. CPI jumped from 6.99% to 11.64% in three months, so real rates are about zero. KSE100 is up 19.9% in 3m, extended. Brent fell 27.5% in 3m, which helps. Leaning neutral: trim, do not exit.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-06-15: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.99pp (market pricing hikes); CPI rising over 3 months (+4.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 178,923 on 2026-06-19; 1m +10.6%, 3m +19.9%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 80.46 USD/bbl on 2026-06-19; 3-month change -27.5%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."}]},
+"core":[
+{"symbol":"ENGROH","weight_pct":20,"thesis":"Screen shows EPS up 4.27x year on year at a P/E of 5.1, 5.5% below its 252-day high, and the company filed material information on 2026-06-18. Cheap on the number, but I cannot tell from the bundle whether the jump is a one-off or what the business earns on new capital (B1, B3); this is a starter weight.","evidence":[
+{"file":"screens.csv","row":"ENGROH","field":"eps_yoy","quote":"4.27"},
+{"file":"screens.csv","row":"ENGROH","field":"pe","quote":"5.136"},
+{"file":"announcements_30d.csv","row":"ENGROH","field":"title","quote":"Material Information"},
+{"file":"questions.md","row":null,"field":null,"quote":"B1. What is five-year earnings power on consolidated EPS, one-offs stripped?"}]},
+{"symbol":"ILP","weight_pct":15,"thesis":"EPS up 91.8% year on year, 12m return +59.7% and 0.9% below its 252-day high, so price is confirming growth rather than lagging it. P/E 17.1 is not cheap, so what must go right (B11) is the open question. Insider trade filed 2026-06-03; no base-rate edge claimed from it.","evidence":[
+{"file":"screens.csv","row":"ILP","field":"eps_yoy","quote":"0.918"},
+{"file":"screens.csv","row":"ILP","field":"dist_from_252_high","quote":"-0.009"},
+{"file":"screens.csv","row":"ILP","field":"pe","quote":"17.114"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"GHNI","weight_pct":10,"thesis":"EPS up 54.1% year on year at a P/E of 6.0, 4.4% below its 252-day high and +51.9% over 12m. Board meeting notice on 2026-06-17 (not a results meeting). Growth plus a low multiple fits the posture, but builder and sponsor quality (B4, B5) are not in the bundle, so the weight stays modest.","evidence":[
+{"file":"screens.csv","row":"GHNI","field":"eps_yoy","quote":"0.541"},
+{"file":"screens.csv","row":"GHNI","field":"pe","quote":"6.046"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2026-06-17 GHNI: Board Meeting Other Than Financial Results"},
+{"file":"questions.md","row":null,"field":null,"quote":"B4. Is the business trying to become big, with a builder culture?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC: hike versus hold, with the 6M bill 0.99pp above the policy rate","trigger":"A hike, or a further rise in bill cutoffs above 12.49%, moves exposure toward 40%; a hold with CPI turning down lets me rebuild toward 75%.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 12.49% (auction 2026-06-10)"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"first_rate_hike_kse100,120 sessions,2,,-5.6%,,,,weak (H3)"}]},
+{"type":"policy_or_price_decision_pending","subject":"Super tax cut announced in the Budget on 12 Jun 2026; effect on banks and cement","trigger":"Enactment of the cut in the finance bill and a visible earnings upgrade for the taxed sectors.","evidence":[
+{"file":"actors.md","row":null,"field":null,"quote":"| 13 | Super tax cut | Budget 12 Jun 2026 | outcome not shown |"}]},
+{"type":"deal_after_offer","subject":"ATRL: terms of the 70% offer (price, buyer, tender structure)","trigger":"Disclosure of the offer price and whether a full tender follows; if the price is far above 910, hold through the offer, and if the offer is withdrawn, exit.","evidence":[
+{"file":"announcements_30d.csv","row":"ATRL","field":"title","quote":"Disclosure of Material Information - Receipt of an offer to acquire 70% sha"}]},
+{"type":"other","subject":"ITANZ: repeated material information filings (four since 2026-06-03) with the price up 49.8% in 1m on a 4.1x volume ratio","trigger":"A filing that states what the information is; until then it is not tradable.","evidence":[
+{"file":"screens.csv","row":"ITANZ","field":"r1m","quote":"0.498"},
+{"file":"screens.csv","row":"ITANZ","field":"vol20_over_vol120","quote":"4.078"}]},
+{"type":"volume_with_upper_locks","subject":"QTECH: 3 upper locks in 10 days, +56.6% in 1m, no filing","trigger":"Not tradable; the measured base rate is nothing. Act only if a filing explains the move.","evidence":[
+{"file":"screens.csv","row":"QTECH","field":"upper_locks_10d","quote":"3"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}]},
+{"type":"earnings_inflection_ignored","subject":"NETSOL: EPS up 3.39x year on year at P/E 8.2 with a material-information filing on 2026-06-17","trigger":"Disclosure of what the filing is, and confirmation that the EPS jump is not a one-off.","evidence":[
+{"file":"screens.csv","row":"NETSOL","field":"eps_yoy","quote":"3.392"},
+{"file":"announcements_30d.csv","row":"NETSOL","field":"title","quote":"Material Information"}]}],
+"entries":[
+{"symbol":"ATRL","type":"deal_after_offer","entry_price":910.01,"stop_price":780.0,"stop_type":"fixed","size_pct":10,"horizon_sessions":120,
+"p_gain":0.55,
+"reason":"A disclosed offer to acquire 70% on 2026-06-17 with price 6.4% below its high and volume ratio 0.34, so the news is not chased up. Base rate for post-offer deals is about even (54% hit, +1.1% median), so this is a small bet on a visible buyer, not an edge. Risk: 10 x 14.3% = 1.4% of book. Offer price unknown.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"ATRL","field":"title","quote":"Disclosure of Material Information - Receipt of an offer to acquire 70% sha"},
+{"file":"screens.csv","row":"ATRL","field":"dist_from_252_high","quote":"-0.064"},
+{"file":"screens.csv","row":"ATRL","field":"vol20_over_vol120","quote":"0.336"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"deal_post_offer,to completion (duration not stated),24,54%,+1.1%,,-35.8%,,no verdict word"},
+{"file":"questions.md","row":null,"field":null,"quote":"C6. If a takeover: what fraction of my holding does the offer buy, and what is the stub worth?"}]}],
+"exposure_pct":55,
+"exposure_reason":"Default is the core at about 75%. I hold 55%, 20 points less, for three reasons from the bundle: the curve prices a hike the SBP has not made, CPI rose 4.7pp in three months, and the index is up 19.9% in 3m, so a hike-cycle drawdown is the main risk. The hike-cycle lesson is to hold bills with a trigger to return. I do not go to cash because the base rates give no timing edge and the posture rests on business questions; the remaining 45% is in growth names with a 10% deal entry.",
+"core_default_considered":true,
+"not_known":"FX reserves, the current account and IMF status are not in the bundle. Offer terms for ATRL, sponsor and builder quality of each core name, and whether the ENGROH and GHNI EPS jumps are one-offs are unknown. Brent at 80 after a 27.5% fall: I do not know what caused the earlier swing.",
+"contamination_note":"I have no reliable memory of Pakistan's market after 2026-06-19 and used none. base_rates.csv is flagged as measured partly after this date, so I used it only as rough odds for the situation type. Nothing about specific names was taken from it."}
