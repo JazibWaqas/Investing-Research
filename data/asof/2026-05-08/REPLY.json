@@ -1,0 +1,71 @@
+{"date": "2026-05-08",
+ "regime": {"rates_phase": "hiking", "stance": "risk_off", "p_kmi_up_60": 0.45,
+  "summary": "SBP hiked 100bp on 2026-04-27 with CPI at 10.91% and rising, Brent up 46.9% in three months, and the 6M bill only 0.48pp above the policy rate. The nearest analogue in the pack is the 2021-22 tightening with external stress, where the method says hold bills and set a return trigger. Reserves and current account are not in the pack. Index is down 8.9% over 3 months. Stay mostly in cash.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 11.5%; last MPC decision 2026-04-27: hike (+100bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "CPI YoY 10.91% for 2026-04 (published by 2026-05-03); three months earlier (2026-01) 5.79%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Brent: 103.48 USD/bbl on 2026-05-08; 3-month change +46.9%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate +0.48pp (market near policy rate); CPI rising over 3 months (+5.1pp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 171,116 on 2026-05-08; 1m +3.2%, 3m -8.9%, 6m +7.6%, 12m +65.3%"},
+   {"file": "situations.md", "row": null, "field": null, "quote": "Tightening plus external stress: rate up 800bp in ten months with CPI above it."},
+   {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: hold bills, and set a trigger to return."},
+   {"file": "base_rates.csv", "row": null, "field": null, "quote": "first_rate_hike_kse100,120 sessions,2,,-5.6%,,,,weak (H3)"}
+  ]},
+ "core": [
+  {"symbol": "OGDC", "weight_pct": 10,
+   "thesis": "Only held link to Brent near 103 is E&P. OGDC sits 1.2% below its 252-day high, P/E 5.583, yield 6.8%, with mutual funds buying E&P over 20 sessions. Small weight because oil can reverse and the regime is hiking. Exit review if Brent falls sharply.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "Brent: 103.48 USD/bbl on 2026-05-08; 3-month change +46.9%"},
+    {"file": "questions.md", "row": null, "field": null, "quote": "A8. Oil: where is Brent, and which link do I actually hold?"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dist_from_252_high", "quote": "-0.012"},
+    {"file": "screens.csv", "row": "OGDC", "field": "pe", "quote": "5.583"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dy", "quote": "0.068"},
+    {"file": "flows.csv", "row": "lipi mutual funds | Oil and Gas Exploration Companies", "field": "net_usd_mn", "quote": "11.248"}
+   ]}
+ ],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next MPC decision",
+   "trigger": "Re-enter risk only after a hold with CPI no longer rising, or after the 6M bill cutoff falls below the policy rate. Date not in the pack.",
+   "evidence": [
+    {"file": "calendar.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"},
+    {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: hold bills, and set a trigger to return."},
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "mpc_hold_kse100,60 sessions,37,62%,+5.5%,,,,no verdict given (in sample; overlapping)"}
+   ]},
+  {"type": "shock_and_rebound", "subject": "KSE100",
+   "trigger": "Buy only on a known trigger after a sharp multi-day index fall (5%-type shock), staged and not all at once.",
+   "evidence": [
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)"},
+    {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: enter a third, add on confirmation, favour USD earners."}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "SGPL",
+   "trigger": "Not tradable: 7 upper locks in 10 days after a 1.93 one-month gain. Watch only; no entry.",
+   "evidence": [
+    {"file": "screens.csv", "row": "SGPL", "field": "upper_locks_10d", "quote": "7"},
+    {"file": "screens.csv", "row": "SGPL", "field": "r1m", "quote": "1.93"},
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "MACFL",
+   "trigger": "7 upper locks, 1.076 one-month gain, P/E 34.336. Watch only; the base rate for this type is nothing.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MACFL", "field": "upper_locks_10d", "quote": "7"},
+    {"file": "screens.csv", "row": "MACFL", "field": "pe", "quote": "34.336"},
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "volume_locks_V3_liq5,60 sessions,465,42%,-7.1%,7.5%,-71%,+1.5%,nothing"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "ENGROH",
+   "trigger": "EPS YoY 4.27 with P/E 5.136 but price flat over 3 months. Consider only if price confirms; base rate for low P/E is not confirmed.",
+   "evidence": [
+    {"file": "screens.csv", "row": "ENGROH", "field": "eps_yoy", "quote": "4.27"},
+    {"file": "screens.csv", "row": "ENGROH", "field": "pe", "quote": "5.136"},
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "results_pe_below6_any_reaction_H3,120 sessions,80,61%,+7.2%,,,,not confirmed"}
+   ]},
+  {"type": "other", "subject": "Brent crude and OGDC core",
+   "trigger": "Cut OGDC if Brent gives back much of its 46.9% three-month rise; add nothing if oil rises further, since the regime is hiking.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "Brent: 103.48 USD/bbl on 2026-05-08; 3-month change +46.9%"}
+   ]}
+ ],
+ "entries": [],
+ "exposure_pct": 10,
+ "not_known": "FX reserves, current account, IMF status and the next MPC date are not in the pack. The 30-day announcements file is empty, so no deal, buyback or insider signals are visible. Market valuation against its own range is not computed.",
+ "contamination_note": "No knowledge of events after 2026-05-08 was used. Base-rate rows are flagged as measured partly after this date, so they were used only as rough odds for a situation type, never for specific names."
+}

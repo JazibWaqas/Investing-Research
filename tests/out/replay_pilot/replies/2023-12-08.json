@@ -1,0 +1,54 @@
+{"date":"2023-12-08",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate held at 22.0% while CPI (29.24%) is above it and rising over three months; bills (21.43%) sit just under the policy rate, so cuts are priced but not made. Index is up 22% in a month and 44% in three, so entry is extended. Situation file says hold bills and set a trigger to return, so keep equity exposure modest and skip chasing.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 22.0%; last MPC decision 2023-10-30: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 29.24% for 2023-11 (published by 2023-12-03); three months earlier (2023-08) 27.39%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.57pp (market pricing cuts); CPI rising over 3 months (+1.8pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 66,224 on 2023-12-08; 1m +22.0%, 3m +43.9%, 6m +58.0%, 12m +57.1%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"}]},
+"core":[
+{"symbol":"EFERT","weight_pct":10,"thesis":"Fertilizer is the least extended sector on six months (0.2464) and EFERT pays a 17.6% dividend yield at a 6.4 P/E with EPS up 129% year on year. Yield roughly offsets the 21.43% bill alternative only partly, so size is small. Quality tilt is weak, not proven.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.176"},
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"6.416"},
+{"file":"screens.csv","row":"EFERT","field":"eps_yoy","quote":"1.291"},
+{"file":"sectors.csv","row":"Fertilizer","field":"r6m","quote":"0.2464"},
+{"file":"base_rates.csv","row":"quality_top_third","field":"verdict","quote":"Weak not proven"}]},
+{"symbol":"MARI","weight_pct":10,"thesis":"MARI trades at a 3.6 P/E with a 9.7% dividend yield and EPS up 50% year on year, with a 6m gain of 33% that is small beside the market's 58%. Low multiple limits what must go right; the mechanism is weak evidence only.",
+"evidence":[
+{"file":"screens.csv","row":"MARI","field":"pe","quote":"3.6"},
+{"file":"screens.csv","row":"MARI","field":"dy","quote":"0.097"},
+{"file":"screens.csv","row":"MARI","field":"eps_yoy","quote":"0.505"},
+{"file":"screens.csv","row":"MARI","field":"r6m","quote":"0.326"},
+{"file":"base_rates.csv","row":"quality_qarp_minus_ew_kmi","field":"verdict","quote":"Weak not proven"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"First cut with CPI turning down; then add equity, as first cuts were followed by gains in the weak 3-episode sample.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"verdict","quote":"weak (H1)"}]},
+{"type":"shock_and_rebound","subject":"KSE100","trigger":"A fall of 5% or more with a known trigger and a first up day; buy only then, not on hindsight.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 66,224 on 2023-12-08"},
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"verdict","quote":"no word given (Verdict 3: buy only on a known trigger)"}]},
+{"type":"volume_with_upper_locks","subject":"MFFL","trigger":"Do not buy; the V4 rule is watch not tradable. Revisit only if the first-quarter board meeting result is public and price holds near the high.",
+"evidence":[
+{"file":"screens.csv","row":"MFFL","field":"upper_locks_10d","quote":"4"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2023-11-23 MFFL: Board Meeting of the First Quarter"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"deal_after_offer","subject":"TELE","trigger":"Public offer terms for the Hallmark stake; post-offer base rate is thin (+1.1% median), so need the price and the fraction bought.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"TELE","field":"title","quote":"Material Information - Acquisition of 62.84% shares of Hallmark Company Lim"},
+{"file":"base_rates.csv","row":"deal_post_offer","field":"median","quote":"+1.1%"}]},
+{"type":"buyback_or_sponsor_move","subject":"HCL","trigger":"Filed detail of who bought and at what price; insider and sponsor buy base rates are not supported, so no action on the headline alone.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"HCL","field":"title","quote":"Material Information - Material Change in Ownership of the Company"},
+{"file":"base_rates.csv","row":"insider_sponsor_substantial","field":"verdict","quote":"not supported (n too small)"}]},
+{"type":"other","subject":"Results-day gap up","trigger":"A name that gaps up on results and holds; exit with a 20-day trailing stop. Watch only, p 0.11 vs random.",
+"evidence":[
+{"file":"base_rates.csv","row":"results_gap_up_trail20","field":"verdict","quote":"watch (exit that worked per file)"}]}],
+"entries":[],
+"exposure_pct":20,
+"not_known":"FX reserves, current account, IMF status, political stability, the next MPC date, consolidated and one-off-stripped EPS, float and holder structure, and what the earnings of each core name will be next quarter are not in the pack.",
+"contamination_note":"No post-2023-12-08 facts were used; every claim quotes the bundle. Nothing from later memory was relied on or discarded knowingly. The bundle's base_rates.csv warns it was measured partly after this date, so it was used only as rough odds."}

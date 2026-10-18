@@ -1,0 +1,53 @@
+{"date":"2024-01-05",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.57,
+"summary":"Policy rate held at 22.0% on 2023-12-12 while the 6M bill sits 0.60pp below it, so cuts are priced but not made. CPI is falling (31.46% to 29.64%). The index is up 35.8% in 3m, so much of the easing is already in price. Hold-period base rate is mildly positive (62% at 60 sessions, in sample, overlapping). Neutral, small exposure.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 22.0%; last MPC decision 2023-12-12: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.60pp (market pricing cuts); CPI falling over 3 months (-1.8pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 64,515 on 2024-01-05; 1m +0.9%, 3m +35.8%, 6m +46.0%, 12m +62.3%"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"},
+{"file":"base_rates.csv","row":"cpi_fall1pt_kse100","field":"hit_rate","quote":"60%"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC: first rate cut","trigger":"A cut at the next MPC, date not in the pack. Base rate for first cuts is weak (3 episodes), so size small and buy only on the decision, not before.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.60pp (market pricing cuts)"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"verdict","quote":"weak (H1)"}]},
+{"type":"deal_after_offer","subject":"BELA bid by a prospective buyer","trigger":"A filed public offer with price and size. Until then only a bid disclosure; check what fraction of a holding the offer buys.","evidence":[
+{"file":"announcements_30d.csv","row":"BELA","field":"title","quote":"BID BY A RROSPECTIVE BUYER Material Information"},
+{"file":"base_rates.csv","row":"deal_post_offer","field":"verdict","quote":"no verdict word"}]},
+{"type":"volume_with_upper_locks","subject":"HCAR: upper locks and at 252-day high","trigger":"Only if V4-type volume expansion persists with confirmed demand; base rate says watch, not tradable.","evidence":[
+{"file":"screens.csv","row":"HCAR","field":"upper_locks_10d","quote":"2"},
+{"file":"screens.csv","row":"HCAR","field":"dist_from_252_high","quote":"0.0"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"KEL: extended, fresh material information","trigger":"Read the 2024-01-05 disclosure. Price is up 73.9% in 1m on 3.57x volume, so do not chase; revisit only after a pullback.","evidence":[
+{"file":"announcements_30d.csv","row":"KEL","field":"title","quote":"Disclosure of Material Information"},
+{"file":"screens.csv","row":"KEL","field":"r1m","quote":"0.739"},
+{"file":"screens.csv","row":"KEL","field":"vol20_over_vol120","quote":"3.57"}]},
+{"type":"earnings_inflection_ignored","subject":"PSO: EPS growth 12.7x, P/E 5.6, but 3m already +48.7%","trigger":"Entry only if price pauses below its high on a fresh results print; reaction not muted so far.","evidence":[
+{"file":"screens.csv","row":"PSO","field":"eps_yoy","quote":"12.737"},
+{"file":"screens.csv","row":"PSO","field":"pe","quote":"5.593"},
+{"file":"screens.csv","row":"PSO","field":"r3m","quote":"0.487"}]}],
+"entries":[
+{"symbol":"TGL","type":"earnings_inflection_ignored","entry_price":99.11,"stop_price":85.0,"stop_type":"fixed","size_pct":10,"horizon_sessions":120,
+"p_gain":0.56,
+"reason":"EPS up 115% yoy at P/E 4.65 with 8.8% yield, yet 3m return of 19.2% trails the index's 35.8%. Reference class: P/E below 6 with any reaction, 61% hit at 120 sessions, not confirmed. Small size, wide fixed stop, risk 1.4% of book.",
+"evidence":[
+{"file":"screens.csv","row":"TGL","field":"eps_yoy","quote":"1.151"},
+{"file":"screens.csv","row":"TGL","field":"pe","quote":"4.654"},
+{"file":"screens.csv","row":"TGL","field":"r3m","quote":"0.192"},
+{"file":"screens.csv","row":"TGL","field":"dy","quote":"0.088"},
+{"file":"market.md","row":null,"field":null,"quote":"3m +35.8%"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"hit_rate","quote":"61%"}]},
+{"symbol":"LUCK","type":"earnings_inflection_ignored","entry_price":789.75,"stop_price":680.0,"stop_type":"fixed","size_pct":10,"horizon_sessions":120,
+"p_gain":0.55,
+"reason":"EPS up 243% yoy at P/E 3.36, within 3.5% of its 252-day high, with 3m return (36.1%) only in line with the index. The edge is cheapness, not neglect, so odds stay near the unconfirmed 61% reference class. Risk 1.4% of book.",
+"evidence":[
+{"file":"screens.csv","row":"LUCK","field":"eps_yoy","quote":"2.43"},
+{"file":"screens.csv","row":"LUCK","field":"pe","quote":"3.356"},
+{"file":"screens.csv","row":"LUCK","field":"dist_from_252_high","quote":"-0.035"},
+{"file":"screens.csv","row":"LUCK","field":"r3m","quote":"0.361"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"verdict","quote":"not confirmed"}]}],
+"exposure_pct":20,
+"not_known":"IMF status, reserves, current account, the next MPC date, politics, and consolidated EPS history are not in the pack. Balance sheets, float and sponsor behaviour for TGL and LUCK are also unseen, so sizing is deliberately small.",
+"contamination_note":"No post-2024-01-05 knowledge was used. Every claim above cites the bundle. Base rates carry a bundle warning that they were measured partly after this date, so they are used only as rough odds."}

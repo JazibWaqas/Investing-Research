@@ -1,0 +1,48 @@
+{"date":"2026-01-09",
+"regime":{"rates_phase":"cutting","stance":"neutral","p_kmi_up_60":0.57,
+"summary":"Easing cycle (last MPC cut 50bp to 10.5%) with CPI flat at 5.6%, so real rates stay high. But the 6M bill at 10.16% sits near the policy rate, so little further easing is priced. KSE100 is up 58.9% in 12m, so the market is extended. Mutual funds are buying while foreigners and banks sell. Stay partly invested in cash-rich, catalyst-led sectors; add no chase positions.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2025-12-15: cut (-50bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 5.6% for 2025-12 (published by 2026-01-03); three months earlier (2025-09) 5.6%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.34pp (market near policy rate)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 184,410 on 2026-01-09; 1m +8.8%, 3m +16.4%, 6m +35.7%, 12m +58.9%"},
+{"file":"flows.csv","row":"mutual funds","field":"net_usd_mn","quote":"109.278"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-37.367"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: favour sectors with their own catalyst over rate-sensitive ones."}]},
+"core":[
+{"symbol":"FFC","weight_pct":15,"thesis":"Fertilizer leader trading at 5.5x earnings with an 11.2% dividend yield, next to its 252-day high. The sector has strong 6m momentum. In the 2024 first-cut regime fertilizer led while banks lagged, so own catalyst beats rate sensitivity. Risk: eps_yoy is slightly negative and the stock is extended.","evidence":[
+{"file":"screens.csv","row":"FFC","field":"pe","quote":"5.523"},
+{"file":"screens.csv","row":"FFC","field":"dy","quote":"0.112"},
+{"file":"screens.csv","row":"FFC","field":"dist_from_252_high","quote":"-0.004"},
+{"file":"sectors.csv","row":"Fertilizer","field":"r6m","quote":"0.4568"},
+{"file":"situations.md","row":null,"field":null,"quote":"fertilizer, E&P and pharma led while banks lagged"}]},
+{"symbol":"OGDC","weight_pct":10,"thesis":"E&P major at 5.6x earnings with a 6.8% dividend yield, near its high. Mutual funds are net buyers of E&P in both the 5 and 20 session windows, and sector 3m return is 20%. A falling oil price (Brent -3.2% over 3m) is the main risk, so keep it a small weight.","evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"flows.csv","row":"lipi mutual funds | Oil and Gas Exploration Companies","field":"net_usd_mn","quote":"23.196"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 65.11 USD/bbl on 2026-01-09; 3-month change -3.2%"},
+{"file":"situations.md","row":null,"field":null,"quote":"fertilizer, E&P and pharma led while banks lagged"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"Cut with the bill curve already at the policy rate, or hold, decides whether the 60-session KMI odds move; date is not in the bundle.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.34pp (market near policy rate)"}]},
+{"type":"deal_after_offer","subject":"AHCL / PIA privatisation process","trigger":"A published offer or completion filing; base rates for post-offer deals show no edge, so watch only.","evidence":[
+{"file":"announcements_30d.csv","row":"AHCL","field":"title","quote":"Material Information - Update - Privatisation Process of Pakistan Internati"},
+{"file":"base_rates.csv","row":"deal_post_offer","field":"verdict","quote":"no verdict word"}]},
+{"type":"deal_after_offer","subject":"BAFL regulatory approvals for due diligence","trigger":"A formal offer or price disclosure following the due diligence approvals.","evidence":[
+{"file":"announcements_30d.csv","row":"BAFL","field":"title","quote":"DISCLOSURE OF MATERIAL INFORMATION- REGULATORY APPROVALS FOR DUE DILIGENCE"}]},
+{"type":"earnings_inflection_ignored","subject":"DGKC","trigger":"Next result with a gap up on high volume; eps_yoy is strongly positive but the price fell 9.1% in a month, and the results gap-up base rate is watch only.","evidence":[
+{"file":"screens.csv","row":"DGKC","field":"eps_yoy","quote":"1.672"},
+{"file":"screens.csv","row":"DGKC","field":"r1m","quote":"-0.091"},
+{"file":"base_rates.csv","row":"results_gap_up","field":"verdict","quote":"watch (p 0.11 vs same-year random)"}]},
+{"type":"volume_with_upper_locks","subject":"QUICE","trigger":"Up 197% in 1m with 9 upper locks and no earnings data; operator-type move. Watch only, the V4 rule is not tradable.","evidence":[
+{"file":"screens.csv","row":"QUICE","field":"upper_locks_10d","quote":"9"},
+{"file":"screens.csv","row":"QUICE","field":"r1m","quote":"1.97"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"Net-metering reform (power sector)","trigger":"Final rule text after the December 2025 draft; relevant to HUBC and the power sector.","evidence":[
+{"file":"actors.md","row":null,"field":null,"quote":"Net-metering reform"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"FX reserves and current account are not in the bundle. IMF status, the next MPC date, political stability and consolidated multi-year earnings are not in it either. No stock-level float or ownership data.",
+"contamination_note":"No post-2026-01-09 recall used. base_rates.csv carries a look-ahead warning (measured through 2026-10-16) and was used only as rough odds by type; no name or date was inferred from it."}

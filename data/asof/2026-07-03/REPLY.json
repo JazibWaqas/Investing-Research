@@ -1,0 +1,56 @@
+{"date":"2026-07-03",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate held at 11.5% while CPI jumped from 7.29% to 11.08% in three months, so real rates are about zero and the next move is likelier up than down. KMI is up 25.4% in three months, so the easy part of the rally is behind us. Holds have historically been mildly positive over 60 sessions (62% hit, in sample). Neutral: modest core in cheap, high-yield names, no leveraged opportunity bets.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-06-15: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.08% for 2026-06 (published by 2026-07-03); three months earlier (2026-03) 7.29%"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 72,124 on 2026-07-03; 1m +8.0%, 3m +25.4%, 6m +7.3%, 12m +33.1%"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.25pp (market near policy rate); CPI rising over 3 months (+3.8pp)"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100 60 sessions","field":"hit_rate","quote":"62%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."}]},
+"core":[
+{"symbol":"OGDC","weight_pct":10,"thesis":"Low multiple, 6.8% yield, at its 252-day high. Breakout-to-high cohort shows 62% hit rate (suggestive only). E&P sector is up 24% in three months, so size is kept small.",
+"evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"0.0"},
+{"file":"base_rates.csv","row":"breakout_252high_codex","field":"hit_rate","quote":"62%"}]},
+{"symbol":"HUBC","weight_pct":10,"thesis":"Lowest P/E and highest yield among liquid names here, at its 252-day high, with EPS roughly flat year on year. Paid to wait while the rate path is unclear.",
+"evidence":[
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.875"},
+{"file":"screens.csv","row":"HUBC","field":"dy","quote":"0.109"},
+{"file":"screens.csv","row":"HUBC","field":"eps_yoy","quote":"-0.021"},
+{"file":"base_rates.csv","row":"breakout_252high_codex","field":"hit_rate","quote":"62%"}]},
+{"symbol":"MEBL","weight_pct":10,"thesis":"Islamic bank at a 252-day high, P/E 8.8, yield 6.3%. Bank-sector flows show mutual funds buying commercial banks over 20 sessions. EPS growth is flat, so this is carry, not a growth call.",
+"evidence":[
+{"file":"screens.csv","row":"MEBL","field":"pe","quote":"8.82"},
+{"file":"screens.csv","row":"MEBL","field":"dy","quote":"0.063"},
+{"file":"screens.csv","row":"MEBL","field":"dist_from_252_high","quote":"0.0"},
+{"file":"flows.csv","row":null,"field":null,"quote":"lipi mutual funds | Commercial Banks,21.204"}]}],
+"watch":[
+{"type":"deal_after_offer","subject":"ATRL","trigger":"Price and terms of the 70% offer become public. Then compute the fraction of a holding the offer buys and the stub value before any entry.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"ATRL","field":"title","quote":"Disclosure of Material Information - Receipt of an offer to acquire 70% sha"},
+{"file":"base_rates.csv","row":"deal_post_offer","field":"hit_rate","quote":"54%"}]},
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"If the SBP hikes or signals a hike with CPI near 11%, move to risk_off and cut core. If it holds and CPI turns down, add.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.08% for 2026-06"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Watch only. Base rates say volume-with-locks is not tradable. Re-assess if filings explain the move and the locks stop.",
+"evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"9"},
+{"file":"screens.csv","row":"SGPL","field":"r3m","quote":"5.152"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5 60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"KOHTM","trigger":"Watch only. Up 117% in one month on 5 locks with no filing in the announcement list. Operator-driven risk.",
+"evidence":[
+{"file":"screens.csv","row":"KOHTM","field":"r1m","quote":"1.17"},
+{"file":"screens.csv","row":"KOHTM","field":"upper_locks_10d","quote":"5"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5 60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"Textiles sector","trigger":"Sector is up 28% in one month and 73% in three months. Do not chase. Revisit only after a pullback with confirmation.",
+"evidence":[
+{"file":"sectors.csv","row":"Textiles","field":"r1m","quote":"0.2822"},
+{"file":"sectors.csv","row":"Textiles","field":"r3m","quote":"0.7265"}]}],
+"entries":[],
+"exposure_pct":30,
+"not_known":"FX reserves and current account are not in the bundle. IMF status, budget detail, and the next MPC date are also absent. Insider detail is thin, and the ATRL offer terms are not stated.",
+"contamination_note":"No post-2026-07-03 knowledge was used. base_rates.csv carries a warning that it was measured through 2026-10-16, partly after this date. It was used only as rough odds by situation type, not for any name or date."}

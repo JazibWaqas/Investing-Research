@@ -1,0 +1,47 @@
+{"date":"2025-12-12",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate held at 11.0% and the 6M bill cutoff sits at the policy rate, so the curve prices no move. CPI has risen from 2.99% to 6.16% in three months, which removes the case for a near cut. KMI is up 38.3% in 12 months, so the market is not cheap. Hold-phase base rate is mildly positive (62% hit at 60 sessions). Stay invested but modest.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.0%; last MPC decision 2025-10-27: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -0.00pp (market near policy rate); CPI rising over 3 months (+3.2pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 67,142 on 2025-12-12; 1m +6.0%, 3m +4.2%, 6m +30.0%, 12m +38.3%"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"}]},
+"core":[
+{"symbol":"FFC","weight_pct":12,"thesis":"Fertilizer with its own catalyst: P/E 5.5 and dividend yield 11.2%, within 1.4% of its 252-day high. The 2024 first-cut episode had fertilizer and E&P leading while banks lagged. Income cushions a rate surprise.","evidence":[
+{"file":"screens.csv","row":"FFC","field":"pe","quote":"5.523"},
+{"file":"screens.csv","row":"FFC","field":"dy","quote":"0.112"},
+{"file":"situations.md","row":null,"field":null,"quote":"fertilizer, E&P and pharma led while banks lagged"}]},
+{"symbol":"OGDC","weight_pct":10,"thesis":"E&P at its 252-day high with P/E 5.6 and yield 6.8%. E&P sector has 2 of 3 names at highs. Breakout-from-high cohort shows a 62% hit rate (suggestive only). Brent is down 8.5%, which is the risk I hold.","evidence":[
+{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"0.0"},
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"base_rates.csv","row":"breakout_252high_codex","field":"hit_rate","quote":"62%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 62.11 USD/bbl on 2025-12-12; 3-month change -8.5%"}]},
+{"symbol":"EFERT","weight_pct":8,"thesis":"Fertilizer, 4.2% below its high, yield 10.5%, P/E 9.6. Net institutional flow into fertilizer by mutual funds is positive over 20 sessions. Smaller weight because Q3 EPS fell 32% year on year.","evidence":[
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.105"},
+{"file":"screens.csv","row":"EFERT","field":"eps_yoy","quote":"-0.321"},
+{"file":"flows.csv","row":"lipi mutual funds | Fertilizer","field":"net_usd_mn","quote":"16.221"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"6M T-bill cutoff moving away from 11.00% while CPI keeps rising; a hike would call for cutting core weights (first-hike base rate is negative, n=2).","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 6.16% for 2025-11 (published by 2025-12-03); three months earlier (2025-08) 2.99%"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"median","quote":"-5.6%"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Watch only: up 180% in a month with 8 upper locks. The method rates this setup nothing or watch-not-tradable, so no entry.","evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"8"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"QUICE","trigger":"4 upper locks, at 252-day high, no results or filings. Watch for a filing that explains the move.","evidence":[
+{"file":"screens.csv","row":"QUICE","field":"upper_locks_10d","quote":"4"},
+{"file":"situations.md","row":null,"field":null,"quote":"with no filing explaining it"}]},
+{"type":"earnings_inflection_ignored","subject":"SEARL","trigger":"EPS up 123% year on year but 12m return is -2%. Needs price confirmation; results-day base rates show no tradable drift.","evidence":[
+{"file":"screens.csv","row":"SEARL","field":"eps_yoy","quote":"1.232"},
+{"file":"screens.csv","row":"SEARL","field":"r12m","quote":"-0.02"},
+{"file":"base_rates.csv","row":"results_yoy_POS","field":"verdict","quote":"no tradable drift (H1)"}]},
+{"type":"earnings_inflection_ignored","subject":"HCAR","trigger":"EPS up 189% year on year, 6m return only 2.5%, 2 results filings. Watch for a close above the recent range.","evidence":[
+{"file":"screens.csv","row":"HCAR","field":"eps_yoy","quote":"1.889"},
+{"file":"screens.csv","row":"HCAR","field":"r6m","quote":"0.025"}]},
+{"type":"other","subject":"BECO, BNL, KML price collapses","trigger":"1m falls of 89%, 89% and 11% (KML 3m -83%) likely corporate-action gaps or unadjusted prices, not shocks. Do not treat as rebound candidates until verified.","evidence":[
+{"file":"screens.csv","row":"BECO","field":"r1m","quote":"-0.896"},
+{"file":"screens.csv","row":"BNL","field":"r1m","quote":"-0.887"},
+{"file":"questions.md","row":null,"field":null,"quote":"a corporate-action gap"}]}],
+"entries":[],
+"exposure_pct":30,
+"not_known":"FX reserves, current account, IMF status and political stability are not in the pack. No insider buying shown. Next MPC date not given. Liquidity and float of the core names not checked.",
+"contamination_note":"No post-2025-12-12 recall used. base_rates.csv carries a look-ahead warning (measured through 2026-10-16); used only as rough odds for the type, never for names or dates."}

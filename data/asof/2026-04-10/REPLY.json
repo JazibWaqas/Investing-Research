@@ -1,0 +1,275 @@
+{
+ "date": "2026-04-10",
+ "regime": {
+  "rates_phase": "holding",
+  "stance": "neutral",
+  "p_kmi_up_60": 0.5,
+  "summary": "Policy rate is on hold at 10.5% but the bill curve prices hikes, CPI is rising and Brent has risen 83% in three months. The index fell over three months but bounced 7% in the last month. This resembles tightening with external stress, where the method says hold bills and set a trigger to return, so I stay neutral with low exposure and no new entries.",
+  "evidence": [
+   {
+    "file": "market.md",
+    "row": null,
+    "field": null,
+    "quote": "Policy rate 10.5%; last MPC decision 2026-03-09: hold (+0bp)"
+   },
+   {
+    "file": "market.md",
+    "row": null,
+    "field": null,
+    "quote": "Regime: 6M T-bill minus policy rate +0.97pp (market pricing hikes); CPI rising over 3 months (+1.7pp)"
+   },
+   {
+    "file": "market.md",
+    "row": null,
+    "field": null,
+    "quote": "Brent: 119.07 USD/bbl on 2026-04-10; 3-month change +82.9%"
+   },
+   {
+    "file": "market.md",
+    "row": null,
+    "field": null,
+    "quote": "KSE100: 167,191 on 2026-04-10; 1m +7.1%, 3m -9.9%, 6m +2.5%, 12m +43.9%"
+   },
+   {
+    "file": "situations.md",
+    "row": null,
+    "field": null,
+    "quote": "Lesson: hold bills, and set a trigger to return."
+   },
+   {
+    "file": "situations.md",
+    "row": null,
+    "field": null,
+    "quote": "Lesson: hold the core; keep cash ready for a weekend gap."
+   }
+  ]
+ },
+ "core": [
+  {
+   "symbol": "ATRL",
+   "weight_pct": 10,
+   "thesis": "Only refiner at its 252-day high (dist -0.001) while 3m return is +16% against a falling market, with Brent at 119 and a P/E of 8. Breakout-from-high base rates are modest and a hypothesis only, so the weight is small.",
+   "evidence": [
+    {
+     "file": "screens.csv",
+     "row": "ATRL",
+     "field": "dist_from_252_high",
+     "quote": "-0.001"
+    },
+    {
+     "file": "screens.csv",
+     "row": "ATRL",
+     "field": "r3m",
+     "quote": "0.16"
+    },
+    {
+     "file": "screens.csv",
+     "row": "ATRL",
+     "field": "pe",
+     "quote": "8.095"
+    },
+    {
+     "file": "market.md",
+     "row": null,
+     "field": null,
+     "quote": "Brent: 119.07 USD/bbl on 2026-04-10; 3-month change +82.9%"
+    },
+    {
+     "file": "base_rates.csv",
+     "row": "breakout_252high_codex",
+     "field": "hit_rate",
+     "quote": "62%"
+    }
+   ]
+  },
+  {
+   "symbol": "OGDC",
+   "weight_pct": 10,
+   "thesis": "E&P with P/E 5.6 and dividend yield 6.8%, the oil-price link that needs no rate view. Mutual funds bought E&P in the last 5 sessions while individuals and insurers sold.",
+   "evidence": [
+    {
+     "file": "screens.csv",
+     "row": "OGDC",
+     "field": "pe",
+     "quote": "5.583"
+    },
+    {
+     "file": "screens.csv",
+     "row": "OGDC",
+     "field": "dy",
+     "quote": "0.068"
+    },
+    {
+     "file": "flows.csv",
+     "row": "lipi mutual funds | Oil and Gas Exploration Companies",
+     "field": "net_usd_mn",
+     "quote": "11.261"
+    },
+    {
+     "file": "questions.md",
+     "row": null,
+     "field": null,
+     "quote": "A8. Oil: where is Brent, and which link do I actually hold?"
+    }
+   ]
+  }
+ ],
+ "watch": [
+  {
+   "type": "policy_or_price_decision_pending",
+   "subject": "Next MPC vs bill curve",
+   "trigger": "A hike, or a hold with the 6M bill still above the policy rate, would move stance to risk_off; a hold with the spread closing would justify adding.",
+   "evidence": [
+    {
+     "file": "market.md",
+     "row": null,
+     "field": null,
+     "quote": "Next MPC: see SBP calendar"
+    },
+    {
+     "file": "market.md",
+     "row": null,
+     "field": null,
+     "quote": "6M T-bill cutoff 11.47% (auction 2026-04-01); 3M 11.79%, 12M 11.75%"
+    }
+   ]
+  },
+  {
+   "type": "shock_and_rebound",
+   "subject": "KSE100 and Brent shock",
+   "trigger": "Brent falling back with the index holding its 1m gain; buy only on a known trigger.",
+   "evidence": [
+    {
+     "file": "base_rates.csv",
+     "row": "shock_index5_buy",
+     "field": "verdict",
+     "quote": "no word given (Verdict 3: buy only on a known trigger)"
+    },
+    {
+     "file": "situations.md",
+     "row": null,
+     "field": null,
+     "quote": "Lesson: wait for it, not the headline."
+    }
+   ]
+  },
+  {
+   "type": "volume_with_upper_locks",
+   "subject": "CRTM",
+   "trigger": "Watch only; 5 upper locks and 12m +426% but V4 is watch not tradable.",
+   "evidence": [
+    {
+     "file": "screens.csv",
+     "row": "CRTM",
+     "field": "upper_locks_10d",
+     "quote": "5"
+    },
+    {
+     "file": "base_rates.csv",
+     "row": "volume_locks_V4_liq5",
+     "field": "verdict",
+     "quote": "watch not tradable"
+    }
+   ]
+  },
+  {
+   "type": "volume_with_upper_locks",
+   "subject": "SGPL",
+   "trigger": "Watch only; 5 upper locks after a 1m move of +104%, board meeting notices on 04-01 and 04-09.",
+   "evidence": [
+    {
+     "file": "screens.csv",
+     "row": "SGPL",
+     "field": "upper_locks_10d",
+     "quote": "5"
+    },
+    {
+     "file": "screens.csv",
+     "row": "SGPL",
+     "field": "r1m",
+     "quote": "1.043"
+    },
+    {
+     "file": "base_rates.csv",
+     "row": "volume_locks_V1_liq5",
+     "field": "verdict",
+     "quote": "nothing"
+    }
+   ]
+  },
+  {
+   "type": "deal_after_offer",
+   "subject": "ACPL",
+   "trigger": "Offer letter terms and price versus market; a full tender would matter, a partial one is a stub risk.",
+   "evidence": [
+    {
+     "file": "announcements_30d.csv",
+     "row": "ACPL",
+     "field": "title",
+     "quote": "Material Information - Circulation of offer letters"
+    },
+    {
+     "file": "screens.csv",
+     "row": "ACPL",
+     "field": "close",
+     "quote": "279.93"
+    }
+   ]
+  },
+  {
+   "type": "earnings_inflection_ignored",
+   "subject": "EFERT Q1 results",
+   "trigger": "Results gap up on Q1 (board meeting noticed 04-07) is a watch type, not an entry.",
+   "evidence": [
+    {
+     "file": "screens.csv",
+     "row": "EFERT",
+     "field": "eps_yoy",
+     "quote": "-0.186"
+    },
+    {
+     "file": "base_rates.csv",
+     "row": "results_gap_up",
+     "field": "verdict",
+     "quote": "watch (p 0.11 vs same-year random)"
+    }
+   ]
+  },
+  {
+   "type": "earnings_inflection_ignored",
+   "subject": "SYS annual results",
+   "trigger": "Board meeting for FY2025 was rescheduled; stock already +30% in 1m so results may be priced in.",
+   "evidence": [
+    {
+     "file": "screens.csv",
+     "row": "SYS",
+     "field": "r1m",
+     "quote": "0.302"
+    },
+    {
+     "file": "screens.csv",
+     "row": "SYS",
+     "field": "eps_yoy",
+     "quote": "0.5"
+    }
+   ]
+  },
+  {
+   "type": "other",
+   "subject": "Foreign selling",
+   "trigger": "Foreign corporates net sold over 20 sessions; a turn to net buying would support adding.",
+   "evidence": [
+    {
+     "file": "flows.csv",
+     "row": "foreign corporates",
+     "field": "net_usd_mn",
+     "quote": "-37.22"
+    }
+   ]
+  }
+ ],
+ "entries": [],
+ "exposure_pct": 20,
+ "not_known": "FX reserves, current account and IMF status are not in the bundle. The SBP calendar date of the next MPC is not given. Cause and duration of the Brent move are not stated.",
+ "contamination_note": "No post-2026-04-10 knowledge was used; every claim is quoted from the bundle. base_rates.csv carries a warning that it was measured partly after this date, so it was used only as rough odds for situation types, and it is the reason for taking no entries."
+}

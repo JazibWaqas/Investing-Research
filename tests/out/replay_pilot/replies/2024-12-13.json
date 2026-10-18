@@ -1,0 +1,49 @@
+{"date":"2024-12-13",
+"regime":{"rates_phase":"cutting","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate 15.0% after a 250bp cut, bills at 12.00% price further cuts, CPI fell from 9.64% to 4.86%. Cut and falling-CPI base rates lean positive but are n=3 and n=10 and weak. Index is up 43.8% in 3m and 21.3% in 1m, so the move is extended; hold some, do not chase.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 15.0%; last MPC decision 2024-11-04: cut (-250bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 12.00% (auction 2024-12-11)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 4.86% for 2024-11 (published by 2024-12-03); three months earlier (2024-08) 9.64%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 114,302 on 2024-12-13; 1m +21.3%, 3m +43.8%, 6m +57.5%, 12m +81.6%"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"verdict","quote":"weak (H1)"},
+{"file":"base_rates.csv","row":"cpi_fall1pt_kse100","field":"verdict","quote":"weak as a 12-month rule (H4)"}]},
+"core":[
+{"symbol":"EFERT","weight_pct":15,"thesis":"Cheap on earnings and paying a large dividend, and not extended: only 2.7% under its 252-day high with a 1m gain of 2.5% against the market's 21%. Yield carries the position if rates keep falling. Foreign selling in fertilizer is a risk.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"5.722"},
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.183"},
+{"file":"screens.csv","row":"EFERT","field":"r1m","quote":"0.025"},
+{"file":"flows.csv","row":"fipi | Fertilizer","field":"net_usd_mn","quote":"-4.567"}]},
+{"symbol":"HUBC","weight_pct":10,"thesis":"Power is the laggard sector (3m +12.1% against the index's +43.8%). HUBC sits 22.4% under its high at a P/E near 3 and a 12.3% yield, so it is not extended. Rate cuts help a leveraged utility. Low conviction.",
+"evidence":[
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.021"},
+{"file":"screens.csv","row":"HUBC","field":"dy","quote":"0.123"},
+{"file":"screens.csv","row":"HUBC","field":"dist_from_252_high","quote":"-0.224"},
+{"file":"sectors.csv","row":"Power","field":"r3m","quote":"0.1213"}]}],
+"watch":[
+{"type":"deal_after_offer","subject":"FFC public offer (FFC and FFBL scheme); neither is in screens.csv so not tradable here","trigger":"Offer terms and acceptance level become clear, and a screens.csv name tied to the scheme appears",
+"evidence":[
+{"file":"announcements_30d.csv","row":"FFC","field":"title","quote":"Material Information - Public Announcement of Offer to Acquire up to 151,05"},
+{"file":"base_rates.csv","row":"deal_post_offer","field":"verdict","quote":"no verdict word"}]},
+{"type":"volume_with_upper_locks","subject":"FECTC","trigger":"Locks stop and price holds above prior closes with a clear non-operator reason. The base rate does not support a trade.",
+"evidence":[
+{"file":"screens.csv","row":"FECTC","field":"upper_locks_10d","quote":"5"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"LPGL","trigger":"Locks and the 7-lock run end, and price recovers from 65.5% below its high",
+"evidence":[
+{"file":"screens.csv","row":"LPGL","field":"upper_locks_10d","quote":"7"},
+{"file":"screens.csv","row":"LPGL","field":"dist_from_252_high","quote":"-0.655"}]},
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"Date is not in the pack. A hold or a further cut with CPI still falling changes the stance.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"verdict","quote":"no verdict given (in sample; overlapping)"}]},
+{"type":"earnings_inflection_ignored","subject":"SNGP","trigger":"Results land (7 results rows) while price lags. P/E 2.1 and 11.8% yield, but results base rates show no tradable drift.",
+"evidence":[
+{"file":"screens.csv","row":"SNGP","field":"n_results","quote":"7"},
+{"file":"screens.csv","row":"SNGP","field":"pe","quote":"2.121"},
+{"file":"base_rates.csv","row":"results_yoy_all","field":"verdict","quote":"no tradable drift (H1)"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"Next MPC date, IMF status, reserves and current account (not in the pack). Insider buying is mostly absent. No fundamentals beyond the screens. Base rates on small n (3 cuts) and a market already up 81.6% in 12 months.",
+"contamination_note":"No post-2024-12-13 memory used. base_rates.csv carries its own warning that it was measured on data through 2026-10-16, so I used it only as rough odds for types and not for names or dates."}

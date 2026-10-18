@@ -1,0 +1,53 @@
+{"date":"2026-06-19",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"Policy rate held at 11.5% on 2026-06-15 while the 6M bill cutoff sits above it and CPI jumped from 6.99% to 11.64% in three months: the market prices hikes the SBP has not made. Index is up strongly (KSE100 +19.9% 3m). The hike-cycle analogue says hold bills and wait; Brent falling is a partial offset. Neutral, small exposure.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-06-15: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.99pp (market pricing hikes); CPI rising over 3 months (+4.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.64% for 2026-05 (published by 2026-06-03); three months earlier (2026-02) 6.99%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 178,923 on 2026-06-19; 1m +10.6%, 3m +19.9%, 6m +4.8%, 12m +49.1%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 80.46 USD/bbl on 2026-06-19; 3-month change -27.5%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Tightening plus external stress: rate up 800bp in ten months with CPI above it."},
+{"file":"base_rates.csv","row":"mpc_hold_kse100,60 sessions","field":"hit_rate","quote":"62%"}]},
+"core":[
+{"symbol":"HUBC","weight_pct":10,"thesis":"Cheapest and highest-yielding liquid name in the pack; sits 0.9% below its 252-day high so price is not depressed. Held as a small value position, not a conviction call. Pack gives no cash-flow detail, so size stays small.",
+"evidence":[
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.875"},
+{"file":"screens.csv","row":"HUBC","field":"dy","quote":"0.109"},
+{"file":"screens.csv","row":"HUBC","field":"dist_from_252_high","quote":"-0.009"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3,120 sessions","field":"hit_rate","quote":"61%"}]},
+{"symbol":"OGDC","weight_pct":10,"thesis":"Low P/E and 6.8% yield, near its high. Risks: Brent is down 27.5% in three months and EPS is down year on year, so this is a modest value position with an oil-price risk I cannot size from the pack.",
+"evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"screens.csv","row":"OGDC","field":"eps_yoy","quote":"-0.104"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 80.46 USD/bbl on 2026-06-19; 3-month change -27.5%"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3,120 sessions","field":"median","quote":"+7.2%"}]}],
+"watch":[
+{"type":"deal_after_offer","subject":"ATRL","trigger":"Offer terms (price per share, buyer, tender structure) disclosed; only enter if the offer price is well above 910.01 and the stub is explainable. Base rate post-offer is flat.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"ATRL","field":"title","quote":"Disclosure of Material Information - Receipt of an offer to acquire 70% sha"},
+{"file":"screens.csv","row":"ATRL","field":"close","quote":"910.01"},
+{"file":"base_rates.csv","row":"deal_post_offer,to completion (duration not stated)","field":"median","quote":"+1.1%"}]},
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision and 6M bill cutoff versus 11.5% policy rate","trigger":"A hike, or the 6M cutoff moving further above the policy rate, raises risk-off odds; a cutoff falling back to the policy rate argues for adding.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 12.49% (auction 2026-06-10); 3M 12.50%, 12M 12.99%"},
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"actors.md","row":null,"field":null,"quote":"Read the real rate and the external account, not the adjectives."}]},
+{"type":"policy_or_price_decision_pending","subject":"Super tax cut announced in the 12 Jun 2026 budget","trigger":"Enactment and which sectors benefit; outcome not shown in the pack.",
+"evidence":[
+{"file":"actors.md","row":null,"field":null,"quote":"| 13 | Super tax cut | Budget 12 Jun 2026 | outcome not shown |"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Watch only; base rate for volume with locks is nothing. Needs a filing explaining the run before any interest.",
+"evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"3"},
+{"file":"screens.csv","row":"SGPL","field":"r3m","quote":"3.326"},
+{"file":"base_rates.csv","row":"volume_locks_V1_liq5,60 sessions","field":"verdict","quote":"nothing"}]},
+{"type":"other","subject":"ITANZ","trigger":"Four material-information filings in June with a 49.8% one-month move and 4.078 volume ratio; wait for the content of the filings.",
+"evidence":[
+{"file":"screens.csv","row":"ITANZ","field":"r1m","quote":"0.498"},
+{"file":"screens.csv","row":"ITANZ","field":"vol20_over_vol120","quote":"4.078"},
+{"file":"announcements_30d.csv","row":"ITANZ","field":"title","quote":"Material Information"}]}],
+"entries":[],
+"exposure_pct":20,
+"not_known":"Offer terms for ATRL, SBP next meeting date, reserves and current account, IMF status, budget outcome, and the method files (not in the bundle). Whether the CPI jump is a run or a blip is not established.",
+"contamination_note":"No memory of events after 2026-06-19 was used. The method/ files were not in the bundle, so mechanisms cite situations.md and base_rates.csv; base_rates.csv was measured through 2026-10-16 (flagged in its warning) and used only as rough odds for a situation type, never for specific names."}

@@ -1,0 +1,52 @@
+{"date":"2026-03-20",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"Policy rate held at 10.5% but the bill curve sits 1.00pp above it, so hikes are priced; CPI is rising and Brent is up 81% in three months with the rupee flat. KSE100 is down 14.6% in a month and foreign corporates are heavy sellers. This looks like an oil and tightening shock, not a bottom. Hold a small oil-linked core, keep most capital in cash, and wait for a known trigger.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2026-03-09: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +1.00pp (market pricing hikes); CPI rising over 3 months (+0.8pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 111.05 USD/bbl on 2026-03-19; 3-month change +81.0%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 152,740 on 2026-03-19; 1m -14.6%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-274.796"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold the core; keep cash ready for a weekend gap."},
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"verdict","quote":"no word given (Verdict 3: buy only on a known trigger)"}]},
+"core":[
+{"symbol":"OGDC","weight_pct":15,"thesis":"Oil link held directly: E&P fell only 7.65% in a month against a 14.6% index drop. OGDC is 15.9% off its high with a 5.6 P/E and 6.8% yield, and 3-month return is positive while most names are down 20% or more.","evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"screens.csv","row":"OGDC","field":"r3m","quote":"0.043"},
+{"file":"sectors.csv","row":"E&P","field":"r1m","quote":"-0.0765"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 111.05 USD/bbl on 2026-03-19; 3-month change +81.0%"},
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"}]},
+{"symbol":"PPL","weight_pct":10,"thesis":"Second E&P for the same oil link at a 5.1 P/E and 4.4% yield. 6-month return is +14.7% while the index is down. Sized smaller because it is correlated with OGDC and one sector carries both.","evidence":[
+{"file":"screens.csv","row":"PPL","field":"pe","quote":"5.148"},
+{"file":"screens.csv","row":"PPL","field":"r6m","quote":"0.147"},
+{"file":"screens.csv","row":"PPL","field":"dy","quote":"0.044"},
+{"file":"sectors.csv","row":"E&P","field":"r6m","quote":"0.0384"},
+{"file":"questions.md","row":null,"field":null,"quote":"B11. What is priced in: P/E relative to market and own history, P/B against ROE for banks, and what must go right?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC: hold or hike","trigger":"Hold with the 6M bill still above 10.5% keeps stance neutral; a hike or bill cutoff falling back to the policy rate changes the regime read. Date not in the pack.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 11.50% (auction 2026-03-16)"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"verdict","quote":"weak (H3)"}]},
+{"type":"shock_and_rebound","subject":"KSE100 after a 14.6% one-month fall","trigger":"Enter in stages only on a known trigger: Brent stops rising and the index closes up after a low. Base rate is not a tradable edge without that trigger.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 152,740 on 2026-03-19; 1m -14.6%"},
+{"file":"base_rates.csv","row":"shock_index3_buy","field":"verdict","quote":"no word given"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: enter a third, add on confirmation, favour USD earners."}]},
+{"type":"volume_with_upper_locks","subject":"CRTM","trigger":"8 upper locks in 10 days with volume ratio 2.0 against a falling market; the pack has no filing for it. Base rate says watch, not tradable; do not chase.","evidence":[
+{"file":"screens.csv","row":"CRTM","field":"upper_locks_10d","quote":"8"},
+{"file":"screens.csv","row":"CRTM","field":"vol20_over_vol120","quote":"2.015"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"},
+{"file":"questions.md","row":null,"field":null,"quote":"C7. Is volume with upper locks demand or an operator?"}]},
+{"type":"earnings_inflection_ignored","subject":"FABL","trigger":"P/E 3.1, EPS up 95% year on year, 14.4% yield, but the price is down 12.6% in a month. Revisit if price holds while the market falls. The base rate for low P/E names is not confirmed.","evidence":[
+{"file":"screens.csv","row":"FABL","field":"pe","quote":"3.08"},
+{"file":"screens.csv","row":"FABL","field":"eps_yoy","quote":"0.953"},
+{"file":"screens.csv","row":"FABL","field":"dy","quote":"0.144"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"verdict","quote":"not confirmed"}]},
+{"type":"other","subject":"GCWL rights issue (avoid)","trigger":"Rights-issue declaration; the base rate says avoid, so do not buy.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Decision of Board Meeting for declaration of 0.50% Right Issue by way of Partially Redeemable Shares (PRS)"},
+{"file":"base_rates.csv","row":"corp_E6_rights_issue","field":"verdict","quote":"avoid"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"IMF status, FX reserves and current account (market.md says not available), the next MPC date, what is driving the Brent rise, whether foreign selling is ending, and what the 6M bill is doing after 2026-03-16.",
+"contamination_note":"No recollection of events after 2026-03-20 was used. base_rates.csv carries a look-ahead warning (measured through 2026-10-16) and was used only as rough odds by type, never for names or dates."}

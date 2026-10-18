@@ -1,0 +1,3 @@
+date,regime,symbol,type,p_gain,filled,ret60,stopped,ret120
+2026-01-23,HF,GAL,earnings_inflection_ignored,0.55,True,-0.1725,True,-0.1725
+2026-03-06,HF,MEBL,shock_and_rebound,0.52,True,0.182,False,0.3966

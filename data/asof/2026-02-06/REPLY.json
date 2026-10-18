@@ -1,0 +1,40 @@
+{"date":"2026-02-06",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.57,
+"summary":"Policy rate held at 10.5% with the 6M bill cutoff slightly below it and CPI falling over three months, so the next move is likelier a cut than a hike, but the pack gives no date. Index is up strongly over 3-12 months but flat to down over 1 month, and foreign corporates and banks sold over 20 sessions. Neutral, modest core, no tactical entries.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2026-01-26: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate -0.18pp (market near policy rate); CPI falling over 3 months (-0.5pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 5.79% for 2026-01 (published by 2026-02-03); three months earlier (2025-10) 6.25%"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 71,199 on 2026-02-06; 1m -0.2%, 3m +12.6%, 6m +17.3%, 12m +48.5%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-58.615"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100,60 sessions","field":"hit_rate","quote":"62%"}]},
+"core":[
+{"symbol":"FFC","weight_pct":15,"thesis":"Fertilizer with its own catalyst rather than rate sensitivity, low P/E and a high dividend yield; mutual funds were net buyers of fertilizer in the last 5 sessions. Method lesson favours own-catalyst sectors over rate-sensitive ones. Holding is a valuation and income view, not a timing call.",
+"evidence":[
+{"file":"screens.csv","row":"FFC","field":"pe","quote":"5.523"},
+{"file":"screens.csv","row":"FFC","field":"dy","quote":"0.112"},
+{"file":"flows.csv","row":"lipi mutual funds | Fertilizer","field":"net_usd_mn","quote":"6.504"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: favour sectors with their own catalyst over rate-sensitive ones."}]},
+{"symbol":"OGDC","weight_pct":10,"thesis":"E&P with its own catalyst, low P/E, 6.8% yield, close to its 252-day high. Brent is up 11.1% over three months. Extended after a 3m run, so weight kept small.",
+"evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 70.45 USD/bbl on 2026-02-06; 3-month change +11.1%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: favour sectors with their own catalyst over rate-sensitive ones."}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision (first cut)","trigger":"MPC date published in SBP calendar; act only if a cut is announced, sized by the 20-session first-cut base rate, no entry before","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100,60 sessions","field":"verdict","quote":"weak (H1)"}]},
+{"type":"deal_after_offer","subject":"HASCOL restructuring offer letter from NBP","trigger":"Offer terms and share of holding bought become public; evaluate stub value before any entry","evidence":[
+{"file":"announcements_30d.csv","row":"HASCOL","field":"title","quote":"Material Information - Board approval of Offer Letter from National Bank of"},
+{"file":"base_rates.csv","row":"deal_post_offer,to completion (duration not stated)","field":"hit_rate","quote":"54%"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL and QUICE (2 upper locks in 10 days each)","trigger":"Observe only; base rates call this watch, not tradable. Act only if a filing explains the run.","evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"2"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5,60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"KEL repeated material information near 252-day high","trigger":"A specific filing with terms; price alone is not a signal","evidence":[
+{"file":"announcements_30d.csv","row":"KEL","field":"title","quote":"Disclosure of material information"},
+{"file":"screens.csv","row":"KEL","field":"dist_from_252_high","quote":"0.0"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"Date of next MPC, reserves, current account, IMF status and political stability are not in the pack. Full FY results timing for most names, free float, and offer terms for HASCOL are also unknown.",
+"contamination_note":"No post-2026-02-06 memory used. base_rates.csv states it was measured through 2026-10-16, which is partly after this date, so it was treated only as rough odds for situation types; nothing name- or date-specific was drawn from it."}

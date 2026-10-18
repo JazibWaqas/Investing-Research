@@ -1,0 +1,25 @@
+{"date":"2019-03-08",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.48,
+"summary":"Last MPC move was a hike and CPI is still rising, so the hiking phase is not shown to be over. The market has fallen hard over a month, which gives a rebound chance, but the pack shows no tradable base rate for index shocks (about 50% at 60 sessions) and no rate-cut trigger. Stay light.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.25%; last MPC decision 2019-01-31: hike (+25bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+1.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 18,919 on 2019-03-08; 1m -5.5%, 3m +0.6%, 6m -7.0%, 12m -10.8%"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"shock_index3_buy,60 sessions,20,50%,+0.7%"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"Hold or cut with CPI falling would favour risk_on; another hike confirms the cycle.","evidence":[{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 8.22% for 2019-02 (published by 2019-03-03); three months earlier (2018-11) 6.5%"}]},
+{"type":"shock_and_rebound","subject":"UNITY","trigger":"First up-close after the bottom; not buyable without a known trigger, a falling knife until then.","evidence":[{"file":"screens.csv","row":"UNITY","field":"r1m","quote":"-0.313"},{"file":"base_rates.csv","row":null,"field":null,"quote":"shock_fall5_hindsight_firstup_after_bottom,20 sessions,25,76%,+3.1%"}]},
+{"type":"other","subject":"BAFL sale of Afghanistan operations","trigger":"Completion or terms disclosed; check effect on book and capital.","evidence":[{"file":"announcements_30d.csv","row":"BAFL","field":"title","quote":"Material Information - Update on Sale of Afghanistan Operations"}]},
+{"type":"other","subject":"HASCOL material information","trigger":"Content of the two notices (03-05 and 03-08) once public.","evidence":[{"file":"announcements_30d.csv","row":"HASCOL","field":"date","quote":"2019-03-08"}]}],
+"entries":[
+{"symbol":"MEBL","type":"other","entry_price":101.58,"stop_price":91.42,"stop_type":"fixed","size_pct":10,"horizon_sessions":60,
+"p_gain":0.55,"reason":"Only name at its 252-day high while the market is down; relative strength in a falling tape, annual report filed. Evidence is thin (breakout base rate is a hypothesis from five windows), so small size, fixed 10% stop, risk 1% of book.",
+"evidence":[
+{"file":"screens.csv","row":"MEBL","field":"dist_from_252_high","quote":"0.0"},
+{"file":"screens.csv","row":"MEBL","field":"r6m","quote":"0.202"},
+{"file":"sectors.csv","row":null,"field":null,"quote":"Islamic banks & fin.,7,-0.0051,-0.0144,-0.0943,1,1"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"breakout_252high_S3,24 months (window; rotation exits),12,58%,+17%"}]}],
+"exposure_pct":10,
+"not_known":"FX reserves, current account, IMF status, valuation versus history, MPC date, and any earnings detail are absent from the pack. Announcement contents are titles only.",
+"contamination_note":"No post-2019-03-08 knowledge used. base_rates.csv is flagged as measured through 2026 and used only as rough odds for a type."}

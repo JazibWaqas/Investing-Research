@@ -1,0 +1,32 @@
+{"date":"2021-06-11",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.52,
+"summary":"SBP held at 7.0% on 2021-05-28 but the 6M bill cutoff sits 59bp above the policy rate and CPI rose 2.2pp in three months, so the market prices a hike the SBP has not made. KMI is up 37% in 12 months and 8.5% in one month, so the tide is strong but extended. Hold-decision base rate is mildly positive, hike base rate is negative on n=2. Neutral, no forced exposure.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 7.0%; last MPC decision 2021-05-28: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.59pp (market pricing hikes); CPI rising over 3 months (+2.2pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 10.84% for 2021-05 (published by 2021-06-03); three months earlier (2021-02) 8.68%"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 23,671 on 2021-06-11; 1m +8.5%, 3m +3.7%, 6m +13.6%, 12m +37.0%"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100,60 sessions","field":"hit_rate","quote":"62%"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100,120 sessions","field":"median","quote":"-5.6%"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"SBP next MPC: hike versus hold","trigger":"A hike (or a hold with the 6M bill still above the policy rate) decides whether to cut or add risk; act only after the decision, not on the pricing.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 7.59% (auction 2021-06-02)"},
+{"file":"base_rates.csv","row":"first_rate_hike_ew,120 sessions","field":"median","quote":"-15.6%"}]},
+{"type":"volume_with_upper_locks","subject":"FLYNG","trigger":"Three locks in 10 days at the 252-day high with volume 3.7x normal: demand or operator is unknown; the type is watch-only, so wait for a failed lock and a rebound with a known trigger.","evidence":[
+{"file":"screens.csv","row":"FLYNG","field":"upper_locks_10d","quote":"3"},
+{"file":"screens.csv","row":"FLYNG","field":"vol20_over_vol120","quote":"3.657"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5,60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"SEARL","trigger":"Emergency board meeting on 2021-06-10 after material information on 2021-06-04; trade only if the content is a sponsor or buyback move that is filed and public.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"2021-06-10 SEARL: Short Notice (emergency) Board Meeting Other Than Financial Results"},
+{"file":"announcements_30d.csv","row":"SEARL","field":"title","quote":"Material Information"},
+{"file":"base_rates.csv","row":"results_board_notice_leg,about 5 sessions (median leg)","field":"verdict","quote":"nothing (indistinguishable from placebo)"}]},
+{"type":"other","subject":"UNITY","trigger":"Board meeting 2021-06-10 plus material information on 2021-06-07 and 2021-06-11, at the 252-day high; wait for the content of the disclosure before any position.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"2021-06-10 UNITY: Board Meeting Other than Financial Results"},
+{"file":"screens.csv","row":"UNITY","field":"n_material","quote":"2"},
+{"file":"screens.csv","row":"UNITY","field":"dist_from_252_high","quote":"0.0"}]}],
+"entries":[],
+"exposure_pct":0,
+"not_known":"No EPS, P/E or dividend yield for nearly every name (blank in screens.csv), no FX reserves or current account, no IMF status, no next MPC date, no float or sponsor data. The pack cannot support a single-name thesis.",
+"contamination_note":"No post-2021-06-11 knowledge was used. Base rates in base_rates.csv are flagged as partly measured after this date and were used only as rough odds for a type, never for a name."}

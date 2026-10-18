@@ -1,0 +1,55 @@
+{"date": "2026-03-06",
+ "regime": {"rates_phase": "holding", "stance": "neutral", "p_kmi_up_60": 0.55,
+  "summary": "Index shock: KSE100 down 16.2% in a month with Brent up 48.6% in three months, while the policy rate is on hold at 10.5% and CPI is rising (6.99%). The 6M bill cutoff sits above the policy rate, so no cut is priced. Method says hold the core and keep cash for a gap, not chase. Stay partly invested, small stops, no all-in.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 157,496 on 2026-03-06; 1m -16.2%, 3m -5.7%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 10.5%; last MPC decision 2026-01-26: hold (+0bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Brent: 95.74 USD/bbl on 2026-03-06; 3-month change +48.6%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "6M T-bill minus policy rate +0.24pp (market near policy rate); CPI rising over 3 months (+0.8pp)"},
+   {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: hold the core; keep cash ready for a weekend gap."}]},
+ "core": [
+  {"symbol": "OGDC", "weight_pct": 15,
+   "thesis": "E&P is the direct Brent link (A8 asks which link is held). P/E 5.6 with 6.8% yield, 16% off its 252-day high, E&P sector 3-month decline only -3% versus -23% for Islamic banks. Earnings fell 16% yoy, so size is modest.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "Brent: 95.74 USD/bbl on 2026-03-06; 3-month change +48.6%"},
+    {"file": "screens.csv", "row": "OGDC", "field": "pe", "quote": "5.583"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dy", "quote": "0.068"},
+    {"file": "sectors.csv", "row": "E&P", "field": "r3m", "quote": "-0.0315"},
+    {"file": "questions.md", "row": null, "field": null, "quote": "A8. Oil: where is Brent, and which link do I actually hold?"}]},
+  {"symbol": "FFC", "weight_pct": 10,
+   "thesis": "Fertilizer is the only sector with positive 3-month return, P/E 5.5 and 11.2% yield give income while waiting. Sector favored in the easing-cycle lesson as having its own catalyst. EPS flat yoy (-2%), so not a growth call.",
+   "evidence": [
+    {"file": "sectors.csv", "row": "Fertilizer", "field": "r3m", "quote": "0.0055"},
+    {"file": "screens.csv", "row": "FFC", "field": "dy", "quote": "0.112"},
+    {"file": "screens.csv", "row": "FFC", "field": "pe", "quote": "5.523"},
+    {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: favour sectors with their own catalyst over rate-sensitive ones."}]}],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next MPC decision",
+   "trigger": "Date is not in the pack (calendar says see SBP calendar). A hike would mark rates_phase change; a hold with CPI still rising keeps stance neutral. The 6M bill at 10.74% already sits above the 10.5% policy rate.",
+   "evidence": [
+    {"file": "calendar.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"},
+    {"file": "market.md", "row": null, "field": null, "quote": "6M T-bill cutoff 10.74% (auction 2026-03-04)"},
+    {"file": "market.md", "row": null, "field": null, "quote": "CPI YoY 6.99% for 2026-02 (published by 2026-03-03); three months earlier (2025-11) 6.16%"}]},
+  {"type": "volume_with_upper_locks", "subject": "SSOM",
+   "trigger": "Two upper locks in 10 days and volume ratio 2.07 while the market fell, but base rate for this type is watch, not tradable; act only if a filing explains it.",
+   "evidence": [
+    {"file": "screens.csv", "row": "SSOM", "field": "upper_locks_10d", "quote": "2"},
+    {"file": "screens.csv", "row": "SSOM", "field": "vol20_over_vol120", "quote": "2.069"},
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}]},
+  {"type": "other", "subject": "Index rebound confirmation (first up day after a bottom)",
+   "trigger": "Add to MEBL or core only after the index shows a first up leg after a low; buying before is the biased-downward arm in the base rates.",
+   "evidence": [
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "shock_fall5_hindsight_day1,60 sessions,25,38%,-4.2%"},
+    {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: wait for it, not the headline."}]}],
+ "entries": [
+  {"symbol": "MEBL", "type": "shock_and_rebound", "entry_price": 444.9, "stop_price": 380.0, "stop_type": "fixed",
+   "size_pct": 10, "horizon_sessions": 60, "p_gain": 0.52,
+   "reason": "Liquid Islamic bank, P/E 4.2, 11.6% yield, only 13% below its high after the index fell 16%; the shallowest drawdown among large names. Base rate for index-shock buys at 60 sessions is a coin flip, so size is small. Loss at stop is 1.5% of book.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MEBL", "field": "pe", "quote": "4.229"},
+    {"file": "screens.csv", "row": "MEBL", "field": "dist_from_252_high", "quote": "-0.134"},
+    {"file": "screens.csv", "row": "MEBL", "field": "dy", "quote": "0.116"},
+    {"file": "base_rates.csv", "row": null, "field": null, "quote": "shock_index3_buy,60 sessions,20,50%,+0.7%,,-18.3%"}]}],
+ "exposure_pct": 35,
+ "not_known": "IMF status, reserves and current account (pack says FX reserves not available), the date of the next MPC, the cause of the oil move, and why the whole market fell together. The announcements file is empty, so no company news is visible.",
+ "contamination_note": "No post-2026-03-06 knowledge used or recalled. The base_rates.csv header warns it was measured partly after this date, so I used it only as rough odds for the type, with p_gain pulled toward 50%."}

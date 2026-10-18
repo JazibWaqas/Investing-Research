@@ -1,0 +1,25 @@
+{"date":"2023-07-21",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"Last MPC move was a 100bp hike to 22.0%, and the 6M bill cutoff sits above the policy rate, so the market prices more tightening. CPI is falling (35.38% to 29.4%) but reserves and current account data are absent. KSE100 is up 13% in a month, so the tide is extended; the analogous tightening episode favoured holding bills. Stay partly invested, small and cheap.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 22.0%; last MPC decision 2023-06-26: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +0.96pp (market pricing hikes)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI falling over 3 months (-6.0pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 45,921 on 2023-07-21; 1m +13.0%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"A hold or cut after the +100bp hike, with CPI still falling, would end the hiking phase; a further hike keeps stance neutral.","evidence":[{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 29.4% for 2023-06"}]},
+{"type":"earnings_inflection_ignored","subject":"EFERT half-year results","trigger":"Results after the board meeting; EFERT eps_yoy is -0.201 and dy 0.176, so only a reversal in earnings would matter.","evidence":[{"file":"calendar.md","row":null,"field":null,"quote":"EFERT: Board Meeting for the announcement of the financial results for the half year ended June 30, 2023"},{"file":"screens.csv","row":"EFERT","field":"eps_yoy","quote":"-0.201"}]},
+{"type":"volume_with_upper_locks","subject":"UNITY","trigger":"Watch only; volume with locks is not tradable by the base rates. Revisit if locks fade and price holds.","evidence":[{"file":"screens.csv","row":"UNITY","field":"upper_locks_10d","quote":"3"},{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"Mutual fund selling vs foreign corporate buying","trigger":"Mutual funds net sellers while foreign corporates buy; watch for the 20-day mutual fund outflow turning to inflow as a confirmation of the rally.","evidence":[{"file":"flows.csv","row":"mutual funds","field":"net_usd_mn","quote":"-12.779"},{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"15.195"}]}],
+"entries":[
+{"symbol":"OGDC","type":"earnings_inflection_ignored","entry_price":85.21,"stop_price":74.0,"stop_type":"fixed","size_pct":10,"horizon_sessions":120,"p_gain":0.55,
+"reason":"Earnings up 49.7% year on year at a P/E of 2.5 with a 9.2% yield, yet 3m return is only 1.5% and price is 15.7% below the 252-day high, so it is not extended. Low-P/E names had modest 120-session odds in base rates (not confirmed), so size is small. Banks and DFIs are buying E&P.",
+"evidence":[{"file":"screens.csv","row":"OGDC","field":"eps_yoy","quote":"0.497"},{"file":"screens.csv","row":"OGDC","field":"pe","quote":"2.529"},{"file":"screens.csv","row":"OGDC","field":"r3m","quote":"0.015"},{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"-0.157"},{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"hit_rate","quote":"results_pe_below6_any_reaction_H3,120 sessions,80,61%,+7.2%"},{"file":"flows.csv","row":"lipi banks / dfi | Oil and Gas Exploration Companies","field":"net_usd_mn","quote":"3.807"}]},
+{"symbol":"PPL","type":"earnings_inflection_ignored","entry_price":69.91,"stop_price":60.5,"stop_type":"fixed","size_pct":8,"horizon_sessions":120,"p_gain":0.53,
+"reason":"Earnings up 60.9% year on year at a P/E of 3.4, with a 3m return of 4% and price 16.6% below the 252-day high, so the move is not yet priced. Same E&P exposure as OGDC, so combined sizing is kept modest. Base rates for low-P/E names are unconfirmed.",
+"evidence":[{"file":"screens.csv","row":"PPL","field":"eps_yoy","quote":"0.609"},{"file":"screens.csv","row":"PPL","field":"pe","quote":"3.38"},{"file":"screens.csv","row":"PPL","field":"r3m","quote":"0.04"},{"file":"screens.csv","row":"PPL","field":"dist_from_252_high","quote":"-0.166"},{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"hit_rate","quote":"results_pe_below6_any_reaction_H3,60 sessions,88,56%,+2.4%"}]}],
+"exposure_pct":18,
+"not_known":"FX reserves, current account, IMF status, political stability, and the next MPC date are not in the pack. No balance sheet, circular-debt or consolidated earnings detail for the E&P names, and no valuation history for the market.",
+"contamination_note":"No post-2023-07-21 knowledge used. base_rates.csv warns it was measured partly after this date, so it was used only as rough odds for situation types, not for specific names."}

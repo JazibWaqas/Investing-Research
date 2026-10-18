@@ -1,0 +1,54 @@
+{"date":"2026-06-05",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.48,
+"summary":"Last MPC move was a 100bp hike to 11.5%, CPI is 11.64% and rising, and the 6M bill cutoff sits 1.00pp above the policy rate, so the curve prices more hikes. Brent is near 97. The index has rallied hard anyway. A hike cycle with CPI above the rate is the worst past analogue, so keep exposure small and oil-linked, no new entries.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-04-27: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.64% for 2026-05 (published by 2026-06-03); three months earlier (2026-02) 6.99%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +1.00pp (market pricing hikes)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 97.29 USD/bbl on 2026-06-05; 3-month change +9.8%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 170,479 on 2026-06-05; 1m +4.0%, 3m +12.2%, 6m +1.4%, 12m +41.5%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Tightening plus external stress: rate up 800bp in ten months with CPI above it."},
+{"file":"actors.md","row":null,"field":null,"quote":"Read the real rate and the external account, not the adjectives."}]},
+"core":[
+{"symbol":"PPL","weight_pct":13,"thesis":"Oil link while Brent is near 97 and the curve prices hikes. P/E 5.1, dividend yield 4.4%, still 17% below its 252-day high, so less extended than OGDC. EPS down 6% year on year, so it is a hedge and not an earnings call.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 97.29 USD/bbl on 2026-06-05"},
+{"file":"screens.csv","row":"PPL","field":"pe","quote":"5.148"},
+{"file":"screens.csv","row":"PPL","field":"dist_from_252_high","quote":"-0.173"},
+{"file":"screens.csv","row":"PPL","field":"dy","quote":"0.044"},
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"}]},
+{"symbol":"OGDC","weight_pct":12,"thesis":"Second E&P oil link. P/E 5.6, yield 6.8%, and insurers bought E&P in the flows. It is only 3% off its high, so I size it smaller and treat it as a hedge against the oil leg of the inflation shock.","evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"-0.031"},
+{"file":"flows.csv","row":"lipi insurance companies | Oil and Gas Exploration Companies","field":"net_usd_mn","quote":"7.196"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 97.29 USD/bbl on 2026-06-05; 3-month change +9.8%"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC","trigger":"A hold or a hike when the date is known. A further hike with CPI above the rate keeps the stance cautious. A hold with CPI easing would justify more exposure.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+4.7pp)"}]},
+{"type":"earnings_inflection_ignored","subject":"PSO","trigger":"EPS up 680% year on year but price is 30% below its high and flat over 3 months; watch for a re-rating or for evidence the profit is a one-off before acting.","evidence":[
+{"file":"screens.csv","row":"PSO","field":"eps_yoy","quote":"6.803"},
+{"file":"screens.csv","row":"PSO","field":"dist_from_252_high","quote":"-0.302"},
+{"file":"screens.csv","row":"PSO","field":"r3m","quote":"0.004"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"results_yoy_POS,60 sessions,338,43%,-2.3%,,,,no tradable drift (H1)"}]},
+{"type":"earnings_inflection_ignored","subject":"NETSOL","trigger":"EPS up 339% year on year at P/E 8.2 with volume above its 120-day norm; watch for a one-off check and for price confirmation before any entry.","evidence":[
+{"file":"screens.csv","row":"NETSOL","field":"eps_yoy","quote":"3.392"},
+{"file":"screens.csv","row":"NETSOL","field":"pe","quote":"8.173"},
+{"file":"screens.csv","row":"NETSOL","field":"vol20_over_vol120","quote":"2.055"}]},
+{"type":"volume_with_upper_locks","subject":"HCAR","trigger":"Volume at 3.1 times its 120-day norm with an upper lock and +28% in a month, while EPS is down 40%. Watch only; the volume-and-locks base rate is not tradable.","evidence":[
+{"file":"screens.csv","row":"HCAR","field":"vol20_over_vol120","quote":"3.127"},
+{"file":"screens.csv","row":"HCAR","field":"upper_locks_10d","quote":"1"},
+{"file":"screens.csv","row":"HCAR","field":"eps_yoy","quote":"-0.402"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Three upper locks in ten days after a 3m gain of 214%, still 45% below its high. Demand or an operator cannot be told apart from the pack; watch only.","evidence":[
+{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"3"},
+{"file":"screens.csv","row":"SGPL","field":"r3m","quote":"2.137"},
+{"file":"questions.md","row":null,"field":null,"quote":"C7. Is volume with upper locks demand or an operator?"}]},
+{"type":"shock_and_rebound","subject":"JSML","trigger":"Down 27% in a month with volume at 2.5 times its norm and two upper locks. Watch only for a first up-day after a bottom; I cannot name that bottom from this pack.","evidence":[
+{"file":"screens.csv","row":"JSML","field":"r1m","quote":"-0.27"},
+{"file":"screens.csv","row":"JSML","field":"vol20_over_vol120","quote":"2.451"},
+{"file":"screens.csv","row":"JSML","field":"upper_locks_10d","quote":"2"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"FX reserves and current account are not in the pack. IMF status, the next MPC date, consolidated earnings power, balance sheets and float are not in the pack. The cause of the CPI jump is not stated. Whether the rally is durable is unknown.",
+"contamination_note":"No memory of events after 2026-06-05 was used. base_rates.csv carries its own warning that it was measured partly after this date, so I used only a few rows as rough odds for a situation type and drew nothing from it about specific names."}

@@ -1,0 +1,47 @@
+{"date":"2023-01-06",
+"regime":{"rates_phase":"hiking","stance":"risk_off","p_kmi_up_60":0.5,
+"summary":"Policy rate 16.0% after a +100bp hike on 2022-11-25; 6M T-bill cutoff sits 0.83pp above it so the curve prices more hikes; CPI 24.5% and rising over 3 months. KMI is down 9.5% over 12m and 5.1% over 3m. No sector is near a 252-day high. Defensive, high-yield, low-P/E holdings only; no entries, since no tradable situation type has a measured edge.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 16.0%; last MPC decision 2022-11-25: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +0.83pp (market pricing hikes); CPI rising over 3 months (+1.4pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 20,035 on 2023-01-06; 1m -1.2%, 3m -5.1%, 6m -3.1%, 12m -9.5%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: read the rate and the rupee, not the politics."},
+{"file":"market.md","row":null,"field":null,"quote":"USD/PKR: 227.09  on 2023-01-06; 3-month change +2.2%"}]},
+"core":[
+{"symbol":"EFERT","weight_pct":15,"thesis":"Fertilizer holds up best of the defensives: 3m return roughly flat while the market fell, P/E 4.8 and a 21.7% dividend yield pay while waiting through the hiking phase. Small size because eps_yoy is slightly negative.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.217"},
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"4.817"},
+{"file":"screens.csv","row":"EFERT","field":"r3m","quote":"-0.007"},
+{"file":"questions.md","row":null,"field":null,"quote":"B11. What is priced in: P/E relative to market and own history"}]},
+{"symbol":"HUBC","weight_pct":10,"thesis":"Power name with P/E 3.1, 9.5% yield, positive eps_yoy, and 6m return of +11.5% against a falling index; it is within 12.3% of its 252-day high and has insider-free but material filings.",
+"evidence":[
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.106"},
+{"file":"screens.csv","row":"HUBC","field":"dy","quote":"0.095"},
+{"file":"screens.csv","row":"HUBC","field":"eps_yoy","quote":"0.226"},
+{"file":"screens.csv","row":"HUBC","field":"r6m","quote":"0.115"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC after the 2022-11-25 hike","trigger":"A hold with the 6M T-bill falling back toward or below 16.0% would end the hiking phase; until then stay risk_off.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"mpc_hold_kse100,60 sessions,37,62%,+5.5%"}]},
+{"type":"volume_with_upper_locks","subject":"PPL","trigger":"Volume ignition with upper locks (vol20/vol120 2.4, 2 locks, +38% 1m) is already extended; base rates say watch, not tradable. Revisit only if it pulls back on falling volume.",
+"evidence":[
+{"file":"screens.csv","row":"PPL","field":"vol20_over_vol120","quote":"2.419"},
+{"file":"screens.csv","row":"PPL","field":"upper_locks_10d","quote":"2"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}]},
+{"type":"other","subject":"PPL Reko Diq definitive agreements","trigger":"Follow-through in PPL price after the 2022-12-16 signing announcement; no entry without confirmation.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"PPL","field":"title","quote":"Material Information - Signing of Definitive Agreements - Reko Diq Project"}]},
+{"type":"other","subject":"SSGC repeated board meetings other than financial results","trigger":"A published outcome of the repeatedly rescheduled board meeting; type unknown, so no position.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"2023-01-05 SSGC: Board Meeting Rescheduled"}]},
+{"type":"earnings_inflection_ignored","subject":"ATRL (EPS +50.8% yoy, P/E 1.4, down 9.8% from 252-day high)","trigger":"Confirm the earnings inflection is not a one-off before sizing; results-based rules show no tradable drift, so only watch.",
+"evidence":[
+{"file":"screens.csv","row":"ATRL","field":"eps_yoy","quote":"50.846"},
+{"file":"screens.csv","row":"ATRL","field":"pe","quote":"1.447"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"results_yoy_all,60 sessions,976,41%,-3.3%,,,,no tradable drift (H1)"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"FX reserves, current account, IMF status and the next MPC date are not in the pack; no balance-of-payments reading. No insider or P/B data for banks, and float and exit depth are not shown.",
+"contamination_note":"None used. Base-rate file carries a warning that it was measured partly after this date; used only as rough odds for situation types, never for names or dates."}

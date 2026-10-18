@@ -1,0 +1,36 @@
+{"date":"2023-02-03",
+"regime":{"rates_phase":"hiking","stance":"risk_off","p_kmi_up_60":0.42,
+"summary":"SBP hiked 100bp on 2023-01-23 to 17.0% while CPI is still rising and the rupee is down 23.3% in 3 months. KMI is down on 1m, 3m, 6m and 12m. The past hike-cycle lesson in the method files says read the rate and the rupee. No cut is visible, so stay mostly in cash with two low-multiple, cash-yielding names.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 17.0%; last MPC decision 2023-01-23: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+1.0pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"3-month change +23.3%"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 19,591 on 2023-02-03; 1m -1.7%, 3m -6.7%, 6m -8.4%, 12m -12.4%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: read the rate and the rupee, not the politics."}]},
+"core":[
+{"symbol":"OGDC","weight_pct":10,"thesis":"Trades near its 252-day high while the market falls, on a P/E of 2.5 and a 9.2% dividend yield; E&P is the only sector with a positive 3m return. Brent fall is a risk. Modest size only.",
+"evidence":[
+{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"-0.021"},
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"2.529"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.092"},
+{"file":"sectors.csv","row":"E&P","field":"r3m","quote":"0.1469"}]},
+{"symbol":"EFERT","weight_pct":10,"thesis":"Flat over 12 months while the market fell, P/E 4.8 and dividend yield 21.7%; a defensive cash-yielding holding in a hiking phase. Results are not rising (eps_yoy slightly negative).",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"r12m","quote":"-0.004"},
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.217"},
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"4.817"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"A hold or a cut by the SBP with CPI no longer rising; until then no new risk.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"median","quote":"-5.6%"}]},
+{"type":"deal_after_offer","subject":"MCB potential purchase","trigger":"A formal public offer with price and size; none yet, so no entry.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"MCB","field":"title","quote":"Disclosure of Material Information - Potential Purchase by MCB Bank Limited"}]},
+{"type":"deal_after_offer","subject":"AMBL proposed merger","trigger":"Terms of the merger announced; due diligence only so far.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"AMBL","field":"title","quote":"Material Information - Reciprocal Due Diligence for Proposed Merger of FINC"}]}],
+"entries":[],
+"exposure_pct":20,
+"not_known":"IMF status, FX reserves, current account and the next MPC date are not in the pack; market.md says reserves are not available. No insider buying is shown for any name.",
+"contamination_note":"No post-2023-02-03 memory used. base_rates.csv carries its own warning that it was measured partly after this date; used only as rough odds for situation types, nothing name-specific."}

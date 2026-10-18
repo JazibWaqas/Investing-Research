@@ -1,0 +1,32 @@
+{"date":"2020-02-21",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.52,
+"summary":"Policy rate held at 13.25% while CPI rose to 14.89% and the 6M bill sits at the policy rate, so no move is priced. Index is 5.4% below a month ago after a 28% six-month run; foreign corporates sold heavily over 20 sessions. Hold-period base rate for the index is mildly positive, nothing here is a trigger.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 13.25%; last MPC decision 2020-01-28: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+2.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +0.05pp (market near policy rate)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 40,249 on 2020-02-21; 1m -5.4%, 3m +6.1%, 6m +28.4%, 12m -0.6%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-33.511"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100 60 sessions","field":"hit_rate","quote":"62%"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision (rate 13.25%, CPI 14.89%)","trigger":"A cut or hike announced; act only after the decision, not on expectation","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100 60 sessions","field":"verdict","quote":"weak (H1)"}]},
+{"type":"shock_and_rebound","subject":"KSE100","trigger":"A 3-day index fall of 5% or more, then a first up day after the bottom (buy only on a known trigger)","evidence":[
+{"file":"base_rates.csv","row":"shock_index5_buy 20 sessions","field":"verdict","quote":"no word given (Verdict 3: buy only on a known trigger)"},
+{"file":"market.md","row":null,"field":null,"quote":"1m -5.4%"}]},
+{"type":"deal_after_offer","subject":"GLAXO","trigger":"A published offer or intention to acquire; compute the fraction of holding the offer buys and the stub","evidence":[
+{"file":"announcements_30d.csv","row":"GLAXO","field":"title","quote":"Material Information - GlaxoSmithKline Pakistan Limited"},
+{"file":"announcements_30d.csv","row":"GLAXO","field":"title","quote":"Material Information - GSK Pakistan Limited REVOKED"}]},
+{"type":"other","subject":"SYS","trigger":"Breakout hold above the 252-day high on steady volume; unconfirmed, volume surge alone is not an entry","evidence":[
+{"file":"screens.csv","row":"SYS","field":"r3m","quote":"0.597"},
+{"file":"screens.csv","row":"SYS","field":"dist_from_252_high","quote":"-0.052"},
+{"file":"base_rates.csv","row":"breakout_252high_S3 24 months (window; rotation exits)","field":"verdict","quote":"a hypothesis from five windows (file)"}]},
+{"type":"other","subject":"KOHC","trigger":"Hold of the +15% month; wait for the board-meeting result reaction before any entry","evidence":[
+{"file":"screens.csv","row":"KOHC","field":"r1m","quote":"0.15"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2020-02-19 KOHC: Board Meeting"}]}],
+"entries":[],
+"exposure_pct":0,
+"not_known":"Reserves, current account, IMF status, political stability, valuations (P/E) and earnings levels are not in the pack; the next MPC date is not given; deal terms for GLAXO are unknown.",
+"contamination_note":"I recognise this date and have post-T knowledge of Pakistan and global markets. I discarded it; stance and the empty book rest only on the bundle (no type with a supportive verdict, base_rates.csv carries a look-ahead warning and was used only as rough odds). A cash outcome could still be unconsciously shaped by that memory."}

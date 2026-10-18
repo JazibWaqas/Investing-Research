@@ -1,0 +1,50 @@
+{"date":"2020-04-03",
+"regime":{"rates_phase":"cutting","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"SBP cut 150bp on 2020-03-24 and CPI is falling, which the pack's first-cut base rates (n=3, weak) read as supportive. Against that, KSE100 is down 25.3% over 3 months, Brent is down 64.8%, the rupee is weaker and foreign corporates are heavy net sellers. Shock-buy base rates are only roughly coin-flip at 60 sessions. Neutral, small sizes, wide stops.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.0%; last MPC decision 2020-03-24: cut (-150bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 31,622 on 2020-04-03; 1m -18.7%, 3m -25.3%, 6m -6.0%, 12m -18.8%"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.38% for 2020-03 (published by 2020-04-03); three months earlier (2019-12) 13.74%"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 24.33 USD/bbl on 2020-04-03; 3-month change -64.8%"},
+{"file":"market.md","row":null,"field":null,"quote":"3-month change +7.5%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-89.397"},
+{"file":"flows.csv","row":"insurance companies","field":"net_usd_mn","quote":"58.229"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"verdict","quote":"weak (H1)"},
+{"file":"base_rates.csv","row":"shock_index3_buy","field":"hit_rate","quote":"50%"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC after the 2020-03-24 cut","trigger":"Date is not in the pack (see SBP calendar); act only once it is known and CPI keeps falling.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"hit_rate","quote":"100%"}]},
+{"type":"deal_after_offer","subject":"ILTM, TATM, SALT merger notices","trigger":"Only if an offer with terms and a price is published; today there are only titles.","evidence":[
+{"file":"announcements_30d.csv","row":"ILTM","field":"title","quote":"Material Information Merger"},
+{"file":"announcements_30d.csv","row":"TATM","field":"title","quote":"Material Information Merger"},
+{"file":"announcements_30d.csv","row":"SALT","field":"title","quote":"Material Information Merger"}]},
+{"type":"volume_with_upper_locks","subject":"KOHC","trigger":"Watch only; V4 volume-lock rows are marked not tradable, so no entry unless a sponsor or insider filing appears.","evidence":[
+{"file":"screens.csv","row":"KOHC","field":"upper_locks_10d","quote":"4"},
+{"file":"screens.csv","row":"KOHC","field":"vol20_over_vol120","quote":"2.008"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"earnings_inflection_ignored","subject":"ISL","trigger":"Quarterly results for the period ended 31-03-2020; consider only if result is positive and price reaction is muted.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"ISL: BOARD MEETING TO REVIEW QUARTERLY FINANCIAL RESULTS FOR THE PERIOD ENDED 31-03-2020"},
+{"file":"base_rates.csv","row":"results_gap_up","field":"verdict","quote":"watch (p 0.11 vs same-year random)"}]},
+{"type":"other","subject":"DGKC plant suspension","trigger":"Watch for resumption of operations before any cement entry.","evidence":[
+{"file":"announcements_30d.csv","row":"DGKC","field":"title","quote":"Disclosure of Material Information - Temporary Suspension of Plant Operatio"}]}],
+"entries":[
+{"symbol":"MARI","type":"shock_and_rebound","entry_price":1085.98,"stop_price":868.78,"stop_type":"fixed","size_pct":15,"horizon_sessions":60,"p_gain":0.52,
+"reason":"Index-level shock-buy rows hit 50-67% at 60 sessions with small medians, so edge is thin and sizing is small. MARI is down 17.1% over 3 months, less than most E&P peers and the sector, with volume rising and one upper lock. Risk is 15% x 20% = 3% of book.",
+"evidence":[
+{"file":"screens.csv","row":"MARI","field":"r3m","quote":"-0.171"},
+{"file":"screens.csv","row":"MARI","field":"vol20_over_vol120","quote":"1.55"},
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"hit_rate","quote":"67%"},
+{"file":"base_rates.csv","row":"shock_index3_buy","field":"median","quote":"+0.7%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 31,622 on 2020-04-03; 1m -18.7%, 3m -25.3%, 6m -6.0%, 12m -18.8%"}]},
+{"symbol":"EFERT","type":"shock_and_rebound","entry_price":57.39,"stop_price":45.91,"stop_type":"fixed","size_pct":15,"horizon_sessions":60,"p_gain":0.52,
+"reason":"Same shock-buy logic, spread across a second sector. EFERT is down 22% over 3 months, in line with the sector's decline of 19.5%, with banks and DFIs net buying fertilizer. Domestic buyers are absorbing foreign selling. Risk is 15% x 20% = 3% of book.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"r3m","quote":"-0.22"},
+{"file":"flows.csv","row":"lipi banks / dfi | Fertilizer","field":"net_usd_mn","quote":"7.303"},
+{"file":"flows.csv","row":"fipi | Fertilizer","field":"net_usd_mn","quote":"-8.535"},
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"hit_rate","quote":"67%"}]}],
+"exposure_pct":30,
+"not_known":"FX reserves and current account are absent from the pack, as are IMF status, valuations, earnings forecasts and the next MPC date. Shock depth and duration are unknown, and the base rates were measured partly after this date.",
+"contamination_note":"I have general memory of the post-April 2020 period and did not use it. Every claim is quoted from the bundle. The base_rates.csv warning about post-T measurement was heeded: used as rough odds for a type only, with thin sizing."}

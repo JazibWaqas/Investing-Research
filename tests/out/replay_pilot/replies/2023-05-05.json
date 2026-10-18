@@ -1,0 +1,46 @@
+{"date":"2023-05-05",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.52,
+"summary":"Policy rate 21.0% after a +100bp hike on 2023-04-04, CPI 36.42% and rising, 6M bill above policy so the curve prices more hikes, rupee weaker. Equities bounced 6% in a month anyway. Past hike and balance-of-payments squeezes were bad for the index, so I stay neutral with low exposure and cheap cash-generative names only.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 21.0%; last MPC decision 2023-04-04: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.96pp (market pricing hikes); CPI rising over 3 months (+8.9pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"USD/PKR: 283.71  on 2023-05-05; 3-month change +3.9%"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 20,209 on 2023-05-05; 1m +6.3%, 3m +4.5%, 6m -3.4%, 12m -11.2%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: read the rate and the rupee, not the politics."},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-21.938"}]},
+"core":[
+{"symbol":"OGDC","weight_pct":15,"thesis":"E&P at P/E 2.5 with 9.2% yield and EPS up 50% year on year; dollar-linked earnings help against a weakening rupee. Not chasing: 16.6% below its 252-day high, 3m +2.5%. Evidence is a cheap-P/E base rate that is unconfirmed, so modest weight.",
+"evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"2.529"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.092"},
+{"file":"screens.csv","row":"OGDC","field":"eps_yoy","quote":"0.497"},
+{"file":"market.md","row":null,"field":null,"quote":"USD/PKR: 283.71  on 2023-05-05; 3-month change +3.9%"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"hit_rate","quote":"61%"}]},
+{"symbol":"EFERT","weight_pct":10,"thesis":"Fertilizer with 17.6% dividend yield and P/E 6.4, below its high by 13.9%; income cushions a hiking phase. EPS fell 20% year on year, so this is a yield holding, not an earnings story.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.176"},
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"6.416"},
+{"file":"screens.csv","row":"EFERT","field":"eps_yoy","quote":"-0.201"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"Hold with 6M bill falling toward the policy rate would be the first signal; another hike confirms risk_off.",
+"evidence":[{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"}]},
+{"type":"buyback_or_sponsor_move","subject":"LUCK second buy-back","trigger":"Pullback toward 420 or a filed insider buy; it is already +14.4% in a month so no chase.",
+"evidence":[{"file":"announcements_30d.csv","row":"LUCK","field":"title","quote":"Material Information - 2nd Buy-Back of Shares"},{"file":"screens.csv","row":"LUCK","field":"r1m","quote":"0.144"}]},
+{"type":"volume_with_upper_locks","subject":"BIPL","trigger":"Watch only; 5 upper locks and +62% in a month is extended and the method says this type is not tradable.",
+"evidence":[{"file":"screens.csv","row":"BIPL","field":"upper_locks_10d","quote":"5"},{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"deal_after_offer","subject":"PKGS substantial shareholding acquisition","trigger":"A public offer notice with price; none yet, so size nothing until terms are filed.",
+"evidence":[{"file":"announcements_30d.csv","row":"PKGS","field":"title","quote":"Disclosure of Material Information - Acquisition of Substantial Shareholdin"}]},
+{"type":"earnings_inflection_ignored","subject":"SAZEW","trigger":"EPS up 17x year on year with 1 upper lock but P/E 31.9; wait for price pullback or cheaper valuation.",
+"evidence":[{"file":"screens.csv","row":"SAZEW","field":"eps_yoy","quote":"16.951"},{"file":"screens.csv","row":"SAZEW","field":"pe","quote":"31.865"}]}],
+"entries":[
+{"symbol":"ATRL","type":"earnings_inflection_ignored","entry_price":170.0,"stop_price":150.0,"stop_type":"fixed","size_pct":5,"horizon_sessions":120,"p_gain":0.57,
+"reason":"Refinery with EPS up 222% year on year and P/E 1.4, price flat over 1m and 6m, volume quiet (0.74 of 120-day) so the inflection is ignored. Cheap-P/E base rate at 120 sessions is 61% hit, +7.2%, unconfirmed. Stop 11.8% below; loss at stop is 0.6% of book.",
+"evidence":[
+{"file":"screens.csv","row":"ATRL","field":"eps_yoy","quote":"2.222"},
+{"file":"screens.csv","row":"ATRL","field":"pe","quote":"1.447"},
+{"file":"screens.csv","row":"ATRL","field":"vol20_over_vol120","quote":"0.741"},
+{"file":"base_rates.csv","row":"results_muted_pe_main_H3","field":"hit_rate","quote":"67%"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"median","quote":"+7.2%"}]}],
+"exposure_pct":30,
+"not_known":"No data on IMF programme status, FX reserves, current account or political stability. Next MPC date not given. Float, sponsor behaviour and balance sheets of the picks are not in the pack. ATRL P/E may be distorted by one-offs.",
+"contamination_note":"Possible recall of post-2023 outcomes deliberately discarded; the stance, picks and probabilities rest only on the bundle. Base rates were measured partly after this date and used as rough odds only."}

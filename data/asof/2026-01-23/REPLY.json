@@ -1,0 +1,93 @@
+{"date": "2026-01-23",
+ "regime": {"rates_phase": "cutting", "stance": "neutral", "p_kmi_up_60": 0.55,
+  "summary": "Easing cycle: policy rate 10.5% after a 50bp cut, 6M bill 55bp below policy, CPI flat at 5.6%. KSE100 is up 64.4% in 12 months, so the move is mature. Mutual funds are buying while foreign corporates sell. Hold modest weight in cheap fertilizer and E&P leaders, one small muted-price earnings position, and do not chase locked or extended names. Reserves, IMF and current account are not in the pack.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 10.5%; last MPC decision 2025-12-15: cut (-50bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate -0.55pp (market pricing cuts); CPI flat over 3 months (+0.0pp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 189,167 on 2026-01-23; 1m +10.7%, 3m +16.7%, 6m +37.1%, 12m +64.4%"},
+   {"file": "flows.csv", "row": "mutual funds (investor_type, last_20_sessions)", "field": "net_usd_mn", "quote": "174.713"},
+   {"file": "flows.csv", "row": "foreign corporates (investor_type, last_20_sessions)", "field": "net_usd_mn", "quote": "-76.3"},
+   {"file": "base_rates.csv", "row": "first_rate_cut_kse100 | 60 sessions", "field": "hit_rate", "quote": "67%"},
+   {"file": "base_rates.csv", "row": "mpc_hold_kse100 | 60 sessions", "field": "hit_rate", "quote": "62%"}
+  ]},
+ "core": [
+  {"symbol": "FFC", "weight_pct": 15,
+   "thesis": "Cheap, high-yield fertilizer leader in the strongest sector; all four sector names sit at a 252-day high. The sector has its own catalyst rather than rate sensitivity. Risk: price is already at its high (distance 0.0) and EPS is slightly down year on year, so weight is kept modest.",
+   "evidence": [
+    {"file": "screens.csv", "row": "FFC", "field": "pe", "quote": "5.523"},
+    {"file": "screens.csv", "row": "FFC", "field": "dy", "quote": "0.112"},
+    {"file": "sectors.csv", "row": "Fertilizer", "field": "n_at_252_high", "quote": "4"},
+    {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: favour sectors with their own catalyst over rate-sensitive ones."}
+   ]},
+  {"symbol": "OGDC", "weight_pct": 10,
+   "thesis": "E&P at a low multiple with a 6.8% yield, within 2% of its 252-day high, with mutual funds adding to E&P over 20 sessions. Oil is steady, not spiking. Risk: EPS is down slightly year on year and the sector already rose over 6 months.",
+   "evidence": [
+    {"file": "screens.csv", "row": "OGDC", "field": "pe", "quote": "5.583"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dy", "quote": "0.068"},
+    {"file": "flows.csv", "row": "lipi mutual funds | Oil and Gas Exploration Companies (last_20_sessions)", "field": "net_usd_mn", "quote": "41.531"},
+    {"file": "market.md", "row": null, "field": null, "quote": "Brent: 68.16 USD/bbl on 2026-01-23; 3-month change +2.8%"}
+   ]}
+ ],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next MPC decision",
+   "trigger": "At the next MPC, a further cut with T-bills at or below policy supports raising core weights; a hold with CPI turning up moves stance to risk_off.",
+   "evidence": [
+    {"file": "calendar.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"},
+    {"file": "base_rates.csv", "row": "first_rate_cut_kse100 | 60 sessions", "field": "verdict", "quote": "weak (H1)"}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "MACFL",
+   "trigger": "Not tradable on volume alone; only revisit if a filing explains the run and EPS turns positive.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MACFL", "field": "upper_locks_10d", "quote": "3"},
+    {"file": "screens.csv", "row": "MACFL", "field": "eps_yoy", "quote": "-3.538"},
+    {"file": "base_rates.csv", "row": "volume_locks_V4_liq5 | 60 sessions", "field": "verdict", "quote": "watch not tradable"}
+   ]},
+  {"type": "volume_with_upper_locks", "subject": "QUICE",
+   "trigger": "Up 90.9% in a month with locks; no entry. Watch for a filing or a lock break before any view.",
+   "evidence": [
+    {"file": "screens.csv", "row": "QUICE", "field": "r1m", "quote": "0.909"},
+    {"file": "screens.csv", "row": "QUICE", "field": "upper_locks_10d", "quote": "2"},
+    {"file": "base_rates.csv", "row": "volume_locks_V1_liq5 | 60 sessions", "field": "verdict", "quote": "nothing"}
+   ]},
+  {"type": "other", "subject": "ZAL",
+   "trigger": "Extended after a very large 6-month rise with an MoU announcement; consider only after a pullback and a check that EPS is not a one-off.",
+   "evidence": [
+    {"file": "announcements_30d.csv", "row": "ZAL", "field": "title", "quote": "Material Information - Strategic MoU with Wang Chuang Xi Jun Chang Agri Ltd"},
+    {"file": "screens.csv", "row": "ZAL", "field": "r6m", "quote": "1.935"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "DGKC",
+   "trigger": "EPS up 167% year on year while 3-month price is flat versus a cement sector up 15%; P/E 7.85 is above the 6 line where the base rate is poor, so wait for P/E below 6 or a price breakout.",
+   "evidence": [
+    {"file": "screens.csv", "row": "DGKC", "field": "eps_yoy", "quote": "1.672"},
+    {"file": "screens.csv", "row": "DGKC", "field": "r3m", "quote": "0.003"},
+    {"file": "base_rates.csv", "row": "results_muted_pe_above6_H3 | 120 sessions", "field": "hit_rate", "quote": "41%"}
+   ]},
+  {"type": "earnings_inflection_ignored", "subject": "GHNI",
+   "trigger": "EPS up 147% with a modest 3-month price gain and P/E just above 6; revisit if P/E falls below 6 or it clears its 252-day high.",
+   "evidence": [
+    {"file": "screens.csv", "row": "GHNI", "field": "eps_yoy", "quote": "1.467"},
+    {"file": "screens.csv", "row": "GHNI", "field": "pe", "quote": "6.046"}
+   ]},
+  {"type": "shock_and_rebound", "subject": "SGPL",
+   "trigger": "Fell 22% in a month after a very large 3-month rise; no entry until a known trigger and a first up-close after a bottom.",
+   "evidence": [
+    {"file": "screens.csv", "row": "SGPL", "field": "r1m", "quote": "-0.22"},
+    {"file": "base_rates.csv", "row": "shock_index5_buy | 60 sessions", "field": "verdict", "quote": "no word given (Verdict 3: buy only on a known trigger)"}
+   ]}
+ ],
+ "entries": [
+  {"symbol": "GAL", "type": "earnings_inflection_ignored", "entry_price": 535.43, "stop_price": 455.12,
+   "stop_type": "fixed", "size_pct": 7, "horizon_sessions": 120, "p_gain": 0.55,
+   "reason": "EPS up 178% year on year at a P/E of 5.25 while price is down over 1 and 3 months, so the improvement is not priced. The muted-price, P/E below 6 base rate is mildly positive but not confirmed. One-off risk in the EPS is unchecked, so size is small with a 15% fixed stop.",
+   "evidence": [
+    {"file": "screens.csv", "row": "GAL", "field": "eps_yoy", "quote": "1.78"},
+    {"file": "screens.csv", "row": "GAL", "field": "r3m", "quote": "-0.054"},
+    {"file": "screens.csv", "row": "GAL", "field": "pe", "quote": "5.252"},
+    {"file": "base_rates.csv", "row": "results_pe_below6_any_reaction_H3 | 120 sessions", "field": "hit_rate", "quote": "61%"},
+    {"file": "base_rates.csv", "row": "results_muted_pe_main_H3 | 120 sessions", "field": "verdict", "quote": "not confirmed (worst mapped to horizon by position)"},
+    {"file": "questions.md", "row": null, "field": null, "quote": "B1. What is five-year earnings power on consolidated EPS, one-offs stripped?"}
+   ]}
+ ],
+ "exposure_pct": 32,
+ "not_known": "Reserves, current account and IMF status (market.md says no data file). The next MPC date. Whether the GAL EPS jump is a one-off. Sponsor behaviour, float and balance-sheet strength of every name. What drives any upper-lock run.",
+ "contamination_note": "No memory of events after 2026-01-23 was used. base_rates.csv carries its own warning that it was measured partly after this date; it was used only as rough odds for a situation type, never for a named stock, and probabilities were shaded toward 0.5."}

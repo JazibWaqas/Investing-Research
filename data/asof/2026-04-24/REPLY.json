@@ -1,0 +1,21 @@
+{"date":"2026-04-24",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"Policy rate held at 10.5% but the 6M bill cutoff sits 0.65pp above it, so the curve prices hikes. CPI is rising and Brent is up 64% in three months. The KSE100 is up 11.6% in one month after a 9.1% three-month fall, so the rebound is already half done. Past tightening-plus-external-stress regimes favoured bills. No entry is supported by a measured edge, so stay in cash and watch.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2026-03-09: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +0.65pp (market pricing hikes); CPI rising over 3 months (+1.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 111.86 USD/bbl on 2026-04-24; 3-month change +64.1%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 170,672 on 2026-04-24; 1m +11.6%, 3m -9.1%, 6m +4.5%, 12m +48.4%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision (hold vs hike)","trigger":"A hike confirms the curve and keeps stance defensive; a hold with the 6M cutoff falling back toward 10.5% is the signal to re-enter in stages.","evidence":[{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +0.65pp (market pricing hikes)"}]},
+{"type":"shock_and_rebound","subject":"KSE100 index after the 3-month drawdown","trigger":"Buy only on a known trigger (a failed retest of the low or an MPC hold with calm CPI); index shock buys show 50% hit at 60 sessions.","evidence":[{"file":"base_rates.csv","row":"shock_index3_buy","field":"hit_rate","quote":"50%"},{"file":"market.md","row":null,"field":null,"quote":"KSE100: 170,672 on 2026-04-24; 1m +11.6%, 3m -9.1%, 6m +4.5%, 12m +48.4%"}]},
+{"type":"volume_with_upper_locks","subject":"SGPL","trigger":"Only V4-type confirmation; the type is watch, not tradable, and the stock is already far extended.","evidence":[{"file":"screens.csv","row":"SGPL","field":"upper_locks_10d","quote":"5"},{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"earnings_inflection_ignored","subject":"JVDC","trigger":"EPS up sharply year on year while the 3-month return is flat; wait for the Q1 print and a price reaction before acting.","evidence":[{"file":"screens.csv","row":"JVDC","field":"eps_yoy","quote":"3.976"},{"file":"screens.csv","row":"JVDC","field":"r3m","quote":"-0.04"}]},
+{"type":"earnings_inflection_ignored","subject":"EFERT","trigger":"Q1 board meeting was noticed; check whether a results gap up appears, which is a watch type only.","evidence":[{"file":"calendar.md","row":null,"field":null,"quote":"EFERT: Board Meeting for the announcement of the financial results for the first quarter ended March 31, 2026"},{"file":"base_rates.csv","row":"results_gap_up","field":"verdict","quote":"watch (p 0.11 vs same-year random)"}]}],
+"entries":[],
+"exposure_pct":0,
+"not_known":"FX reserves, current account, IMF status and political context are not in the pack. The announcements file is empty. The next MPC date is not given. No earlier-regime data on oil-driven inflation.",
+"contamination_note":"No memory of post-2026-04-24 events was used. base_rates.csv carries its own look-ahead warning (measured through 2026-10-16), so it was used only as rough odds by type."}

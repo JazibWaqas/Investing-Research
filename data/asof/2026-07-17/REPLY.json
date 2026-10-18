@@ -1,0 +1,50 @@
+{"date": "2026-07-17",
+ "regime": {"rates_phase": "holding", "stance": "neutral", "p_kmi_up_60": 0.55,
+  "summary": "Policy rate held at 11.5% on 2026-06-15 while CPI jumped from 7.29% to 11.08% in three months, so real rates are about zero and the next move is likelier up than down. T-bills sit at the policy rate, so no cut is priced. Index is down 2.5% in a month after a strong 3m. Hold-decision base rate is mildly positive. Stay neutral with a modest core and no entries.",
+  "evidence": [
+   {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 11.5%; last MPC decision 2026-06-15: hold (+0bp)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "CPI YoY 11.08% for 2026-06 (published by 2026-07-03); three months earlier (2026-03) 7.29%"},
+   {"file": "market.md", "row": null, "field": null, "quote": "6M T-bill minus policy rate -0.06pp (market near policy rate)"},
+   {"file": "market.md", "row": null, "field": null, "quote": "KSE100: 175,803 on 2026-07-17; 1m -2.5%, 3m +9.5%"},
+   {"file": "base_rates.csv", "row": "mpc_hold_kse100", "field": "hit_rate", "quote": "62%"}]},
+ "core": [
+  {"symbol": "OGDC", "weight_pct": 15, "thesis": "Cheap and paying: P/E 5.58, dividend yield 6.8%, 12m return +50% yet 8.8% below its 252-day high. Brent is 85 USD after a 13.8% 3m fall, a mild headwind, so size is small. Held as a liquid value anchor, not an edge claim; base rates give no signal for names.",
+   "evidence": [
+    {"file": "screens.csv", "row": "OGDC", "field": "pe", "quote": "5.583"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dy", "quote": "0.068"},
+    {"file": "screens.csv", "row": "OGDC", "field": "dist_from_252_high", "quote": "-0.088"},
+    {"file": "market.md", "row": null, "field": null, "quote": "Brent: 85.01 USD/bbl on 2026-07-17; 3-month change -13.8%"}]},
+  {"symbol": "MEBL", "weight_pct": 15, "thesis": "Islamic bank near its 252-day high (4.6% below), P/E 8.82, yield 6.3%, 12m +60%. Foreign investors bought commercial banks over 5 and 20 sessions. Rates are held, not rising yet, which helps carry. Risk is a hike if CPI keeps rising.",
+   "evidence": [
+    {"file": "screens.csv", "row": "MEBL", "field": "dist_from_252_high", "quote": "-0.046"},
+    {"file": "screens.csv", "row": "MEBL", "field": "pe", "quote": "8.82"},
+    {"file": "screens.csv", "row": "MEBL", "field": "dy", "quote": "0.063"},
+    {"file": "flows.csv", "row": "fipi | Commercial Banks", "field": "net_usd_mn", "quote": "13.729"}]}],
+ "watch": [
+  {"type": "policy_or_price_decision_pending", "subject": "Next MPC decision", "trigger": "If CPI stays above the 11.5% policy rate or T-bills reprice above it, treat a hike as the base case and cut bank and rate-sensitive weight; a hold with CPI easing keeps the core.",
+   "evidence": [
+    {"file": "market.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"},
+    {"file": "market.md", "row": null, "field": null, "quote": "CPI rising over 3 months (+3.8pp)"},
+    {"file": "questions.md", "row": null, "field": null, "quote": "A2. Is the curve pricing a move the SBP has not made?"}]},
+  {"type": "other", "subject": "EFERT H1 results reaction", "trigger": "Board met 2026-07-17 for six-month results. Watch for a gap-up on the first session after release with EPS growth; results_gap_up base rate is only a watch, so no entry without a visible gap and confirmation.",
+   "evidence": [
+    {"file": "calendar.md", "row": null, "field": null, "quote": "2026-07-17 EFERT: BOARD MEETING FOR THE ANNOUNCEMENT OF THE FINANCIAL RESULTS FOR THE SIX MONTHS ENDED JUNE 30, 2026"},
+    {"file": "base_rates.csv", "row": "results_gap_up", "field": "verdict", "quote": "watch (p 0.11 vs same-year random)"}]},
+  {"type": "deal_after_offer", "subject": "AGIC transfer of 51% shares", "trigger": "Enter the watch only if a public offer with a price is announced; then check what fraction the offer buys and the stub value. Deal base rates are weak without a full tender.",
+   "evidence": [
+    {"file": "announcements_30d.csv", "row": "AGIC", "field": "title", "quote": "Material Information - Repositioning - Transfer of 51% Shares"},
+    {"file": "base_rates.csv", "row": "deal_post_offer", "field": "hit_rate", "quote": "54%"}]},
+  {"type": "volume_with_upper_locks", "subject": "PICT", "trigger": "Up 31% in a month with two upper locks and volume ratio 2.55; base rate says watch, not tradable. Revisit only if it holds after a pullback with a filed explanation.",
+   "evidence": [
+    {"file": "screens.csv", "row": "PICT", "field": "upper_locks_10d", "quote": "2"},
+    {"file": "screens.csv", "row": "PICT", "field": "r1m", "quote": "0.31"},
+    {"file": "base_rates.csv", "row": "volume_locks_V4_liq5", "field": "verdict", "quote": "watch not tradable"}]},
+  {"type": "volume_with_upper_locks", "subject": "SGPL", "trigger": "Up 89% in a month with two locks and three material items; extended and unexplained in the pack. Do not chase; watch only for a filed explanation.",
+   "evidence": [
+    {"file": "screens.csv", "row": "SGPL", "field": "r1m", "quote": "0.892"},
+    {"file": "screens.csv", "row": "SGPL", "field": "n_material", "quote": "3"},
+    {"file": "base_rates.csv", "row": "volume_locks_V1_liq5", "field": "verdict", "quote": "nothing"}]}],
+ "entries": [],
+ "exposure_pct": 30,
+ "not_known": "FX reserves, current account and IMF status are not in the pack. The EFERT result itself, the AGIC offer terms, the next MPC date, and the reasons behind PICT and SGPL moves are unknown. Name-level edge is unproven in the base rates.",
+ "contamination_note": "No recollection of events after 2026-07-17 was used; all claims cite the bundle."}
