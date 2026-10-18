@@ -1,0 +1,13 @@
+=== SCAN 2026-10-16: liquid (>Rs5m median traded value) KMI names with an interesting signature, sorted by the median 5-session analogue return ===
+8 names of 125 liquid KMI names traded. Returns are from the next open, gross; analogues use only data known at that close.
+n5/ep = analogues with a known 5-session outcome / distinct name-months. m1,m5,m20 = analogue median return at 1, 5, 20 sessions. pl5 = same-date, same-tier random-entry median at 5. w5 = share up at 5; g10 = share above +10% at 5; lk5 = share that locked up within 5; mae5 = median max adverse excursion in 5.
+
+symbol  flags                   cause          ret1d tier    n5   ep      m1      m5     m20     pl5   w5  g10  lk5    mae5  widening
+STL     results                 results        +1.2% mid     67   66   -0.3%   +0.0%   -1.8%   -0.1%  48%   3%  24%   -3.2%  L1<=4,noreg,tier+-1
+POWER   sector_leader           none           +2.8% mid    117   98   -0.2%   -0.2%   -3.3%   -0.9%  48%   3%  11%   -3.4%  L1<=3
+SYM     move>5%,sector_leader   none           +8.7% mid     86   72   -0.6%   -0.4%   -0.8%   -1.4%  47%   3%  10%   -3.9%  L1<=4
+SLGL    newsless                none           -3.7% mid     88   78   -0.4%   -1.4%   -3.3%   -1.3%  40%   1%   9%   -3.5%  L1<=3
+WASL    move>5%                 none           +6.0% mid     31   27   +0.0%   -1.6%   -3.3%   +0.4%  45%  10%  19%   -5.1%  L1<=3
+KEL     sector_leader           insider        +3.0% hi      37   33   -0.2%   -1.7%   +4.5%   -1.4%  35%   8%  11%   -4.2%  L1<=4
+AGP     sector_leader           other_filing   +4.1% hi      36   34   -0.2%   -1.7%   +2.6%   -0.7%  28%   3%   8%   -3.3%  L1<=4,noreg
+PRL     sector_leader           board_meeting  +3.1% hi      30   29   -2.1%   -2.6%   -3.1%   -0.4%  37%   3%  10%   -6.9%  L1<=4,noreg,tier+-1

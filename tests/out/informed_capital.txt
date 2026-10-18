@@ -1,0 +1,1629 @@
+=== 0. SETUP AND VALIDATION ===
+rows 577794, symbols 455, dates 2426, 2017-01-02 to 2026-10-16
+ret_5d rebuilt from ret_1d chain vs table: median abs diff 0.00000, share within 0.5pt 1.0000, n 575796
+ret_20d rebuilt vs table: median abs diff 0.00000, share within 0.5pt 1.0000
+trail20: capped/ended-without-stop 161255, censored at end of data (set null) 19427
+entry-open scale check, ret_fwd_5 vs rebuilt: median abs diff 0.00000, share within 0.5pt 1.0000, n 517760
+R1f vs table is_newsless_rise: mine 17313, table 17336, both 17313
+
+=== 1. SIGNAL COUNTS (episode = first signal day, then 20-session re-arm per name) ===
+variantdefinition                                   signal-days episodes  names  dates  tierOK     IS  OOS
+R1     rise: ret_5d>8%, no filing in 10                   28791     8001    388   1982    7980   7958   43
+R2     rise: ret_5d>8%, no filing in 5                    37802    10413    393   2135   10379  10344   69
+R3     rise: ret_10d>12%, no filing in 20                 16617     3786    370   1392    3779   3768   18
+F1     fall: ret_5d<-8%, no filing in 10                  21193     7076    391   1919    7053   6987   89
+F2     fall: ret_5d<-8%, no filing in 5                   28663     9372    396   2127    9332   9251  121
+F3     fall: ret_10d<-12%, no filing in 20                10168     3068    353   1279    3059   3024   44
+R1f    rise: ret_5d>8%, no filing in 10                   17313     5935    385   1848    5916   5895   40
+R2f    rise: ret_5d>8%, no filing in 5                    22188     7571    393   2010    7541   7504   67
+R3f    rise: ret_10d>12%, no filing in 20                 11163     3163    362   1258    3156   3145   18
+F1f    fall: ret_5d<-8%, no filing in 10                  12997     5166    375   1792    5146   5104   62
+F2f    fall: ret_5d<-8%, no filing in 5                   17097     6756    392   2015    6724   6673   83
+F3f    fall: ret_10d<-12%, no filing in 20                 6847     2506    332   1150    2500   2473   33
+
+=== 2. SHARE FOLLOWED BY A FILING vs BASE (same symbol-month) ===
+obs = share of episodes with a filing in sessions t+1..t+w; baseA = mean over the same symbols' rows in the same months of the same indicator (unconditional);
+baseB = same but only rows that also had no filing in the variant's lookback (days_since_last_filing above the same threshold); expA/expB expected count under each base; z against the base (Poisson-binomial).
+
+-- R1: rise: ret_5d>8%, no filing in 10; episodes 8001
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7989    1.4     5.6   0.26  -18.9     1.6   0.90   -2.1
+   material_info               7989    1.9     1.6   1.17    2.3     2.3   0.81   -4.5
+   dividend_or_bonus           7989    1.0     0.9   1.07    0.7     1.2   0.78   -4.2
+   insider_trade               7989    2.7     1.8   1.46    6.9     2.8   0.95   -1.2
+   board_meeting_notice        7989    9.2     6.1   1.49   13.1     9.7   0.94   -2.7
+   total                       7989   21.6    19.4   1.11    6.4    23.9   0.90   -7.4
+   any of 5                    7989   15.0    14.6   1.03    1.3    16.4   0.91   -5.2
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7985    8.9    11.2   0.79   -9.2     9.4   0.94   -2.6
+   material_info               7985    3.9     3.3   1.20    4.5     4.4   0.90   -4.4
+   dividend_or_bonus           7985    2.1     1.7   1.19    3.1     2.2   0.93   -2.3
+   insider_trade               7985    4.6     3.6   1.30    7.3     4.8   0.96   -1.8
+   board_meeting_notice        7985   17.7    12.5   1.41   18.7    18.4   0.96   -3.1
+   total                       7985   36.8    32.7   1.13   12.1    38.8   0.95   -7.0
+   any of 5                    7985   27.4    24.8   1.10    8.5    28.6   0.96   -4.9
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7957   25.5    24.6   1.03    3.3    26.7   0.95   -5.7
+   material_info               7957    7.7     6.8   1.13    6.0     7.8   0.98   -1.5
+   dividend_or_bonus           7957    3.5     3.4   1.05    1.7     3.7   0.96   -2.2
+   insider_trade               7957    8.0     7.0   1.14    6.9     8.2   0.98   -1.9
+   board_meeting_notice        7957   34.8    29.1   1.19   16.6    36.9   0.94   -8.6
+   total                       7957   59.0    55.4   1.07   11.2    61.2   0.96   -8.3
+   any of 5                    7957   47.4    44.5   1.07    9.1    49.5   0.96   -8.2
+
+-- R2: rise: ret_5d>8%, no filing in 5; episodes 10413
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result           10379    3.0     7.0   0.43  -18.9     2.9   1.06    1.4
+   material_info              10379    2.2     2.1   1.08    1.4     2.5   0.88   -2.8
+   dividend_or_bonus          10379    1.4     1.5   0.97   -0.4     1.7   0.86   -2.7
+   insider_trade              10379    3.4     2.7   1.26    5.6     3.3   1.03    0.9
+   board_meeting_notice       10379   10.6     6.9   1.54   17.4    11.3   0.94   -3.3
+   total                      10379   26.4    24.9   1.06    4.6    28.1   0.94   -5.7
+   any of 5                   10379   18.8    18.2   1.03    2.0    19.8   0.95   -3.7
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result           10372   11.7    13.4   0.87   -7.3    12.3   0.95   -2.9
+   material_info              10372    4.5     4.1   1.10    2.9     4.7   0.95   -2.2
+   dividend_or_bonus          10372    2.8     2.8   1.01    0.2     3.0   0.95   -1.7
+   insider_trade              10372    5.6     4.8   1.17    5.7     5.6   1.00   -0.1
+   board_meeting_notice       10372   19.2    13.8   1.39   21.4    19.8   0.97   -2.8
+   total                      10372   42.1    39.6   1.06    8.0    43.2   0.97   -4.2
+   any of 5                   10372   31.7    29.8   1.06    6.7    32.4   0.98   -2.7
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result           10333   27.6    27.1   1.02    2.2    28.7   0.96   -5.8
+   material_info              10333    8.6     7.9   1.09    5.0     8.6   1.00    0.3
+   dividend_or_bonus          10333    5.3     5.1   1.04    1.6     5.5   0.98   -1.5
+   insider_trade              10333    9.4     8.6   1.09    5.5     9.3   1.00    0.4
+   board_meeting_notice       10333   34.4    30.0   1.15   14.7    36.6   0.94   -8.9
+   total                      10333   62.0    60.5   1.03    5.5    63.6   0.97   -6.6
+   any of 5                   10333   50.0    48.7   1.03    4.7    51.7   0.97   -6.9
+
+-- R3: rise: ret_10d>12%, no filing in 20; episodes 3786
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3782    0.9     6.0   0.14  -15.6     0.9   0.98   -0.2
+   material_info               3782    1.5     1.3   1.19    1.6     1.9   0.83   -2.7
+   dividend_or_bonus           3782    0.4     0.3   1.36    1.3     0.4   0.96   -0.3
+   insider_trade               3782    2.1     1.3   1.56    4.8     2.3   0.90   -1.8
+   board_meeting_notice        3782   10.4     6.8   1.52    9.9    11.1   0.94   -2.1
+   total                       3782   19.6    18.6   1.05    2.0    22.2   0.88   -5.9
+   any of 5                    3782   14.5    14.7   0.99   -0.3    15.7   0.93   -2.9
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3781    8.8    12.5   0.71   -9.5     9.7   0.90   -2.8
+   material_info               3781    3.1     2.7   1.13    1.9     3.6   0.86   -3.6
+   dividend_or_bonus           3781    0.8     0.6   1.30    2.0     0.7   1.12    1.4
+   insider_trade               3781    3.6     2.8   1.29    4.2     4.0   0.89   -3.1
+   board_meeting_notice        3781   19.9    14.0   1.42   13.8    21.2   0.94   -4.0
+   total                       3781   35.0    31.7   1.11    6.9    38.0   0.92   -7.1
+   any of 5                    3781   26.5    25.1   1.06    3.2    28.6   0.93   -5.6
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3770   28.8    27.3   1.05    4.0    30.2   0.96   -4.5
+   material_info               3770    6.7     5.8   1.16    4.8     6.9   0.97   -1.6
+   dividend_or_bonus           3770    1.5     1.5   0.99   -0.2     1.6   0.94   -1.4
+   insider_trade               3770    6.9     6.0   1.16    4.6     7.2   0.96   -2.0
+   board_meeting_notice        3770   37.1    31.0   1.20   12.2    39.0   0.95   -5.4
+   total                       3770   58.2    54.1   1.08    8.9    60.4   0.96   -6.0
+   any of 5                    3770   47.2    44.3   1.07    6.4    49.2   0.96   -5.5
+
+-- F1: fall: ret_5d<-8%, no filing in 10; episodes 7076
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7071    1.3     5.5   0.24  -18.4     1.5   0.85   -2.6
+   material_info               7071    1.6     1.2   1.28    3.0     1.7   0.93   -1.3
+   dividend_or_bonus           7071    1.0     0.8   1.16    1.5     1.2   0.82   -2.9
+   insider_trade               7071    2.1     1.7   1.27    3.7     2.4   0.88   -2.9
+   board_meeting_notice        7071    8.6     5.9   1.47   11.6     9.4   0.91   -3.5
+   total                       7071   20.2    18.4   1.10    5.2    21.9   0.92   -5.2
+   any of 5                    7071   13.6    13.9   0.98   -0.8    15.0   0.90   -5.2
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7062    8.8    11.2   0.79   -8.8     9.5   0.93   -3.1
+   material_info               7062    3.2     2.6   1.24    4.5     3.2   0.98   -0.6
+   dividend_or_bonus           7062    1.9     1.6   1.17    2.6     2.1   0.90   -3.2
+   insider_trade               7062    3.9     3.1   1.24    5.3     4.1   0.94   -2.3
+   board_meeting_notice        7062   17.4    12.0   1.45   18.9    17.9   0.97   -2.5
+   total                       7062   35.2    30.9   1.14   12.0    36.4   0.97   -4.3
+   any of 5                    7062   26.2    23.7   1.11    8.0    27.1   0.97   -3.5
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7041   25.9    24.2   1.07    6.4    26.6   0.97   -3.1
+   material_info               7041    5.9     5.4   1.08    3.0     6.2   0.95   -3.2
+   dividend_or_bonus           7041    3.6     3.2   1.13    3.9     3.6   1.00   -0.0
+   insider_trade               7041    6.9     6.1   1.13    5.6     7.1   0.97   -2.3
+   board_meeting_notice        7041   35.0    28.1   1.25   19.5    36.2   0.97   -4.4
+   total                       7041   56.8    52.6   1.08   12.6    58.4   0.97   -5.7
+   any of 5                    7041   46.6    42.5   1.09   12.1    47.8   0.97   -4.6
+
+-- F2: fall: ret_5d<-8%, no filing in 5; episodes 9372
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            9357    3.2     7.0   0.45  -17.6     3.0   1.05    1.3
+   material_info               9357    2.0     1.9   1.08    1.2     2.2   0.91   -1.9
+   dividend_or_bonus           9357    1.7     1.5   1.15    2.1     1.8   0.94   -1.3
+   insider_trade               9357    2.5     2.2   1.11    2.0     2.8   0.90   -2.5
+   board_meeting_notice        9357   10.1     6.6   1.53   15.8    11.1   0.91   -4.8
+   total                       9357   25.5    24.0   1.06    4.2    27.2   0.94   -5.7
+   any of 5                    9357   17.9    17.6   1.02    1.0    19.2   0.93   -5.0
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            9338   12.0    13.4   0.89   -5.8    12.5   0.96   -2.3
+   material_info               9338    4.1     3.6   1.13    3.4     4.3   0.95   -1.7
+   dividend_or_bonus           9338    3.0     2.8   1.04    1.0     3.2   0.94   -2.1
+   insider_trade               9338    4.4     4.0   1.10    3.0     4.6   0.96   -1.7
+   board_meeting_notice        9338   18.2    13.1   1.39   19.5    19.1   0.95   -4.5
+   total                       9338   40.7    38.3   1.06    7.4    41.7   0.97   -3.9
+   any of 5                    9338   30.3    28.8   1.05    5.2    31.3   0.97   -4.0
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            9311   27.6    26.6   1.04    4.5    28.3   0.98   -3.5
+   material_info               9311    7.0     7.0   1.00    0.1     7.6   0.93   -5.1
+   dividend_or_bonus           9311    5.8     5.3   1.10    4.4     5.7   1.02    0.9
+   insider_trade               9311    7.6     7.1   1.07    3.6     7.8   0.98   -1.6
+   board_meeting_notice        9311   33.5    28.8   1.16   14.9    35.4   0.95   -7.7
+   total                       9311   59.7    58.5   1.02    4.4    61.5   0.97   -7.1
+   any of 5                    9311   48.9    47.3   1.03    5.5    50.4   0.97   -6.2
+
+-- F3: fall: ret_10d<-12%, no filing in 20; episodes 3068
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3066    0.9     6.9   0.13  -15.6     1.0   0.88   -1.0
+   material_info               3066    1.2     0.9   1.32    2.1     1.2   1.03    0.3
+   dividend_or_bonus           3066    0.5     0.3   1.32    1.2     0.6   0.82   -1.6
+   insider_trade               3066    1.4     1.1   1.30    2.2     1.5   0.91   -1.0
+   board_meeting_notice        3066   11.0     7.5   1.46    8.6    12.0   0.92   -2.4
+   total                       3066   19.0    18.7   1.02    0.7    20.4   0.94   -2.6
+   any of 5                    3066   14.1    15.6   0.90   -3.1    15.4   0.92   -2.9
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3058   10.0    14.3   0.70   -9.5    11.4   0.88   -3.5
+   material_info               3058    2.5     2.1   1.18    2.1     2.7   0.94   -1.1
+   dividend_or_bonus           3058    1.0     0.8   1.31    2.1     1.0   0.99   -0.1
+   insider_trade               3058    2.6     2.1   1.27    3.3     2.7   0.99   -0.2
+   board_meeting_notice        3058   22.0    15.2   1.45   14.2    22.7   0.97   -2.1
+   total                       3058   35.2    31.5   1.12    7.3    36.1   0.97   -2.1
+   any of 5                    3058   27.7    26.2   1.06    3.2    28.8   0.96   -2.7
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3052   31.7    29.3   1.08    6.2    32.2   0.98   -1.7
+   material_info               3052    5.2     4.5   1.15    3.5     5.3   0.98   -0.9
+   dividend_or_bonus           3052    1.9     1.7   1.10    1.6     1.9   0.96   -1.1
+   insider_trade               3052    4.8     4.2   1.14    3.2     4.9   0.96   -1.5
+   board_meeting_notice        3052   40.3    30.9   1.30   17.4    40.3   1.00    0.1
+   total                       3052   57.2    51.6   1.11   11.5    57.5   0.99   -0.9
+   any of 5                    3052   48.3    43.5   1.11   10.1    48.6   0.99   -0.7
+
+-- R1f: rise: ret_5d>8%, no filing in 10; episodes 5935
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            5923    1.2     5.3   0.23  -16.5     1.3   0.91   -1.3
+   material_info               5923    1.9     1.4   1.34    3.7     2.0   0.95   -1.0
+   dividend_or_bonus           5923    0.7     0.7   0.93   -0.6     0.9   0.74   -3.3
+   insider_trade               5923    2.3     1.6   1.45    5.5     2.3   1.01    0.2
+   board_meeting_notice        5923    9.6     5.9   1.63   14.2     9.3   1.04    1.4
+   total                       5923   21.3    18.4   1.16    7.5    22.0   0.97   -1.8
+   any of 5                    5923   14.7    13.7   1.07    2.8    14.8   0.99   -0.3
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            5920    9.2    10.8   0.85   -5.4     9.0   1.03    1.1
+   material_info               5920    3.8     2.9   1.31    5.8     3.9   0.98   -0.7
+   dividend_or_bonus           5920    1.7     1.5   1.17    2.3     1.9   0.94   -1.7
+   insider_trade               5920    4.1     3.1   1.32    6.3     4.2   0.98   -0.8
+   board_meeting_notice        5920   18.0    12.2   1.48   18.5    17.7   1.01    1.0
+   total                       5920   36.4    31.2   1.17   13.1    36.8   0.99   -1.4
+   any of 5                    5920   26.6    23.4   1.13    9.1    26.7   0.99   -0.5
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            5896   25.8    24.2   1.07    5.5    26.3   0.98   -2.1
+   material_info               5896    7.1     6.1   1.17    6.5     7.0   1.02    1.0
+   dividend_or_bonus           5896    3.1     2.9   1.06    1.6     3.2   0.96   -1.8
+   insider_trade               5896    7.2     6.3   1.15    5.9     7.3   0.99   -0.9
+   board_meeting_notice        5896   34.4    28.7   1.20   14.7    36.1   0.95   -5.7
+   total                       5896   57.6    53.9   1.07    9.8    59.5   0.97   -6.3
+   any of 5                    5896   45.6    42.6   1.07    8.2    47.4   0.96   -5.9
+
+-- R2f: rise: ret_5d>8%, no filing in 5; episodes 7571
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7537    2.5     6.5   0.38  -16.8     2.3   1.07    1.2
+   material_info               7537    2.1     1.8   1.14    2.0     2.2   0.95   -0.9
+   dividend_or_bonus           7537    1.0     1.3   0.80   -2.4     1.3   0.77   -3.3
+   insider_trade               7537    3.0     2.3   1.27    4.5     2.9   1.04    1.0
+   board_meeting_notice        7537   11.0     6.7   1.64   17.5    10.9   1.01    0.5
+   total                       7537   25.6    23.3   1.09    5.8    26.0   0.98   -1.3
+   any of 5                    7537   18.0    17.0   1.06    3.0    18.1   1.00   -0.3
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7531   11.6    12.7   0.91   -4.1    11.4   1.01    0.7
+   material_info               7531    4.3     3.7   1.16    3.8     4.3   0.99   -0.2
+   dividend_or_bonus           7531    2.3     2.4   0.97   -0.6     2.5   0.92   -2.0
+   insider_trade               7531    5.0     4.3   1.17    4.7     5.0   1.00    0.1
+   board_meeting_notice        7531   19.3    13.4   1.44   20.3    19.2   1.01    0.5
+   total                       7531   41.1    37.7   1.09    9.5    41.1   1.00    0.1
+   any of 5                    7531   30.5    28.2   1.08    7.1    30.4   1.00    0.1
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            7497   27.4    26.2   1.05    4.5    27.8   0.99   -1.7
+   material_info               7497    8.0     7.2   1.12    5.4     7.8   1.03    1.8
+   dividend_or_bonus           7497    4.6     4.5   1.03    1.0     4.8   0.96   -1.9
+   insider_trade               7497    8.5     7.8   1.08    4.3     8.5   1.00    0.3
+   board_meeting_notice        7497   34.3    29.7   1.16   13.2    36.0   0.96   -5.7
+   total                       7497   60.5    58.7   1.03    5.5    61.9   0.98   -4.6
+   any of 5                    7497   48.4    46.9   1.03    4.6    49.8   0.97   -5.0
+
+-- R3f: rise: ret_10d>12%, no filing in 20; episodes 3163
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3159    0.7     5.6   0.12  -14.1     0.7   0.92   -0.6
+   material_info               3159    1.6     1.2   1.38    2.8     1.7   0.97   -0.3
+   dividend_or_bonus           3159    0.3     0.3   1.17    0.6     0.4   0.86   -0.9
+   insider_trade               3159    2.1     1.3   1.60    4.7     2.2   0.98   -0.3
+   board_meeting_notice        3159   11.0     6.5   1.70   12.0    10.5   1.05    1.4
+   total                       3159   20.4    17.6   1.16    5.5    20.8   0.98   -0.8
+   any of 5                    3159   14.9    13.8   1.08    2.3    14.5   1.02    0.8
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3158    9.4    11.7   0.80   -5.6     9.0   1.04    1.0
+   material_info               3158    3.3     2.6   1.27    3.5     3.4   0.99   -0.3
+   dividend_or_bonus           3158    0.8     0.6   1.24    1.4     0.7   1.10    1.0
+   insider_trade               3158    3.7     2.8   1.34    4.6     3.9   0.95   -1.2
+   board_meeting_notice        3158   19.7    13.3   1.48   14.2    20.0   0.98   -0.9
+   total                       3158   35.4    30.3   1.17    9.8    36.2   0.98   -1.7
+   any of 5                    3158   26.3    23.8   1.11    5.4    26.9   0.98   -1.3
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            3147   28.1    26.0   1.08    5.1    28.8   0.98   -2.2
+   material_info               3147    6.6     5.6   1.17    4.6     6.6   1.00   -0.0
+   dividend_or_bonus           3147    1.5     1.5   0.98   -0.3     1.5   0.94   -1.2
+   insider_trade               3147    6.8     5.7   1.20    5.3     6.9   1.00   -0.2
+   board_meeting_notice        3147   36.3    30.1   1.21   11.5    37.6   0.97   -3.3
+   total                       3147   57.7    52.8   1.09    9.6    59.0   0.98   -3.1
+   any of 5                    3147   46.2    42.8   1.08    6.8    47.5   0.97   -3.2
+
+-- F1f: fall: ret_5d<-8%, no filing in 10; episodes 5166
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            5161    1.1     5.8   0.18  -17.4     1.4   0.77   -3.1
+   material_info               5161    1.1     1.0   1.14    1.2     1.3   0.88   -1.8
+   dividend_or_bonus           5161    0.7     0.6   1.08    0.6     0.9   0.82   -2.2
+   insider_trade               5161    1.6     1.5   1.09    1.0     1.9   0.82   -3.0
+   board_meeting_notice        5161    8.9     6.2   1.44    9.5     9.9   0.90   -3.4
+   total                       5161   18.8    18.2   1.03    1.4    20.7   0.91   -5.2
+   any of 5                    5161   12.6    14.0   0.90   -3.8    14.2   0.88   -5.2
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            5153    9.0    11.8   0.76   -8.9     9.9   0.91   -3.3
+   material_info               5153    2.3     2.0   1.12    1.7     2.5   0.90   -2.3
+   dividend_or_bonus           5153    1.5     1.3   1.15    1.7     1.6   0.90   -2.2
+   insider_trade               5153    3.2     2.8   1.18    3.2     3.5   0.94   -1.9
+   board_meeting_notice        5153   18.0    12.6   1.43   16.1    18.7   0.96   -2.6
+   total                       5153   33.5    30.3   1.10    7.8    35.0   0.96   -4.5
+   any of 5                    5153   25.0    23.4   1.07    4.5    26.0   0.96   -3.4
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            5134   26.8    25.1   1.07    5.5    27.5   0.97   -2.7
+   material_info               5134    4.7     4.2   1.10    3.0     4.8   0.97   -1.5
+   dividend_or_bonus           5134    2.7     2.5   1.09    2.0     2.7   0.98   -0.8
+   insider_trade               5134    6.0     5.3   1.14    4.5     6.1   0.99   -0.8
+   board_meeting_notice        5134   36.1    28.9   1.25   17.5    36.8   0.98   -2.3
+   total                       5134   56.2    51.5   1.09   12.0    57.0   0.99   -2.6
+   any of 5                    5134   45.7    41.6   1.10   10.7    46.4   0.99   -2.1
+
+-- F2f: fall: ret_5d<-8%, no filing in 5; episodes 6756
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            6741    2.6     7.2   0.36  -17.7     2.8   0.93   -1.5
+   material_info               6741    1.5     1.5   1.01    0.1     1.8   0.86   -2.3
+   dividend_or_bonus           6741    1.5     1.3   1.14    1.5     1.6   0.92   -1.4
+   insider_trade               6741    2.2     2.1   1.08    1.2     2.5   0.88   -2.5
+   board_meeting_notice        6741   10.9     6.9   1.57   15.0    11.7   0.93   -3.3
+   total                       6741   24.3    23.3   1.04    2.3    26.0   0.93   -5.0
+   any of 5                    6741   17.2    17.4   0.99   -0.7    18.7   0.92   -4.9
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            6725   12.3    13.8   0.89   -5.3    12.8   0.95   -2.3
+   material_info               6725    3.1     2.9   1.06    1.3     3.5   0.90   -3.0
+   dividend_or_bonus           6725    2.5     2.4   1.02    0.4     2.7   0.92   -1.9
+   insider_trade               6725    4.0     3.7   1.11    2.5     4.2   0.96   -1.3
+   board_meeting_notice        6725   19.3    13.6   1.41   18.1    19.9   0.97   -2.7
+   total                       6725   39.0    37.1   1.05    5.3    40.2   0.97   -3.7
+   any of 5                    6725   29.4    28.2   1.04    3.4    30.4   0.97   -3.5
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            6699   28.1    27.2   1.03    3.2    28.9   0.97   -3.7
+   material_info               6699    5.7     5.7   1.00   -0.0     6.2   0.92   -3.9
+   dividend_or_bonus           6699    5.1     4.6   1.11    3.6     5.1   1.00    0.0
+   insider_trade               6699    7.0     6.5   1.07    3.1     7.2   0.98   -1.2
+   board_meeting_notice        6699   35.0    29.5   1.19   14.9    36.3   0.97   -4.3
+   total                       6699   58.8    56.9   1.03    5.6    60.0   0.98   -3.9
+   any of 5                    6699   48.0    46.2   1.04    5.4    49.2   0.98   -3.9
+
+-- F3f: fall: ret_10d<-12%, no filing in 20; episodes 2506
+ window 5 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            2504    0.8     7.0   0.11  -14.5     0.9   0.83   -1.2
+   material_info               2504    0.9     0.8   1.12    0.6     0.9   1.00   -0.0
+   dividend_or_bonus           2504    0.4     0.3   1.26    0.8     0.4   0.94   -0.3
+   insider_trade               2504    1.0     0.9   1.19    1.2     1.2   0.87   -1.2
+   board_meeting_notice        2504   11.1     7.6   1.46    7.6    12.2   0.90   -2.6
+   total                       2504   18.3    18.5   0.99   -0.4    19.7   0.93   -2.6
+   any of 5                    2504   13.4    15.5   0.86   -3.9    14.8   0.91   -2.8
+ window 10 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            2496   10.5    14.5   0.72   -8.1    11.7   0.90   -2.7
+   material_info               2496    2.0     1.8   1.11    1.0     2.1   0.95   -0.7
+   dividend_or_bonus           2496    0.8     0.6   1.32    1.7     0.9   0.98   -0.2
+   insider_trade               2496    2.1     1.8   1.16    1.6     2.2   0.94   -1.1
+   board_meeting_notice        2496   21.7    15.3   1.42   11.9    23.1   0.94   -3.6
+   total                       2496   33.9    31.1   1.09    5.0    35.5   0.96   -3.2
+   any of 5                    2496   26.6    26.0   1.03    1.3    28.2   0.94   -3.5
+ window 20 sessions                 n   obs%  baseA%  liftA     zA  baseB%  liftB     zB
+   financial_result            2490   31.6    29.5   1.07    5.1    32.4   0.98   -2.2
+   material_info               2490    4.5     4.1   1.12    2.4     4.7   0.97   -1.1
+   dividend_or_bonus           2490    1.6     1.4   1.10    1.3     1.6   0.99   -0.2
+   insider_trade               2490    4.1     3.7   1.10    1.9     4.4   0.93   -2.3
+   board_meeting_notice        2490   40.4    30.9   1.31   16.1    40.2   1.01    0.7
+   total                       2490   56.4    50.6   1.11   10.7    56.5   1.00   -0.1
+   any of 5                    2490   48.0    42.9   1.12    9.7    47.8   1.00    0.4
+
+=== 3. RETURN PATHS FROM NEXT OPEN, NET, WITH PLACEBO (random same-date same-tier rows, same exit) ===
+p(med) = share of 500 placebo draws whose median is at or above the signal median (small = signal better than random). Mean/median/worst in %.
+
+-- R1: rise: ret_5d>8%, no filing in 10; episodes 8001; net of costs, entry next open
+ exit T5: episodes with outcome 7675 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7675   -0.0   -1.1    40  12.5   0.4    -48 |      -1.0       0.0   1.000   0.648
+ in-sample to 2026-08      7637   -0.0   -1.1    40  12.5   0.4    -48 |      -1.0       0.0   1.000   0.598
+ out-of-sample 2026-09+      38   -3.6   -4.5    29   5.3   0.0    -18 |      -2.0      -1.5   0.996   0.974
+ regime bill>policy        5441   -0.1   -1.0    40  12.5   0.4    -48 |      -1.0      -0.1   0.970   0.596
+ regime bill<=policy       2234    0.2   -1.5    39  12.4   0.4    -40 |      -1.0       0.3   1.000   0.574
+ tier A >Rs20m             1125   -0.5   -1.6    39   7.9   0.1    -26 |      -1.0      -0.4   1.000   0.844
+ tier B Rs5-20m             759   -0.9   -2.3    36   9.4   0.3    -40 |      -1.3      -0.3   1.000   0.996
+ tier C <Rs5m              5791    0.2   -1.0    41  13.8   0.5    -48 |      -1.0       0.1   0.998   0.288
+ excl. entry-day lock      6358   -1.4   -1.9    35   8.5   0.2    -48 |      -1.0      -0.1   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.2%
+ exit T10: episodes with outcome 7781 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7781    0.6   -1.5    42  16.8   1.4    -76 |      -1.0       0.8   1.000   0.938
+ in-sample to 2026-08      7744    0.6   -1.5    42  16.9   1.4    -76 |      -1.0       0.8   1.000   0.922
+ out-of-sample 2026-09+      37   -5.1   -6.5    24   8.1   0.0    -21 |      -3.4      -2.4   0.990   0.954
+ regime bill>policy        5528    0.4   -1.4    41  16.8   1.2    -76 |      -1.0       0.6   1.000   0.912
+ regime bill<=policy       2253    1.2   -1.7    43  16.9   1.8    -49 |      -0.9       1.4   1.000   0.750
+ tier A >Rs20m             1125   -0.1   -1.6    42  14.0   0.4    -49 |      -0.9       0.0   1.000   0.740
+ tier B Rs5-20m             759   -0.4   -1.8    42  15.3   0.3    -48 |      -1.2       0.3   0.996   0.996
+ tier C <Rs5m              5897    0.9   -1.5    42  17.6   1.7    -76 |      -1.0       1.0   1.000   0.824
+ excl. entry-day lock      6443   -0.8   -2.1    39  13.7   0.7    -76 |      -1.0       0.7   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.2%
+ exit T20: episodes with outcome 7820 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7820    2.0   -1.8    43  22.1   3.0   -100 |      -1.0       1.9   1.000   0.250
+ in-sample to 2026-08      7798    2.0   -1.8    43  22.1   2.9   -100 |      -1.0       1.9   1.000   0.264
+ out-of-sample 2026-09+      22    4.0   -6.0    36  31.8  13.6    -42 |      -3.7      -1.5   0.896   0.036
+ regime bill>policy        5558    1.2   -2.0    43  21.4   2.7    -74 |      -1.1       1.2   1.000   0.502
+ regime bill<=policy       2262    4.1   -1.3    45  23.7   3.7   -100 |      -0.4       3.5   1.000   0.178
+ tier A >Rs20m             1125    0.7   -1.9    44  21.1   1.5    -50 |      -0.8       0.8   1.000   0.588
+ tier B Rs5-20m             756   -0.2   -3.0    42  22.4   0.9    -60 |      -1.3       0.8   1.000   0.990
+ tier C <Rs5m              5939    2.6   -1.6    43  22.2   3.5   -100 |      -1.0       2.2   1.000   0.114
+ excl. entry-day lock      6485    0.7   -2.4    41  20.0   2.2    -74 |      -1.0       1.8   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.1%
+ exit T60: episodes with outcome 7698 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7698    5.3   -3.0    45  29.7   7.5    -97 |      -1.8       5.0   1.000   0.220
+ in-sample to 2026-08      7698    5.3   -3.0    45  29.7   7.5    -97 |      -1.8       5.0   1.000   0.220
+ out-of-sample 2026-09+       0
+ regime bill>policy        5438    3.3   -4.5    42  28.2   7.0    -88 |      -2.9       3.1   1.000   0.310
+ regime bill<=policy       2260   10.1    0.1    50  33.3   8.9    -97 |       0.8       9.6   0.946   0.284
+ tier A >Rs20m             1105    1.7   -3.6    45  29.2   5.4    -83 |      -2.0       1.7   1.000   0.472
+ tier B Rs5-20m             744    1.2   -5.7    44  29.4   6.3    -74 |      -3.1       1.8   1.000   0.746
+ tier C <Rs5m              5849    6.5   -2.8    45  29.8   8.1    -97 |      -1.6       6.0   1.000   0.182
+ excl. entry-day lock      6388    4.4   -3.4    44  28.9   6.9    -97 |      -1.7       5.0   1.000   0.914
+   share of episodes whose entry session closed at the upper lock: 17.0%
+ exit trail20: episodes with outcome 7795 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7795    4.5   -8.7    37  25.9   7.8   -101 |      -6.7       4.8   1.000   0.710
+ in-sample to 2026-08      7780    4.5   -8.6    37  25.9   7.8   -101 |      -6.6       4.8   1.000   0.704
+ out-of-sample 2026-09+      15  -14.3  -15.0    13   6.7   0.0    -28 |     -15.2     -11.3   0.454   0.764
+ regime bill>policy        5528    1.1  -10.3    34  23.1   6.5    -50 |      -8.6       1.8   1.000   0.908
+ regime bill<=policy       2267   12.8   -4.3    44  32.7  10.8   -101 |      -1.0      12.2   1.000   0.294
+ tier A >Rs20m             1106    3.4   -8.6    37  27.7   6.8    -33 |      -7.5       2.8   0.942   0.222
+ tier B Rs5-20m             749    2.2  -10.3    37  24.8   7.6    -37 |      -8.5       2.4   0.982   0.530
+ tier C <Rs5m              5940    5.0   -8.5    36  25.7   8.0   -101 |      -6.3       5.4   1.000   0.764
+ excl. entry-day lock      6452    3.5   -9.2    36  25.3   7.3    -92 |      -6.6       4.8   1.000   0.998
+   share of episodes whose entry session closed at the upper lock: 17.2%
+
+-- R1f: rise: ret_5d>8%, no filing in 10; episodes 5935; net of costs, entry next open
+ exit T5: episodes with outcome 5655 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       5655   -0.3   -1.3    39  13.0   0.4    -48 |      -1.0      -0.1   1.000   0.970
+ in-sample to 2026-08      5620   -0.3   -1.3    39  13.0   0.4    -48 |      -1.0      -0.1   1.000   0.962
+ out-of-sample 2026-09+      35   -3.5   -4.6    29   5.7   0.0    -18 |      -1.9      -1.4   1.000   0.944
+ regime bill>policy        4094   -0.4   -1.2    39  13.0   0.4    -48 |      -1.0      -0.2   1.000   0.948
+ regime bill<=policy       1561   -0.2   -2.0    38  12.9   0.4    -40 |      -1.0       0.0   1.000   0.862
+ tier A >Rs20m              541   -1.2   -2.1    35   7.8   0.4    -36 |      -1.1      -0.6   1.000   0.996
+ tier B Rs5-20m             434   -0.9   -2.6    36   9.7   0.2    -40 |      -1.5      -0.7   1.000   0.764
+ tier C <Rs5m              4680   -0.2   -1.2    39  13.9   0.5    -48 |      -1.0      -0.0   1.000   0.922
+ excl. entry-day lock      4642   -1.8   -2.3    34   8.7   0.1    -48 |      -1.0      -0.2   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+ exit T10: episodes with outcome 5739 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       5739    0.1   -2.2    39  16.5   1.4    -76 |      -1.0       0.5   1.000   0.990
+ in-sample to 2026-08      5705    0.1   -2.2    39  16.5   1.5    -76 |      -1.0       0.5   1.000   0.984
+ out-of-sample 2026-09+      34   -4.1   -4.9    26   8.8   0.0    -19 |      -3.0      -2.0   0.954   0.880
+ regime bill>policy        4162   -0.2   -2.1    39  16.3   1.2    -76 |      -1.1       0.2   1.000   0.986
+ regime bill<=policy       1577    0.8   -2.4    41  17.1   2.1    -49 |      -1.0       1.2   1.000   0.842
+ tier A >Rs20m              541   -1.4   -2.6    36  12.0   0.7    -49 |      -1.3      -0.7   1.000   0.992
+ tier B Rs5-20m             434   -0.5   -2.3    39  16.4   0.2    -48 |      -1.5      -0.2   0.996   0.740
+ tier C <Rs5m              4764    0.3   -2.1    40  17.0   1.6    -76 |      -1.0       0.7   1.000   0.958
+ excl. entry-day lock      4710   -1.4   -2.8    36  13.4   0.7    -76 |      -1.0       0.4   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+ exit T20: episodes with outcome 5779 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       5779    1.5   -2.5    41  20.9   3.4   -100 |      -1.2       1.4   1.000   0.376
+ in-sample to 2026-08      5758    1.5   -2.5    41  20.9   3.3   -100 |      -1.2       1.4   1.000   0.424
+ out-of-sample 2026-09+      21    4.7   -4.9    38  33.3  14.3    -42 |      -3.8      -1.7   0.730   0.030
+ regime bill>policy        4195    0.6   -2.6    41  20.2   2.9    -74 |      -1.5       0.8   1.000   0.676
+ regime bill<=policy       1584    3.8   -2.2    42  22.9   4.5   -100 |      -0.8       3.2   1.000   0.174
+ tier A >Rs20m              541   -0.5   -3.7    38  18.3   2.2    -50 |      -1.7      -0.4   1.000   0.570
+ tier B Rs5-20m             432   -0.2   -3.3    43  22.7   0.9    -60 |      -1.8       0.3   0.998   0.808
+ tier C <Rs5m              4806    1.9   -2.3    41  21.1   3.7   -100 |      -1.1       1.7   1.000   0.296
+ excl. entry-day lock      4752    0.2   -3.0    39  19.0   2.6   -100 |      -1.2       1.4   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.8%
+ exit T60: episodes with outcome 5659 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       5659    4.9   -4.0    43  28.4   7.6    -97 |      -2.3       4.6   1.000   0.316
+ in-sample to 2026-08      5659    4.9   -4.0    43  28.4   7.6    -97 |      -2.3       4.6   1.000   0.316
+ out-of-sample 2026-09+       0
+ regime bill>policy        4079    2.2   -5.7    39  26.5   6.5    -88 |      -3.6       2.3   1.000   0.522
+ regime bill<=policy       1580   11.7    0.2    50  33.3  10.3    -97 |       1.1      10.6   0.950   0.224
+ tier A >Rs20m              525   -2.1   -7.7    38  24.0   4.2    -83 |      -4.0      -0.6   1.000   0.964
+ tier B Rs5-20m             420    1.1   -4.0    43  28.3   6.7    -74 |      -3.8       1.1   0.588   0.488
+ tier C <Rs5m              4714    6.0   -3.7    43  28.9   8.0    -97 |      -1.9       5.5   1.000   0.230
+ excl. entry-day lock      4660    4.2   -4.0    42  27.8   7.0    -97 |      -2.1       4.8   1.000   0.852
+   share of episodes whose entry session closed at the upper lock: 17.7%
+ exit trail20: episodes with outcome 5761 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       5761    3.4   -9.8    34  24.3   7.3   -101 |      -7.4       4.1   1.000   0.882
+ in-sample to 2026-08      5748    3.5   -9.7    34  24.3   7.4   -101 |      -7.4       4.2   1.000   0.882
+ out-of-sample 2026-09+      13  -13.6  -15.0    15   7.7   0.0    -28 |     -14.9     -10.5   0.530   0.756
+ regime bill>policy        4174    0.1  -11.0    32  21.7   6.3    -50 |      -9.3       0.9   1.000   0.926
+ regime bill<=policy       1587   12.2   -5.6    41  31.1  10.1   -101 |      -1.1      12.6   1.000   0.574
+ tier A >Rs20m              530   -0.6  -11.7    32  23.6   5.1    -31 |     -10.4       0.1   0.936   0.716
+ tier B Rs5-20m             429    1.3   -9.9    37  24.2   7.0    -34 |      -9.5       1.2   0.618   0.446
+ tier C <Rs5m              4802    4.1   -9.5    34  24.4   7.6   -101 |      -6.9       4.8   1.000   0.858
+ excl. entry-day lock      4728    2.4  -10.3    34  23.7   6.8   -101 |      -7.3       4.3   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+
+-- R2: rise: ret_5d>8%, no filing in 5; episodes 10413; net of costs, entry next open
+ exit T5: episodes with outcome 9996 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       9996    0.0   -1.2    40  12.7   0.5    -48 |      -1.0       0.0   1.000   0.468
+ in-sample to 2026-08      9952    0.0   -1.2    40  12.7   0.5    -48 |      -1.0       0.0   1.000   0.456
+ out-of-sample 2026-09+      44   -2.4   -3.6    34   9.1   0.0    -33 |      -2.0      -1.6   0.978   0.740
+ regime bill>policy        7068   -0.1   -1.1    40  12.6   0.4    -48 |      -1.0      -0.1   1.000   0.428
+ regime bill<=policy       2928    0.3   -1.4    40  12.8   0.8    -45 |      -1.0       0.3   1.000   0.562
+ tier A >Rs20m             1650   -0.6   -1.7    38   7.8   0.2    -28 |      -1.0      -0.3   1.000   0.980
+ tier B Rs5-20m            1038   -0.6   -1.9    38  11.2   0.2    -40 |      -1.3      -0.4   0.998   0.830
+ tier C <Rs5m              7308    0.3   -1.0    41  14.0   0.6    -48 |      -1.0       0.1   1.000   0.156
+ excl. entry-day lock      8273   -1.4   -1.9    36   8.5   0.2    -48 |      -1.0      -0.0   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.2%
+ exit T10: episodes with outcome 10129 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                      10129    0.6   -1.4    42  17.0   1.4    -54 |      -1.0       0.8   1.000   0.914
+ in-sample to 2026-08     10087    0.6   -1.4    42  17.0   1.4    -54 |      -1.0       0.8   1.000   0.888
+ out-of-sample 2026-09+      42   -5.5   -8.5    29   9.5   0.0    -27 |      -2.9      -2.0   1.000   0.986
+ regime bill>policy        7178    0.3   -1.4    42  16.8   1.1    -54 |      -1.0       0.5   1.000   0.964
+ regime bill<=policy       2951    1.4   -1.5    43  17.3   2.0    -48 |      -0.9       1.4   1.000   0.606
+ tier A >Rs20m             1650   -0.2   -1.5    43  14.1   0.2    -47 |      -0.8       0.1   1.000   0.970
+ tier B Rs5-20m            1037   -0.3   -1.8    42  15.7   0.4    -48 |      -1.3       0.1   0.990   0.908
+ tier C <Rs5m              7442    0.9   -1.3    42  17.8   1.8    -54 |      -1.0       1.0   1.000   0.768
+ excl. entry-day lock      8385   -0.8   -2.0    39  13.8   0.7    -54 |      -1.0       0.7   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.2%
+ exit T20: episodes with outcome 10167 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                      10167    2.2   -1.4    44  22.5   3.0   -100 |      -1.0       2.1   1.000   0.282
+ in-sample to 2026-08     10144    2.2   -1.4    44  22.5   3.0   -100 |      -1.0       2.1   1.000   0.300
+ out-of-sample 2026-09+      23    4.0   -4.9    39  30.4  13.0    -31 |      -3.5      -1.4   0.746   0.060
+ regime bill>policy        7209    1.4   -1.6    44  21.7   2.7    -91 |      -1.0       1.4   1.000   0.518
+ regime bill<=policy       2958    4.1   -1.0    46  24.6   3.8   -100 |      -0.2       3.7   1.000   0.178
+ tier A >Rs20m             1649    0.8   -1.3    46  22.0   1.4    -91 |      -0.6       1.0   0.994   0.682
+ tier B Rs5-20m            1034    0.8   -2.4    43  22.7   1.3    -60 |      -1.3       1.1   1.000   0.788
+ tier C <Rs5m              7484    2.7   -1.4    44  22.6   3.6   -100 |      -1.0       2.5   1.000   0.202
+ excl. entry-day lock      8429    0.7   -2.0    42  20.1   2.1    -91 |      -1.0       2.0   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.1%
+ exit T60: episodes with outcome 10030 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                      10030    5.7   -2.3    46  30.8   7.7    -97 |      -1.0       5.7   1.000   0.532
+ in-sample to 2026-08     10030    5.7   -2.3    46  30.8   7.7    -97 |      -1.0       5.7   1.000   0.532
+ out-of-sample 2026-09+       0
+ regime bill>policy        7077    3.8   -3.6    44  29.2   7.2    -93 |      -2.1       3.8   1.000   0.500
+ regime bill<=policy       2953   10.1    0.4    51  34.7   8.8    -97 |       1.3      10.1   0.988   0.522
+ tier A >Rs20m             1625    2.4   -2.3    46  30.2   4.6    -93 |      -1.3       2.4   0.982   0.506
+ tier B Rs5-20m            1020    2.7   -2.7    47  31.3   6.5    -74 |      -2.0       3.0   0.862   0.634
+ tier C <Rs5m              7385    6.8   -2.2    45  30.9   8.5    -97 |      -1.0       6.8   1.000   0.500
+ excl. entry-day lock      8319    4.8   -2.6    45  29.9   7.0    -97 |      -1.0       5.8   1.000   0.996
+   share of episodes whose entry session closed at the upper lock: 17.1%
+ exit trail20: episodes with outcome 10138 (placebo pool fallback to date-only: 1)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                      10138    4.7   -7.9    37  26.4   8.0   -101 |      -6.1       5.2   1.000   0.884
+ in-sample to 2026-08     10122    4.7   -7.9    37  26.5   8.0   -101 |      -6.1       5.2   1.000   0.884
+ out-of-sample 2026-09+      16  -14.2  -15.0    12   6.2   0.0    -28 |     -15.4     -10.8   0.436   0.826
+ regime bill>policy        7170    1.5   -9.6    34  23.5   6.8    -90 |      -8.2       2.1   1.000   0.942
+ regime bill<=policy       2968   12.3   -3.6    45  33.5  10.9   -101 |      -0.5      12.7   1.000   0.638
+ tier A >Rs20m             1623    3.4   -8.1    38  27.2   7.6    -90 |      -7.1       3.1   0.948   0.338
+ tier B Rs5-20m            1025    2.5   -9.1    39  26.9   6.9    -37 |      -7.8       2.7   0.964   0.596
+ tier C <Rs5m              7490    5.2   -7.8    37  26.2   8.2   -101 |      -5.8       5.9   1.000   0.914
+ excl. entry-day lock      8388    3.6   -8.5    37  25.9   7.4    -92 |      -6.0       5.3   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.3%
+
+-- R2f: rise: ret_5d>8%, no filing in 5; episodes 7571; net of costs, entry next open
+ exit T5: episodes with outcome 7202 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7202   -0.3   -1.4    39  13.0   0.6    -48 |      -1.0      -0.2   1.000   0.940
+ in-sample to 2026-08      7160   -0.3   -1.4    39  13.0   0.6    -48 |      -1.0      -0.2   1.000   0.930
+ out-of-sample 2026-09+      42   -2.4   -4.5    33   9.5   0.0    -33 |      -1.9      -1.3   1.000   0.784
+ regime bill>policy        5176   -0.3   -1.3    39  12.9   0.4    -48 |      -1.0      -0.2   1.000   0.900
+ regime bill<=policy       2026   -0.2   -2.0    38  13.2   0.9    -40 |      -1.0      -0.1   1.000   0.774
+ tier A >Rs20m              772   -1.1   -2.1    35   8.2   0.4    -28 |      -1.1      -0.7   1.000   0.984
+ tier B Rs5-20m             593   -0.8   -2.5    37  10.6   0.2    -40 |      -1.6      -0.8   1.000   0.462
+ tier C <Rs5m              5837   -0.2   -1.2    39  13.8   0.6    -48 |      -1.0      -0.0   1.000   0.834
+ excl. entry-day lock      5897   -1.8   -2.3    34   8.4   0.2    -48 |      -1.0      -0.2   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.1%
+ exit T10: episodes with outcome 7314 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7314    0.2   -2.2    40  16.7   1.5    -54 |      -1.0       0.4   1.000   0.928
+ in-sample to 2026-08      7274    0.2   -2.1    40  16.7   1.5    -54 |      -1.0       0.4   1.000   0.910
+ out-of-sample 2026-09+      40   -4.6   -4.9    30  10.0   0.0    -27 |      -2.8      -1.9   0.992   0.966
+ regime bill>policy        5269   -0.0   -2.1    39  16.5   1.2    -54 |      -1.1       0.2   1.000   0.920
+ regime bill<=policy       2045    0.8   -2.4    40  17.1   2.2    -48 |      -1.0       1.0   1.000   0.742
+ tier A >Rs20m              772   -1.1   -2.5    38  12.7   0.5    -44 |      -1.2      -0.6   1.000   0.966
+ tier B Rs5-20m             592   -0.5   -2.1    41  16.0   0.3    -48 |      -1.7      -0.5   0.916   0.560
+ tier C <Rs5m              5950    0.4   -2.1    40  17.2   1.8    -54 |      -1.0       0.6   1.000   0.864
+ excl. entry-day lock      5992   -1.4   -2.8    36  13.3   0.7    -54 |      -1.1       0.3   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.1%
+ exit T20: episodes with outcome 7353 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7353    1.7   -2.3    42  21.3   3.4   -100 |      -1.2       1.5   1.000   0.270
+ in-sample to 2026-08      7329    1.7   -2.3    42  21.2   3.4   -100 |      -1.1       1.5   1.000   0.282
+ out-of-sample 2026-09+      24    2.1   -6.0    38  29.2  12.5    -42 |      -3.7      -1.7   0.898   0.128
+ regime bill>policy        5303    0.9   -2.4    41  20.4   3.0    -91 |      -1.4       0.9   1.000   0.506
+ regime bill<=policy       2050    3.7   -1.9    43  23.6   4.3   -100 |      -0.8       3.2   1.000   0.194
+ tier A >Rs20m              771   -0.2   -3.1    40  19.5   2.2    -91 |      -1.5      -0.1   1.000   0.656
+ tier B Rs5-20m             590    0.3   -3.3    42  21.7   1.4    -60 |      -2.1       0.2   1.000   0.424
+ tier C <Rs5m              5992    2.0   -2.1    42  21.5   3.8   -100 |      -1.0       1.8   1.000   0.264
+ excl. entry-day lock      6037   -0.0   -3.0    40  18.8   2.4   -100 |      -1.2       1.5   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+ exit T60: episodes with outcome 7219 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7219    5.1   -3.4    44  29.5   7.9    -97 |      -1.7       5.1   1.000   0.514
+ in-sample to 2026-08      7219    5.1   -3.4    44  29.5   7.9    -97 |      -1.7       5.1   1.000   0.514
+ out-of-sample 2026-09+       0
+ regime bill>policy        5175    2.7   -4.9    41  27.5   6.9    -93 |      -3.0       2.9   1.000   0.610
+ regime bill<=policy       2044   11.3    0.5    51  34.4  10.3    -97 |       1.5      10.9   0.982   0.358
+ tier A >Rs20m              751    0.7   -5.9    41  27.2   5.2    -93 |      -2.9       0.6   1.000   0.430
+ tier B Rs5-20m             575    1.5   -3.9    43  28.2   6.6    -74 |      -3.6       1.4   0.660   0.450
+ tier C <Rs5m              5893    6.0   -3.1    44  29.9   8.3    -97 |      -1.4       6.1   1.000   0.544
+ excl. entry-day lock      5933    4.2   -3.5    43  28.5   7.2    -97 |      -1.6       5.3   1.000   0.980
+   share of episodes whose entry session closed at the upper lock: 17.8%
+ exit trail20: episodes with outcome 7341 (placebo pool fallback to date-only: 1)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       7341    3.7   -9.1    35  24.9   7.4   -101 |      -7.0       4.5   1.000   0.936
+ in-sample to 2026-08      7325    3.7   -9.1    35  24.9   7.4   -101 |      -7.0       4.5   1.000   0.934
+ out-of-sample 2026-09+      16  -14.0  -14.4    12   6.2   0.0    -28 |     -15.0     -10.6   0.432   0.842
+ regime bill>policy        5283    0.3  -10.5    33  22.2   6.3    -90 |      -9.0       1.1   1.000   0.940
+ regime bill<=policy       2058   12.2   -5.1    41  31.8  10.1   -101 |      -0.9      13.2   1.000   0.758
+ tier A >Rs20m              758    1.5  -10.7    35  24.4   7.1    -90 |      -9.6       1.1   0.912   0.322
+ tier B Rs5-20m             586    0.9  -10.0    37  24.9   6.0    -34 |      -9.8       0.9   0.600   0.532
+ tier C <Rs5m              5997    4.2   -8.9    35  24.9   7.5   -101 |      -6.5       5.3   1.000   0.968
+ excl. entry-day lock      6012    2.4   -9.9    34  24.3   6.6   -101 |      -7.0       4.6   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.1%
+
+-- R3: rise: ret_10d>12%, no filing in 20; episodes 3786; net of costs, entry next open
+ exit T5: episodes with outcome 3624 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3624    0.1   -1.0    41  13.8   0.6    -47 |      -1.0       0.1   0.924   0.562
+ in-sample to 2026-08      3607    0.1   -1.0    41  13.9   0.6    -47 |      -1.0       0.1   0.930   0.496
+ out-of-sample 2026-09+      17   -6.8   -7.2    35   0.0   0.0    -37 |      -2.8      -2.5   0.998   1.000
+ regime bill>policy        2576    0.1   -1.0    42  13.8   0.3    -47 |      -1.0       0.0   0.904   0.276
+ regime bill<=policy       1048   -0.1   -1.4    40  13.9   1.0    -44 |      -1.0       0.2   1.000   0.878
+ tier A >Rs20m              424    0.3   -1.0    44  11.3   0.0    -21 |      -0.8      -0.2   0.768   0.046
+ tier B Rs5-20m             311   -0.1   -1.4    41   9.6   0.0    -37 |      -1.0       0.1   0.924   0.748
+ tier C <Rs5m              2889    0.0   -1.0    41  14.6   0.7    -47 |      -1.0       0.1   0.914   0.656
+ excl. entry-day lock      2959   -1.3   -1.7    37   9.7   0.3    -47 |      -1.0       0.0   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.3%
+ exit T10: episodes with outcome 3688 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3688    0.4   -1.4    42  16.9   1.6    -62 |      -1.0       0.6   1.000   0.920
+ in-sample to 2026-08      3672    0.4   -1.4    42  16.9   1.6    -62 |      -1.0       0.6   1.000   0.906
+ out-of-sample 2026-09+      16   -5.2   -5.7    44  12.5   0.0    -24 |      -3.5      -2.4   0.908   0.870
+ regime bill>policy        2634    0.0   -1.4    42  16.2   1.2    -47 |      -1.0       0.3   0.994   0.934
+ regime bill<=policy       1054    1.2   -1.4    43  18.6   2.5    -62 |      -1.0       1.4   0.994   0.626
+ tier A >Rs20m              424    0.4   -1.2    43  13.9   0.2    -42 |      -1.2      -0.3   0.502   0.056
+ tier B Rs5-20m             311   -1.0   -2.2    41  12.9   0.0    -31 |      -1.3       0.1   0.982   0.980
+ tier C <Rs5m              2953    0.5   -1.3    42  17.7   1.9    -62 |      -1.0       0.8   0.998   0.912
+ excl. entry-day lock      3008   -0.8   -2.0    40  14.6   0.8    -62 |      -1.0       0.6   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.4%
+ exit T20: episodes with outcome 3705 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3705    1.5   -2.4    42  21.5   3.4    -71 |      -1.2       1.6   1.000   0.506
+ in-sample to 2026-08      3695    1.6   -2.4    42  21.5   3.4    -71 |      -1.1       1.6   1.000   0.480
+ out-of-sample 2026-09+      10  -10.6  -11.1    30  20.0   0.0    -53 |      -4.6      -3.0   0.984   0.970
+ regime bill>policy        2650    0.6   -2.7    41  20.6   3.1    -71 |      -1.5       0.8   1.000   0.728
+ regime bill<=policy       1055    4.0   -1.4    44  23.6   4.2    -69 |      -0.6       3.5   1.000   0.246
+ tier A >Rs20m              424    0.4   -2.2    43  19.8   1.7    -37 |      -1.5       0.1   0.932   0.300
+ tier B Rs5-20m             310   -1.1   -2.8    44  18.7   0.6    -53 |      -1.9       0.4   0.920   0.966
+ tier C <Rs5m              2971    2.0   -2.4    41  22.0   3.9    -71 |      -1.0       1.9   1.000   0.410
+ excl. entry-day lock      3025    0.4   -2.8    40  19.8   2.7    -69 |      -1.1       1.6   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.4%
+ exit T60: episodes with outcome 3644 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3644    4.8   -4.3    42  28.8   7.4    -80 |      -2.5       4.2   1.000   0.128
+ in-sample to 2026-08      3644    4.8   -4.3    42  28.8   7.4    -80 |      -2.5       4.2   1.000   0.128
+ out-of-sample 2026-09+       0
+ regime bill>policy        2589    1.6   -6.2    39  26.2   6.3    -80 |      -4.1       1.6   1.000   0.476
+ regime bill<=policy       1055   12.7    0.5    50  35.2  10.2    -80 |       1.2      10.5   0.876   0.074
+ tier A >Rs20m              409   -0.6   -5.8    41  28.4   3.2    -66 |      -3.3      -0.2   0.998   0.678
+ tier B Rs5-20m             308    0.1   -5.7    40  25.6   6.8    -52 |      -4.5       0.7   0.870   0.684
+ tier C <Rs5m              2927    6.1   -3.9    43  29.2   8.1    -80 |      -2.3       5.1   1.000   0.106
+ excl. entry-day lock      2978    4.2   -4.5    42  28.3   6.9    -80 |      -2.5       4.2   1.000   0.488
+   share of episodes whose entry session closed at the upper lock: 18.3%
+ exit trail20: episodes with outcome 3702 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3702    3.1  -10.0    34  23.9   7.6    -56 |      -7.2       4.2   1.000   0.932
+ in-sample to 2026-08      3691    3.1  -10.0    34  24.0   7.6    -56 |      -7.1       4.2   1.000   0.930
+ out-of-sample 2026-09+      11  -14.5  -22.3    18   9.1   0.0    -30 |     -15.6     -10.8   0.970   0.774
+ regime bill>policy        2646   -0.5  -11.5    31  20.2   6.2    -56 |      -9.4       0.7   1.000   0.970
+ regime bill<=policy       1056   12.1   -5.1    42  33.2  11.1    -38 |      -0.4      12.8   1.000   0.608
+ tier A >Rs20m              417    1.5  -10.9    35  25.9   6.7    -30 |      -9.1       1.1   0.948   0.366
+ tier B Rs5-20m             307    0.4  -11.7    32  25.1   8.8    -33 |      -9.1       1.8   0.984   0.796
+ tier C <Rs5m              2978    3.6   -9.7    34  23.5   7.6    -56 |      -6.7       4.8   1.000   0.930
+ excl. entry-day lock      3015    1.9  -10.9    33  23.7   7.3    -47 |      -7.0       4.3   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.6%
+
+-- R3f: rise: ret_10d>12%, no filing in 20; episodes 3163; net of costs, entry next open
+ exit T5: episodes with outcome 3008 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3008   -0.2   -1.0    41  14.0   0.5    -47 |      -1.0      -0.0   0.870   0.866
+ in-sample to 2026-08      2991   -0.1   -1.0    41  14.0   0.5    -47 |      -1.0       0.0   0.902   0.820
+ out-of-sample 2026-09+      17   -6.8   -7.2    35   0.0   0.0    -37 |      -2.8      -2.3   0.998   0.998
+ regime bill>policy        2145   -0.1   -1.0    41  13.6   0.3    -47 |      -1.0      -0.1   0.830   0.540
+ regime bill<=policy        863   -0.2   -1.2    40  14.9   0.8    -44 |      -1.0       0.3   0.974   0.960
+ tier A >Rs20m              293    0.5   -0.5    47  11.6   0.0    -19 |      -0.8      -0.2   0.154   0.016
+ tier B Rs5-20m             228   -0.7   -1.8    37   9.2   0.0    -37 |      -1.1      -0.1   0.976   0.930
+ tier C <Rs5m              2487   -0.2   -1.0    41  14.7   0.6    -47 |      -1.0       0.0   0.862   0.912
+ excl. entry-day lock      2469   -1.6   -1.8    37   9.6   0.2    -47 |      -1.0      -0.0   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+ exit T10: episodes with outcome 3067 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3067   -0.1   -1.9    41  16.5   1.6    -62 |      -1.0       0.4   1.000   0.990
+ in-sample to 2026-08      3051   -0.0   -1.9    41  16.5   1.6    -62 |      -1.0       0.4   1.000   0.988
+ out-of-sample 2026-09+      16   -5.2   -5.7    44  12.5   0.0    -24 |      -3.6      -2.6   0.890   0.850
+ regime bill>policy        2202   -0.5   -1.9    40  15.8   1.3    -47 |      -1.2      -0.0   1.000   0.968
+ regime bill<=policy        865    1.0   -1.7    42  18.3   2.5    -62 |      -1.0       1.5   1.000   0.878
+ tier A >Rs20m              293   -0.3   -1.9    43  13.0   0.0    -42 |      -1.3      -0.6   0.926   0.234
+ tier B Rs5-20m             228   -1.4   -2.5    38  14.9   0.0    -40 |      -1.4      -0.1   0.988   0.990
+ tier C <Rs5m              2546    0.1   -1.8    41  17.0   2.0    -62 |      -1.0       0.6   1.000   0.980
+ excl. entry-day lock      2515   -1.4   -2.5    38  13.8   0.8    -62 |      -1.1       0.4   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.0%
+ exit T20: episodes with outcome 3084 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3084    1.0   -3.0    40  20.5   3.2    -71 |      -1.5       1.2   1.000   0.682
+ in-sample to 2026-08      3074    1.0   -3.0    40  20.5   3.2    -71 |      -1.5       1.2   1.000   0.660
+ out-of-sample 2026-09+      10  -10.6  -11.1    30  20.0   0.0    -53 |      -4.8      -3.3   0.992   0.970
+ regime bill>policy        2217   -0.3   -3.7    38  19.3   2.8    -71 |      -2.0       0.2   1.000   0.944
+ regime bill<=policy        867    4.2   -1.0    45  23.6   4.4    -69 |      -0.6       3.6   0.942   0.234
+ tier A >Rs20m              293   -1.0   -3.8    42  17.7   1.0    -37 |      -2.5      -0.9   0.992   0.540
+ tier B Rs5-20m             227   -1.8   -3.7    41  19.4   0.4    -53 |      -2.4      -0.2   0.964   0.972
+ tier C <Rs5m              2564    1.5   -2.8    40  20.9   3.7    -71 |      -1.3       1.5   1.000   0.554
+ excl. entry-day lock      2532   -0.3   -3.5    39  18.4   2.6    -69 |      -1.6       1.1   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+ exit T60: episodes with outcome 3030 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3030    4.4   -5.4    41  27.7   7.4    -80 |      -3.0       3.8   1.000   0.164
+ in-sample to 2026-08      3030    4.4   -5.4    41  27.7   7.4    -80 |      -3.0       3.8   1.000   0.164
+ out-of-sample 2026-09+       0
+ regime bill>policy        2161    1.0   -7.5    37  24.5   6.2    -80 |      -4.9       0.6   1.000   0.308
+ regime bill<=policy        869   13.1    1.1    52  35.6  10.6    -80 |       2.0      11.6   0.820   0.174
+ tier A >Rs20m              285   -1.9   -7.6    38  24.6   3.5    -47 |      -4.6      -1.4   0.998   0.668
+ tier B Rs5-20m             225   -0.4   -6.8    40  24.9   7.1    -55 |      -4.9       0.4   0.908   0.670
+ tier C <Rs5m              2520    5.6   -4.9    42  28.3   7.9    -80 |      -2.7       4.7   1.000   0.132
+ excl. entry-day lock      2492    3.8   -5.8    41  26.7   7.2    -80 |      -3.1       3.7   1.000   0.398
+   share of episodes whose entry session closed at the upper lock: 17.8%
+ exit trail20: episodes with outcome 3084 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       3084    2.3  -11.0    33  22.7   7.1    -56 |      -7.8       3.6   1.000   0.970
+ in-sample to 2026-08      3073    2.3  -11.0    33  22.7   7.1    -56 |      -7.7       3.7   1.000   0.972
+ out-of-sample 2026-09+      11  -14.5  -22.3    18   9.1   0.0    -30 |     -17.0     -11.3   0.972   0.728
+ regime bill>policy        2215   -1.7  -12.9    29  18.7   5.6    -56 |     -10.3      -0.5   1.000   0.968
+ regime bill<=policy        869   12.4   -5.2    42  32.8  10.9    -36 |       0.3      14.0   1.000   0.758
+ tier A >Rs20m              289    0.5  -12.2    33  24.2   6.2    -28 |     -11.3      -0.2   0.772   0.294
+ tier B Rs5-20m             225    0.6  -11.9    33  24.0   8.4    -33 |      -9.3       1.8   0.962   0.698
+ tier C <Rs5m              2570    2.6  -10.8    33  22.4   7.0    -56 |      -7.3       4.2   1.000   0.980
+ excl. entry-day lock      2526    1.2  -12.0    31  22.1   6.8    -47 |      -7.8       3.7   1.000   1.000
+   share of episodes whose entry session closed at the upper lock: 18.1%
+
+=== 3b. MIRROR: NEWS-LESS FALLS (buying the fall, long only) ===
+
+-- F1: fall: ret_5d<-8%, no filing in 10; episodes 7076; net of costs, entry next open
+ exit T5: episodes with outcome 6724 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6724    0.5   -0.8    46  11.7   0.3    -39 |      -1.0      -0.3   0.000   0.000
+ in-sample to 2026-08      6637    0.5   -0.8    46  11.8   0.3    -39 |      -1.0      -0.2   0.000   0.000
+ out-of-sample 2026-09+      87   -1.8   -0.7    44   3.4   0.0    -32 |      -1.5      -1.0   0.058   0.852
+ regime bill>policy        4917    0.6   -0.7    47  12.1   0.2    -39 |      -1.0      -0.2   0.000   0.000
+ regime bill<=policy       1807    0.2   -0.9    45  10.6   0.4    -39 |      -1.0      -0.3   0.008   0.010
+ tier A >Rs20m              855    0.3    0.1    51   9.4   0.0    -31 |      -0.2      -0.1   0.020   0.034
+ tier B Rs5-20m             613   -0.8   -0.8    46   7.0   0.2    -32 |      -1.2      -0.9   0.016   0.294
+ tier C <Rs5m              5256    0.7   -0.9    45  12.7   0.4    -39 |      -1.0      -0.2   0.000   0.000
+ excl. entry-day lock      5774   -0.2   -1.0    44   9.9   0.2    -39 |      -1.0      -0.3   0.966   0.074
+   share of episodes whose entry session closed at the upper lock: 14.1%
+ exit T10: episodes with outcome 6834 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6834    1.2   -0.4    48  16.8   1.0    -54 |      -1.0       0.3   0.000   0.000
+ in-sample to 2026-08      6750    1.3   -0.4    48  16.9   1.0    -54 |      -1.0       0.3   0.000   0.000
+ out-of-sample 2026-09+      84   -0.6   -1.1    44  10.7   0.0    -20 |      -1.8      -1.3   0.106   0.264
+ regime bill>policy        5005    1.2   -0.5    48  16.9   0.9    -54 |      -1.0       0.2   0.000   0.000
+ regime bill<=policy       1829    1.3   -0.3    48  16.6   1.4    -48 |      -1.0       0.7   0.000   0.056
+ tier A >Rs20m              854    0.5    0.2    51  13.6   0.1    -41 |      -0.3       0.4   0.042   0.368
+ tier B Rs5-20m             613   -0.2   -0.6    47  12.1   0.0    -37 |      -1.3      -0.3   0.004   0.376
+ tier C <Rs5m              5367    1.5   -0.6    48  17.8   1.3    -54 |      -1.0       0.4   0.000   0.000
+ excl. entry-day lock      5849    0.7   -0.7    47  15.5   0.7    -54 |      -1.0       0.3   0.000   0.010
+   share of episodes whose entry session closed at the upper lock: 14.4%
+ exit T20: episodes with outcome 6868 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6868    2.6   -0.3    49  23.0   2.3    -58 |      -1.1       1.1   0.000   0.000
+ in-sample to 2026-08      6792    2.7   -0.2    49  23.2   2.3    -58 |      -1.1       1.1   0.000   0.000
+ out-of-sample 2026-09+      76   -2.2   -4.5    29  13.2   1.3    -23 |      -4.3      -2.5   0.598   0.368
+ regime bill>policy        5034    2.5   -0.2    49  23.4   2.1    -58 |      -1.2       0.8   0.000   0.000
+ regime bill<=policy       1834    3.1   -0.6    48  22.2   2.6    -57 |      -1.0       2.1   0.008   0.028
+ tier A >Rs20m              854    0.5   -0.2    49  19.4   0.7    -40 |      -0.6       0.4   0.124   0.340
+ tier B Rs5-20m             613    0.2   -1.1    45  19.7   1.0    -46 |      -1.5       0.2   0.212   0.466
+ tier C <Rs5m              5401    3.2   -0.2    49  24.0   2.7    -58 |      -1.1       1.3   0.000   0.000
+ excl. entry-day lock      5873    2.3   -0.5    48  22.5   2.1    -58 |      -1.1       1.1   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 14.5%
+ exit trail20: episodes with outcome 6811 (placebo pool fallback to date-only: 2)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6811    4.4   -7.8    36  25.8   7.9    -92 |      -7.8       3.8   0.542   0.140
+ in-sample to 2026-08      6796    4.4   -7.8    36  25.8   7.9    -92 |      -7.7       3.8   0.544   0.136
+ out-of-sample 2026-09+      15  -13.0  -15.3    20   6.7   0.0    -32 |     -13.5     -10.3   0.690   0.728
+ regime bill>policy        4996    2.2   -8.4    34  24.0   7.0    -53 |      -9.1       1.2   0.036   0.016
+ regime bill<=policy       1815   10.3   -5.8    42  30.7  10.4    -92 |      -3.1      11.0   1.000   0.648
+ tier A >Rs20m              832   -0.4  -10.6    32  21.6   5.3    -30 |      -8.6       2.3   1.000   0.994
+ tier B Rs5-20m             589   -0.4  -10.8    32  22.1   5.8    -29 |     -10.2       1.0   0.744   0.894
+ tier C <Rs5m              5390    5.6   -6.9    38  26.8   8.5    -92 |      -7.3       4.3   0.132   0.022
+ excl. entry-day lock      5810    4.6   -8.0    37  26.2   7.9    -92 |      -7.6       4.0   0.832   0.120
+   share of episodes whose entry session closed at the upper lock: 14.7%
+
+-- F1f: fall: ret_5d<-8%, no filing in 10; episodes 5166; net of costs, entry next open
+ exit T5: episodes with outcome 4868 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       4868    0.7   -1.0    45  12.4   0.5    -39 |      -1.0      -0.3   0.000   0.000
+ in-sample to 2026-08      4808    0.8   -1.0    45  12.5   0.5    -39 |      -1.0      -0.2   0.000   0.000
+ out-of-sample 2026-09+      60   -1.4   -0.5    45   5.0   0.0    -20 |      -1.8      -1.3   0.006   0.536
+ regime bill>policy        3592    0.8   -1.0    45  12.7   0.4    -39 |      -1.0      -0.3   0.000   0.000
+ regime bill<=policy       1276    0.7   -1.0    44  11.7   0.7    -33 |      -1.0      -0.0   0.040   0.004
+ tier A >Rs20m              276    0.6   -0.5    46   9.8   0.0    -22 |      -0.7      -0.2   0.210   0.000
+ tier B Rs5-20m             274   -0.2   -1.1    42   8.0   0.4    -32 |      -1.7      -1.0   0.024   0.008
+ tier C <Rs5m              4318    0.8   -1.0    45  12.9   0.5    -39 |      -1.0      -0.2   0.000   0.000
+ excl. entry-day lock      4044   -0.1   -1.0    42  10.2   0.2    -39 |      -1.0      -0.3   0.410   0.026
+   share of episodes whose entry session closed at the upper lock: 16.9%
+ exit T10: episodes with outcome 4973 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       4973    1.4   -0.8    47  17.7   1.3    -53 |      -1.1       0.2   0.000   0.000
+ in-sample to 2026-08      4915    1.5   -0.7    47  17.7   1.3    -53 |      -1.1       0.2   0.000   0.000
+ out-of-sample 2026-09+      58   -1.5   -1.9    38  12.1   0.0    -18 |      -2.5      -1.7   0.284   0.422
+ regime bill>policy        3676    1.3   -0.8    47  17.7   1.1    -53 |      -1.2      -0.1   0.000   0.000
+ regime bill<=policy       1297    1.8   -0.8    47  17.4   1.9    -48 |      -1.0       0.9   0.016   0.010
+ tier A >Rs20m              275    0.4   -0.4    47  13.1   0.4    -29 |      -0.7       0.1   0.242   0.296
+ tier B Rs5-20m             274   -1.2   -1.7    40  10.6   0.0    -28 |      -2.3      -1.0   0.096   0.646
+ tier C <Rs5m              4424    1.7   -0.7    48  18.4   1.5    -53 |      -1.1       0.3   0.000   0.000
+ excl. entry-day lock      4115    0.7   -1.0    45  16.0   0.9    -51 |      -1.2       0.2   0.000   0.004
+   share of episodes whose entry session closed at the upper lock: 17.3%
+ exit T20: episodes with outcome 5000 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       5000    2.9   -0.4    49  23.6   2.7    -58 |      -1.4       1.1   0.000   0.000
+ in-sample to 2026-08      4950    3.0   -0.3    49  23.7   2.7    -58 |      -1.3       1.1   0.000   0.000
+ out-of-sample 2026-09+      50   -1.1   -4.7    34  18.0   2.0    -20 |      -4.1      -2.1   0.662   0.292
+ regime bill>policy        3698    2.6   -0.4    49  23.6   2.4    -58 |      -1.5       0.6   0.000   0.000
+ regime bill<=policy       1302    3.9   -0.4    49  23.7   3.3    -56 |      -1.0       2.5   0.006   0.034
+ tier A >Rs20m              275    0.0    0.1    51  20.4   0.7    -44 |      -1.1       0.0   0.016   0.516
+ tier B Rs5-20m             273   -0.3   -2.7    40  20.1   1.5    -46 |      -2.4      -0.4   0.658   0.438
+ tier C <Rs5m              4452    3.3   -0.2    49  24.1   2.9    -58 |      -1.3       1.3   0.000   0.000
+ excl. entry-day lock      4132    2.6   -0.6    48  23.2   2.6    -58 |      -1.4       1.1   0.000   0.002
+   share of episodes whose entry session closed at the upper lock: 17.4%
+ exit trail20: episodes with outcome 4980 (placebo pool fallback to date-only: 2)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       4980    5.1   -7.2    37  26.6   8.4    -92 |      -7.7       3.8   0.090   0.014
+ in-sample to 2026-08      4969    5.2   -7.2    37  26.6   8.4    -92 |      -7.7       3.8   0.092   0.014
+ out-of-sample 2026-09+      11  -11.6   -9.7     9   9.1   0.0    -28 |     -12.7      -9.6   0.194   0.656
+ regime bill>policy        3674    2.7   -8.1    35  24.6   7.3    -53 |      -9.3       0.7   0.002   0.000
+ regime bill<=policy       1306   11.9   -5.1    43  32.4  11.5    -92 |      -2.1      12.4   1.000   0.576
+ tier A >Rs20m              270    1.9  -11.7    32  22.6   6.3    -28 |      -9.6       1.2   0.952   0.338
+ tier B Rs5-20m             262    2.0  -10.4    35  24.4   6.1    -28 |     -10.6       1.6   0.444   0.416
+ tier C <Rs5m              4448    5.5   -6.8    38  27.0   8.7    -92 |      -7.4       4.1   0.052   0.018
+ excl. entry-day lock      4109    5.5   -7.2    38  27.4   8.5    -92 |      -7.5       4.0   0.208   0.022
+   share of episodes whose entry session closed at the upper lock: 17.5%
+
+-- F2: fall: ret_5d<-8%, no filing in 5; episodes 9372; net of costs, entry next open
+ exit T5: episodes with outcome 8904 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       8904    0.3   -0.8    46  11.1   0.2    -41 |      -1.0      -0.3   0.000   0.000
+ in-sample to 2026-08      8796    0.4   -0.8    46  11.2   0.2    -41 |      -1.0      -0.3   0.000   0.000
+ out-of-sample 2026-09+     108   -1.1   -0.7    45   7.4   0.0    -24 |      -1.4      -1.0   0.030   0.500
+ regime bill>policy        6542    0.4   -0.8    46  11.3   0.2    -41 |      -1.0      -0.3   0.000   0.000
+ regime bill<=policy       2362    0.1   -0.8    46  10.7   0.3    -39 |      -1.0      -0.5   0.000   0.000
+ tier A >Rs20m             1286    0.3    0.3    52   8.8   0.0    -31 |      -0.4      -0.1   0.000   0.004
+ tier B Rs5-20m             863   -0.7   -0.7    46   7.5   0.0    -33 |      -1.3      -1.0   0.000   0.062
+ tier C <Rs5m              6755    0.5   -1.0    45  12.0   0.3    -41 |      -1.0      -0.3   0.000   0.000
+ excl. entry-day lock      7639   -0.4   -1.0    44   9.2   0.1    -41 |      -1.0      -0.5   0.830   0.120
+   share of episodes whose entry session closed at the upper lock: 14.2%
+ exit T10: episodes with outcome 9043 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       9043    1.1   -0.6    48  16.6   0.9    -54 |      -1.0       0.3   0.000   0.000
+ in-sample to 2026-08      8938    1.1   -0.6    48  16.7   0.9    -54 |      -1.0       0.3   0.000   0.000
+ out-of-sample 2026-09+     105   -0.8   -1.2    43  11.4   0.0    -32 |      -1.7      -1.1   0.138   0.370
+ regime bill>policy        6655    1.1   -0.6    48  16.8   0.8    -54 |      -1.0       0.2   0.000   0.000
+ regime bill<=policy       2388    1.0   -0.3    48  16.2   1.0    -50 |      -1.0       0.5   0.000   0.048
+ tier A >Rs20m             1285    0.5    0.2    51  14.0   0.2    -41 |      -0.3       0.3   0.000   0.116
+ tier B Rs5-20m             862   -0.2   -0.8    46  12.1   0.2    -40 |      -1.2      -0.3   0.030   0.310
+ tier C <Rs5m              6896    1.4   -0.7    47  17.7   1.1    -54 |      -1.0       0.3   0.000   0.000
+ excl. entry-day lock      7738    0.5   -0.9    46  15.2   0.7    -54 |      -1.0       0.2   0.000   0.012
+   share of episodes whose entry session closed at the upper lock: 14.4%
+ exit T20: episodes with outcome 9087 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       9087    2.2   -0.5    48  22.6   2.0    -68 |      -1.1       1.1   0.000   0.000
+ in-sample to 2026-08      8993    2.3   -0.5    49  22.7   2.0    -68 |      -1.0       1.2   0.000   0.000
+ out-of-sample 2026-09+      94   -1.4   -4.1    32  14.9   1.1    -50 |      -4.1      -2.6   0.466   0.180
+ regime bill>policy        6691    2.0   -0.5    49  22.9   1.9    -68 |      -1.1       0.8   0.000   0.000
+ regime bill<=policy       2396    2.8   -0.6    48  22.0   2.5    -60 |      -1.0       2.1   0.018   0.064
+ tier A >Rs20m             1283    0.5   -0.2    49  20.1   0.9    -47 |      -0.6       0.3   0.044   0.278
+ tier B Rs5-20m             860    0.5   -1.0    46  19.8   1.5    -50 |      -1.3       0.5   0.152   0.474
+ tier C <Rs5m              6944    2.8   -0.5    49  23.4   2.3    -68 |      -1.1       1.4   0.000   0.000
+ excl. entry-day lock      7768    1.8   -0.8    48  21.9   2.0    -68 |      -1.1       1.0   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 14.5%
+ exit trail20: episodes with outcome 9016 (placebo pool fallback to date-only: 2)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       9016    4.2   -8.1    37  26.1   7.9    -92 |      -7.7       3.9   0.940   0.232
+ in-sample to 2026-08      8999    4.3   -8.1    37  26.1   7.9    -92 |      -7.6       3.9   0.944   0.228
+ out-of-sample 2026-09+      17  -14.1  -18.8    12   5.9   0.0    -28 |     -14.6     -10.9   0.854   0.816
+ regime bill>policy        6636    2.1   -8.8    35  24.3   6.9    -89 |      -8.9       1.4   0.300   0.036
+ regime bill<=policy       2380   10.2   -5.6    42  31.1  10.8    -92 |      -3.1      10.8   1.000   0.658
+ tier A >Rs20m             1250    0.9  -10.4    34  24.4   6.2    -89 |      -8.5       2.3   0.998   0.960
+ tier B Rs5-20m             836    1.0  -10.3    34  23.4   6.9    -32 |      -9.7       1.7   0.784   0.728
+ tier C <Rs5m              6930    5.2   -7.2    38  26.7   8.4    -92 |      -7.2       4.4   0.504   0.088
+ excl. entry-day lock      7689    4.1   -8.4    37  26.1   7.9    -92 |      -7.7       3.8   0.986   0.260
+   share of episodes whose entry session closed at the upper lock: 14.7%
+
+-- F2f: fall: ret_5d<-8%, no filing in 5; episodes 6756; net of costs, entry next open
+ exit T5: episodes with outcome 6365 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6365    0.7   -1.0    45  12.2   0.4    -41 |      -1.0      -0.3   0.000   0.000
+ in-sample to 2026-08      6295    0.7   -1.0    45  12.3   0.4    -41 |      -1.0      -0.3   0.000   0.000
+ out-of-sample 2026-09+      70   -1.4   -0.7    46   5.7   0.0    -24 |      -1.8      -1.3   0.018   0.512
+ regime bill>policy        4719    0.7   -1.0    45  12.4   0.4    -41 |      -1.0      -0.4   0.000   0.000
+ regime bill<=policy       1646    0.6   -0.9    45  11.8   0.4    -35 |      -1.0      -0.1   0.004   0.004
+ tier A >Rs20m              427    0.5   -0.5    47  10.3   0.0    -22 |      -0.8      -0.4   0.028   0.000
+ tier B Rs5-20m             412   -0.1   -1.0    43   8.5   0.0    -29 |      -1.7      -1.0   0.002   0.002
+ tier C <Rs5m              5526    0.8   -1.0    45  12.6   0.4    -41 |      -1.0      -0.2   0.000   0.000
+ excl. entry-day lock      5346   -0.1   -1.0    42  10.1   0.2    -41 |      -1.0      -0.4   0.286   0.006
+   share of episodes whose entry session closed at the upper lock: 16.0%
+ exit T10: episodes with outcome 6489 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6489    1.3   -0.8    47  17.7   1.1    -51 |      -1.1       0.2   0.000   0.000
+ in-sample to 2026-08      6422    1.3   -0.8    47  17.8   1.1    -51 |      -1.1       0.2   0.000   0.000
+ out-of-sample 2026-09+      67   -1.8   -1.9    36  11.9   0.0    -32 |      -2.6      -1.7   0.200   0.524
+ regime bill>policy        4816    1.2   -0.9    47  17.7   1.0    -51 |      -1.2      -0.0   0.000   0.000
+ regime bill<=policy       1673    1.6   -0.5    48  17.6   1.4    -50 |      -1.0       0.8   0.000   0.012
+ tier A >Rs20m              426    0.4   -0.3    49  14.1   0.5    -38 |      -0.8      -0.1   0.034   0.090
+ tier B Rs5-20m             412   -0.7   -1.3    43  11.9   0.2    -40 |      -2.1      -0.9   0.004   0.246
+ tier C <Rs5m              5651    1.5   -0.8    47  18.4   1.2    -51 |      -1.0       0.3   0.000   0.000
+ excl. entry-day lock      5434    0.6   -1.0    45  16.1   0.8    -51 |      -1.2       0.1   0.008   0.000
+   share of episodes whose entry session closed at the upper lock: 16.3%
+ exit T20: episodes with outcome 6524 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6524    2.6   -0.5    48  23.5   2.5    -68 |      -1.3       1.2   0.000   0.000
+ in-sample to 2026-08      6468    2.7   -0.5    49  23.6   2.5    -68 |      -1.2       1.2   0.000   0.000
+ out-of-sample 2026-09+      56   -0.1   -4.0    39  17.9   1.8    -21 |      -4.1      -2.1   0.466   0.122
+ regime bill>policy        4843    2.3   -0.5    48  23.5   2.3    -68 |      -1.4       0.7   0.000   0.000
+ regime bill<=policy       1681    3.6   -0.5    49  23.8   3.0    -60 |      -1.0       2.5   0.006   0.044
+ tier A >Rs20m              424    0.5   -0.2    49  21.2   1.2    -47 |      -0.9       0.2   0.088   0.292
+ tier B Rs5-20m             410    0.6   -1.5    45  21.0   1.7    -37 |      -2.3      -0.3   0.044   0.104
+ tier C <Rs5m              5690    2.9   -0.5    49  23.9   2.6    -68 |      -1.2       1.3   0.000   0.000
+ excl. entry-day lock      5457    2.3   -0.7    48  23.0   2.4    -68 |      -1.3       1.1   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 16.4%
+ exit trail20: episodes with outcome 6505 (placebo pool fallback to date-only: 2)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       6505    4.7   -7.2    37  26.5   8.2    -92 |      -7.6       3.9   0.152   0.050
+ in-sample to 2026-08      6492    4.8   -7.2    38  26.5   8.2    -92 |      -7.5       3.9   0.156   0.052
+ out-of-sample 2026-09+      13  -12.8  -14.4     8   7.7   0.0    -28 |     -14.2     -10.1   0.528   0.712
+ regime bill>policy        4814    2.5   -8.1    36  24.7   7.1    -89 |      -9.1       0.9   0.002   0.000
+ regime bill<=policy       1691   11.1   -4.9    43  31.8  11.3    -92 |      -2.1      12.3   1.000   0.762
+ tier A >Rs20m              419    1.7   -9.7    35  24.1   6.0    -89 |      -9.2       1.9   0.722   0.552
+ tier B Rs5-20m             399    3.3   -9.6    35  25.1   7.0    -32 |     -10.7       1.0   0.140   0.096
+ tier C <Rs5m              5687    5.1   -6.9    38  26.8   8.4    -92 |      -7.2       4.2   0.216   0.088
+ excl. entry-day lock      5432    5.2   -7.2    38  27.1   8.4    -92 |      -7.5       4.1   0.298   0.036
+   share of episodes whose entry session closed at the upper lock: 16.5%
+
+-- F3: fall: ret_10d<-12%, no filing in 20; episodes 3068; net of costs, entry next open
+ exit T5: episodes with outcome 2890 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2890    1.1   -0.6    46  13.5   0.6    -46 |      -1.0      -0.2   0.000   0.000
+ in-sample to 2026-08      2846    1.1   -0.6    47  13.5   0.6    -46 |      -1.0      -0.2   0.000   0.000
+ out-of-sample 2026-09+      44   -0.7   -1.1    41   9.1   0.0    -19 |      -1.3      -0.8   0.360   0.450
+ regime bill>policy        2188    1.2   -0.6    47  13.8   0.5    -46 |      -1.0      -0.3   0.000   0.000
+ regime bill<=policy        702    0.6   -0.7    45  12.3   0.7    -32 |      -1.0      -0.1   0.048   0.030
+ tier A >Rs20m              290    0.2    0.5    53  10.0   0.0    -26 |       0.0       0.4   0.078   0.690
+ tier B Rs5-20m             226   -0.2   -1.0    45   8.8   0.0    -29 |      -1.3      -0.6   0.234   0.148
+ tier C <Rs5m              2374    1.3   -0.8    46  14.3   0.7    -46 |      -1.0      -0.3   0.000   0.000
+ excl. entry-day lock      2374    0.4   -1.0    44  11.1   0.4    -46 |      -1.0      -0.4   0.008   0.000
+   share of episodes whose entry session closed at the upper lock: 17.9%
+ exit T10: episodes with outcome 2935 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2935    2.3   -0.1    50  20.5   1.2    -54 |      -1.0       0.2   0.000   0.000
+ in-sample to 2026-08      2893    2.3   -0.1    50  20.6   1.2    -54 |      -1.0       0.2   0.000   0.000
+ out-of-sample 2026-09+      42    0.8   -0.1    48  11.9   0.0    -18 |      -1.6      -0.9   0.058   0.128
+ regime bill>policy        2228    2.4    0.1    50  21.1   1.1    -54 |      -1.0       0.1   0.000   0.000
+ regime bill<=policy        707    2.0   -0.5    48  18.8   1.4    -35 |      -1.0       0.7   0.014   0.010
+ tier A >Rs20m              290    0.9    0.5    53  14.8   0.3    -35 |      -0.3       0.5   0.018   0.160
+ tier B Rs5-20m             226    0.5   -0.9    44  18.1   0.4    -28 |      -1.3      -0.3   0.158   0.076
+ tier C <Rs5m              2419    2.6   -0.1    50  21.4   1.4    -54 |      -1.0       0.2   0.000   0.000
+ excl. entry-day lock      2405    1.6   -0.5    49  18.7   1.0    -54 |      -1.0       0.1   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 18.1%
+ exit T20: episodes with outcome 2962 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2962    3.6    0.2    50  26.1   2.8    -61 |      -1.1       1.1   0.000   0.000
+ in-sample to 2026-08      2923    3.7    0.3    51  26.3   2.8    -61 |      -1.0       1.1   0.000   0.000
+ out-of-sample 2026-09+      39   -3.6   -3.7    33   7.7   2.6    -42 |      -3.9      -2.2   0.438   0.748
+ regime bill>policy        2255    3.9    0.5    51  27.7   2.7    -57 |      -1.1       0.9   0.000   0.000
+ regime bill<=policy        707    2.3   -0.4    48  20.9   2.8    -61 |      -1.1       1.9   0.018   0.268
+ tier A >Rs20m              290    1.7   -0.4    48  21.7   1.7    -40 |      -0.1       1.3   0.690   0.304
+ tier B Rs5-20m             226    0.1   -2.0    42  20.8   1.8    -47 |      -2.0       0.0   0.510   0.436
+ tier C <Rs5m              2446    4.1    0.6    52  27.1   3.0    -61 |      -1.1       1.2   0.000   0.000
+ excl. entry-day lock      2426    2.9   -0.1    50  25.2   2.3    -61 |      -1.2       1.0   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 18.1%
+ exit trail20: episodes with outcome 2945 (placebo pool fallback to date-only: 1)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2945    6.2   -6.3    38  27.6   8.3    -91 |      -7.8       4.0   0.004   0.002
+ in-sample to 2026-08      2935    6.3   -6.3    38  27.7   8.3    -91 |      -7.8       4.0   0.004   0.002
+ out-of-sample 2026-09+      10  -12.5  -15.5    20  10.0   0.0    -27 |     -14.2      -8.6   0.636   0.772
+ regime bill>policy        2240    4.4   -6.4    37  26.9   7.7    -49 |      -8.7       2.0   0.000   0.000
+ regime bill<=policy        705   12.1   -5.9    40  30.1  10.1    -91 |      -4.0      10.3   0.960   0.194
+ tier A >Rs20m              283    6.3   -9.2    33  26.5  10.2    -32 |      -8.0       5.2   0.792   0.276
+ tier B Rs5-20m             218    1.2   -8.8    36  23.4   6.9    -28 |      -9.1       3.7   0.440   0.916
+ tier C <Rs5m              2444    6.7   -5.5    39  28.2   8.1    -91 |      -7.6       3.9   0.002   0.000
+ excl. entry-day lock      2409    6.3   -6.3    38  28.2   8.4    -91 |      -7.7       4.1   0.006   0.002
+   share of episodes whose entry session closed at the upper lock: 18.2%
+
+-- F3f: fall: ret_10d<-12%, no filing in 20; episodes 2506; net of costs, entry next open
+ exit T5: episodes with outcome 2349 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2349    1.4   -0.6    47  14.3   0.6    -46 |      -1.0      -0.2   0.000   0.000
+ in-sample to 2026-08      2316    1.3   -0.6    47  14.2   0.6    -46 |      -1.0      -0.2   0.000   0.000
+ out-of-sample 2026-09+      33    3.7   -0.4    48  21.2   0.0    -16 |      -1.6      -1.1   0.066   0.002
+ regime bill>policy        1788    1.5   -0.6    47  15.2   0.6    -46 |      -1.0      -0.3   0.000   0.000
+ regime bill<=policy        561    1.0   -0.6    47  11.8   0.7    -32 |      -1.0       0.0   0.010   0.004
+ tier A >Rs20m              156    0.9    0.1    51  10.9   0.0    -18 |      -0.1       0.6   0.328   0.306
+ tier B Rs5-20m             145    1.2    1.0    52  11.7   0.0    -29 |      -1.0       0.0   0.000   0.022
+ tier C <Rs5m              2048    1.4   -0.8    46  14.8   0.7    -46 |      -1.0      -0.3   0.000   0.000
+ excl. entry-day lock      1913    0.7   -1.0    45  12.1   0.5    -46 |      -1.0      -0.3   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 18.6%
+ exit T10: episodes with outcome 2389 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2389    2.7   -0.1    50  21.6   1.4    -42 |      -1.0       0.3   0.000   0.000
+ in-sample to 2026-08      2358    2.8   -0.1    50  21.7   1.4    -42 |      -1.0       0.3   0.000   0.000
+ out-of-sample 2026-09+      31    0.2   -1.9    39  12.9   0.0    -18 |      -2.3      -1.4   0.382   0.196
+ regime bill>policy        1822    2.9   -0.1    50  22.6   1.4    -42 |      -1.0       0.1   0.000   0.000
+ regime bill<=policy        567    2.3   -0.4    49  18.2   1.6    -35 |      -1.0       0.9   0.006   0.008
+ tier A >Rs20m              156    1.6    0.6    53  16.7   0.6    -22 |      -0.3       0.8   0.056   0.100
+ tier B Rs5-20m             145    1.0   -1.0    45  17.9   0.7    -28 |      -1.4       0.1   0.274   0.122
+ tier C <Rs5m              2088    2.9   -0.1    50  22.2   1.5    -42 |      -1.0       0.3   0.000   0.000
+ excl. entry-day lock      1940    2.0   -0.4    49  19.7   1.2    -42 |      -1.1       0.1   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 18.8%
+ exit T20: episodes with outcome 2413 (placebo pool fallback to date-only: 0)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2413    4.1    0.7    52  27.0   3.0    -61 |      -1.0       1.3   0.000   0.000
+ in-sample to 2026-08      2386    4.2    0.7    52  27.2   3.0    -61 |      -1.0       1.3   0.000   0.000
+ out-of-sample 2026-09+      27    1.4   -2.8    48  14.8   3.7    -17 |      -3.8      -1.9   0.296   0.136
+ regime bill>policy        1846    4.5    1.0    53  28.9   3.0    -57 |      -1.0       1.0   0.000   0.000
+ regime bill<=policy        567    2.9   -0.2    49  21.0   3.0    -61 |      -1.0       2.2   0.014   0.226
+ tier A >Rs20m              156    2.0    1.1    54  24.4   0.6    -40 |       0.4       2.1   0.222   0.510
+ tier B Rs5-20m             144    1.7   -0.8    47  22.2   2.8    -47 |      -1.4       0.8   0.192   0.184
+ tier C <Rs5m              2113    4.4    0.8    52  27.5   3.2    -61 |      -1.1       1.3   0.000   0.000
+ excl. entry-day lock      1958    3.4    0.4    51  25.9   2.7    -61 |      -1.2       1.1   0.000   0.000
+   share of episodes whose entry session closed at the upper lock: 18.9%
+ exit trail20: episodes with outcome 2399 (placebo pool fallback to date-only: 1)
+ subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+ ALL                       2399    6.7   -5.7    39  27.8   8.2    -91 |      -7.6       3.9   0.000   0.000
+ in-sample to 2026-08      2393    6.7   -5.7    39  27.8   8.2    -91 |      -7.6       3.9   0.000   0.000
+ out-of-sample 2026-09+       6   -4.3   -6.9    50  33.3   0.0    -25 |     -14.4      -8.3   0.204   0.266
+ regime bill>policy        1832    4.7   -5.8    38  27.0   7.8    -49 |      -8.7       1.7   0.000   0.000
+ regime bill<=policy        567   13.1   -5.5    41  30.3   9.5    -91 |      -3.3      11.0   0.956   0.184
+ tier A >Rs20m              154    3.6   -8.8    32  22.1   7.1    -32 |      -7.8       3.9   0.700   0.534
+ tier B Rs5-20m             139    3.3   -7.8    38  26.6   7.9    -28 |      -8.5       5.1   0.346   0.720
+ tier C <Rs5m              2106    7.1   -5.3    39  28.3   8.3    -91 |      -7.5       3.8   0.000   0.000
+ excl. entry-day lock      1942    6.8   -5.7    39  28.4   8.2    -91 |      -7.7       3.8   0.000   0.002
+   share of episodes whose entry session closed at the upper lock: 19.0%
+
+=== 3c. Excursions, R1f (adjusted, from next open) ===
+ k=5: median MFE 5.1%, median MAE -5.5%, share MAE<=-10% 24.5%, share MAE<=-20% 4.0%, share MFE>=+10% 28.1%
+ k=10: median MFE 7.3%, median MAE -7.9%, share MAE<=-10% 38.5%, share MAE<=-20% 8.7%, share MFE>=+10% 38.5%
+ k=20: median MFE 10.2%, median MAE -11.1%, share MAE<=-10% 53.6%, share MAE<=-20% 18.5%, share MFE>=+10% 50.0%
+
+=== 4. FROM THE NEWS DAY ONWARD ===
+Episodes followed by a filing of the five classes in sessions t+1..t+10. News session N = first such filing. Row r = first traded row of the symbol at or after N.
+pre = entry open to the close before N (gross); news-day move = ret_1d at r; post = net return entering at the open after N, exit T5/T10/T20/trail20.
+placebo = random rows in the same month and tier that carry a filing of the five classes on that session, same exit.
+
+-- R1: rise: ret_5d>8%, no filing in 10: episodes 8001, followed within 10: 2193 (27.4%), with a traded row at/after news: 2193
+  pre-news run-up from entry open: n 1822, median -0.0%, mean 1.3%; news-session move: median 0.0%, mean 0.7%, share>0 49%
+  sessions from t to news: median 5
+  post-news exit T5: n 2108 (placebo pool found for 2108)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2108   -0.6   -1.4    39  10.0   0.5    -32 |      -1.2      -0.6   0.944   0.594
+  first filing = financial_re  175   -0.7   -1.0    39   9.1   0.0    -20 |      -1.0      -0.4   0.552   0.652
+  first filing = material_inf  237    0.5   -1.4    40  12.2   1.3    -30 |      -1.1      -0.4   0.830   0.074
+  first filing = dividend_or_  127   -0.5   -1.0    44   7.9   0.0    -20 |      -1.1      -0.3   0.396   0.584
+  first filing = insider_trad  322    0.4   -1.0    43  12.1   1.2    -26 |      -1.0      -0.2   0.466   0.110
+  first filing = board_meetin 1247   -1.1   -1.6    37   9.3   0.2    -32 |      -1.3      -0.8   0.972   0.948
+   same episodes, original entry at the signal's next open: n 2058, mean 0.8, median -1.0, win 42%
+  post-news exit T10: n 2141 (placebo pool found for 2141)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2141   -0.8   -2.6    38  14.2   1.6   -101 |      -1.6      -0.3   1.000   0.946
+  first filing = financial_re  178   -1.5   -2.4    37  10.1   0.6    -34 |      -1.0       0.1   0.978   0.960
+  first filing = material_inf  238   -0.0   -1.8    42  16.0   2.1   -101 |      -1.2       0.0   0.840   0.504
+  first filing = dividend_or_  126    0.7   -1.1    42  14.3   0.8    -20 |      -1.5       0.0   0.330   0.252
+  first filing = insider_trad  324    0.2   -2.1    42  13.9   1.9    -40 |      -1.1       0.5   0.980   0.690
+  first filing = board_meetin 1275   -1.2   -3.2    37  14.5   1.6    -45 |      -1.9      -0.7   1.000   0.924
+   same episodes, original entry at the signal's next open: n 2105, mean 1.5, median -1.3, win 43%
+  post-news exit T20: n 2138 (placebo pool found for 2138)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2138    0.5   -2.5    42  19.9   2.7    -99 |      -1.7       0.9   0.998   0.860
+  first filing = financial_re  179    1.0   -3.3    39  17.3   1.7    -46 |      -0.9       1.8   1.000   0.678
+  first filing = material_inf  237   -0.6   -3.0    41  19.8   3.0    -99 |      -1.6       1.0   0.966   0.896
+  first filing = dividend_or_  125    2.2   -1.2    46  20.8   2.4    -41 |      -2.0       1.0   0.232   0.202
+  first filing = insider_trad  325    2.7   -0.9    48  23.1   2.8    -68 |      -0.9       2.6   0.522   0.414
+  first filing = board_meetin 1272   -0.1   -3.0    40  19.4   2.8    -91 |      -2.1       0.4   1.000   0.826
+   same episodes, original entry at the signal's next open: n 2109, mean 2.3, median -2.3, win 43%
+  post-news exit trail20: n 2125 (placebo pool found for 2125)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2125    5.5   -9.2    37  27.8   8.1   -101 |      -5.7       6.2   1.000   0.684
+  first filing = financial_re  178    5.5  -10.0    32  23.6   6.2    -52 |      -4.7       6.7   0.996   0.594
+  first filing = material_inf  234    1.8   -7.4    38  26.5   8.5   -101 |      -6.3       4.5   0.752   0.858
+  first filing = dividend_or_  124    2.5   -9.0    36  24.2   4.0    -29 |      -7.6       3.0   0.756   0.454
+  first filing = insider_trad  319    7.7   -6.3    42  34.8  10.0    -32 |      -2.0      10.0   1.000   0.762
+  first filing = board_meetin 1270    5.9  -10.5    36  27.2   8.3    -91 |      -6.5       5.8   1.000   0.420
+   same episodes, original entry at the signal's next open: n 2101, mean 7.9, median -6.9, win 39%
+
+-- R1f: rise: ret_5d>8%, no filing in 10: episodes 5935, followed within 10: 1574 (26.5%), with a traded row at/after news: 1574
+  pre-news run-up from entry open: n 1303, median -0.3%, mean 1.0%; news-session move: median 0.0%, mean 0.5%, share>0 48%
+  sessions from t to news: median 5
+  post-news exit T5: n 1498 (placebo pool found for 1498)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1498   -1.1   -1.7    37  10.2   0.5    -32 |      -1.3      -0.7   0.998   0.958
+  first filing = financial_re  121   -0.7   -1.0    37  13.2   0.0    -20 |      -1.0      -0.2   0.566   0.716
+  first filing = material_inf  163    0.7   -1.3    40  15.3   1.8    -30 |      -1.0      -0.4   0.730   0.070
+  first filing = dividend_or_   76   -1.1   -1.8    38   6.6   0.0    -15 |      -1.3      -0.6   0.774   0.688
+  first filing = insider_trad  212   -0.4   -1.4    38  10.8   0.9    -26 |      -1.2      -0.4   0.754   0.476
+  first filing = board_meetin  926   -1.6   -2.0    36   9.1   0.2    -32 |      -1.5      -0.9   0.992   0.992
+   same episodes, original entry at the signal's next open: n 1463, mean 0.4, median -1.2, win 41%
+  post-news exit T10: n 1525 (placebo pool found for 1525)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1525   -0.9   -3.0    37  14.2   2.0   -101 |      -1.8      -0.6   1.000   0.798
+  first filing = financial_re  124   -1.4   -2.9    35  12.9   0.8    -34 |      -1.1       0.2   0.994   0.912
+  first filing = material_inf  164    0.5   -1.0    46  15.9   3.7   -101 |      -1.2       0.2   0.372   0.360
+  first filing = dividend_or_   75    1.6   -2.1    40  16.0   2.7    -20 |      -2.1      -0.7   0.498   0.064
+  first filing = insider_trad  214   -0.9   -2.5    35  10.7   1.9    -33 |      -1.3       0.4   0.980   0.908
+  first filing = board_meetin  948   -1.2   -3.5    36  14.7   1.9    -45 |      -2.1      -1.0   1.000   0.712
+   same episodes, original entry at the signal's next open: n 1499, mean 0.9, median -2.1, win 39%
+  post-news exit T20: n 1524 (placebo pool found for 1524)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1524    0.4   -3.1    40  19.6   3.1    -99 |      -2.0       0.8   1.000   0.728
+  first filing = financial_re  125    1.4   -3.9    38  17.6   2.4    -46 |      -1.2       1.8   0.996   0.488
+  first filing = material_inf  165   -0.2   -2.7    42  21.2   4.8    -99 |      -1.5       1.5   0.932   0.830
+  first filing = dividend_or_   74    4.0   -1.5    46  21.6   4.1    -41 |      -2.9      -0.3   0.126   0.032
+  first filing = insider_trad  215    0.9   -1.7    45  19.5   1.9    -68 |      -1.0       2.7   0.798   0.828
+  first filing = board_meetin  945   -0.1   -3.6    39  19.5   3.1    -91 |      -2.4       0.1   1.000   0.586
+   same episodes, original entry at the signal's next open: n 1502, mean 1.8, median -3.4, win 41%
+  post-news exit trail20: n 1518 (placebo pool found for 1518)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1518    4.9  -10.9    35  26.7   8.3   -101 |      -7.0       5.2   1.000   0.526
+  first filing = financial_re  125    6.4  -11.1    33  21.6   8.0    -52 |      -6.6       5.2   0.974   0.336
+  first filing = material_inf  162    1.7   -8.5    36  26.5   9.3   -101 |      -6.4       4.1   0.876   0.786
+  first filing = dividend_or_   74    4.9  -12.3    35  25.7   5.4    -27 |      -9.8       0.9   0.852   0.132
+  first filing = insider_trad  210    6.7   -8.7    39  31.9  10.0    -33 |      -2.6      10.0   0.998   0.824
+  first filing = board_meetin  947    4.8  -11.4    35  26.4   8.0    -91 |      -7.8       4.7   1.000   0.406
+   same episodes, original entry at the signal's next open: n 1500, mean 6.5, median -8.7, win 36%
+
+-- R2f: rise: ret_5d>8%, no filing in 5: episodes 7571, followed within 10: 2300 (30.4%), with a traded row at/after news: 2300
+  pre-news run-up from entry open: n 1872, median -0.2%, mean 1.0%; news-session move: median 0.0%, mean 0.5%, share>0 48%
+  sessions from t to news: median 5
+  post-news exit T5: n 2193 (placebo pool found for 2193)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2193   -0.8   -1.6    38  10.9   0.4    -35 |      -1.2      -0.6   0.994   0.838
+  first filing = financial_re  263   -1.7   -2.3    36   9.9   0.0    -34 |      -1.1      -0.5   0.998   0.990
+  first filing = material_inf  230    1.1   -1.1    42  17.0   1.7    -35 |      -1.2      -0.5   0.476   0.016
+  first filing = dividend_or_  127   -1.1   -1.2    38   7.1   0.0    -19 |      -1.3      -0.7   0.414   0.680
+  first filing = insider_trad  315    0.2   -1.0    42  12.4   0.3    -28 |      -1.2      -0.3   0.262   0.178
+  first filing = board_meetin 1258   -1.1   -1.8    38  10.0   0.2    -32 |      -1.3      -0.7   0.996   0.964
+   same episodes, original entry at the signal's next open: n 2143, mean 0.2, median -1.3, win 40%
+  post-news exit T10: n 2226 (placebo pool found for 2226)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2226   -0.6   -2.6    39  15.2   1.7   -101 |      -1.6      -0.3   1.000   0.858
+  first filing = financial_re  267   -1.7   -2.9    38  14.6   1.1    -39 |      -1.3       0.0   1.000   0.986
+  first filing = material_inf  230    0.8   -1.0    46  16.1   3.0   -101 |      -1.5      -0.1   0.118   0.124
+  first filing = dividend_or_  127   -0.6   -2.4    37  11.8   0.8    -27 |      -2.0      -0.6   0.694   0.448
+  first filing = insider_trad  320   -0.2   -2.1    38  13.4   1.6    -33 |      -1.3       0.3   0.968   0.696
+  first filing = board_meetin 1282   -0.8   -3.0    39  16.0   1.6    -45 |      -1.8      -0.5   1.000   0.774
+   same episodes, original entry at the signal's next open: n 2190, mean 0.9, median -2.0, win 40%
+  post-news exit T20: n 2223 (placebo pool found for 2223)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2223    0.9   -2.7    42  20.9   3.6    -99 |      -1.7       1.1   1.000   0.592
+  first filing = financial_re  268    0.5   -3.4    38  18.3   3.7    -46 |      -1.1       1.7   1.000   0.854
+  first filing = material_inf  230   -0.2   -3.0    42  21.3   5.2    -99 |      -1.8       0.8   0.944   0.742
+  first filing = dividend_or_  126    1.0   -2.8    42  18.3   4.0    -55 |      -2.8       0.0   0.500   0.226
+  first filing = insider_trad  321    1.7   -1.7    45  21.8   2.8    -68 |      -1.2       2.2   0.812   0.582
+  first filing = board_meetin 1278    1.0   -2.7    41  21.4   3.4    -91 |      -1.9       0.8   0.996   0.324
+   same episodes, original entry at the signal's next open: n 2196, mean 2.1, median -2.9, win 42%
+  post-news exit trail20: n 2226 (placebo pool found for 2226)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 2226    5.0   -9.9    37  27.8   8.6   -101 |      -6.3       5.3   1.000   0.568
+  first filing = financial_re  269    2.7  -11.2    34  23.0   7.1    -52 |      -5.9       5.2   1.000   0.808
+  first filing = material_inf  230    1.9   -9.3    37  27.0   9.6   -101 |      -7.8       3.1   0.812   0.644
+  first filing = dividend_or_  127    0.6  -11.7    32  22.8   6.3    -48 |      -9.4       0.1   0.928   0.394
+  first filing = insider_trad  316    8.6   -7.9    39  31.6  10.4    -35 |      -3.5       8.7   1.000   0.420
+  first filing = board_meetin 1284    5.6  -10.0    37  28.5   8.6    -91 |      -6.4       5.4   1.000   0.404
+   same episodes, original entry at the signal's next open: n 2203, mean 6.0, median -7.8, win 37%
+
+-- R3f: rise: ret_10d>12%, no filing in 20: episodes 3163, followed within 10: 833 (26.3%), with a traded row at/after news: 833
+  pre-news run-up from entry open: n 689, median -0.0%, mean 1.7%; news-session move: median 0.1%, mean 0.6%, share>0 50%
+  sessions from t to news: median 5
+  post-news exit T5: n 801 (placebo pool found for 801)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes  801   -1.8   -2.3    34   9.1   0.5    -33 |      -1.4      -0.8   1.000   1.000
+  first filing = financial_re   47   -1.8   -2.5    34  10.6   0.0    -20 |      -1.4      -0.8   0.874   0.794
+  first filing = material_inf   79   -0.9   -1.9    37  11.4   0.0    -18 |      -1.0      -0.4   0.910   0.714
+  first filing = dividend_or_   17   -2.9   -3.8    29   0.0   0.0    -13 |      -1.0      -0.4   0.960   0.902
+  first filing = insider_trad  105   -2.0   -2.3    36   8.6   0.0    -26 |      -1.2      -0.3   0.970   0.964
+  first filing = board_meetin  553   -1.8   -2.3    33   9.0   0.7    -33 |      -1.5      -0.9   1.000   1.000
+   same episodes, original entry at the signal's next open: n 788, mean 0.7, median -1.0, win 44%
+  post-news exit T10: n 812 (placebo pool found for 812)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes  812   -1.6   -3.7    33  13.9   1.6    -39 |      -2.0      -0.6   1.000   0.984
+  first filing = financial_re   47   -0.7   -1.3    38  19.1   0.0    -34 |      -2.0      -0.6   0.314   0.486
+  first filing = material_inf   79   -2.0   -2.8    37  11.4   0.0    -34 |      -1.3       0.0   0.924   0.940
+  first filing = dividend_or_   17    4.0   -0.5    47  17.6   5.9    -20 |      -1.7      -0.3   0.216   0.072
+  first filing = insider_trad  107   -2.2   -2.5    31  12.1   0.9    -33 |      -1.6       0.2   0.920   0.960
+  first filing = board_meetin  562   -1.7   -4.3    32  14.1   2.0    -39 |      -2.1      -0.9   1.000   0.926
+   same episodes, original entry at the signal's next open: n 799, mean 0.7, median -1.7, win 42%
+  post-news exit T20: n 816 (placebo pool found for 816)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes  816    0.4   -4.0    39  20.6   3.8    -56 |      -2.2       0.7   1.000   0.618
+  first filing = financial_re   47    2.9   -1.0    49  23.4   6.4    -31 |      -2.6       0.7   0.190   0.230
+  first filing = material_inf   79   -2.0   -4.4    35  19.0   1.3    -35 |      -1.8       0.5   0.982   0.920
+  first filing = dividend_or_   18   17.7    0.5    50  33.3  11.1    -22 |      -1.6       1.2   0.210   0.004
+  first filing = insider_trad  109   -0.2   -2.2    43  19.3   0.9    -42 |      -1.7       2.5   0.690   0.858
+  first filing = board_meetin  563    0.0   -4.8    37  20.4   4.3    -56 |      -2.3       0.3   1.000   0.564
+   same episodes, original entry at the signal's next open: n 803, mean 1.2, median -4.2, win 40%
+  post-news exit trail20: n 814 (placebo pool found for 814)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes  814    3.7  -12.0    31  24.6   8.1    -39 |      -7.0       5.8   1.000   0.880
+  first filing = financial_re   48    4.6   -8.8    38  29.2  12.5    -36 |      -9.4       2.7   0.440   0.314
+  first filing = material_inf   80   -6.4  -15.1    29  17.5   3.8    -32 |      -7.6       3.9   1.000   1.000
+  first filing = dividend_or_   17   17.3   -4.8    35  35.3  11.8    -25 |      -9.3      -0.8   0.224   0.020
+  first filing = insider_trad  106    6.6   -5.2    42  32.1   9.4    -32 |      -3.6      10.8   0.696   0.740
+  first filing = board_meetin  563    4.1  -12.9    29  23.4   8.0    -39 |      -7.1       5.6   1.000   0.728
+   same episodes, original entry at the signal's next open: n 805, mean 5.9, median -10.3, win 34%
+
+-- F1: fall: ret_5d<-8%, no filing in 10: episodes 7076, followed within 10: 1851 (26.2%), with a traded row at/after news: 1849
+  pre-news run-up from entry open: n 1553, median 0.0%, mean 0.9%; news-session move: median 0.0%, mean 1.0%, share>0 49%
+  sessions from t to news: median 6
+  post-news exit T5: n 1765 (placebo pool found for 1765)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1765   -0.4   -1.0    41  10.4   0.5    -33 |      -1.5      -1.1   0.000   0.002
+  first filing = financial_re  153   -0.4   -1.6    39  11.1   0.7    -24 |      -1.6      -1.0   0.506   0.184
+  first filing = material_inf  173    2.3   -0.5    47  14.5   1.7    -26 |      -1.6      -0.9   0.002   0.000
+  first filing = dividend_or_  107    0.4   -0.5    46   7.5   0.0    -16 |      -1.4      -1.0   0.016   0.054
+  first filing = insider_trad  237    0.2   -0.7    45   8.4   0.4    -22 |      -1.3      -0.7   0.020   0.062
+  first filing = board_meetin 1095   -1.1   -1.4    38  10.3   0.3    -33 |      -1.6      -1.3   0.176   0.242
+   same episodes, original entry at the signal's next open: n 1708, mean 0.4, median -0.9, win 44%
+  post-news exit T10: n 1791 (placebo pool found for 1791)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1791   -0.8   -2.3    39  14.0   1.1    -45 |      -2.3      -1.5   0.364   0.012
+  first filing = financial_re  153    0.3   -2.4    41  15.7   2.0    -31 |      -2.5      -1.7   0.442   0.038
+  first filing = material_inf  174    2.9   -1.1    46  16.1   4.0    -25 |      -2.5      -1.7   0.026   0.000
+  first filing = dividend_or_  107    0.2   -1.0    44  12.1   0.9    -27 |      -2.3      -1.4   0.066   0.098
+  first filing = insider_trad  237    0.2   -1.7    40  11.0   1.3    -33 |      -1.7      -0.5   0.520   0.192
+  first filing = board_meetin 1120   -1.9   -2.8    38  14.3   0.4    -45 |      -2.4      -1.6   0.898   0.714
+   same episodes, original entry at the signal's next open: n 1750, mean 0.9, median -0.8, win 46%
+  post-news exit T20: n 1781 (placebo pool found for 1781)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1781   -0.5   -2.3    41  18.9   1.6    -52 |      -2.7      -1.0   0.054   0.166
+  first filing = financial_re  152    2.2   -2.7    40  19.7   2.0    -41 |      -3.2      -1.3   0.310   0.044
+  first filing = material_inf  174    3.2   -1.2    45  21.8   4.6    -39 |      -2.7      -1.1   0.070   0.002
+  first filing = dividend_or_  107   -0.7   -1.8    42  19.6   0.0    -28 |      -3.2      -1.1   0.114   0.340
+  first filing = insider_trad  238    2.8   -1.0    46  23.1   1.3    -39 |      -1.3       1.2   0.276   0.136
+  first filing = board_meetin 1110   -2.1   -2.8    39  17.4   1.3    -52 |      -3.0      -1.4   0.372   0.914
+   same episodes, original entry at the signal's next open: n 1747, mean 0.9, median -1.3, win 44%
+  post-news exit trail20: n 1766 (placebo pool found for 1766)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1766    2.9   -9.9    35  25.0   6.9    -44 |      -8.5       4.0   0.986   0.848
+  first filing = financial_re  150    2.9  -10.1    39  26.7   6.7    -34 |      -9.2       4.4   0.652   0.598
+  first filing = material_inf  169    8.0   -6.5    38  27.2  13.0    -35 |      -9.1       3.9   0.092   0.082
+  first filing = dividend_or_  106   -3.2  -12.2    29  21.7   4.7    -27 |     -10.7       0.9   0.712   0.874
+  first filing = insider_trad  237    8.2   -5.9    41  30.8   7.6    -30 |      -5.7       6.7   0.558   0.228
+  first filing = board_meetin 1104    1.5  -10.5    33  23.5   6.1    -44 |      -8.8       3.7   0.984   0.954
+   same episodes, original entry at the signal's next open: n 1739, mean 2.6, median -9.3, win 34%
+
+-- F1f: fall: ret_5d<-8%, no filing in 10: episodes 5166, followed within 10: 1291 (25.0%), with a traded row at/after news: 1289
+  pre-news run-up from entry open: n 1076, median 0.0%, mean 1.2%; news-session move: median 0.0%, mean 1.3%, share>0 49%
+  sessions from t to news: median 6
+  post-news exit T5: n 1213 (placebo pool found for 1213)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1213   -0.3   -1.0    40  11.0   0.7    -31 |      -1.5      -1.0   0.008   0.008
+  first filing = financial_re   97   -0.8   -1.9    33   9.3   1.0    -21 |      -1.5      -0.9   0.714   0.440
+  first filing = material_inf   88    2.9   -0.1    49  15.9   3.4    -26 |      -1.4      -0.9   0.004   0.000
+  first filing = dividend_or_   63    0.9   -0.2    49   9.5   0.0    -16 |      -1.3      -0.7   0.038   0.094
+  first filing = insider_trad  142    0.2   -1.0    43   7.7   0.7    -26 |      -1.2      -0.5   0.162   0.198
+  first filing = board_meetin  823   -0.8   -1.2    38  11.3   0.4    -31 |      -1.5      -1.1   0.056   0.134
+   same episodes, original entry at the signal's next open: n 1162, mean 1.1, median -1.0, win 43%
+  post-news exit T10: n 1238 (placebo pool found for 1238)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1238   -0.8   -2.3    39  14.8   1.3    -45 |      -2.2      -1.2   0.578   0.130
+  first filing = financial_re   97    0.2   -1.0    44  15.5   2.1    -25 |      -2.1      -0.9   0.116   0.180
+  first filing = material_inf   89    4.1   -1.0    47  19.1   5.6    -25 |      -2.3      -1.3   0.094   0.000
+  first filing = dividend_or_   63    1.4   -0.9    49  14.3   1.6    -27 |      -2.3      -0.4   0.070   0.150
+  first filing = insider_trad  142   -0.0   -2.5    34  12.0   2.1    -27 |      -1.7      -0.1   0.868   0.446
+  first filing = board_meetin  847   -1.7   -2.9    38  14.8   0.6    -45 |      -2.3      -1.4   0.972   0.674
+   same episodes, original entry at the signal's next open: n 1206, mean 1.4, median -0.9, win 45%
+  post-news exit T20: n 1232 (placebo pool found for 1232)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1232   -0.4   -1.8    41  18.9   1.9    -52 |      -2.5      -0.3   0.016   0.498
+  first filing = financial_re   96    0.4   -1.3    42  20.8   1.0    -41 |      -2.6       0.1   0.154   0.334
+  first filing = material_inf   89    4.0   -1.0    47  24.7   5.6    -39 |      -2.8      -0.9   0.048   0.012
+  first filing = dividend_or_   63    0.4   -0.0    49  22.2   0.0    -28 |      -2.8       0.1   0.032   0.412
+  first filing = insider_trad  142    2.7   -1.6    40  20.4   2.1    -39 |      -1.4       1.9   0.566   0.234
+  first filing = board_meetin  842   -1.5   -2.4    40  17.6   1.7    -52 |      -2.6      -0.7   0.278   0.890
+   same episodes, original entry at the signal's next open: n 1205, mean 1.6, median -1.0, win 44%
+  post-news exit trail20: n 1229 (placebo pool found for 1229)
+  subset                        n   mean    med  win%  >10%  >50%  worst |  plac med plac mean  p(med) p(mean)
+  all first-filing classes 1229    4.1   -9.2    36  26.5   7.5    -44 |      -7.8       4.7   0.958   0.594
+  first filing = financial_re   96   -1.4  -12.1    36  21.9   3.1    -34 |      -9.3       3.2   0.886   0.828
+  first filing = material_inf   86    8.2   -3.9    41  29.1  11.6    -35 |      -8.9       2.9   0.012   0.092
+  first filing = dividend_or_   63   -0.3   -6.9    35  23.8   4.8    -27 |      -9.7       3.1   0.188   0.720
+  first filing = insider_trad  141   10.9   -8.5    39  32.6   7.8    -30 |      -4.3       7.1   0.958   0.122
+  first filing = board_meetin  843    3.5   -9.3    35  26.0   7.7    -44 |      -7.9       4.7   0.946   0.740
+   same episodes, original entry at the signal's next open: n 1208, mean 5.0, median -8.4, win 36%
+
+=== 5. NAMES THAT REPEAT (R1f episodes) ===
+names with 3+ episodes: 350, episodes in them 5880 of 5935
+per-name table (net %, T20 = 20-session time exit, tr = trail20):
+sym      eps news10%  T10med  T20mean  T20med T20win%  tr med tr mean  tv Rs m  first..last
+DAAG      55      16    -3.2      5.0    -2.9      39   -10.6    53.9     0.02  2017-01-16..2026-08-10
+JATM      52      19    -0.2      7.3    -0.9      48    -5.8     8.5     0.01  2017-01-05..2026-09-18
+LEUL      51      25     2.3      0.7    -1.4      39    -0.6     0.2     0.03  2017-01-23..2026-08-28
+DWSM      48      21    -4.2     -2.6    -4.0      47    -8.9    -5.5     0.04  2017-03-24..2026-09-21
+PIM       48       8    -4.6     -0.5    -5.2      33   -15.0     1.8     0.00  2017-01-02..2026-08-13
+FPJM      47      15    -4.3     -0.3    -1.6      40   -13.5    -2.7     0.00  2017-05-17..2026-08-18
+JUBS      46      17    -2.8     -0.5    -3.5      43   -15.2     8.0     0.01  2017-07-05..2026-09-14
+GFIL      45      22    -4.0     -2.5    -6.2      34   -11.6    -2.6     0.01  2017-01-06..2026-06-30
+SERT      44      14    -3.4     -0.5    -3.0      45    -8.3     1.5     0.03  2017-01-02..2026-08-17
+DFSM      43      16    -5.9      0.5    -3.5      42   -10.1     5.4     0.32  2017-04-17..2026-07-27
+BILF      43      14    -6.6      7.0    -3.3      37    -6.3    22.2     0.07  2017-01-11..2025-06-24
+SSML      42      12    -3.7      2.3    -7.0      31   -15.2    -5.8     0.03  2017-01-05..2026-07-27
+ASTM      42      19     4.1      9.5     1.5      52   -11.1    13.0     0.02  2017-04-07..2026-09-16
+HAEL      41      29    -3.0     -6.2    -4.6      32   -13.2   -10.1     0.02  2017-02-10..2026-08-10
+RUBY      41      12    -0.4      6.0    -1.9      40   -15.3    -9.1     0.01  2017-11-14..2026-08-19
+FIBLM     40      12    -1.0      1.5    -1.0      46   -12.5    -5.9     0.00  2017-02-06..2026-10-12
+SLL       40      28    -1.0      3.7    -1.0      36   -12.1    -9.4     0.00  2017-01-26..2024-07-19
+FEM       40      25    -1.1      3.6     5.5      55    -5.1    -0.6     0.01  2017-01-02..2026-08-24
+FECM      40      32    -7.1     -5.1   -10.1      35   -12.5    -9.7     0.01  2017-01-13..2026-08-03
+REDCO     39      23    -0.6      2.7    -3.0      42   -11.9     2.5     0.02  2017-01-02..2026-06-09
+SSOM      38      16    -2.4      5.2    -5.1      46   -10.4    31.8     0.09  2017-05-31..2026-09-21
+FFLM      37       5    -1.5      6.7    -1.4      37   -12.5    -0.5     0.00  2017-01-27..2026-10-01
+PAKMI     36      22    -3.0      1.7    -4.7      40    -9.6    -3.6     0.00  2017-01-12..2023-04-17
+FDIBL     36      19    -5.6      6.7    -1.8      49    -3.4     9.3     0.26  2017-01-09..2024-03-21
+FRCL      35      26    -0.9      1.6     1.1      52   -11.4     9.0     0.02  2017-01-25..2026-09-25
+BFMOD     35      20    -5.2     -4.6    -4.0      30    -5.9     4.5     0.00  2017-01-02..2026-08-27
+TRSM      35      23    -0.8      0.9    -0.8      47   -11.7    -4.3     0.00  2017-05-24..2026-07-27
+NCML      35      29     5.5      6.9     3.1      55    -5.6    -0.7     0.02  2017-01-02..2026-09-15
+FANM      35      34    -1.1     -0.5    -4.1      42   -12.3    -1.5     0.00  2017-01-10..2026-08-21
+ZTL       34      21    -3.6      2.3    -0.3      50    -9.0    -1.4     0.01  2017-03-21..2026-09-21
+ZAHID     34      18    -3.6     -5.2    -4.4      26   -14.4    -1.2     0.01  2017-01-05..2026-07-13
+SINDM     33      21    -3.0     -3.2    -3.3      28    -7.1    -2.9     0.01  2017-03-24..2026-08-25
+LPGL      33      18    -3.5     14.3    -2.6      39    -7.2    40.7     0.02  2017-08-07..2026-08-19
+MSCL      32      28    -6.2     -0.5    -3.4      45   -16.2    -2.8     0.02  2018-06-22..2026-09-22
+ASHT      32      25    -3.2      5.4    -5.1      30   -15.6     8.3     0.00  2017-01-04..2026-07-27
+UBDL      32      28    -6.8     -1.0    -4.4      32   -10.7    -2.0     0.09  2017-01-06..2026-08-21
+JSML      31      16     2.6      3.4    -0.9      47    -6.9    -0.4     0.22  2017-03-06..2026-09-23
+STJT      31      19    -3.8     -3.6    -3.3      35   -13.6    -8.3     0.04  2017-06-29..2026-08-28
+RUPL      30      20    -2.4     -2.2    -5.3      33   -13.2    -5.0     0.07  2017-01-25..2026-08-17
+SML       30      30    -2.6      2.3    -3.8      43   -12.8    -1.5     0.06  2017-03-20..2026-03-24
+
+point-in-time test: the k-th episode of a name (k known at the time), net %, tier-OK only
+group                     n  news10% T10 mean T10 med T20 mean T20 med T20 win% tr mean  tr med
+1st episode             368     25.3     -0.6    -2.3      0.3    -3.5       39     2.1   -10.8
+2nd episode             368     29.1     -0.4    -2.6      0.3    -3.0       39     0.8   -11.2
+3rd+ episode           5180     26.4      0.2    -2.2      1.7    -2.4       41     3.7    -9.5
+3rd+ in 3+ names       5180     26.4      0.2    -2.2      1.7    -2.4       41     3.7    -9.5
+4th+ episode           4830     26.1      0.2    -2.3      1.8    -2.4       42     4.2    -9.3
+all                    5916     26.5      0.1    -2.2      1.5    -2.5       41     3.4    -9.8
+episodes k>=3: news within 10 after the signal, by the name's earlier episodes' rate (point in time):
+  earlier rate >=50%: n 713, news10 38.1%, T20 mean 0.4, median -1.3
+  earlier rate <50%: n 4467, news10 24.6%, T20 mean 1.9, median -2.5
+
+point-in-time repeat flag: episode where the same name already had 2+ episodes in the previous 252 sessions (known at the time)
+R1f repeat (2+ p T10       3801    0.1   -2.3    40  17.5   1.7    -76 |      -1.0       0.6   1.000   0.994
+R1f repeat (2+ p T20       3824    1.7   -2.7    41  22.0   3.7    -74 |      -1.1       1.6   1.000   0.348
+R1f repeat (2+ p trail20   3804    3.7  -10.2    34  23.9   7.8    -92 |      -7.2       4.4   1.000   0.856
+R1f not repeat T10         1938    0.0   -1.9    39  14.6   1.0    -49 |      -1.2       0.2   1.000   0.752
+R1f not repeat T20         1955    1.0   -2.1    41  18.8   2.7   -100 |      -1.4       1.1   0.996   0.508
+R1f not repeat trail20     1957    3.0   -8.7    36  24.9   6.5   -101 |      -7.9       3.6   0.922   0.730
+R1f repeat tier A T20       215    0.7   -3.8    39  21.4   2.8    -41 |      -1.9      -0.7   0.996   0.064
+R1f repeat tier B T20       197   -0.5   -3.9    43  23.9   0.5    -60 |      -1.9       0.3   0.996   0.802
+R3f repeat (2+ p T10       1318   -0.4   -2.0    41  17.8   2.0    -62 |      -1.0       0.6   1.000   0.998
+R3f repeat (2+ p T20       1324    0.8   -3.6    40  20.8   3.9    -71 |      -1.2       1.3   1.000   0.846
+R3f repeat (2+ p trail20   1320   -0.5  -11.7    30  21.4   6.4    -47 |      -7.7       3.5   1.000   1.000
+R3f not repeat T10         1749    0.2   -1.8    40  15.6   1.4    -48 |      -1.1       0.3   1.000   0.656
+R3f not repeat T20         1760    1.1   -2.4    41  20.2   2.7    -69 |      -1.7       1.1   0.998   0.408
+R3f not repeat trail20     1764    4.3  -10.4    35  23.6   7.6    -56 |      -7.8       3.8   1.000   0.298
+R3f repeat tier A T20        49    2.4   -1.9    47  26.5   4.1    -32 |      -1.2      -0.1   0.704   0.060
+R3f repeat tier B T20        59   -3.5   -2.6    44  13.6   0.0    -53 |      -1.5       0.7   0.804   0.998
+
+=== 6. CASE LISTS (R1f episodes, ranked by ret_5d at the signal close) ===
+R1f episodes 5935; followed by a five-class filing within 10: 1574; no filing of any class within 10: 3765
+
+30 LARGEST FOLLOWED BY A FILING WITHIN 10 SESSIONS (all liquidity tiers)
+T5/T10/T20/trail from the signal's next open, net %; post10/post20 = net return entering at the open after the news session
+KHYT   2023-03-31 r5 427.4% px   427.2 tv    0.00m | T5   14.6 T10   49.2 T20   67.1 tr   27.1 | +8s 2023-04-12 board_meet post10   12.8 post20    9.2 | Board Meeting
+SERF   2020-09-08 r5 133.0% px     8.5 tv    0.10m | T5  -15.9 T10   -2.9 T20    8.5 tr  -15.9 | +7s 2020-09-17 board_meet post10   15.2 post20   40.1 | Board Meeting
+SLCL   2017-10-02 r5  62.5% px     9.8 tv    0.16m | T5    6.9 T10   11.1 T20    4.0 tr  -11.7 | +5s 2017-10-09 board_meet post10    4.5 post20    3.4 | Meeting of the Board of Directors
+ZAL    2025-07-09 r5  61.1% px    26.2 tv   11.10m | T5   -1.5 T10   -7.4 T20  -10.4 tr   79.8 | +4s 2025-07-15 material_i post10  -12.0 post20  -15.2 | Material Information - Incorporation of Wholly Owned Subsidiary in UAE
+SHDT   2025-05-26 r5  61.1% px    38.8 tv    0.10m | T5   26.9 T10   43.3 T20   73.3 tr   58.0 | +3s 2025-05-30 insider_tr post10   42.3 post20   25.7 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+DAAG   2024-12-18 r5  61.1% px   139.2 tv    0.72m | T5  -12.4 T10  -15.3 T20  -24.8 tr  -24.8 | +6s 2024-12-27 insider_tr post10  -14.2 post20  -12.8 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+CFL    2025-09-11 r5  61.1% px    85.5 tv    0.00m | T5  -23.0 T10  -18.0 T20  -28.6 tr  -26.4 | +8s 2025-09-23 board_meet post10  -13.8 post20  -18.4 | BOARD MEETING
+BTL    2026-04-15 r5  60.9% px  1309.8 tv    0.45m | T5    4.1 T10   -5.7 T20   -8.8 tr  -14.1 | +3s 2026-04-20 board_meet post10  -21.0 post20  -19.2 | Board Meeting
+BECO   2025-09-24 r5  60.6% px    38.4 tv   48.61m | T5  -10.2 T10   17.7 T20   45.7 tr   22.8 | +1s 2025-09-25 board_meet post10   46.9 post20   49.3 | Board Meeting
+DSML   2017-08-07 r5  60.2% px    10.6 tv    0.00m | T5   -8.7 T10   -8.7 T20   -8.7 tr  -26.6 | +2s 2017-08-09 material_i post10   -1.9 post20  -11.3 | Material Information
+PHDL   2024-08-16 r5  60.0% px    33.8 tv    0.95m | T5   45.0 T10   34.8 T20   38.4 tr   34.8 | +5s 2024-08-23 insider_tr post10  -10.3 post20  -15.8 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+IDRT   2025-03-14 r5  59.7% px    25.9 tv    0.01m | T5  -19.5 T10  -20.0 T20  -30.4 tr  -20.6 | +2s 2025-03-18 board_meet post10  -14.9 post20  -30.1 | BOARD OF DIRECTORS MEETING
+BFMOD  2025-10-21 r5  59.4% px    22.2 tv    0.40m | T5  -30.5 T10  -24.8 T20    8.6 tr  -30.5 | +1s 2025-10-22 board_meet post10  -19.9 post20   31.5 | Board Meeting
+MWMP   2024-06-10 r5  58.3% px     7.1 tv   -1.00m | T5    nan T10    nan T20    nan tr    nan | +2s 2024-06-12 material_i post10    nan post20    nan | Material Information
+BPBL   2018-04-12 r5  58.0% px     7.9 tv    0.01m | T5  -24.7 T10  -15.2 T20  -27.9 tr  -24.7 | +7s 2018-04-23 board_meet post10  -12.2 post20  -35.1 | Board Meeting.
+WASL   2025-09-18 r5  56.5% px     6.6 tv   10.85m | T5   -6.6 T10  -12.8 T20   12.8 tr   -3.6 | +2s 2025-09-22 board_meet post10  -11.9 post20   21.0 | BOARD MEETING
+KCL    2025-07-09 r5  56.4% px   203.1 tv    0.00m | T5  -11.0 T10  -21.3 T20  -21.5 tr  -16.8 | +9s 2025-07-22 insider_tr post10   -1.0 post20    1.6 | KCL | Karam Ceramics Limited Disclosure of Interest by a Director CEO,
+SERF   2018-04-12 r5  53.2% px     6.1 tv    0.16m | T5  -24.1 T10  -20.7 T20  -36.4 tr  -29.8 | +2s 2018-04-16 board_meet post10   -9.2 post20  -23.0 | Board Meeting
+HAEL   2025-05-22 r5  52.4% px    20.2 tv    0.10m | T5  -12.4 T10   41.8 T20   20.2 tr   20.3 | +9s 2025-06-05 insider_tr post10  -20.6 post20  -10.0 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+DMC    2026-04-15 r5  49.3% px   162.3 tv    0.02m | T5   45.4 T10   14.0 T20   28.0 tr   14.0 | +6s 2026-04-23 board_meet post10  -13.7 post20  -13.3 | Board Meeting
+FDIBL  2019-02-07 r5  48.6% px     2.8 tv    0.26m | T5   -5.6 T10   -5.6 T20  -21.4 tr  -19.9 | +6s 2019-02-15 board_meet post10  -20.9 post20  -26.4 | Board Meeting
+DKL    2021-12-24 r5  48.5% px    15.6 tv    0.00m | T5   32.5 T10   58.8 T20    nan tr   35.8 | +2s 2021-12-28 material_i post10   17.4 post20    nan | MATERIAL INFORMATION NAME AND MOA CHANGED
+CLOV   2026-01-23 r5  47.7% px    60.9 tv    3.22m | T5   11.2 T10   16.9 T20    2.9 tr   -5.5 | +1s 2026-01-26 material_i post10   29.4 post20   21.9 | MATERIAL INFORMATION
+PIM    2021-08-25 r5  47.0% px    16.2 tv    0.03m | T5  -38.8 T10   -9.2 T20   -0.3 tr  -33.0 | +1s 2021-08-26 material_i post10   22.8 post20   16.0 | Material Information
+SSML   2023-12-28 r5  44.9% px     9.0 tv    0.02m | T5    2.9 T10  -20.9 T20  -17.9 tr  -17.0 | +3s 2024-01-02 board_meet post10  -32.7 post20  -29.5 | Board Meeting Other Than Financial Results REVOKED
+JATM   2020-07-16 r5  44.9% px     4.8 tv    0.00m | T5  -15.7 T10   -5.8 T20    5.3 tr  -26.7 | +1s 2020-07-17 insider_tr post10   -8.8 post20   14.3 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+SLL    2019-08-02 r5  44.5% px     2.9 tv    0.00m | T5    nan T10    nan T20   98.5 tr   39.0 | +8s 2019-08-20 board_meet post10   59.2 post20   11.4 | BOARD MEETING
+SITC   2025-09-09 r5  44.0% px   949.3 tv   10.89m | T5    1.4 T10   -3.1 T20   -6.1 tr   -6.7 | +3s 2025-09-12 board_meet post10  -12.9 post20   -8.9 | Board Meeting
+HAEL   2024-11-15 r5  43.9% px    18.5 tv    0.71m | T5   -2.6 T10  -10.0 T20  -18.0 tr  -16.7 | +7s 2024-11-26 insider_tr post10  -12.7 post20  -18.1 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+THCCL  2020-09-10 r5  43.5% px    18.9 tv    0.98m | T5   -0.1 T10   13.7 T20    3.7 tr   -6.0 | +4s 2020-09-16 material_i post10    3.5 post20   25.6 | Material Information
+
+30 LARGEST FOLLOWED BY NOTHING WITHIN 10 SESSIONS (all liquidity tiers)
+T5/T10/T20/trail from the signal's next open, net %; post10/post20 = net return entering at the open after the news session
+ICCI   2024-06-10 r5 179.2% px     7.8 tv   -1.00m | T5    nan T10    nan T20    nan tr    nan
+KSTM   2024-06-03 r5 142.9% px     1.7 tv    0.00m | T5   72.0 T10   36.0 T20   66.0 tr   36.4
+SUHJ   2024-08-30 r5 137.4% px    52.7 tv    0.00m | T5   -0.9 T10   -4.7 T20    1.2 tr   -7.8
+DMTM   2024-06-03 r5 126.6% px     1.8 tv    0.00m | T5   86.8 T10  107.6 T20  266.0 tr  266.0
+DKL    2020-01-08 r5 103.9% px     5.7 tv    0.02m | T5  -27.0 T10  -31.9 T20  -36.1 tr  -34.2
+CPAL   2019-07-25 r5  83.1% px     7.9 tv    0.00m | T5  -23.9 T10  -23.9 T20  -12.4 tr  -23.9
+DSML   2018-01-01 r5  81.8% px     5.0 tv    0.00m | T5    8.6 T10   31.7 T20   31.7 tr   15.2
+AEL    2020-07-08 r5  70.9% px     7.0 tv    0.01m | T5  -15.5 T10  -17.7 T20  -10.4 tr  -21.3
+RAVT   2017-08-07 r5  67.3% px     8.1 tv    0.03m | T5   10.2 T10   10.7 T20   48.7 tr   45.5
+RUBY   2025-08-12 r5  61.7% px    15.6 tv    0.02m | T5  -11.0 T10  -21.2 T20  -22.4 tr  -28.0
+KSTM   2019-08-20 r5  61.6% px     1.6 tv    0.00m | T5  -39.8 T10  -75.8 T20  -73.9 tr  -39.8
+DFSM   2025-06-26 r5  61.3% px     7.3 tv    0.54m | T5   -9.5 T10    3.8 T20  -11.5 tr  -11.5
+NSRM   2025-12-04 r5  61.1% px   168.9 tv    0.01m | T5    1.7 T10   -2.8 T20  -17.7 tr  -17.7
+KHYT   2025-06-03 r5  61.1% px  3376.8 tv    0.01m | T5  -47.3 T10  -66.3 T20  -62.0 tr  -41.4
+JUBS   2025-08-12 r5  61.0% px    20.4 tv    0.10m | T5   55.3 T10  120.8 T20   72.3 tr  115.1
+UNITY  2026-04-22 r5  60.9% px    13.5 tv   72.37m | T5  -10.4 T10   -7.2 T20  -13.3 tr  -23.1
+PAKMI  2022-05-20 r5  59.4% px     3.3 tv    0.01m | T5   -6.8 T10   -8.7 T20   -6.4 tr   -6.4
+ARCTM  2019-07-16 r5  58.8% px     2.7 tv    0.00m | T5   22.3 T10   22.3 T20  -15.7 tr  -13.7
+SERF   2018-11-20 r5  57.8% px     5.1 tv    0.05m | T5  -23.5 T10  -22.6 T20  -27.9 tr  -30.2
+RUBY   2024-01-15 r5  56.6% px     6.9 tv    0.00m | T5    7.6 T10   -5.0 T20   -3.4 tr  -17.6
+FRCL   2024-12-18 r5  55.7% px    31.7 tv    0.07m | T5   26.6 T10   -0.2 T20  -38.7 tr   -0.2
+KHYT   2018-11-06 r5  55.7% px   520.0 tv    0.00m | T5    nan T10    nan T20   -1.0 tr   -1.0
+LPGL   2024-08-05 r5  55.2% px   339.8 tv    0.61m | T5   -3.0 T10  -11.6 T20  -24.3 tr  -12.8
+SGPL   2022-07-13 r5  54.4% px     7.3 tv    0.02m | T5  -32.9 T10  -36.5 T20  -30.3 tr  -37.1
+SLL    2020-07-23 r5  54.0% px     2.5 tv    0.00m | T5    9.8 T10   12.4 T20   40.8 tr    7.2
+KASBM  2019-09-02 r5  54.0% px     1.5 tv    0.00m | T5    nan T10   -4.0 T20   -2.0 tr  -22.8
+SGPL   2024-06-25 r5  53.8% px     9.6 tv    0.07m | T5   34.8 T10   36.5 T20   -3.3 tr   23.5
+RUBY   2020-01-29 r5  53.5% px     6.6 tv    0.01m | T5   26.5 T10   33.0 T20   31.6 tr    8.2
+DAAG   2024-06-27 r5  53.2% px   225.2 tv    0.16m | T5   40.1 T10   81.8 T20  -35.8 tr   48.7
+FEM    2025-12-04 r5  52.7% px    16.8 tv    2.21m | T5  -15.7 T10  -24.8 T20  -31.3 tr  -27.3
+
+30 LARGEST FOLLOWED BY A FILING WITHIN 10 SESSIONS, median traded value >= Rs5m
+ZAL    2025-07-09 r5  61.1% px    26.2 tv   11.10m | T5   -1.5 T10   -7.4 T20  -10.4 tr   79.8 | +4s 2025-07-15 material_i post10  -12.0 post20  -15.2 | Material Information - Incorporation of Wholly Owned Subsidiary in UAE
+BECO   2025-09-24 r5  60.6% px    38.4 tv   48.61m | T5  -10.2 T10   17.7 T20   45.7 tr   22.8 | +1s 2025-09-25 board_meet post10   46.9 post20   49.3 | Board Meeting
+WASL   2025-09-18 r5  56.5% px     6.6 tv   10.85m | T5   -6.6 T10  -12.8 T20   12.8 tr   -3.6 | +2s 2025-09-22 board_meet post10  -11.9 post20   21.0 | BOARD MEETING
+SITC   2025-09-09 r5  44.0% px   949.3 tv   10.89m | T5    1.4 T10   -3.1 T20   -6.1 tr   -6.7 | +3s 2025-09-12 board_meet post10  -12.9 post20   -8.9 | Board Meeting
+BNL    2025-07-18 r5  38.2% px   120.5 tv  179.86m | T5   13.5 T10   -7.5 T20   11.7 tr   -7.5 | +4s 2025-07-24 material_i post10    9.9 post20  -12.7 | Material Information
+SGPL   2026-06-22 r5  32.7% px    66.9 tv   95.80m | T5   25.4 T10   35.3 T20    1.7 tr   25.0 | +3s 2026-06-29 material_i post10   53.6 post20    0.4 | Material Information
+PIAA   2024-03-06 r5  32.5% px    14.5 tv  121.71m | T5   14.3 T10   64.2 T20   61.3 tr   61.3 | +10s 2024-03-20 financial_ post10   -9.2 post20   -1.7 | NON-TRANSMISSION OF QUARTERLY FINANCIAL STATEMENTS FOR THE PERIOD ENDE
+KPUS   2026-07-14 r5  27.7% px  2441.5 tv   17.91m | T5  -40.4 T10  -47.5 T20  -59.5 tr  -33.6 | +4s 2026-07-20 financial_ post10  -25.4 post20  -40.5 | Shariah Disclosure for the Half Year Ended March 31, 2026
+SAZEW  2024-02-28 r5  27.0% px   363.1 tv  330.57m | T5    3.9 T10    0.8 T20    6.3 tr  175.0 | +5s 2024-03-06 dividend_o post10    7.3 post20   11.5 | Final Notice Under Section 244(1)(b) of the Companies Act, 2017 regard
+SRVI   2020-12-21 r5  23.5% px   924.9 tv    5.72m | T5  -11.2 T10  -13.8 T20   -3.7 tr   25.3 | +1s 2020-12-22 insider_tr post10   -9.2 post20    1.0 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+HTL    2021-03-17 r5  23.1% px    81.2 tv  126.24m | T5   -4.1 T10  -20.5 T20  -18.0 tr  -20.5 | +3s 2021-03-22 material_i post10  -16.6 post20  -19.2 | Material Information
+GGGL   2021-06-18 r5  22.7% px    29.3 tv  131.70m | T5  -13.7 T10  -12.0 T20   -4.5 tr  -20.9 | +1s 2021-06-21 board_meet post10  -12.9 post20   -2.1 | Board Meeting other than Financial Results - GAHN GLOBAL GLASS LIMITED
+MFFL   2022-07-04 r5  22.2% px    98.6 tv    5.06m | T5   12.2 T10   -3.5 T20    9.5 tr   -9.0 | +5s 2022-07-14 board_meet post10    0.9 post20   -6.6 | Board Meeting to approve Business Plan 2023-2025
+GCWL   2025-09-18 r5  22.1% px    20.2 tv   57.44m | T5    9.6 T10   -6.1 T20   -6.3 tr  -13.3 | +2s 2025-09-22 insider_tr post10   -4.0 post20   -2.7 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+CPHL   2025-01-22 r5  21.2% px    85.8 tv  267.43m | T5    7.1 T10    9.8 T20   16.0 tr   -3.4 | +1s 2025-01-23 insider_tr post10   -3.3 post20    5.0 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+EPCL   2026-04-02 r5  21.0% px    36.9 tv   60.14m | T5   -2.6 T10   -2.1 T20  -10.0 tr   -8.9 | +2s 2026-04-06 financial_ post10    1.9 post20   -2.7 | Transmission of Annual Report for the year ended December 31, 2025 - E
+SGF    2025-12-03 r5  21.0% px   116.9 tv   18.78m | T5   -2.7 T10   -6.1 T20   -1.8 tr  -13.0 | +2s 2025-12-05 material_i post10   -3.8 post20   -3.4 | Material Information
+PICT   2026-07-07 r5  21.0% px    46.8 tv    5.69m | T5   10.5 T10   11.0 T20   14.0 tr   -4.1 | +7s 2026-07-16 board_meet post10   -2.2 post20   -5.4 | Board Meeting Other Than Financial Results
+PSMC   2020-08-07 r5  20.7% px   264.8 tv  126.56m | T5   -6.8 T10   -9.5 T20  -10.3 tr  -25.6 | +3s 2020-08-12 financial_ post10   -2.2 post20   -3.9 | Financial Results for the Half Year Ended June 30, 2020
+PRL    2017-03-30 r5  19.9% px    81.4 tv   55.82m | T5  -10.8 T10  -10.5 T20  -13.4 tr  -22.4 | +7s 2017-04-10 board_meet post10   -1.0 post20   -2.3 | BOARD MEETING & CLOSED PERIOD NOTICE
+FFL    2017-01-17 r5  19.5% px   114.6 tv   25.07m | T5   -3.2 T10   -1.1 T20   -4.9 tr  -17.1 | +3s 2017-01-20 board_meet post10    3.2 post20    1.2 | Board Meeting - Fauji Foods Limited
+THCCL  2025-10-02 r5  19.4% px    74.5 tv  234.62m | T5   10.6 T10   21.0 T20   20.7 tr   -1.3 | +7s 2025-10-13 material_i post10  -21.5 post20   -7.3 | Disclosure of Material Information- Successful Closure of Sukuk Transa
+TELE   2021-04-08 r5  18.6% px     7.7 tv   75.21m | T5   56.3 T10   88.5 T20   96.5 tr   89.4 | +2s 2021-04-12 material_i post10   51.2 post20   77.0 | Material Information
+SGPL   2026-07-30 r5  18.3% px    76.2 tv  152.31m | T5   -5.6 T10   -9.9 T20   -1.9 tr   -8.9 | +5s 2026-08-06 material_i post10    4.7 post20    3.6 | Material Information
+FFL    2019-08-26 r5  18.2% px    11.2 tv   15.01m | T5   -7.4 T10   -9.2 T20   -6.7 tr   -9.6 | +2s 2019-08-28 financial_ post10   -7.6 post20  -10.9 | Transmission of Quarterly Report for the Period Ended June 30, 2019
+AVN    2024-07-22 r5  18.2% px    66.2 tv  116.56m | T5   -4.2 T10   -6.7 T20   -9.0 tr  -20.2 | +6s 2024-07-30 insider_tr post10   -0.4 post20   -7.2 | Disclosure of Interest by a Director CEO, or Executive of a listed com
+RPL    2025-07-03 r5  18.2% px    20.8 tv    6.46m | T5   -0.4 T10    3.5 T20   -7.4 tr  -11.2 | +5s 2025-07-10 board_meet post10   -6.8 post20   -7.5 | NOTICE OF BOARD MEETING OTHER THAN FINANCIAL RESULTS
+PIOC   2025-12-04 r5  17.8% px   396.5 tv   84.76m | T5    2.5 T10   -0.6 T20   -3.6 tr  -18.3 | +10s 2025-12-18 material_i post10   -4.0 post20    1.4 | Material Information
+ASTM   2026-09-16 r5  17.2% px   118.8 tv    5.58m | T5  -11.9 T10   -5.1 T20  -42.4 tr  -11.9 | +9s 2026-09-29 board_meet post10  -34.5 post20    nan | Board Meeting
+DSL    2021-02-09 r5  17.2% px     4.6 tv    7.87m | T5   14.7 T10   10.8 T20   -4.5 tr    4.6 | +9s 2021-02-22 board_meet post10  -23.5 post20  -26.1 | Board Meeting
+
+30 LARGEST FOLLOWED BY NOTHING WITHIN 10 SESSIONS, median traded value >= Rs5m
+UNITY  2026-04-22 r5  60.9% px    13.5 tv   72.37m | T5  -10.4 T10   -7.2 T20  -13.3 tr  -23.1
+GAL    2024-05-15 r5  36.6% px   179.5 tv  152.75m | T5   -0.2 T10   -1.1 T20    3.4 tr   59.1
+IMAGE  2021-12-21 r5  31.1% px    17.8 tv   10.13m | T5   -4.8 T10   -5.0 T20  -14.3 tr  -14.5
+DCL    2024-05-17 r5  30.0% px    10.0 tv   13.37m | T5    8.6 T10    8.2 T20  -10.1 tr  -15.3
+NETSOL 2021-05-25 r5  28.6% px   183.9 tv 1523.07m | T5   -6.3 T10    0.1 T20   -6.9 tr  -19.2
+FLYNG  2017-08-07 r5  28.5% px    23.4 tv    5.80m | T5   -6.5 T10  -21.6 T20  -10.9 tr  -21.6
+AGP    2021-09-14 r5  26.4% px   144.2 tv   33.81m | T5  -15.1 T10  -12.2 T20  -21.2 tr  -28.0
+ASC    2020-03-31 r5  24.9% px     9.5 tv    7.14m | T5    0.4 T10   -4.9 T20    4.0 tr  114.4
+DOL    2025-05-23 r5  24.1% px    36.0 tv   10.69m | T5  -14.3 T10  -11.7 T20  -14.4 tr   -8.7
+ECOP   2020-11-27 r5  24.0% px    28.1 tv    7.34m | T5   11.4 T10   34.5 T20   21.6 tr   19.4
+CLOV   2024-03-27 r5  23.7% px    38.0 tv    7.24m | T5   -0.8 T10   -0.2 T20    5.5 tr    6.7
+THCCL  2026-06-05 r5  22.7% px    66.1 tv   54.37m | T5    2.7 T10    0.4 T20   10.2 tr   -2.1
+SSOM   2026-06-22 r5  22.7% px   509.4 tv    6.66m | T5  -10.7 T10  -12.4 T20  -11.4 tr  -22.4
+SPEL   2024-12-18 r5  21.7% px    45.9 tv   75.84m | T5   -6.2 T10    1.4 T20   -3.8 tr  -22.8
+FFBL   2023-11-21 r5  21.3% px    22.6 tv   20.50m | T5   -0.6 T10    7.6 T20   26.4 tr   10.1
+DOL    2020-06-12 r5  20.2% px    32.3 tv    8.18m | T5   -9.2 T10  -11.9 T20   -2.9 tr   14.5
+GCIL   2024-12-26 r5  20.2% px    17.7 tv   31.58m | T5   -1.9 T10  -21.4 T20   -6.8 tr  -20.4
+TRSM   2026-03-13 r5  19.7% px    10.9 tv   11.99m | T5   53.9 T10   27.5 T20   33.4 tr   33.1
+SNGP   2026-06-22 r5  19.7% px   122.9 tv  247.87m | T5   -4.4 T10   -9.0 T20  -18.8 tr  -20.7
+NRL    2025-11-21 r5  19.4% px   425.4 tv  650.07m | T5   -9.5 T10    1.8 T20   -2.6 tr  -14.8
+DOL    2021-03-22 r5  19.0% px    29.4 tv   29.07m | T5   -8.0 T10  -15.2 T20   -9.0 tr  -15.8
+GGGL   2021-01-06 r5  18.9% px    20.2 tv    7.21m | T5   17.2 T10    8.6 T20   14.2 tr   -1.7
+LOTCHEM2017-12-29 r5  18.3% px     7.2 tv    7.72m | T5   13.1 T10    4.4 T20   13.0 tr   57.3
+ASC    2025-05-20 r5  18.0% px     8.1 tv    6.05m | T5   -9.1 T10   -8.5 T20   -7.3 tr  107.6
+LOADS  2025-01-21 r5  17.8% px    17.4 tv   29.16m | T5    0.1 T10    8.7 T20   13.5 tr   -9.1
+THCCL  2021-08-17 r5  17.4% px    25.0 tv   13.18m | T5   19.2 T10   17.3 T20   -6.7 tr   -5.2
+DSL    2021-04-02 r5  17.3% px     5.2 tv    9.70m | T5   -7.8 T10  -13.1 T20  -26.7 tr  -20.9
+EPCL   2019-05-30 r5  17.2% px    28.2 tv   29.80m | T5    3.8 T10    1.3 T20    3.3 tr  -17.5
+DCL    2024-01-24 r5  16.9% px     7.0 tv   14.38m | T5   -6.2 T10   -5.7 T20   -4.3 tr   16.8
+SMBL   2017-01-02 r5  16.8% px     4.9 tv   14.06m | T5   -4.9 T10  -12.6 T20  -16.3 tr  -24.3
+
+[followed, restricted to median traded value >= Rs5m: summary of these 30] T20 net median -4.1, mean 2.4, win 37%; trail20 median -8.9, mean 6.4
+
+[nothing, restricted to median traded value >= Rs5m: summary of these 30] T20 net median -5.5, mean -2.0, win 37%; trail20 median -11.8, mean 3.7
+[followed top 30 all tiers] T20 median 1.3, mean 5.6, win 50%
+[nothing top 30 all tiers] T20 median -11.5, mean 2.7, win 28%
+
+All R1f episodes: followed by a five-class filing within 10 vs not (hindsight split, descriptive only)
+  followed                           n  1574 | T10 mean   0.8 med  -2.1 | T20 mean   1.6 med  -3.6 win  41% | trail20 mean   6.2 med  -8.8
+  nothing (no filing of any class)   n  3765 | T10 mean  -0.4 med  -2.2 | T20 mean   0.9 med  -2.3 win  41% | trail20 mean   1.8 med -10.2
+  neither (only agm/credit/other)    n   582 | T10 mean   1.2 med  -2.8 | T20 mean   5.3 med  -1.5 win  45% | trail20 mean   6.4 med  -8.8
+
+=== 7. WHAT DISTINGUISHES THE ONES THAT PAID (R1f, in-sample, tier-OK; exploratory, many cuts, not a signal) ===
+n 5758; paid (T20 net>0) 41.1%; median T20 -2.5, mean 1.5
+paid vs not paid, feature medians:
+  ret_5d                   paid     0.111   not paid     0.112
+  ret_1d                   paid     0.050   not paid     0.050
+  gap_open                 paid     0.016   not paid     0.018
+  ret_60d                  paid     0.092   not paid     0.089
+  vol_ratio_20_120         paid     0.903   not paid     0.879
+  vol_ratio_1_20           paid     1.683   not paid     1.693
+  locks_up_5d              paid     1.000   not paid     1.000
+  consecutive_up_days      paid     2.000   not paid     2.000
+  dist_252_high            paid    -0.220   not paid    -0.216
+  days_since_last_filing   paid    22.000   not paid    24.000
+  tvm_m                    paid     0.082   not paid     0.083
+ by ret_5d (quantiles):
+   (0.079, 0.0932]              n 1440 | T20 med   -1.8 mean    1.9 win  42% | trail20 med   -7.9 | news10  28%
+   (0.0932, 0.111]              n 1439 | T20 med   -1.8 mean    1.2 win  42% | trail20 med   -8.0 | news10  30%
+   (0.111, 0.15]                n 1443 | T20 med   -2.8 mean    0.6 win  41% | trail20 med  -10.8 | news10  25%
+   (0.15, 4.274]                n 1436 | T20 med   -3.5 mean    2.2 win  39% | trail20 med  -11.4 | news10  23%
+ by ret_1d (quantiles):
+   (-0.386, 0.0175]             n 1440 | T20 med   -2.3 mean    1.3 win  42% | trail20 med   -9.3 | news10  27%
+   (0.0175, 0.0499]             n 1439 | T20 med   -2.4 mean    0.7 win  41% | trail20 med  -10.7 | news10  30%
+   (0.0499, 0.083]              n 1439 | T20 med   -2.3 mean    1.0 win  42% | trail20 med   -9.3 | news10  28%
+   (0.083, 4.274]               n 1440 | T20 med   -3.1 mean    3.0 win  40% | trail20 med   -9.3 | news10  21%
+ by vol_ratio_20_120 (quantiles):
+   (0.00459, 0.413]             n 1371 | T20 med   -2.0 mean    0.6 win  41% | trail20 med  -10.7 | news10  26%
+   (0.413, 0.889]               n 1371 | T20 med   -2.6 mean    0.9 win  41% | trail20 med   -8.8 | news10  26%
+   (0.889, 1.83]                n 1371 | T20 med   -2.4 mean    1.6 win  42% | trail20 med   -9.5 | news10  28%
+   (1.83, 654.706]              n 1371 | T20 med   -2.9 mean    2.9 win  42% | trail20 med   -9.4 | news10  26%
+ by vol_ratio_1_20 (quantiles):
+   (-0.0009829, 0.571]          n 1439 | T20 med   -2.2 mean    1.3 win  41% | trail20 med  -10.6 | news10  25%
+   (0.571, 1.691]               n 1428 | T20 med   -2.5 mean   -0.0 win  41% | trail20 med  -10.3 | news10  26%
+   (1.691, 4.506]               n 1433 | T20 med   -2.6 mean    1.9 win  41% | trail20 med  -10.2 | news10  29%
+   (4.506, 3236.25]             n 1433 | T20 med   -2.7 mean    2.4 win  41% | trail20 med   -7.8 | news10  25%
+ by dist_252_high (quantiles):
+   (-0.953, -0.371]             n 1370 | T20 med   -2.4 mean    1.1 win  42% | trail20 med  -10.0 | news10  25%
+   (-0.371, -0.218]             n 1369 | T20 med   -2.5 mean    1.6 win  42% | trail20 med   -9.8 | news10  26%
+   (-0.218, -0.0744]            n 1369 | T20 med   -2.6 mean    1.3 win  41% | trail20 med  -11.0 | news10  26%
+   (-0.0744, 0.0]               n 1369 | T20 med   -2.1 mean    2.3 win  42% | trail20 med   -7.9 | news10  29%
+ by ret_60d (quantiles):
+   (-0.922, -0.06]              n 1425 | T20 med   -2.2 mean    0.8 win  42% | trail20 med  -10.4 | news10  25%
+   (-0.06, 0.0897]              n 1424 | T20 med   -2.3 mean    0.7 win  40% | trail20 med   -9.2 | news10  26%
+   (0.0897, 0.29]               n 1424 | T20 med   -1.2 mean    2.9 win  45% | trail20 med   -8.9 | news10  28%
+   (0.29, 15.304]               n 1424 | T20 med   -4.3 mean    1.8 win  38% | trail20 med  -10.5 | news10  27%
+ by tvm_m (quantiles):
+   (-0.001, 0.00587]            n 1440 | T20 med   -1.0 mean    3.1 win  43% | trail20 med   -9.2 | news10  20%
+   (0.00587, 0.0826]            n 1439 | T20 med   -3.0 mean    0.6 win  40% | trail20 med  -10.7 | news10  23%
+   (0.0826, 1.459]              n 1439 | T20 med   -2.9 mean    3.0 win  42% | trail20 med   -8.1 | news10  26%
+   (1.459, 1523.069]            n 1440 | T20 med   -3.7 mean   -0.8 win  40% | trail20 med  -10.9 | news10  36%
+ by tier:
+   A >Rs20m                     n  540 | T20 med   -3.7 mean   -0.6 win  38% | trail20 med  -11.7 | news10  39%
+   B Rs5-20m                    n  430 | T20 med   -3.3 mean   -0.1 win  43% | trail20 med   -9.9 | news10  35%
+   C <Rs5m                      n 4788 | T20 med   -2.3 mean    1.9 win  41% | trail20 med   -9.5 | news10  24%
+ by regime:
+   bill<=policy                 n 1584 | T20 med   -2.2 mean    3.8 win  42% | trail20 med   -5.5 | news10  27%
+   bill>policy                  n 4174 | T20 med   -2.6 mean    0.6 win  41% | trail20 med  -11.0 | news10  26%
+ by kmi:
+   False                        n 1388 | T20 med   -1.2 mean    4.1 win  45% | trail20 med   -6.3 | news10  27%
+   True                         n 2928 | T20 med   -2.4 mean    1.8 win  41% | trail20 med   -8.7 | news10  28%
+ by board_known:
+   False                        n 5149 | T20 med   -2.5 mean    1.3 win  41% | trail20 med   -9.9 | news10  27%
+   True                         n  609 | T20 med   -2.3 mean    3.4 win  44% | trail20 med   -8.1 | news10  20%
+ by news10:
+   False                        n 4242 | T20 med   -2.2 mean    1.4 win  41% | trail20 med  -10.0 | news10   0%
+   True                         n 1516 | T20 med   -3.5 mean    1.7 win  41% | trail20 med   -8.8 | news10 100%
+ by year:
+   2017                         n  687 | T20 med   -5.3 mean   -3.0 win  32% | trail20 med  -13.5 | news10  23%
+   2018                         n  679 | T20 med   -1.5 mean   -0.4 win  42% | trail20 med  -11.7 | news10  22%
+   2019                         n  542 | T20 med   -2.9 mean   -1.2 win  40% | trail20 med  -14.2 | news10  29%
+   2020                         n  646 | T20 med   -0.3 mean    2.7 win  49% | trail20 med   -3.4 | news10  26%
+   2021                         n  613 | T20 med   -2.0 mean    1.1 win  40% | trail20 med   -9.6 | news10  26%
+   2022                         n  493 | T20 med   -4.0 mean   -2.0 win  35% | trail20 med  -14.5 | news10  27%
+   2023                         n  437 | T20 med   -2.0 mean    1.9 win  42% | trail20 med   -6.8 | news10  31%
+   2024                         n  545 | T20 med   -1.4 mean    6.5 win  45% | trail20 med   -5.8 | news10  27%
+   2025                         n  672 | T20 med   -2.4 mean    5.9 win  44% | trail20 med   -2.6 | news10  28%
+   2026                         n  444 | T20 med   -3.3 mean    4.0 win  42% | trail20 med   -6.1 | news10  27%
+ by locks_up_5d:
+   0.0                          n 1543 | T20 med   -1.5 mean    3.3 win  44% | trail20 med   -5.9 | news10  29%
+   1.0                          n 2364 | T20 med   -2.4 mean    0.8 win  41% | trail20 med  -10.0 | news10  26%
+   2.0                          n 1304 | T20 med   -3.0 mean    0.5 win  40% | trail20 med  -11.0 | news10  25%
+   3.0                          n  400 | T20 med   -5.8 mean   -1.3 win  36% | trail20 med  -12.3 | news10  24%
+   4.0                          n   95 | T20 med   -6.4 mean    1.8 win  35% | trail20 med  -12.9 | news10  29%
+   5.0                          n   52 | T20 med   -2.2 mean   22.5 win  46% | trail20 med  -11.1 | news10  27%
+ by sector:
+   Autos                        n  143 | T20 med   -3.5 mean   -1.3 win  41% | trail20 med  -15.1 | news10  34%
+   Cement                       n  196 | T20 med   -3.4 mean   -0.8 win  39% | trail20 med   -8.7 | news10  28%
+   Chemicals                    n  279 | T20 med   -4.0 mean    0.9 win  39% | trail20 med   -9.0 | news10  35%
+   Food & staples               n  181 | T20 med   -2.4 mean    2.3 win  44% | trail20 med   -7.0 | news10  40%
+   Gas utilities & misc         n  113 | T20 med   -1.7 mean    0.3 win  45% | trail20 med  -11.1 | news10  30%
+   Glass, packaging, paper      n  193 | T20 med   -2.4 mean    0.3 win  40% | trail20 med  -10.6 | news10  31%
+   Islamic banks & fin.         n  129 | T20 med   -0.6 mean    0.3 win  47% | trail20 med   -9.8 | news10  23%
+   OMC                          n   47 | T20 med   -4.6 mean   -1.2 win  38% | trail20 med  -10.2 | news10  21%
+   Oil refineries               n   25 | T20 med   -2.6 mean    3.8 win  40% | trail20 med  -15.7 | news10  40%
+   Pharma                       n  129 | T20 med   -3.6 mean   -1.6 win  40% | trail20 med   -8.9 | news10  34%
+   Power                        n   42 | T20 med   -0.5 mean   -1.2 win  45% | trail20 med   -0.3 | news10  36%
+   Steel & engineering          n  176 | T20 med   -3.3 mean   -0.6 win  41% | trail20 med  -10.8 | news10  35%
+   Tech & telecom               n   96 | T20 med   -5.1 mean    1.2 win  40% | trail20 med   -6.3 | news10  44%
+   Textiles                     n  506 | T20 med   -1.8 mean    1.9 win  43% | trail20 med  -10.1 | news10  24%
+   other                        n 3484 | T20 med   -2.4 mean    2.1 win  41% | trail20 med   -9.7 | news10  23%
+
+episodes by calendar year, all R1f with outcome (net T20 median / mean / n) and share followed by news10:
+   2017: n  687 T20 med   -5.3 mean   -3.0 news10  23%
+   2018: n  679 T20 med   -1.5 mean   -0.4 news10  22%
+   2019: n  542 T20 med   -2.9 mean   -1.2 news10  29%
+   2020: n  646 T20 med   -0.3 mean    2.7 news10  26%
+   2021: n  613 T20 med   -2.0 mean    1.1 news10  26%
+   2022: n  493 T20 med   -4.0 mean   -2.0 news10  27%
+   2023: n  437 T20 med   -2.0 mean    1.9 news10  31%
+   2024: n  545 T20 med   -1.4 mean    6.5 news10  27%
+   2025: n  672 T20 med   -2.4 mean    5.9 news10  28%
+   2026: n  444 T20 med   -3.3 mean    4.0 news10  27%
+
+DONE
+
+=== 2b. SHARE FOLLOWED BY ANY OF THE 5 CLASSES WITHIN 10 SESSIONS, BY SPLIT (obs vs baseA vs baseB, %) ===
+-- R1f
+   ALL                    n  5920 obs  26.6 baseA  23.4 baseB  26.7 zB   -0.5
+   in-sample              n  5886 obs  26.4 baseA  23.3 baseB  26.5 zB   -0.6
+   out-of-sample          n    34 obs  58.8 baseA  50.1 baseB  53.5 zB    0.9
+   bill>policy            n  4309 obs  26.4 baseA  23.3 baseB  26.6 zB   -0.7
+   bill<=policy           n  1611 obs  27.0 baseA  23.9 baseB  26.9 zB    0.1
+   tier A >Rs20m          n   541 obs  38.8 baseA  32.9 baseB  41.1 zB   -2.1
+   tier B Rs5-20m         n   434 obs  34.6 baseA  30.0 baseB  35.6 zB   -0.9
+   tier C <Rs5m           n  4926 obs  24.5 baseA  21.8 baseB  24.3 zB    0.6
+-- R3f
+   ALL                    n  3158 obs  26.3 baseA  23.8 baseB  26.9 zB   -1.3
+   in-sample              n  3142 obs  26.1 baseA  23.7 baseB  26.7 zB   -1.4
+   out-of-sample          n    16 obs  68.8 baseA  56.9 baseB  64.1 zB    0.7
+   bill>policy            n  2274 obs  26.2 baseA  23.9 baseB  26.7 zB   -1.1
+   bill<=policy           n   884 obs  26.7 baseA  23.6 baseB  27.3 zB   -0.8
+   tier A >Rs20m          n   293 obs  39.6 baseA  36.6 baseB  42.7 zB   -1.9
+   tier B Rs5-20m         n   228 obs  36.4 baseA  29.6 baseB  35.5 zB    0.6
+   tier C <Rs5m           n  2630 obs  24.1 baseA  22.0 baseB  24.4 zB   -0.9
+-- F1f
+   ALL                    n  5153 obs  25.0 baseA  23.4 baseB  26.0 zB   -3.4
+   in-sample              n  5095 obs  24.6 baseA  23.0 baseB  25.7 zB   -3.5
+   out-of-sample          n    58 obs  58.6 baseA  57.6 baseB  57.3 zB    0.3
+   bill>policy            n  3817 obs  25.4 baseA  23.4 baseB  26.1 zB   -1.9
+   bill<=policy           n  1336 obs  23.8 baseA  23.5 baseB  25.9 zB   -3.6
+   tier A >Rs20m          n   275 obs  42.2 baseA  35.3 baseB  42.8 zB   -0.4
+   tier B Rs5-20m         n   274 obs  28.5 baseA  25.0 baseB  28.5 zB   -0.0
+   tier C <Rs5m           n  4584 obs  23.8 baseA  22.6 baseB  24.9 zB   -3.7
+
+DONE2
