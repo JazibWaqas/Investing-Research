@@ -27,3 +27,6 @@ Short-term study done and closed (REPORT.md section 9, HOW_TO_THINK.md section 1
 
 ## Update 19 Oct 2026, early
 Winners library and catalogue done (knowledge/CATALOGUE.md, knowledge/winners/, data/winners_library.csv, tests/winners_population.md); tagged scan in scripts/engine.py; skill updated with the reflex. The method is complete as a knowledge base; what remains is operation: the Monday scoring of frozen calls, the daily or weekly tagged scan, PICKS v4 with Jazib's sizes. The catalogue's own stage odds say PRL (4.2x from its low) and MACFL (5.1x) are late now; see the 2026-10-16 tagged scan.
+
+## Final state, 19 Oct 2026, 01:15 PKT
+Session complete. Deliverables: PICKS.md v4 (plain-language buy report), REPORT.md (11 sections), knowledge/HOW_TO_THINK.md (13 sections), knowledge/CATALOGUE.md (corrected), knowledge/REGIME_TURN_PLAYBOOK.md, knowledge/winners/ (55 cases) and regime_turns/ (4), the daily table and engine with tagged scan, the weekly skill, 42 frozen predictions. Nothing is running. Operate from the skill: Monday score ATRL, EFERT, MLCF rows; run the tagged scan after each close; freeze each week's call; the scorecard at 20 weeks is the next research brief. Open items for Jazib: Finqalab's commission rate; his own past trades for the library; sizes if he departs from PICKS v4.
