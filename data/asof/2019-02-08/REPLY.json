@@ -1,0 +1,35 @@
+{"date":"2019-02-08",
+"regime":{"rates_phase":"hiking","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"SBP hiked 25bp on 2019-01-31 to 10.25% and CPI is rising (7.2% vs 6.78% three months earlier), so the cycle is still tightening. The index has bounced 5.1% in a month but is down over 3, 6 and 12 months, and the rupee is weaker. Foreign corporates are buying while mutual funds sell. No method file gives a tradable edge in this setup, so I stay neutral and hold no book.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.25%; last MPC decision 2019-01-31: hike (+25bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+0.4pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 40,887 on 2019-02-08; 1m +5.1%, 3m -1.2%, 6m -3.8%, 12m -7.6%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"29.329"},
+{"file":"flows.csv","row":"mutual funds","field":"net_usd_mn","quote":"-15.538"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"verdict","quote":"weak (H3)"}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"Date is not in the pack; act only once a date and a hold or hike signal are known. Hold history is only in-sample, and the hike history has n=2.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"verdict","quote":"no verdict given (in sample; overlapping)"}]},
+{"type":"earnings_inflection_ignored","subject":"EFERT","trigger":"Full-year results were filed on the last day of the sample. Check price reaction and the numbers over the next sessions; results alone have no drift per the base rates.","evidence":[
+{"file":"announcements_30d.csv","row":"EFERT","field":"title","quote":"Financial Results for the Year Ended December 31, 2018"},
+{"file":"base_rates.csv","row":"results_yoy_all","field":"verdict","quote":"no tradable drift (H1)"}]},
+{"type":"shock_and_rebound","subject":"GHNI","trigger":"Down 38% over 3m with volume 2.56x its norm and a board meeting on 2019-02-08. Wait for a known trigger and a first up-close off the bottom before any entry.","evidence":[
+{"file":"screens.csv","row":"GHNI","field":"r3m","quote":"-0.38"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2019-02-08 GHNI: Board Meeting"},
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"verdict","quote":"no word given (Verdict 3: buy only on a known trigger)"}]},
+{"type":"volume_with_upper_locks","subject":"DCL","trigger":"Two upper locks in 10 days, price still 52% below the 252-day high. The base rates say the volume-and-locks signal is not tradable, so only watch.","evidence":[
+{"file":"screens.csv","row":"DCL","field":"upper_locks_10d","quote":"2"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"CHCC","trigger":"Cement line 3 commissioning disclosed. Watch for results or volume confirming earnings uplift; price is far below its high with low volume.","evidence":[
+{"file":"announcements_30d.csv","row":"CHCC","field":"title","quote":"MATERIAL INFORMATION - COMMISSIONING OF CEMENT LINE 3"},
+{"file":"screens.csv","row":"CHCC","field":"vol20_over_vol120","quote":"0.591"}]},
+{"type":"other","subject":"PPL","trigger":"Within 3% of the 252-day high with volume 1.93x its norm. Breakout is only a hypothesis (n=12), and the name is already up 13% in a month, so no entry yet.","evidence":[
+{"file":"screens.csv","row":"PPL","field":"dist_from_252_high","quote":"-0.03"},
+{"file":"base_rates.csv","row":"breakout_252high_S3","field":"verdict","quote":"a hypothesis from five windows (file)"}]}],
+"entries":[],
+"exposure_pct":0,
+"not_known":"Reserves, current account, IMF status, next MPC date, curve beyond 2018-12-05 auctions, valuations, and any fundamentals or earnings detail beyond result counts. Without these I cannot rank business quality.",
+"contamination_note":"No post-2019-02-08 memory used. base_rates.csv carries its own look-ahead warning (measured through 2026-10-16), so I used it only as rough odds by type and took nothing about specific names."}

@@ -1,0 +1,54 @@
+{"date":"2026-03-27",
+"regime":{"rates_phase":"holding","stance":"risk_off","p_kmi_up_60":0.42,
+"summary":"SBP held at 10.5% on 2026-03-09 but the 6M bill cuts off 1.00pp above it, so the market prices hikes. CPI is rising (6.16% to 6.99%) and Brent is up 90.7% in three months. Foreign corporates sold heavily. The index is already down 11% over 3m, which limits further downside, but the tightening-plus-external-stress analogue says hold cash and wait for a trigger.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"last MPC decision 2026-03-09: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +1.00pp (market pricing hikes); CPI rising over 3 months (+0.8pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 121.47 USD/bbl on 2026-03-27; 3-month change +90.7%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 151,708 on 2026-03-27; 1m -8.8%, 3m -11.2%, 6m -6.5%, 12m +28.1%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-81.823"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."}]},
+"core":[
+{"symbol":"FFC","weight_pct":10,"thesis":"Fertilizer is the only sector with a positive 6m return (+6.27%). FFC trades at P/E 5.5 with an 11.2% dividend yield and holds up better than most names. EPS is flat year on year. Kept small because the data has no balance-sheet or gas-supply detail.","evidence":[
+{"file":"screens.csv","row":"FFC","field":"pe","quote":"5.523"},
+{"file":"screens.csv","row":"FFC","field":"dy","quote":"0.112"},
+{"file":"screens.csv","row":"FFC","field":"r6m","quote":"0.138"},
+{"file":"sectors.csv","row":"Fertilizer","field":"r6m","quote":"0.0627"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold the core; keep cash ready for a weekend gap."}]},
+{"symbol":"OGDC","weight_pct":10,"thesis":"E&P is the link that most directly holds oil exposure while Brent is up 90.7%. OGDC trades at P/E 5.6 with a 6.8% dividend yield and is flat over 6m while the index fell. EPS fell 16% year on year, so the position stays small.","evidence":[
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"screens.csv","row":"OGDC","field":"r6m","quote":"-0.006"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 121.47 USD/bbl on 2026-03-27; 3-month change +90.7%"},
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision: hold versus first hike","trigger":"A hike toward the 11.50% bill cutoff, or a hold with bills repricing lower, would clarify the phase. The date is not in the pack (see SBP calendar).","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 11.50% (auction 2026-03-16); 3M 11.50%, 12M 11.50%"},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"verdict","quote":"weak (H3)"}]},
+{"type":"shock_and_rebound","subject":"KSE100 after a 3m drop of 11.2%","trigger":"Buy only on a known trigger (a policy backstop or a stable rupee with a hold). The index being down is not a trigger.","evidence":[
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"verdict","quote":"no word given (Verdict 3: buy only on a known trigger)"},
+{"file":"situations.md","row":null,"field":null,"quote":"The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak."}]},
+{"type":"volume_with_upper_locks","subject":"CRTM (5 upper locks, volume 2.4x, +147% in 1m)","trigger":"Watch only. The measured base rate for volume with locks is not tradable, and there is no filing in the pack to explain the move.","evidence":[
+{"file":"screens.csv","row":"CRTM","field":"upper_locks_10d","quote":"5"},
+{"file":"screens.csv","row":"CRTM","field":"vol20_over_vol120","quote":"2.373"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq1","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"TRSM (6 upper locks, +48% in 1m, -76% from the 252-day high)","trigger":"Watch only; same base rate. A bounce from a deeply broken base is not a confirmed demand signal.","evidence":[
+{"file":"screens.csv","row":"TRSM","field":"upper_locks_10d","quote":"6"},
+{"file":"screens.csv","row":"TRSM","field":"dist_from_252_high","quote":"-0.758"},
+{"file":"base_rates.csv","row":"volume_locks_V1_liq5","field":"verdict","quote":"nothing"}]},
+{"type":"earnings_inflection_ignored","subject":"FABL: EPS +95% year on year, P/E 3.1, dividend yield 14.4%, price -4% in 1m","trigger":"Revisit if the price confirms (a move toward its 252-day high) or on the next filing. Results-gap rules are watch only and P/E below 6 is not confirmed.","evidence":[
+{"file":"screens.csv","row":"FABL","field":"eps_yoy","quote":"0.953"},
+{"file":"screens.csv","row":"FABL","field":"pe","quote":"3.08"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"verdict","quote":"not confirmed"}]},
+{"type":"earnings_inflection_ignored","subject":"HUBC: EPS +159% year on year, P/E 3.9, dividend yield 10.9%","trigger":"Revisit if the price stabilises. Power receivables and tariff risk cannot be assessed from this pack.","evidence":[
+{"file":"screens.csv","row":"HUBC","field":"eps_yoy","quote":"1.592"},
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.875"},
+{"file":"base_rates.csv","row":"results_gap_up","field":"verdict","quote":"watch (p 0.11 vs same-year random)"}]},
+{"type":"other","subject":"Foreign selling in cement and banks","trigger":"Foreign corporate selling stops (5-session net flow turns toward zero) before adding any risk.","evidence":[
+{"file":"flows.csv","row":"fipi | Cement","field":"net_usd_mn","quote":"-35.079"},
+{"file":"flows.csv","row":"fipi | Commercial Banks","field":"net_usd_mn","quote":"-30.688"}]}],
+"entries":[],
+"exposure_pct":20,
+"not_known":"FX reserves, current account and the IMF status are not in the pack. The date of the next MPC is not given. There is no information on the oil shock's cause or duration. The pack has no consolidated EPS, balance-sheet or float detail for the core names.",
+"contamination_note":"No knowledge of events after 2026-03-27 was used. base_rates.csv carries a warning that it was measured partly after this date, so I used it only as rough odds for a situation type, and no entry rests on it."}

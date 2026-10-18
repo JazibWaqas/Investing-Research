@@ -1,0 +1,40 @@
+{"date":"2026-02-20",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.55,
+"summary":"Policy rate held at 10.5% with the 6M bill at 10.44%, so the curve prices no move. CPI is falling. The KMI fell 8.0% in a month after a strong 12 months, so this is a pullback inside an uptrend, not a confirmed break. Foreigners are selling. Mixed, so neutral with a modest core and cash.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 10.5%; last MPC decision 2026-01-26: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate -0.06pp (market near policy rate); CPI falling over 3 months (-0.5pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 66,507 on 2026-02-20; 1m -8.0%, 3m +3.9%, 6m +9.6%, 12m +38.1%"},
+{"file":"flows.csv","row":"foreign corporates","field":"net_usd_mn","quote":"-41.653"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold the core; keep cash ready for a weekend gap."}]},
+"core":[
+{"symbol":"HUBC","weight_pct":15,"thesis":"Power names led the last 6 months and are the cheapest on the screen: P/E 3.875 with a 10.9% dividend yield and EPS growth of 159% year on year. Fell with the market, still 9.9% below its 252-day high. Core hold, not a trade.","evidence":[
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"3.875"},
+{"file":"screens.csv","row":"HUBC","field":"dy","quote":"0.109"},
+{"file":"screens.csv","row":"HUBC","field":"eps_yoy","quote":"1.592"}]},
+{"symbol":"FFC","weight_pct":10,"thesis":"Fertilizer sector led the last 6 months (+24%). FFC trades at P/E 5.523 with an 11.2% yield. Latest EPS growth is slightly negative (-2.7%), so the weight is kept small.","evidence":[
+{"file":"screens.csv","row":"FFC","field":"pe","quote":"5.523"},
+{"file":"screens.csv","row":"FFC","field":"dy","quote":"0.112"},
+{"file":"sectors.csv","row":"Fertilizer","field":"r6m","quote":"0.2439"}]}],
+"watch":[
+{"type":"deal_after_offer","subject":"FCCL public offer to acquire shares","trigger":"Offer price and the fraction of shares bought become known; enter only if the offer sits clearly above the 52.8 close. Base rate for post-offer deals is thin (+1.1% median, n=24).","evidence":[
+{"file":"announcements_30d.csv","row":"FCCL","field":"title","quote":"Material Information - Public Announcement of Offer to Acquire Shares and J"},
+{"file":"screens.csv","row":"FCCL","field":"close","quote":"52.8"},
+{"file":"base_rates.csv","row":"deal_post_offer","field":"median","quote":"+1.1%"}]},
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"Date is not in the pack. A cut with CPI still falling would start the first-cut pattern; a hold changes nothing.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"hit_rate","quote":"100%"}]},
+{"type":"other","subject":"MLCF results at the 24 Feb board meeting","trigger":"Results gap up on the day. Gap-up base rate is watch only; no entry before it prints.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"MLCF-Notice of Board Meeting 24.02.2026"},
+{"file":"base_rates.csv","row":"results_gap_up","field":"verdict","quote":"watch (p 0.11 vs same-year random)"}]},
+{"type":"volume_with_upper_locks","subject":"AGP","trigger":"Volume ratio 2.4 with an upper lock, but the base rate is nothing and V4 is not tradable. Act only on a filed explanation.","evidence":[
+{"file":"screens.csv","row":"AGP","field":"vol20_over_vol120","quote":"2.401"},
+{"file":"screens.csv","row":"AGP","field":"upper_locks_10d","quote":"1"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"other","subject":"AGL urea operations resumption","trigger":"Fertilizer read-across for FFC; confirm volumes and dates in filings.","evidence":[
+{"file":"announcements_30d.csv","row":"AGL","field":"title","quote":"Material Information - Resumption of Urea Operations"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"FX reserves and current account are not in the pack. IMF status, the next MPC date and offer terms for FCCL are not given. No fundamentals beyond the screens.",
+"contamination_note":"No post-2026-02-20 knowledge used. base_rates.csv carries its own warning of data through 2026-10-16, so it is used only as rough odds by type and never for a name or date."}

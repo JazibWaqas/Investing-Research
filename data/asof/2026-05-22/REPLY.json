@@ -1,0 +1,54 @@
+{"date":"2026-05-22",
+"regime":{"rates_phase":"hiking","stance":"risk_off","p_kmi_up_60":0.42,
+"summary":"SBP hiked 100bp on 2026-04-27 to 11.5%, CPI has nearly doubled in three months to 10.91%, and the 6M bill yields 12.50%, above the policy rate, so the curve prices more hikes. Brent is up 46.9% in three months. The closest analogue (2021-22 hike cycle with CPI above the rate) says hold bills and set a return trigger. Hike base rate has n=2 only.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-04-27: hike (+100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 10.91% for 2026-04 (published by 2026-05-03); three months earlier (2026-01) 5.79%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +1.00pp (market pricing hikes)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 106.90 USD/bbl on 2026-05-22; 3-month change +46.9%"},
+{"file":"situations.md","row":null,"field":null,"quote":"rate up 800bp in ten months with CPI above it"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: hold bills, and set a trigger to return."},
+{"file":"base_rates.csv","row":"first_rate_hike_kse100","field":"median","quote":"-5.6%"}]},
+"core":[
+{"symbol":"OGDC","weight_pct":10,"thesis":"Oil link held directly while Brent is +46.9% in 3 months. Within 2.1% of its 252-day high, P/E 5.583, dividend yield 6.8%. EPS yoy is -10.4%, so size is small and the rate and oil regime is the risk.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 106.90 USD/bbl on 2026-05-22; 3-month change +46.9%"},
+{"file":"screens.csv","row":"OGDC","field":"dist_from_252_high","quote":"-0.021"},
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.068"},
+{"file":"questions.md","row":null,"field":null,"quote":"A8. Oil: where is Brent, and which link do I actually hold?"}]},
+{"symbol":"PPL","weight_pct":10,"thesis":"Second E&P oil link, P/E 5.148, dividend yield 4.4%, 6m +17.1%, EPS yoy -6%. Same oil hedge logic as OGDC against a hiking regime in which most sectors lag; kept small for that reason.",
+"evidence":[
+{"file":"screens.csv","row":"PPL","field":"pe","quote":"5.148"},
+{"file":"screens.csv","row":"PPL","field":"r6m","quote":"0.171"},
+{"file":"sectors.csv","row":"E&P","field":"r6m","quote":"E&P,3,-0.0002,0.0712,0.1229"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 106.90 USD/bbl on 2026-05-22; 3-month change +46.9%"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC","trigger":"Date not in the pack. A hold with CPI still rising, or a further hike, sets the stance; return to risk_on only on the second signal (hold plus stable rupee), not the headline.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: wait for it, not the headline."}]},
+{"type":"volume_with_upper_locks","subject":"MACFL","trigger":"+152% in 1m with 4 upper locks is extended. The base rate says volume plus locks is not tradable; watch only, no entry.",
+"evidence":[
+{"file":"screens.csv","row":"MACFL","field":"r1m","quote":"1.519"},
+{"file":"screens.csv","row":"MACFL","field":"upper_locks_10d","quote":"4"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"OBOY","trigger":"4 upper locks, 1m +36.4%, no EPS data. Act only if a filed explanation appears.",
+"evidence":[
+{"file":"screens.csv","row":"OBOY","field":"upper_locks_10d","quote":"4"},
+{"file":"screens.csv","row":"OBOY","field":"r1m","quote":"0.364"}]},
+{"type":"earnings_inflection_ignored","subject":"PSO","trigger":"EPS yoy +680% but price is -11.4% in 1m, P/E 10.8. The base rate shows no tradable drift for results, so watch for a catalyst only.",
+"evidence":[
+{"file":"screens.csv","row":"PSO","field":"eps_yoy","quote":"6.803"},
+{"file":"screens.csv","row":"PSO","field":"r1m","quote":"-0.114"},
+{"file":"base_rates.csv","row":"results_yoy_all","field":"verdict","quote":"no tradable drift (H1)"}]},
+{"type":"other","subject":"SYM","trigger":"Acquisition disclosure on 2026-05-21; wait for terms before any deal-type call.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"SYM","field":"title","quote":"Material Information - Acquisition"}]},
+{"type":"other","subject":"INIL","trigger":"Mining diversification disclosed 2026-05-13; stock is -11.4% in 1m. Watch for follow-up.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"INIL","field":"title","quote":"MATERIAL INFORMATION - DIVERSIFICATION INTO MINING BUSINESS"}]}],
+"entries":[],
+"exposure_pct":20,
+"not_known":"FX reserves and current account are absent, so I do not know the external position. Also unknown: IMF status, the next MPC date, and whether markets expect a further hike. No method files were supplied, so mechanisms cite situations.md, base_rates.csv and questions.md.",
+"contamination_note":"None. I used no knowledge of anything after 2026-05-22. The base_rates.csv warning says it was measured partly after this date, so I used it only as rough odds."}

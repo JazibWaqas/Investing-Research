@@ -1,0 +1,35 @@
+{"date":"2022-03-25",
+"regime":{"rates_phase":"hiking","stance":"risk_off","p_kmi_up_60":0.45,
+"summary":"Policy rate 9.75% is below CPI 12.24% and the 6M bill sits 2.75pp above the policy rate, so the curve prices hikes the SBP has not made. CPI is rising, Brent is +63% in 3 months, the rupee is weakening. The 2017-19 squeeze lesson says read the rate and rupee. Stay light, hold only what is at highs.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 9.75%; last MPC decision 2022-03-08: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +2.75pp (market pricing hikes)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI rising over 3 months (+0.7pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 122.67 USD/bbl on 2022-03-25; 3-month change +63.0%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low"}]},
+"core":[{"symbol":"EFERT","weight_pct":15,"thesis":"Fertilizer is the only sector with names at 252-day highs while the rest of the market is falling. EFERT is at its high with 3m +20.8%. Breakout base rate is only a hypothesis, so the size stays small. Hiking regime caps conviction.",
+"evidence":[
+{"file":"sectors.csv","row":"Fertilizer","field":"n_at_252_high","quote":"3"},
+{"file":"screens.csv","row":"EFERT","field":"dist_from_252_high","quote":"0.0"},
+{"file":"screens.csv","row":"EFERT","field":"r3m","quote":"0.208"},
+{"file":"base_rates.csv","row":"breakout_252high_S3","field":"verdict","quote":"a hypothesis from five windows (file)"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"A hike confirms the hiking regime and the market-priced path; a hold with a falling 6M bill would ease the risk-off stance.","evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 12.50% (auction 2022-03-22)"}]},
+{"type":"shock_and_rebound","subject":"TELE","trigger":"Only after the fall stops and a first up-close appears after the bottom; no buy on the fall itself.","evidence":[
+{"file":"screens.csv","row":"TELE","field":"r1m","quote":"-0.319"},
+{"file":"base_rates.csv","row":"shock_fall5_hindsight_day1","field":"verdict","quote":"biased downward (hindsight selection)"}]},
+{"type":"other","subject":"KEL","trigger":"Price reaction after the MYT determination and the 900 MW BQPS-III sync; EPS is down sharply year on year so wait for confirmation.","evidence":[
+{"file":"announcements_30d.csv","row":"KEL","field":"title","quote":"Material Information - MYT Determination"},
+{"file":"screens.csv","row":"KEL","field":"eps_yoy","quote":"-0.952"}]},
+{"type":"other","subject":"PPL","trigger":"Details of the Reko Diq reconstitution and the price response.","evidence":[
+{"file":"announcements_30d.csv","row":"PPL","field":"title","quote":"Material Information - Reconstitution of the Reko Diq Project"}]},
+{"type":"volume_with_upper_locks","subject":"SYS","trigger":"Volume ratio is 1.599 with no upper locks and a material notice on the last day. Volume plus locks showed nothing in the base rates, so watch only.","evidence":[
+{"file":"screens.csv","row":"SYS","field":"vol20_over_vol120","quote":"1.599"},
+{"file":"announcements_30d.csv","row":"SYS","field":"title","quote":"Material Information"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]}],
+"entries":[],
+"exposure_pct":15,
+"not_known":"FX reserves, current account, IMF status and the next MPC date are not in the bundle. Nothing on valuation history, earnings power or sponsor quality for any name. Base rates are partly measured after this date.",
+"contamination_note":"No post-2022-03-25 knowledge used or noticed; the base_rates warning on later data was treated as rough odds only."}

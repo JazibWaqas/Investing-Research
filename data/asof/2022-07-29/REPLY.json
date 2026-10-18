@@ -1,0 +1,35 @@
+{"date":"2022-07-29",
+"regime":{"rates_phase":"hiking","stance":"risk_off","p_kmi_up_60":0.42,
+"summary":"Policy rate 15.0% after a +125bp hike on 2022-07-07, bills price more (6M cutoff 15.80%), CPI 21.34% and rising, rupee down 29.3% in 3 months, KSE100 down 12.1% in 3 months. This matches the 2017-19 balance-of-payments squeeze and hike cycle, where the index kept falling and few names rose. Stay mostly cash; no core holdings.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 15.0%; last MPC decision 2022-07-07: hike (+125bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate +0.80pp (market pricing hikes); CPI rising over 3 months (+8.6pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"3-month change +29.3%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 40,150 on 2022-07-29; 1m -4.1%, 3m -12.1%, 6m -10.8%, 12m -15.8%"},
+{"file":"situations.md","row":null,"field":null,"quote":"Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics."}]},
+"core":[],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"Act only after a hold plus a stable rupee (second signal), not on the headline; date not in pack.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: wait for it, not the headline."}]},
+{"type":"volume_with_upper_locks","subject":"MFFL","trigger":"Watch only; this pattern is not tradable per the measured base rate. Needs a lock-free confirmation and a known sponsor reason.","evidence":[
+{"file":"screens.csv","row":"MFFL","field":"upper_locks_10d","quote":"2"},
+{"file":"screens.csv","row":"MFFL","field":"vol20_over_vol120","quote":"2.979"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"volume_locks_V4_liq5,60 sessions,445,44%,-2.3%,4.0%,-60%,-0.8%,watch not tradable"}]},
+{"type":"other","subject":"EPCL","trigger":"Board meeting noticed 2022-07-28; check the published result and price reaction at P/E 3.33 before any entry.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"2022-07-28 EPCL: Board Meeting"},
+{"file":"screens.csv","row":"EPCL","field":"pe","quote":"3.33"}]},
+{"type":"other","subject":"SNGP","trigger":"Rising 3m (+14.7%) while the market falls, P/E 2.8; watch for a confirmed volume-backed breakout, no entry now.","evidence":[
+{"file":"screens.csv","row":"SNGP","field":"r3m","quote":"0.147"},
+{"file":"screens.csv","row":"SNGP","field":"pe","quote":"2.805"}]}],
+"entries":[
+{"symbol":"EFERT","type":"other","entry_price":79.0,"stop_price":68.0,"stop_type":"fixed","size_pct":15,"horizon_sessions":120,"p_gain":0.5,
+"reason":"Results for the six months to June 2022 are out; P/E 4.8 and dividend yield 21.7% put it in the below-6 P/E results group, which showed 61% hit and +7.2% median at 120 sessions (not confirmed, base rates partly post-date T). Small starter only; hike regime argues against size. Loss if stopped about 2.1% of book.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"4.817"},
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.217"},
+{"file":"announcements_30d.csv","row":"EFERT","field":"title","quote":"ANNOUNCEMENT OF FINANCIAL RESULTS FOR THE SIX MONTHS ENDED JUNE 30, 2022"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"results_pe_below6_any_reaction_H3,120 sessions,80,61%,+7.2%,,,,not confirmed"}]}],
+"exposure_pct":15,
+"not_known":"Reserves, current account, IMF status, next MPC date, EFERT result figures and EPS growth, and the sponsor reasons behind MFFL volume are not in the pack.",
+"contamination_note":"None used. Any later-period recollection was discarded; base_rates.csv carries its own look-ahead warning and was used only as rough odds."}

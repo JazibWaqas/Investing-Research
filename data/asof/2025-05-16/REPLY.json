@@ -1,0 +1,36 @@
+{"date":"2025-05-16",
+"regime":{"rates_phase":"cutting","stance":"neutral","p_kmi_up_60":0.6,
+"summary":"SBP cut 100bp on 2025-05-05 to 11.0% with CPI at 0.26%, so the easing cycle is live and real rates are high. But KSE100 is already +64.8% in 12m and +28.3% in 6m, and first-cut base rates rest on n=3. Constructive but not stretched-all-in: moderate core, no speculative entries.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.0%; last MPC decision 2025-05-05: cut (-100bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 0.26% for 2025-04 (published by 2025-05-03); three months earlier (2025-01) 2.42%"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 119,649 on 2025-05-16; 1m +3.1%, 3m +5.9%, 6m +28.3%, 12m +64.8%"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"first_rate_cut_kse100,60 sessions,3,67%,+8.4%,,-9.4%,+3.7%,weak (H1)"}]},
+"core":[
+{"symbol":"OGDC","weight_pct":12,"thesis":"E&P led after the first cut in the prior easing cycle; trades at a very low P/E with a 7.5% dividend yield and sits within about 8% of its 252-day high, so it is not extended. Brent is weak, which is the risk.","evidence":[
+{"file":"situations.md","row":null,"field":null,"quote":"fertilizer, E&P and pharma led while banks lagged"},
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"2.786"},
+{"file":"screens.csv","row":"OGDC","field":"dy","quote":"0.075"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 65.20 USD/bbl on 2025-05-16; 3-month change -13.3%"}]},
+{"symbol":"FATIMA","weight_pct":12,"thesis":"Fertilizer led the first-cut cycle and has its own catalyst rather than rate sensitivity. P/E 4.5, dividend yield 8.9%, flat YoY EPS, at the 252-day high, so confirmed rather than a falling knife.","evidence":[
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: favour sectors with their own catalyst over rate-sensitive ones."},
+{"file":"screens.csv","row":"FATIMA","field":"pe","quote":"4.517"},
+{"file":"screens.csv","row":"FATIMA","field":"dy","quote":"0.089"},
+{"file":"screens.csv","row":"FATIMA","field":"dist_from_252_high","quote":"-0.006"}]}],
+"watch":[
+{"type":"volume_with_upper_locks","subject":"FLYNG","trigger":"Watch only. 6 upper locks in 10 days and +81.6% in 1m, but the volume-lock base rate is nothing; act only if a filing explains the move and a stop is defined.","evidence":[
+{"file":"screens.csv","row":"FLYNG","field":"upper_locks_10d","quote":"6"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"volume_locks_V4_liq1,60 sessions,734,46%,-1.7%,4.6%,-60%,-0.5%,watch not tradable"}]},
+{"type":"volume_with_upper_locks","subject":"BNL","trigger":"Watch only. 4 upper locks, vol20/vol120 of 3.2 and +52% in 1m; the board notice on 2025-05-14 was Other Than Financial Results. Do not chase.","evidence":[
+{"file":"screens.csv","row":"BNL","field":"upper_locks_10d","quote":"4"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2025-05-14 BNL: Board Meeting Other Than Financial Results"}]},
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC after the 2025-05-05 cut","trigger":"Date not in the pack; a hold or a further cut changes the stance. Hold odds are only in-sample.","evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"base_rates.csv","row":null,"field":null,"quote":"mpc_hold_kse100,60 sessions,37,62%,+5.5%,,,,no verdict given (in sample; overlapping)"}]},
+{"type":"earnings_inflection_ignored","subject":"MLCF","trigger":"EPS yoy +0.708 on 2024-12-31 data, +23% 1m, 3m +66%, near high with a material-info filing on 2025-05-09. Already rerated, so no entry; revisit only after a new results print.","evidence":[
+{"file":"screens.csv","row":"MLCF","field":"eps_yoy","quote":"0.708"},
+{"file":"announcements_30d.csv","row":null,"field":null,"quote":"2025-05-09,MLCF,material_info,MLCF-Disclosure of Material Information"}]}],
+"entries":[],
+"exposure_pct":24,
+"not_known":"The next MPC date, IMF status, reserves and current account, and the full text of any material-information filing are not in the pack. Method files were not supplied, so mechanism claims cite situations.md and base_rates.csv only.",
+"contamination_note":"No post-2025-05-16 knowledge used. base_rates.csv carries a warning that it was measured partly after this date, so it is used only as rough odds for a type, not for specific names."}

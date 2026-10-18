@@ -1,0 +1,59 @@
+{"date":"2024-06-07",
+"regime":{"rates_phase":"holding","stance":"risk_on","p_kmi_up_60":0.6,
+"summary":"Policy rate held at 22.0% while CPI fell to 11.74% from 23.07% three months earlier, so real rates are positive and the bill market prices cuts the SBP has not made. Index already up 77% in 12m, so the easy part is behind; base rates for a first cut and for MPC holds are positive but weak and thin. Moderate net long, no leverage.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 22.0%; last MPC decision 2024-04-29: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 11.74% for 2024-05 (published by 2024-06-03); three months earlier (2024-02) 23.07%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -1.00pp (market pricing cuts)"},
+{"file":"market.md","row":null,"field":null,"quote":"KSE100: 73,754 on 2024-06-07; 1m +1.6%, 3m +11.8%, 6m +19.6%, 12m +77.0%"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100","field":"hit_rate","quote":"62%"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100","field":"verdict","quote":"weak (H1)"}]},
+"core":[
+{"symbol":"EFERT","weight_pct":15,"thesis":"Fertilizer sector is up strongly over 3m and 6m; EFERT trades on a low P/E with a high dividend yield, which pays while waiting for rate cuts. Base rates give no proven edge to quality or momentum, so size is modest.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"pe","quote":"5.722"},
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.183"},
+{"file":"base_rates.csv","row":"quality_top_third","field":"verdict","quote":"Weak not proven"}]},
+{"symbol":"HUBC","weight_pct":15,"thesis":"Very low P/E and a 43% dividend yield on the screen, price within 2% of its 252-day high so the market is not ignoring it. Power sector is the only one with a name near highs and positive 1m return. Modest size given weak evidence for any single-name rule.",
+"evidence":[
+{"file":"screens.csv","row":"HUBC","field":"pe","quote":"1.568"},
+{"file":"screens.csv","row":"HUBC","field":"dy","quote":"0.431"},
+{"file":"screens.csv","row":"HUBC","field":"dist_from_252_high","quote":"-0.02"},
+{"file":"base_rates.csv","row":"breakout_252high_S3","field":"verdict","quote":"a hypothesis from five windows (file)"}]},
+{"symbol":"MEBL","weight_pct":10,"thesis":"Islamic bank with EPS up year on year, low P/E, double-digit yield. Islamic banks sector is up over 6m. Foreign flows into commercial banks over 20 sessions are positive, while individuals sell. Cuts would help bank-linked sentiment but margins are a risk I cannot size from this pack.",
+"evidence":[
+{"file":"screens.csv","row":"MEBL","field":"eps_yoy","quote":"0.614"},
+{"file":"screens.csv","row":"MEBL","field":"pe","quote":"3.383"},
+{"file":"flows.csv","row":"fipi | Commercial Banks","field":"net_usd_mn","quote":"15.482"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next MPC decision","trigger":"First cut from 22.0%, or another hold with CPI still falling; act on a second confirming signal, not the headline.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill minus policy rate -1.00pp (market pricing cuts)"},
+{"file":"calendar.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"situations.md","row":null,"field":null,"quote":"Lesson: wait for it, not the headline."}]},
+{"type":"earnings_inflection_ignored","subject":"AIRLINK","trigger":"Next results with a gap up on the day; the gap-up arm is a watch with a trail stop exit, not an entry rule.",
+"evidence":[
+{"file":"screens.csv","row":"AIRLINK","field":"eps_yoy","quote":"5.238"},
+{"file":"screens.csv","row":"AIRLINK","field":"n_material","quote":"1"},
+{"file":"base_rates.csv","row":"results_gap_up_trail20","field":"verdict","quote":"watch (exit that worked per file)"}]},
+{"type":"earnings_inflection_ignored","subject":"PAEL","trigger":"EPS yoy reading looks like a one-off off a tiny base; confirm consolidated recurring earnings before any entry.",
+"evidence":[
+{"file":"screens.csv","row":"PAEL","field":"eps_yoy","quote":"16.0"},
+{"file":"screens.csv","row":"PAEL","field":"pe","quote":"15.073"}]},
+{"type":"volume_with_upper_locks","subject":"GWLC","trigger":"Volume ratio and an upper lock with a 1m gain of 32%; do not buy ignition, only watch whether it holds.",
+"evidence":[
+{"file":"screens.csv","row":"GWLC","field":"vol20_over_vol120","quote":"3.456"},
+{"file":"screens.csv","row":"GWLC","field":"upper_locks_10d","quote":"1"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5","field":"verdict","quote":"watch not tradable"}]},
+{"type":"shock_and_rebound","subject":"NRL","trigger":"Refinery sector fell on 1m; wait for a known trigger and first up day after a bottom, not a falling knife.",
+"evidence":[
+{"file":"screens.csv","row":"NRL","field":"r1m","quote":"-0.136"},
+{"file":"sectors.csv","row":"Oil refineries","field":"r1m","quote":"-0.0948"},
+{"file":"base_rates.csv","row":"shock_index5_buy","field":"verdict","quote":"no word given (Verdict 3: buy only on a known trigger)"}]},
+{"type":"other","subject":"LSECL Mughal Energy offer","trigger":"Initial offer to accredited investors; read terms as they are published, not a deal-after-offer yet.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"LSECL","field":"title","quote":"Material Information-Initial offer to the accredited investor-Mughal Energy"}]}],
+"entries":[],
+"exposure_pct":40,
+"not_known":"FX reserves and current account are not in the pack. IMF status, political stability, the next MPC date, and consolidated five-year earnings, float and sponsor behaviour for each name are also not in the pack.",
+"contamination_note":"No post-2024-06-07 knowledge used that I am aware of. base_rates.csv carries a warning that it was measured partly after the replay date, so I used it only as rough odds by type and drew nothing about specific names from it."}

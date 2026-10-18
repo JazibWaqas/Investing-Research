@@ -179,3 +179,43 @@ Base rate, 11 completed offers 2021 to 2026: premium to pre-announcement price m
 - Headline: "Completion: 27 of 56 resolved PAIs (48%)." Buy the day after the PAI, all resolved: "54 | +7.2% | -1.2% | 48%". Completed only: "27 | +18.5% | +8.0% | 63%".
 - Verdict: "the odds are about 50% at the PAI and about 90% or better after the PAO."
 - Biggest caveat: unknown outcomes for 12 PAIs: "27 of 68 non-pending (40%)" if failures, "57%" if completions.
+
+## Added 18 Oct 2026, evening
+
+| Test | Verdict | Key number | n or episodes |
+|---|---|---|---|
+| noise_map_shock_rebound | REPRICES geopolitical on day 1 and gives it back; SBP, budget, rating, rupee, IMF and political headlines ignored on day 1; buy the crash only on a known trigger | index 5%+ below pre-event close: 20s median "+4.2%", win "78%", against random close "+1.1%" and "57%" | 9 trades (trigger); 25 clustered shocks; 157 events |
+| volume_ignition_upper_locks | V1 and V2 nothing; V3 nothing; V4 watch, not tradable; the 20% stop paid, the volume signal did not | liq5 trail20 V1 median "-13.0", win "27", placebo median "-6.9" | 248 V1 trades (36 quarters) |
+| corporate_events | nothing for most sub-types; E2b split watch; E6 rights issue avoid | E2b KMI 60 sessions median "+13.9%" (win "89%", worst "-13%"); E6 median "-9.1%" at 60 sessions | E2b 9 KMI (19 events in 3 years); E6 76; E3a 526 |
+| results_gap_and_policy | R(a) watch; R(b) nothing; R(c) nothing as an entry rule; P none reliable | R(a) 60d median "+16.6%", win "81%", matched "+10.0%" (p 0.11) | 37 (14 entry quarters); P 22 events |
+| compounders | population watch; picking the 3x name nothing; growth-core rule nothing | pooled 3x share "12.1%" (58 starts); 3y rule "0.88x (-11.7%)" vs KMI TR "0.96x" | 58 starts; 155 liquid names (decade); 1.04 years for the registered 3y rule |
+
+### 20. noise_map_shock_rebound
+- Hypothesis: which event types PSX ignores and which it reprices, and whether buying a shock and rebound is measurable at a trigger known at entry.
+- Headline: "Buying a market already 5% below its pre-event close earned +4.2% at 20 sessions with a 78% win rate, against +1.1% and 57% for a random close." Geopolitical: "the median fall was -9.0%, the 20-session rebound +13.2% and the 60-session rebound +27.8%".
+- Verdict: REPRICES for geopolitical and Covid; ignored for SBP, budget, rating, rupee, IMF and political on day 1. "The direction is right and the sample is small."
+- Biggest caveat: "67 of 157 dates are recalled, not re-verified"; 9 trigger trades; event clusters overlap (Covid counted four times).
+
+### 21. volume_ignition_upper_locks
+- Hypothesis: joining a stock on heavy volume and upper-lock closes, then leaving on a 20% trailing stop, pays after costs and beats random entries with the same exit.
+- Headline: liq5 trail20 V1 "248 (36) | 0.0 | -13.0 | 27" with placebo "-6.9 / +9.8". "Net mean +9% to +13% under the stop with a 12% chance of a +50% trade, but the median is -9%, win rate 35%" (V4).
+- Verdict: V1 and V2 nothing; V3 nothing; V4 "watch, not tradable". "The stop paid; the volume signal did not."
+- Biggest caveat: "The 2023 to 2025 rally supplies most positive means"; 32 to 38 quarters is "closer to 3 or 4 regimes"; no news content.
+
+### 22. corporate_events
+- Hypothesis: announcements that change ownership, management or funding, or that the exchange flags, leave a measurable edge when bought on the next session (E1a to E7).
+- Headline: "median +13.9% at 60 sessions on 9 KMI events (89% win, worst -13%)" (E2b). "median -9.1% at 60, -15.4% at 120, win 28% to 33%" (E6). E4a "worse than matched entries (p 1.00)".
+- Verdict: "No corporate event is tradable on this evidence." E2b watch; E6 avoid; the rest nothing.
+- Biggest caveat: titles only, no document bodies; "the sample is 19 names in three years, and eleven of them sit in the 2025 bull run."
+
+### 23. results_gap_and_policy
+- Hypothesis: R, a results day the market rewards hard keeps drifting, so buying the next close is tradable; P, a sector policy or regulated-price event leaves a window after its first public date.
+- Headline: "The 60d median (+16.6%, win 81%) is +11.9 points over any result and +6.5 over matched random entries, not significant (p 0.11), and gone at 120d."
+- Verdict: R(a) watch; R(b) nothing; R(c) nothing as an entry rule; P "None reliable."
+- Biggest caveat: "Fourteen quarters, one year doing most of the work, 2025 flat."
+
+### 24. compounders
+- Hypothesis: (A) a measurable base rate of 3x over five years among liquid PSX names; (B) start-of-window features separate winners; (C) a pre-registered growth-core rule beats KMI All Share TR and the EW liquid basket.
+- Headline: "pooled, 58 starts | 108 avg | 24.7% | 12.1%" (3x share). "3y growth, 2025-09-30 | 1.04 | 0.88x (-11.7%) | 0.96x | 0.88x".
+- Verdict: population Watch; picking the 3x name Nothing; growth-core rule "Nothing: 1.04 years, 0.88x vs 0.96x".
+- Biggest caveat: "The pre-registered test is not runnable: five years of growth data do not exist in the repo"; every window sits in one 2020 to 2026 re-rating.

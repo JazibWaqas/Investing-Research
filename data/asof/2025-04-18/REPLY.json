@@ -1,0 +1,63 @@
+{"date":"2025-04-18",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.6,
+"summary":"Policy rate held at 12.0% while CPI fell to 0.72%, so the real rate is steeply positive, but the 6M T-bill at 11.99% prices no cut yet. KMI is up 59.1% in 12m but only 2.1% in 3m, so the move is extended. Holds historically gave 62% positive 60-session KSE100 odds. Stay partly invested, no entries.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 12.0%; last MPC decision 2025-03-10: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"CPI YoY 0.72% for 2025-03 (published by 2025-04-03); three months earlier (2024-12) 4.08%"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 11.99% (auction 2025-04-16)"},
+{"file":"market.md","row":null,"field":null,"quote":"KMI All Share: 50,991 on 2025-04-18; 1m +2.0%, 3m +2.1%, 6m +35.3%, 12m +59.1%"},
+{"file":"base_rates.csv","row":"mpc_hold_kse100 60 sessions","field":"hit_rate","quote":"62%"},
+{"file":"questions.md","row":null,"field":null,"quote":"A2. Is the curve pricing a move the SBP has not made?"}]},
+"core":[
+{"symbol":"MEBL","weight_pct":15,"thesis":"Islamic bank, P/E 3.4 and dividend yield 12.4% near its high (-3.6% from 252-day high). EPS yoy slightly negative, so it is a yield-plus-rate-tailwind holding, not a growth call. Rate cuts have not started; bank lag in the 2024 cycle is a risk.",
+"evidence":[
+{"file":"screens.csv","row":"MEBL","field":"pe","quote":"3.383"},
+{"file":"screens.csv","row":"MEBL","field":"dy","quote":"0.124"},
+{"file":"screens.csv","row":"MEBL","field":"eps_yoy","quote":"-0.075"},
+{"file":"situations.md","row":null,"field":null,"quote":"fertilizer, E&P and pharma led while banks lagged"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3 120 sessions","field":"hit_rate","quote":"61%"}]},
+{"symbol":"FATIMA","weight_pct":10,"thesis":"Fertilizer with P/E 3.2, yield 12.7%, EPS up 36.1% yoy and a 'Board Meeting and Closed Period' notice, so Q1 results are near. Fertilizer 3m return is -9%, so the price is not extended. Volume ratio of 1.52 shows attention. Small weight because the base rate is only 'not confirmed'.",
+"evidence":[
+{"file":"screens.csv","row":"FATIMA","field":"pe","quote":"3.239"},
+{"file":"screens.csv","row":"FATIMA","field":"dy","quote":"0.127"},
+{"file":"screens.csv","row":"FATIMA","field":"eps_yoy","quote":"0.361"},
+{"file":"calendar.md","row":null,"field":null,"quote":"2025-04-17 FATIMA: Board Meeting and Closed Period"},
+{"file":"sectors.csv","row":"Fertilizer","field":"r3m","quote":"-0.0895"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3 120 sessions","field":"median","quote":"+7.2%"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC decision","trigger":"First cut while CPI is 0.72% and T-bills still sit at 11.99%; consider adding index exposure in stages only on the decision or a falling T-bill cutoff",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"- Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate -0.01pp (market near policy rate); CPI falling over 3 months (-3.4pp)"},
+{"file":"base_rates.csv","row":"first_rate_cut_kse100 20 sessions","field":"hit_rate","quote":"100%"}]},
+{"type":"volume_with_upper_locks","subject":"PREMA","trigger":"Only note it: 5 upper locks, +153% in 3m, at the 252-day high. This type was measured as 'watch not tradable'; no entry.",
+"evidence":[
+{"file":"screens.csv","row":"PREMA","field":"upper_locks_10d","quote":"5"},
+{"file":"screens.csv","row":"PREMA","field":"r3m","quote":"1.53"},
+{"file":"base_rates.csv","row":"volume_locks_V4_liq5 60 sessions","field":"verdict","quote":"watch not tradable"}]},
+{"type":"earnings_inflection_ignored","subject":"GAL","trigger":"Q1 results after the 2025-04-11 board meeting; EPS yoy is already 90.444 off a low base, but price is at its high (-0.8%), so it is not ignored",
+"evidence":[
+{"file":"screens.csv","row":"GAL","field":"eps_yoy","quote":"90.444"},
+{"file":"screens.csv","row":"GAL","field":"dist_from_252_high","quote":"-0.008"},
+{"file":"base_rates.csv","row":"results_gap_up 60 sessions","field":"verdict","quote":"watch (p 0.11 vs same-year random)"}]},
+{"type":"earnings_inflection_ignored","subject":"THCCL","trigger":"Board meeting for the quarter ended 2025-03-31 on 2025-04-18; EPS yoy 2.581 with P/E 2.2 and price 8.7% below its high. Look for a muted price reaction on results.",
+"evidence":[
+{"file":"calendar.md","row":null,"field":null,"quote":"2025-04-18 THCCL: Board Meeting for the quarter ended March 31, 2025"},
+{"file":"screens.csv","row":"THCCL","field":"eps_yoy","quote":"2.581"},
+{"file":"screens.csv","row":"THCCL","field":"pe","quote":"2.244"}]},
+{"type":"shock_and_rebound","subject":"EFERT","trigger":"Down 14.6% in 1m, 19% below its high, yield 18.3%. Results meeting announced 2025-04-04; wait for a first up-close after the results, not a catch of the low.",
+"evidence":[
+{"file":"screens.csv","row":"EFERT","field":"r1m","quote":"-0.146"},
+{"file":"screens.csv","row":"EFERT","field":"dy","quote":"0.183"},
+{"file":"base_rates.csv","row":"shock_fall5_hindsight_firstup_after_bottom 20 sessions","field":"verdict","quote":"needs hindsight (file)"}]},
+{"type":"deal_after_offer","subject":"FABL","trigger":"Acquisition discussions were terminated; no offer in force, so no deal entry. Re-check only if a new offer is disclosed.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"FABL","field":"title","quote":"Disclosure of Material Information - Termination of Acquisition Discussions"}]},
+{"type":"other","subject":"HALEON","trigger":"Change of CEO announced 2025-04-17, Q1 board meeting 2025-04-18, volume ratio 2.2. Watch the results reaction before any view.",
+"evidence":[
+{"file":"announcements_30d.csv","row":"HALEON","field":"title","quote":"Material Information - Change of CEO"},
+{"file":"screens.csv","row":"HALEON","field":"vol20_over_vol120","quote":"2.213"}]}],
+"entries":[],
+"exposure_pct":25,
+"not_known":"Date of the next MPC, FX reserves, current account, IMF status and the political backdrop are not in the bundle. Q1 results for most names are not yet published. Bundle has no free-float or order-book data for any holding.",
+"contamination_note":"No post-2025-04-18 memory used; it was discarded. base_rates.csv is flagged as measured through 2026-10-16, partly after this date, so I used it only as rough odds for situation types and drew nothing from it about specific names."}
