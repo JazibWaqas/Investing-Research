@@ -1,3 +1,10 @@
+---
+type: "geopolitical shock and rebound"
+knowable_date: 2025-05-09
+outcome_end: 2025-07-01
+summary: "Geopolitical shock, intact IMF and rates: KSE fell 12.6%, rebounded 13% in two sessions and was 8% above its pre-shock level by July. Lesson: hold the core; keep cash ready for a weekend gap."
+---
+
 # Situation 06: the May 2025 India conflict, crash and rebound
 
 Written 2026-10-18. Type: geopolitical shock and rebound. Sources: `data/macro/kse100.csv` (open, high, low, close), `data/panel_close_adj_pricereturn.parquet` (108 liquid survivors), `data/macro/policy_rate_decisions.csv`. News: IMF press release 25/137 (9 May 2025); Business Recorder, Tribune, Arab News, Daily Pakistan, Business Standard on 12 May 2025 (asserted from search snippets, not opened in full). The Pahalgam attack date (22 Apr) and the 7 May strikes are general knowledge, not re-fetched.

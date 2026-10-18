@@ -1,3 +1,10 @@
+---
+type: "failure case, a derating while earnings rose"
+knowable_date: 2026-01-07
+outcome_end: 2026-10-16
+summary: "Failure: SYS fell 31% from January to October 2026 while trailing earnings rose 18%; the multiple fell from 25x to 15x. Lesson: the story was true, the multiple was the risk; write the exit before the entry."
+---
+
 # Situation 10: a popular story that did not pay, SYS (and NETSOL) 2025 to 2026
 
 Written 2026-10-18. Type: failure case, a derating while earnings rose. Sources: `data/panel_close_adj_pricereturn.parquet` (SYS had a 5-for-1 split on 2 Jun 2025, `data/corporate_actions.csv`), `data/fundamentals/quarterly_eps.csv` (stockanalysis figures; SYS shares restated for the split), `data/macro/`, `knowledge/sectors/tech.md`, `knowledge/companies/NETSOL.md`. I did not find a pumped small cap in `tests/out/` (no volume_ignition file exists), so this is the chosen failure. The causes of the 2026 sell-off are my reading from the repo, not sourced.

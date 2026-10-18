@@ -1,3 +1,10 @@
+---
+type: "regime case (tightening plus external stress)"
+knowable_date: 2021-11-30
+outcome_end: 2023-06-23
+summary: "Tightening plus external stress: rate up 800bp in ten months with CPI above it. To June 2023 the median liquid stock fell 52% and 4 of 95 names rose. Lesson: hold bills, and set a trigger to return."
+---
+
 # Situation 03: the 2021 to 2022 hike cycle and the 2022 default scare
 
 Written 2026-10-18. Type: regime case (tightening plus external stress). Sources: `data/macro/` (kse100, policy_rate_decisions, cpi, usdpkr, tbill_auctions), `data/panel_close_adj_pricereturn.parquet` (95 liquid survivors; delisted names are missing, so losses are understated), `tests/rate_cycle_episodes.md`, `knowledge/lessons.md` items 9 and 13. News: Al Jazeera 25 May 2022, Bloomberg (via BNN) and ProPakistani 27 May 2022, Arab News 14 Jul 2022, ProPakistani 17 Aug 2022 (all asserted from search snippets, not opened in full).

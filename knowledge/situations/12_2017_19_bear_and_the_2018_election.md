@@ -1,3 +1,10 @@
+---
+type: "regime case (balance-of-payments squeeze, hike cycle, no IMF until 2019)"
+knowable_date: 2017-12-08
+outcome_end: 2019-08-16
+summary: "Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics."
+---
+
 # Situation 12: the 2017 to 2019 bear and the 2018 election
 
 Written 2026-10-18. Type: regime case (balance-of-payments squeeze, hike cycle, no IMF until 2019). Sources: `data/macro/` (kse100, policy_rate_decisions, cpi, usdpkr, tbill_auctions), `data/panel_close_adj_pricereturn.parquet` (75 liquid survivors from May 2017, 55 from Jul 2018; survivors only, delisted names missing), `knowledge/sectors/tech.md`. News: MSCI inclusion (Textalks, Dawn, Arab News, asserted from search snippets); Reuters-sourced rupee and IMF items (Malay Mail, Al Jazeera, Arab News, 2018, asserted); the 2017 Supreme Court verdict and the 25 Jul 2018 election are general knowledge, not re-fetched.

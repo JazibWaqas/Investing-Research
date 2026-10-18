@@ -1,3 +1,10 @@
+---
+type: "regime bottom (IMF and rate peak)"
+knowable_date: 2019-09-16
+outcome_end: 2020-01-13
+summary: "Regime bottom: the IMF approval was not the low. The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak. Lesson: wait for it, not the headline."
+---
+
 # Situation 01: the 2019 bottom and the IMF programme
 
 Written 2026-10-18. Type: regime bottom (IMF and rate peak). Prices: `data/macro/kse100.csv` (headline price index; "KSE" below), `data/panel_close_adj_pricereturn.parquet` (survivors only, 34 liquid names). Macro: `data/macro/policy_rate_decisions.csv`, `cpi.csv`, `usdpkr.csv`, `tbill_auctions.csv`. "Observed" means computed from those files; "asserted" means taken from a cited page or general knowledge that I did not re-open in full.

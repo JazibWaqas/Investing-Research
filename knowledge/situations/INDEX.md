@@ -42,3 +42,20 @@ Written 2026-10-18. Twelve dated cases from PSX history, each in its own file, i
 - Trailing stops (10% on the index, 20% on single names) are illustrative placeholders. They were not tested and not chosen from evidence.
 - News items marked "asserted" came from search snippets (the Business Recorder and several others returned 403 or were not opened in full). The 2018 election date, the Panama verdict, the Kashmir date and the Pahalgam date are general knowledge.
 - Cash returns are approximations from auction yields.
+
+## Machine-readable rows
+
+One line per case, read by `scripts/replay_bundle.py`: outcome_end date, file name, summary. Summaries carry no dated fact after their outcome_end.
+
+2020-01-13 (outcome_end) | 01_2019_bottom_imf_programme.md | Regime bottom: the IMF approval was not the low. The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak. Lesson: wait for it, not the headline.
+2021-06-14 (outcome_end) | 02_2020_covid_crash_rate_cut_rebound.md | Shock with a policy backstop: the first rate cut came before the March 2020 low, the rebound was +79% from the low by June 2021. Lesson: enter a third, add on confirmation, favour USD earners.
+2023-06-23 (outcome_end) | 03_2021_22_hike_cycle_and_default_scare.md | Tightening plus external stress: rate up 800bp in ten months with CPI above it. To June 2023 the median liquid stock fell 52% and 4 of 95 names rose. Lesson: hold bills, and set a trigger to return.
+2024-12-16 (outcome_end) | 04_2023_imf_standby_and_the_rally.md | Regime bottom on an IMF trigger: the staff-level deal came before any rate cut. KSE rose 190% from the June 2023 low to December 2024. Lesson: enter in stages on the trigger, not on a cut.
+2024-12-16 (outcome_end) | 05_2024_first_cut_and_the_sector_leaders.md | First-cut policy decision in an easing cycle: KSE +59% by December 2024; fertilizer, E&P and pharma led while banks lagged. Lesson: favour sectors with their own catalyst over rate-sensitive ones.
+2025-07-01 (outcome_end) | 06_2025_may_india_conflict_crash_and_rebound.md | Geopolitical shock, intact IMF and rates: KSE fell 12.6%, rebounded 13% in two sessions and was 8% above its pre-shock level by July. Lesson: hold the core; keep cash ready for a weekend gap.
+2026-10-16 (outcome_end) | 07_2026_refiners.md | Catalyst trade: refiners' windfall earnings were ignored for ten weeks, then a spread turn, volume and policy lifted them. PRL +155%, NRL +70% to 16 October 2026. Lesson: spread, volume and policy, in that order.
+2026-09-09 (outcome_end) | 08_2026_asl_sponsor_buying.md | Sponsor accumulation: the controlling sponsor bought three times at rising prices, each disclosed within two days; ASL rose 62% to its September 2026 peak. Lesson: real but untested; the price moved a day before disclosure.
+2024-12-30 (outcome_end) | 09_2024_ssgc_volume_run.md | Volume ignition with upper locks on a regulated utility with late accounts: SSGC rose from 9.95 to 49.52 by the December 2024 peak with no filing explaining it. Lesson: instinct paid, but the repo cannot yet say when.
+2026-10-16 (outcome_end) | 10_2026_sys_derating_failure.md | Failure: SYS fell 31% from January to October 2026 while trailing earnings rose 18%; the multiple fell from 25x to 15x. Lesson: the story was true, the multiple was the risk; write the exit before the entry.
+2026-10-16 (outcome_end) | 11_2026_epcl_takeover_in_progress.md | Deal after the offer, still in progress: a narrow pro-rata takeover, and every entry since February is down (31.77 on 16 October 2026). Lesson: the 21.5% headline spread overstates the return; buy below Rs27.
+2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.

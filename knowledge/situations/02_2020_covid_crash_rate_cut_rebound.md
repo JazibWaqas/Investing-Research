@@ -1,3 +1,10 @@
+---
+type: "shock and rebound with a policy response"
+knowable_date: 2020-03-17
+outcome_end: 2021-06-14
+summary: "Shock with a policy backstop: the first rate cut came before the March 2020 low, the rebound was +79% from the low by June 2021. Lesson: enter a third, add on confirmation, favour USD earners."
+---
+
 # Situation 02: March 2020 crash and the rate-cut rebound
 
 Written 2026-10-18. Type: shock and rebound with a policy response. Sources: `data/macro/` (kse100, policy_rate_decisions, usdpkr, cpi, tbill_auctions), `data/panel_close_adj_pricereturn.parquet` (51 liquid survivors), `tests/rate_cycle_episodes.md`, `knowledge/sectors/tech.md`. Items marked "asserted" come from search snippets (Dawn, Business Recorder, ProPakistani, ARY) or general knowledge and were not opened in full.

@@ -1,3 +1,10 @@
+---
+type: "catalyst trade (ignored earnings, then spread and policy)"
+knowable_date: 2026-04-29
+outcome_end: 2026-10-16
+summary: "Catalyst trade: refiners' windfall earnings were ignored for ten weeks, then a spread turn, volume and policy lifted them. PRL +155%, NRL +70% to 16 October 2026. Lesson: spread, volume and policy, in that order."
+---
+
 # Situation 07: the 2026 refiners (PRL, NRL, ATRL, CNERGY)
 
 Written 2026-10-18. Type: catalyst trade (ignored earnings, then spread and policy). This is a condensed reuse of `tests/refiner_steel_retrospective.md` and `knowledge/playbooks/catalyst_trade.md`; read those for the full price tables and PSX document ids. Prices re-checked from `data/panel_close_adj_pricereturn.parquet` and `data/macro/`. News is as cited in the retrospective (ProPakistani 8 Jul and 2 Sep 2026, Dawn 25 Sep 2026); I did not re-open it.

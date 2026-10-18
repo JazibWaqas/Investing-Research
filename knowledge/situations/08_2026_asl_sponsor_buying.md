@@ -1,3 +1,10 @@
+---
+type: "sponsor accumulation (insider signal)"
+knowable_date: 2026-04-09
+outcome_end: 2026-09-09
+summary: "Sponsor accumulation: the controlling sponsor bought three times at rising prices, each disclosed within two days; ASL rose 62% to its September 2026 peak. Lesson: real but untested; the price moved a day before disclosure."
+---
+
 # Situation 08: ASL (Aisha Steel) and the 2026 sponsor buying
 
 Written 2026-10-18. Type: sponsor accumulation (insider signal). Sources: `tests/refiner_steel_retrospective.md` (PSX documents 273850, 275493, 277816, 280799, 281323), `data/panel_close_adj_pricereturn.parquet`, `data/panel_volume.parquet`, `data/announcements.parquet`, `knowledge/sectors/steel.md`. I re-checked prices and volumes but did not re-open the PDFs.

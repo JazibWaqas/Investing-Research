@@ -1,3 +1,11 @@
+---
+type: "deal after the offer is published"
+knowable_date: 2026-03-10
+outcome_end: 2026-10-16
+status: in_progress
+summary: "Deal after the offer, still in progress: a narrow pro-rata takeover, and every entry since February is down (31.77 on 16 October 2026). Lesson: the 21.5% headline spread overstates the return; buy below Rs27."
+---
+
 # Situation 11: the EPCL takeover, 2026 (in progress)
 
 Written 2026-10-18, data to 16 Oct 2026. This case is not finished: there is no exit to score. Type: deal after the offer is published. Sources: `data/prices_raw/EPCL.csv`, `data/announcements.parquet`, `data/deals_history.csv`, `knowledge/companies/EPCL.md`, `knowledge/playbooks/deals.md`, `knowledge/lessons.md` item 10. PSX documents as cited there (270336, 272303, 282058, 282317); I did not re-open the PDFs. The probabilities below are the ones in EPCL.md, not new estimates.

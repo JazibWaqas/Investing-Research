@@ -1,3 +1,10 @@
+---
+type: "volume ignition with upper locks, on a regulated utility with late accounts"
+knowable_date: 2024-10-23
+outcome_end: 2024-12-30
+summary: "Volume ignition with upper locks on a regulated utility with late accounts: SSGC rose from 9.95 to 49.52 by the December 2024 peak with no filing explaining it. Lesson: instinct paid, but the repo cannot yet say when."
+---
+
 # Situation 09: SSGC, the 2024 volume run (the investor's own call)
 
 Written 2026-10-18. Type: volume ignition with upper locks, on a regulated utility with late accounts. Sources: `data/prices_raw/SSGC.csv` (no corporate action in the window), `data/announcements.parquet`, PSX documents 236238, 242268, 242895, 244612 (downloaded and read this session), `knowledge/sectors/gas_utilities_misc.md`, PACRA rating report and Business Recorder summaries of the OGRA decision (asserted via search; the Business Recorder pages returned 403 and were not opened). His actual entry and exit dates are not in the repo; "+120%" below is his stated figure, unverified.

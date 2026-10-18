@@ -1,3 +1,10 @@
+---
+type: "regime bottom, confirmed trigger"
+knowable_date: 2023-06-29
+outcome_end: 2024-12-16
+summary: "Regime bottom on an IMF trigger: the staff-level deal came before any rate cut. KSE rose 190% from the June 2023 low to December 2024. Lesson: enter in stages on the trigger, not on a cut."
+---
+
 # Situation 04: the June 2023 IMF standby and the 2023 to 2024 rally
 
 Written 2026-10-18. Type: regime bottom with a confirmed trigger. Sources: `data/macro/`, `data/panel_close_adj_pricereturn.parquet` (40 liquid survivors), `tests/rate_cycle_episodes.md`, `knowledge/lessons.md` items 2, 9, 13. News: IMF press release 23/261 (12 Jul 2023), Friday Times and Al Jazeera 12 Jul 2023, ProPakistani 10 May 2023 (asserted from search snippets, not opened in full).

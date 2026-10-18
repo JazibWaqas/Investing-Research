@@ -1,3 +1,10 @@
+---
+type: "policy decision (first cut of an easing cycle)"
+knowable_date: 2024-06-10
+outcome_end: 2024-12-16
+summary: "First-cut policy decision in an easing cycle: KSE +59% by December 2024; fertilizer, E&P and pharma led while banks lagged. Lesson: favour sectors with their own catalyst over rate-sensitive ones."
+---
+
 # Situation 05: the June 2024 first cut and the sector leaders
 
 Written 2026-10-18. Type: policy decision (first cut of an easing cycle). Sources: `data/macro/`, `data/panel_close_adj_pricereturn.parquet` (94 liquid survivors, sector from `data/symbols.csv`), `tests/rate_cycle_episodes.md` (H1 table and placebo), `knowledge/playbooks/sector_rotation.md`. News: Profit and Geo, 10 Jun 2024; the SBP statement as reported (asserted from search snippets, not opened in full).
