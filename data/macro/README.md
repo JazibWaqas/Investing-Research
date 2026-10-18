@@ -67,3 +67,61 @@ Source: scstrade.com `FIPILIPI.aspx/loadfipiInvestor`, fetched by `scripts/fetch
 - Sectors (source's top-10 PSX sectors by activity plus a remainder): Cement, Commercial Banks, Fertilizer, Food and Personal Care Products, Oil and Gas Exploration Companies, Oil and Gas Marketing Companies, Power Generation and Distribution, Technology and Communication, Textile Composite, Debt Market (from 2020-10-02 only), and All other Sectors (everything else). Pharma, Refinery, Automobile etc. are inside "All other Sectors". The sector set is fixed, but a row is absent when that group did not trade the sector that day, so counts differ by sector.
 - Gaps: 2019-04-19, 2020-06-19 and 2020-11-03 return a server error on this endpoint (they exist in `fipi_lipi.csv`). Conversely the five days missing from `fipi_lipi.csv` (2017-06-02, 2023-01-19, 2023-06-05, 2023-08-28, 2025-07-30) are present here, so summing sectors per group gives a fill for those days.
 - Caveat: sector sums were not reconciled against `fipi_lipi.csv` totals.
+
+## External account (added 2026-10-18 by `scripts/macro_external.py`)
+
+Regime inputs for the external-account leg of the method. Raw inputs are in `data/raw/macro/`.
+
+### fx_reserves.csv
+
+- Columns: `date` (week-end Friday), `sbp_reserves_usd_mn` (net reserves held with SBP), `total_reserves_usd_mn` (total liquid FX reserves, SBP plus banks). USD million.
+- Source: SBP Forex_Arch, https://www.sbp.org.pk/assets/document/Forex_Arch.xlsx, sheet "Week-end" (raw copy `data/raw/macro/forex_arch.xlsx`). Also listed at https://www.sbp.org.pk/ecodata/.
+- Cadence: weekly (week ending Friday). Some weeks are missing where SBP had holidays; the sheet's own footnotes say which.
+- Range: 792 rows, 2011-05-07 to 2026-10-09. The latest print (2026-10-09) is the latest in the SBP archive as of the build. I did not find a separate live weekly page; the archive is the SBP series itself.
+- Caveats: the sheet carries revision and provisional tags on some dates ("(R)", footnote numbers); these were stripped, and the values are as printed. The SBP-only series rose from 17,118 (2026-08-28) to 21,400 (2026-09-18) in three weeks; the source gives no reason here and it was not checked.
+
+### current_account.csv
+
+- Columns: `month` (YYYY-MM), `cab_usd_mn` (current account balance, USD million; negative is a deficit).
+- Source: SBP Summary Balance of Payments as per BPM6, monthly, https://www.sbp.org.pk/assets/document/BPM6_Ach_M.xlsx (linked from https://www.sbp.org.pk/ecodata/). Raw copy `data/raw/macro/BPM6_Ach_M.xlsx`. The file starts 2013-07; only 2015 onward is written here.
+- Cadence: monthly, about 2 to 3 weeks after month end. The latest months are provisional and the file's own "P" and "R" markers were not parsed, so which months were revised later is not recorded here.
+- Range: 141 rows, 2015-01 to 2026-09. October 2026 is not out yet.
+- Caveats: this is the balance-of-payments basis, not the trade-statistics basis. In the header, dates from Apr 2026 onward carry day 26; only the year and month are used.
+
+### import_cover.csv
+
+- Columns: `month`, `reserves_asof` (date of the last weekly print in that month, which is not always the month-end; Sep 2026 uses 2026-09-25), `sbp_reserves_usd_mn`, `total_reserves_usd_mn`, `imports_12m_usd_mn` (trailing 12 months of goods imports, FOB, from the BoP file), `import_cover_total_months` (total reserves / (imports_12m / 12)), `import_cover_sbp_months` (SBP-only reserves on the same basis).
+- Source: the two files above. Import cover is computed here; it is not an SBP series.
+- Range: 141 rows, 2015-01 to 2026-09. Oct 2026 is left out because no full month of imports exists for it yet.
+- Caveat: the method says "reserves" without saying which. Both versions are given; the total-reserves column is the usual headline. Imports are BoP goods FOB, not customs-declared values.
+
+Latest values: week ending 2026-10-09, SBP reserves 21,469.5 and total 26,863.3 USD mn. Current account 2026-09 -356 USD mn; Jan to Sep 2026 -83; Oct 2025 to Sep 2026 -510. Import cover at 2026-09 (reserves as of 2026-09-25): 4.81 months total, 3.85 months SBP-only.
+
+## KSE100 trailing P/E and earnings yield (added 2026-10-18 by `scripts/macro_kse_pe.py`)
+
+### kse100_pe.csv
+
+- Columns: `month` (YYYY-MM, month-end), `pe`, `source` (`computed_kse100_members` on every row).
+- Method: P/E = sum of market cap / sum of trailing-four-quarter net income to common, over the KSE100 members in force at that date (snapshot in `data/index_members/`, effective 1 Apr and 1 Oct). Market cap = last close on or before the date x basic shares from the latest quarter available by then, scaled by bonus and split events in `data/corporate_actions.csv` after that quarter. Negative earnings stay in the sum. This is an aggregate ratio, so the largest companies weigh most.
+- Source for earnings and shares: StockAnalysis quarterly income statement, https://stockanalysis.com/quote/psx/{SYM}/financials/income-statement/?p=quarterly (raw HTML in `data/raw/stockanalysis/{SYM}_income.html`; pages scraped 2026-10-17). Prices: PSX portal daily history (the repo's `data/prices_*` files, plus `data/raw/macro/psx_hist/` for 35 members that had no file; fetched with `scripts/macro_kse_prices.py`).
+- Availability: the announcement date from `data/fundamentals/quarterly_eps.csv` where it is joined; otherwise period end + 90 days.
+- Range: 50 rows, 2022-09 to 2026-10. October 2026 uses prices to 2026-10-16. The series starts at the first month with 60 or more members having trailing earnings. From 2022-11 on, 86 to 97 of the 99 to 100 members have inputs. The eight members with no StockAnalysis page are DHPL, FFBL, HGFA, PSMC, SHEL, SSOM, TPLRF1 and YOUW.
+- Caveats, all material:
+  - Earnings and shares are the current StockAnalysis figures (restated as scraped), not the figures first published. Point in time is approximate.
+  - Share counts for a few small bonuses are missing from `corporate_actions.csv` (its notes say so), so those market caps are understated.
+  - The membership changes at each snapshot only. Index changes between snapshots are not captured.
+  - PSX's own index P/E was not found in the saved pages, and I had no search tool here, so Topline and AHL monthly P/E history was not checked. This series is a computed proxy, not a published PSX figure.
+  - The series moves month to month with membership and earnings timing. For example, it falls from 9.52 (2024-09) to 8.04 (2024-10), the month of the 2024-10-01 snapshot, then 9.03 (2024-11). This was not checked against filings.
+
+### earnings_yield_vs_tbill.csv
+
+- Columns: `month`, `kse100_earnings_yield_pct` (100 / pe), `tbill_6m_cutoff_pct` (6-month T-bill cut-off, last auction on or before the month-end), `gap_pct_points` (earnings yield minus T-bill), `tbill_auction_date`. All in percent, not decimals.
+- Source: `data/macro/kse100_pe.csv` and `data/macro/tbill_auctions.csv` (SBP tb.xlsx).
+- Range: 50 rows, 2022-09 to 2026-10. The earnings yield is an aggregate of trailing earnings, not a forecast return, and the T-bill is a nominal yield that is not dividend-adjusted.
+
+Latest values: 2026-10 P/E 7.86 (through 2026-10-16), earnings yield 12.72%, 6-month T-bill cut-off 12.40% (auction 2026-10-14), gap +0.32 percentage points. Previous month, 2026-09: P/E 8.09, earnings yield 12.36%, T-bill 12.45%, gap -0.09.
+
+### Not built
+
+- PSX's own index P/E: not found in the saved pages (`data/raw/macro/indices_page.html` has none). Not searched further.
+- Topline and AHL monthly KSE100 P/E reports: not searched; this session had no web search tool.
