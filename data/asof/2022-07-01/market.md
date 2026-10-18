@@ -9,6 +9,6 @@
 - USD/PKR: 204.62  on 2022-06-30; 3-month change +12.2%
 - FX reserves, current account: not available in this repository (no data file)
 - Regime: 6M T-bill minus policy rate +1.05pp (market pricing hikes); CPI rising over 3 months (+1.5pp)
-- Next scheduled MPC: 2022-07-07 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 Session date used: 2022-07-01. Liquid KMI names: 50 (membership KMI_ALL_derived_2022-01-03.csv).

@@ -50,7 +50,7 @@ def asof_val(s, d):
     return s.iloc[-1] if len(s) else np.nan
 
 
-def market(T, pkt_next):
+def market(T):
     L = [f"# Market as of {T.date()} close (public information only)\n"]
     for nm, f in (("KSE100", "kse100"), ("KMI All Share", "kmiallshr")):
         s = series(f, T)
@@ -77,15 +77,8 @@ def market(T, pkt_next):
     ch = c.yoy - c3.yoy
     L.append(f"- Regime: 6M T-bill minus policy rate {sp:+.2f}pp ({'market pricing hikes' if sp > 0.5 else 'market pricing cuts' if sp < -0.5 else 'market near policy rate'}); "
              f"CPI {'rising' if ch > 0.3 else 'falling' if ch < -0.3 else 'flat'} over 3 months ({ch:+.1f}pp)")
-    L.append(f"- Next scheduled MPC: {pkt_next}")
+    L.append("- Next MPC: see SBP calendar")
     return "\n".join(L) + "\n"
-
-
-def next_mpc(T):
-    dec = pd.read_csv(M / "policy_rate_decisions.csv", parse_dates=["date"])
-    gap = dec.date.diff().dt.days
-    nxt = dec[(dec.date > T) & (gap >= 30)]   # a decision within 30 days of the previous one was an emergency meeting, not scheduled
-    return (str(nxt.date.iloc[0].date()) + " (approximate; calendar taken from the decision-date pattern, outcome not shown)") if len(nxt) else "unknown"
 
 
 def main():
@@ -113,7 +106,7 @@ def main():
     kmi = series("kmiallshr", T)
     rows = []
     for sec, names in sectors().items():
-        got = [n for n in names if n in adj.columns and adj[n].iloc[-60:].notna().any()]
+        got = [n for n in names if n in adj.columns and adj[n].iloc[-5:].notna().any() and adj[n].iloc[:-21].notna().any()]   # priced at T and already listed a month before
         r = px[got].iloc[-253:].pct_change().clip(-0.10, 0.10)
         idx = (1 + r.mean(axis=1).fillna(0)).cumprod()
         at_hi = int(sum(adj[n].iloc[-1] >= hi[n] for n in got if pd.notna(adj[n].iloc[-1]) and pd.notna(hi[n])))
@@ -189,20 +182,19 @@ def main():
     pd.concat(parts)[["kind", "window", "key", "net_usd_mn", "through"]].round(3).to_csv(out / "flows.csv", index=False)
 
     # --- calendar and market
-    nm = next_mpc(T)
     b = w30[(w30.klass == "board_meeting_notice") & w30.symbol.isin(liquid) & ~w30.title.str.contains("in progress", case=False)]
-    cal = [f"# Calendar as of {a.date}\n", f"- Next scheduled MPC: {nm}\n",
+    cal = [f"# Calendar as of {a.date}\n", "- Next MPC: see SBP calendar\n",
            "## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)\n"]
     cal += [f"- {r.dt:%Y-%m-%d} {r.symbol}: {r.title}" for r in b.sort_values("dt").itertuples()]
     (out / "calendar.md").write_text("\n".join(cal) + "\n", encoding="utf-8")
-    (out / "market.md").write_text(market(T, nm) + f"\nSession date used: {T.date()}. Liquid KMI names: {len(liquid)} (membership {memfile}).\n", encoding="utf-8")
+    (out / "market.md").write_text(market(T) + f"\nSession date used: {T.date()}. Liquid KMI names: {len(liquid)} (membership {memfile}).\n", encoding="utf-8")
     print(f"{a.date}: session {T.date()}, {len(liquid)} liquid names, list {memfile}")
 
     if a.check:
         lim = pd.Timestamp(a.date) + pd.Timedelta(days=1)
         for f in sorted(out.iterdir()):
             if f.suffix == ".md":
-                txt = "\n".join(l for l in f.read_text(encoding="utf-8").splitlines() if "Next scheduled MPC" not in l)   # a future MPC date is the one allowed forward date
+                txt = f.read_text(encoding="utf-8")
                 mx = pd.to_datetime(pd.Series(re.findall(r"\d{4}-\d{2}-\d{2}", txt))).max()
             else:
                 df = pd.read_csv(f)

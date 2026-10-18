@@ -9,6 +9,6 @@
 - USD/PKR: 138.47  on 2019-03-01; 3-month change +0.2%
 - FX reserves, current account: not available in this repository (no data file)
 - Regime: 6M T-bill minus policy rate +0.35pp (market near policy rate); CPI rising over 3 months (+0.4pp)
-- Next scheduled MPC: 2019-03-29 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 Session date used: 2019-03-01. Liquid KMI names: 45 (membership KMI_ALL_derived_2019-01-28.csv).

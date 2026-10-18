@@ -9,6 +9,6 @@
 - USD/PKR: 278.31  on 2026-07-10; 3-month change -0.3%
 - FX reserves, current account: not available in this repository (no data file)
 - Regime: 6M T-bill minus policy rate -0.06pp (market near policy rate); CPI rising over 3 months (+3.8pp)
-- Next scheduled MPC: 2026-07-27 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 Session date used: 2026-07-10. Liquid KMI names: 143 (membership KMI_ALL_2026-06-05.csv).

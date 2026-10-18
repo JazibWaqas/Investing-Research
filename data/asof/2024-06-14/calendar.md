@@ -1,6 +1,6 @@
 # Calendar as of 2024-06-14
 
-- Next scheduled MPC: 2024-07-29 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 ## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
 

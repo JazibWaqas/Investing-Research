@@ -9,6 +9,6 @@
 - USD/PKR: 278.54  on 2024-06-14; 3-month change -0.1%
 - FX reserves, current account: not available in this repository (no data file)
 - Regime: 6M T-bill minus policy rate -0.53pp (market pricing cuts); CPI falling over 3 months (-11.3pp)
-- Next scheduled MPC: 2024-07-29 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 Session date used: 2024-06-14. Liquid KMI names: 87 (membership KMI_ALL_derived_2023-12-26.csv).

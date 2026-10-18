@@ -9,6 +9,6 @@
 - USD/PKR: 281.58  on 2025-05-12; 3-month change +0.9%
 - FX reserves, current account: not available in this repository (no data file)
 - Regime: 6M T-bill minus policy rate +1.00pp (market pricing hikes); CPI falling over 3 months (-2.2pp)
-- Next scheduled MPC: 2025-06-16 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 Session date used: 2025-05-12. Liquid KMI names: 100 (membership KMI_ALL_derived_2025-01-03.csv).

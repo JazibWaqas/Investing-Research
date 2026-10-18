@@ -1,6 +1,6 @@
 # Calendar as of 2020-03-20
 
-- Next scheduled MPC: 2020-06-25 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+- Next MPC: see SBP calendar
 
 ## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
 
