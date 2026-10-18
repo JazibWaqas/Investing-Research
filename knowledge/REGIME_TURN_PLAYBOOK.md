@@ -94,12 +94,12 @@ Groups are fixed on the low date; adjusted closes. Large = the 20 most-traded li
 
 ## 4. The entry plan for a person with monthly deposits
 
-The `PICKS.md` rule stands: Rs50,000 a month, 75% core (three large KMI names), 25% breakout sleeve; stopping deposits is the one thing that reliably loses. A turn changes only what you do with uninvested money, **C**: the month's deposit plus anything held back while the regime was hostile.
+The `PICKS.md` rule stands (version 4, 19 Oct 2026): Rs50,000 a month, about 80% core (LUCK, MEBL, MARI), about 20% reserve held as cash for the turn, at most one small conditional opportunity; stopping deposits is the one thing that reliably loses. A turn changes only what you do with the reserve, **C**: the accumulated cash plus the month's reserve share. (Earlier text here referred to v3's Rs37,500 core and Rs12,500 breakout sleeve; v4 supersedes it.)
 
 | When | Test | Action | Why |
 |---|---|---|---|
 | **Week 1** after a trough | A and B present (oil calm, drain under 10%) | Put **one third of C** into the core names. | All 15 index entries at +1, +4 and +8 weeks in five finished turns were up 16% to 80% a year later (`2022_23.md` rule 4); in 2020 and 2023 week 1 beat week 8 by 16 to 17 points. |
-| **Week 4** | Score 3 or more, and the MPC has not hiked (an IMF-named final hike, as on 26 Jun 2023, is the one exception) | Put **another third of C** into the core. From this month, the sleeve's Rs12,500 ticket buys a KMI liquid name at its first 252-high in the leading sector. | 2019: the 4-week entry beat week 1 (+35% against +26%); the hold came on 16 Sep. |
+| **Week 4** | Score 3 or more, and the MPC has not hiked (an IMF-named final hike, as on 26 Jun 2023, is the one exception) | Put **another third of C** into the leaders. From this month, the reserve share of each deposit also goes to a KMI liquid name at its first 252-high in the leading sector, as the opportunity position under PLAYBOOK.md section B. | 2019: the 4-week entry beat week 1 (+35% against +26%); the hold came on 16 Sep. |
 | **Week 8** | Score still 3 or more; the index is above its 50-day | Put **the rest of C** in. Hold up to three leaders, each at most 25% of the book. | Week 8 was best in 2024 (+92%) and worst in 2019 (+18%, Covid); thirds average the spread. |
 | **Leaders** | Each leader at its own first 252-high | Stop: 25% below the high close for index-led names (banks, cement). 30 to 40% for stock-specific names. | On the 34 five-baggers a 20% stop left a median +28%, 30% left +167%, 40% left +231% (`_life_changing.md`). |
 
@@ -167,7 +167,7 @@ The current trough is 13 Oct, KSE100 164,776: 12.9% under the 23 Jan peak of 189
 
 **What the playbook says to do now.**
 - This is not a regime turn yet. The setup looks like the 14 Sep false bottom: a hike regime, an oil shock that is still running, and a bill pricing a hike. It does not look like any of the four real lows.
-- Keep the `PICKS.md` deposits as written: Rs37,500 core and Rs12,500 sleeve.
+- Keep the `PICKS.md` v4 deposits as written: about Rs35,000 core (LUCK, MEBL, MARI), Rs10,000 reserve, up to Rs5,000 for one conditional opportunity (ATRL this week only on its stated trigger).
 - Do not commit any turn tranche (section 4) until the score reaches 3.
 - Do not sell the core on this pullback. From past knowable entries, the 25% index leash has not been reached.
 
