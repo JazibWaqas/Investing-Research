@@ -1,0 +1,273 @@
+
+===== ATRL: low/start 2022-11-28 160.45, peak 2026-10-16 1219.10 (x7.60); last 1219.10 = 100% of peak
+
+-- signal 2022-10-25: adj close 163.40 = x1.02 of the low; peak/price x7.46; share of log gain from the low still ahead 0.99
+ATRL signal 2022-10-25 close 163.40 entry open 160.81 (adj) forward returns by session {5: 0.039, 10: 0.056, 20: 0.03, 40: -0.206, 60: -0.08, 120: 0.036, 'mae20': -0.017, 'mae60': -0.259}
+  trail 20%: buy 2022-10-26 160.81, exit 2022-12-21 125.94 (stop), gross x0.78, net -22%, worst close x0.74 of cost, max drop from high -26%, 39 sessions, Rs50k->38,961, Rs200k->155,843
+  trail 25%: buy 2022-10-26 160.81, exit 2022-12-21 125.94 (stop), gross x0.78, net -22%, worst close x0.74 of cost, max drop from high -26%, 39 sessions, Rs50k->38,961, Rs200k->155,843
+  trail 30%: buy 2022-10-26 160.81, exit 2022-12-22 120.13 (stop), gross x0.75, net -26%, worst close x0.74 of cost, max drop from high -31%, 40 sessions, Rs50k->37,163, Rs200k->148,651
+  trail 40%: buy 2022-10-26 160.81, exit 2026-10-16 1219.10 (held to end (marked)), gross x7.58, net +654%, worst close x0.74 of cost, max drop from high -39%, 984 sessions, Rs50k->377,145, Rs200k->1,508,579
+
+-- signal 2023-07-03: adj close 178.74 = x1.11 of the low; peak/price x6.82; share of log gain from the low still ahead 0.95
+ATRL signal 2023-07-03 close 178.74 entry open 178.22 (adj) forward returns by session {5: 0.154, 10: 0.112, 20: 0.387, 40: 0.191, 60: 0.384, 120: 0.664, 'mae20': 0.078, 'mae60': 0.078}
+  trail 20%: buy 2023-07-04 178.22, exit 2024-09-12 324.53 (stop), gross x1.82, net +81%, worst close x1.08 of cost, max drop from high -20%, 293 sessions, Rs50k->90,592, Rs200k->362,369
+  trail 25%: buy 2023-07-04 178.22, exit 2024-10-08 300.29 (stop), gross x1.68, net +68%, worst close x1.08 of cost, max drop from high -26%, 310 sessions, Rs50k->83,823, Rs200k->335,294
+  trail 30%: buy 2023-07-04 178.22, exit 2025-05-08 495.92 (stop), gross x2.78, net +177%, worst close x1.08 of cost, max drop from high -32%, 455 sessions, Rs50k->138,433, Rs200k->553,731
+  trail 40%: buy 2023-07-04 178.22, exit 2026-10-16 1219.10 (held to end (marked)), gross x6.84, net +581%, worst close x1.08 of cost, max drop from high -39%, 815 sessions, Rs50k->340,306, Rs200k->1,361,222
+
+-- signal 2023-10-10: adj close 276.05 = x1.72 of the low; peak/price x4.42; share of log gain from the low still ahead 0.73
+ATRL signal 2023-10-10 close 276.05 entry open 280.94 (adj) forward returns by session {5: -0.022, 10: -0.023, 20: -0.0, 40: 0.251, 60: 0.15, 120: 0.342, 'mae20': -0.032, 'mae60': -0.032}
+  trail 20%: buy 2023-10-11 280.94, exit 2024-09-12 324.53 (stop), gross x1.16, net +15%, worst close x0.97 of cost, max drop from high -20%, 225 sessions, Rs50k->57,470, Rs200k->229,879
+  trail 25%: buy 2023-10-11 280.94, exit 2024-10-08 300.29 (stop), gross x1.07, net +6%, worst close x0.97 of cost, max drop from high -26%, 242 sessions, Rs50k->53,176, Rs200k->212,704
+  trail 30%: buy 2023-10-11 280.94, exit 2025-05-08 495.92 (stop), gross x1.77, net +76%, worst close x0.97 of cost, max drop from high -32%, 387 sessions, Rs50k->87,819, Rs200k->351,276
+  trail 40%: buy 2023-10-11 280.94, exit 2026-10-16 1219.10 (held to end (marked)), gross x4.34, net +332%, worst close x0.97 of cost, max drop from high -39%, 747 sessions, Rs50k->215,883, Rs200k->863,531
+
+-- signal 2024-12-23: adj close 717.85 = x4.47 of the low; peak/price x1.70; share of log gain from the low still ahead 0.26
+ATRL signal 2024-12-23 close 717.85 entry open 716.88 (adj) forward returns by session {5: -0.062, 10: -0.16, 20: -0.149, 40: -0.145, 60: -0.064, 120: -0.088, 'mae20': -0.195, 'mae60': -0.225}
+  trail 20%: buy 2024-12-24 716.88, exit 2025-04-28 553.28 (stop), gross x0.77, net -23%, worst close x0.74 of cost, max drop from high -20%, 83 sessions, Rs50k->38,396, Rs200k->153,585
+  trail 25%: buy 2024-12-24 716.88, exit 2025-05-02 515.41 (stop), gross x0.72, net -28%, worst close x0.71 of cost, max drop from high -26%, 86 sessions, Rs50k->35,768, Rs200k->143,074
+  trail 30%: buy 2024-12-24 716.88, exit 2025-05-09 441.68 (stop), gross x0.62, net -39%, worst close x0.61 of cost, max drop from high -36%, 91 sessions, Rs50k->30,652, Rs200k->122,607
+  trail 40%: buy 2024-12-24 716.88, exit 2026-10-16 1219.10 (held to end (marked)), gross x1.70, net +69%, worst close x0.61 of cost, max drop from high -36%, 450 sessions, Rs50k->84,603, Rs200k->338,411
+
+-- signal 2026-01-23: adj close 867.91 = x5.41 of the low; peak/price x1.40; share of log gain from the low still ahead 0.17
+ATRL signal 2026-01-23 close 867.91 entry open 872.67 (adj) forward returns by session {5: -0.015, 10: -0.033, 20: -0.142, 40: -0.097, 60: 0.052, 120: 0.041, 'mae20': -0.174, 'mae60': -0.233}
+  trail 20%: buy 2026-01-26 872.67, exit 2026-03-03 659.54 (stop), gross x0.76, net -25%, worst close x0.77 of cost, max drop from high -23%, 25 sessions, Rs50k->37,600, Rs200k->150,400
+  trail 25%: buy 2026-01-26 872.67, exit 2026-10-16 1219.10 (held to end (marked)), gross x1.40, net +39%, worst close x0.77 of cost, max drop from high -23%, 178 sessions, Rs50k->69,500, Rs200k->278,000
+  trail 30%: buy 2026-01-26 872.67, exit 2026-10-16 1219.10 (held to end (marked)), gross x1.40, net +39%, worst close x0.77 of cost, max drop from high -23%, 178 sessions, Rs50k->69,500, Rs200k->278,000
+  trail 40%: buy 2026-01-26 872.67, exit 2026-10-16 1219.10 (held to end (marked)), gross x1.40, net +39%, worst close x0.77 of cost, max drop from high -23%, 178 sessions, Rs50k->69,500, Rs200k->278,000
+
+===== FABL: low/start 2023-03-24 18.14, peak 2026-07-03 100.01 (x5.51); last 91.49 = 91% of peak
+
+-- signal 2023-04-28: adj close 19.33 = x1.07 of the low; peak/price x5.17; share of log gain from the low still ahead 0.96
+FABL signal 2023-04-28 close 19.33 entry open 19.51 (adj) forward returns by session {5: -0.011, 10: -0.016, 20: -0.074, 40: -0.13, 60: 0.123, 120: 0.09, 'mae20': -0.082, 'mae60': -0.138}
+  trail 20%: buy 2023-05-02 19.51, exit 2024-09-19 38.52 (stop), gross x1.97, net +96%, worst close x0.86 of cost, max drop from high -20%, 339 sessions, Rs50k->98,213, Rs200k->392,853
+  trail 25%: buy 2023-05-02 19.51, exit 2026-03-10 78.47 (stop), gross x4.02, net +300%, worst close x0.86 of cost, max drop from high -27%, 709 sessions, Rs50k->200,069, Rs200k->800,276
+  trail 30%: buy 2023-05-02 19.51, exit 2026-10-16 91.49 (held to end (marked)), gross x4.69, net +367%, worst close x0.86 of cost, max drop from high -27%, 857 sessions, Rs50k->233,279, Rs200k->933,116
+
+-- signal 2023-12-05: adj close 24.31 = x1.34 of the low; peak/price x4.11; share of log gain from the low still ahead 0.83
+FABL signal 2023-12-05 close 24.31 entry open 24.10 (adj) forward returns by session {5: 0.158, 10: 0.092, 20: 0.17, 40: 0.145, 60: 0.085, 120: 0.482, 'mae20': 0.048, 'mae60': 0.048}
+  trail 20%: buy 2023-12-06 24.10, exit 2024-09-19 38.52 (stop), gross x1.60, net +59%, worst close x1.01 of cost, max drop from high -20%, 190 sessions, Rs50k->79,503, Rs200k->318,011
+  trail 25%: buy 2023-12-06 24.10, exit 2026-03-10 78.47 (stop), gross x3.26, net +224%, worst close x1.01 of cost, max drop from high -27%, 560 sessions, Rs50k->161,954, Rs200k->647,816
+  trail 30%: buy 2023-12-06 24.10, exit 2026-10-16 91.49 (held to end (marked)), gross x3.80, net +278%, worst close x1.01 of cost, max drop from high -27%, 708 sessions, Rs50k->188,837, Rs200k->755,349
+
+-- signal 2024-02-07: adj close 27.03 = x1.49 of the low; peak/price x3.70; share of log gain from the low still ahead 0.77
+FABL signal 2024-02-07 close 27.03 entry open 25.97 (adj) forward returns by session {5: -0.004, 10: 0.05, 20: 0.001, 40: 0.2, 60: 0.19, 120: 0.583, 'mae20': -0.027, 'mae60': -0.061}
+  trail 20%: buy 2024-02-09 25.97, exit 2024-09-19 38.52 (stop), gross x1.48, net +48%, worst close x0.94 of cost, max drop from high -20%, 146 sessions, Rs50k->73,787, Rs200k->295,149
+  trail 25%: buy 2024-02-09 25.97, exit 2026-03-10 78.47 (stop), gross x3.02, net +201%, worst close x0.94 of cost, max drop from high -27%, 516 sessions, Rs50k->150,311, Rs200k->601,244
+  trail 30%: buy 2024-02-09 25.97, exit 2026-10-16 91.49 (held to end (marked)), gross x3.52, net +251%, worst close x0.94 of cost, max drop from high -27%, 664 sessions, Rs50k->175,261, Rs200k->701,046
+
+-- signal 2025-08-28: adj close 67.62 = x3.73 of the low; peak/price x1.48; share of log gain from the low still ahead 0.23
+FABL signal 2025-08-28 close 67.62 entry open 67.70 (adj) forward returns by session {5: 0.055, 10: 0.04, 20: 0.132, 40: 0.224, 60: 0.14, 120: 0.296, 'mae20': 0.008, 'mae60': 0.008}
+  trail 20%: buy 2025-08-29 67.70, exit 2026-03-03 75.64 (stop), gross x1.12, net +11%, worst close x1.01 of cost, max drop from high -21%, 130 sessions, Rs50k->55,585, Rs200k->222,342
+  trail 25%: buy 2025-08-29 67.70, exit 2026-03-10 78.47 (stop), gross x1.16, net +15%, worst close x1.01 of cost, max drop from high -27%, 135 sessions, Rs50k->57,663, Rs200k->230,652
+  trail 30%: buy 2025-08-29 67.70, exit 2026-10-16 91.49 (held to end (marked)), gross x1.35, net +34%, worst close x1.01 of cost, max drop from high -27%, 283 sessions, Rs50k->67,235, Rs200k->268,938
+
+-- signal 2026-01-06: adj close 98.38 = x5.42 of the low; peak/price x1.02; share of log gain from the low still ahead 0.01
+FABL signal 2026-01-06 close 98.38 entry open 99.28 (adj) forward returns by session {5: -0.044, 10: -0.053, 20: -0.057, 40: -0.161, 60: -0.207, 120: 0.03, 'mae20': -0.079, 'mae60': -0.277}
+  trail 20%: buy 2026-01-07 99.28, exit 2026-03-10 78.47 (stop), gross x0.79, net -21%, worst close x0.72 of cost, max drop from high -25%, 43 sessions, Rs50k->39,318, Rs200k->157,271
+  trail 25%: buy 2026-01-07 99.28, exit 2026-03-10 78.47 (stop), gross x0.79, net -21%, worst close x0.72 of cost, max drop from high -25%, 43 sessions, Rs50k->39,318, Rs200k->157,271
+  trail 30%: buy 2026-01-07 99.28, exit 2026-10-16 91.49 (held to end (marked)), gross x0.92, net -8%, worst close x0.72 of cost, max drop from high -25%, 191 sessions, Rs50k->45,844, Rs200k->183,377
+
+===== ILP: low/start 2023-05-22 28.11, peak 2024-05-24 79.50 (x2.83); last 94.03 = 118% of peak
+
+-- signal 2023-04-18: adj close 29.21 = x1.04 of the low; peak/price x2.72; share of log gain from the low still ahead 0.96
+ILP signal 2023-04-18 close 29.21 entry open 29.23 (adj) forward returns by session {5: -0.011, 10: 0.003, 20: -0.032, 40: 0.075, 60: 0.209, 120: 0.453, 'mae20': -0.038, 'mae60': -0.038}
+  trail 20%: buy 2023-04-19 29.23, exit 2024-10-28 59.57 (stop), gross x2.04, net +103%, worst close x0.96 of cost, max drop from high -25%, 371 sessions, Rs50k->101,384, Rs200k->405,537
+  trail 25%: buy 2023-04-19 29.23, exit 2024-10-28 59.57 (stop), gross x2.04, net +103%, worst close x0.96 of cost, max drop from high -25%, 371 sessions, Rs50k->101,384, Rs200k->405,537
+  trail 30%: buy 2023-04-19 29.23, exit 2025-02-25 55.31 (stop), gross x1.89, net +88%, worst close x0.96 of cost, max drop from high -30%, 455 sessions, Rs50k->94,142, Rs200k->376,570
+  trail 40%: buy 2023-04-19 29.23, exit 2025-05-09 46.76 (stop), gross x1.60, net +59%, worst close x0.96 of cost, max drop from high -45%, 503 sessions, Rs50k->79,579, Rs200k->318,314
+
+-- signal 2023-06-09: adj close 32.73 = x1.16 of the low; peak/price x2.43; share of log gain from the low still ahead 0.85
+ILP signal 2023-06-09 close 32.73 entry open 32.12 (adj) forward returns by session {5: -0.021, 10: 0.027, 20: 0.128, 40: 0.178, 60: 0.189, 120: 1.168, 'mae20': -0.041, 'mae60': -0.041}
+  trail 20%: buy 2023-06-12 32.12, exit 2024-10-28 59.57 (stop), gross x1.85, net +85%, worst close x0.96 of cost, max drop from high -25%, 337 sessions, Rs50k->92,262, Rs200k->369,046
+  trail 25%: buy 2023-06-12 32.12, exit 2024-10-28 59.57 (stop), gross x1.85, net +85%, worst close x0.96 of cost, max drop from high -25%, 337 sessions, Rs50k->92,262, Rs200k->369,046
+  trail 30%: buy 2023-06-12 32.12, exit 2025-02-25 55.31 (stop), gross x1.72, net +71%, worst close x0.96 of cost, max drop from high -30%, 421 sessions, Rs50k->85,671, Rs200k->342,686
+  trail 40%: buy 2023-06-12 32.12, exit 2025-05-09 46.76 (stop), gross x1.46, net +45%, worst close x0.96 of cost, max drop from high -45%, 469 sessions, Rs50k->72,418, Rs200k->289,672
+
+-- signal 2023-07-03: adj close 35.84 = x1.27 of the low; peak/price x2.22; share of log gain from the low still ahead 0.77
+ILP signal 2023-07-03 close 35.84 entry open 36.26 (adj) forward returns by session {5: 0.031, 10: -0.014, 20: 0.082, 40: -0.041, 60: 0.178, 120: 0.745, 'mae20': -0.048, 'mae60': -0.048}
+  trail 20%: buy 2023-07-04 36.26, exit 2024-10-28 59.57 (stop), gross x1.64, net +63%, worst close x0.95 of cost, max drop from high -25%, 324 sessions, Rs50k->81,728, Rs200k->326,910
+  trail 25%: buy 2023-07-04 36.26, exit 2024-10-28 59.57 (stop), gross x1.64, net +63%, worst close x0.95 of cost, max drop from high -25%, 324 sessions, Rs50k->81,728, Rs200k->326,910
+  trail 30%: buy 2023-07-04 36.26, exit 2025-02-25 55.31 (stop), gross x1.53, net +52%, worst close x0.95 of cost, max drop from high -30%, 408 sessions, Rs50k->75,890, Rs200k->303,559
+  trail 40%: buy 2023-07-04 36.26, exit 2025-05-09 46.76 (stop), gross x1.29, net +28%, worst close x0.95 of cost, max drop from high -45%, 456 sessions, Rs50k->64,150, Rs200k->256,598
+
+-- signal 2023-09-22: adj close 40.13 = x1.43 of the low; peak/price x1.98; share of log gain from the low still ahead 0.66
+ILP signal 2023-09-22 close 40.13 entry open 40.18 (adj) forward returns by session {5: 0.084, 10: 0.07, 20: 0.056, 40: 0.494, 60: 0.578, 120: 0.64, 'mae20': 0.035, 'mae60': 0.035}
+  trail 20%: buy 2023-09-25 40.18, exit 2024-10-28 59.57 (stop), gross x1.48, net +47%, worst close x1.04 of cost, max drop from high -25%, 267 sessions, Rs50k->73,747, Rs200k->294,988
+  trail 25%: buy 2023-09-25 40.18, exit 2024-10-28 59.57 (stop), gross x1.48, net +47%, worst close x1.04 of cost, max drop from high -25%, 267 sessions, Rs50k->73,747, Rs200k->294,988
+  trail 30%: buy 2023-09-25 40.18, exit 2025-02-25 55.31 (stop), gross x1.38, net +37%, worst close x1.04 of cost, max drop from high -30%, 351 sessions, Rs50k->68,479, Rs200k->273,918
+  trail 40%: buy 2023-09-25 40.18, exit 2025-05-09 46.76 (stop), gross x1.16, net +16%, worst close x1.04 of cost, max drop from high -45%, 399 sessions, Rs50k->57,886, Rs200k->231,542
+
+-- signal 2023-10-30: adj close 43.48 = x1.55 of the low; peak/price x1.83; share of log gain from the low still ahead 0.58
+ILP signal 2023-10-30 close 43.48 entry open 43.16 (adj) forward returns by session {5: 0.237, 10: 0.301, 20: 0.453, 40: 0.551, 60: 0.572, 120: 0.637, 'mae20': 0.083, 'mae60': 0.083}
+  trail 20%: buy 2023-10-31 43.16, exit 2024-10-28 59.57 (stop), gross x1.38, net +37%, worst close x1.08 of cost, max drop from high -25%, 242 sessions, Rs50k->68,658, Rs200k->274,633
+  trail 25%: buy 2023-10-31 43.16, exit 2024-10-28 59.57 (stop), gross x1.38, net +37%, worst close x1.08 of cost, max drop from high -25%, 242 sessions, Rs50k->68,658, Rs200k->274,633
+  trail 30%: buy 2023-10-31 43.16, exit 2025-02-25 55.31 (stop), gross x1.28, net +28%, worst close x1.08 of cost, max drop from high -30%, 326 sessions, Rs50k->63,754, Rs200k->255,016
+  trail 40%: buy 2023-10-31 43.16, exit 2025-05-09 46.76 (stop), gross x1.08, net +8%, worst close x1.02 of cost, max drop from high -45%, 374 sessions, Rs50k->53,891, Rs200k->215,565
+
+-- signal 2023-12-01: adj close 68.08 = x2.42 of the low; peak/price x1.17; share of log gain from the low still ahead 0.15
+ILP signal 2023-12-01 close 68.08 entry open 70.44 (adj) forward returns by session {5: 0.001, 10: -0.07, 20: -0.032, 40: -0.073, 60: -0.039, 120: 0.107, 'mae20': -0.102, 'mae60': -0.136}
+  trail 20%: buy 2023-12-04 70.44, exit 2024-10-28 59.57 (stop), gross x0.85, net -16%, worst close x0.83 of cost, max drop from high -25%, 219 sessions, Rs50k->42,070, Rs200k->168,282
+  trail 25%: buy 2023-12-04 70.44, exit 2024-10-28 59.57 (stop), gross x0.85, net -16%, worst close x0.83 of cost, max drop from high -25%, 219 sessions, Rs50k->42,070, Rs200k->168,282
+  trail 30%: buy 2023-12-04 70.44, exit 2025-02-25 55.31 (stop), gross x0.79, net -22%, worst close x0.78 of cost, max drop from high -30%, 303 sessions, Rs50k->39,065, Rs200k->156,262
+  trail 40%: buy 2023-12-04 70.44, exit 2025-05-09 46.76 (stop), gross x0.66, net -34%, worst close x0.62 of cost, max drop from high -45%, 351 sessions, Rs50k->33,022, Rs200k->132,088
+
+-- signal 2024-02-23: adj close 67.57 = x2.40 of the low; peak/price x1.18; share of log gain from the low still ahead 0.16
+ILP signal 2024-02-23 close 67.57 entry open 68.92 (adj) forward returns by session {5: -0.01, 10: -0.017, 20: -0.039, 40: 0.026, 60: 0.14, 120: -0.027, 'mae20': -0.044, 'mae60': -0.044}
+  trail 20%: buy 2024-02-26 68.92, exit 2024-10-28 59.57 (stop), gross x0.86, net -14%, worst close x0.85 of cost, max drop from high -25%, 162 sessions, Rs50k->43,000, Rs200k->171,999
+  trail 25%: buy 2024-02-26 68.92, exit 2024-10-28 59.57 (stop), gross x0.86, net -14%, worst close x0.85 of cost, max drop from high -25%, 162 sessions, Rs50k->43,000, Rs200k->171,999
+  trail 30%: buy 2024-02-26 68.92, exit 2025-02-25 55.31 (stop), gross x0.80, net -20%, worst close x0.80 of cost, max drop from high -30%, 246 sessions, Rs50k->39,928, Rs200k->159,713
+  trail 40%: buy 2024-02-26 68.92, exit 2025-05-09 46.76 (stop), gross x0.68, net -32%, worst close x0.64 of cost, max drop from high -45%, 294 sessions, Rs50k->33,751, Rs200k->135,005
+
+===== NETSOL: low/start 2023-05-26 70.33, peak 2024-07-18 150.92 (x2.15); last 122.66 = 81% of peak
+
+-- signal 2023-04-27: adj close 80.18 = x1.14 of the low; peak/price x1.88; share of log gain from the low still ahead 0.83
+NETSOL signal 2023-04-27 close 80.18 entry open 81.50 (adj) forward returns by session {5: -0.07, 10: -0.09, 20: -0.109, 40: -0.071, 60: 0.129, 120: 0.035, 'mae20': -0.137, 'mae60': -0.137}
+  trail 20%: buy 2023-04-28 81.50, exit 2023-12-27 90.70 (stop), gross x1.11, net +11%, worst close x0.86 of cost, max drop from high -24%, 164 sessions, Rs50k->55,366, Rs200k->221,464
+  trail 25%: buy 2023-04-28 81.50, exit 2024-01-31 88.60 (stop), gross x1.09, net +8%, worst close x0.86 of cost, max drop from high -27%, 189 sessions, Rs50k->54,084, Rs200k->216,336
+  trail 30%: buy 2023-04-28 81.50, exit 2025-05-09 114.00 (stop), gross x1.40, net +39%, worst close x0.86 of cost, max drop from high -32%, 499 sessions, Rs50k->69,589, Rs200k->278,356
+
+-- signal 2023-07-03: adj close 80.44 = x1.14 of the low; peak/price x1.88; share of log gain from the low still ahead 0.82
+NETSOL signal 2023-07-03 close 80.44 entry open 81.00 (adj) forward returns by session {5: 0.13, 10: 0.124, 20: 0.174, 40: -0.021, 60: -0.037, 120: 0.134, 'mae20': -0.003, 'mae60': -0.037}
+  trail 20%: buy 2023-07-04 81.00, exit 2023-12-27 90.70 (stop), gross x1.12, net +11%, worst close x0.96 of cost, max drop from high -24%, 121 sessions, Rs50k->55,708, Rs200k->222,831
+  trail 25%: buy 2023-07-04 81.00, exit 2024-01-31 88.60 (stop), gross x1.09, net +9%, worst close x0.96 of cost, max drop from high -27%, 146 sessions, Rs50k->54,418, Rs200k->217,672
+  trail 30%: buy 2023-07-04 81.00, exit 2025-05-09 114.00 (stop), gross x1.41, net +40%, worst close x0.96 of cost, max drop from high -32%, 456 sessions, Rs50k->70,019, Rs200k->280,074
+
+-- signal 2023-12-05: adj close 114.14 = x1.62 of the low; peak/price x1.32; share of log gain from the low still ahead 0.37
+NETSOL signal 2023-12-05 close 114.14 entry open 117.51 (adj) forward returns by session {5: -0.045, 10: -0.134, 20: -0.098, 40: -0.242, 60: 0.087, 120: 0.229, 'mae20': -0.218, 'mae60': -0.242}
+  trail 20%: buy 2023-12-06 117.51, exit 2023-12-27 90.70 (stop), gross x0.77, net -23%, worst close x0.78 of cost, max drop from high -24%, 14 sessions, Rs50k->38,399, Rs200k->153,598
+  trail 25%: buy 2023-12-06 117.51, exit 2024-01-31 88.60 (stop), gross x0.75, net -25%, worst close x0.76 of cost, max drop from high -27%, 39 sessions, Rs50k->37,510, Rs200k->150,042
+  trail 30%: buy 2023-12-06 117.51, exit 2025-05-09 114.00 (stop), gross x0.97, net -3%, worst close x0.76 of cost, max drop from high -32%, 349 sessions, Rs50k->48,264, Rs200k->193,056
+
+-- signal 2024-02-12: adj close 90.77 = x1.29 of the low; peak/price x1.66; share of log gain from the low still ahead 0.67
+NETSOL signal 2024-02-12 close 90.77 entry open 91.50 (adj) forward returns by session {5: 0.076, 10: 0.406, 20: 0.433, 40: 0.33, 60: 0.235, 120: 0.464, 'mae20': 0.036, 'mae60': 0.036}
+  trail 20%: buy 2024-02-13 91.50, exit 2025-03-03 132.00 (stop), gross x1.44, net +44%, worst close x1.04 of cost, max drop from high -22%, 259 sessions, Rs50k->71,770, Rs200k->287,082
+  trail 25%: buy 2024-02-13 91.50, exit 2025-04-08 130.00 (stop), gross x1.42, net +41%, worst close x1.04 of cost, max drop from high -25%, 281 sessions, Rs50k->70,683, Rs200k->282,732
+  trail 30%: buy 2024-02-13 91.50, exit 2025-05-09 114.00 (stop), gross x1.25, net +24%, worst close x1.04 of cost, max drop from high -32%, 303 sessions, Rs50k->61,984, Rs200k->247,934
+
+-- signal 2024-05-22: adj close 116.93 = x1.66 of the low; peak/price x1.29; share of log gain from the low still ahead 0.33
+NETSOL signal 2024-05-22 close 116.93 entry open 116.00 (adj) forward returns by session {5: 0.12, 10: 0.149, 20: 0.2, 40: 0.172, 60: 0.125, 120: 0.118, 'mae20': 0.034, 'mae60': 0.034}
+  trail 20%: buy 2024-05-23 116.00, exit 2025-03-03 132.00 (stop), gross x1.14, net +13%, worst close x1.03 of cost, max drop from high -22%, 192 sessions, Rs50k->56,612, Rs200k->226,448
+  trail 25%: buy 2024-05-23 116.00, exit 2025-04-08 130.00 (stop), gross x1.12, net +12%, worst close x1.03 of cost, max drop from high -25%, 214 sessions, Rs50k->55,754, Rs200k->223,017
+  trail 30%: buy 2024-05-23 116.00, exit 2025-05-09 114.00 (stop), gross x0.98, net -2%, worst close x0.99 of cost, max drop from high -32%, 236 sessions, Rs50k->48,892, Rs200k->195,569
+
+===== TELE: low/start 2025-05-08 5.60, peak 2025-10-23 13.26 (x2.37); last 7.11 = 54% of peak
+
+-- signal 2025-04-30: adj close 6.82 = x1.22 of the low; peak/price x1.94; share of log gain from the low still ahead 0.77
+TELE signal 2025-04-30 close 6.82 entry open 7.18 (adj) forward returns by session {5: -0.173, 10: 0.039, 20: 0.12, 40: 0.116, 60: 0.061, 120: 0.847, 'mae20': -0.22, 'mae60': -0.22}
+  trail 20%: buy 2025-05-02 7.18, exit 2025-05-09 5.60 (stop), gross x0.78, net -22%, worst close x0.78 of cost, max drop from high -20%, 5 sessions, Rs50k->38,802, Rs200k->155,209
+  trail 25%: buy 2025-05-02 7.18, exit 2026-02-20 9.90 (stop), gross x1.38, net +37%, worst close x0.78 of cost, max drop from high -25%, 204 sessions, Rs50k->68,597, Rs200k->274,387
+  trail 30%: buy 2025-05-02 7.18, exit 2026-02-24 8.67 (stop), gross x1.21, net +20%, worst close x0.78 of cost, max drop from high -35%, 206 sessions, Rs50k->60,074, Rs200k->240,297
+
+-- signal 2025-06-23: adj close 6.97 = x1.24 of the low; peak/price x1.90; share of log gain from the low still ahead 0.75
+TELE signal 2025-06-23 close 6.97 entry open 7.10 (adj) forward returns by session {5: 0.161, 10: 0.179, 20: 0.085, 40: 0.142, 60: 0.261, 120: 0.645, 'mae20': 0.051, 'mae60': 0.051}
+  trail 20%: buy 2025-06-24 7.10, exit 2026-02-17 10.47 (stop), gross x1.47, net +47%, worst close x1.05 of cost, max drop from high -21%, 167 sessions, Rs50k->73,364, Rs200k->293,455
+  trail 25%: buy 2025-06-24 7.10, exit 2026-02-20 9.90 (stop), gross x1.39, net +39%, worst close x1.05 of cost, max drop from high -25%, 170 sessions, Rs50k->69,370, Rs200k->277,479
+  trail 30%: buy 2025-06-24 7.10, exit 2026-02-24 8.67 (stop), gross x1.22, net +22%, worst close x1.05 of cost, max drop from high -35%, 172 sessions, Rs50k->60,751, Rs200k->243,004
+
+-- signal 2025-10-08: adj close 9.07 = x1.62 of the low; peak/price x1.46; share of log gain from the low still ahead 0.44
+TELE signal 2025-10-08 close 9.07 entry open 9.20 (adj) forward returns by session {5: 0.233, 10: 0.441, 20: 0.242, 40: 0.241, 60: 0.286, 120: -0.196, 'mae20': 0.021, 'mae60': 0.021}
+  trail 20%: buy 2025-10-09 9.20, exit 2026-02-17 10.47 (stop), gross x1.14, net +13%, worst close x1.02 of cost, max drop from high -21%, 91 sessions, Rs50k->56,618, Rs200k->226,471
+  trail 25%: buy 2025-10-09 9.20, exit 2026-02-20 9.90 (stop), gross x1.08, net +7%, worst close x1.02 of cost, max drop from high -25%, 94 sessions, Rs50k->53,535, Rs200k->214,141
+  trail 30%: buy 2025-10-09 9.20, exit 2026-02-24 8.67 (stop), gross x0.94, net -6%, worst close x0.91 of cost, max drop from high -35%, 96 sessions, Rs50k->46,884, Rs200k->187,536
+
+-- signal 2025-10-16: adj close 11.34 = x2.02 of the low; peak/price x1.17; share of log gain from the low still ahead 0.18
+TELE signal 2025-10-16 close 11.34 entry open 11.59 (adj) forward returns by session {5: 0.087, 10: 0.005, 20: -0.025, 40: 0.003, 60: 0.051, 120: -0.306, 'mae20': -0.082, 'mae60': -0.082}
+  trail 20%: buy 2025-10-17 11.59, exit 2026-02-17 10.47 (stop), gross x0.90, net -10%, worst close x0.87 of cost, max drop from high -21%, 85 sessions, Rs50k->44,942, Rs200k->179,770
+  trail 25%: buy 2025-10-17 11.59, exit 2026-02-20 9.90 (stop), gross x0.85, net -15%, worst close x0.82 of cost, max drop from high -25%, 88 sessions, Rs50k->42,496, Rs200k->169,983
+  trail 30%: buy 2025-10-17 11.59, exit 2026-02-24 8.67 (stop), gross x0.75, net -26%, worst close x0.72 of cost, max drop from high -35%, 90 sessions, Rs50k->37,216, Rs200k->148,864
+
+===== INIL: low/start 2025-05-08 113.37, peak 2025-09-15 229.66 (x2.03); last 156.01 = 68% of peak
+
+-- signal 2025-04-25: adj close 140.77 = x1.24 of the low; peak/price x1.63; share of log gain from the low still ahead 0.69
+INIL signal 2025-04-25 close 140.77 entry open 140.58 (adj) forward returns by session {5: -0.04, 10: -0.041, 20: 0.033, 40: 0.125, 60: 0.237, 120: 0.435, 'mae20': -0.194, 'mae60': -0.194}
+  trail 20%: buy 2025-04-28 140.58, exit 2025-10-31 182.76 (stop), gross x1.30, net +29%, worst close x0.81 of cost, max drop from high -20%, 129 sessions, Rs50k->64,678, Rs200k->258,711
+  trail 25%: buy 2025-04-28 140.58, exit 2025-11-28 172.59 (stop), gross x1.23, net +22%, worst close x0.81 of cost, max drop from high -25%, 149 sessions, Rs50k->61,075, Rs200k->244,302
+  trail 30%: buy 2025-04-28 140.58, exit 2026-02-17 159.18 (stop), gross x1.13, net +13%, worst close x0.81 of cost, max drop from high -30%, 204 sessions, Rs50k->56,331, Rs200k->225,323
+
+-- signal 2025-05-12: adj close 136.41 = x1.20 of the low; peak/price x1.68; share of log gain from the low still ahead 0.74
+INIL signal 2025-05-12 close 136.41 entry open 139.64 (adj) forward returns by session {5: 0.081, 10: 0.04, 20: 0.123, 40: 0.311, 60: 0.216, 120: 0.344, 'mae20': -0.035, 'mae60': -0.035}
+  trail 20%: buy 2025-05-13 139.64, exit 2025-10-31 182.76 (stop), gross x1.31, net +30%, worst close x0.97 of cost, max drop from high -20%, 119 sessions, Rs50k->65,115, Rs200k->260,459
+  trail 25%: buy 2025-05-13 139.64, exit 2025-11-28 172.59 (stop), gross x1.24, net +23%, worst close x0.97 of cost, max drop from high -25%, 139 sessions, Rs50k->61,488, Rs200k->245,953
+  trail 30%: buy 2025-05-13 139.64, exit 2026-02-17 159.18 (stop), gross x1.14, net +13%, worst close x0.97 of cost, max drop from high -30%, 194 sessions, Rs50k->56,711, Rs200k->226,846
+
+-- signal 2025-06-03: adj close 168.23 = x1.48 of the low; peak/price x1.37; share of log gain from the low still ahead 0.44
+INIL signal 2025-06-03 close 168.23 entry open 169.36 (adj) forward returns by session {5: -0.074, 10: -0.106, 20: 0.073, 40: -0.007, 60: 0.235, 120: 0.066, 'mae20': -0.137, 'mae60': -0.137}
+  trail 20%: buy 2025-06-04 169.36, exit 2025-10-31 182.76 (stop), gross x1.08, net +7%, worst close x0.86 of cost, max drop from high -20%, 104 sessions, Rs50k->53,688, Rs200k->214,752
+  trail 25%: buy 2025-06-04 169.36, exit 2025-11-28 172.59 (stop), gross x1.02, net +1%, worst close x0.86 of cost, max drop from high -25%, 124 sessions, Rs50k->50,698, Rs200k->202,791
+  trail 30%: buy 2025-06-04 169.36, exit 2026-02-17 159.18 (stop), gross x0.94, net -6%, worst close x0.86 of cost, max drop from high -30%, 179 sessions, Rs50k->46,759, Rs200k->187,037
+
+-- signal 2025-08-19: adj close 188.06 = x1.66 of the low; peak/price x1.22; share of log gain from the low still ahead 0.28
+INIL signal 2025-08-19 close 188.06 entry open 187.76 (adj) forward returns by session {5: 0.008, 10: 0.095, 20: 0.188, 40: 0.101, 60: -0.027, 120: -0.101, 'mae20': -0.033, 'mae60': -0.033}
+  trail 20%: buy 2025-08-20 187.76, exit 2025-10-31 182.76 (stop), gross x0.97, net -3%, worst close x0.97 of cost, max drop from high -20%, 52 sessions, Rs50k->48,427, Rs200k->193,708
+  trail 25%: buy 2025-08-20 187.76, exit 2025-11-28 172.59 (stop), gross x0.92, net -9%, worst close x0.91 of cost, max drop from high -25%, 72 sessions, Rs50k->45,730, Rs200k->182,919
+  trail 30%: buy 2025-08-20 187.76, exit 2026-02-17 159.18 (stop), gross x0.85, net -16%, worst close x0.85 of cost, max drop from high -30%, 127 sessions, Rs50k->42,177, Rs200k->168,709
+
+===== FCEPL: low/start 2026-03-09 62.71, peak 2026-09-01 156.44 (x2.49); last 133.39 = 85% of peak
+
+-- signal 2026-02-17: adj close 82.97 = x1.32 of the low; peak/price x1.89; share of log gain from the low still ahead 0.69
+FCEPL signal 2026-02-17 close 82.97 entry open 83.35 (adj) forward returns by session {5: -0.087, 10: -0.194, 20: -0.154, 40: -0.045, 60: 0.244, 120: 0.522, 'mae20': -0.248, 'mae60': -0.248}
+  trail 20%: buy 2026-02-18 83.35, exit 2026-03-10 65.38 (stop), gross x0.78, net -22%, worst close x0.75 of cost, max drop from high -24%, 14 sessions, Rs50k->39,028, Rs200k->156,112
+  trail 25%: buy 2026-02-18 83.35, exit 2026-10-16 133.39 (held to end (marked)), gross x1.60, net +59%, worst close x0.75 of cost, max drop from high -24%, 162 sessions, Rs50k->79,621, Rs200k->318,486
+  trail 30%: buy 2026-02-18 83.35, exit 2026-10-16 133.39 (held to end (marked)), gross x1.60, net +59%, worst close x0.75 of cost, max drop from high -24%, 162 sessions, Rs50k->79,621, Rs200k->318,486
+
+-- signal 2026-04-24: adj close 85.87 = x1.37 of the low; peak/price x1.82; share of log gain from the low still ahead 0.66
+FCEPL signal 2026-04-24 close 85.87 entry open 94.46 (adj) forward returns by session {5: 0.03, 10: 0.1, 20: 0.201, 40: 0.207, 60: 0.098, 120: 0.412, 'mae20': -0.021, 'mae60': -0.021}
+  trail 20%: buy 2026-04-27 94.46, exit 2026-10-16 133.39 (held to end (marked)), gross x1.41, net +41%, worst close x0.98 of cost, max drop from high -17%, 116 sessions, Rs50k->70,254, Rs200k->281,014
+  trail 25%: buy 2026-04-27 94.46, exit 2026-10-16 133.39 (held to end (marked)), gross x1.41, net +41%, worst close x0.98 of cost, max drop from high -17%, 116 sessions, Rs50k->70,254, Rs200k->281,014
+  trail 30%: buy 2026-04-27 94.46, exit 2026-10-16 133.39 (held to end (marked)), gross x1.41, net +41%, worst close x0.98 of cost, max drop from high -17%, 116 sessions, Rs50k->70,254, Rs200k->281,014
+
+-- signal 2026-04-27: adj close 94.46 = x1.51 of the low; peak/price x1.66; share of log gain from the low still ahead 0.55
+FCEPL signal 2026-04-27 close 94.46 entry open 96.25 (adj) forward returns by session {5: 0.038, 10: 0.099, 20: 0.166, 40: 0.172, 60: 0.078, 120: 0.386, 'mae20': -0.039, 'mae60': -0.039}
+  trail 20%: buy 2026-04-28 96.25, exit 2026-10-16 133.39 (held to end (marked)), gross x1.39, net +38%, worst close x0.96 of cost, max drop from high -17%, 115 sessions, Rs50k->68,947, Rs200k->275,788
+  trail 25%: buy 2026-04-28 96.25, exit 2026-10-16 133.39 (held to end (marked)), gross x1.39, net +38%, worst close x0.96 of cost, max drop from high -17%, 115 sessions, Rs50k->68,947, Rs200k->275,788
+  trail 30%: buy 2026-04-28 96.25, exit 2026-10-16 133.39 (held to end (marked)), gross x1.39, net +38%, worst close x0.96 of cost, max drop from high -17%, 115 sessions, Rs50k->68,947, Rs200k->275,788
+
+-- signal 2026-05-11: adj close 115.05 = x1.83 of the low; peak/price x1.36; share of log gain from the low still ahead 0.34
+FCEPL signal 2026-05-11 close 115.05 entry open 115.79 (adj) forward returns by session {5: -0.096, 10: -0.02, 20: -0.06, 40: -0.136, 60: 0.048, 120: 0.152, 'mae20': -0.105, 'mae60': -0.136}
+  trail 20%: buy 2026-05-12 115.79, exit 2026-10-16 133.39 (held to end (marked)), gross x1.15, net +15%, worst close x0.86 of cost, max drop from high -17%, 106 sessions, Rs50k->57,312, Rs200k->229,248
+  trail 25%: buy 2026-05-12 115.79, exit 2026-10-16 133.39 (held to end (marked)), gross x1.15, net +15%, worst close x0.86 of cost, max drop from high -17%, 106 sessions, Rs50k->57,312, Rs200k->229,248
+  trail 30%: buy 2026-05-12 115.79, exit 2026-10-16 133.39 (held to end (marked)), gross x1.15, net +15%, worst close x0.86 of cost, max drop from high -17%, 106 sessions, Rs50k->57,312, Rs200k->229,248
+
+-- signal 2026-08-21: adj close 129.24 = x2.06 of the low; peak/price x1.21; share of log gain from the low still ahead 0.21
+FCEPL signal 2026-08-21 close 129.24 entry open 129.34 (adj) forward returns by session {5: 0.21, 10: 0.136, 20: 0.053, 40: 0.031, 60: 0.031, 120: 0.031, 'mae20': 0.025, 'mae60': 0.004}
+  trail 20%: buy 2026-08-24 129.34, exit 2026-10-16 133.39 (held to end (marked)), gross x1.03, net +3%, worst close x1.00 of cost, max drop from high -17%, 38 sessions, Rs50k->51,308, Rs200k->205,231
+  trail 25%: buy 2026-08-24 129.34, exit 2026-10-16 133.39 (held to end (marked)), gross x1.03, net +3%, worst close x1.00 of cost, max drop from high -17%, 38 sessions, Rs50k->51,308, Rs200k->205,231
+  trail 30%: buy 2026-08-24 129.34, exit 2026-10-16 133.39 (held to end (marked)), gross x1.03, net +3%, worst close x1.00 of cost, max drop from high -17%, 38 sessions, Rs50k->51,308, Rs200k->205,231
+
+===== MACFL: low/start 2026-03-09 19.60, peak 2026-10-14 123.87 (x6.32); last 100.33 = 81% of peak
+
+-- signal 2026-04-29: adj close 26.69 = x1.36 of the low; peak/price x4.64; share of log gain from the low still ahead 0.83
+MACFL signal 2026-04-29 close 26.69 entry open 27.00 (adj) forward returns by session {5: 0.751, 10: 0.937, 20: 1.129, 40: 1.68, 60: 1.511, 120: 2.716, 'mae20': 0.087, 'mae60': 0.087}
+  trail 20%: buy 2026-04-30 27.00, exit 2026-08-27 68.99 (stop), gross x2.56, net +154%, worst close x1.09 of cost, max drop from high -25%, 77 sessions, Rs50k->127,120, Rs200k->508,482
+  trail 25%: buy 2026-04-30 27.00, exit 2026-08-27 68.99 (stop), gross x2.56, net +154%, worst close x1.09 of cost, max drop from high -25%, 77 sessions, Rs50k->127,120, Rs200k->508,482
+  trail 30%: buy 2026-04-30 27.00, exit 2026-08-28 59.99 (stop), gross x2.22, net +121%, worst close x1.09 of cost, max drop from high -33%, 78 sessions, Rs50k->110,537, Rs200k->442,149
+  trail 40%: buy 2026-04-30 27.00, exit 2026-10-16 100.33 (held to end (marked)), gross x3.72, net +270%, worst close x1.09 of cost, max drop from high -39%, 113 sessions, Rs50k->184,867, Rs200k->739,469
+
+-- signal 2026-04-30: adj close 29.36 = x1.50 of the low; peak/price x4.22; share of log gain from the low still ahead 0.78
+MACFL signal 2026-04-30 close 29.36 entry open 32.29 (adj) forward returns by session {5: 0.611, 10: 0.782, 20: 0.778, 40: 1.222, 60: 1.196, 120: 2.107, 'mae20': 0.0, 'mae60': 0.0}
+  trail 20%: buy 2026-05-04 32.29, exit 2026-08-27 68.99 (stop), gross x2.14, net +113%, worst close x1.00 of cost, max drop from high -25%, 76 sessions, Rs50k->106,295, Rs200k->425,178
+  trail 25%: buy 2026-05-04 32.29, exit 2026-08-27 68.99 (stop), gross x2.14, net +113%, worst close x1.00 of cost, max drop from high -25%, 76 sessions, Rs50k->106,295, Rs200k->425,178
+  trail 30%: buy 2026-05-04 32.29, exit 2026-08-28 59.99 (stop), gross x1.86, net +85%, worst close x1.00 of cost, max drop from high -33%, 77 sessions, Rs50k->92,428, Rs200k->369,712
+  trail 40%: buy 2026-05-04 32.29, exit 2026-10-16 100.33 (held to end (marked)), gross x3.11, net +209%, worst close x1.00 of cost, max drop from high -39%, 112 sessions, Rs50k->154,581, Rs200k->618,324
+
+-- signal 2026-05-13: adj close 62.94 = x3.21 of the low; peak/price x1.97; share of log gain from the low still ahead 0.37
+MACFL signal 2026-05-13 close 62.94 entry open 63.00 (adj) forward returns by session {5: -0.038, 10: -0.075, 20: 0.154, 40: 0.051, 60: 0.16, 120: 0.593, 'mae20': -0.17, 'mae60': -0.17}
+  trail 20%: buy 2026-05-14 63.00, exit 2026-08-27 68.99 (stop), gross x1.10, net +9%, worst close x0.83 of cost, max drop from high -25%, 68 sessions, Rs50k->54,480, Rs200k->217,921
+  trail 25%: buy 2026-05-14 63.00, exit 2026-08-27 68.99 (stop), gross x1.10, net +9%, worst close x0.83 of cost, max drop from high -25%, 68 sessions, Rs50k->54,480, Rs200k->217,921
+  trail 30%: buy 2026-05-14 63.00, exit 2026-08-28 59.99 (stop), gross x0.95, net -5%, worst close x0.83 of cost, max drop from high -33%, 69 sessions, Rs50k->47,373, Rs200k->189,492
+  trail 40%: buy 2026-05-14 63.00, exit 2026-10-16 100.33 (held to end (marked)), gross x1.59, net +58%, worst close x0.83 of cost, max drop from high -39%, 104 sessions, Rs50k->79,229, Rs200k->316,915
+
+-- signal 2026-06-15: adj close 66.13 = x3.37 of the low; peak/price x1.87; share of log gain from the low still ahead 0.34
+MACFL signal 2026-06-15 close 66.13 entry open 68.00 (adj) forward returns by session {5: 0.04, 10: 0.039, 20: -0.026, 40: 0.075, 60: -0.029, 120: 0.475, 'mae20': -0.059, 'mae60': -0.169}
+  trail 20%: buy 2026-06-16 68.00, exit 2026-08-27 68.99 (stop), gross x1.01, net +1%, worst close x0.92 of cost, max drop from high -25%, 48 sessions, Rs50k->50,474, Rs200k->201,897
+  trail 25%: buy 2026-06-16 68.00, exit 2026-08-27 68.99 (stop), gross x1.01, net +1%, worst close x0.92 of cost, max drop from high -25%, 48 sessions, Rs50k->50,474, Rs200k->201,897
+  trail 30%: buy 2026-06-16 68.00, exit 2026-08-28 59.99 (stop), gross x0.88, net -12%, worst close x0.83 of cost, max drop from high -33%, 49 sessions, Rs50k->43,890, Rs200k->175,559
+  trail 40%: buy 2026-06-16 68.00, exit 2026-10-16 100.33 (held to end (marked)), gross x1.48, net +47%, worst close x0.83 of cost, max drop from high -39%, 84 sessions, Rs50k->73,403, Rs200k->293,613
+
+-- signal 2026-09-02: adj close 62.59 = x3.19 of the low; peak/price x1.98; share of log gain from the low still ahead 0.37
+MACFL signal 2026-09-02 close 62.59 entry open 65.39 (adj) forward returns by session {5: -0.052, 10: 0.048, 20: 0.052, 40: 0.534, 60: 0.534, 120: 0.534, 'mae20': -0.083, 'mae60': -0.083}
+  trail 20%: buy 2026-09-03 65.39, exit 2026-10-16 100.33 (held to end (marked)), gross x1.53, net +53%, worst close x0.92 of cost, max drop from high -19%, 31 sessions, Rs50k->76,333, Rs200k->305,332
+  trail 25%: buy 2026-09-03 65.39, exit 2026-10-16 100.33 (held to end (marked)), gross x1.53, net +53%, worst close x0.92 of cost, max drop from high -19%, 31 sessions, Rs50k->76,333, Rs200k->305,332
+  trail 30%: buy 2026-09-03 65.39, exit 2026-10-16 100.33 (held to end (marked)), gross x1.53, net +53%, worst close x0.92 of cost, max drop from high -19%, 31 sessions, Rs50k->76,333, Rs200k->305,332
+  trail 40%: buy 2026-09-03 65.39, exit 2026-10-16 100.33 (held to end (marked)), gross x1.53, net +53%, worst close x0.92 of cost, max drop from high -19%, 31 sessions, Rs50k->76,333, Rs200k->305,332

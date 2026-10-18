@@ -1,7 +1,8 @@
 """Situation engine: "what happened next in the past in situations like this".
 
     python scripts/engine.py SYMBOL DATE                 # a (symbol, date) in the daily table
-    python scripts/engine.py --scan DATE                 # every liquid KMI name with an interesting signature at DATE
+    python scripts/engine.py --scan DATE                 # every liquid KMI name with an interesting signature at DATE, tagged with its
+                                                         # catalogue type and that type's odds, plus a "missed movers" section
     python scripts/engine.py --query ret_1d=0.06 ret_5d=0.12 cause=results liq=hi [asof=2026-10-16]   # free query
 
 Point in time: for a query at the close of t, only rows strictly before t are candidates, and an analogue's return at
@@ -10,6 +11,7 @@ Returns are from the next open, gross, on the adjusted scale of data/daily_table
 Method and weaknesses: knowledge/playbooks/situation_engine.md.
 """
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -20,6 +22,9 @@ ROOT = Path(__file__).resolve().parents[1]
 TABLE = ROOT / "data" / "daily_table.parquet"
 HORIZONS = [1, 3, 5, 10, 20, 60]
 MIN_N = 30
+LIB = ROOT / "data" / "winners_library.csv"
+WIN, MOVER = 60, 0.20  # filing look-back (sessions); missed mover = ret_20d at least this
+WAVE20, WAVE60 = 0.10, 0.20  # sector_wave: median liquid peer ret_20d >= WAVE20 or ret_60d >= WAVE60
 COST_HI, COST_OTHER = 0.005, 0.010  # round trip, data/costs.md: ~0.5%, plus 0.5% slippage under Rs20m median traded value
 
 # numeric features and bucket edges (searchsorted side="right": value < edges[0] -> bucket 0)
@@ -60,7 +65,7 @@ class Engine:
                 "upper_lock", "f_financial_result", "f_dividend_or_bonus", "f_material_info", "f_insider_trade",
                 "f_insider_buy", "f_insider_sell", "f_board_meeting_notice", "f_agm", "f_credit_rating", "f_other",
                 "sector_ret_1d", "index_ret_1d", "is_newsless_rise", "first_upper_lock_within_5", "first_red_day",
-                "mae_5", "mae_20", "mfe_5"] + NUM + [f"ret_fwd_{k}" for k in HORIZONS]
+                "mae_5", "mae_20", "mfe_5", "dist_252_low"] + NUM + [f"ret_fwd_{k}" for k in HORIZONS]
         d = pd.read_parquet(TABLE, columns=cols)
         self.max_idx = int(d["session_idx"].max())
         d["cause"] = self.cause_of(d)
@@ -239,31 +244,211 @@ def interesting(e, date):
     return t[t["why"].str.len() > 0]
 
 
+
+# ---- catalogue tags (knowledge/CATALOGUE.md) -------------------------------------------------------------------------
+# tag -> (label with catalogue section, winners_library types it is scored against). First tag that applies wins, in the
+# library's own order (tests/winners_population.md section 2), so the odds below are for the same definition.
+TAGS = {"deal": ("deal (cat 7)", ["takeover_deal"]),
+        "results": ("results_jump (cat 4/5)", ["results_jump"]),
+        "sponsor": ("sponsor (cat 8)", ["sponsor_buyback"]),
+        "sector_wave": ("sector_wave (cat 2)", ["policy_sector_wave"]),
+        "shock_rebound": ("shock_rebound (cat 3)", ["shock_rebound"]),
+        "first_cut": ("first_cut (cat 1)", ["rate_cut_rotation"]),
+        "none": ("none (cat 9 or other)", ["operator_no_visible_cause", "other"])}
+DEAL = re.compile(r"acqui|merger|amalgam|take[- ]?over|\boffer", re.I)
+NODEAL = re.compile(r"right|offer for sale|public offer|initial public|ipo", re.I)
+BUYB = re.compile(r"buy[- ]?back|repurchase", re.I)
+
+
+def period_of(title):
+    m = re.search(r"(?:ended|ending)\s+(.*)$", str(title), re.I)
+    if not m:
+        return None
+    s = re.sub(r"(\d)(st|nd|rd|th)\b", r"\1", re.sub(r"[.]+$", "", m.group(1)).strip())
+    try:
+        from dateutil import parser as dp
+        return pd.Timestamp(dp.parse(s, fuzzy=True, default=pd.Timestamp("2000-01-01").to_pydatetime()))
+    except Exception:
+        return None
+
+
+class Tagger:
+    """Point-in-time catalogue flags for (symbol, date), mirroring the winners_library definitions with a look-back instead of
+    a hindsight run start: results = a financial_result filing in the last WIN sessions whose quarter EPS is >= 1.5x the same
+    quarter a year earlier (or loss to profit); deal / sponsor = a matching filing title or a director buy in the last WIN
+    sessions; sector_wave = median liquid peer (>= 3, self excluded) with ret_20d >= WAVE20 or ret_60d >= WAVE60 (fires on 27% of liquid sector-days; on 43%, 36% and 67% of the library's wave runs 20, 40 and 60 sessions after their start); shock_rebound = KMI All Share
+    >= 8% below its 20-session high on some session in the last 40; first_cut = within 80 sessions of the first policy-rate cut
+    after a hike. ponytail: look-backs are proxies for 'the run started at most ~20-60 sessions ago'; library flags are set at the
+    run start with hindsight (sector_wave uses the peers' move to the peak), so the two definitions are close, not identical."""
+
+    def __init__(self, d):
+        self.CAL = np.sort(d["date"].unique())
+        an = pd.read_parquet(ROOT / "data" / "announcements.parquet", columns=["datetime", "symbol", "title", "klass", "direction"])
+        an = an[an["klass"].isin(["financial_result", "material_info", "insider_trade"]) | an["title"].str.contains(BUYB)].copy()
+        dtm = an["datetime"].dt.tz_convert("Asia/Karachi").dt.tz_localize(None)
+        an["dt"] = dtm
+        an["sess"] = self.CAL.searchsorted(((dtm - pd.Timedelta(hours=15, minutes=30)).dt.normalize() + pd.Timedelta(days=1)).values)
+        self.AN = {s: g for s, g in an.groupby("symbol")}
+        q = pd.read_csv(ROOT / "data" / "fundamentals" / "quarterly_eps.csv", parse_dates=["fiscal_quarter_end"])
+        q["e"] = q["eps_basic"].fillna(q["eps_diluted"])
+        self.EPS = {s: g.set_index("fiscal_quarter_end")["e"].dropna() for s, g in q.groupby("symbol")}
+        k = pd.read_csv(ROOT / "data" / "macro" / "kmiallshr.csv", parse_dates=["date"]).drop_duplicates("date").set_index("date")["close"].sort_index()
+        self.kdd = k / k.rolling(20, min_periods=20).max() - 1
+        pr = pd.read_csv(ROOT / "data" / "macro" / "policy_rate_decisions.csv", parse_dates=["date"])
+        cuts, hiked = [], True  # first cut after a hike, as scripts/tests/winners_population.py
+        for r in pr.itertuples():
+            if r.change_bp > 0:
+                hiked = True
+            elif r.change_bp < 0 and hiked:
+                cuts.append(int(self.CAL.searchsorted(np.datetime64(r.date))))
+                hiked = False
+        self.cuts = cuts
+
+    def eps_jump(self, sym, w):
+        e = self.EPS.get(sym)
+        if e is None or not len(e):
+            return None
+        for r in w[w["klass"] == "financial_result"].sort_values("sess", ascending=False).itertuples():  # newest first
+            qd = period_of(r.title)
+            if qd is None:  # title cut off after "Quarter Ended" (MACFL 29 Apr 2026): the latest quarter end at least 15 days before the filing
+                prev = e.index[e.index <= r.dt - pd.Timedelta(days=15)]
+                if not len(prev):
+                    continue
+                qd = prev[-1]
+            k = np.argmin(np.abs((e.index - qd).days))
+            if abs((e.index[k] - qd).days) > 10:
+                continue
+            prior = e.index[k] - pd.DateOffset(years=1)
+            j = np.argmin(np.abs((e.index - prior).days))
+            if abs((e.index[j] - prior).days) > 10:
+                continue
+            en, ep = float(e.iloc[k]), float(e.iloc[j])
+            if (ep > 0 and en >= 1.5 * ep) or (ep <= 0 < en):
+                return f"EPS {en:g} vs {ep:g}"
+        return None
+
+    def tag(self, sym, date, peers):
+        """-> (tag, [(flag, detail), ...] every flag that applies, in priority order)"""
+        i = int(self.CAL.searchsorted(np.datetime64(date)))
+        g = self.AN.get(sym)
+        w = g[(g["sess"] > i - WIN) & (g["sess"] <= i)] if g is not None else pd.DataFrame(columns=["klass", "title", "direction", "sess", "dt"])
+        fl = []
+        dl = w[(w["klass"] == "material_info") & w["title"].str.contains(DEAL) & ~w["title"].str.contains(NODEAL)]
+        if len(dl):
+            fl.append(("deal", dl["title"].iloc[-1][:40]))
+        ej = self.eps_jump(sym, w)
+        if ej:
+            fl.append(("results", ej))
+        if ((w["klass"] == "insider_trade") & (w["direction"] == "buy")).any() or w["title"].str.contains(BUYB).any():
+            fl.append(("sponsor", "director buy or buy-back title"))
+        if peers is not None and (peers[0] >= WAVE20 or peers[1] >= WAVE60):
+            fl.append(("sector_wave", f"peer median {peers[0]:+.0%} in 20d, {peers[1]:+.0%} in 60d"))
+        kd = self.kdd[self.kdd.index <= pd.Timestamp(date)].iloc[-40:]
+        if len(kd) and kd.min() <= -0.08:
+            fl.append(("shock_rebound", f"KMI {kd.min():+.0%} off 20d high"))
+        if any(0 <= i - c <= 80 for c in self.cuts):
+            fl.append(("first_cut", "within 80 sessions of first cut"))
+        return (fl[0][0] if fl else "none"), fl
+
+
+class Odds:
+    """Measured odds per tag from data/winners_library.csv (tests/winners_population.md): liquid, non-suspect runs, all winners in
+    hindsight, so every figure is conditional on the run having happened (the denominator is in the catalogue: 25.6% of first
+    252-highs ran another 50%). For a historical scan only runs whose peak was at least 45 days before the scan date are used."""
+
+    def __init__(self, date, last):
+        lib = pd.read_csv(LIB, parse_dates=["peak_date"])
+        lib = lib[lib["data_suspect"] == False]  # noqa: E712
+        self.lib = lib if pd.Timestamp(date) >= last else lib[lib["peak_date"] <= pd.Timestamp(date) - pd.Timedelta(days=45)]
+
+    def line(self, tag, x):
+        lab, types = TAGS[tag]
+        g = self.lib[self.lib["type"].isin(types)]
+        if len(g) == 0:
+            return f"{lab}: no library runs finished by this date"
+        m = g["multiple"]
+        s = f"{lab}: {len(g)} library runs, median peak {m.median():.2f}x"
+        if x is not None and not np.isnan(x):
+            far = m[m > x]
+            rem = far / x
+            if len(far):
+                s += (f"; at {x:.2f}x from the 252d low {len(far)} of {len(g)} ({len(far) / len(g):.0%}) went further, "
+                      f"median a further {rem.median():.2f}x, {int((rem >= 1.5).sum())} ({(rem >= 1.5).sum() / len(g):.0%}) another +50% or more")
+            else:
+                s += f"; at {x:.2f}x from the 252d low none went further"
+        a = g["ahead_f252_log"].dropna()
+        if len(a):
+            s += f"; share of the gain still ahead at the first 252-high, median {a.median():.2f} (n={len(a)})"
+        s20, s30 = g["stop_f252_exit_mult"].dropna(), g["stop30_f252_exit_mult"].dropna()
+        if len(s20):
+            s += (f"; late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in {(s20 > 1).mean():.0%} / {(s30 > 1).mean():.0%}, "
+                  f"median exit {s20.median():.2f}x / {s30.median():.2f}x (n={len(s20)})")
+        else:
+            s += "; late-entry rule: no library run with a first 252-high"
+        return s + (" [thin: n<15]" if len(g) < 15 else "")
+
 def scan(e, date):
     date = pd.Timestamp(date)
     t = interesting(e, date)
     if t.empty:
         return f"No interesting liquid KMI names on {date:%Y-%m-%d} (or the date is not in the table)."
+    tg, odds = Tagger(e.d), Odds(date, e.d["date"].max())
+    day = e.d[(e.d["date"] == date) & e.d["liquid"] & (e.d["sector"] != "other")]
+    secs = {s: g.set_index("symbol")[["ret_20d", "ret_60d"]].dropna() for s, g in day.groupby("sector")}
+
+    def peer_moves(sym, sector):  # median 20d and 60d move of the liquid sector peers, self excluded, >= 3 peers
+        sr = secs.get(sector)
+        p = sr.drop(sym, errors="ignore") if sr is not None else None
+        return (float(p["ret_20d"].median()), float(p["ret_60d"].median())) if p is not None and len(p) >= 3 else None
+
+    def tagged(r):
+        tag, fl = tg.tag(r.symbol, date, peer_moves(r.symbol, r.sector))
+        x = 1 + r.dist_252_low if pd.notna(r.dist_252_low) else np.nan
+        return tag, fl, x
+
     rows = []
     for i, r in t.iterrows():
         sig = e.signature(i)
         pos, info, out = e.run(sig)
         h = {k: out["h"][k] for k in HORIZONS}
-        rows.append(dict(sym=r.symbol, fl=",".join(r.why), cause=r.cause, ret1=r.ret_1d, tier=sig["tier"], n5=h[5]["n"] if h[5] else 0,
+        tag, fl, x = tagged(r)
+        rows.append(dict(sym=r.symbol, fl=",".join(r.why), tag=tag, allfl=", ".join(f"{a} [{b}]" for a, b in fl) or "no flag", x=x, ret20=r.ret_20d,
+                         cause=r.cause, ret1=r.ret_1d, tier=sig["tier"], n5=h[5]["n"] if h[5] else 0,
                          ep=h[5]["ep"] if h[5] else 0, m1=h[1]["med"] if h[1] else np.nan, m5=h[5]["med"] if h[5] else np.nan,
                          m20=h[20]["med"] if h[20] else np.nan, w5=h[5]["win"] if h[5] else np.nan,
                          g10=h[5]["gt10"] if h[5] else np.nan, pl5=h[5]["plc"] if h[5] else np.nan,
                          lk=out["lock5"][0] if out["lock5"] else np.nan, mae=out["mae5"][0] if out["mae5"] else np.nan,
                          wd=f"L1<={info['D']}{'' if info['regime_kept'] else ',noreg'}{',tier+-1' if info['tier_tol'] else ''}{' THIN' if info['thin'] else ''}"))
     R = pd.DataFrame(rows).sort_values("m5", ascending=False, na_position="last")
+    nliq = int(((e.d['date'] == date) & e.d['liquid'] & (e.d['kmi_member'] == True)).sum())  # noqa: E712
     L = [f"=== SCAN {date:%Y-%m-%d}: liquid (>Rs5m median traded value) KMI names with an interesting signature, sorted by the median 5-session analogue return ===",
-         f"{len(R)} names of {int(((e.d['date'] == date) & e.d['liquid'] & (e.d['kmi_member'] == True)).sum())} liquid KMI names traded. Returns are from the next open, gross; analogues use only data known at that close.",
+         f"{len(R)} names of {nliq} liquid KMI names traded. Returns are from the next open, gross; analogues use only data known at that close.",
          "n5/ep = analogues with a known 5-session outcome / distinct name-months. m1,m5,m20 = analogue median return at 1, 5, 20 sessions. pl5 = same-date, same-tier random-entry median at 5. "
-         "w5 = share up at 5; g10 = share above +10% at 5; lk5 = share that locked up within 5; mae5 = median max adverse excursion in 5.", "",
-         f"{'symbol':<8}{'flags':<24}{'cause':<13}{'ret1d':>7} {'tier':<4}{'n5':>6}{'ep':>5}{'m1':>8}{'m5':>8}{'m20':>8}{'pl5':>8}{'w5':>5}{'g10':>5}{'lk5':>5}{'mae5':>8}  widening"]
+         "w5 = share up at 5; g10 = share above +10% at 5; lk5 = share that locked up within 5; mae5 = median max adverse excursion in 5.",
+         f"type = catalogue type the name most resembles (knowledge/CATALOGUE.md), first flag that applies in the winners-library order deal, results, sponsor, sector_wave, shock_rebound, first_cut, else none. "
+         f"Flags look back {WIN} sessions (filings) or, for sector_wave, the liquid peers' median move (20 days >= {WAVE20:.0%} or 60 days >= {WAVE60:.0%}, at least 3 peers); the line under each name lists every flag that applies and that type's measured odds "
+         f"from data/winners_library.csv ({len(odds.lib)} liquid runs{'' if date >= e.d['date'].max() else ', only those whose peak was 45+ days before this date'}). x = close over the 252-session low.",
+         "The odds are conditional on the run having happened (the library holds winners only, each at least 1.5x, so any x below 1.5 reads 100% went further). Unconditional: 25.6% of first 252-highs in liquid names gained another 50% in 126 sessions; EPS jumps alone, +0.9% median at 20 sessions.", "",
+         f"{'symbol':<8}{'flags':<24}{'type':<14}{'cause':<13}{'ret1d':>7} {'tier':<4}{'n5':>6}{'ep':>5}{'m1':>8}{'m5':>8}{'m20':>8}{'pl5':>8}{'w5':>5}{'g10':>5}{'lk5':>5}{'mae5':>8}  widening"]
     for _, r in R.iterrows():
-        L.append(f"{r.sym:<8}{r.fl[:23]:<24}{r.cause:<13}{pct(r.ret1):>7} {r.tier:<4}{r.n5:>6}{r.ep:>5}{pct(r.m1):>8}{pct(r.m5):>8}{pct(r.m20):>8}{pct(r.pl5):>8}"
+        L.append(f"{r.sym:<8}{r.fl[:23]:<24}{r.tag:<14}{r.cause:<13}{pct(r.ret1):>7} {r.tier:<4}{r.n5:>6}{r.ep:>5}{pct(r.m1):>8}{pct(r.m5):>8}{pct(r.m20):>8}{pct(r.pl5):>8}"
                  f"{'' if pd.isna(r.w5) else format(r.w5, '.0%'):>5}{'' if pd.isna(r.g10) else format(r.g10, '.0%'):>5}{'' if pd.isna(r.lk) else format(r.lk, '.0%'):>5}{pct(r.mae):>8}  {r.wd}")
+        L.append(f"        flags: {r.allfl}; ret_20d {pct(r.ret20, 0)}")
+        L.append(f"        odds: {odds.line(r.tag, r.x)}")
+
+    # missed movers: every liquid name (KMI or not) up MOVER or more over 20 sessions that is not above
+    d = e.d
+    m = d[(d["date"] == date) & d["liquid"] & (d["ret_20d"] >= MOVER) & ~d["symbol"].isin(R["sym"])].sort_values("ret_20d", ascending=False)
+    L += ["", f"=== MISSED MOVERS {date:%Y-%m-%d}: liquid names up {MOVER:.0%}+ over the last 20 sessions that are not in the scan above (KMI = member on this date) ===",
+          f"{len(m)} names. Same tags and odds as above; ret_20d and ret_60d are adjusted closes; x = close over the 252-session low.", ""]
+    for _, r in m.iterrows():
+        tag, fl = tg.tag(r.symbol, date, peer_moves(r.symbol, r.sector))
+        x = 1 + r.dist_252_low if pd.notna(r.dist_252_low) else np.nan
+        L.append(f"{r.symbol:<8}{'KMI' if r.kmi_member == True else 'non-KMI':<8}{r.sector[:22]:<23}ret_20d {pct(r.ret_20d, 0):>6} ret_60d {pct(r.ret_60d, 0):>6} x {x:>5.2f}  type {tag}"  # noqa: E712
+                 f" | flags: {', '.join(f'{a} [{b}]' for a, b in fl) or 'no flag'}")
+        L.append(f"        odds: {odds.line(tag, x)}")
+    if m.empty:
+        L.append("(none)")
     return "\n".join(L)
 
 

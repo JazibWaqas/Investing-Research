@@ -1,0 +1,13 @@
+# Life-changing runs: what 34 five-baggers share, and what they do not
+
+Written 2026-10-18. The 34 liquid runs of 5x or more in `data/winners_library.csv` (PHDL, a price rebase, excluded), one case each in this folder; all lasted 302 to 962 sessions, ATRL is still open. Arithmetic: `scripts/tests/winners_life_changing_stats.py`, output `tests/out/winners_life_changing_stats.txt`. Every figure is conditional on the run having happened.
+
+**Shared signature: for holding, yes; for picking, no.** The library start was never the first sign. A dead stretch of 3 to 14 months usually followed, and the first plain 252-day high came at a median 1.40x the start with a median 5.4x of the peak still ahead. But 34 is about 2% of the 1,558 first 252-day highs on liquid names (`tests/winners_population.md`, section 5), so the high does not pick them. Seven runs began in April to August 2019 (one, CLOV, in April 2017) and 26 between October 2022 and November 2023, when the KMI All Share rose 1.8x to 3.9x; about half of the 26 are sector tide (banks, cement, fertilizer) with no event day. The rest have a cause in the filings: earnings that jumped (SAZEW, GAL, GHNI, AIRLINK) or sat unloved at about 1x trailing EPS (ATRL) or a control, deal or privatisation process (AGL, PTC, PSMC, FFBL, PIOC 2022, PIAHCLA, CLOV). A few have no stated cause (NRL, PREMA).
+
+**Early versus late.** Results-driven names ignored the print for 3 to 8 months: SAZEW's profit rose 18-fold on 18 Apr 2023 and the high came on 31 Jul. Deal names moved before each gate and the offer was not always the cap (AGL ran past two Rs39 bids; PSMC stopped at the Rs609 floor). Sector names offered only the sector's own breakout.
+
+**Exits.** Entry at the first 252-day high, held to 250 sessions past the peak, was positive in 33 of 34 runs (median +286%); that is selection. A 20% closing stop fired in 24 runs (61 times), in 15 before the price was 50% above entry, and left a median +28%; a 30% stop left +167%, a 40% stop +231%. Selling at 20% and buying back on a reclaim of the old high left +179% with nothing worse than +2%, before fills the arithmetic assumes. Five market-wide breaks caused most stops: Covid 2020, 26 Dec 2023, 26 Nov 2024, 8 May 2025, 2 Mar 2026.
+
+**Failures.** Late entries into thin, unexplained or diluted names lost: PREMA after 2x, UNITY after rights at par, MUGHAL after the profit surge, and TRG's January 2020 high (-17% to -39%). For 2017 to 2019 (n = 8) a 30% stop left a median +17%; for 2022 to 2023 (n = 26), +220%. One tide favoured the rule.
+
+**Verdict.** No common rule picks these; each file carries its own. What generalises is the holding: a 30 to 40% leash, or a stop with a re-entry on the reclaim, sized to the worst pullback the case showed.

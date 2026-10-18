@@ -1,0 +1,8 @@
+panel names 456, delisted kept 139
+names with any trade 589 of 595
+upper-lock agreement with daily_table on 567445 rows: both 41212, mine only 0, table only 2
+merged windows 1759
+first cuts after a hike: ['2015-01-31', '2020-03-17', '2024-06-10']
+episodes 1759 in 511 names
+first 252-highs of liquid names: 1558; followed by +50% (max close) within 126 sessions: 0.256; +100% within 252: 0.187 (n=1413); KMI-at-time only: 0.245 / 0.173
+episodes 1759: liquid (>Rs2m) 383, thin 1376; data_suspect 192

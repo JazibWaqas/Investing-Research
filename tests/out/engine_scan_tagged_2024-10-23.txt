@@ -1,0 +1,75 @@
+=== SCAN 2024-10-23: liquid (>Rs5m median traded value) KMI names with an interesting signature, sorted by the median 5-session analogue return ===
+18 names of 86 liquid KMI names traded. Returns are from the next open, gross; analogues use only data known at that close.
+n5/ep = analogues with a known 5-session outcome / distinct name-months. m1,m5,m20 = analogue median return at 1, 5, 20 sessions. pl5 = same-date, same-tier random-entry median at 5. w5 = share up at 5; g10 = share above +10% at 5; lk5 = share that locked up within 5; mae5 = median max adverse excursion in 5.
+type = catalogue type the name most resembles (knowledge/CATALOGUE.md), first flag that applies in the winners-library order deal, results, sponsor, sector_wave, shock_rebound, first_cut, else none. Flags look back 60 sessions (filings) or, for sector_wave, the liquid peers' median move (20 days >= 10% or 60 days >= 20%, at least 3 peers); the line under each name lists every flag that applies and that type's measured odds from data/winners_library.csv (208 liquid runs, only those whose peak was 45+ days before this date). x = close over the 252-session low.
+The odds are conditional on the run having happened (the library holds winners only, each at least 1.5x, so any x below 1.5 reads 100% went further). Unconditional: 25.6% of first 252-highs in liquid names gained another 50% in 126 sessions; EPS jumps alone, +0.9% median at 20 sessions.
+
+symbol  flags                   type          cause          ret1d tier    n5   ep      m1      m5     m20     pl5   w5  g10  lk5    mae5  widening
+PIBTL   results                 none          results       -11.6% mid     57   52   -1.1%   +0.8%   -3.8%   -0.4%  53%   9%   9%   -5.2%  L1<=4,noreg
+        flags: no flag; ret_20d +1%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.43x from the 252d low 57 of 57 (100%) went further, median a further 1.13x, 10 (18%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+KEL     move>5%,lock,sector_lea none          dividend      +10.4% hi     116  104   -0.1%   +0.6%   +0.7%   -0.3%  53%  10%  30%   -3.1%  L1<=12,noreg,tier+-1
+        flags: no flag; ret_20d +16%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.52x from the 252d low 48 of 57 (84%) went further, median a further 1.13x, 8 (14%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+BIFO    results                 none          results        +0.4% mid     44   43   -0.4%   -0.1%   -1.8%   +0.1%  48%   7%   7%   -2.9%  L1<=4,noreg,tier+-1
+        flags: no flag; ret_20d -2%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.70x from the 252d low 25 of 57 (44%) went further, median a further 1.24x, 6 (11%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+SSGC    move>5%,lock,sector_lea none          none          +11.2% mid     36   35   -1.0%   -0.3%   -4.8%   +0.1%  47%  11%  33%   -5.6%  L1<=4,noreg
+        flags: no flag; ret_20d +16%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.19x from the 252d low 57 of 57 (100%) went further, median a further 1.36x, 21 (37%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+CHCC    move>5%                 results       dividend       +8.0% hi      58   53   +0.0%   -0.3%   +0.7%   -1.0%  47%   5%  17%   -2.6%  L1<=8,noreg,tier+-1
+        flags: results [EPS 4.4 vs 0.48], sector_wave [peer median +15% in 20d, +10% in 60d]; ret_20d +16%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 1.55x from the 252d low 3 of 4 (75%) went further, median a further 1.38x, 1 (25%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+KOHC    move>5%,lock            results       sector_up     +10.0% mid     51   49   +0.0%   -0.3%   -1.1%   -0.1%  49%  22%  33%   -4.3%  L1<=4,noreg,tier+-1
+        flags: results [EPS 2.43 vs 0.46], sponsor [director buy or buy-back title], sector_wave [peer median +15% in 20d, +10% in 60d]; ret_20d +16%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 2.01x from the 252d low 3 of 4 (75%) went further, median a further 1.07x, 0 (0%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+INIL    sector_leader           none          none           +3.4% hi      99   74   -0.5%   -0.3%   +0.4%   +0.3%  45%   2%   5%   -2.6%  L1<=4
+        flags: no flag; ret_20d +7%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.62x from the 252d low 26 of 57 (46%) went further, median a further 1.30x, 6 (11%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+RPL     sector_leader           none          board_meeting  +3.2% mid     63   63   -0.1%   -0.3%   -2.3%   -0.1%  46%   2%  11%   -3.1%  L1<=4,noreg,tier+-1
+        flags: no flag; ret_20d -5%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.34x from the 252d low 57 of 57 (100%) went further, median a further 1.21x, 18 (32%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+SEARL   move>5%,sector_leader   sector_wave   board_meeting  +5.6% hi      95   93   -0.5%   -0.4%   -0.1%   +0.0%  46%   5%  13%   -3.4%  L1<=6,noreg,tier+-1
+        flags: sector_wave [peer median +11% in 20d, +29% in 60d]; ret_20d +10%
+        odds: sector_wave (cat 2): 80 library runs, median peak 2.07x; at 1.65x from the 252d low 60 of 80 (75%) went further, median a further 1.38x, 25 (31%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.45 (n=62); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 48% / 45%, median exit 0.99x / 0.93x (n=60)
+ACPL    move>5%                 results       sector_up      +6.2% mid     34   21   +0.0%   -0.5%   -4.2%   -1.3%  44%  24%  47%   -6.5%  L1<=4,noreg
+        flags: results [EPS 9.82 vs -0.16], sector_wave [peer median +15% in 20d, +10% in 60d]; ret_20d +48%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 1.82x from the 252d low 3 of 4 (75%) went further, median a further 1.18x, 0 (0%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+SHFA    move>5%                 none          none           +6.1% mid     37   30   -0.3%   -0.5%   -1.7%   -1.0%  38%  14%  27%   -4.9%  L1<=4
+        flags: no flag; ret_20d +33%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 2.01x from the 252d low 17 of 57 (30%) went further, median a further 1.13x, 4 (7%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+GHNI    results                 results       results        +0.1% hi      55   51   -0.6%   -0.5%   +0.4%   -0.5%  47%   2%   5%   -3.0%  L1<=6,noreg,tier+-1
+        flags: results [EPS 14.99 vs 1.45]; ret_20d +31%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 3.21x from the 252d low none went further; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+GAL     move>5%,results,sector_ results       results        +7.4% hi      56   54   -0.3%   -0.6%   -3.1%   -0.3%  48%  16%  32%   -3.8%  L1<=6,noreg,tier+-1
+        flags: results [EPS 10.55 vs -1.61]; ret_20d -4%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 5.11x from the 252d low none went further; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+GWLC    move>5%,lock,sector_lea results       sector_up     +10.0% mid     34   32   +0.0%   -1.9%   -1.3%   -0.1%  38%  21%  38%   -6.8%  L1<=4,noreg,tier+-1
+        flags: results [EPS 1.24 vs -1.11], sector_wave [peer median +15% in 20d, +18% in 60d]; ret_20d +17%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 1.94x from the 252d low 3 of 4 (75%) went further, median a further 1.11x, 0 (0%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+TELE    move>5%                 none          board_meeting  +5.8% mid     75   75   -1.1%   -2.1%   -5.3%   -0.5%  24%   5%   9%   -5.1%  L1<=4,noreg,tier+-1
+        flags: no flag; ret_20d +2%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.12x from the 252d low 57 of 57 (100%) went further, median a further 1.44x, 26 (46%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+OCTOPUS move>5%,sector_leader   none          sector_up      +6.6% hi      36   33   -1.5%   -2.6%   -1.5%   -1.0%  28%  11%   8%   -4.2%  L1<=3,noreg
+        flags: no flag; ret_20d -1%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 2.59x from the 252d low 5 of 57 (9%) went further, median a further 1.52x, 3 (5%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+THCCL   move>5%                 results       other_filing   +5.3% hi      66   60   -0.1%   -3.0%   -2.1%   -1.3%  42%   9%  39%   -7.0%  L1<=6,noreg,tier+-1
+        flags: results [EPS 1.35 vs 0.04], sector_wave [peer median +15% in 20d, +10% in 60d]; ret_20d +55%
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 7.33x from the 252d low none went further; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+ATRL    move>5%,sector_leader   none          none           +6.1% hi      73   49   -0.2%   -3.2%   -0.6%   -0.1%  40%  15%  37%   -7.6%  L1<=4,noreg
+        flags: no flag; ret_20d +53%
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.74x from the 252d low 23 of 57 (40%) went further, median a further 1.22x, 5 (9%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+
+=== MISSED MOVERS 2024-10-23: liquid names up 20%+ over the last 20 sessions that are not in the scan above (KMI = member on this date) ===
+5 names. Same tags and odds as above; ret_20d and ret_60d are adjusted closes; x = close over the 252-session low.
+
+CSAP    non-KMI Steel & engineering    ret_20d   +68% ret_60d  +129% x  3.91  type none | flags: no flag
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 3.91x from the 252d low 3 of 57 (5%) went further, median a further 1.27x, 0 (0%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+FCCL    KMI     Cement                 ret_20d   +21% ret_60d   +35% x  2.43  type results | flags: results [EPS 0.48 vs 0.23], sector_wave [peer median +15% in 20d, +10% in 60d]
+        odds: results_jump (cat 4/5): 4 library runs, median peak 2.11x; at 2.43x from the 252d low none went further; share of the gain still ahead at the first 252-high, median 0.47 (n=4); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 75% / 100%, median exit 1.33x / 1.22x (n=4) [thin: n<15]
+FFBL    non-KMI other                  ret_20d   +21% ret_60d   +36% x  3.68  type deal | flags: deal [Material Information - Approval of Merge]
+        odds: deal (cat 7): 1 library runs, median peak 1.51x; at 3.68x from the 252d low none went further; late-entry rule: no library run with a first 252-high [thin: n<15]
+PPL     KMI     E&P                    ret_20d   +20% ret_60d   +15% x  1.69  type none | flags: no flag
+        odds: none (cat 9 or other): 57 library runs, median peak 1.61x; at 1.69x from the 252d low 25 of 57 (44%) went further, median a further 1.25x, 6 (11%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.43 (n=29); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 46% / 43%, median exit 0.98x / 0.95x (n=28)
+CPHL    KMI     Pharma                 ret_20d   +20% ret_60d   +43% x  2.07  type sector_wave | flags: sector_wave [peer median +10% in 20d, +23% in 60d]
+        odds: sector_wave (cat 2): 80 library runs, median peak 2.07x; at 2.07x from the 252d low 40 of 80 (50%) went further, median a further 1.32x, 13 (16%) another +50% or more; share of the gain still ahead at the first 252-high, median 0.45 (n=62); late-entry rule (first 252-high, trail 20% / 30%): finished above 1.0x in 48% / 45%, median exit 0.99x / 0.93x (n=60)
