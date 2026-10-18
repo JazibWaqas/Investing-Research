@@ -89,10 +89,19 @@ def situations(T):
 def base_rates(T):
     f = ROOT / "tests" / "BASE_RATES.csv"
     if not f.exists():
-        return "type,as_of_cutoff,n,hit_rate,median,p50plus,source\nnone,,,,,,no base rates available"
+        return "type,n,hit_rate,median,p50plus,source
+none,,,,,no base rates available"
     b = pd.read_csv(f)
-    b = b[pd.to_datetime(b.as_of_cutoff) < T]
-    return b.to_csv(index=False) if len(b) else "type,as_of_cutoff,n,hit_rate,median,p50plus,source\nnone,,,,,,no base rate has a cutoff before this date"
+    # Base rates were measured on the full sample (as_of_cutoff 2026-10-16 on every row); point-in-time recomputation
+    # is not available. Ship a compact subset with an explicit look-ahead warning so the replay agent has the same
+    # full-sample knowledge that the plain-rule comparison arm (S3) was chosen with. Logged as a known contamination.
+    keep = ["type", "horizon", "n", "hit_rate", "median", "p50plus", "worst", "placebo_median", "verdict"]
+    b = b[[c for c in keep if c in b.columns]]
+    b = b[~b["type"].astype(str).str.startswith(("policy_", "regime_", "index_", "dividend_", "sector_momentum_ls_grid"))]
+    head = ("# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a "
+            "situation TYPE; infer nothing about specific names or dates.
+")
+    return head + b.to_csv(index=False)
 
 
 def brief():
