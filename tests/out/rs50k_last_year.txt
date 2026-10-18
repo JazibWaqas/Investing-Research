@@ -1,0 +1,76 @@
+== Rs50,000 at 2025-10-16 close, valued 2026-10-16 close. Fully reinvested, cash dividends at 85% (only where in data/corporate_actions.csv; complete from Nov 2024), costs 0.25%/side (+0.25% under Rs20m traded value), final values after exit costs for traded lines; index lines have no costs.
+line                                                                                        final Rs multiple   maxDD trades
+-- 1 benchmarks
+KMI All Share TR                                                                              49,494     0.99  -21.3%      0
+KSE100 TR                                                                                     50,601     1.01  -22.6%      0
+KMI30 TR                                                                                      50,110     1.00  -22.1%      0
+-- 2 walk-forward strategies
+WF B0 (frozen, entry 2025-11-03)                                                              48,519     0.97  -29.2%    163
+WF B1 (frozen, entry 2025-11-03)                                                              43,549     0.87  -30.1%     17
+WF S2 (frozen, entry 2025-11-03)                                                              41,153     0.82  -31.0%     20
+WF S3 (frozen, entry 2025-11-03)                                                              41,955     0.84  -33.6%     10
+WF S4 (frozen, entry 2025-11-03)                                                              41,191     0.82  -39.5%     16
+-- 3 oracle-script systems
+S1 oracle-script                                                                              24,499     0.49  -61.4%     20
+S2 oracle-script                                                                              16,514     0.33  -72.6%     21
+S3 oracle-script                                                                              40,820     0.82  -35.3%     12
+S4 oracle-script                                                                              47,409     0.95  -31.9%     21
+S5 oracle-script                                                                              50,248     1.00  -39.1%     29
+S6 oracle-script                                                                              38,420     0.77  -31.9%     15
+S8 oracle-script                                                                              49,614     0.99  -22.9%     30
+  placebo, 200 random monthly rotations into 3 liquid names: p10 0.60x (Rs30,035), median 0.78x (Rs39,007), p90 1.06x (Rs52,792)
+-- 4 growth core and blends
+Growth core hold (LUCK MEBL SYS MARI)                                                         47,384     0.95  -25.1%      4
+60% core + 40% S3 breakout                                                                    44,759     0.90  -26.1%     16
+75% core + 25% S3 breakout                                                                    45,743     0.91  -25.7%     16
+-- 6 hindsight reference
+CHEATING best-5 liquid KMI names in hindsight (MACFL QUICE PRL CRTM JVDC)                    140,721     2.81  -33.1%      5
+CHEATING single best liquid KMI name in hindsight (MACFL)                                    179,742     3.59  -53.2%      1
+
+Walk-forward trades only on the first session of a month, so its Rs50,000 sits in cash from 2025-10-16 to 2025-11-03; the oracle-script systems start 2025-10-16 exactly.
+
+== Month by month (first session of each month; last row 2026-10-16)
+date          S3 breakout  growth core  60/40 blend    KMI TR
+2025-10-16         50,000       49,875       49,925    50,000
+2025-11-03         46,424       48,953       47,942    48,765
+2025-12-01         42,294       49,446       46,585    49,992
+2026-01-01         44,780       51,248       48,661    51,902
+2026-02-02         43,891       51,326       48,352    54,119
+2026-03-02         35,219       40,685       38,499    44,133
+2026-04-01         35,081       46,568       41,973    45,792
+2026-05-04         34,755       47,692       42,518    48,112
+2026-06-01         33,710       49,034       42,904    50,306
+2026-07-01         38,738       52,371       46,918    53,957
+2026-08-03         44,568       50,483       48,117    52,158
+2026-09-01         46,647       50,109       48,725    52,426
+2026-10-01         44,902       48,035       46,782    49,995
+2026-10-16         40,820       47,384       44,759    49,494
+
+== S3 breakout trades (oracle-script version), by Rs P&L
+  TPLT    2026-06-01 -> 2026-10-16  +63%  Rs6,998  end_open
+  MEBL    2026-04-09 -> 2026-10-16  +9%  Rs1,035  end_open
+  IPAK    2026-04-17 -> 2026-10-14  +6%  Rs756  trail_stop_20
+  SAZEW   2026-01-27 -> 2026-03-10  -7%  Rs-599  trail_stop_20
+  CRTM    2026-04-09 -> 2026-05-19  -5%  Rs-631  trail_stop_20
+  PIOC    2025-11-25 -> 2026-01-27  -8%  Rs-716  trail_stop_20
+  TELE    2025-10-17 -> 2026-02-17  -8%  Rs-1,282  trail_stop_20
+  MACFL   2026-10-14 -> 2026-10-16  -19%  Rs-2,418  end_open
+  BWHL    2026-02-17 -> 2026-03-10  -18%  Rs-2,483  trail_stop_20
+  HALEON  2025-10-17 -> 2026-03-03  -16%  Rs-2,619  trail_stop_20
+  KEL     2025-10-17 -> 2025-10-27  -22%  Rs-3,605  trail_stop_20
+  TRSM    2025-10-27 -> 2025-11-25  -28%  Rs-3,616  trail_stop_20
+
+== Walk-forward S3 trades
+  FABL    2025-12-01 -> 2026-01-01  +6%
+  ENGROH  2025-12-01 -> 2026-01-01  +9%
+  CHCC    2025-11-03 -> 2026-04-01  -11%
+  TGL     2025-11-03 -> 2026-04-01  -11%
+  AIRLINK 2026-01-01 -> 2026-04-01  -12%
+  SNGP    2026-02-02 -> 2026-04-01  -20%
+  MARI    2026-04-01 -> 2026-10-01  -0%
+  FABL    2026-04-01 -> open  +6%
+  ENGROH  2026-04-01 -> open  -4%
+  OGDC    2026-10-01 -> open  -3%
+
+== Core names (price+dividend, no costs): LUCK 0.89x  MEBL 1.28x  SYS 0.77x  MARI 0.87x
+Hindsight top 10 liquid KMI names (no costs): MACFL 3.61x  QUICE 3.29x  PRL 2.95x  CRTM 2.43x  JVDC 1.88x  ATRL 1.81x  FCEPL 1.63x  CLOV 1.59x  CNERGY 1.54x  ILP 1.39x
