@@ -10,6 +10,7 @@ Who runs it: the orchestrator (Claude chat) with network access runs steps 1 to 
 .venv\Scripts\python.exe scripts\fetch_announcements.py    # resumes from the last date in data\announcements.parquet
 .venv\Scripts\python.exe scripts\fetch_fipi_lipi.py        # NCCPL flows (via scstrade)
 .venv\Scripts\python.exe scripts\macro_tbill.py            # SBP auctions; also policy rate after each MPC
+collect_intraday.py          # after the close, every trading day: today's trades to data\intraday (portal keeps only the current session; see data\intraday\README.md)
 ```
 The PSX portal needs the `X-Req-Id` header (CLAUDE.md, Environment). If every call returns 403, open https://dps.psx.com.pk/company/MEBL in a browser and read `window.__ps._k`; `scripts\psx_api.py` fetches it automatically.
 

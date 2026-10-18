@@ -49,6 +49,12 @@ def eod(sym):
     return df.drop(columns="ts").sort_values("date").reset_index(drop=True)
 
 
+def intraday(sym):
+    """Today's trades, newest first: ts (unix seconds, UTC), price, volume. Portal serves only the current session."""
+    d = _req("GET", f"/timeseries/int/{sym}", sym).json()["data"]
+    return pd.DataFrame(d, columns=["ts", "price", "volume"])
+
+
 def historical_full(sym):
     r = _req("POST", "/historical", sym, data={"month": 0, "year": 0, "symbol": sym})
     cols = ["date", "open", "high", "low", "close", "volume"]
