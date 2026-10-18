@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-16",
+  "regime": {
+    "rates_phase": "holding",
+    "stance": "neutral",
+    "p_kmi_up_60": 0.45,
+    "summary": "A policy hold with tightening risk. The curve prices hikes despite falling CPI, while Brent has risen sharply. The latest rupee snapshot is stable, but it ends in September and external-account data are missing. I cannot establish either a confirmed easing regime or an external crisis. The 45% probability is my subjective 60-session directional judgment, not an empirical KMI hit rate.",
+    "evidence": [
+      {"file": "market.md", "row": null, "field": null, "quote": "Policy rate 11.5%; last MPC decision 2026-09-14: hold (+0bp)"},
+      {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate +0.90pp (market pricing hikes); CPI falling over 3 months (-0.8pp)"},
+      {"file": "market.md", "row": null, "field": null, "quote": "Brent: 126.55 USD/bbl on 2026-10-14; 3-month change +51.2%"},
+      {"file": "market.md", "row": null, "field": null, "quote": "USD/PKR: 277.42  on 2026-09-30; 3-month change -0.4%"},
+      {"file": "market.md", "row": null, "field": null, "quote": "FX reserves, current account: not available in this repository (no data file)"},
+      {"file": "questions.md", "row": null, "field": null, "quote": "A2. Is the curve pricing a move the SBP has not made?"},
+      {"file": "questions.md", "row": null, "field": null, "quote": "A5. Balance of payments: reserves, current account, import cover, rupee direction?"},
+      {"file": "questions.md", "row": null, "field": null, "quote": "A8. Oil: where is Brent, and which link do I actually hold?"}
+    ]
+  },
+  "core": [],
+  "watch": [
+    {
+      "type": "policy_or_price_decision_pending",
+      "subject": "ATRL",
+      "trigger": "Require a public, company-specific disclosure establishing whether refinery-policy implementation improves ATRL's cash economics after funding and required investment. Approval alone does not justify adding. Add only after that evidence; exit early if disclosed obligations destroy the proposed benefit. The board-notice publication date is not a verified meeting date, and a high oil price is not proof of higher refinery profit.",
+      "evidence": [
+        {"file": "actors.md", "row": null, "field": null, "quote": "The Cabinet Committee on Energy (chaired by the PM) approved the revamped refinery policy on 28 Jul 2026 (Dawn 2019159)"},
+        {"file": "actors.md", "row": null, "field": null, "quote": "The Petroleum Division signs and monitors; OGRA notifies gas, fuel and FRR numbers; NEPRA sets tariffs. Approval is not implementation."},
+        {"file": "calendar.md", "row": null, "field": null, "quote": "2026-10-08 ATRL: BOARD MEETING AND CLOSED PERIOD"},
+        {"file": "calendar.md", "row": null, "field": null, "quote": "meeting dates are in the notice PDFs, not parsed; titles shown as published"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "C3. Who gains, who decides, and when?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B3. What does the business earn on new capital, and how much does it reinvest?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "A8. Oil: where is Brent, and which link do I actually hold?"}
+      ]
+    },
+    {
+      "type": "other",
+      "subject": "LUCK and ILP: qualify the growth core",
+      "trigger": "Investigate LUCK and ILP first because their screens report positive EPS growth. Require recurring consolidated earnings growth, cash conversion, attractive reinvestment, sponsor delivery and minority treatment, and a balance sheet that survives higher rates. Satisfactory business evidence triggers rebuilding toward the 75% core default without waiting for a price rebound or a favorable event backtest. Determine final names and weights from that evidence; these are research candidates today.",
+      "evidence": [
+        {"file": "screens.csv", "row": "LUCK", "field": "eps_yoy", "quote": "0.291"},
+        {"file": "screens.csv", "row": "LUCK", "field": "eps_qtr_end", "quote": "2026-06-30"},
+        {"file": "screens.csv", "row": "ILP", "field": "eps_yoy", "quote": "0.562"},
+        {"file": "screens.csv", "row": "ILP", "field": "eps_qtr_end", "quote": "2026-06-30"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B1. What is five-year earnings power on consolidated EPS, one-offs stripped?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B3. What does the business earn on new capital, and how much does it reinvest?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B4. Is the business trying to become big, with a builder culture?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B5. Who runs it, and did past promises meet delivery and past bets pay?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B6. How does the sponsor treat minorities?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B7. Can the balance sheet survive higher rates and a bad year?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "B8. Is the cash real?"},
+        {"file": "BRIEF", "row": null, "field": null, "quote": "the core rests on business questions, not on timing base rates."}
+      ]
+    },
+    {
+      "type": "policy_or_price_decision_pending",
+      "subject": "SBP decision and external funding",
+      "trigger": "Reassess on the next published MPC decision and refreshed rupee, reserves and current-account data. A hike accompanied by deteriorating external funding would argue for less tactical exposure; improved external funding would weaken the macro case for caution. Neither condition substitutes for qualifying the core businesses. The bundle does not establish the next MPC date.",
+      "evidence": [
+        {"file": "calendar.md", "row": null, "field": null, "quote": "Next MPC: see SBP calendar"},
+        {"file": "market.md", "row": null, "field": null, "quote": "FX reserves, current account: not available in this repository (no data file)"},
+        {"file": "market.md", "row": null, "field": null, "quote": "Regime: 6M T-bill minus policy rate +0.90pp (market pricing hikes); CPI falling over 3 months (-0.8pp)"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "A1. Where is the policy rate against inflation, and which way is it likelier to move?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "A5. Balance of payments: reserves, current account, import cover, rupee direction?"},
+        {"file": "situations.md", "row": null, "field": null, "quote": "Lesson: read the rate and the rupee, not the politics."}
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "symbol": "ATRL",
+      "type": "policy_or_price_decision_pending",
+      "entry_price": 1219.1,
+      "stop_price": 975.28,
+      "stop_type": "trailing",
+      "size_pct": 15,
+      "horizon_sessions": 60,
+      "p_gain": 0.52,
+      "reason": "Speculate on refinery-policy implementation with ATRL at its 252-day high; company economics remain unverified. This is a discretionary catalyst trade. Proposed entry uses T's close, not a guaranteed fill. Trail 20% on closes: planned book risk is 3%. Exit on stop, adverse implementation economics, or 60 sessions; do not turn it into an unqualified core holding. The 52% probability is my subjective estimate of positive net return, not a measured event hit rate.",
+      "evidence": [
+        {"file": "screens.csv", "row": "ATRL", "field": "close", "quote": "1219.1"},
+        {"file": "screens.csv", "row": "ATRL", "field": "dist_from_252_high", "quote": "0.0"},
+        {"file": "actors.md", "row": null, "field": null, "quote": "approved the revamped refinery policy on 28 Jul 2026"},
+        {"file": "actors.md", "row": null, "field": null, "quote": "Approval is not implementation."},
+        {"file": "questions.md", "row": null, "field": null, "quote": "C4. Is price confirming or extended?"},
+        {"file": "questions.md", "row": null, "field": null, "quote": "C9. What is the exit: stop, target, time, and the loss in rupees if wrong?"},
+        {"file": "BRIEF", "row": null, "field": null, "quote": "A trailing stop"},
+        {"file": "BRIEF", "row": null, "field": null, "quote": "trailed on closes."}
+      ]
+    }
+  ],
+  "exposure_pct": 15,
+  "exposure_reason": "Choose 15% tactical exposure and 85% cash after explicitly weighing the approximately 75% core default. The decisive reason for withholding core capital is that this bundle does not establish normalized earnings, reinvestment returns, builder culture, sponsor delivery or balance-sheet resilience for a qualifying growth business. It supplies research candidates, not enough business evidence for me to underwrite a concentrated core. The relevant requirements are questions.md: \"B1. What is five-year earnings power on consolidated EPS, one-offs stripped?\", \"B3. What does the business earn on new capital, and how much does it reinvest?\", \"B4. Is the business trying to become big, with a builder culture?\", \"B5. Who runs it, and did past promises meet delivery and past bets pay?\", and \"B7. Can the balance sheet survive higher rates and a bad year?\". I accept the opportunity cost of this evidence threshold and would restore core exposure when those answers qualify the businesses, without requiring a bullish market signal. Weak timing evidence and price drawdowns do not by themselves justify abandoning the core: BRIEF says \"the core rests on business questions, not on timing base rates.\" ATRL earns only a speculative allocation from the policy process and confirming price cited in entries[0]. At the specified entry and initial stop, 15 * (1219.1 - 975.28) / 1219.1 = 3% planned book risk, satisfying both entry-risk caps; this is planned stop risk, not a guaranteed loss ceiling.",
+  "core_default_considered": true,
+  "not_known": "Unverified: normalized earnings, reinvestment, sponsor delivery, debt and cash quality (questions.md B1/B3/B5/B7/B8); ATRL implementation economics (actors.md: \"Approval is not implementation.\"); external accounts (market.md: \"FX reserves, current account: not available in this repository (no data file)\"); actual meeting dates (calendar.md); execution costs and fills. These gaps prevent a qualified core thesis and calibrated net-return probabilities.",
+  "contamination_note": "No remembered outcomes after 2026-10-16 were used. Only BUNDLE.md was read; no external information or other replay output was used. The base-rate table's timing warning was respected: I did not use its samples to infer security-specific outcomes or calibrate probabilities. Both probabilities are subjective as-of judgments. No analysis code or backtest was run."
+}

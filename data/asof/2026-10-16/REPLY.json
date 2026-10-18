@@ -1,0 +1,48 @@
+{"date":"2026-10-16",
+"regime":{"rates_phase":"holding","stance":"neutral","p_kmi_up_60":0.5,
+"summary":"SBP held at 11.5% on 2026-09-14, but the 6M bill cutoff of 12.40% sits 0.90pp above policy, so the market prices hikes. CPI is falling (10.3% from 11.08%). Brent is up 51% in three months, and KMI is down 4.2% over 3 months. Mixed tide, so neutral; a hike would be the risk, a CPI run lower the opportunity.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Policy rate 11.5%; last MPC decision 2026-09-14: hold (+0bp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Regime: 6M T-bill minus policy rate +0.90pp (market pricing hikes); CPI falling over 3 months (-0.8pp)"},
+{"file":"market.md","row":null,"field":null,"quote":"Brent: 126.55 USD/bbl on 2026-10-14; 3-month change +51.2%"}]},
+"core":[
+{"symbol":"ATRL","weight_pct":25,"thesis":"Refiner with EPS up 202% year on year at a P/E of 8.1, at its 252-day high; the refinery policy was approved by the Cabinet Committee on Energy. Growth is visible, but price is extended, so the stop is the business, not the chart.",
+"evidence":[
+{"file":"screens.csv","row":"ATRL","field":"eps_yoy","quote":"2.019"},
+{"file":"screens.csv","row":"ATRL","field":"pe","quote":"8.095"},
+{"file":"actors.md","row":null,"field":null,"quote":"approved the revamped refinery policy on 28 Jul 2026"}]},
+{"symbol":"MARI","weight_pct":20,"thesis":"E&P with EPS up 97% year on year, 13.5% below its high, with Brent at 126. Growing, not merely stable, and the price has not moved with it (3m -0.6%).",
+"evidence":[
+{"file":"screens.csv","row":"MARI","field":"eps_yoy","quote":"0.971"},
+{"file":"screens.csv","row":"MARI","field":"r3m","quote":"-0.006"},
+{"file":"questions.md","row":null,"field":null,"quote":"B13. Is it growing, not merely stable?"}]},
+{"symbol":"LUCK","weight_pct":15,"thesis":"Diversified builder with EPS up 29% at a P/E of 6.8, 21% below its high. Material information was filed on 2026-10-07; business intact, and a falling price alone is not a reason to leave.",
+"evidence":[
+{"file":"screens.csv","row":"LUCK","field":"eps_yoy","quote":"0.291"},
+{"file":"screens.csv","row":"LUCK","field":"pe","quote":"6.763"},
+{"file":"announcements_30d.csv","row":null,"field":null,"quote":"2026-10-07,LUCK,material_info,Material Information"}]}],
+"watch":[
+{"type":"policy_or_price_decision_pending","subject":"Next SBP MPC","trigger":"If the 6M bill cutoff falls back toward 11.5% or CPI keeps falling, raise exposure toward 90% by adding to the core. If the SBP hikes, cut the weakest core name and hold cash.",
+"evidence":[
+{"file":"market.md","row":null,"field":null,"quote":"Next MPC: see SBP calendar"},
+{"file":"market.md","row":null,"field":null,"quote":"6M T-bill cutoff 12.40% (auction 2026-10-14); 3M 12.00%, 12M 12.50%"}]},
+{"type":"buyback_or_sponsor_move","subject":"ASL","trigger":"Convert to an order only if a sponsor or insider buy is filed and public (n_insider_buy above 0) while price is within 5% of the 15.09 close; EPS is up 43x, price 15% below its high.",
+"evidence":[
+{"file":"screens.csv","row":"ASL","field":"n_insider_buy","quote":"0"},
+{"file":"situations.md","row":null,"field":null,"quote":"the controlling sponsor bought three times at rising prices, each disclosed within two days"}]},
+{"type":"other","subject":"PRL and NRL (refiners at 252-day highs)","trigger":"Convert only after a 10% pullback that holds on closes with results published; today both are extended after 3m gains of 140% and 68%.",
+"evidence":[
+{"file":"screens.csv","row":"PRL","field":"r3m","quote":"1.398"},
+{"file":"screens.csv","row":"NRL","field":"r3m","quote":"0.679"}]}],
+"entries":[
+{"symbol":"OGDC","type":"earnings_inflection_ignored","entry_price":299.1,"stop_price":270.0,"stop_type":"fixed","size_pct":10,"horizon_sessions":120,"p_gain":0.55,
+"reason":"EPS up 215% year on year at a P/E of 5.6 with price down 4% over 3 months and 12.6% below its high, while Brent is up 51%. Base rate for P/E below 6 at 120 sessions is 61% hit, not confirmed, so size is modest. Loss if stopped is about 1% of the book.",
+"evidence":[
+{"file":"screens.csv","row":"OGDC","field":"eps_yoy","quote":"2.154"},
+{"file":"screens.csv","row":"OGDC","field":"pe","quote":"5.583"},
+{"file":"base_rates.csv","row":"results_pe_below6_any_reaction_H3","field":"hit_rate","quote":"61%"}]}],
+"exposure_pct":70,
+"exposure_reason":"Slightly under the 75% default: the market prices hikes (6M bill 0.90pp over policy) and KMI is down 4.2% in 3 months, so I keep 30% in cash for a post-MPC add. Not lower, since CPI is falling and no measured timing signal exists to justify sitting out.",
+"core_default_considered":true,
+"not_known":"Reserves and current account are not in the pack. IMF status, the next MPC date, and the nine-month results for the core names are unknown. Oil concentration across ATRL, MARI and OGDC is a shared bet on Brent.",
+"contamination_note":"No memory of events after 2026-10-16 was used. Base-rate rows were used only as rough odds for a type."}
