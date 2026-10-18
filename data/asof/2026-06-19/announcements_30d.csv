@@ -1,0 +1,388 @@
+datetime,symbol,title,klass
+2026-05-21 08:41,AGP,ADJOURNMENT OF BOARD MEETING OTHER THAN FINANCIAL RESULTS,financial_result
+2026-05-21 09:45,ICIBL,MATERIAL INFORMATION-APPROVAL OF APPOINTMENT OF CEO BY SECP,material_info
+2026-05-21 09:58,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 10:07,CLOV,Notice of an Emergent Board Meeting other than Financial Matters,board_meeting_notice
+2026-05-21 10:25,BLUEX,Material Information,material_info
+2026-05-21 10:49,SGF,Notice of Corporate Briefing Session,other
+2026-05-21 10:54,SRVI,Notice of Corporate Briefing Session,other
+2026-05-21 10:58,IPAK,Material Information,material_info
+2026-05-21 11:53,PAEL,Dissemination of video recording of CBS for the Year 2025,other
+2026-05-21 11:59,BFAGRO,"Progress Report for the Period Ended March 31, 2026",other
+2026-05-21 12:05,DEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 12:18,PPL,Award of Eight New Offshore Blocks,other
+2026-05-21 12:23,FATIMA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 12:47,CPHL,Material Information,material_info
+2026-05-21 12:55,ENGROH,"SHARIAH DISCLOSURE FOR THE YEAR ENDED DECEMBER 31, 2025",other
+2026-05-21 13:06,LSECL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 13:31,HMIM,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2026-05-21 13:35,EPCL,Presentation of Corporate Briefing Session - Engro Polymer & Chemicals Limited,other
+2026-05-21 13:49,SYM,Material Information - Acquisition,material_info
+2026-05-21 14:32,TGL,Material Information,material_info
+2026-05-21 14:45,KPUS,"Financial Results for the 2nd Quarter and Half Year Ended March 31, 2026",financial_result
+2026-05-21 14:48,UDLI,Material Information,material_info
+2026-05-21 14:57,BNL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 14:58,KPUS,Clarification on Unusual Movement in Share Price - KPUS,other
+2026-05-21 15:05,MACFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 15:07,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 15:14,OGDC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 15:16,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 15:16,KSBP,Dissemination Of Video Recording Of Corporate Briefing Session - 2026,other
+2026-05-21 15:18,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-21 15:24,PSYL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 08:30,ABOT,Corporate Briefing Session 2026,other
+2026-05-22 09:47,SEARL,Notice of Extraordinary General Meeting,agm
+2026-05-22 10:43,ABOT,Presentation of Corporate Briefing Session 2026,other
+2026-05-22 11:15,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 11:17,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 11:19,KPUS,"Transmission of Quarterly Report for the Period and Half Year Ended March 31, 2026",financial_result
+2026-05-22 11:29,DEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 11:34,AVN,Financial Results for the Quarter Ended 31 March 2026,financial_result
+2026-05-22 11:36,DIIL,"Disclosure of interest by Relevant Persons Holding Company, s Shares Under PSX Regulation 5.6.4",insider_trade
+2026-05-22 11:42,GADT,Unusual Movement in Price and Volume of the Shares of Gadoon Textile Mills Limited,other
+2026-05-22 11:45,PMRS,Material Information,material_info
+2026-05-22 11:45,GWLC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 12:00,OGDC,CREDIT OF THIRD INTERIM CASH DIVIDEND (D-98),dividend_or_bonus
+2026-05-22 12:08,LOTCHEM,Notice of Extraordinary General Meeting - Prior to Publication.,agm
+2026-05-22 12:09,SLCL,Material Information,material_info
+2026-05-22 12:17,OCTOPUS,Transmission of Annual Report for the Year Ended 31 December 2025,financial_result
+2026-05-22 12:17,OCTOPUS,Transmission of Quarterly Report for the Period Ended 31 March 2026,financial_result
+2026-05-22 12:29,TATM,Unusual Movement in Price of the Shares of Tata Textile Mills Limited,other
+2026-05-22 13:36,AVN,Transmission of Annual Report for the Year Ended 31 December 2025,financial_result
+2026-05-22 13:37,MARI,"Certified True Copy of Resolutions Adopted at Extraordinary General Meeting Held on May 22, 2026",agm
+2026-05-22 14:06,AGP,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2026-05-22 14:28,SGF,Presentation of Corporate Briefing Session,other
+2026-05-22 14:29,SRVI,Presentation of Corporate Briefing Session,other
+2026-05-22 14:44,BIFO,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-05-22 15:29,BATA,Material Information,material_info
+2026-05-22 15:47,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 15:59,AGP,DISSEMINATION OF CORPORATE BRIEFING SESSION (CBS) VIDEO LINK,other
+2026-05-22 16:03,NRSL,Reply to Query Regarding Unusual Movement in Share Price of NRSL,other
+2026-05-22 16:04,SURC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 16:09,INIL,Notice of Extraordinary General Meeting,agm
+2026-05-22 16:15,ILP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-22 16:18,SYS,Adjournment of board meeting for the quarter ended march 31 2026,other
+2026-05-22 16:21,JVDC,Extraordinary General Meeting REVOKED,agm
+2026-05-25 08:20,AVN,Extracts of resolutions adopted in the 23rd Annual General Meeting,agm
+2026-05-25 08:20,OCTOPUS,Extracts of resolutions adopted in the 9th Annual General Meeting,agm
+2026-05-25 10:08,STL,Board Meeting Rescheduled (Without the Entitlement),board_meeting_notice
+2026-05-25 10:19,KOHC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-25 10:36,LOTCHEM,Notice of Extraordinary General Meeting.,agm
+2026-05-25 10:51,LOTCHEM,Notice of Extraordinary General Meeting- After publication,agm
+2026-05-25 10:59,BERG,Material Information,material_info
+2026-05-25 11:00,ENGROH,APPOINTMENT OF CHAIRMAN AND CHIEF EXECUTIVE OFFICER,other
+2026-05-25 11:00,PPL,Credit of 3rd Interim Dividend 2025-26,dividend_or_bonus
+2026-05-25 11:32,AVN,Enhancement of Paid-up Capital - Issuance of shares under Employees Share Option Scheme 2022,other
+2026-05-25 12:14,JSML,Financial Results for the Quarter Ended 31-Mar-2026,financial_result
+2026-05-25 12:38,CLOV,Disclosure of Material Information,material_info
+2026-05-25 12:46,CRTM,Appointment of Chairman and Chief Executive,other
+2026-05-25 12:59,OGDC,RECEIPT OF ELEVENTH INTEREST PAYMENT UNDER TERM FINANCE CERTIFICATES (TFCs) BY POWER HOLDING LIMITED,other
+2026-05-25 12:59,ASL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-25 13:33,SYS,"Credit of Final Cash Dividend for the Year Ended December 31, 2025",dividend_or_bonus
+2026-05-25 13:42,SKRS,Financial Results for the Quarter Ended March 31-2026,financial_result
+2026-05-25 14:07,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-25 14:37,GLAXO,(Re) Appointment of Chairperson and Chief Executive Officer,other
+2026-05-25 14:38,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-25 14:46,POWER,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-25 14:56,ABOT,Revised Presentation of Corporate Briefing Session 2026,other
+2026-05-25 15:08,AGP,"Notice of Corporate Briefing Session for the Period Ended March 31, 2026",other
+2026-05-25 15:11,TPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-25 15:20,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 08:45,SYS,Financial Results for the First Quarter ended 31 March 2026,financial_result
+2026-05-29 08:45,FATIMA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 08:51,SYS,Material Information (1.0),material_info
+2026-05-29 09:33,JSCL,Material Information,material_info
+2026-05-29 10:00,PMRS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 10:07,SGF,Dissemination of Video Recording of Corporate Briefing Session,other
+2026-05-29 10:12,SGF,Appointment of Chairman,other
+2026-05-29 10:14,SGF,Appointment of Chief Executive Officer,other
+2026-05-29 10:24,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 10:25,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 11:17,SHEZ,Material Information,material_info
+2026-05-29 11:40,NATF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 11:44,SKRS,Transmission of Quarterly Report for the Period Ended March 31 2026,financial_result
+2026-05-29 14:24,PPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 14:57,AGP,Presentation of Corporate Briefing Session,other
+2026-05-29 15:06,FFL,"Mandatory Shariah Disclosure for the year ended December 31, 2025",other
+2026-05-29 15:26,ITANZ,iTANZ Technologies Limited secures key strategic tech engagements in Hangzhou Part of Prime Minister Shehbaz Sharif s Delegation Visit to China,other
+2026-05-29 15:35,SYS,"Transmission of Quarterly Report for the Period Ended March 31, 2026",financial_result
+2026-05-29 15:44,EPCL,Dissemination of Video Recording of Corporate Briefing Session,other
+2026-05-29 15:58,JSML,Transmission of Quarterly Report for the Period Ended 31-MAR-2026,financial_result
+2026-05-29 16:01,ITANZ,iTANZ Technologies Limited Part of Prime Minister Shehbaz Sharif s Delegation Visit to China Secures Strategic Tech Engagements in Hangzhou,other
+2026-05-29 16:12,AVN,RE-APPOINTMENT OF CHAIRMAN AND CHIEF EXECUTIVE OFFICER,other
+2026-05-29 16:15,ILP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-05-29 16:18,SYS,"Notice of Corporate Briefing Session for year ended December 31, 2025 REVOKED",other
+2026-06-01 09:50,GLAXO,Resignation of Non-Executive Director,other
+2026-06-01 10:56,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-01 11:05,SRVI,Dissemination of Video Recording of Corporate Briefing Session,other
+2026-06-01 11:05,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-01 12:17,DCL,DCL | Dewan Cement Limited Approval of Further Issue of Shares Other Than bt way of Right Offer,other
+2026-06-01 12:58,UNITY,Unusual movement in Price of the shares of Unity Foods Limited,other
+2026-06-01 13:11,STL,Material Information - In-principle Board Approval for Proposed Rights Issue Prior to its Actual Declaration.,dividend_or_bonus
+2026-06-01 13:30,SKRS,Unusual Movement in Price of the shares of Sakrand Sugar Mills Limited (SKRS),other
+2026-06-01 13:53,SYS,"Notice of Corporate Briefing Session for year ended December 31, 2025 REVOKED REVISED",other
+2026-06-01 14:07,PAKL,Material Information,material_info
+2026-06-01 14:16,AASM,Material Information,material_info
+2026-06-01 14:31,FPRM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-01 14:52,BFBIO,Appointment of Director to Fill Casual Vacancy,other
+2026-06-01 15:12,SPAC1,Material Information Regarding Credit of Shares,material_info
+2026-06-01 15:16,DADX,Material Information,material_info
+2026-06-01 15:20,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-01 15:26,IDRT,Material Information,material_info
+2026-06-02 08:00,DNCC,Material Information,material_info
+2026-06-02 08:44,NICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 08:53,BIFO,Change of Chief Executive Officer,other
+2026-06-02 09:55,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 10:19,SIEM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 11:31,PAKL,Material Information,material_info
+2026-06-02 11:31,SURC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 11:38,FLYNG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 11:46,BAPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 13:46,BFBIO,"Intimation of Passing Away of Mrs. Akhter Khalid Waheed, Director and Founding CEO",other
+2026-06-02 13:53,FEROZ,"Intimation of Passing Away of Mrs. Akhter Khalid Waheed, Chairperson and Director",other
+2026-06-02 14:18,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-02 15:20,ABOT,Dissemination of Video Recording Link of Corporate Briefing Session (CBS) 2026,other
+2026-06-02 15:24,SYS,Presentation of Corporate Briefing Session,other
+2026-06-02 15:29,QUICE,Notice of EOGM,other
+2026-06-03 08:01,OGDC,Oil Discovery from Bobi Deep 1 in Bobi and Dhamraki Mining Lease District Sanghar Sindh,other
+2026-06-03 09:25,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-03 10:24,ITANZ,Emergent Board Meeting Other Than Financial Results,financial_result
+2026-06-03 10:56,GDL,Material Information,material_info
+2026-06-03 11:25,GCIL,SPECIAL RESOLUTIONS PASSED IN EOGM - GHANI CHEMICAL INDUSTRIES LIMITED,other
+2026-06-03 12:59,GCWL,"Placement of Schedule-I (Offer Document), Entitlement Date and Book Closure for Right Issue of Partially Redeemable Shares (PRS)",dividend_or_bonus
+2026-06-03 14:30,LCI,Board Meeting (Other Than Financial Results) / Closed Period,board_meeting_notice
+2026-06-03 14:32,AGP,Dissemination Of Video Recording Of Corporate Briefing Session,other
+2026-06-03 14:47,NETSOL,"Certified Copy of Resolutions Passed by the Shareholders of NETSOL Technologies Limited in EOGM Held on June 03, 2026.",other
+2026-06-03 14:58,DSL,Material Information,material_info
+2026-06-03 15:15,ILP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-03 15:25,GCWL,Book Closure to Determine Right Issue Entitlement - GHANI CHEMWORLD LIMITED,dividend_or_bonus
+2026-06-03 15:29,EFUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 08:24,WAFI,NOTICE OF ELECTION OF DIRECTORS,agm
+2026-06-04 09:07,DIIL,"Disclosure of interest by Relevant Persons Holding Company, s Shares Under PSX Regulation 5.6.4",insider_trade
+2026-06-04 09:07,WAFI,Publication of Postal Ballot,other
+2026-06-04 09:21,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 10:04,TREET,Notice of Extraordinary General Meeting of Treet Corporation Limited,agm
+2026-06-04 10:51,QUICE,Publication of Notice in Daily Newspapers,other
+2026-06-04 11:10,DEL,MATERIAL INFORMATION FOR ESTABLISHMENT OF ISLAMIC BROKERAGE WINDOW OPERATIONS,material_info
+2026-06-04 11:27,HINOON,Shariah Disclosure for the year ended December 31 2025,other
+2026-06-04 11:48,GWLC,Shariah Compliance Disclosure,other
+2026-06-04 11:50,ZAL,"Clarification Regarding Shariah Disclosure Requirements Under Clauses 5.6.9A and 5A.13(g) of PSX Regulations for the Half Year Ended December 31, 2025",financial_result
+2026-06-04 11:55,FPRM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 12:12,SURC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 12:58,SYS,Video Recording Of Corporate Briefing Session REVOKED,other
+2026-06-04 13:50,PSYL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 14:40,PIBTL,"Clarification Regarding Shariah Disclosures for the period ended December 31, 2025",other
+2026-06-04 14:44,POWER,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 14:59,GCWL,Newspaper Cuttings - GHANI CHEMWORLD LIMITED,other
+2026-06-04 15:12,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 15:13,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 15:14,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 15:18,EFUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-04 15:20,TPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-05 09:43,SURC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-05 09:50,ASC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-05 10:40,ASL,"Unusual movement in price and volume of the shares of Aisha Steel Mills Limited - Preference Shares (""ASLPS"")",other
+2026-06-05 10:47,SITC,Material Information,material_info
+2026-06-05 10:55,EFUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-05 11:15,QUICE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-05 11:21,AVN,AVN | Avanceon Limited Auditors Certificate,other
+2026-06-05 11:41,TELE,Material Information,material_info
+2026-06-05 12:06,LOTCHEM,UNUSUAL MOVEMENT IN VOLUME OF THE SHARES OF LOTTE CHEMICAL PAKISTAN LIMITED,other
+2026-06-05 12:12,TELE,Notice of Extraordinary General Meeting,agm
+2026-06-05 14:24,SGPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-05 16:05,GADT,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-05 16:15,IBLHL,Change of Director,other
+2026-06-05 16:23,MSCL,Material Information,material_info
+2026-06-05 16:26,AVN,Transmission of Quarterly Report for the Period Ended 31 March 2026,financial_result
+2026-06-08 09:04,MARI,Notice of Board of Directors Meeting,board_meeting_notice
+2026-06-08 09:18,ITANZ,Material Information,material_info
+2026-06-08 09:27,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-08 09:28,ITANZ,Notice of EOGM REVOKED,other
+2026-06-08 09:37,HCAR,"Transmission of Annual Report for the Year Ended March 31, 2026",financial_result
+2026-06-08 09:53,SFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-08 10:07,SFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-08 10:41,ITANZ,Notice of Extraordinary General Meeting,agm
+2026-06-08 11:04,SHSML,DISCLOSURE OF INTEREST BY AN ASSOCIATED COMPANY,insider_trade
+2026-06-08 11:28,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-08 11:54,BAPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-08 13:05,AGP,Notice of 7th Extraordinary General Meeting,agm
+2026-06-08 13:34,HCAR,Notice of 34th Annual General Meeting,agm
+2026-06-08 14:25,GLAXO,Resignation of Chief Financial Officer & Executive Director,other
+2026-06-08 15:00,TRG,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-08 15:14,WAHDAT,Material Information,material_info
+2026-06-08 15:19,SAZEW,Production and Sales data regarding Four Wheelers and Three Wheelers for the month of May 2026,other
+2026-06-09 10:09,MTL,Certified copy of resolutions passed in EOGM REVOKED,other
+2026-06-09 10:12,KSBP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-09 10:50,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-09 12:04,OLPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-09 13:02,BFBIO,Appointment of Director to Fill Casual Vacancy,other
+2026-06-09 14:36,CHCC,CERTIFIED COPY OF THE RESOLUTIONS PASSED BY THE MEMBERS OF THE COMPANY AT THE EXTRAORDINARY GENERAL MEETING,agm
+2026-06-09 14:42,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-09 14:52,TPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-09 15:16,TPLP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-09 15:29,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 09:37,ISL,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-10 10:03,QUICE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 10:54,ABOT,Re-Appointment of Chief Executive Officer,other
+2026-06-10 10:55,ABOT,Re-Appointment of Chairman,other
+2026-06-10 10:57,MTL,CERTIFIED COPY OF RESOLUTIONS PASSED IN EOGM,other
+2026-06-10 11:07,NATF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 11:19,PAKD,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 11:22,HALEON,Prior Publication of Reminder for Conversion of Physical Shares to Book Entry Form & Unclaimed Dividend(s) / Share Certificates,dividend_or_bonus
+2026-06-10 11:45,SPAC1,Material Information,material_info
+2026-06-10 11:48,SHCI,"Disclosure of interest by Relevant Persons Holding Company, s Shares Under PSX Regulation 5.6.4 REVOKED",insider_trade
+2026-06-10 13:36,TSML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 13:48,AVN,Credit of final cash dividend,dividend_or_bonus
+2026-06-10 14:23,TSML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 15:16,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-10 15:21,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 10:06,CHCC,PUBLIC ANNOUNCEMENT FOR BUY-BACK OF SHARES BY CHERAT CEMENT COMPANY LIMITED,other
+2026-06-11 10:18,HALEON,Reminder for Conversion of Physical Shares to Book Entry Form & Unclaimed Dividend(s) / Share Certificates,dividend_or_bonus
+2026-06-11 10:47,SHEZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 11:06,TICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 11:14,ATRL,BOARD MEETING TO CONSODER CORPORATE BUDGET 2026-2027,board_meeting_notice
+2026-06-11 11:33,SHEZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 11:41,SHEZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 11:46,GCWL,GCWL | Ghani ChemWorld Limited Issuance of Right Shares 0.50% Right Issue of Rs.100/- Per Share by Way of Partially Redeemable Shares,dividend_or_bonus
+2026-06-11 12:33,ARPL,Material Information,material_info
+2026-06-11 12:55,KEL,"Book Closure of Rated Unsecured & Retail Listed, Shirkat-ul-Aqd Sukuk",dividend_or_bonus
+2026-06-11 13:01,NRL,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-11 13:17,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 14:20,POWER,Notice of Corporate Briefing Session 2026,other
+2026-06-11 14:27,MQTM,Material Information,material_info
+2026-06-11 14:36,BML,Material Information,material_info
+2026-06-11 14:41,WAFI,Election of Directors,agm
+2026-06-11 14:42,SEARL,Material Information,material_info
+2026-06-11 14:44,WAFI,Certified True copy of Resolution passed at the Extraordinary General Meeting,agm
+2026-06-11 14:49,SYS,236th Emergent Board Meeting Other Than Financial Results,financial_result
+2026-06-11 15:19,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-11 15:21,MARI,Clarification Regarding Media Reports on Spinwam Gas Bidding Process,other
+2026-06-11 15:21,GGL,Decisions of the Board of Directors - GHANI GLOBAL HOLDINGS LIMITED,other
+2026-06-11 15:22,LCI,Board Meeting in Progress,board_meeting_notice
+2026-06-11 15:28,BML,Material Information,material_info
+2026-06-11 15:28,FEROZ,Notice of Extraordinary General Meeting prior to publication,agm
+2026-06-12 08:38,LCI,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-12 09:03,ITANZ,Material Information,material_info
+2026-06-12 10:06,FEROZ,Notice of Extraordinary General Meeting,agm
+2026-06-12 11:51,GCIL,MEETING OF THE BOARD OF DIRECTORS OTHER THAN FINANCIAL RESULTS - GHANI CHEMICAL INDUSTRIES LIMITED,board_meeting_notice
+2026-06-12 11:52,GGL,Board Meeting Other Than Financial Results - GHANI GLOBAL HOLDINGS LIMITED,board_meeting_notice
+2026-06-12 11:59,MTL,Notice of book closure for sub division of shares,dividend_or_bonus
+2026-06-12 12:04,GHGL,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-12 12:46,CRTM,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-12 12:52,IDSM,MATERIAL INFORMATION,material_info
+2026-06-12 12:58,MUGHAL,Emergent Board Meeting - Other Than Financial Results,financial_result
+2026-06-12 13:01,MEBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-12 13:02,MEBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-12 14:14,SHFA,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-12 15:10,HPL,DISCLOSURE OF INTEREST BY AN ASSOCIATED COMPANY OF A LISTED COMPANY U/S 5.6.4 OF PSX REGULATIONS,insider_trade
+2026-06-12 15:20,LOTCHEM,"Notice under section 159_4 of the Companies Act, 2017 and Ballot Paper_pre-publication",other
+2026-06-12 15:21,HPL,DISCLOSURE OF INTEREST BY AN ASSOCIATED COMPANY OF A LISTED COMPANY U/S 5.6.4 OF PSX REGULATIONS,insider_trade
+2026-06-12 15:26,HINOON,Mandatory Conversion of Physical Shares to Book-Entry Form Unclaimed Dividend (s) / Share Certificates,dividend_or_bonus
+2026-06-12 15:59,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-12 16:12,POWER,Presentation of Corporate Briefing Session 2026,other
+2026-06-12 16:18,SEARL,CERTIFIED TRUE COPY OF THE RESOLUTIONS PASSED AT THE EXTRAORDINARY GENERAL MEETING OF THE SEARLE COMPANY LIMITED,agm
+2026-06-12 16:29,WAVESAPP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 08:00,SHFA,Material Information,material_info
+2026-06-15 09:10,WAVESAPP,Material Information,material_info
+2026-06-15 09:15,SYS,Material Disclosure 236th Board Meeting,other
+2026-06-15 09:33,GADT,Board Meeting other than Financial Results,board_meeting_notice
+2026-06-15 10:31,PSO,Notice of Corporate Briefing Session,other
+2026-06-15 10:41,CPHL,Notice of Extraordinary General Meeting,agm
+2026-06-15 10:43,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 10:47,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 11:29,PSO,Resignation of Member Board of Management,other
+2026-06-15 11:56,SHSML,DISCLOSURE OF INTEREST BY AN ASSOCIATED COMPANY,insider_trade
+2026-06-15 12:00,PSYL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 12:16,GCWL,CREDIT OF UNPAID RIGHTS INTO CDS - GHANI CHEMWORLD LIMITED,other
+2026-06-15 12:32,SHDT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 12:52,WAFI,Emergent Board Meeting - Other than Financials,other
+2026-06-15 13:20,MARI,Results of Board Meeting,other
+2026-06-15 13:46,FCL,Board Meeting other than Financial Results,board_meeting_notice
+2026-06-15 14:05,PACE,Material Information,material_info
+2026-06-15 14:10,PIOC,Material Information,material_info
+2026-06-15 14:17,MUGHAL,Decision of the Board of Directors,other
+2026-06-15 15:12,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 15:23,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-15 15:26,CHCC,Board Meeting Other Than Financial Result,board_meeting_notice
+2026-06-15 15:54,GCWL,GCWL | Ghani ChemWorld Limited -NCCPL Notice,other
+2026-06-16 09:56,LEUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 10:19,SPWL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 10:30,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 10:56,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 11:49,IPAK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 11:49,PACE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 12:58,ASC,Change of Chief Executive,other
+2026-06-16 12:59,GCWL,SUBSCRIPTION OF RIGHT SHARES BY THE DIRECTORS - GHANI CHEMWORLD LIMITED,dividend_or_bonus
+2026-06-16 13:26,ITANZ,Appointment of Company Secretary,other
+2026-06-16 13:32,JVDC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 13:49,WAFI,Re- Appointment of the Chairperson of the Board of Directors,other
+2026-06-16 13:51,WAFI,Re- Appointment of the CEO,other
+2026-06-16 15:06,GTYR,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-16 15:11,TPLRF1,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 15:15,PABC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-16 15:17,PABC,Miscellaneous Information - Change in Voting Power of Directors and Substantial Shareholders,insider_trade
+2026-06-16 15:28,GCWL,Dispatch of Physical Letter of Rights and Credit of Unpaid Rights - GHANI CHEMWORLD LIMITED REVOKED,other
+2026-06-16 15:29,GCWL,GCWL | Ghani ChemWorld Limited Auditors Certificate regarding subscription money - Ghani ChemWorld Limited,other
+2026-06-17 08:06,TREET,Information regarding Extra-Ordinary General Meeting of Treet Corporation Limited,agm
+2026-06-17 08:40,ATRL,Disclosure of Material Information - Receipt of an offer to acquire 70% shareholding of unlisted subsidiary,material_info
+2026-06-17 08:53,PSO,"Presentation of Corporate Briefing Session to be Held on June 18, 2026",other
+2026-06-17 09:42,GAL,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-17 10:11,NETSOL,Material Information,material_info
+2026-06-17 10:24,GCWL,Dispatch of Physical Letter of Rights and Credit of Unpaid Rights - GHANI CHEMWORLD LIMITED,other
+2026-06-17 10:29,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 10:49,GHNI,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-17 10:50,KOHTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 11:07,GCWL,Newspaper Cuttings - GHANI CHEMWORLD LIMITED,other
+2026-06-17 11:15,JVDC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 11:31,BAPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 14:52,TPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 14:56,KOHC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 14:59,ITANZ,Material Information,material_info
+2026-06-17 15:17,ISL,Board Meeting In Progress,board_meeting_notice
+2026-06-17 15:20,BBFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-17 15:29,WAVES,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 08:15,ENGROH,Reporting of shares purchased (buy-back) by Engro Holdings Limited,other
+2026-06-18 09:15,ISL,BOARD MEETING - OTHER THAN FINANCIAL RESULTS,board_meeting_notice
+2026-06-18 10:23,FCCL,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-18 11:06,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 11:19,KOHTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 11:26,FNEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 11:30,NATF,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 12:55,SKRS,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-18 13:02,BAFL,Disclosure of Material Information - Bank Alfalah Limited,material_info
+2026-06-18 13:51,POWER,General Meetings / Briefing Sessions,agm
+2026-06-18 14:15,OCTOPUS,Notice of Corporate Briefing Session,other
+2026-06-18 14:25,AVN,Notice of Corporate Briefing Session,other
+2026-06-18 14:42,NESTLE,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 14:57,BAHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-18 15:21,ENGROH,Material Information,material_info
+2026-06-19 08:01,OGDC,COMPLETION OF FARM-IN TRANSACTION FOR ADDITIONAL WORKING INTEREST IN QADIRPUR D AND PL,other
+2026-06-19 08:01,INIL,CERTIFIED COPY OF THE RESOLUTIONS PASSED AT THE EXTRAORDINARY GENERAL MEETING ON 18-06-2026,agm
+2026-06-19 08:30,ENGROH,Reporting of shares purchased (buy-back) by Engro Holdings Limited,other
+2026-06-19 09:12,PSO,Dissemination of Video Recording of Corporate Briefing Session,other
+2026-06-19 09:34,LSEVL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 11:18,QTECH,Unusual Movement in Share Volume,other
+2026-06-19 11:22,JVDC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 11:27,IBLHL,Change of Chairman,other
+2026-06-19 11:30,MEBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 11:41,ITANZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 11:56,TREET,"Publication of Notice Under S. 159 (4) of the Companies Act, 2017",other
+2026-06-19 12:01,FEROZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 12:01,AVN,Material Information,material_info
+2026-06-19 12:17,GHGL,DECISION OF BOARD MEETING OTHER THAN FINANCIAL RESULTS,financial_result
+2026-06-19 14:45,IPAK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 14:46,IPAK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2026-06-19 14:50,GCIL,DECISIONS OF THE BOARD MEETING - GHANI CHEMWORLD LIMITED REVOKED,other
+2026-06-19 14:51,GGL,DECISIONS OF THE BOARD OF DIRECTORS - GHANI GLOBAL HOLDINGS LIMITED,other
+2026-06-19 14:51,SHFA,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-19 14:53,GGL,DECISIONS OF THE BOARD OF DIRECTORS - GHANI GLOBAL HOLDINGS LIMITED,other
+2026-06-19 14:58,GCIL,DECISIONS OF THE BOARD MEETING - GHANI CHEMICAL INDUSTRIES LIMITED REVISED,other
+2026-06-19 15:01,IPAK,Board Meeting Other Than Financial Results,board_meeting_notice
+2026-06-19 15:04,ATRL,APPROVAL OF CORPORATE BUDGET 2026-2027,other
+2026-06-19 15:06,DIIL,"Disclosure of interest by Relevant Persons Holding Company, s Shares Under PSX Regulation 5.6.4",insider_trade
+2026-06-19 15:07,ATRL,Material Information,material_info
+2026-06-19 15:17,BBFL,Board Meeting for approval of Budget for the year 2026-27,board_meeting_notice
+2026-06-19 15:22,DIIL,"Disclosure of interest by Relevant Persons Holding Company, s Shares Under PSX Regulation 5.6.4",insider_trade
+2026-06-19 15:23,SEARL,Appointment of Director,other
+2026-06-19 15:28,PRL,Board Meeting Other than Financial Results,board_meeting_notice
+2026-06-19 15:29,CRTM,Board Meeting Other Than Financial Results,board_meeting_notice

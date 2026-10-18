@@ -1,0 +1,56 @@
+# Calendar as of 2026-03-20
+
+- Next MPC: see SBP calendar
+
+## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
+
+- 2026-02-19 PREMA: Board Meeting
+- 2026-02-19 IMAGE: Board Meeting
+- 2026-02-19 GATM: BOARD MEETING AND CLOSED PERIOD
+- 2026-02-19 FEROZ: Board Meeting
+- 2026-02-19 CLOV: Board of Directors Meeting and Closed Period
+- 2026-02-19 SNGP: Board Meeting
+- 2026-02-19 GGGL: Meeting of the Board of Directors - GHANI GLOBAL GLASS LIMITED
+- 2026-02-19 GCIL: Meeting of the Board of Directors - GHANI CHEMICAL INDUSTRIES LIMITED
+- 2026-02-19 SSOM: Board Meeting
+- 2026-02-19 GGL: Meeting of the Board of Directors - GHANI GLOBAL HOLDINGS LIMITED
+- 2026-02-19 GCWL: Meeting of the Board of Directors - GHANI CHEMWORLD LIMITED
+- 2026-02-19 SEARL: Board Meeting
+- 2026-02-19 CRTM: Board Meeting
+- 2026-02-19 TREET: Treet Corporation Limited - Notice of Board Meeting/ Closed Period
+- 2026-02-20 SYM: Board Meeting
+- 2026-02-20 OBOY: NOTICE OF BOARD MEETING
+- 2026-02-20 MUGHAL: Notice of Board Meeting - HY 2026
+- 2026-02-20 NML: Board Meeting
+- 2026-02-20 SGPL: Board Meeting
+- 2026-02-20 GWLC: Board Meeting
+- 2026-02-20 ANL: Board Meeting
+- 2026-02-20 BECO: Board Meeting
+- 2026-02-20 TELE: Board Meeting to Review Half Yearly Accounts
+- 2026-02-20 BNL: Board Meeting
+- 2026-02-23 HALEON: Notice of Board of Directors Meeting - (Q4-2025)
+- 2026-02-23 LOTCHEM: Board Meeting / Closed Period
+- 2026-02-25 ZAL: Board Meeting In Process
+- 2026-02-26 ITTEFAQ: BOARD MEETING IS PROGRESS
+- 2026-02-27 FATIMA: Board meeting and closed period
+- 2026-03-05 PRL: Board Meeting other than Financial Results
+- 2026-03-06 HCAR: Board Meeting Other Than Financial Results REVOKED
+- 2026-03-06 HCAR: Board Meeting Other than Financial Results
+- 2026-03-06 GCWL: MEETING OF THE BOARD OF DIRECTORS OTHER THAN FINANCIAL RESULTS - GHANI CHEMWORLD LIMITED
+- 2026-03-06 PAEL: Board Meeting for the Year ended 31-12-2025
+- 2026-03-09 ARPL: Board Meeting Other Than Financial Results
+- 2026-03-09 ABOT: Board Meeting
+- 2026-03-09 HCAR: Change of Venu of Board of Directors Meeting
+- 2026-03-10 KEL: Board Meeting Other Than Financial Results
+- 2026-03-10 AGTL: Board Meeting
+- 2026-03-11 SGF: Board Meeting
+- 2026-03-12 AGP: Board Meeting
+- 2026-03-12 SPWL: Board Meeting Other Than Financial Results
+- 2026-03-13 GCWL: Decision of Board Meeting for declaration of 0.50% Right Issue by way of Partially Redeemable Shares (PRS) - GHANI CHEMWORLD LIMITED
+- 2026-03-16 KEL: Board Meeting Rescheduled
+- 2026-03-17 FABL: Board of Directors Meeting other than Financial Results of Faysal Bank Limited
+- 2026-03-18 KEL: Board Meeting Other Than Financial Results
+- 2026-03-18 SPWL: Board meeting
+- 2026-03-18 SAZEW: Board Meeting Other Than Financial Results
+- 2026-03-18 GLAXO: Board Meeting Quarter 4, 2025
+- 2026-03-18 KSBP: Board Meeting

@@ -1,0 +1,130 @@
+# Calendar as of 2026-05-08
+
+- Next MPC: see SBP calendar
+
+## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
+
+- 2026-04-09 SGPL: Board Meeting Other Than Financial Results
+- 2026-04-10 PSO: Board Meeting Other Than Financial Results
+- 2026-04-10 SPEL: Board Meeting
+- 2026-04-10 MEBL: NOTICE OF BOARD MEETING AND CLOSED PERIOD - MEEZAN BANK LIMITED
+- 2026-04-10 SAZEW: Board Meeting
+- 2026-04-10 EPCL: Board Meeting - Q1 2026 - Engro Polymer & Chemicals Limited
+- 2026-04-10 GHNI: Board Meeting
+- 2026-04-10 LOTCHEM: Board Meeting
+- 2026-04-10 ISL: Board Meeting
+- 2026-04-10 GAL: Board Meeting
+- 2026-04-10 CRTM: Board Meeting Other Than Financial Results
+- 2026-04-13 PRL: Board Meeting
+- 2026-04-13 POWER: Board Meeting
+- 2026-04-13 FABL: Board of Directors Meeting of Faysal Bank Limited
+- 2026-04-13 PIOC: Board Meeting
+- 2026-04-14 PIBTL: Board Meeting -PIBTL
+- 2026-04-14 KSBP: Board Meeting
+- 2026-04-14 TPLT: Board Meeting
+- 2026-04-14 MLCF: MLCF-Notice of Board Meeting 21.04.2026
+- 2026-04-14 HUBC: Board Meeting for the Third Quarter Ended March 31, 2026 - The Hub Power Company Limited
+- 2026-04-14 CSAP: Notice of 204th Board Meeting for the Third Quarter Ended March 31, 2026
+- 2026-04-15 LOADS: Board Meeting of Loads Limited
+- 2026-04-15 KTML: KTML Notice of Board Meeting 22.04.2026
+- 2026-04-15 KEL: Board Meeting Other Than Financial Results
+- 2026-04-16 MARI: Notice of Board of Directors Meeting
+- 2026-04-16 FCEPL: Board Meeting 1st Quarter 2026
+- 2026-04-16 BIFO: Meeting of the Board of Directors
+- 2026-04-16 ENGROH: Board Meeting for the Announcement of Financial Results for the Three Months Ended March 31, 2026
+- 2026-04-16 KOHC: Board Meeting
+- 2026-04-16 SGPL: Board Meeting Material Information
+- 2026-04-16 FATIMA: Board meeting and closed period
+- 2026-04-17 SAZEW: Board Meeting Rescheduled
+- 2026-04-17 GWLC: Board Meeting
+- 2026-04-17 LCI: Board Meeting / Closed Period
+- 2026-04-17 BIPL: Board Meeting - BankIslami Pakistan Limited
+- 2026-04-17 BBFL: Board Meeting
+- 2026-04-17 CHCC: Board Meeting
+- 2026-04-20 DCL: Board Meeting
+- 2026-04-20 GLAXO: Board Meeting Quarter 1- 2026
+- 2026-04-20 ITTEFAQ: BOARD MEETING
+- 2026-04-20 BFBIO: Board Meeting
+- 2026-04-20 ICL: Board Meeting
+- 2026-04-20 CNERGY: Board Meeting and Closed Period
+- 2026-04-20 BFAGRO: Board Meeting
+- 2026-04-20 ABOT: Board Meeting
+- 2026-04-20 ZAL: Board Meeting
+- 2026-04-20 FCL: Notice of Board Meeting/closed period of FCL
+- 2026-04-20 OGDC: Board Meeting and Closed Period
+- 2026-04-20 GCWL: Meeting of the Board of Directors - GHANI CHEMWORLD LIMITED
+- 2026-04-20 GCIL: Meeting of the Board of Directors - GHANI CHEMICAL INDUSTRIES LIMITED
+- 2026-04-20 PPL: Meeting of the Board of Directors and Closed Period
+- 2026-04-20 GGL: Meeting of the Board of Directors - GHANI GLOBAL HOLDINGS LIMITED
+- 2026-04-20 FFL: Board Meeting
+- 2026-04-20 FECTC: Board Meeting for the Quarter Ended March 31, 2026 & Annoucement of Closed Period
+- 2026-04-20 HTL: Board Meeting
+- 2026-04-20 ASL: BOARD MEETING / CLOSED PERIOD
+- 2026-04-21 PREMA: Board Meeting
+- 2026-04-21 QUICE: BOARD MEETING
+- 2026-04-21 MACFL: Board meeting
+- 2026-04-21 HALEON: Notice of Board of Directors Meeting - (Q1-2026)
+- 2026-04-21 SSOM: Board Meeting
+- 2026-04-21 IBLHL: Board Meeting
+- 2026-04-21 TPLP: Board Meeting
+- 2026-04-21 SGF: Board Meeting
+- 2026-04-21 TGL: Board Meeting
+- 2026-04-21 CEPB: BOARD MEETING
+- 2026-04-21 SNGP: Board Meeting
+- 2026-04-21 TRSM: Board of Directors Meeting for the Quarter ended March 31, 2026.
+- 2026-04-21 GHGL: BOARD MEETING
+- 2026-04-21 CLOV: Board of Directors Meeting and Closed Period
+- 2026-04-21 SYM: Board Meeting
+- 2026-04-21 WAFI: Board Meeting
+- 2026-04-21 TBL: Notice of Board Meeting Q3 FY 25-26
+- 2026-04-21 DGKC: Board Meeting
+- 2026-04-21 GTYR: Board Meeting
+- 2026-04-21 MTL: BOARD MEETING FOR QUARTERLY RESULTS
+- 2026-04-21 TOMCL: Board Meeting
+- 2026-04-21 OCTOPUS: Board Meeting
+- 2026-04-21 LUCK: Board Meeting
+- 2026-04-22 PSO: Board Meeting
+- 2026-04-22 MUGHAL: Notice of Board Meeting - QIII - 2026
+- 2026-04-22 ILP: Notice of Board Meeting for the Third Quarter ended March 31, 2026 / Closed Period
+- 2026-04-22 MARI: Board of Directors Meeting - Change of Place
+- 2026-04-22 ANL: Board Meeting
+- 2026-04-22 IMAGE: Board Meeting
+- 2026-04-22 OBOY: NOTICE OF BOARD MEETING
+- 2026-04-22 AGTL: Board Meeting
+- 2026-04-22 CRTM: Board Meeting
+- 2026-04-22 SSGC: Board Meeting
+- 2026-04-22 HINOON: Board Meeting
+- 2026-04-22 GDL: Board Meeting
+- 2026-04-22 PAEL: Board Meeting for the 1st Quarter ended 31-03-2026 (Un-Audited)
+- 2026-04-22 SEARL: Board Meeting
+- 2026-04-22 NETSOL: Board Meeting
+- 2026-04-22 GATM: BOARD MEETING AND CLOSED PERIOD
+- 2026-04-22 TATM: Meeting of the Board of Directors
+- 2026-04-22 BECO: Board Meeting
+- 2026-04-22 FFC: Board Meeting
+- 2026-04-22 FEROZ: Board Meeting
+- 2026-04-22 SGPL: BOARD MEETING TO CONSIDER AND APPROVE QUARTERLY FINANCIAL STATEMENTS
+- 2026-04-22 AGP: Board Meeting
+- 2026-04-22 TREET: Notice of Board Meeting for the Third Quarter ended March 31, 2026 / Closed Period
+- 2026-04-22 NML: Board Meeting
+- 2026-04-22 AVN: Board Meeting
+- 2026-04-22 DCR: BOARD MEETING / CLOSED PERIOD
+- 2026-04-23 CPHL: Board Meeting
+- 2026-04-23 FFL: Board Meeting Rescheduled
+- 2026-04-23 TELE: Board Meeting
+- 2026-04-23 BNL: Board Meeting
+- 2026-04-23 WAVES: Board Meeting for the Quarter ended 31Mar26
+- 2026-04-27 PRL: Board Meeting other than Financial Results
+- 2026-04-27 SLGL: Board Meeting
+- 2026-04-27 NETSOL: Board Meeting Rescheduled
+- 2026-04-27 TATM: Board Meeting Rescheduled
+- 2026-04-28 TBL: Board Meeting Rescheduled Q3 FY 25-26
+- 2026-04-28 SYM: Board Meeting Rescheduled
+- 2026-04-28 GCWL: DECISION OF THE BOARD OF DIRECTORS MEETING - GHANI CHEMWORLD LIMITED
+- 2026-04-28 GGL: DECISIONS OF THE BOARD OF DIRECTORS MEETING - GHANI GLOBAL HOLDINGS LIMITED
+- 2026-04-28 GCIL: DECISIONS OF THE BOARD OF DIRECTORS MEETING - GHANI CHEMICAL INDUSTRIES LIMITED
+- 2026-04-30 WAVES: Board Meeting Rescheduled
+- 2026-05-05 FABL: Board of Directors Meeting other than Financial Results
+- 2026-05-07 HCAR: Board Meeting & Closed Period
+- 2026-05-07 SEARL: SHORT NOTICE (EMERGENT) BOARD MEETING- OTHER THAN FINANCIAL RESULTS
+- 2026-05-08 OCTOPUS: Board Meeting
