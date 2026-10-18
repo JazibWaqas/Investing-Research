@@ -1,0 +1,96 @@
+# Calendar as of 2025-05-12
+
+- Next scheduled MPC: 2025-06-16 (approximate; calendar taken from the decision-date pattern, outcome not shown)
+
+## Board meeting notices in the last 30 days, liquid KMI names (meeting dates are in the notice PDFs, not parsed; titles shown as published)
+
+- 2025-04-14 FABL: Board of Directors Meeting of Faysal Bank Limited
+- 2025-04-14 LCI: BOARD MEETING / CLOSED PERIOD
+- 2025-04-14 FCEPL: Board Meeting 1st Quarter 2025
+- 2025-04-14 HCAR: Board Meeting Other Than Financial Results
+- 2025-04-14 CLOV: Board of Directors Meeting and Closed Period
+- 2025-04-14 GTYR: Board Meeting
+- 2025-04-15 INIL: Board Meeting
+- 2025-04-15 PRL: Board Meeting
+- 2025-04-15 SAZEW: Board Meeting Rescheduled
+- 2025-04-15 BIPL: Board Meeting - BankIslami Pakistan Limited
+- 2025-04-15 MLCF: MLCF-Notice of Board Meeting 22.04.2025
+- 2025-04-15 KSBP: Board Meeting
+- 2025-04-15 PIBTL: Board Meeting - Tuesday, April 22, 2025
+- 2025-04-16 INIL: BOARD MEETING - OTHER THAN FINANCIAL RESULTS
+- 2025-04-16 FFL: Board Meeting
+- 2025-04-16 AGTL: Board Meeting
+- 2025-04-16 LUCK: Board Meeting
+- 2025-04-16 BFAGRO: Board Meeting & Closed Period Q3 2025
+- 2025-04-16 ENGROH: Board Meeting for the Announcement of the Financial Results for the First Quarter ended March 31, 2025
+- 2025-04-17 TPLP: Board Meeting
+- 2025-04-17 MARI: Notice of Board of Directors Meeting
+- 2025-04-17 GATM: BOARD MEETING
+- 2025-04-17 POWER: Board Meeting
+- 2025-04-17 FATIMA: Board Meeting and Closed Period
+- 2025-04-17 GLAXO: Board Meeting Quarter ended March 31, 2025
+- 2025-04-17 ACPL: Board Meeting
+- 2025-04-17 ATBA: BOARD MEETING
+- 2025-04-17 WAFI: Board Meeting
+- 2025-04-17 SHFA: Board Meeting
+- 2025-04-17 TREET: Notice of Board Meeting for the 3rd Quarter ended March 31, 2025 / Closed Period
+- 2025-04-18 MTL: Board Meeting
+- 2025-04-18 CEPB: BOARD MEETING
+- 2025-04-18 SPEL: Board Meeting
+- 2025-04-18 THCCL: Board Meeting for the quarter ended March 31, 2025
+- 2025-04-18 NRL: Board Meeting
+- 2025-04-18 TGL: Board Meeting
+- 2025-04-18 GWLC: Notice of Board Meeting
+- 2025-04-18 HALEON: Notice of Board of Directors Meeting - (Q1-2025)
+- 2025-04-18 CHCC: Board Meeting REVOKED
+- 2025-04-18 OGDC: Board Meeting
+- 2025-04-18 FLYNG: Board Meeting
+- 2025-04-18 PPL: Meeting of the Board of Directors and Closed Period
+- 2025-04-18 SYS: Board Meeting
+- 2025-04-18 SNGP: Board Meeting
+- 2025-04-18 DGKC: BOARD MEETING
+- 2025-04-21 OGDC: Board Meeting Rescheduled
+- 2025-04-21 UNITY: Board Meeting
+- 2025-04-21 ABOT: Board Meeting
+- 2025-04-21 DCL: Board Meeting
+- 2025-04-21 GGGL: MEETING OF THE BOARD OF DIRECTORS - GHANI GLOBAL GLASS LIMITED
+- 2025-04-21 GGL: MEETING OF THE BOARD OF DIRECTORS - GHANI GLOBAL HOLDINGS LIMITED
+- 2025-04-21 TOMCL: Board Meeting
+- 2025-04-21 PAEL: Board Meeting for the 1st Quarter ended 31-03-2025
+- 2025-04-21 IMAGE: Board Meeting
+- 2025-04-21 BFBIO: Board Meeting
+- 2025-04-21 BBFL: Board Meeting
+- 2025-04-21 KOHC: Board Meeting
+- 2025-04-21 PREMA: Board Meeting
+- 2025-04-21 ZAL: Board Meeting
+- 2025-04-21 HTL: Board Meeting REVOKED
+- 2025-04-21 HUBC: Board Meeting - The Hub Power Company Limited
+- 2025-04-21 LPL: BOARD MEETING
+- 2025-04-21 HTL: Board Meeting
+- 2025-04-22 AGP: Board Meeting
+- 2025-04-22 ILP: Notice of Board Meeting for the Third Quarter ended March 31, 2025 / Closed Period
+- 2025-04-22 PSO: Board Meeting
+- 2025-04-22 MUGHAL: Notice of Board Meeting - QIII - FY 2025
+- 2025-04-22 CSAP: Board Meetings
+- 2025-04-22 SYM: Board Meeting
+- 2025-04-22 FEROZ: Board Meeting
+- 2025-04-22 DCR: BOARD MEETING / CLOSED PERIOD
+- 2025-04-22 PABC: Board Meeting For 1st Quarter 2025 Financial Results and Other Matters
+- 2025-04-22 OCTOPUS: Board Meeting
+- 2025-04-22 AVN: Board Meeting
+- 2025-04-22 FCL: Notice of the Board Meeting
+- 2025-04-22 PIOC: Board Meeting
+- 2025-04-22 NML: BOARD MEETING
+- 2025-04-22 GHGL: Board Meeting
+- 2025-04-23 CPHL: Board Meeting
+- 2025-04-23 ATLH: Board Meeting
+- 2025-04-23 NETSOL: Board Meeting
+- 2025-04-23 TELE: Board Meeting to Consider Quarterly Accounts for the period ended 31 March 2025
+- 2025-04-23 DOL: Board Meetings
+- 2025-04-23 HINOON: Board Meeting
+- 2025-04-23 SEARL: Board Meeting
+- 2025-04-23 BNL: Board Meeting
+- 2025-04-23 CNERGY: Board Meeting and Closed Period
+- 2025-04-23 WAVES: Board Meeting for the Quarter ended 31Mar25
+- 2025-04-30 FLYNG: Board Meeting Other Than Financial Results
+- 2025-05-02 SSGC: Board Meeting

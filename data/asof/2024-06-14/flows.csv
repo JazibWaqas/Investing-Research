@@ -1,0 +1,217 @@
+kind,window,key,net_usd_mn,through
+investor_type,last_5_sessions,banks / dfi,-1.465,2024-06-13
+investor_type,last_5_sessions,broker proprietary trading,1.591,2024-06-13
+investor_type,last_5_sessions,companies,7.399,2024-06-13
+investor_type,last_5_sessions,foreign corporates,-5.829,2024-06-13
+investor_type,last_5_sessions,foreign individual,0.017,2024-06-13
+investor_type,last_5_sessions,individuals,-11.322,2024-06-13
+investor_type,last_5_sessions,insurance companies,1.722,2024-06-13
+investor_type,last_5_sessions,mutual funds,10.888,2024-06-13
+investor_type,last_5_sessions,nbfc,-0.166,2024-06-13
+investor_type,last_5_sessions,other organization,-1.122,2024-06-13
+investor_type,last_5_sessions,overseas pakistani,-1.714,2024-06-13
+sector,last_5_sessions,fipi | All other Sectors,-2.46,2024-06-13
+sector,last_5_sessions,fipi | Cement,-0.524,2024-06-13
+sector,last_5_sessions,fipi | Commercial Banks,0.771,2024-06-13
+sector,last_5_sessions,fipi | Fertilizer,-1.76,2024-06-13
+sector,last_5_sessions,fipi | Food and Personal Care Products,0.206,2024-06-13
+sector,last_5_sessions,fipi | Oil and Gas Exploration Companies,-2.664,2024-06-13
+sector,last_5_sessions,fipi | Oil and Gas Marketing Companies,-0.555,2024-06-13
+sector,last_5_sessions,fipi | Power Generation and Distribution,-0.907,2024-06-13
+sector,last_5_sessions,fipi | Technology and Communication,0.355,2024-06-13
+sector,last_5_sessions,fipi | Textile Composite,0.012,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | All other Sectors,2.033,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Cement,-1.811,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Commercial Banks,-0.894,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Fertilizer,0.064,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Food and Personal Care Products,-0.037,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Oil and Gas Exploration Companies,0.781,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Oil and Gas Marketing Companies,-0.291,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Power Generation and Distribution,-1.085,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Technology and Communication,-0.223,2024-06-13
+sector,last_5_sessions,lipi banks / dfi | Textile Composite,-0.0,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | All other Sectors,0.287,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Cement,0.926,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Commercial Banks,0.434,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Debt Market,-0.061,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Fertilizer,-0.014,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Food and Personal Care Products,0.093,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Oil and Gas Exploration Companies,0.206,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Oil and Gas Marketing Companies,0.138,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Power Generation and Distribution,0.128,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Technology and Communication,-0.507,2024-06-13
+sector,last_5_sessions,lipi broker proprietary trading | Textile Composite,-0.039,2024-06-13
+sector,last_5_sessions,lipi companies | All other Sectors,1.62,2024-06-13
+sector,last_5_sessions,lipi companies | Cement,2.675,2024-06-13
+sector,last_5_sessions,lipi companies | Commercial Banks,0.426,2024-06-13
+sector,last_5_sessions,lipi companies | Debt Market,-0.664,2024-06-13
+sector,last_5_sessions,lipi companies | Fertilizer,0.353,2024-06-13
+sector,last_5_sessions,lipi companies | Food and Personal Care Products,0.006,2024-06-13
+sector,last_5_sessions,lipi companies | Oil and Gas Exploration Companies,2.518,2024-06-13
+sector,last_5_sessions,lipi companies | Oil and Gas Marketing Companies,-0.032,2024-06-13
+sector,last_5_sessions,lipi companies | Power Generation and Distribution,0.078,2024-06-13
+sector,last_5_sessions,lipi companies | Technology and Communication,0.06,2024-06-13
+sector,last_5_sessions,lipi companies | Textile Composite,0.359,2024-06-13
+sector,last_5_sessions,lipi individuals | All other Sectors,-2.918,2024-06-13
+sector,last_5_sessions,lipi individuals | Cement,-3.018,2024-06-13
+sector,last_5_sessions,lipi individuals | Commercial Banks,-2.261,2024-06-13
+sector,last_5_sessions,lipi individuals | Debt Market,0.001,2024-06-13
+sector,last_5_sessions,lipi individuals | Fertilizer,-2.038,2024-06-13
+sector,last_5_sessions,lipi individuals | Food and Personal Care Products,-0.108,2024-06-13
+sector,last_5_sessions,lipi individuals | Oil and Gas Exploration Companies,1.126,2024-06-13
+sector,last_5_sessions,lipi individuals | Oil and Gas Marketing Companies,-0.499,2024-06-13
+sector,last_5_sessions,lipi individuals | Power Generation and Distribution,-0.321,2024-06-13
+sector,last_5_sessions,lipi individuals | Technology and Communication,-0.809,2024-06-13
+sector,last_5_sessions,lipi individuals | Textile Composite,-0.478,2024-06-13
+sector,last_5_sessions,lipi insurance companies | All other Sectors,-0.066,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Cement,-0.286,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Commercial Banks,-0.076,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Debt Market,-0.0,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Fertilizer,2.084,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Food and Personal Care Products,0.072,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Oil and Gas Exploration Companies,-0.632,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Oil and Gas Marketing Companies,-0.028,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Power Generation and Distribution,0.548,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Technology and Communication,-0.176,2024-06-13
+sector,last_5_sessions,lipi insurance companies | Textile Composite,0.283,2024-06-13
+sector,last_5_sessions,lipi mutual funds | All other Sectors,1.723,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Cement,2.512,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Commercial Banks,1.82,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Debt Market,0.015,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Fertilizer,1.276,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Food and Personal Care Products,-0.231,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Oil and Gas Exploration Companies,0.129,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Oil and Gas Marketing Companies,1.217,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Power Generation and Distribution,1.468,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Technology and Communication,1.122,2024-06-13
+sector,last_5_sessions,lipi mutual funds | Textile Composite,-0.164,2024-06-13
+sector,last_5_sessions,lipi nbfc | All other Sectors,-0.0,2024-06-13
+sector,last_5_sessions,lipi nbfc | Cement,-0.057,2024-06-13
+sector,last_5_sessions,lipi nbfc | Commercial Banks,-0.03,2024-06-13
+sector,last_5_sessions,lipi nbfc | Fertilizer,-0.046,2024-06-13
+sector,last_5_sessions,lipi nbfc | Food and Personal Care Products,-0.001,2024-06-13
+sector,last_5_sessions,lipi nbfc | Oil and Gas Exploration Companies,-0.01,2024-06-13
+sector,last_5_sessions,lipi nbfc | Oil and Gas Marketing Companies,-0.007,2024-06-13
+sector,last_5_sessions,lipi nbfc | Power Generation and Distribution,-0.002,2024-06-13
+sector,last_5_sessions,lipi nbfc | Technology and Communication,-0.002,2024-06-13
+sector,last_5_sessions,lipi nbfc | Textile Composite,-0.011,2024-06-13
+sector,last_5_sessions,lipi other organization | All other Sectors,-0.219,2024-06-13
+sector,last_5_sessions,lipi other organization | Cement,-0.418,2024-06-13
+sector,last_5_sessions,lipi other organization | Commercial Banks,-0.191,2024-06-13
+sector,last_5_sessions,lipi other organization | Debt Market,0.709,2024-06-13
+sector,last_5_sessions,lipi other organization | Fertilizer,0.082,2024-06-13
+sector,last_5_sessions,lipi other organization | Food and Personal Care Products,0.001,2024-06-13
+sector,last_5_sessions,lipi other organization | Oil and Gas Exploration Companies,-1.454,2024-06-13
+sector,last_5_sessions,lipi other organization | Oil and Gas Marketing Companies,0.057,2024-06-13
+sector,last_5_sessions,lipi other organization | Power Generation and Distribution,0.094,2024-06-13
+sector,last_5_sessions,lipi other organization | Technology and Communication,0.181,2024-06-13
+sector,last_5_sessions,lipi other organization | Textile Composite,0.038,2024-06-13
+investor_type,last_20_sessions,banks / dfi,5.57,2024-06-13
+investor_type,last_20_sessions,broker proprietary trading,-7.63,2024-06-13
+investor_type,last_20_sessions,companies,-2.007,2024-06-13
+investor_type,last_20_sessions,foreign corporates,0.251,2024-06-13
+investor_type,last_20_sessions,foreign individual,-0.094,2024-06-13
+investor_type,last_20_sessions,individuals,-21.964,2024-06-13
+investor_type,last_20_sessions,insurance companies,26.06,2024-06-13
+investor_type,last_20_sessions,mutual funds,3.763,2024-06-13
+investor_type,last_20_sessions,nbfc,-0.225,2024-06-13
+investor_type,last_20_sessions,other organization,-1.606,2024-06-13
+investor_type,last_20_sessions,overseas pakistani,-4.692,2024-06-13
+sector,last_20_sessions,fipi | All other Sectors,1.251,2024-06-13
+sector,last_20_sessions,fipi | Cement,1.603,2024-06-13
+sector,last_20_sessions,fipi | Commercial Banks,12.587,2024-06-13
+sector,last_20_sessions,fipi | Debt Market,-16.551,2024-06-13
+sector,last_20_sessions,fipi | Fertilizer,-0.161,2024-06-13
+sector,last_20_sessions,fipi | Food and Personal Care Products,-0.395,2024-06-13
+sector,last_20_sessions,fipi | Oil and Gas Exploration Companies,-3.516,2024-06-13
+sector,last_20_sessions,fipi | Oil and Gas Marketing Companies,-0.494,2024-06-13
+sector,last_20_sessions,fipi | Power Generation and Distribution,1.607,2024-06-13
+sector,last_20_sessions,fipi | Technology and Communication,-0.683,2024-06-13
+sector,last_20_sessions,fipi | Textile Composite,0.217,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | All other Sectors,3.315,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Cement,-1.123,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Commercial Banks,-14.504,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Debt Market,16.586,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Fertilizer,-1.438,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Food and Personal Care Products,-0.192,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Oil and Gas Exploration Companies,10.815,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Oil and Gas Marketing Companies,-0.421,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Power Generation and Distribution,-4.878,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Technology and Communication,-2.298,2024-06-13
+sector,last_20_sessions,lipi banks / dfi | Textile Composite,-0.291,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | All other Sectors,-3.097,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Cement,0.059,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Commercial Banks,-1.73,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Debt Market,-0.21,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Fertilizer,-0.562,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Food and Personal Care Products,-0.21,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Oil and Gas Exploration Companies,-1.809,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Oil and Gas Marketing Companies,0.117,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Power Generation and Distribution,-0.042,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Technology and Communication,-0.157,2024-06-13
+sector,last_20_sessions,lipi broker proprietary trading | Textile Composite,0.011,2024-06-13
+sector,last_20_sessions,lipi companies | All other Sectors,-3.209,2024-06-13
+sector,last_20_sessions,lipi companies | Cement,-1.216,2024-06-13
+sector,last_20_sessions,lipi companies | Commercial Banks,5.197,2024-06-13
+sector,last_20_sessions,lipi companies | Debt Market,-0.965,2024-06-13
+sector,last_20_sessions,lipi companies | Fertilizer,1.291,2024-06-13
+sector,last_20_sessions,lipi companies | Food and Personal Care Products,0.161,2024-06-13
+sector,last_20_sessions,lipi companies | Oil and Gas Exploration Companies,-5.673,2024-06-13
+sector,last_20_sessions,lipi companies | Oil and Gas Marketing Companies,-1.257,2024-06-13
+sector,last_20_sessions,lipi companies | Power Generation and Distribution,-1.583,2024-06-13
+sector,last_20_sessions,lipi companies | Technology and Communication,4.487,2024-06-13
+sector,last_20_sessions,lipi companies | Textile Composite,0.76,2024-06-13
+sector,last_20_sessions,lipi individuals | All other Sectors,-1.396,2024-06-13
+sector,last_20_sessions,lipi individuals | Cement,-5.581,2024-06-13
+sector,last_20_sessions,lipi individuals | Commercial Banks,-7.475,2024-06-13
+sector,last_20_sessions,lipi individuals | Debt Market,0.007,2024-06-13
+sector,last_20_sessions,lipi individuals | Fertilizer,-4.637,2024-06-13
+sector,last_20_sessions,lipi individuals | Food and Personal Care Products,0.886,2024-06-13
+sector,last_20_sessions,lipi individuals | Oil and Gas Exploration Companies,0.128,2024-06-13
+sector,last_20_sessions,lipi individuals | Oil and Gas Marketing Companies,0.425,2024-06-13
+sector,last_20_sessions,lipi individuals | Power Generation and Distribution,-0.855,2024-06-13
+sector,last_20_sessions,lipi individuals | Technology and Communication,-4.003,2024-06-13
+sector,last_20_sessions,lipi individuals | Textile Composite,0.536,2024-06-13
+sector,last_20_sessions,lipi insurance companies | All other Sectors,1.36,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Cement,1.885,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Commercial Banks,8.95,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Debt Market,-0.0,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Fertilizer,6.146,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Food and Personal Care Products,0.032,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Oil and Gas Exploration Companies,3.802,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Oil and Gas Marketing Companies,0.561,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Power Generation and Distribution,4.973,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Technology and Communication,-0.204,2024-06-13
+sector,last_20_sessions,lipi insurance companies | Textile Composite,-1.445,2024-06-13
+sector,last_20_sessions,lipi mutual funds | All other Sectors,0.837,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Cement,4.292,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Commercial Banks,-2.264,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Debt Market,-0.269,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Fertilizer,-0.278,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Food and Personal Care Products,-0.09,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Oil and Gas Exploration Companies,-2.521,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Oil and Gas Marketing Companies,0.992,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Power Generation and Distribution,1.446,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Technology and Communication,1.457,2024-06-13
+sector,last_20_sessions,lipi mutual funds | Textile Composite,0.159,2024-06-13
+sector,last_20_sessions,lipi nbfc | All other Sectors,-0.033,2024-06-13
+sector,last_20_sessions,lipi nbfc | Cement,-0.031,2024-06-13
+sector,last_20_sessions,lipi nbfc | Commercial Banks,-0.258,2024-06-13
+sector,last_20_sessions,lipi nbfc | Fertilizer,0.149,2024-06-13
+sector,last_20_sessions,lipi nbfc | Food and Personal Care Products,-0.001,2024-06-13
+sector,last_20_sessions,lipi nbfc | Oil and Gas Exploration Companies,0.042,2024-06-13
+sector,last_20_sessions,lipi nbfc | Oil and Gas Marketing Companies,-0.037,2024-06-13
+sector,last_20_sessions,lipi nbfc | Power Generation and Distribution,-0.027,2024-06-13
+sector,last_20_sessions,lipi nbfc | Technology and Communication,-0.032,2024-06-13
+sector,last_20_sessions,lipi nbfc | Textile Composite,0.002,2024-06-13
+sector,last_20_sessions,lipi other organization | All other Sectors,0.122,2024-06-13
+sector,last_20_sessions,lipi other organization | Cement,-0.25,2024-06-13
+sector,last_20_sessions,lipi other organization | Commercial Banks,-1.119,2024-06-13
+sector,last_20_sessions,lipi other organization | Debt Market,1.402,2024-06-13
+sector,last_20_sessions,lipi other organization | Fertilizer,-0.567,2024-06-13
+sector,last_20_sessions,lipi other organization | Food and Personal Care Products,-0.147,2024-06-13
+sector,last_20_sessions,lipi other organization | Oil and Gas Exploration Companies,-1.672,2024-06-13
+sector,last_20_sessions,lipi other organization | Oil and Gas Marketing Companies,0.049,2024-06-13
+sector,last_20_sessions,lipi other organization | Power Generation and Distribution,-0.68,2024-06-13
+sector,last_20_sessions,lipi other organization | Technology and Communication,1.135,2024-06-13
+sector,last_20_sessions,lipi other organization | Textile Composite,0.123,2024-06-13

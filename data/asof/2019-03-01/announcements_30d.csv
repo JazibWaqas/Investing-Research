@@ -1,0 +1,239 @@
+datetime,symbol,title,klass
+2019-01-30 15:31,ARCTM,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2019-01-30 15:33,PRL,Financial Results For Six Months Period Ended 31st December 2018,financial_result
+2019-01-31 09:15,ECOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-01-31 10:16,ECOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-01-31 10:37,MARI,Transfer Notice for Divestment of GoP Shares in MPCL,other
+2019-01-31 11:43,KOSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-01-31 12:53,POWER,"PROJECT PROGRESS REPORT FOR THE QUARTER ENDED DECEMBER 31, 2018",other
+2019-01-31 12:57,LUCK,"Financial Results for the quarter ended December 31, 2018",financial_result
+2019-01-31 14:03,EPCL,"Financial Results for the Year Ended December 31, 2018 Consolidated And Standalone",financial_result
+2019-01-31 15:26,ANL,Material Information - Approval of Creditors' Led Scheme of Arrangement,material_info
+2019-02-01 10:16,ABL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-01 10:34,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-01 11:46,ECOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-01 12:12,STCL,Board Meeting,board_meeting_notice
+2019-02-01 13:23,FCCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-01 15:13,NETSOL,Board Meeting,board_meeting_notice
+2019-02-01 15:19,STPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-01 15:22,STPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-01 15:51,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 09:16,MUREB,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 09:16,ECOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 09:34,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 10:05,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 10:50,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 12:00,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 15:15,CHCC,NOTICE OF BOARD OF DIRECTORS MEETING & NOTICE OF CLOSED PERIOD,board_meeting_notice
+2019-02-04 15:18,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-04 15:52,PSMC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 09:28,LOTCHEM,Board Meeting / Closed Period,board_meeting_notice
+2019-02-06 09:48,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 09:51,CLOV,Material Information,material_info
+2019-02-06 10:47,FFBL,Disclosure of Material Information by Fauji Fertilizer Bin Qasim Limited,material_info
+2019-02-06 11:24,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 11:51,JVDC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 14:32,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 14:38,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 14:44,PSMC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-06 14:50,FFL,Material Information,material_info
+2019-02-06 15:13,EFERT,Analyst Briefing for 4 Quarter 2018 Business Results of Engro Fertilizers Limited,other
+2019-02-06 15:28,OLPL,THE DISCLOSURE OF MATERIAL INFORMATION,material_info
+2019-02-06 15:40,UNITY,"Certified Resolutions Passed by the Shareholders of Unity Foods Limited in the Extraordinary General Meeting Held on February 06, 2019",agm
+2019-02-07 11:41,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-07 12:02,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-07 15:10,SALT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-07 15:15,ILTM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 09:04,SSGC,BOARD MEETING,board_meeting_notice
+2019-02-08 09:50,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 09:57,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 10:17,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 10:49,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 11:34,EFERT,"Financial Results for the Year Ended December 31, 2018",financial_result
+2019-02-08 12:03,HUBC,Board Meeting,board_meeting_notice
+2019-02-08 12:03,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 12:05,PSO,Board Meeting,board_meeting_notice
+2019-02-08 12:24,GHNI,Board Meeting,board_meeting_notice
+2019-02-08 12:31,KEL,Issue of rated and listed SUKUK of up to PKR 25 billion,other
+2019-02-08 15:46,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 15:47,LUCK,"Transmission of half yearly report for the half year ended December 31, 2018",financial_result
+2019-02-08 16:07,BWCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-08 16:23,KEL,Resignation by Directors,other
+2019-02-11 09:57,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-11 09:57,BFMOD,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-11 10:57,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-11 14:59,MARI,Notice of Board of Directors Meeting,board_meeting_notice
+2019-02-12 10:29,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-12 10:32,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-12 10:47,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-12 12:19,UNITY,Material Information,material_info
+2019-02-12 12:33,MLCF,Board Meeting,board_meeting_notice
+2019-02-12 13:28,LOADS,Material Information,material_info
+2019-02-12 14:33,UNITY,Board Meeting,board_meeting_notice
+2019-02-12 14:59,PIBTL,"NOTICE OF PIBT BOARD MEETING - FEBRUARY 19, 2019",board_meeting_notice
+2019-02-12 15:11,LOTCHEM,Change of Director / Chairman,other
+2019-02-12 15:23,NETSOL,"""MEETING IN PROGRESS"" BOARD MEETING DATED FEBRUARY 12, 2019",other
+2019-02-13 09:16,NETSOL,Financial Results for the Quarter Ended 2018-12-31,financial_result
+2019-02-13 09:39,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-13 11:00,MEBL,Notice of Board Meeting and Closed Period,board_meeting_notice
+2019-02-13 12:50,SSGC,"FINANCIAL RESULTS FOR THE QUARTER ENDED 30 SEPTEMBER, 2016, HALF YEAR ENDED 31 DECEMBER. 2016, NINE MONTHS ENDED 31 MARCH, 2017",financial_result
+2019-02-13 12:52,NCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-13 14:44,NRL,"Transmission of Quarterly Reportsfor the Period ended December 31, 2018",financial_result
+2019-02-13 15:02,FML,Board Meeting,board_meeting_notice
+2019-02-13 15:23,SPL,Board Meeting,board_meeting_notice
+2019-02-13 15:24,CHCC,MEETING IN PROGRESS,other
+2019-02-14 09:18,CHCC,"FINANCIAL RESULTS FOR THE HALF YEAR ENDED DECEMBER 31, 2018",financial_result
+2019-02-14 09:25,ATRL,TRANSMISSION OF QUARTERLY REPORT FOR THE PERIOD ENDED 2018-12-31,financial_result
+2019-02-14 09:39,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-14 09:43,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-14 10:06,PSO,Change in the Venue of the Board Meeting,other
+2019-02-14 11:04,ANL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-14 11:40,NCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-14 11:59,LOTCHEM,Financial Results For the Year Ended 31 December 2018,financial_result
+2019-02-14 12:29,OGDC,Board meeting and close period,board_meeting_notice
+2019-02-14 13:03,AGL,Material Information,material_info
+2019-02-14 14:45,KOHC,Board Meeting,board_meeting_notice
+2019-02-15 09:53,BOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-15 10:59,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-15 11:46,FEROZ,Board Meeting,board_meeting_notice
+2019-02-15 14:39,BOP,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-15 16:27,SERF,Material Information,material_info
+2019-02-18 09:15,PSO,"Financial Results for the half year ended December 31, 2018 REVOKED",financial_result
+2019-02-18 09:15,GHNI,"Financial Results for the Half Year ended December 31, 2018",financial_result
+2019-02-18 10:02,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-18 10:11,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-18 10:22,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-18 10:37,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-18 11:09,ISL,TRANSMISSION OF HALF YEARLY FINANCIAL STATEMENTS FOR THE PERIOD ENDED 31-12-2018,financial_result
+2019-02-18 11:29,AVN,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-18 11:39,STCL,Financial Results for the 2nd Quarter and Half Year Ended 2018-12-31,financial_result
+2019-02-18 12:06,ZIL,Disclosure of interest by a Director under clause 5.6.1 (d) of PSX Rule Book,insider_trade
+2019-02-18 13:38,GASF,Material Information,material_info
+2019-02-18 14:32,DGKC,BOARD MEETING,board_meeting_notice
+2019-02-18 14:58,FCCL,Financial Result for the quarter ended 2018-12-31,financial_result
+2019-02-18 15:09,DCL,Board Meeting,board_meeting_notice
+2019-02-19 09:15,PSO,"Financial Results for the half year ended December 31, 2018",financial_result
+2019-02-19 09:15,HSM,Material Information REVOKED,material_info
+2019-02-19 09:21,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-19 09:29,HSM,Material Information,material_info
+2019-02-19 09:44,SSGC,CERTIFIED RESOLUTIONS PASSED IN THE 63RD ANNUAL GENERAL MEETING (AGM) OF SUI SOUTHERN GAS COMPANY LIMITED,agm
+2019-02-19 09:51,NML,BOARD MEETING,board_meeting_notice
+2019-02-19 11:44,SJTM,"Material Information - Land, Building and Other Assets Sale",material_info
+2019-02-19 12:24,SSGC,CERTIFIED RESOLUTIONS PASSED IN THE 63RD ANNUAL GENERAL MEETING (AGM) OF SUI SOUTHERN GAS COMPANY LIMITED,agm
+2019-02-19 12:47,PPL,Meeting of the Board of Directors and Closed Period,board_meeting_notice
+2019-02-19 12:51,PKGS,BOARD MEETING,board_meeting_notice
+2019-02-19 13:58,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-19 14:23,PIOC,Board Meeting,board_meeting_notice
+2019-02-19 14:43,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-19 15:12,SSGC,Appointment of Director,other
+2019-02-19 15:34,PIBTL,"PIBT BOD MEETING IN PROGRESS FRBRUARY 19, 2019",other
+2019-02-19 15:58,UNITY,Declaration of Right Shares,dividend_or_bonus
+2019-02-20 09:15,PIBTL,"FINANCIAL RESULTS FOR THE PERIOD ENDED DECEMBER 31, 2018",financial_result
+2019-02-20 09:15,SNGP,"APPLICATION FOR EXTENSION IN THE PERIOD FOR SUBMISSION OF HALF YEARLY ACCOUNTS OF THE COMPANY FOR THE PERIOD ENDED DECEMBER 31, 2018",financial_result
+2019-02-20 09:27,MLCF,Financial Results for the Quarter Ended 31.12.2018,financial_result
+2019-02-20 09:38,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-20 09:52,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-20 12:33,ASTL,Board of Directors' Meeting,other
+2019-02-20 13:04,MARI,"Financial results for the six months ended December 31, 2018",financial_result
+2019-02-20 13:11,MARI,Acquisition of Two New Exploration Blocks,other
+2019-02-20 13:37,SPL,Financial results for the Quarter Ended 31-12-2018,financial_result
+2019-02-20 14:06,NCL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-20 15:00,PIBTL,CHANGE OF COMPANY SECRETARY OF PAKISTAN INTERNATIONAL BULK TERMINAL LIMITED,other
+2019-02-20 15:38,UNITY,Board Meeting,board_meeting_notice
+2019-02-21 10:48,POWER,BOARD MEETING,board_meeting_notice
+2019-02-21 11:01,ARCTM,"BOOK CLOSURE REQUIRED UNDER THE LISTED COMPANIES (SUBSTANTIAL ACQUISITION OF VOTING SHARES AND TAKEOVERS) REGULATIONS, 2017",insider_trade
+2019-02-21 11:06,INIL,APPOINTMENT OF DIRECTOR TO FILL THE CASUAL VACANCY,other
+2019-02-21 12:00,MEBL,"Financial Results For the Year Ended December 31, 2018",financial_result
+2019-02-21 12:27,PSEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-21 12:30,KOHC,"Financial Results for the Quarter Ended December 31, 2018",financial_result
+2019-02-21 12:31,HUBC,"FINANCIAL RESULTS FOR THE HALF YEAR ENDED DECEMBER 31, 2018",financial_result
+2019-02-21 13:00,EPCL,NOTICE OF ANNUAL GENERAL MEETING,agm
+2019-02-21 13:40,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-21 14:17,TGL,Board Meeting,board_meeting_notice
+2019-02-21 14:30,SAZEW,Material Information,material_info
+2019-02-21 14:31,UNITY,Right Issue -Copy of Advertisement,dividend_or_bonus
+2019-02-21 15:03,EFERT,CO-OPTION OF NEW DIRECTOR ON THE BOARD OF ENGRO FERTILIZERS LIMITED,other
+2019-02-21 15:19,FCCL,Presentation of Trades Executed by Directors in the Board of Directors Meeting,board_meeting_notice
+2019-02-21 15:47,ENGRO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-21 15:49,SEARL,Board Meeting,board_meeting_notice
+2019-02-22 11:33,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-22 11:45,RAVT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-22 11:53,PSO,Restructuring of the Board of Management of Pakistan State Oil Company Limited (PSO),other
+2019-02-22 12:18,OGDC,"FINANCIAL RESULTS FOR THE FINANCIAL FOR THE QUARTER ENDED DECEMBER 31, 2018",financial_result
+2019-02-22 12:41,GHNI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-22 15:02,DAWH,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-22 15:24,GHNI,Appointment of Director,other
+2019-02-22 15:33,BHAT,Material Information,material_info
+2019-02-22 15:36,FASM,Material Information,material_info
+2019-02-22 15:43,BTL,Material Information,material_info
+2019-02-22 16:28,HTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-25 09:16,FML,"Financial Results for the Quarter/Half Year Ended December 31, 2018",financial_result
+2019-02-25 09:28,FEROZ,Financial Result Results for the Quarter Ended 2018-12-31,financial_result
+2019-02-25 10:14,STCL,Transmission of Quarterly Report for the Period Ended 2018-12-31,financial_result
+2019-02-25 10:31,HUBC,Resignation of Director,other
+2019-02-25 10:35,SSGC,MANAGING DIRECTOR/ CHIEF EXECUTIVE OFFICER,other
+2019-02-25 11:23,AGP,"Annual Board Meeting for the year ended December 31, 2018",other
+2019-02-25 11:44,NETSOL,Transmission of Quarterly Report for the Period Ended 2018-12-31,financial_result
+2019-02-25 12:51,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-25 15:45,INDU,Material Information - Change of Director,material_info
+2019-02-25 15:52,FCCL,Announcement of Interim Cash Dividend Notice in the Newspapers,dividend_or_bonus
+2019-02-26 09:15,DCL,"Financial Results for the Quarter Ended December 31,2018",financial_result
+2019-02-26 10:08,INIL,FINANCIAL RESULTS FOR THE HALF YEAR ENDED 31-12-2018,financial_result
+2019-02-26 13:03,DINT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-26 13:06,DGKC,"FINANCIAL RESULTS FOR THE HALF YEAR ENDED DECEMBER 31, 2018 (UN-AUDITED)",financial_result
+2019-02-26 13:26,SBL,Material Information,material_info
+2019-02-26 13:26,PIOC,Financial results for quarter ended,financial_result
+2019-02-26 14:32,RAVT,Material Information,material_info
+2019-02-26 14:40,SFLL,Material Information,material_info
+2019-02-26 15:09,NML,"FINANCIAL RESULTS FOR THE HALF YEAR ENDED DECEMBER 31, 2018 (UN-AUDITED)",financial_result
+2019-02-26 15:13,FML,Transmission of Quarterly Report for the Period Ended December 31 2018,financial_result
+2019-02-26 15:17,FEROZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-27 09:15,SFL,Material Information,material_info
+2019-02-27 09:49,GHNI,"Transmission of Quarterly Report for the period ended December 31, 2018",financial_result
+2019-02-27 10:08,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-27 11:23,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-27 12:22,SPL,Transmission of Half yearly Report for the period ended 31.12.2018,financial_result
+2019-02-27 12:22,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-27 12:27,DINT,"DISCLOSURE OF INTEREST BY A DIRECTOR CEO, OR EXECUTIVE OF A LISTED COMPANY AND THEIR SPOUSES -ASSOCIATED COMPANY AND THE SUBSTANTIAL SHAREHOLDERS U C 5.6.1. d OF PSX REGULATIONS",insider_trade
+2019-02-27 12:32,HSM,Material Information,material_info
+2019-02-27 12:34,AKZO,Material Information,material_info
+2019-02-27 12:50,CHCC,"Transmission of Quarterly Report for the period ended December 31, 2018",financial_result
+2019-02-27 13:18,TGL,Financial Results for the 2nd Quarter and Six Months ended 31-12-2018,financial_result
+2019-02-27 14:25,UNITY,"Financial Results for the Half Year Ended December 31, 2018",financial_result
+2019-02-27 15:23,MLCF,Transmission of Quarterly Report for the Period Ended 31.12.2018 REVOKED,financial_result
+2019-02-27 15:29,NICL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-27 15:56,NRL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 09:20,ASTL,Financial Results for the Half Year Ended 31 December 2018,financial_result
+2019-02-28 09:21,DCL,"Transimission of Quarterly Report for the Period Ended December 31,2018",financial_result
+2019-02-28 09:41,MLCF,Transmission of Quarterly Report for the Period Ended 31.12.2018,financial_result
+2019-02-28 09:46,KOHC,"Transmission of Quarterly Report for the Period Ended December 21, 2018 REVOKED",financial_result
+2019-02-28 09:54,HUBC,"Dispatch of Quarterly Accounts for the period Ended Dec 31, 2018",financial_result
+2019-02-28 10:10,ABL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 10:21,NML,"TRANSMISSION OF FINNACIAL STATEMENTS FOR THE HALF YEAR ENDED DECEMBER 31, 2018",financial_result
+2019-02-28 10:23,KOHC,"Transmission of Quarterly Report for the Period Ended December 31, 2018",financial_result
+2019-02-28 10:50,DGKC,"TRANSMISSION OF FINANCIAL STATEMENT FOR THE HALF YEAR ENDED DECEMBER 31, 2018",financial_result
+2019-02-28 11:16,MARI,"Transmission of Interim Financial Statements for the Six Months Ended December 31, 2018",financial_result
+2019-02-28 11:26,FEROZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 11:45,CCM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 12:32,OGDC,"Transmission of Quarterly Report for the Period Ended December 31, 2018",financial_result
+2019-02-28 12:48,PPL,Financial Results for the half year ended 31 December 2018,financial_result
+2019-02-28 12:51,FCCL,Transmission of Half Yearly Report for the Period Ended 31st December 2018,financial_result
+2019-02-28 13:33,TGL,Transmission of Quarterly Report for the Period Ended 31 December 2018,financial_result
+2019-02-28 13:40,MACFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 14:12,HUMNL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 14:27,PSO,"Transmission of Half Yearly Report for the period ended December 31, 2018",financial_result
+2019-02-28 14:51,POWER,FINANCIAL RESULTS FOR THE SIX MONTHS PERIOD AND QUARTER ENDED 31 DECEMBER 2018,financial_result
+2019-02-28 15:08,PIBTL,"Transmission of Quarterly Report for the Period Ended December 31, 2018",financial_result
+2019-02-28 15:09,INDU,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-02-28 15:18,SEARL,Financial Results for the Quarter Ended 2018-12-31,financial_result
+2019-02-28 15:28,FEROZ,Transmission of Quarterly Report for the Period Ended 2018-12-31,financial_result
+2019-02-28 15:49,POWER,TRANSMISSION OF QUARTERLY REPORT FOR THE SIX MONTHS PERIOD ENDED 31 DECEMBER 2018,financial_result
+2019-02-28 15:52,ASTL,Transmission of Half Yearly Report for the Period Ended 31 December 2018,financial_result
+2019-03-01 09:44,AASM,Material Information,material_info
+2019-03-01 09:50,PIOC,Transmission of Quarterly Accounts for the period ended 31 December 2018,financial_result
+2019-03-01 10:28,GASF,"Disclosure of Interest by a Director CEO, or Executive of a Listed Company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-03-01 11:08,ICIBL,MATERIAL INFORMATION - RESIGNATION BY DIRECTOR,material_info
+2019-03-01 11:13,HINOON,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-03-01 11:36,EFERT,NOTICE OF THE 10TH ANNUAL GENERAL MEETING OF ENGRO FERTILIZERS LIMITED,agm
+2019-03-01 14:53,FML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2019-03-01 15:17,JSML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade

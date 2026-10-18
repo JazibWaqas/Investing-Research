@@ -1,0 +1,259 @@
+datetime,symbol,title,klass
+2020-02-19 15:31,PMRS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-19 15:33,CHAS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-19 15:34,TREET,Board Meeting,board_meeting_notice
+2020-02-19 15:57,GSPM,Material Information,material_info
+2020-02-20 10:06,ARPAK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-20 11:09,IGIHL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-20 11:48,POWER,BOARD MEETING,board_meeting_notice
+2020-02-20 12:37,GLAXO,Material Information - GSK Pakistan Limited REVOKED,material_info
+2020-02-20 13:07,GLAXO,Material Information - GlaxoSmithKline Pakistan Limited,material_info
+2020-02-20 13:15,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-20 13:50,ASC,Board Meeting,board_meeting_notice
+2020-02-20 14:39,SEARL,Board Meeting,board_meeting_notice
+2020-02-20 15:23,GGL,Meeting of Board of Directors - Ghani Global Holdings Limited,other
+2020-02-20 15:28,BIPL,Board Meeting - BankIslami Pakistan Limited,board_meeting_notice
+2020-02-20 15:55,STPL,79th Board of Directors Meeting,board_meeting_notice
+2020-02-21 09:05,JSGCL,Material Information,material_info
+2020-02-21 09:20,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-21 10:34,INIL,FINANCIAL RESULTS FOR THE HALF YEAR ENDED 31-12-2019,financial_result
+2020-02-21 11:43,FCCL,Financial Results for the Half Year Ended 31st December 2019,financial_result
+2020-02-21 12:10,FEROZ,Board Meeting,board_meeting_notice
+2020-02-21 12:40,NETSOL,Transmission of Quarterly Report for the Period Ended 2019-12-31,financial_result
+2020-02-21 14:40,TGL,Board Meeting,board_meeting_notice
+2020-02-21 15:16,GGL,ALTERATION IN SPECIAL RESOLUTION PASSED BY THE SHAREHOLDERS- GHANI GLOBAL HOLDINGS LIMITED,other
+2020-02-21 15:40,HASCOL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-21 15:55,ASC,Board Meeting,board_meeting_notice
+2020-02-21 16:10,MUGHAL,"Financial Results for the Half Year ended December 31, 2019",financial_result
+2020-02-21 16:19,MUGHAL,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-02-21 16:26,KEL,Board Meeting other than financial results,board_meeting_notice
+2020-02-24 09:15,SPEL,Board Meeting,board_meeting_notice
+2020-02-24 09:20,HTL,"Financial Results for the Quarter Ended December 31, 2019",financial_result
+2020-02-24 09:58,SSGC,Board Meeting Other Than Financial Results,board_meeting_notice
+2020-02-24 10:22,DGKC,"Submission of Half Yearly Accounts for the period ended December 31,2019",financial_result
+2020-02-24 11:07,JSIL,Material Information,material_info
+2020-02-24 11:44,ISL,TRANSMISSION OF HALF YEARLY REPORT FOR THE PERIOD ENDED 31-12-2019,financial_result
+2020-02-24 13:07,RAVT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-24 13:27,MARI,Payment of First Interim Cash Dividend for the Year 2019-20,dividend_or_bonus
+2020-02-24 14:24,SHFA,Material Information,material_info
+2020-02-24 15:18,HSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-24 15:35,GHNI,"Transmission of Quarterly Report for the period ended December 31, 2019",financial_result
+2020-02-25 09:15,DCL,"Financial Results for the Quarter Ended December 31,2019",financial_result
+2020-02-25 09:25,SERF,Material Information,material_info
+2020-02-25 10:13,MTL,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-02-25 11:27,MTIL,Material Information,material_info
+2020-02-25 11:38,HUBC,Financial Results for the 2nd Quarter/ Half Year Ended December 31 2019,financial_result
+2020-02-25 12:34,PPL,Financial Results for the Half Year Ended 31 December 2019,financial_result
+2020-02-25 14:25,CHCC,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-02-25 15:08,SLCL,Material Information,material_info
+2020-02-25 15:29,MLCF,Board Meeting In Progress,board_meeting_notice
+2020-02-25 15:34,HTL,MATERIAL INFORMATION: PERMISSION BY OGRA TO PROCEED TO APPLY FOR NOCs to SET UP UPTO 35 PETROL PUMPS IN THE KPK PROVINCE,material_info
+2020-02-25 15:41,SLCL,Material Information - Revised,material_info
+2020-02-26 09:16,SNGP,"APPLICATION FOR EXTENSION IN THE PERIOD FOR SUBMISSION OF HALF YEARLY ACCOUNTS OF THE COMPANY FOR THE PERIOD ENDED DECEMBER 31, 2019",financial_result
+2020-02-26 09:17,MLCF,Financial Results for the Quarter Ended 31.12.2019,financial_result
+2020-02-26 09:23,GATM,MATERIAL INFORMATION,material_info
+2020-02-26 11:39,SSGC,BOARD MEETING OTHER THAN FINANCIAL RESULTS - POSTPONED,board_meeting_notice
+2020-02-26 12:02,ENGRO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-26 12:19,OGDC,"Financial Results for the Quarter Ended December 31, 2019",financial_result
+2020-02-26 12:38,FCCL,Transmission of Half Yearly Accounts for the Period Ended 31st Dec 2019,financial_result
+2020-02-26 13:47,ASTL,Financial Results for the Half Year Ended 31 December 2019,financial_result
+2020-02-26 13:47,UNITY,"Financial Results for the Half year Ended December 31, 2019",financial_result
+2020-02-26 14:23,NML,"SUBMISSION OF HALF YEARLY ACCOUNTS FOR THE PERIOD ENDED DECEMBER 31,2019",financial_result
+2020-02-26 14:58,PSO,Appointment of Chief Executive Officer / Managing Director,other
+2020-02-26 15:20,ASC,Board Resolution for Unsubscribed Shares Against Right Issue,dividend_or_bonus
+2020-02-26 15:22,PPL,Transmission of Half Year Report for the period ended 31 December 2019,financial_result
+2020-02-26 15:25,KOHC,Board Meeting In Progress,board_meeting_notice
+2020-02-26 15:26,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-26 15:28,TREET,Board Meeting In progress,board_meeting_notice
+2020-02-26 15:44,KTML,Board Meeting In Progress,board_meeting_notice
+2020-02-27 09:15,KOHC,"Financial Results for the Quarter Ended December 31, 2019",financial_result
+2020-02-27 09:16,TREET,Financial Results for the Quarter Ended,financial_result
+2020-02-27 09:19,KTML,Financial Results for the Quarter Ended 31.12.2019,financial_result
+2020-02-27 09:32,MARI,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-02-27 09:41,ASC,Auditor's Certificate on Subscription of Right Issue,dividend_or_bonus
+2020-02-27 10:20,MARI,Appointment of Director,other
+2020-02-27 11:04,ENGRO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-27 11:24,ENGRO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-27 11:28,HUBC,"Transmission of Half Yearly/ 2nd Quarter Report for the Period Ended Dec 31, 2019",financial_result
+2020-02-27 11:38,PMPK,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-27 12:28,ICI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-27 13:32,ILP,"Transmission of Half Year Report for the Period Ended December 31, 2019",financial_result
+2020-02-27 14:03,HBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-27 15:14,TGL,Financial Results for the Quarter Ended 31 December 2019,financial_result
+2020-02-27 15:22,BIPL,BankIslami Pakistan Limited-Board Meeting in Progress,other
+2020-02-27 15:23,ASC,Financial Result for the Quarter Ended 2019-12-31,financial_result
+2020-02-27 15:35,JSIL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-27 15:45,POWER,MEETING IN PROGRESS,other
+2020-02-28 09:00,POWER,"FINANCIAL RESULTS FOR THE SIX MONTHS PERIOD ENDED DECEMBER 31, 2019",financial_result
+2020-02-28 09:00,HTL,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-02-28 09:01,BIPL,Disclosure of Material Information,material_info
+2020-02-28 09:03,SEARL,Financial Results for the Quarter Ended 2019-12-31,financial_result
+2020-02-28 09:07,BIPL,"Financial Results for the year ended December 31, 2019",financial_result
+2020-02-28 09:30,SPEL,Transmission of Quarterly Report for the Period Ended 31-Dec-2019,financial_result
+2020-02-28 09:45,UNITY,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-28 10:26,TREET,Transmission of Quarterly Report for the Period Ended,financial_result
+2020-02-28 11:08,KOHC,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-02-28 11:43,DCL,"Transmission of Quarterly Report for the Period Ended December 31,2019",financial_result
+2020-02-28 11:57,HUMNL,Material Information,material_info
+2020-02-28 12:03,ACPL,Transmission of Half Yearly Accounts,financial_result
+2020-02-28 12:42,LOADS,Disclosure of Material Information,material_info
+2020-02-28 14:22,FEROZ,Financial Results for the Quarter Ended 2019-12-31,financial_result
+2020-02-28 14:54,KTML,Transmission of Quarterly Report for the Period Ended 31.12.2019,financial_result
+2020-02-28 15:01,DAWH,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-28 15:13,STJT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-28 15:14,ASTL,Final Notice to the Shareholders for Unclaimed Dividend (D-1) - Published in Newspapers,dividend_or_bonus
+2020-02-28 15:15,PSO,"Transmission of Half Yearly Report for the period ended December 31, 2019",financial_result
+2020-02-28 15:21,KTML,KTML- Notice of Book Closure for 10% Interim Cash Dividend 31.12.2019,dividend_or_bonus
+2020-02-28 15:24,TGL,Transmission of Quarterly Report for the Period Ended 31 December 2019,financial_result
+2020-02-28 15:40,SEARL,Board Meeting Other Than Financial Results,board_meeting_notice
+2020-02-28 15:40,UNITY,"Transmission of Half yearly report for the period ended December 31, 2019",financial_result
+2020-02-28 15:46,ASTL,Transmission of Half Yearly Report for the Period Ended 31 December 2019,financial_result
+2020-02-28 15:50,POWER,TRANSMISSION OF HALF YEARLY ACCOUNTS FOR THE SIX MONTHS PERIOD 31 DECEMBER 2019,financial_result
+2020-02-28 15:51,FEROZ,Transmission of Quarterly Report for the Period Ended 2019-12-31,financial_result
+2020-02-28 15:53,STPL,"Financial Results for the 2nd Quarter half year period Ended December 31, 2019",financial_result
+2020-02-28 16:07,KEL,Board Meeting other than financial results in progress,board_meeting_notice
+2020-02-28 16:16,GGL,Meeting in Progress - Ghani Global Holdings Limited,other
+2020-02-28 16:19,HSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-02-28 16:24,OGDC,Transmission of quarterly report for the quarter ended 2019-12-31,financial_result
+2020-02-28 16:25,SEARL,Transmission of Quarterly Report for the Period Ended 2019-12-31,financial_result
+2020-03-02 09:15,DLL,Material Information,material_info
+2020-03-02 09:15,KEL,Incorporation of a private limited wholly owned KE subsidiary company to undertake renewal energy and other projects,other
+2020-03-02 09:15,GGL,"Financial Results for the half year ended December 31, 2019 - Ghani Global Holdings Limited",financial_result
+2020-03-02 09:16,ICI,Disclosure of Material Information,material_info
+2020-03-02 09:19,GGL,"Transmission of Half Yearly Accounts for the period ended December 31, 2019 - Ghani Global Holdings Limited",financial_result
+2020-03-02 09:25,GLAXO,Change of Chief Executive/Director,other
+2020-03-02 09:32,MLCF,Transmission of Quarterly Report for the Period Ended 31.12.2019,financial_result
+2020-03-02 09:35,ASC,"Transmission of Quarterly Report for the Period Ended December 31, 2019",financial_result
+2020-03-02 09:57,PKGS,BOARD MEETING,board_meeting_notice
+2020-03-02 10:26,BIPL,BankIslami Pakistan Limited - Annual General Meeting,agm
+2020-03-02 12:35,HTL,Miscellaneous Information,other
+2020-03-02 13:03,CEPB,MATERIAL INFORMATION,material_info
+2020-03-02 14:29,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-02 15:02,TREET,Company Secretary,other
+2020-03-03 09:16,CSAP,Material Information,material_info
+2020-03-03 09:19,SNGP,CLARIFICATION OF SUI NORTHERN GAS PIPELINES LIMITED AS PER CLAUSE 5.6.1(B) OF PSX REGULATIONS,other
+2020-03-03 11:09,CHCC,MATERAIL INFORMATION - SUPPLY OF GAS,other
+2020-03-03 11:16,MEBL,Notice of 24th Annual General Meeting Prior to Publication,agm
+2020-03-03 12:16,MEBL,"Transmission of Annual Report for the Year Ended December 31, 2019",financial_result
+2020-03-03 13:09,AGP,Board Meeting,board_meeting_notice
+2020-03-03 13:28,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-03 14:34,BAFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-03 14:49,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-03 15:00,NML,NOTICE OF EXTRA ORDINARY GENERAL MEETING,agm
+2020-03-03 15:34,STPL,Transmission of half yearly,financial_result
+2020-03-03 15:38,TREET,Board Meeting Other Than Financial Results,board_meeting_notice
+2020-03-04 10:09,MEBL,Notice of 24th Annual General Meeting (AGM) of Meezan Bank Limited,agm
+2020-03-04 10:55,GLAXO,Board of Directors Meeting GSK Pakistan Limited,board_meeting_notice
+2020-03-04 11:14,JKSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-04 12:05,BIPL,BankIslami Pakistan Limited-Notice of 16th Annual General Meeting,agm
+2020-03-04 13:14,BIPL,BankIslami Pakistan Limited - Annual Report 2019,financial_result
+2020-03-04 13:25,FEROZ,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-04 14:13,MUREB,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-04 15:37,EFERT,Resignation of Director,other
+2020-03-05 09:15,KOHC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 09:27,JSBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 10:52,POL,MATERIAL INFORMATION,material_info
+2020-03-05 11:43,ICI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 12:29,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 12:31,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 12:41,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 13:21,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 14:14,SERT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-05 15:24,EFERT,NOTICE OF THE 11TH ANNUAL GENERAL MEETING OF ENGRO FERTILIZERS LIMITED,agm
+2020-03-05 15:30,PSO,Material Information,material_info
+2020-03-06 09:26,AKBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-06 10:07,HUBC,Notice of Extraordinary General Meeting The Hub Power Company Limited,agm
+2020-03-06 11:04,MCB,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-06 11:26,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-06 11:27,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-06 13:49,EPCL,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2020-03-06 14:59,GOC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-06 15:26,TGL,Notice of Extra Ordinary General Meeting,agm
+2020-03-06 15:32,POWER,NOTICE OF EXTRAORDINARY GENERAL MEETING,agm
+2020-03-06 15:38,AVN,Material Information,material_info
+2020-03-06 15:39,MARI,Disclosure of Material Price Sensitive Information,other
+2020-03-06 15:40,SEARL,Material Information,material_info
+2020-03-06 16:05,POL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-09 09:33,EPCL,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2020-03-09 09:37,MTIL,Material Information,material_info
+2020-03-09 10:06,SJTM,Material Information - Delisting from PSX,material_info
+2020-03-09 12:20,SHEL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-09 15:15,BYCO,Disclosure of Material Information,material_info
+2020-03-10 09:15,SSGC,Board Meeting Other Than Financial Results,board_meeting_notice
+2020-03-10 10:32,OGDC,Resignation of Director,other
+2020-03-10 14:42,HSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-10 14:59,INIL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-10 15:15,EFERT,Annual Report for the Year Ended 2019,financial_result
+2020-03-11 09:42,POL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-11 09:54,SHJS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-11 12:49,POL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-11 13:34,GLAXO,"financial Results for the Year Ended December 31, 2019",financial_result
+2020-03-11 13:37,GLAXO,Board Meeting - Number of Directors,board_meeting_notice
+2020-03-11 14:20,SNGP,CASUAL VACANCY ON THE BOARD OF SNGPL,other
+2020-03-11 14:35,TREET,Material Information,material_info
+2020-03-12 14:44,CSAP,Material Information,material_info
+2020-03-12 15:17,AGP,Board Meeting in Progress,board_meeting_notice
+2020-03-12 15:20,HUBC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-12 15:29,POL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-12 15:49,ASC,Credit / Delivery of Shares - Right Issue,dividend_or_bonus
+2020-03-13 09:00,AGP,"Financial Results for the Year Ended December 31, 2019",financial_result
+2020-03-13 12:49,ENGRO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-13 13:37,GSKCH,Material Information REVOKED,material_info
+2020-03-13 14:22,MARI,COVID-19 Preventive Measures Taken by MPCL,other
+2020-03-13 14:32,PKGS,FINANCIAL RESULTS FOR THE YEAR ENDED 31 DECEMBER 2019,financial_result
+2020-03-13 14:59,PKGS,Material Information,material_info
+2020-03-13 15:29,NRL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-13 15:30,HASCOL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-16 09:15,SSGC,APPLICATION FOR EXTENSION IN PERIOD OF HOLDING ANNUAL GENERAL MEETING (AGM) FOR THE FY 2017-18,agm
+2020-03-16 09:20,GHGL,Material Information,material_info
+2020-03-16 09:53,EPCL,DISCLOSURE OF MATERIAL INFORMATION,material_info
+2020-03-16 11:43,SILK,Material Information,material_info
+2020-03-16 11:48,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-16 12:23,HSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-16 14:40,POL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-16 14:55,EPCL,Notice of the Twenty Second Annual General Meeting - EPCL,agm
+2020-03-16 14:59,GSKCH,Material Information,material_info
+2020-03-16 15:17,DINT,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-16 15:27,DINT,"DISCLOSURE OF INTEREST BY A DIRECTOR CEO, OR EXECUTIVE OF A LISTED COMPANY AND THEIR SPOUSES /ASSOCIATED COMPANY(S) AND THE SUBSTANTIAL SHAREHOLDERS U/C 5.6.1.(d)",insider_trade
+2020-03-16 15:36,ILP,"Credit of Interim Cash Dividend for the half year ended December 31, 2019 and Notice to be Published in the Newspapers on March 16, 2020",financial_result
+2020-03-16 15:57,DAWH,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-17 09:23,SNGP,SNGPL INITIATIVES FOR NOVEL CORONA VIRUS (COVID-19) OUTBREAK,other
+2020-03-17 09:36,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-17 11:03,OML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-17 12:15,ENGRO,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-17 13:18,CSAP,Material Information,material_info
+2020-03-17 13:30,FCCL,Commissioning of 2.5 Mega Watt Captive Power Plant,other
+2020-03-17 13:35,ASTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-17 14:23,GSKCH,Material Information,material_info
+2020-03-17 14:28,HSM,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-18 09:31,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-18 11:18,SYS,Board Meeting,board_meeting_notice
+2020-03-18 11:31,TGL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-18 13:53,LUCK,Disclosure of Interest by an Associated Company u/s 5.6.1 of PSX Regulations,insider_trade
+2020-03-18 15:35,ASTL,Material Information,material_info
+2020-03-19 09:15,UBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-19 09:46,DAWH,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-19 09:51,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-19 09:52,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-19 10:36,EFUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-19 10:44,NML,"ADDENDUM TO THE NOTICE OF EXTRA ORDINARY GENERAL MEETING OF NISHAT MILLS LIMITED SCHEDULED ON MARCH 31, 2020",agm
+2020-03-19 12:15,NML,ELECTION OF DIRECTORS,agm
+2020-03-19 15:29,KEL,Board Meeting.,board_meeting_notice
+2020-03-20 09:18,SEPL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 09:19,MEBL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 09:41,FFC,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 09:49,FFC,Material Information,material_info
+2020-03-20 10:04,SRVI,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 10:11,MTL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 10:13,OML,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 10:19,PKGS,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 10:23,MFL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 10:47,HUBC,CORONA VIRUS CONTINGENCY PLANNING FOR EXTRAORDINARY GENERAL MEETING OF THE HUB POWER COMPANY LIMITED,agm
+2020-03-20 10:58,EFUL,"Disclosure of Interest by a Director CEO, or Executive of a listed company and their Spouses and the Substantial Shareholders u/c 5.6.1.(d) of PSX Regulations",insider_trade
+2020-03-20 11:18,PAEL,"PEL - Board Meeting for the Year Ended December 31, 2019",other
+2020-03-20 11:38,FCCL,Resignation of Director/Chairman - Fauji Cement Company Limited (FCCL),other
+2020-03-20 11:43,FCCL,Resignation of Director/Chairman - Fauji Cement Company Limited (FCCL),other
+2020-03-20 11:50,PKGS,RESIGNATION OF DIRECTOR,other
+2020-03-20 12:03,FATIMA,Material Information,material_info
+2020-03-20 14:31,BIPL,Annual General Meeting (AGM) of BankIslami Pakistan Limited (BIPL) - Revised arrangements,agm
+2020-03-20 15:09,MARI,Resignation of Director/Chairman of the Board,other
