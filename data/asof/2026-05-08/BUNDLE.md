@@ -1,4 +1,4 @@
-# Replay bundle, close of 2026-05-08
+# Replay bundle, close of 2026-05-08 (brief v2)
 
 === FILE: BRIEF ===
 You are at the close of T. You get only `data/asof/<T>/` (market.md, sectors.csv, screens.csv, announcements_30d.csv, flows.csv, calendar.md; prices as traded at T) and `data/asof/<T>/method/`.
@@ -12,6 +12,17 @@ If you remember what happened after T from your training, that memory is contami
 
 Risk budget [P]: for each entry, size_pct × (entry − stop) / entry ≤ 5 (percent of book); the sum over entries ≤ 10. Concentration up to all-in is allowed within that.
 
+## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+
 Return one JSON object and nothing else:
 
 ```json
@@ -23,7 +34,7 @@ Return one JSON object and nothing else:
  "entries": [{"symbol": "", "type": "TYPE", "entry_price": 0.0, "stop_price": 0.0,
               "stop_type": "fixed|trailing", "size_pct": 0, "horizon_sessions": 60,
               "p_gain": 0.0, "reason": "<=80 words", "evidence": [CITE]}],
- "exposure_pct": 0, "not_known": "<=60 words", "contamination_note": ""}
+ "exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known": "<=60 words", "contamination_note": ""}
 ```
 
 The fields:
@@ -35,6 +46,8 @@ The fields:
 - **Symbols** must appear in screens.csv.
 - **A trailing stop** keeps the distance (entry − stop) / entry, trailed on closes.
 - **p_gain** is the probability that the net return is above 0 at horizon_sessions.
+- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.
+- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.
 
 === FILE: market.md ===
 # Market as of 2026-05-08 close (public information only)
@@ -191,7 +204,47 @@ WAVES,10.69,-0.002,-0.35,-0.302,0.61,-0.35,0.774,0,2026-03-31,0.042,4,0,0,0,8.61
 ZAL,48.01,0.148,-0.303,-0.031,2.518,-0.336,0.985,0,2026-03-31,-3.118,2,0,0,0,6.31,0.062
 
 === FILE: announcements_30d.csv ===
-date,symbol,klass,title
+date,symbol,klass,title
+2026-05-04,NETSOL,material_info,Material Information REVOKED
+2026-05-04,AGP,material_info,Material Information
+2026-05-04,AGP,material_info,Material Information
+2026-05-04,NETSOL,material_info,Material Information (Revise) REVISED
+2026-05-04,ATRL,material_info,DISCLOSURE OF MATERIAL INFORMATION
+2026-05-04,NETSOL,financial_result,Financial Results for the Quarter Ended 2026-03-31
+2026-05-04,WAVES,financial_result,Transmission of Quarterly Report for the Period Ended 31 March 2026
+2026-05-04,TATM,financial_result,"Transmission of Quarterly Report for the Nine Month Period Ended March 31, "
+2026-05-04,NETSOL,financial_result,Transmission of Quarterly Financial Statements for the Period Ended March 3
+2026-05-04,SGPL,financial_result,Transmission of Quarterly Financial Statements for the Period Ended March 3
+2026-05-04,FATIMA,insider_trade,Insider trade disclosure
+2026-05-04,SGPL,insider_trade,Insider trade disclosure
+2026-05-05,TELE,financial_result,Financial Results for the Quarter Ended 31 March 2026
+2026-05-05,POWER,financial_result,"Mandatory Shariah Disclosure for the Half Year Ended December 31, 2025"
+2026-05-05,SYM,insider_trade,Insider trade disclosure
+2026-05-05,KSBP,insider_trade,Insider trade disclosure
+2026-05-06,FCL,material_info,Disclosure of Material Information - Consolidation of Manufacturing Units
+2026-05-06,CPHL,material_info,Material Information
+2026-05-06,CLOV,financial_result,"Transmission of Quarterly Report for the Period Ended March 31, 2026"
+2026-05-06,KSBP,dividend_or_bonus,Credit of Final Cash Dividend
+2026-05-06,GLAXO,dividend_or_bonus,Credit of Final Cash Dividend
+2026-05-06,CEPB,insider_trade,Insider trade disclosure
+2026-05-06,SGPL,insider_trade,Insider trade disclosure
+2026-05-06,WAVES,insider_trade,Insider trade disclosure
+2026-05-07,MTL,material_info,Material Information
+2026-05-07,AVN,material_info,Material Information
+2026-05-07,TELE,financial_result,Transmission of Quarterly Report for the Period Ended 31 March 2026
+2026-05-07,HALEON,dividend_or_bonus,Prior Publication of Notice of Credit of Final Cash Dividend
+2026-05-07,EPCL,insider_trade,Insider trade disclosure
+2026-05-07,KEL,insider_trade,Insider trade disclosure
+2026-05-08,CLOV,material_info,Disclosure Of Material Information
+2026-05-08,AIRLINK,financial_result,Shariah Disclosure for the Half Year Ended 31st December 2025
+2026-05-08,FCEPL,dividend_or_bonus,Credit of Final Cash Dividend
+2026-05-08,SGF,dividend_or_bonus,Credit of Final Cash Dividend
+2026-05-08,HALEON,dividend_or_bonus,Credit of Final Cash Dividend
+2026-05-08,SGF,insider_trade,Insider trade disclosure
+2026-05-08,SGPL,insider_trade,Insider trade disclosure
+2026-05-08,TBL,insider_trade,Insider trade disclosure
+2026-05-08,FATIMA,insider_trade,Insider trade disclosure
+2026-05-08,MEBL,insider_trade,Insider trade disclosure
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -444,7 +497,7 @@ D7. Did I start work before the question was clear?
 2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; cite only the bundle.
 type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
 shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
 shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)

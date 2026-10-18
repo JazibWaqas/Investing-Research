@@ -1,4 +1,4 @@
-# Replay bundle, close of 2026-01-23
+# Replay bundle, close of 2026-01-23 (brief v2)
 
 === FILE: BRIEF ===
 You are at the close of T. You get only `data/asof/<T>/` (market.md, sectors.csv, screens.csv, announcements_30d.csv, flows.csv, calendar.md; prices as traded at T) and `data/asof/<T>/method/`.
@@ -12,6 +12,17 @@ If you remember what happened after T from your training, that memory is contami
 
 Risk budget [P]: for each entry, size_pct × (entry − stop) / entry ≤ 5 (percent of book); the sum over entries ≤ 10. Concentration up to all-in is allowed within that.
 
+## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+
 Return one JSON object and nothing else:
 
 ```json
@@ -23,7 +34,7 @@ Return one JSON object and nothing else:
  "entries": [{"symbol": "", "type": "TYPE", "entry_price": 0.0, "stop_price": 0.0,
               "stop_type": "fixed|trailing", "size_pct": 0, "horizon_sessions": 60,
               "p_gain": 0.0, "reason": "<=80 words", "evidence": [CITE]}],
- "exposure_pct": 0, "not_known": "<=60 words", "contamination_note": ""}
+ "exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known": "<=60 words", "contamination_note": ""}
 ```
 
 The fields:
@@ -35,6 +46,8 @@ The fields:
 - **Symbols** must appear in screens.csv.
 - **A trailing stop** keeps the distance (entry − stop) / entry, trailed on closes.
 - **p_gain** is the probability that the net return is above 0 at horizon_sessions.
+- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.
+- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.
 
 === FILE: market.md ===
 # Market as of 2026-01-23 close (public information only)
@@ -148,45 +161,46 @@ ZAL,72.3,0.521,0.746,1.935,,0.0,1.872,1,2025-09-30,2.926,0,1,0,0,6.31,0.062
 
 === FILE: announcements_30d.csv ===
 date,symbol,klass,title
-2026-01-02,POL,material_info,Material Information
-2026-01-02,LSECL,material_info,Material Information
-2026-01-02,MACFL,material_info,Material Information
-2026-01-02,ATRL,material_info,MATERIAL INFORMATION
-2026-01-05,PSX,material_info,Disclosure of Material Information
-2026-01-05,OTSU,material_info,Disclosure of Material Information
-2026-01-05,LSECL,material_info,Material Information
-2026-01-05,SSML,material_info,Material Information
-2026-01-06,IMS,material_info,Disclosure of Material Information
-2026-01-06,TREET,material_info,Material Information
-2026-01-07,BAFL,material_info,DISCLOSURE OF MATERIAL INFORMATION- REGULATORY APPROVALS FOR DUE DILIGENCE
-2026-01-08,ZUMA,material_info,Material Information
-2026-01-08,FATIMA,material_info,Disclosure of Material Information
-2026-01-08,EFERT,material_info,Disclosure of Material Information
-2026-01-09,FFC,material_info,Material Information
-2026-01-09,PPL,material_info,Material Information - Appointment of a Director Mr Mirza Nasiruddin Mashho
-2026-01-09,BOP,material_info,Material Information
-2026-01-09,GFIL,material_info,Material Information
-2026-01-09,GTYR,material_info,Material Information
-2026-01-12,LSECL,material_info,Material Information
-2026-01-12,MFL,material_info,Disclosure of Material Information
-2026-01-14,PNSC,material_info,DISCLOSURE OF MATERIAL INFORMATION
-2026-01-15,SINDM,material_info,Material Information
+2026-01-13,PIOC,dividend_or_bonus,Notice of Book Closure
+2026-01-13,LIVEN,insider_trade,Insider trade disclosure
+2026-01-13,LIVEN,insider_trade,Insider trade disclosure
+2026-01-13,LIVEN,insider_trade,Insider trade disclosure
+2026-01-13,LIVEN,insider_trade,Insider trade disclosure
+2026-01-14,MACFL,dividend_or_bonus,Final Notice regarding Unclaimed Dividends / Shares
+2026-01-14,KOHC,insider_trade,Insider trade disclosure
+2026-01-14,OBOY,insider_trade,Insider trade disclosure
+2026-01-14,ENGROH,insider_trade,Insider trade disclosure
+2026-01-15,KEL,dividend_or_bonus,Book Closure of KE SUKUK-5.
+2026-01-15,KEL,dividend_or_bonus,"Book Closure of Rated Unsecured and Retails Listed, Shirkat-ul-Aqd Sukuk."
 2026-01-16,MARI,material_info,Material Information
-2026-01-19,BML,material_info,Material Information
+2026-01-16,SGF,financial_result,Emergent Board Meeting (For Other Than Financial Results)
+2026-01-16,BNL,insider_trade,Insider trade disclosure
+2026-01-16,WAVES,insider_trade,Insider trade disclosure
+2026-01-16,FFC,insider_trade,Insider trade disclosure
 2026-01-19,NETSOL,material_info,Material Information
-2026-01-20,ALIFE,material_info,Material Information
+2026-01-19,FABL,dividend_or_bonus,Injection of PKR 200 million Faysal Bank Ltd in its subsidiary Faysal Islam
+2026-01-19,LIVEN,insider_trade,Insider trade disclosure
+2026-01-19,LIVEN,insider_trade,Insider trade disclosure
+2026-01-19,LIVEN,insider_trade,Insider trade disclosure
+2026-01-19,NETSOL,insider_trade,Insider trade disclosure
 2026-01-20,SAZEW,material_info,Material Information
-2026-01-20,BLUEX,material_info,Disclosure of Material Information
+2026-01-20,LUCK,insider_trade,Disclosure of Interest by an Associated Company
+2026-01-20,LIVEN,insider_trade,Insider trade disclosure
+2026-01-20,CPHL,insider_trade,Insider trade disclosure
+2026-01-20,MEBL,insider_trade,Insider trade disclosure
+2026-01-20,ENGROH,insider_trade,Insider trade disclosure
 2026-01-21,SGF,material_info,Material Information
-2026-01-21,SRVI,material_info,Material Information
 2026-01-21,ZAL,material_info,Material Information - Strategic MoU with Wang Chuang Xi Jun Chang Agri Ltd
-2026-01-21,BFAGRO,material_info,Material Information
 2026-01-21,KEL,material_info,Disclosure of Material Information.
+2026-01-21,LOTCHEM,dividend_or_bonus,Declaration of Interim Cash Dividend
+2026-01-21,CPHL,insider_trade,Insider trade disclosure
 2026-01-22,AIRLINK,material_info,Material Information
-2026-01-22,LSECL,material_info,Material Information
-2026-01-22,HINOON,material_info,Material Information
-2026-01-22,JDWS,material_info,Material Information
-2026-01-23,DINT,material_info,Material Information
+2026-01-22,OBOY,financial_result,"Financial Results for the Quarter Ended September 30, 2025"
+2026-01-22,TPLP,financial_result,Corporate Briefing Session on the Companys Business and Financial Results f
+2026-01-22,LOTCHEM,dividend_or_bonus,Notice of Interim Cash Dividend and Book Closure_Prior to Publication.
+2026-01-22,CPHL,insider_trade,Insider trade disclosure
+2026-01-23,OBOY,financial_result,"Transmission of Quarterly Report for the Period Ended September 30, 2025"
+2026-01-23,CPHL,insider_trade,Insider trade disclosure
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -354,7 +368,7 @@ D7. Did I start work before the question was clear?
 2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; cite only the bundle.
 type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
 shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
 shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)

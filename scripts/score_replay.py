@@ -1,5 +1,5 @@
 """Scores the blind-replay exam (knowledge/playbooks/replay_exam.md s6).
-    .venv/Scripts/python.exe -I scripts/score_replay.py [--fake] [--draws 500]
+    .venv/Scripts/python.exe -I scripts/score_replay.py [--fake] [--draws 500] [--reply REPLY.json|REPLY_v1.json] [--dates d1,d2]
 Reads data/asof/<T>/REPLY.json (+ BUNDLE.md), writes tests/out/replay_scores.csv, replay_entries.csv, replay_summary.txt and
 data/replay/surprises.csv. --fake first writes a synthetic REPLY.json for dates that have none (marked "fake": true) so the
 scorer can be tested end to end; a real REPLY.json is never overwritten.
@@ -257,14 +257,19 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fake", action="store_true")
     ap.add_argument("--draws", type=int, default=500)
+    ap.add_argument("--reply", default="REPLY.json", choices=["REPLY.json", "REPLY_v1.json"])
+    ap.add_argument("--dates", default="", help="comma list of dates to score")
     a = ap.parse_args()
     if a.fake:
         for d in ("2019-03-01", "2020-03-20", "2022-07-01", "2024-06-14", "2025-05-12", "2026-07-10"):
             fake(d)
     rng = np.random.default_rng(SEED)
     rows, ent_rows, surprises, pl_win, bp, bo, bkp, bko = [], [], [], [], [], [], [], []
-    for f in sorted((ROOT / "data/asof").glob("*/REPLY.json")):
+    only = {x.strip() for x in a.dates.split(",") if x.strip()}
+    for f in sorted((ROOT / "data/asof").glob(f"*/{a.reply}")):
         d = f.parent.name
+        if only and d not in only:
+            continue
         r = json.loads(f.read_text(encoding="utf-8"))
         sc = pd.read_csv(f.parent / "screens.csv")
         syms = set(sc.symbol)
@@ -346,7 +351,7 @@ def main():
         rows.append(row)
         print(f"{d}: valid={not errs} cite_rate={row['cite_rate']:.0%} exposure={row['exposure']} book60={row['book_60']:+.1%} s3_60={row['s3_60']:+.1%} kmi60={row['kmi_60']:+.1%}" if np.isfinite(row["book_60"]) else f"{d}: valid={not errs} (no 60-session data)")
     if not rows:
-        sys.exit("no REPLY.json found")
+        sys.exit(f"no {a.reply} found")
     df = pd.DataFrame(rows).sort_values("date")
     out = ROOT / "tests/out"
     df.round(4).to_csv(out / "replay_scores.csv", index=False)

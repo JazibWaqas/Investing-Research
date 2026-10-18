@@ -1,4 +1,4 @@
-# Replay bundle, close of 2026-04-10
+# Replay bundle, close of 2026-04-10 (brief v2)
 
 === FILE: BRIEF ===
 You are at the close of T. You get only `data/asof/<T>/` (market.md, sectors.csv, screens.csv, announcements_30d.csv, flows.csv, calendar.md; prices as traded at T) and `data/asof/<T>/method/`.
@@ -12,6 +12,17 @@ If you remember what happened after T from your training, that memory is contami
 
 Risk budget [P]: for each entry, size_pct × (entry − stop) / entry ≤ 5 (percent of book); the sum over entries ≤ 10. Concentration up to all-in is allowed within that.
 
+## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+
 Return one JSON object and nothing else:
 
 ```json
@@ -23,7 +34,7 @@ Return one JSON object and nothing else:
  "entries": [{"symbol": "", "type": "TYPE", "entry_price": 0.0, "stop_price": 0.0,
               "stop_type": "fixed|trailing", "size_pct": 0, "horizon_sessions": 60,
               "p_gain": 0.0, "reason": "<=80 words", "evidence": [CITE]}],
- "exposure_pct": 0, "not_known": "<=60 words", "contamination_note": ""}
+ "exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known": "<=60 words", "contamination_note": ""}
 ```
 
 The fields:
@@ -35,6 +46,8 @@ The fields:
 - **Symbols** must appear in screens.csv.
 - **A trailing stop** keeps the distance (entry − stop) / entry, trailed on closes.
 - **p_gain** is the probability that the net return is above 0 at horizon_sessions.
+- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.
+- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.
 
 === FILE: market.md ===
 # Market as of 2026-04-10 close (public information only)
@@ -174,34 +187,46 @@ ZAL,44.55,0.107,-0.226,0.118,2.15,-0.384,0.248,2,2025-12-31,2.354,0,0,0,0,6.31,0
 
 === FILE: announcements_30d.csv ===
 date,symbol,klass,title
-2026-03-30,ENGROH,material_info,Material Information
-2026-03-30,SAZEW,material_info,Material Information
-2026-03-30,STL,material_info,Material Information - Board Approval for allotment of shares pursuant to S
-2026-03-31,LCI,material_info,Material Information
-2026-03-31,SYM,material_info,Material Information - Recognition in FinanceAsia Best Companies Poll 2026
-2026-03-31,GLAXO,material_info,Material Information
-2026-03-31,IMS,material_info,Disclosure of Material Information
-2026-03-31,SYM,material_info,Material Information
-2026-03-31,MARI,material_info,Material Information
-2026-04-01,RMPL,material_info,Material Information
-2026-04-01,STL,material_info,Material Information - Credit of Ordinary Shares of Supernet Technologies L
-2026-04-01,LUCK,material_info,Material Information
-2026-04-01,OGDC,material_info,Material Information
-2026-04-02,UPFL,material_info,Disclosure of Material Information
-2026-04-02,KAPCO,material_info,Disclosure of Material Information
-2026-04-02,SITC,material_info,Material Information
-2026-04-02,HINO,material_info,Material Information
-2026-04-03,PTC,material_info,Material Information
-2026-04-03,KAPCO,material_info,Disclosure of Material Information
-2026-04-06,KAPCO,material_info,Disclosure of Material Information
-2026-04-06,SITC,material_info,Material Information
+2026-04-06,EPCL,financial_result,"Transmission of Annual Report for the year ended December 31, 2025 - Engro "
+2026-04-06,GLAXO,dividend_or_bonus,Change in book closure date for the 79th AGM
+2026-04-06,CLOV,dividend_or_bonus,INTIMATION OF PUBLICATION OF BOOK CLOSURE NOTICE
+2026-04-06,FABL,dividend_or_bonus,"Credit of 20% Final Cash Dividend for the year ended December 31, 2025 of F"
+2026-04-06,CHCC,insider_trade,Insider trade disclosure
 2026-04-07,ACPL,material_info,Material Information - Circulation of offer letters
-2026-04-07,ITANZ,material_info,Disclosure of Material Information
 2026-04-07,KEL,material_info,Disclosure of Material Information.
-2026-04-07,BML,material_info,Material Information
+2026-04-07,ENGROH,financial_result,"Transmission of Annual Financial Statements for the Year Ended December 31,"
+2026-04-07,SYS,financial_result,"Financial Results for the Year Ended December 31, 2025"
+2026-04-07,HALEON,financial_result,Transmission of Annual Report for the Year Ended 2025
+2026-04-07,PAEL,financial_result,Transmission of Annual Report for the Year Ended 31-12-2025
+2026-04-07,HINOON,financial_result,HINOON | Highnoon Laboratories Limited Financial Results for the Year Ended
+2026-04-07,KEL,dividend_or_bonus,Book Closure of KE SUKUK-5.
+2026-04-07,EPCL,insider_trade,Insider trade disclosure
+2026-04-07,CNERGY,insider_trade,Insider trade disclosure
+2026-04-07,FFC,insider_trade,Insider trade disclosure
+2026-04-08,SGF,financial_result,"Transmission of Annual Report for the Year Ended December 31, 2025"
+2026-04-08,ABOT,financial_result,"Transmission of Annual Report for the Year Ended December 31, 2025"
+2026-04-08,WAFI,financial_result,WAFI | Wafi Energy Pakistan Limited (Formerly : Shell Pakistan Limited) Tra
+2026-04-08,AGP,dividend_or_bonus,CHANGE OF BOOK CLOSURE DATES
+2026-04-08,KSBP,insider_trade,Insider trade disclosure
+2026-04-08,TPLP,insider_trade,Insider trade disclosure
+2026-04-08,ISL,insider_trade,Insider trade disclosure
+2026-04-08,SGPL,insider_trade,Insider trade disclosure
+2026-04-08,SGPL,insider_trade,Insider trade disclosure
 2026-04-09,GGL,material_info,Disclosure of Material Information - GHANI GLOBAL HOLDINGS LIMITED
-2026-04-09,WTL,material_info,Outcome of Emergent Meeting of Board of Directors - Material Information
-2026-04-10,STL,material_info,Material Information - Award of Cybersecurity Contract
+2026-04-09,WAVES,financial_result,Financial Results for the Year Ended 31 Dec 25
+2026-04-09,PQGTL,financial_result,Financial Results for the Year Ended 2025-12-31
+2026-04-09,PAKQATAR,financial_result,Financial Results for the Year Ended 2025-12-31
+2026-04-09,GLAXO,financial_result,Transmission of Annual Financial Statements for the year ended 31-12-2025
+2026-04-09,KEL,dividend_or_bonus,"Book Closure of Rated Unsecured & Retail Listed, Shirkat-ulAqd Sukuk."
+2026-04-09,SGPL,insider_trade,Insider trade disclosure
+2026-04-09,ASL,insider_trade,Insider trade disclosure
+2026-04-09,POWER,insider_trade,Insider trade disclosure
+2026-04-09,AGTL,insider_trade,Insider trade disclosure
+2026-04-09,CRTM,insider_trade,Insider trade disclosure
+2026-04-09,FATIMA,insider_trade,Insider trade disclosure
+2026-04-10,HINOON,financial_result,Transmission of Annual Report for the Year Ended 31 December 2025
+2026-04-10,ACPL,financial_result,Financial Results for the Quarter
+2026-04-10,CHCC,insider_trade,Insider trade disclosure
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -372,7 +397,7 @@ D7. Did I start work before the question was clear?
 2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; cite only the bundle.
 type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
 shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
 shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)

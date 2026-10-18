@@ -1,4 +1,4 @@
-# Replay bundle, close of 2026-07-03
+# Replay bundle, close of 2026-07-03 (brief v2)
 
 === FILE: BRIEF ===
 You are at the close of T. You get only `data/asof/<T>/` (market.md, sectors.csv, screens.csv, announcements_30d.csv, flows.csv, calendar.md; prices as traded at T) and `data/asof/<T>/method/`.
@@ -12,6 +12,17 @@ If you remember what happened after T from your training, that memory is contami
 
 Risk budget [P]: for each entry, size_pct × (entry − stop) / entry ≤ 5 (percent of book); the sum over entries ≤ 10. Concentration up to all-in is allowed within that.
 
+## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+
 Return one JSON object and nothing else:
 
 ```json
@@ -23,7 +34,7 @@ Return one JSON object and nothing else:
  "entries": [{"symbol": "", "type": "TYPE", "entry_price": 0.0, "stop_price": 0.0,
               "stop_type": "fixed|trailing", "size_pct": 0, "horizon_sessions": 60,
               "p_gain": 0.0, "reason": "<=80 words", "evidence": [CITE]}],
- "exposure_pct": 0, "not_known": "<=60 words", "contamination_note": ""}
+ "exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known": "<=60 words", "contamination_note": ""}
 ```
 
 The fields:
@@ -35,6 +46,8 @@ The fields:
 - **Symbols** must appear in screens.csv.
 - **A trailing stop** keeps the distance (entry − stop) / entry, trailed on closes.
 - **p_gain** is the probability that the net return is above 0 at horizon_sessions.
+- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.
+- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.
 
 === FILE: market.md ===
 # Market as of 2026-07-03 close (public information only)
@@ -154,42 +167,45 @@ ZTL,20.92,0.455,0.868,0.431,0.494,-0.109,2.442,1,,,0,0,0,0,,
 === FILE: announcements_30d.csv ===
 date,symbol,klass,title
 2026-06-17,ATRL,material_info,Disclosure of Material Information - Receipt of an offer to acquire 70% sha
-2026-06-17,NETSOL,material_info,Material Information
-2026-06-18,BAFL,material_info,Disclosure of Material Information - Bank Alfalah Limited
 2026-06-18,ENGROH,material_info,Material Information
+2026-06-18,MTL,insider_trade,Insider trade disclosure
+2026-06-18,KOHTM,insider_trade,Insider trade disclosure
 2026-06-19,AVN,material_info,Material Information
 2026-06-19,ATRL,material_info,Material Information
-2026-06-19,GEMPACRA,material_info,Material Information
+2026-06-19,GHGL,financial_result,DECISION OF BOARD MEETING OTHER THAN FINANCIAL RESULTS
+2026-06-19,JVDC,insider_trade,Insider trade disclosure
+2026-06-19,MEBL,insider_trade,Insider trade disclosure
+2026-06-19,ITANZ,insider_trade,Insider trade disclosure
+2026-06-19,FATIMA,insider_trade,Insider trade disclosure
 2026-06-22,LOADS,material_info,Material Information
-2026-06-22,PINL,material_info,Material Information
-2026-06-22,CPPL,material_info,MATERIAL INFORMATION
-2026-06-23,LSECL,material_info,Material Information
-2026-06-23,PPVC,material_info,Material Information
-2026-06-23,SKRS,material_info,Material Information - Revival Plan SKRS
-2026-06-24,TPLT,material_info,Material Information
-2026-06-24,TPL,material_info,Material Information
-2026-06-24,AMBL,material_info,Material Information
-2026-06-24,LIVEN,material_info,MATERIAL INFORMATION SIGNING OF MOU WITH TOFFLON THE TECH GIANT OF CHINA
-2026-06-24,ZUMA,material_info,Material Information
+2026-06-22,FCL,financial_result,Approval of the Annual Budget for Financial Year 2026-27
+2026-06-22,KOHTM,insider_trade,Insider trade disclosure
+2026-06-22,JVDC,insider_trade,Insider trade disclosure
+2026-06-22,KEL,insider_trade,Insider trade disclosure
+2026-06-23,KOHTM,insider_trade,Insider trade disclosure
+2026-06-24,FCL,insider_trade,Insider trade disclosure
+2026-06-24,FFC,insider_trade,Insider trade disclosure
+2026-06-24,ITANZ,insider_trade,Insider trade disclosure
 2026-06-29,SGPL,material_info,Material Information
-2026-06-29,SRVI,material_info,Material Information
-2026-06-29,EFUL,material_info,Disclosure of Material Information
-2026-06-29,SLM,material_info,Material Information
-2026-06-29,EFUG,material_info,Disclosure of Material Information
-2026-06-30,IPAK,material_info,Material Information
-2026-06-30,HINOON,material_info,Material Information- Shariah Screening Compliance Confirmation REVOKED
-2026-06-30,DEL,material_info,Material Information
-2026-07-01,PTC,material_info,Material Information
-2026-07-01,RMPL,material_info,Material Information
-2026-07-01,STL,material_info,Material Information - Award of Contract Valued at Approximately PKR 1 Bill
-2026-07-01,SPCL,material_info,Material Informarion
-2026-07-01,PTL,material_info,Material Information
+2026-06-29,MACFL,financial_result,Emergent Board Meeting Other Than Financial Results
+2026-06-29,TREET,financial_result,Conclusion of Board Meeting Other Than Financial Results (Appointment of Ch
+2026-06-29,KOHTM,insider_trade,Insider trade disclosure
+2026-06-29,PPL,insider_trade,Insider trade disclosure
+2026-06-29,ASC,insider_trade,Insider trade disclosure
+2026-06-30,TREET,financial_result,Conclusion of Board Meeting Other Than Financial Results (Appointment of Ch
+2026-06-30,DGKC,insider_trade,MATERIAL INFORMATION - DISCLOSURE OF INTEREST
+2026-06-30,NML,insider_trade,MATERIAL INFORMATION / DISCLOSURE OF INTEREST
+2026-06-30,KOHC,insider_trade,Insider trade disclosure
 2026-07-01,LUCK,material_info,Material Information
 2026-07-01,KEL,material_info,Disclosure of Material Information
-2026-07-02,ANL,material_info,Material Information
-2026-07-02,PIAHCLA,material_info,Material Information
-2026-07-02,PINL,material_info,Material Information - Appointment of Chairman and Chief Executive Officer
-2026-07-03,ANSM,material_info,Material Information
+2026-07-01,MACFL,financial_result,Announcement - Board Meeting other than Financial Results
+2026-07-01,GHGL,dividend_or_bonus,GHGL | Ghani Glass Limited Revision of Book Closure Date - Ghani Glass Limi
+2026-07-01,FFC,insider_trade,Insider trade disclosure
+2026-07-02,MEBL,insider_trade,Insider trade disclosure
+2026-07-02,THCCL,insider_trade,Insider trade disclosure
+2026-07-03,MUGHAL,dividend_or_bonus,Sukuk V - Notice of book closure
+2026-07-03,ASC,insider_trade,Insider trade disclosure
+2026-07-03,PPL,insider_trade,Insider trade disclosure
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -348,13 +364,6 @@ D7. Did I start work before the question was clear?
 | 1 | Brownfield refinery policy | 17 Aug 2023 | outcome not shown |
 | 3 | OMC margin +Rs1.22 | OCAC ask Apr 2025 | outcome not shown |
 | 6 | Rs1.225tn power bank facility | 2025 | outcome not shown |
-| 7 | IPP terminations | 2024 (unverified) | 5 PPAs ended Oct 2024; Rs1tn savings claimed 29 Dec. Y |
-| 8 | PIA sale | Auction 31 Oct 2024 failed | Sold 23 Dec 2025, closed 29 Jun 2026. Y |
-| 9 | DISCO sales | Oct 2024: two by Jan 2025 | outcome not shown |
-| 10 | K-Electric to Shanghai Electric | PAI 27 Mar 2018 | outcome not shown |
-| 11 | OGDC 7%, PPL 10% sale | CCoP 21 Aug 2020 | outcome not shown |
-| 12 | Six SOEs sold in FY20 | 29 Jan 2020 | outcome not shown |
-| 13 | Super tax cut | Budget 12 Jun 2026 | Finance Act 27 Jun 2026. Y |
 
 === FILE: situations.md ===
 2020-01-13 (outcome_end) | 01_2019_bottom_imf_programme.md | Regime bottom: the IMF approval was not the low. The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak. Lesson: wait for it, not the headline.
@@ -367,7 +376,7 @@ D7. Did I start work before the question was clear?
 2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; cite only the bundle.
 type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
 shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
 shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)

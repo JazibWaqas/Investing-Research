@@ -1,4 +1,4 @@
-# Replay bundle, close of 2026-02-06
+# Replay bundle, close of 2026-02-06 (brief v2)
 
 === FILE: BRIEF ===
 You are at the close of T. You get only `data/asof/<T>/` (market.md, sectors.csv, screens.csv, announcements_30d.csv, flows.csv, calendar.md; prices as traded at T) and `data/asof/<T>/method/`.
@@ -12,6 +12,17 @@ If you remember what happened after T from your training, that memory is contami
 
 Risk budget [P]: for each entry, size_pct × (entry − stop) / entry ≤ 5 (percent of book); the sum over entries ≤ 10. Concentration up to all-in is allowed within that.
 
+## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+
 Return one JSON object and nothing else:
 
 ```json
@@ -23,7 +34,7 @@ Return one JSON object and nothing else:
  "entries": [{"symbol": "", "type": "TYPE", "entry_price": 0.0, "stop_price": 0.0,
               "stop_type": "fixed|trailing", "size_pct": 0, "horizon_sessions": 60,
               "p_gain": 0.0, "reason": "<=80 words", "evidence": [CITE]}],
- "exposure_pct": 0, "not_known": "<=60 words", "contamination_note": ""}
+ "exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known": "<=60 words", "contamination_note": ""}
 ```
 
 The fields:
@@ -35,6 +46,8 @@ The fields:
 - **Symbols** must appear in screens.csv.
 - **A trailing stop** keeps the distance (entry − stop) / entry, trailed on closes.
 - **p_gain** is the probability that the net return is above 0 at horizon_sessions.
+- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.
+- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.
 
 === FILE: market.md ===
 # Market as of 2026-02-06 close (public information only)
@@ -149,43 +162,46 @@ ZAL,67.56,0.291,0.391,1.826,,-0.066,2.514,0,2025-09-30,2.926,0,1,0,0,6.31,0.062
 
 === FILE: announcements_30d.csv ===
 date,symbol,klass,title
-2026-01-22,AIRLINK,material_info,Material Information
-2026-01-22,LSECL,material_info,Material Information
-2026-01-22,HINOON,material_info,Material Information
-2026-01-23,DINT,material_info,Material Information
-2026-01-26,PKGS,material_info,Material Information
-2026-01-26,KEL,material_info,Disclosure of Material Information.
-2026-01-26,CLOV,material_info,MATERIAL INFORMATION
-2026-01-26,QTECH,material_info,MATERIAL INFORMATION
-2026-01-27,HALEON,material_info,Disclosure of Material Information
-2026-01-27,BML,material_info,Material Information
-2026-01-27,AGL,material_info,Material Information - Annual Turnaround (ATA) Activity - 2026
-2026-01-28,PKGS,material_info,Material Information
-2026-01-28,MFFL,material_info,material information
-2026-01-28,GATI,material_info,MATERIAL INFORAMTION REVOKED
-2026-01-28,SYM,material_info,Material Information
-2026-01-28,LSEVL,material_info,Material Information
 2026-01-28,FFC,material_info,Material Information
-2026-01-29,GATI,material_info,MATERIAL INFORMATION
-2026-01-29,MACTER,material_info,Material Information
-2026-01-29,AVN,material_info,Material Information
+2026-01-28,LUCK,financial_result,"Financial Results for the Quarter Ended - December 31, 2025"
+2026-01-28,ISL,dividend_or_bonus,NOTICE OF DECLARATION OF INTERIM DIVIDEND AND BOOK CLOSURE
+2026-01-28,KEL,insider_trade,Insider trade disclosure
+2026-01-29,HCAR,financial_result,"Transmission of Quarterly Report for the Period Ended December 31, 2025"
+2026-01-29,JSML,financial_result,Financial Results for the Quarter Ended 31-Dec-2025
+2026-01-29,FFC,financial_result,Financial Results for the Year Ended 31 Dec 2025
+2026-01-29,ARPL,financial_result,Financial Results for Quarter ended 31 December 2025
+2026-01-29,INIL,financial_result,FINANCIAL RESULTS FOR THE HALF YEAR ENDED 31-12-2025 REVOKED
+2026-01-29,INIL,financial_result,INIL | International Industries Limited FINANCIAL RESULTS FOR THE HALF-YEAR
+2026-01-29,LCI,dividend_or_bonus,NOTICE OF ANNOUNCEMENT OF INTERIM CASH DIVIDEND / BOOK CLOSURE
+2026-01-29,FCCL,insider_trade,Insider trade disclosure
 2026-01-30,SLGL,material_info,Material Information
-2026-01-30,AVN,material_info,Corrigendum for the Material Information
 2026-01-30,FCCL,material_info,Disclosure of Material Information
-2026-01-30,KAPCO,material_info,Disclosure of Material Information
-2026-01-30,ACPL,material_info,Material Information
 2026-01-30,MARI,material_info,Material Information
-2026-02-02,HASCOL,material_info,Material Information - Board approval of Offer Letter from National Bank of
-2026-02-02,NBP,material_info,MATERIAL INFORMATION - ISSUANCE OF RESTRUCTURING OFFER LETTER TO HASCOL PET
-2026-02-02,HINOON,material_info,Material Information
+2026-01-30,JSML,financial_result,Transmission of Quarterly Report for the Period Ended 31-Dec-2025
+2026-01-30,ARPL,financial_result,Transmission of Quarterly Report for the Period Ended 31 December 2025
+2026-01-30,CPHL,insider_trade,Insider trade disclosure
+2026-01-30,FATIMA,insider_trade,Insider trade disclosure
+2026-01-30,TPLP,insider_trade,Insider trade disclosure
+2026-01-30,CPHL,insider_trade,Insider trade disclosure
+2026-01-30,CPHL,insider_trade,Insider trade disclosure
+2026-02-02,PRL,financial_result,"Financial Results for the Half Year ended December 31, 2025"
 2026-02-03,KEL,material_info,Disclosure of Material Information.
 2026-02-04,CSAP,material_info,Material Information - Discontinuance of Cotton Segment REVOKED
 2026-02-04,CSAP,material_info,Material Information - Discontinued Operations
+2026-02-04,ILP,financial_result,"Financial Results for the Half Year Ended December 31, 2025"
+2026-02-04,SAZEW,financial_result,"Transmission of Quarterly Report for the Period Ended December 31, 2025"
+2026-02-04,EPQL,financial_result,"Financial Results for the Year Ended December 31, 2025"
+2026-02-04,CSAP,financial_result,Financial Result for the Quarter Ended 31 December 2025
+2026-02-04,INIL,dividend_or_bonus,NOTICE OF INTERIM CASH DIVIDEND AND BOOK CLOSURE
+2026-02-04,ILP,dividend_or_bonus,"Publication of Interim Cash Dividend for the Year Ending on June 30, 2026 i"
+2026-02-04,CPHL,insider_trade,Insider trade disclosure
 2026-02-06,KEL,material_info,Disclosure of material information
 2026-02-06,ATRL,material_info,MATERIAL INFORMATION
-2026-02-06,LSECL,material_info,Material Information
-2026-02-06,DEL,material_info,Material Information
-2026-02-06,SNBL,material_info,Disclosure of Material Information
+2026-02-06,KEL,financial_result,Emergent Board Meeting Other Than Financial Results
+2026-02-06,MARI,dividend_or_bonus,Credit of Interim Cash Dividend
+2026-02-06,GCWL,insider_trade,Insider trade disclosure
+2026-02-06,FFC,insider_trade,Insider trade disclosure
+2026-02-06,SGPL,insider_trade,Insider trade disclosure
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -344,16 +360,6 @@ D7. Did I start work before the question was clear?
 | 10 | K-Electric to Shanghai Electric | PAI 27 Mar 2018 | outcome not shown |
 | 11 | OGDC 7%, PPL 10% sale | CCoP 21 Aug 2020 | outcome not shown |
 | 12 | Six SOEs sold in FY20 | 29 Jan 2020 | outcome not shown |
-| 14 | Cement FED | Jun 2024 | Effective Jul 2024; no reversal. Y |
-| 15 | Rs170bn mini-budget | 10 Feb 2023 | outcome not shown |
-| 16 | Captive gas levy | Ordinance Jan 2025 | outcome not shown |
-| 17 | GIDC recovery | SC Aug 2020 | outcome not shown |
-| 18 | End subsidised RLNG to fertilizer | 2023 | outcome not shown |
-| 19 | Exporter power tariff Rs19.99 | 6 Oct 2022 | outcome not shown |
-| 20 | Panda bond | "this year" 2024 | outcome not shown |
-| 22 | Net-metering reform | Draft Dec 2025 | outcome not shown |
-| 23 | IMF EFF Board | Staff deal 12 Jul 2024 | 25 Sep 2024. Y |
-**"No plan to raise prices or taxes."** I found no dated denial followed by a reversal, so the base rate is unmeasured. Dated facts only: Rs170bn of taxes announced 10 Feb 2023; a November 2024 denial of mini-budget rumours after an IMF visit (Aaj), with no mini-budget found since (unverified); a pledge of contingency tax measures from Jan 2026 if revenue lagged (Tribune) with no verified outcome.
 
 === FILE: situations.md ===
 2020-01-13 (outcome_end) | 01_2019_bottom_imf_programme.md | Regime bottom: the IMF approval was not the low. The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak. Lesson: wait for it, not the headline.
@@ -366,7 +372,7 @@ D7. Did I start work before the question was clear?
 2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; cite only the bundle.
 type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
 shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
 shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)

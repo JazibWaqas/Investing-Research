@@ -97,14 +97,35 @@ def base_rates(T):
     keep = ["type", "horizon", "n", "hit_rate", "median", "p50plus", "worst", "placebo_median", "verdict"]
     b = b[[c for c in keep if c in b.columns]]
     b = b[~b["type"].astype(str).str.startswith(("policy_", "regime_", "index_", "dividend_", "sector_momentum_ls_grid"))]
-    head = ("# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a "
-            "situation TYPE; infer nothing about specific names or dates.\n")
+    head = ("# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a "
+            "situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; "
+            "cite only the bundle.\n")
     return head + b.to_csv(index=False)
+
+
+POSTURE = """## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+"""
+SCHEMA_OLD = '"exposure_pct": 0, "not_known"'
+SCHEMA_NEW = '"exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known"'
+FIELDS_NEW = ("- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.\n"
+              "- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.")
 
 
 def brief():
     t = (ROOT / "knowledge" / "playbooks" / "replay_exam.md").read_text(encoding="utf-8")
-    return t[t.index("## 3. ") : t.index("## 4. ")].split("\n", 1)[1].strip()
+    b = t[t.index("## 3. ") : t.index("## 4. ")].split("\n", 1)[1].strip()
+    assert SCHEMA_OLD in b and "Return one JSON object" in b
+    b = b.replace("Return one JSON object", POSTURE + "\nReturn one JSON object", 1).replace(SCHEMA_OLD, SCHEMA_NEW)
+    return b + "\n" + FIELDS_NEW
 
 
 def main(date):
@@ -126,6 +147,12 @@ def main(date):
     an["title"] = an.title.str.replace(r"^Disclosure of Interest by a Director.*", "Insider trade disclosure", regex=True).str[:75]
     an["p"] = an.klass.map({k: i for i, k in enumerate(PRIO)}).fillna(4)
     an = an[an.klass != "board_meeting_notice"].sort_values(["p", "date"], ascending=[True, False])   # notices are in calendar.md
+    # Floor: the 40 most recent material rows for screened names always ship. Without it the budget loop trimmed to zero
+    # when the raw file was large (683 and 857 rows on 2026-04-24 and 2026-05-08).
+    an = an[an.symbol.isin(set(sc.symbol)) | ~an.klass.isin(PRIO[:4])]
+    floor = an[an.klass.isin(PRIO[:4])].sort_values("date", ascending=False, kind="stable").head(40)
+    an = pd.concat([floor, an.drop(floor.index)])
+    nfloor = len(floor)
 
     fl = pd.read_csv(A / "flows.csv")
     fl_txt = fl.to_csv(index=False)
@@ -136,22 +163,20 @@ def main(date):
         secs = [("BRIEF", brief()), ("market.md", (A / "market.md").read_text(encoding="utf-8")), ("sectors.csv", (A / "sectors.csv").read_text(encoding="utf-8")),
                 ("screens.csv", sc_txt), ("announcements_30d.csv", a), ("flows.csv", flows), ("calendar.md", (A / "calendar.md").read_text(encoding="utf-8")),
                 ("questions.md", questions()), ("actors.md", "\n".join(act[:nact])), ("situations.md", situations(T)), ("base_rates.csv", base_rates(T))]
-        return f"# Replay bundle, close of {date}\n\n" + "\n\n".join(f"=== FILE: {n} ===\n{t.rstrip()}" for n, t in secs) + "\n=== END ===\n"
+        return f"# Replay bundle, close of {date} (brief v2)\n\n" + "\n\n".join(f"=== FILE: {n} ===\n{t.rstrip()}" for n, t in secs) + "\n=== END ===\n"
 
     nan, nact = len(an), len(act)
     flows = fl_txt
     while len(assemble(nan, nact, flows)) > BUDGET:
-        if nan > 40:
-            nan = int(nan * 0.85)
+        if nan > nfloor:
+            nan = max(int(nan * 0.85), nfloor)
         elif flows is fl_txt:
             f2 = fl.assign(a=fl.net_usd_mn.abs()).sort_values("a", ascending=False).groupby(["kind", "window"]).head(12).drop(columns="a")
             flows = f2.sort_index().to_csv(index=False)
         elif nact > 6:
             nact = int(nact * 0.8)
         else:
-            nan = max(nan - 10, 0)
-            if nan == 0:
-                break
+            break                       # only the floor is left; ship it even if over budget
     txt = assemble(nan, nact, flows)
     (A / "BUNDLE.md").write_text(txt, encoding="utf-8")
     print(f"{date}: {len(txt):,d} chars, ~{len(txt) // 4:,d} tokens; announcements {nan}/{len(an)}, screens {len(sc)}, actor lines {nact}/{len(act)}")

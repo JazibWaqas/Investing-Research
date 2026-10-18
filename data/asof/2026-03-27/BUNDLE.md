@@ -1,4 +1,4 @@
-# Replay bundle, close of 2026-03-27
+# Replay bundle, close of 2026-03-27 (brief v2)
 
 === FILE: BRIEF ===
 You are at the close of T. You get only `data/asof/<T>/` (market.md, sectors.csv, screens.csv, announcements_30d.csv, flows.csv, calendar.md; prices as traded at T) and `data/asof/<T>/method/`.
@@ -12,6 +12,17 @@ If you remember what happened after T from your training, that memory is contami
 
 Risk budget [P]: for each entry, size_pct × (entry − stop) / entry ≤ 5 (percent of book); the sum over entries ≤ 10. Concentration up to all-in is allowed within that.
 
+## The investor's posture
+
+- Capital compounds. Nothing is withdrawn; dividends and profits are reinvested.
+- The aim is capital gains, not yield. Yield names are the wrong core.
+- Growth businesses are the resting place for capital: a business that grows, run by a builder with a sponsor who has done it before, judged on the business first and the numbers second.
+- He accepts drawdowns of 40 to 60% in holdings; a falling price alone is not a reason to leave a business that is intact.
+- He cuts a loser when a live opportunity needs the capital. Capital is never stuck.
+- Concentration is allowed; the limits are on how much can be lost, not on how many names are held.
+- Sitting out is allowed, but it must be argued against the default of holding the core (about 75% exposure). Say why this exposure rather than the default.
+- "No measured edge" for a situation type does not mean hold cash. It means that type gives no timing signal; the core rests on business questions, not on timing base rates.
+
 Return one JSON object and nothing else:
 
 ```json
@@ -23,7 +34,7 @@ Return one JSON object and nothing else:
  "entries": [{"symbol": "", "type": "TYPE", "entry_price": 0.0, "stop_price": 0.0,
               "stop_type": "fixed|trailing", "size_pct": 0, "horizon_sessions": 60,
               "p_gain": 0.0, "reason": "<=80 words", "evidence": [CITE]}],
- "exposure_pct": 0, "not_known": "<=60 words", "contamination_note": ""}
+ "exposure_pct": 0, "exposure_reason": "", "core_default_considered": true, "not_known": "<=60 words", "contamination_note": ""}
 ```
 
 The fields:
@@ -35,6 +46,8 @@ The fields:
 - **Symbols** must appear in screens.csv.
 - **A trailing stop** keeps the distance (entry − stop) / entry, trailed on closes.
 - **p_gain** is the probability that the net return is above 0 at horizon_sessions.
+- **exposure_reason** (required string) is why this exposure rather than the core default of about 75%.
+- **core_default_considered** (required boolean) is true only if you weighed holding the core default against this exposure.
 
 === FILE: market.md ===
 # Market as of 2026-03-27 close (public information only)
@@ -190,43 +203,46 @@ ZAL,39.05,-0.278,-0.178,0.041,1.572,-0.46,0.459,0,2025-12-31,2.354,2,0,0,0,6.31,
 
 === FILE: announcements_30d.csv ===
 date,symbol,klass,title
-2026-03-10,LOTCHEM,material_info,Disclosure of Material Information
-2026-03-10,DADX,material_info,Disclosure of Material Information
-2026-03-10,ZUMA,material_info,Material Information
-2026-03-10,EPCL,material_info,Material Information - Engro Polymer & Chemicals Limited
-2026-03-11,KEL,material_info,Material Information
-2026-03-11,LSECL,material_info,Material Information - Decisions of the Board
-2026-03-11,SFL,material_info,Material Information
-2026-03-11,RCML,material_info,Material Information
-2026-03-11,QTECH,material_info,MATERIAL INFORMATION
-2026-03-12,ARPL,material_info,Material Information & Disclosure Form
-2026-03-12,ZUMA,material_info,Material Information
-2026-03-13,AIRLINK,material_info,Material Information
-2026-03-13,ENGROH,material_info,DISCLOSURE OF MATERIAL INFORMATION
-2026-03-13,PTC,material_info,Material Information
-2026-03-13,ZUMA,material_info,Material Information
-2026-03-16,ITANZ,material_info,Material Information
+2026-03-16,PAEL,financial_result,Financial Results for the Year Ended 31-12-2025
+2026-03-16,ABOT,financial_result,"Financial Results for the Year Ended December 31, 2025"
+2026-03-16,TGL,dividend_or_bonus,Credit of Interim Cash Dividend
+2026-03-16,GCWL,dividend_or_bonus,"Draft Schedule I / Circular under section 83 of the Companies Act, 2017 reg"
+2026-03-16,CHCC,insider_trade,Insider trade disclosure
 2026-03-17,BFAGRO,material_info,Material Information
-2026-03-17,DLL,material_info,Disclosure of Material Information
-2026-03-19,BAFL,material_info,Disclosure of Material Information
-2026-03-19,TSBL,material_info,Material Information - Decisions of the Board
+2026-03-17,OGDC,dividend_or_bonus,Credit of Second Interim Cash Dividend D-97
+2026-03-17,ATRL,dividend_or_bonus,CREDIT OF INTERIM CASH DIVIDEND
+2026-03-17,KEL,insider_trade,Insider trade disclosure
+2026-03-18,AGTL,financial_result,Financial Results for the Year Ended 31 December 2025
+2026-03-18,TELE,financial_result,Transmission of Quarterly Financials for the Period Ended 31 December 2025
+2026-03-18,SGF,financial_result,"Financial Results for the Year Ended December 31, 2025"
+2026-03-18,GWLC,insider_trade,Insider trade disclosure
+2026-03-18,KOHC,insider_trade,Insider trade disclosure
+2026-03-18,BFAGRO,insider_trade,"DISCLOSURE OF INTEREST BY THE DIRECTORS, CEO, EXECUTIVES, THEIR SPOUSES AND"
+2026-03-18,TPLP,insider_trade,Insider trade disclosure
+2026-03-19,DOL,dividend_or_bonus,Credit of Interim Cash Dividend
+2026-03-19,LOADS,dividend_or_bonus,Status of Subscription of Right Issue and Allotment of Shares
+2026-03-19,KSBP,insider_trade,Insider trade disclosure
 2026-03-24,AGP,material_info,Material Information
-2026-03-24,PTC,material_info,Material Information
 2026-03-24,MARI,material_info,Material Information
 2026-03-24,FATIMA,material_info,Material Information
 2026-03-24,TPLT,material_info,Material Information
-2026-03-24,FRCL,material_info,Material Information
-2026-03-24,FCIBL,material_info,Material Information
 2026-03-24,FFC,material_info,Material Information - Execution of Key Project Agreements for Pressure Enh
 2026-03-24,EFERT,material_info,DISCLOSURE OF MATERIAL INFORMATION
-2026-03-24,BML,material_info,Material Information
-2026-03-24,UNITY,material_info,Material Information
-2026-03-24,HPL,material_info,Material Information
-2026-03-25,GDL,material_info,Material Information
-2026-03-25,BML,material_info,Material Information
-2026-03-25,PNSC,material_info,DISCLOSURE OF MATERIAL INFORMATION
-2026-03-27,POL,material_info,Material Information
-2026-03-27,PICT,material_info,Material Information
+2026-03-24,AGP,financial_result,"Financial Results for the Year Ended December 31, 2025"
+2026-03-24,GHGL,dividend_or_bonus,Credit of E payment of Second Interim Cash Dividend Ghani Glass Ltd
+2026-03-24,HUBC,dividend_or_bonus,Credit of Second Interim Dividend (D-58)
+2026-03-24,GWLC,insider_trade,Insider trade disclosure
+2026-03-24,CHCC,insider_trade,Insider trade disclosure
+2026-03-24,SYM,insider_trade,Insider trade disclosure
+2026-03-25,FFC,dividend_or_bonus,Credit of Final Cash Dividend 2025
+2026-03-25,GWLC,insider_trade,Insider trade disclosure
+2026-03-25,KSBP,insider_trade,Insider trade disclosure
+2026-03-26,GLAXO,financial_result,Financial Results for the year Ended 2025-12-31
+2026-03-26,GWLC,insider_trade,Insider trade disclosure
+2026-03-26,SGPL,insider_trade,Insider trade disclosure
+2026-03-27,KSBP,financial_result,Financial Results for the Year Ended 2025-12-31
+2026-03-27,SLGL,financial_result,"Financial Results for the Year Ended December 31, 2025"
+2026-03-27,CSAP,insider_trade,Insider trade disclosure
 
 === FILE: flows.csv ===
 kind,window,key,net_usd_mn,through
@@ -369,20 +385,6 @@ D7. Did I start work before the question was clear?
 | 6 | Rs1.225tn power bank facility | 2025 | outcome not shown |
 | 7 | IPP terminations | 2024 (unverified) | 5 PPAs ended Oct 2024; Rs1tn savings claimed 29 Dec. Y |
 | 8 | PIA sale | Auction 31 Oct 2024 failed | outcome not shown |
-| 9 | DISCO sales | Oct 2024: two by Jan 2025 | outcome not shown |
-| 10 | K-Electric to Shanghai Electric | PAI 27 Mar 2018 | outcome not shown |
-| 11 | OGDC 7%, PPL 10% sale | CCoP 21 Aug 2020 | outcome not shown |
-| 12 | Six SOEs sold in FY20 | 29 Jan 2020 | outcome not shown |
-| 14 | Cement FED | Jun 2024 | Effective Jul 2024; no reversal. Y |
-| 15 | Rs170bn mini-budget | 10 Feb 2023 | outcome not shown |
-| 16 | Captive gas levy | Ordinance Jan 2025 | outcome not shown |
-| 17 | GIDC recovery | SC Aug 2020 | outcome not shown |
-| 18 | End subsidised RLNG to fertilizer | 2023 | outcome not shown |
-| 19 | Exporter power tariff Rs19.99 | 6 Oct 2022 | outcome not shown |
-| 20 | Panda bond | "this year" 2024 | outcome not shown |
-| 22 | Net-metering reform | Draft Dec 2025 | Notified 9 Feb 2026; partly reversed. Y |
-| 23 | IMF EFF Board | Staff deal 12 Jul 2024 | 25 Sep 2024. Y |
-**"No plan to raise prices or taxes."** I found no dated denial followed by a reversal, so the base rate is unmeasured. Dated facts only: Rs170bn of taxes announced 10 Feb 2023; a November 2024 denial of mini-budget rumours after an IMF visit (Aaj), with no mini-budget found since (unverified); a pledge of contingency tax measures from Jan 2026 if revenue lagged (Tribune) with no verified outcome.
 
 === FILE: situations.md ===
 2020-01-13 (outcome_end) | 01_2019_bottom_imf_programme.md | Regime bottom: the IMF approval was not the low. The second signal (Sep 2019 rate hold, stable rupee) returned +35% to the January 2020 peak. Lesson: wait for it, not the headline.
@@ -395,7 +397,7 @@ D7. Did I start work before the question was clear?
 2019-08-16 (outcome_end) | 12_2017_19_bear_and_the_2018_election.md | Balance-of-payments squeeze and hike cycle: the index fell 46% to the August 2019 low and 3 of 75 liquid names rose. Lesson: read the rate and the rupee, not the politics.
 
 === FILE: base_rates.csv ===
-# WARNING: measured on data through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates.
+# WARNING: measured through 2026-10-16, partly AFTER this replay date. Use only as rough odds for a situation TYPE; infer nothing about specific names or dates. Note: the replay model may remember this period; cite only the bundle.
 type,horizon,n,hit_rate,median,p50plus,worst,placebo_median,verdict
 shock_index5_buy,20 sessions,9,78%,+4.2%,,-7.7%,+1.1%,no word given (Verdict 3: buy only on a known trigger)
 shock_index5_buy,60 sessions,9,67%,+3.5%,,-14.0%,+2.2%,no word given (Verdict 3: buy only on a known trigger)
@@ -555,5 +557,70 @@ results_loss_to_profit,60 sessions,49,59%,+5.7%,12%,-32.5%,+4.0%,nothing as an e
 results_loss_to_profit,120 sessions,47,60%,+8.8%,17%,-70.6%,+12.0%,nothing as an entry rule
 results_loss_to_profit_trail20,trail20 stop (variable),47,43%,-2.9%,19%,-24.0%,-1.3%,nothing as an entry rule
 results_all_liquid_baseline,60 sessions,1223,59%,+4.7%,7%,-72.1%,,baseline (no verdict word)
-results_all_liquid_baseline_trail20,trail20 stop (variable),1169,46%,-2.5%,16%,-38.5%,,baseline (no verdict word)
+results_all_liquid_baseline_trail20,trail20 stop (variable),1169,46%,-2.5%,16%,-38.5%,,baseline (no verdict word)
+corp_E1a_buyback_approval,20 sessions (KMI members),,54%,+0.7%,,,,nothing
+corp_E1a_buyback_approval,60 sessions (KMI members),13,54%,+0.7%,0%,-19%,-1.2%,nothing; mean +1.2%; <-30% 0%; p(med) 0.40; placebo is matched P2 median
+corp_E1a_buyback_approval,120 sessions (KMI members),11,64%,+4.8%,,,,nothing
+corp_E1a_buyback_approval,20% trailing stop (KMI members),12,42%,-3.5%,17%,-23%,,nothing; stop mean +46.3%
+corp_E1b_first_purchase,20 sessions (KMI members),,33%,-1.8%,,,,nothing
+corp_E1b_first_purchase,60 sessions (KMI members),15,47%,-2.4%,0%,-17%,+0.6%,nothing; mean +0.1%; <-30% 0%; p(med) 0.74; placebo is matched P2 median
+corp_E1b_first_purchase,120 sessions (KMI members),13,62%,+5.7%,,,,nothing
+corp_E1b_first_purchase,20% trailing stop (KMI members),14,36%,-6.5%,14%,-23%,,nothing; stop mean +62.0% (THCCL runner)
+corp_E2a_bonus,20 sessions (KMI members),,42%,-2.9%,,,,nothing
+corp_E2a_bonus,60 sessions (KMI members),89,39%,-6.0%,2%,-35%,-3.9%,nothing; mean -1.6%; <-30% 4%; p(med) 0.84; placebo is matched P2 median
+corp_E2a_bonus,120 sessions (KMI members),88,39%,-7.4%,,,,nothing
+corp_E2a_bonus,20% trailing stop (KMI members),89,31%,-12.8%,8%,-28%,,nothing; stop mean +0.5%
+corp_E2b_split,20 sessions (KMI members),,50%,+2.0%,,,,watch
+corp_E2b_split,60 sessions (KMI members),9,89%,+13.9%,0%,-13%,-3.4%,watch (thin tail); mean +14.8%; <-30% 0%; p(med) 0.04; placebo is matched P2 median
+corp_E2b_split,120 sessions (KMI members),8,62%,+12.9%,,,,watch
+corp_E2b_split,20% trailing stop (KMI members),9,67%,+11.3%,11%,-23%,,watch; stop mean +20.1%
+corp_E3a_ceo_chairman_appointed,20 sessions (KMI members),,42%,-1.5%,,,,nothing
+corp_E3a_ceo_chairman_appointed,60 sessions (KMI members),526,49%,-0.5%,5%,-97%,-1.6%,nothing; mean +2.9%; <-30% 6%; p(med) 0.14; placebo is matched P2 median
+corp_E3a_ceo_chairman_appointed,120 sessions (KMI members),496,47%,-2.1%,,,,nothing
+corp_E3a_ceo_chairman_appointed,20% trailing stop (KMI members),511,36%,-8.5%,10%,-90%,,nothing; stop mean +6.1%
+corp_E3b_resigns,20 sessions (KMI members),,48%,-1.5%,,,,nothing (lean avoid)
+corp_E3b_resigns,60 sessions (KMI members),27,48%,-4.9%,4%,-66%,+0.1%,nothing (lean avoid); mean -2.5%; <-30% 4%; p(med) 0.90; placebo is matched P2 median
+corp_E3b_resigns,120 sessions (KMI members),26,35%,-6.9%,,,,nothing (lean avoid)
+corp_E3b_resigns,20% trailing stop (KMI members),25,20%,-13.0%,12%,-30%,,nothing (lean avoid); stop mean -3.2%
+corp_E3d_takeover_or_mgmt_change,20 sessions (KMI members),,35%,-2.1%,,,,nothing
+corp_E3d_takeover_or_mgmt_change,60 sessions (KMI members),74,50%,+0.0%,5%,-66%,-1.4%,nothing; mean +1.4%; <-30% 7%; p(med) 0.24; placebo is matched P2 median
+corp_E3d_takeover_or_mgmt_change,120 sessions (KMI members),71,49%,-0.6%,,,,nothing
+corp_E3d_takeover_or_mgmt_change,20% trailing stop (KMI members),72,40%,-7.8%,8%,-53%,,nothing; stop mean +4.4%
+corp_E4a_psx_letter,20 sessions (KMI members),,41%,-4.0%,,,,nothing as a buy; avoid after a run-up
+corp_E4a_psx_letter,60 sessions (KMI members),373,43%,-3.7%,8%,-82%,-0.6%,nothing as a buy; avoid after a run-up; mean +4.6%; <-30% 10%; p(med) 1.00; placebo is matched P2 median
+corp_E4a_psx_letter,120 sessions (KMI members),318,52%,+0.7%,,,,nothing as a buy; avoid after a run-up
+corp_E4a_psx_letter,20% trailing stop (KMI members),394,34%,-12.6%,11%,-80%,,nothing as a buy; stop mean +9.3%
+corp_E4b_company_reply,20 sessions (KMI members),,43%,-3.9%,,,,nothing
+corp_E4b_company_reply,60 sessions (KMI members),29,59%,+4.0%,14%,-58%,-0.2%,nothing (n 29); mean +20.4%; <-30% 10%; p(med) 0.22; placebo is matched P2 median
+corp_E4b_company_reply,120 sessions (KMI members),25,56%,+4.7%,,,,nothing
+corp_E4b_company_reply,20% trailing stop (KMI members),29,41%,-7.7%,7%,-26%,,nothing; stop mean +11.2%
+corp_E5_rating_upgrade,20 sessions (KMI members),,57%,+2.1%,,,,nothing (anecdote)
+corp_E5_rating_upgrade,60 sessions (KMI members),7,57%,+8.5%,0%,-28%,+0.2%,nothing (anecdote); mean +3.1%; <-30% 0%; p(med) 0.15; placebo is matched P2 median
+corp_E5_rating_upgrade,120 sessions (KMI members),6,33%,-5.7%,,,,nothing (anecdote)
+corp_E5_rating_upgrade,20% trailing stop (KMI members),7,43%,-8.4%,14%,-21%,,nothing (anecdote); stop mean +4.6%
+corp_E6_rights_issue,20 sessions (KMI members),,34%,-4.5%,,,,avoid
+corp_E6_rights_issue,60 sessions (KMI members),76,33%,-9.1%,7%,-66%,-3.8%,avoid; mean -4.6%; <-30% 14%; p(med) 0.99; placebo is matched P2 median
+corp_E6_rights_issue,120 sessions (KMI members),72,28%,-15.4%,,,,avoid
+corp_E6_rights_issue,20% trailing stop (KMI members),75,25%,-15.2%,4%,-37%,,avoid; stop mean -6.9%
+corp_E7_kmi_addition,20 sessions (KMI members),,51%,+0.2%,,,,nothing (avoid chasing)
+corp_E7_kmi_addition,60 sessions (KMI members),388,36%,-4.9%,3%,-62%,-0.2%,nothing (avoid chasing); mean +0.7%; <-30% 4%; p(med) 1.00; placebo is matched P2 median
+corp_E7_kmi_addition,120 sessions (KMI members),352,41%,-5.1%,,,,nothing (avoid chasing)
+corp_E7_kmi_addition,20% trailing stop (KMI members),378,33%,-10.3%,10%,-42%,,nothing; stop mean +5.5%
+compounders_3x_share_5y,5 years (start 2016-12-30),155,3.2%,,,,,watch (population; 5 names with 3x)
+compounders_3x_share_5y,5 years (start 2017-12-29),85,2.4%,,,,,watch (population; 2 names with 3x)
+compounders_3x_share_5y,5 years (start 2018-12-31),97,5.2%,,,,,watch (population; 5 names with 3x)
+compounders_3x_share_5y,5 years (start 2019-12-31),111,16.2%,,,,,watch (population; 18 names with 3x)
+compounders_3x_share_5y,5 years (start 2020-12-31),124,23.4%,,,,,watch (population; 29 names with 3x)
+compounders_3x_share_5y,5 years (start 2021-09-30),137,21.2%,,,,,watch (population; 29 names with 3x)
+compounders_3x_share_5y,5 years (pooled over 58 starts; n is the average),108,12.1%,,,,,watch (population; 75 names had a 3x window)
+compounders_3x_share_decade,9.8 years (2016-12-30 to 2026-10-16),155,20.0%,,,,,watch (population; 31 names with 3x)
+compounders_growth_core_1y_position,1 year rule variant (start 2023-09-28; position level; file label 1y variant),39,51%,+6.6%,26%,-35.3%,,nothing; mean +26.3%; 8% below -30%
+compounders_growth_core_2y_position,2 year rule variant (start 2024-09-30; position level; file label 2y variant),23,61%,+10.1%,26%,-52.6%,,nothing; mean +24.6%; 4% below -30%
+compounders_growth_core_3y_position,3 year rule variant (position level; file label 3y variant),17,24%,-8.0%,,,,nothing; mean -4.7%
+compounders_growth_core_3y_fixed,1.04 years (start 2025-09-30),,,,,,,nothing; fixed 0.88x (-11.7%) vs KMI TR 0.96x; EW liquid KMI 0.88x; placebo median 0.93x (pctile 30); max DD -27.9 / -21.3; numeric columns blank because outcome is a multiple
+compounders_growth_core_3y_quality_fixed,1.04 years (start 2025-09-30),,,,,,,nothing; fixed 0.82x vs KMI TR 0.96x; EW 0.88x; placebo median 0.86x (pctile 35); numeric columns blank because outcome is a multiple
+compounders_growth_core_2y_fixed,2.04 years (start 2024-09-30),,,,,,,nothing; fixed 1.73x (+30.6%) vs KMI TR 1.81x (+33.6%); EW 1.50x; placebo median 1.88x (pctile 30); numeric columns blank because outcome is a multiple
+compounders_growth_core_2y_quality_fixed,2.04 years (start 2024-09-30),,,,,,,nothing; fixed 1.71x vs KMI TR 1.81x; EW 1.50x; placebo median 1.91x (pctile 24); numeric columns blank because outcome is a multiple
+compounders_growth_core_1y_fixed,3.05 years (start 2023-09-28),,,,,,,nothing; fixed 2.80x (+40.2%) vs KMI TR 2.87x (+41.2%); EW 2.19x; placebo median 2.80x (pctile 51); numeric columns blank because outcome is a multiple
+compounders_growth_core_1y_quality_fixed,3.05 years (start 2023-09-28),,,,,,,nothing; fixed 2.82x vs KMI TR 2.87x; EW 2.19x; placebo median 2.69x (pctile 56); numeric columns blank because outcome is a multiple
 === END ===
