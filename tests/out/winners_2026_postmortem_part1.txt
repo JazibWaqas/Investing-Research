@@ -1,0 +1,203 @@
+== PART 1. Six names, 16 Oct 2025 - 16 Oct 2026. Adjusted (total return) closes, 1.00 = close of 2025-10-16 ==
+
+-- monthly close multiple (month end; first column 2025-10-16, last 2026-10-16) and trailing-60-session median traded value, Rs m (tier H>20m M 5-20m L 2-5m XL<2m)
+           25-10   25-11   25-12   26-01   26-02   26-03   26-04   26-05   26-06   26-07   26-08   26-09   26-10
+MACFL       1.00    0.88    1.02    1.17    0.86    0.71    1.06    2.11    2.41    2.44    2.10    2.54    3.61
+  tv m    22.0h    9.5m    7.8m   13.1m   18.6m   11.9m    7.6m    8.1m   27.3h   38.8h   33.2h   52.9h   56.5h 
+QUICE       1.00    1.04    2.62    3.23    3.29    2.43    2.42    3.20    3.77    3.74    3.37    3.27    3.29
+  tv m    12.5m   19.2m   29.7h   89.2h  101.1h   45.2h   28.5h   27.0h   47.8h   35.0h   10.6m    4.3l    3.8l 
+PRL         1.00    0.97    1.01    1.02    0.77    0.78    0.99    0.96    0.99    1.66    2.88    2.57    2.95
+  tv m   251.4h  369.2h  268.4h  255.5h  210.3h  165.3h  190.5h  213.6h  212.9h  182.0h  886.8h 1884.9h 2165.1h 
+CRTM        1.00    1.08    1.15    1.00    0.92    1.73    3.35    3.05    2.82    3.10    2.93    2.63    2.43
+  tv m     8.0m    6.8m    5.3m    7.2m    4.5l    6.7m   25.3h   33.8h   10.6m    2.4l    1.0x    0.2x    0.2x 
+JVDC        1.00    1.00    1.49    2.18    1.75    1.38    1.62    1.82    2.00    1.95    1.96    1.98    1.88
+  tv m    35.0h   20.9h   15.4m   27.4h  105.7h   96.9h   96.6h   86.7h  124.5h  115.3h  109.3h   68.3h   59.9h 
+TPLT        1.00    0.94    1.44    1.75    1.40    1.09    1.72    2.47    2.89    3.84    4.16    4.29    4.09
+  tv m     2.3l    1.8x    1.6x    7.3m   10.4m    5.2m    4.3l    9.9m   17.5m   20.3h   15.7m   12.7m   11.8m 
+
+-- peak, base, liquidity
+sym    base date    base x peak date    peak x  end x peak/base end/base peak->end  sessions liquid(>5m)   first >5m  first >2m  KMI member at end
+MACFL  2026-03-09     0.71 2026-10-14     4.46   3.61      6.32     5.12      -19%         250 of 250  2025-10-16 2025-10-16               True
+QUICE  2025-10-20     0.98 2026-01-08     4.64   3.29      4.74     3.36      -29%         226 of 250  2025-10-16 2025-10-16               True
+PRL    2026-03-02     0.70 2026-10-16     2.95   2.95      4.24     4.24        0%         250 of 250  2025-10-16 2025-10-16               True
+CRTM   2026-02-24     0.76 2026-04-20     3.68   2.43      4.85     3.21      -34%         167 of 250  2025-10-16 2025-10-16               True
+JVDC   2025-10-28     0.93 2026-01-30     2.18   1.88      2.34     2.02      -14%         250 of 250  2025-10-16 2025-10-16               True
+TPLT   2025-11-26     0.93 2026-09-07     4.56   4.09      4.92     4.42      -10%         155 of 250  2026-01-22 2025-10-16              False
+
+-- timeline of observable events (dates = session of the signal close)
+MACFL   first 252-high 2026-06-15 (x2.38)  first upper lock 2025-11-04  first 3-lock cluster (3 locks in 10 sessions) 2026-01-20  first volume >=3x 20d mean 2025-11-05  upper-lock closes in year 34  252-high closes in year 12
+QUICE   first 252-high 2025-10-28 (x1.12)  first upper lock 2025-10-28  first 3-lock cluster (3 locks in 10 sessions) 2025-11-04  first volume >=3x 20d mean 2025-10-22  upper-lock closes in year 35  252-high closes in year 21
+PRL     first 252-high 2026-07-09 (x1.16)  first upper lock 2026-03-05  first 3-lock cluster (3 locks in 10 sessions) 2026-08-21  first volume >=3x 20d mean 2025-12-30  upper-lock closes in year 9  252-high closes in year 26
+CRTM    first 252-high 2025-11-26 (x1.12)  first upper lock 2025-12-30  first 3-lock cluster (3 locks in 10 sessions) 2026-03-04  first volume >=3x 20d mean 2025-11-19  upper-lock closes in year 23  252-high closes in year 21
+JVDC    first 252-high 2025-12-26 (x1.32)  first upper lock 2025-12-26  first 3-lock cluster (3 locks in 10 sessions) never  first volume >=3x 20d mean 2025-12-09  upper-lock closes in year 4  252-high closes in year 14
+   (TPLT is not in the daily table; locks = close >= 9.95% over the previous close, volume ratio from the volume panel: approximate)
+TPLT    first 252-high 2025-12-17 (x1.44)  first upper lock 2025-12-10  first 3-lock cluster (3 locks in 10 sessions) 2025-12-17  first volume >=3x 20d mean 2025-10-21  upper-lock closes in year 13  252-high closes in year 30
+
+-- sector peers vs the name over the move (base date -> peak date). Peers: same sector label, liquid at the peak, self excluded; EW median of price+dividend return; KMI All Share
+MACFL  Glass/pack/paper       name   +532%  sector peers median   +34% (n=8, best +139%)  KMI  +14%   sector_ret_5d on first-high day +8.1%
+QUICE  Food & staples         name   +374%  sector peers median    +3% (n=11, best +54%)  KMI   +7%   sector_ret_5d on first-high day -3.5%
+PRL    Refineries             name   +324%  sector peers median  +111% (n=3, best +136%)  KMI  +12%   sector_ret_5d on first-high day +7.5%
+CRTM   Textiles               name   +385%  sector peers median    -2% (n=8, best +34%)  KMI   +5%   sector_ret_5d on first-high day -1.4%
+JVDC   Gas utils & misc       name   +134%  sector peers median   +11% (n=8, best +37%)  KMI  +11%   sector_ret_5d on first-high day -0.9%
+TPLT   Tech & telecom         name   +392%  sector peers median   -19% (n=15, best +251%)  KMI   +7%   sector_ret_5d on first-high day +nan%
+
+-- share of the eventual gain still ahead at day k after each anchor (log gain from the close at day k to the peak / log gain base -> peak). peak/Pk and end/Pk = multiples from the day-k close
+sym    anchor  date                           k=0                   k=5                  k=10                  k=20                  k=40
+                           ahead  peak/Pk  end/Pkahead  peak/Pk  end/Pkahead  peak/Pk  end/Pkahead  peak/Pk  end/Pkahead  peak/Pk  end/Pk
+MACFL  hi      2026-06-15       34%   1.87x   1.52x     30%   1.73x   1.40x     33%   1.84x   1.49x     31%   1.78x   1.45x     34%   1.86x   1.51x
+MACFL  ul      2025-11-04       85%   4.80x   3.89x     89%   5.14x   4.16x     88%   5.08x   4.12x     87%   4.99x   4.04x     80%   4.39x   3.55x
+MACFL  cl      2026-01-20       68%   3.50x   2.83x     63%   3.20x   2.59x     72%   3.77x   3.05x     77%   4.15x   3.36x     94%   5.61x   4.54x
+MACFL  v3      2025-11-05       81%   4.49x   3.64x     89%   5.14x   4.16x     83%   4.62x   3.74x     88%   5.03x   4.07x     78%   4.23x   3.43x
+QUICE  hi      2025-10-28       91%   4.13x   2.93x     83%   3.65x   2.59x     92%   4.15x   2.95x     97%   4.52x   3.21x     50%   2.18x   1.55x
+QUICE  ul      2025-10-28       91%   4.13x   2.93x     83%   3.65x   2.59x     92%   4.15x   2.95x     97%   4.52x   3.21x     50%   2.18x   1.55x
+QUICE  cl      2025-11-04       83%   3.65x   2.59x     92%   4.15x   2.95x     91%   4.14x   2.94x     97%   4.50x   3.20x     37%   1.77x   1.26x
+QUICE  v3      2025-10-22       95%   4.38x   3.11x     91%   4.11x   2.92x     90%   4.05x   2.88x     94%   4.30x   3.05x     56%   2.40x   1.70x
+PRL    hi      2026-07-09       65%   2.56x   2.56x     65%   2.57x   2.57x     49%   2.04x   2.04x     36%   1.68x   1.68x     13%   1.20x   1.20x
+PRL    ul      2026-03-05       91%   3.71x   3.71x     91%   3.70x   3.70x     87%   3.54x   3.54x     78%   3.08x   3.08x     76%   2.99x   2.99x
+PRL    cl      2026-08-21       11%   1.18x   1.18x      2%   1.02x   1.02x     13%   1.20x   1.20x     14%   1.23x   1.23x      0%   1.00x   1.00x
+PRL    v3      2025-12-30       72%   2.84x   2.84x     70%   2.76x   2.76x     73%   2.87x   2.87x     72%   2.84x   2.84x     95%   3.95x   3.95x
+CRTM   hi      2025-11-26       75%   3.28x   2.17x     75%   3.26x   2.16x     73%   3.18x   2.10x     75%   3.29x   2.18x     82%   3.63x   2.41x
+CRTM   ul      2025-12-30       71%   3.07x   2.03x     73%   3.16x   2.09x     75%   3.28x   2.17x     84%   3.74x   2.48x     99%   4.74x   3.14x
+CRTM   cl      2026-03-04       77%   3.37x   2.23x     47%   2.10x   1.39x     17%   1.30x   0.86x     33%   1.68x   1.11x             past peak
+CRTM   v3      2025-11-19       81%   3.61x   2.39x     75%   3.28x   2.17x     75%   3.26x   2.16x     72%   3.10x   2.05x     78%   3.41x   2.26x
+JVDC   hi      2025-12-26       59%   1.65x   1.43x     34%   1.33x   1.15x     34%   1.33x   1.15x     15%   1.13x   0.98x             past peak
+JVDC   ul      2025-12-26       59%   1.65x   1.43x     34%   1.33x   1.15x     34%   1.33x   1.15x     15%   1.13x   0.98x             past peak
+JVDC   cl      never       
+JVDC   v3      2025-12-09       82%   2.01x   1.73x     83%   2.02x   1.75x     76%   1.91x   1.65x     35%   1.35x   1.16x             past peak
+TPLT   hi      2025-12-17       72%   3.17x   2.85x     77%   3.40x   3.05x     66%   2.87x   2.58x     60%   2.61x   2.34x     69%   3.02x   2.71x
+TPLT   ul      2025-12-10       86%   3.97x   3.56x     72%   3.17x   2.85x     77%   3.40x   3.05x     57%   2.50x   2.24x     61%   2.64x   2.37x
+TPLT   cl      2025-12-17       72%   3.17x   2.85x     77%   3.40x   3.05x     66%   2.87x   2.58x     60%   2.61x   2.34x     69%   3.02x   2.71x
+TPLT   v3      2025-10-21       94%   4.47x   4.01x     97%   4.70x   4.22x     95%   4.57x   4.10x     96%   4.63x   4.16x     79%   3.50x   3.14x
+   anchors: hi = first close above prior 252-high, ul = first upper-lock close, cl = first 3 locks in 10 sessions, v3 = first day volume >= 3x prior 20-day mean
+
+-- filings in the window: financial_result and material_info (date Asia/Karachi, title)
+MACFL: results 10, material_info 1; all classes 31
+   2025-10-28 14:06 financial_result Financial Results for the Quarter Ended September 30, 2025
+   2025-10-30 12:30 financial_result Transmission of Quarterly Financial Statements for the Period Ended September30, 2025
+   2026-01-02 16:12 material_info    Material Information
+   2026-02-10 14:58 financial_result Financial Results for the Quarter Ended December 31, 2025
+   2026-02-27 11:51 financial_result Transmission of Quarterly Report for the Period Ended 31/12/2025
+   2026-04-29 08:47 financial_result Financial Results for the Quarter Ended
+   2026-04-30 11:56 financial_result Transmission of Quarterly Report for the period ended March 31, 2026
+   2026-06-29 11:18 financial_result Emergent Board Meeting Other Than Financial Results
+   2026-07-01 08:34 financial_result Announcement - Board Meeting other than Financial Results
+   2026-09-02 08:19 financial_result Financial Results for the Year Ended June 30, 2026
+   2026-10-06 15:07 financial_result Transmission of Annual Report for the Year Ended 30 June 2026
+QUICE: results 9, material_info 1; all classes 35
+   2025-10-28 14:33 financial_result Financial Results for the Quarter ended Sept. 30, 2025
+   2025-10-28 14:38 financial_result Transmission of Quarterly Financial Statements for the period ended Sept. 30, 2025
+   2026-02-25 12:27 financial_result Financial Results for the quarter ended 2025-12-31
+   2026-02-27 12:14 financial_result Half yearly Report for the Period Year Ended December 31, 2025
+   2026-04-28 12:42 financial_result Financial Results for the Quarter ended March 31, 2026
+   2026-04-28 13:02 financial_result Transmission of Quarterly Report for the period ended March 31, 2026
+   2026-05-11 14:25 financial_result EMERGENT - BOARD MEETING OTHER THAN THE FINANCIAL RESULTS
+   2026-05-15 14:55 material_info    Material Information
+   2026-09-30 09:25 financial_result Financial Results Year Ended
+   2026-10-12 11:48 financial_result Transmission of Annual Report for the Year Ended
+PRL: results 9, material_info 4; all classes 49
+   2025-10-20 12:56 financial_result Financial Results for the Quarter Ended September 30, 2025
+   2025-10-29 14:20 financial_result Transmission of Quarterly Report for the Period Ended September 30, 2025
+   2025-12-23 13:53 material_info    Material Information
+   2026-02-02 13:22 financial_result Financial Results for the Half Year ended December 31, 2025
+   2026-02-25 11:03 financial_result Transmission of Quarterly Report for the Period Ended December 31, 2025
+   2026-04-21 13:45 financial_result Financial Results for the Quarter Ended March 31, 2026
+   2026-04-24 10:08 financial_result Mandatory Shariah Disclosure for the Half Year Ended December 31, 2025
+   2026-04-30 09:48 financial_result Transmission of Quarterly Report for the Period Ended March 31, 2026
+   2026-08-13 12:59 financial_result Financial Results for the Year Ended June 30, 2026
+   2026-09-15 10:11 financial_result Transmission of Annual Report for the Year Ended June 30, 2026
+   2026-09-25 08:00 material_info    Material Information
+   2026-10-12 08:00 material_info    Material Information
+   2026-10-15 13:05 material_info    Material Information
+CRTM: results 8, material_info 0; all classes 37
+   2025-10-30 14:28 financial_result Financial Results for the Quarter Ended September 30, 2025
+   2025-10-30 14:37 financial_result Transmission of Quarterly Report for the Period Ended September 30, 2025
+   2026-02-26 12:43 financial_result Financial Results for the Quarter Ended December 31, 2025
+   2026-02-27 10:34 financial_result Transmission of Quarterly Report for the Period Ended December 31, 2025
+   2026-04-29 13:03 financial_result Financial Results for the Quarter Ended March 31, 2026
+   2026-04-30 11:05 financial_result Transmission of Quarterly Report for the Period Ended March 31, 2026
+   2026-09-29 14:27 financial_result Financial Results for the Year ended June 30, 2026
+   2026-10-06 13:23 financial_result Transmission of Annual Report for the Year Ended 2026-06-30
+JVDC: results 8, material_info 0; all classes 33
+   2025-10-27 08:00 financial_result Financial Results for the 1st Quarter Ended 30-09-2025
+   2025-10-30 13:37 financial_result Transmission of Quarterly Report for the 1st quarter ended 30-09-2025
+   2026-02-27 08:00 financial_result Financial Results for the half year ended 31 December 2025
+   2026-03-02 08:01 financial_result Transmission of Half Yearly financial statements for the period ended 31 December 2025
+   2026-04-29 08:57 financial_result Financial Results for the nine months period ended 31 March 2026
+   2026-04-30 12:39 financial_result Transmission of Quarterly Report for the nine months period ended 31 March 2026
+   2026-09-15 08:00 financial_result Financial Results for the Year Ended 30 June 2026
+   2026-09-25 11:30 financial_result Transmission of Annual Report for the Year Ended 30 June 2026
+TPLT: results 12, material_info 2; all classes 38
+   2025-10-21 13:20 financial_result Financial Results for the Year Ended June 30, 2025
+   2025-10-30 08:12 financial_result Financial Results for the Quarter Ended September 30, 2025
+   2025-10-30 14:21 financial_result Transmission of Quarterly Report for the Period Ended 30-09-2025
+   2025-11-06 15:26 financial_result Transmission of Annual Report for the Year Ended 30 June, 2025
+   2025-12-29 15:02 financial_result Corporate Briefing Session on the Company s Business and Financial Results for the Financial Year Ended June 30, 2025
+   2026-01-01 15:22 financial_result Presentation for Corporate Briefing Session on the Company s Business and Financial Results for the Financial Year Ended June 30, 
+   2026-01-05 15:27 financial_result Video Recording of Corporate Briefing Session (CBS) on the Company s Business and Financial Results for the Financial Year Ended J
+   2026-02-23 12:55 financial_result Financial Results for the Quarter Ended December 31, 2025
+   2026-02-27 12:15 financial_result Transmission of Quarterly Report for the Period Ended December 31, 2025
+   2026-03-24 12:24 material_info    Material Information
+   2026-04-21 12:43 financial_result Financial Results for the Quarter Ended March 31, 2026
+   2026-04-30 10:04 financial_result Transmission of Quarterly Report for the Period Ended March 31, 2026
+   2026-06-24 08:15 material_info    Material Information
+   2026-06-24 08:15 financial_result CONCLUSION OF BOARD MEETING OTHER THAN FINANCIAL RESULTS
+
+-- public events: what had the price already done when each cause became public? (event stamp Asia/Karachi; after 15:30 counts as the next session; base = the move's low; share = log gain base -> event close / log gain base -> peak)
+sym    event time       session      x base share of gain done event-day ret  +5 ses  +20 ses  to peak  event
+MACFL  2025-10-28 14:06 2025-10-28     1.26 n/a (outside base-peak)         -4.2%      5%       0%     403%  Q1 FY26 results (EPS -0.33)
+MACFL  2026-01-02 16:12 2026-01-05     1.45 n/a (outside base-peak)         -2.4%     -2%      12%     335%  Material Information (text not retrievable)
+MACFL  2026-04-29 08:47 2026-04-29     1.36                17%         10.0%     61%     118%     364%  Q3 results, EPS 1.83 vs 1.03 a year before
+MACFL  2026-09-02 08:19 2026-09-02     3.19                63%         10.0%     10%      13%      98%  FY26 results (EPS Q4 0.28)
+QUICE  2025-10-28 14:33 2025-10-28     1.15                 9%         10.6%     13%      -9%     313%  Q1 results, day of first 252-high and lock
+QUICE  2026-05-15 14:55 2026-05-15     3.06 n/a (outside base-peak)          3.1%      5%      39%     nan%  Board approves merger of Indus Fruit Products (375.8m new shares vs 109m existing)
+PRL    2026-04-21 13:45 2026-04-21     1.54                30%          8.0%     -2%     -10%     175%  Q3 results, EPS 15.78 vs -4.09
+PRL    2026-07-21 12:00 2026-07-21     1.95                46%          0.3%     20%      69%     117%  Cabinet approves amended refinery policy (Topline via web search, time assumed)
+PRL    2026-09-25 08:00 2026-09-25     3.69                90%          1.1%     -3%      15%      15%  Material Information: Upgrade Agreement signed 24 Sep with the Government under the amended policy
+CRTM   2026-04-29 13:03 2026-04-29     4.59 n/a (outside base-peak)         -1.7%     -4%     -15%     nan%  Q3 results (no material_info filed in the year)
+JVDC   2026-02-27 08:00 2026-02-27     1.87 n/a (outside base-peak)          3.7%    -20%     -21%     nan%  H1 results, EPS Q2 4.08 vs 0.82
+TPLT   2026-03-24 12:24 2026-03-24     1.29                16%         -2.2%     -9%      12%     281%  Material Information: early sukuk redemption
+TPLT   2026-06-24 08:15 2026-06-24     3.67                82%          0.5%     -4%      17%      34%  Material Information: international investor interested in a majority stake
+
+-- engine analogues on the first-signal day (first 252-high close) and on the first upper-lock day
+
+MACFL 2026-06-15 (hi) signature: cause=sector_up | ret_1d=+10.0% | ret_5d=+8.7% | ret_20d=+5.1% | ret_60d=+210.2% | dist_252_high=+0.0% | consecutive_up_days=3 | locks_up_5d=1 | vol_ratio_20_120=1.08 | liq=mid | regime=bill>policy   analogues n5=44, widened: numeric buckets within L1 distance 4, regime dropped, tier +/-1 (ladder step 13 of 16)
+   h=5: n=44 med -0.9% p25 -5% p75 +5% win 48% >50% 0% placebo +0.2% net -1.4%
+   h=20: n=44 med +2.3% p25 -9% p75 +12% win 59% >50% 7% placebo +0.1% net +1.6%
+   h=60: n=45 med +1.3% p25 -12% p75 +19% win 56% >50% 7% placebo -3.3% net +0.3%
+
+MACFL 2025-11-04 (ul) signature: cause=none | ret_1d=+9.7% | ret_5d=+4.9% | ret_20d=-12.1% | ret_60d=-13.7% | dist_252_high=-60.2% | consecutive_up_days=3 | locks_up_5d=1 | vol_ratio_20_120=0.25 | liq=mid | regime=bill>policy   analogues n5=136, widened: numeric buckets within L1 distance 4, regime dropped, tier +/-1 (ladder step 13 of 16)
+   h=5: n=136 med -0.0% p25 -5% p75 +7% win 45% >50% 0% placebo -0.0% net -1.0%
+   h=20: n=136 med -0.3% p25 -10% p75 +12% win 49% >50% 3% placebo -1.3% net -1.3%
+   h=60: n=135 med -5.1% p25 -17% p75 +6% win 35% >50% 4% placebo -4.9% net -6.1%
+
+QUICE 2025-10-28 (hi) signature: cause=results | ret_1d=+10.6% | ret_5d=+11.9% | ret_20d=+11.4% | ret_60d=+31.7% | dist_252_high=+0.0% | consecutive_up_days=2 | locks_up_5d=1 | vol_ratio_20_120=1.4 | liq=mid | regime=bill>policy   analogues n5=61, widened: numeric buckets within L1 distance 4, regime dropped, tier +/-1 (ladder step 13 of 16)
+   h=5: n=61 med +1.0% p25 -4% p75 +9% win 52% >50% 0% placebo -0.1% net +0.2%
+   h=20: n=60 med +1.6% p25 -3% p75 +18% win 60% >50% 3% placebo +0.6% net +0.8%
+   h=60: n=56 med +13.3% p25 -5% p75 +34% win 68% >50% 14% placebo +3.5% net +12.6%
+
+PRL 2026-07-09 (hi) signature: cause=sector_up | ret_1d=+8.9% | ret_5d=+16.0% | ret_20d=+21.7% | ret_60d=+15.8% | dist_252_high=+0.0% | consecutive_up_days=5 | locks_up_5d=0 | vol_ratio_20_120=1.18 | liq=hi | regime=bill<=policy   analogues n5=51, widened: numeric buckets within L1 distance 3, regime kept, tier exact (ladder step 4 of 16)
+   h=5: n=51 med +0.2% p25 -4% p75 +6% win 51% >50% 0% placebo -0.1% net -0.3%
+   h=20: n=51 med +4.4% p25 -6% p75 +11% win 65% >50% 0% placebo +4.7% net +3.9%
+   h=60: n=51 med +3.0% p25 -8% p75 +12% win 61% >50% 0% placebo -1.0% net +2.5%
+
+PRL 2026-03-05 (ul) signature: cause=board_meeting | ret_1d=+9.9% | ret_5d=+0.5% | ret_20d=-24.3% | ret_60d=-24.8% | dist_252_high=-28.2% | consecutive_up_days=3 | locks_up_5d=1 | vol_ratio_20_120=0.43 | liq=hi | regime=bill>policy   analogues n5=85, widened: numeric buckets within L1 distance 8, regime dropped, tier +/-1 (ladder step 15 of 16)
+   h=5: n=85 med -1.0% p25 -5% p75 +4% win 44% >50% 0% placebo -0.5% net -1.5%
+   h=20: n=81 med -2.1% p25 -7% p75 +8% win 46% >50% 0% placebo +0.3% net -2.6%
+   h=60: n=81 med +1.2% p25 -12% p75 +16% win 56% >50% 6% placebo +2.1% net +0.2%
+
+CRTM 2025-11-26 (hi) signature: cause=insider | ret_1d=+7.9% | ret_5d=+9.8% | ret_20d=+19.2% | ret_60d=+19.0% | dist_252_high=+0.0% | consecutive_up_days=2 | locks_up_5d=0 | vol_ratio_20_120=0.45 | liq=mid | regime=bill<=policy   analogues n5=107, widened: numeric buckets within L1 distance 6, regime dropped, tier +/-1 (ladder step 14 of 16)
+   h=5: n=107 med -0.1% p25 -3% p75 +3% win 47% >50% 0% placebo -0.2% net -1.0%
+   h=20: n=108 med +0.4% p25 -6% p75 +9% win 53% >50% 3% placebo +1.0% net -0.4%
+   h=60: n=102 med +6.3% p25 -4% p75 +23% win 63% >50% 6% placebo +2.3% net +5.6%
+
+CRTM 2025-12-30 (ul) signature: cause=none | ret_1d=+10.0% | ret_5d=+1.8% | ret_20d=+7.1% | ret_60d=+21.7% | dist_252_high=+0.0% | consecutive_up_days=1 | locks_up_5d=1 | vol_ratio_20_120=0.78 | liq=mid | regime=bill<=policy   analogues n5=32, widened: numeric buckets within L1 distance 3, regime dropped, tier +/-1 (ladder step 12 of 16)
+   h=5: n=32 med +0.0% p25 -5% p75 +2% win 47% >50% 0% placebo -0.1% net -1.0%
+   h=20: n=38 med +0.1% p25 -6% p75 +6% win 53% >50% 5% placebo -0.2% net -0.9%
+   h=60: n=38 med +7.2% p25 -8% p75 +19% win 55% >50% 5% placebo -1.5% net +6.2%
+
+JVDC 2025-12-26 (hi) signature: cause=none | ret_1d=+9.7% | ret_5d=+20.5% | ret_20d=+31.5% | ret_60d=+18.8% | dist_252_high=+0.0% | consecutive_up_days=6 | locks_up_5d=1 | vol_ratio_20_120=0.77 | liq=mid | regime=bill<=policy   analogues n5=39, widened: numeric buckets within L1 distance 3, regime dropped, tier +/-1 (ladder step 12 of 16)
+   h=5: n=39 med -0.9% p25 -7% p75 +7% win 44% >50% 0% placebo -0.0% net -1.9%
+   h=20: n=39 med +1.6% p25 -6% p75 +14% win 54% >50% 8% placebo +0.7% net +0.6%
+   h=60: n=38 med -1.5% p25 -10% p75 +28% win 47% >50% 13% placebo +0.3% net -2.2%
+TPLT 2025-12-17: no row in the table
+TPLT 2025-12-10: no row in the table

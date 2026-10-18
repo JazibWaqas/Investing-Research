@@ -1,0 +1,90 @@
+== PART 2. Why S3 did not hold the six names (replica of oracle S3 reproduces the oracle equity exactly: final Rs40,820, 12 trades) ==
+KMI All Share (index close) first-half peak 2026-01-23 72,828, trough 2026-03-09 57,316 (-21%); year start 66,143, end 65,474
+
+-- the six names: every episode of 'closed above its prior 252-high' and what S3 did with it (consecutive sessions with the same state collapsed)
+
+MACFL: closes above the prior 252-high in the year 12; S3 trades: 1
+   2026-06-15 - 2026-06-18 (4 sessions): slots full: MEBL,IPAK,TPLT
+   2026-07-09 (1 sessions): slots full: MEBL,IPAK,TPLT
+   2026-08-17 - 2026-08-19 (3 sessions): slots full: MEBL,IPAK,TPLT
+   2026-10-09 - 2026-10-12 (2 sessions): slots full: MEBL,IPAK,TPLT
+   2026-10-13 (1 sessions): ORDER placed  -> bought next close
+   2026-10-14 (1 sessions): held
+   TRADE 2026-10-14 -> 2026-10-16 -19% Rs-2,418 end_open; entry median traded value Rs52.9m; max close gain after entry +0%
+
+QUICE: closes above the prior 252-high in the year 21; S3 trades: 0
+   2025-10-28 - 2025-10-29 (2 sessions): slots full: TELE,HALEON,TRSM
+   2025-11-03 - 2025-11-04 (2 sessions): slots full: TELE,HALEON,TRSM
+   2025-12-09 - 2025-12-18 (8 sessions): slots full: TELE,HALEON,PIOC
+   2025-12-29 - 2026-01-08 (9 sessions): slots full: TELE,HALEON,PIOC
+
+PRL: closes above the prior 252-high in the year 26; S3 trades: 0
+   2026-07-09 - 2026-07-13 (3 sessions): slots full: MEBL,IPAK,TPLT
+   2026-07-17 - 2026-07-28 (8 sessions): slots full: MEBL,IPAK,TPLT
+   2026-07-31 - 2026-08-03 (2 sessions): slots full: MEBL,IPAK,TPLT
+   2026-08-05 - 2026-08-06 (2 sessions): slots full: MEBL,IPAK,TPLT
+   2026-08-10 - 2026-08-11 (2 sessions): slots full: MEBL,IPAK,TPLT
+   2026-08-13 - 2026-08-18 (3 sessions): slots full: MEBL,IPAK,TPLT
+   2026-08-21 (1 sessions): slots full: MEBL,IPAK,TPLT
+   2026-08-28 - 2026-09-02 (4 sessions): slots full: MEBL,IPAK,TPLT
+
+CRTM: closes above the prior 252-high in the year 21; S3 trades: 1
+   2025-11-26 (1 sessions): slots full: TELE,HALEON,PIOC
+   2025-12-01 - 2025-12-02 (2 sessions): slots full: TELE,HALEON,PIOC
+   2025-12-09 - 2025-12-10 (2 sessions): slots full: TELE,HALEON,PIOC
+   2025-12-12 (1 sessions): slots full: TELE,HALEON,PIOC
+   2025-12-16 (1 sessions): slots full: TELE,HALEON,PIOC
+   2025-12-30 (1 sessions): slots full: TELE,HALEON,PIOC
+   2026-03-06 - 2026-03-18 (9 sessions): liquidity: median traded value Rs4.8m
+   2026-04-08 (1 sessions): ORDER placed  -> bought next close
+   2026-04-09 (1 sessions): held
+   2026-04-17 - 2026-04-20 (2 sessions): held
+   TRADE 2026-04-09 -> 2026-05-19 -5% Rs-631 trail_stop_20; entry median traded value Rs8.3m; max close gain after entry +18%
+
+JVDC: closes above the prior 252-high in the year 14; S3 trades: 0
+   2025-12-26 - 2026-01-05 (7 sessions): slots full: TELE,HALEON,PIOC
+   2026-01-16 - 2026-01-19 (2 sessions): slots full: TELE,HALEON,PIOC
+   2026-01-21 (1 sessions): slots full: TELE,HALEON,PIOC
+   2026-01-23 (1 sessions): slots full: TELE,HALEON,PIOC
+   2026-01-26 (1 sessions): ranked 2 of 6 for 1 free slot(s)
+   2026-01-28 (1 sessions): slots full: TELE,HALEON,SAZEW
+   2026-01-30 (1 sessions): slots full: TELE,HALEON,SAZEW
+
+TPLT: closes above the prior 252-high in the year 30; S3 trades: 1
+   2025-12-17 (1 sessions): liquidity: median traded value Rs1.6m
+   2025-12-19 (1 sessions): liquidity: median traded value Rs1.6m
+   2026-01-01 - 2026-01-06 (4 sessions): liquidity: median traded value Rs1.6m
+   2026-05-11 - 2026-05-12 (2 sessions): slots full: MEBL,CRTM,IPAK
+   2026-05-29 (1 sessions): ORDER placed  -> bought next close
+   2026-06-01 (1 sessions): held
+   2026-06-03 - 2026-06-09 (5 sessions): held
+   2026-06-19 - 2026-06-24 (4 sessions): held
+   2026-07-16 - 2026-07-20 (3 sessions): held
+   2026-07-22 - 2026-07-23 (2 sessions): held
+   2026-08-04 (1 sessions): held
+   2026-08-31 - 2026-09-01 (2 sessions): held
+   2026-09-03 - 2026-09-07 (3 sessions): held
+   TRADE 2026-06-01 -> 2026-10-16 +63% Rs6,998 end_open; entry median traded value Rs10.9m; max close gain after entry +84%
+
+Summary: of the six, with at least one S3-eligible signal (liquid, KMI): ['MACFL', 'QUICE', 'PRL', 'CRTM', 'JVDC', 'TPLT']; with an S3 trade: ['MACFL', 'CRTM', 'TPLT']
+
+-- the 12 S3 trades. ext = signal close over prior 252-high; runup = best close vs entry; next10d = return in the 10 sessions after entry; after20/60 = close 20/60 sessions after exit vs the exit close (positive = whipsaw, it recovered); KMI = index return while held
+sym     entry      exit        days   ret      Rs reason            tv m   ext  runup next10d after20 after60   KMI  sector
+KEL     2025-10-17 2025-10-27     6  -22%  -3,605 trail_stop_20    178.0  0.7%     0%    -27%     -3%     16%   -1%  Power
+TELE    2025-10-17 2026-02-17    85   -8%  -1,282 trail_stop_20     68.5  7.8%    21%      7%    -29%    -19%    2%  Tech & telecom
+HALEON  2025-10-17 2026-03-03    95  -16%  -2,619 trail_stop_20     64.0  1.0%     6%     -9%    -14%     -3%   -9%  Pharma
+TRSM    2025-10-27 2025-11-25    21  -28%  -3,616 trail_stop_20     30.3  5.3%     1%     -2%    -57%    -76%   -2%  Modarabas & takaful
+PIOC    2025-11-25 2026-01-27    44   -8%    -716 trail_stop_20     70.1  5.5%    24%     17%    -25%    -28%   14%  Cement
+SAZEW   2026-01-27 2026-03-10    29   -7%    -599 trail_stop_20    172.9  9.0%    17%     10%     -4%      7%  -16%  Autos
+BWHL    2026-02-17 2026-03-10    15  -18%  -2,483 trail_stop_20      8.9  0.2%     0%    -14%      5%     26%  -10%  Autos
+CRTM    2026-04-09 2026-05-19    27   -5%    -631 trail_stop_20      8.3  0.3%    18%     -4%     -2%      2%   -1%  Textiles
+MEBL    2026-04-09 2026-10-16   128    9%   1,035 end_open         661.8  3.8%    19%     -6%    nan%    nan%    1%  Islamic banks
+IPAK    2026-04-17 2026-10-14   120    6%     756 trail_stop_20     10.0  0.9%    35%     -6%     -2%    nan%   -4%  Glass/pack/paper
+TPLT    2026-06-01 2026-10-16    95   63%   6,998 end_open          10.9  2.4%    84%     20%    nan%    nan%   -2%  Tech & telecom
+MACFL   2026-10-14 2026-10-16     2  -19%  -2,418 end_open          52.9 10.0%     0%    -19%    nan%    nan%    0%  Glass/pack/paper
+
+loss attribution (the 9 losing trades): failed within 6 weeks (Oct-Nov 2025): KEL, TRSM Rs-7,221; other stops: CRTM, MACFL Rs-3,049; stopped in the Feb-Mar shock window: PIOC, TELE, HALEON, SAZEW, BWHL Rs-7,698; winners Rs8,788 (TPLT Rs6,998)
+
+sessions with 3 positions: 214 of 250; with 0 positions: 20; mean positions 2.72
+liquid KMI names at a new 252-high per session: mean 2.4, max 13; sessions with at least one 178
+monthly count of distinct liquid KMI names that made a new 252-high: 25-10:14, 25-11:15, 25-12:23, 26-01:40, 26-02:12, 26-03:0, 26-04:7, 26-05:7, 26-06:10, 26-07:15, 26-08:17, 26-09:9, 26-10:3
