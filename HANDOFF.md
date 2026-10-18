@@ -18,3 +18,6 @@ Nothing. All agents and workflows have completed; every output is committed.
 - Python: .venv/Scripts/python.exe. Print with -X utf8.
 - Commits: no Co-Authored-By trailer; push to origin main freely.
 - PSX portal: X-Req-Id trick in CLAUDE.md. Codex: `codex exec -c 'tools.web_search=true' -C <repo> -s workspace-write -c 'approval_policy="never"' - < prompt.md`.
+
+## Update 18 Oct 2026, late evening
+Method built and exam run; see REPORT.md section 8 and knowledge/HOW_TO_THINK.md section 10. Weekly loop packaged as .claude/skills/psx-weekly/SKILL.md (copy at knowledge/SKILL_psx_weekly.md). Business-quality scores for 20 growth candidates in knowledge/companies/quality_scores.csv (MEBL 16, LUCK 15, SYS/FFC/ILP/MARI/FABL/THCCL/ISL/ENGROH 14, ... PSO and GGL 10). First live calls for the 16 Oct close: data/asof/2026-10-16/REPLY.json (method: ATRL 25, MARI 20, LUCK 15, OGDC entry 10, exposure 70) and REPLY_astra.json (peer: ATRL trend entry 15, cash 85). Next: the names and sizing conversation with Jazib, then PICKS.md v4 and frozen rows before any order; then the weekly loop runs from the skill and the scorecard becomes the exam.
