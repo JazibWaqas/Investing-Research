@@ -25,6 +25,7 @@ Open `catalysts\frozen_predictions.csv`. For every row whose `event_date` has pa
 .venv\Scripts\python.exe scripts\tests\insider_cluster_buying.py --screen     # sponsor and director buying clusters, last 90 days
 .venv\Scripts\python.exe scripts\sector_momentum.py                           # 6-month sector ranks
 .venv\Scripts\python.exe scripts\screen_breakout.py                           # the breakout sleeve: names above their 252-session high, ranked; fire count
+.venv\Scripts\python.exe scripts\daily_table.py && .venv\Scripts\python.exe scripts\engine.py --scan <today>   # rebuild the daily table (about 2 minutes) and list today's live situations with analogue odds
 ```
 Sleeve maintenance, every trading day or at least weekly: for each sleeve holding, compare the last close with 80% of the highest close since entry (adjusted closes); a close below it is a sell at the next session, no exceptions. On the deposit day, buy the top-ranked breakout name not already held (max 3), else send the ticket to the core.
 (If a script has no `--screen` flag yet, run it and read the "live screen" section of its output.) Paste the three screens into the week's note. Only names that pass the base rates in `tests\` (hit rate above 55% and median above costs for that signal class) go to step 5.
