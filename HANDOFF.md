@@ -24,3 +24,6 @@ Method built and exam run; see REPORT.md section 8 and knowledge/HOW_TO_THINK.md
 
 ## Update 18 Oct 2026, night
 Short-term study done and closed (REPORT.md section 9, HOW_TO_THINK.md section 11, lesson 25): no mechanical 1 to 10 day edge after costs; the situation engine (scripts/engine.py --scan DATE) and the daily table (data/daily_table.parquet, rebuild with scripts/daily_table.py) stay as reading tools. Intraday archive started (scripts/collect_intraday.py daily after the close). Costs in data/costs.md (Finqalab's own commission still unverified; ask Jazib). Open: Jazib's sizing decision for PICKS v4; Monday 19 Oct scoring of EFERT, ATRL, MLCF rows; the weekly loop per .claude/skills/psx-weekly/SKILL.md with the engine scan added to step 3.
+
+## Update 19 Oct 2026, early
+Winners library and catalogue done (knowledge/CATALOGUE.md, knowledge/winners/, data/winners_library.csv, tests/winners_population.md); tagged scan in scripts/engine.py; skill updated with the reflex. The method is complete as a knowledge base; what remains is operation: the Monday scoring of frozen calls, the daily or weekly tagged scan, PICKS v4 with Jazib's sizes. The catalogue's own stage odds say PRL (4.2x from its low) and MACFL (5.1x) are late now; see the 2026-10-16 tagged scan.

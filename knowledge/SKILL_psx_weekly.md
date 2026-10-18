@@ -104,3 +104,8 @@ From HOW_TO_THINK.md section 6. Answer each in writing.
 8. What regime is this evidence from, and is it like the present?
 9. What is the price reaction telling me about what informed money knows, and is a shock here an opportunity?
 10. Am I following his risk posture, not an institution's, and did I stop to discuss before any large spend?
+
+
+## Addendum 19 Oct 2026: the catalogue reflex
+
+Before the call, run `.venv\Scripts\python.exe -I scripts\engine.py --scan <today>` (rebuild the daily table first with `scripts\daily_table.py`). It lists every mover tagged with its catalogue type, the type's stage odds, and the missed movers. For each tagged name apply the reflex from `knowledge\CATALOGUE.md` in order: can I own it and get out (KMI, liquidity); what is the regime; what is the cause and which type; where is the price in the move; write the exit (sized to the name's own worst pullback, or the type's event exit) and the size before buying. Do not use a fixed 20% stop. Every watch item names the observation that converts it to an order. Freeze the call with a range, score it at 1, 5 and 20 sessions, and diagnose misses weekly against the missed-movers list.
