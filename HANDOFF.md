@@ -30,3 +30,6 @@ Winners library and catalogue done (knowledge/CATALOGUE.md, knowledge/winners/, 
 
 ## Final state, 19 Oct 2026, 01:15 PKT
 Session complete. Deliverables: PICKS.md v4 (plain-language buy report), REPORT.md (11 sections), knowledge/HOW_TO_THINK.md (13 sections), knowledge/CATALOGUE.md (corrected), knowledge/REGIME_TURN_PLAYBOOK.md, knowledge/winners/ (55 cases) and regime_turns/ (4), the daily table and engine with tagged scan, the weekly skill, 42 frozen predictions. Nothing is running. Operate from the skill: Monday score ATRL, EFERT, MLCF rows; run the tagged scan after each close; freeze each week's call; the scorecard at 20 weeks is the next research brief. Open items for Jazib: Finqalab's commission rate; his own past trades for the library; sizes if he departs from PICKS v4.
+
+## Navigation note, 19 Oct 2026
+CLAUDE.md (auto-loaded by Claude Code; AGENTS.md is the identical copy for other agents) is now the complete navigator: reading order by purpose, writing rules, model and orchestration lessons, environment and pipeline commands, and the investor beyond the numbers. Start there. ORCHESTRATOR_HANDOFF.md is the dense summary; PLAYBOOK.md the rules; PICKS.md the positions.

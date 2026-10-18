@@ -22,6 +22,8 @@ Facts are in the memory and PLAN.md: 23, Karachi, trainee investing Rs50k a mont
 - **Per-year accounting.** Judge the portfolio on year-on-year growth and each position on its own return and holding time. A pick does not imply a twelve-month hold. "This has 20% in it over three months" is a legitimate call.
 - **He wants to be taught, not told, and he wants the same for the models.** He pushed back by asking questions, not by giving instructions, and he wants the method to carry its reasoning so other models can correct themselves.
 
+Addendum (19 Oct): the personal details that shape his calls (the TRG trade from Rs16, his father at Lucky Cement, money in rather than a fixed sum, no is fine but absence is not) are in CLAUDE.md under "The investor, beyond the numbers", so that every session loads them automatically.
+
 ## 3. How the session went wrong, and how he pulled it back
 
 Read this as case studies in analyst failure. Each one is common, each one was caught by a plain question.
