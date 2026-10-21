@@ -2,11 +2,14 @@
 
     .venv\\Scripts\\python.exe -I -X utf8 scripts\\ledger.py build      # rebuild PICKS.md, the generated blocks in STATE.md and ledger/scorecard.md, ledger/book_daily.csv
     .venv\\Scripts\\python.exe -I -X utf8 scripts\\ledger.py check      # validate the tables; fail if a built page is stale
-    .venv\\Scripts\\python.exe -I -X utf8 scripts\\ledger.py trade 2026-10-22 MEBL buy 23 548.50 --fees 30 --call C0044
+    .venv\\Scripts\\python.exe -I -X utf8 scripts\\ledger.py trade 2026-10-22 MEBL buy 23 548.50 --fees 30 --call C0043
     .venv\\Scripts\\python.exe -I -X utf8 scripts\\ledger.py deposit 2026-11-01 50000
+    .venv\\Scripts\\python.exe -I -X utf8 scripts\\ledger.py score C0009 1 --note "standalone EPS 13.10, PSX doc id"
+trade, deposit and score validate, refuse a bad row, and rebuild the pages.
 
 Tables (append only; never edit or delete a row):
-  calls.csv     every call and forecast, with odds. To change a view, add a row naming the old id in `supersedes`.
+  calls.csv     every call and forecast, with odds. To change a view, add a row naming the old id in `supersedes`
+                (supersede the open row that PICKS.md shows). For buy_if and watch rows the condition is the `event` text.
   scores.csv    outcomes: call_id, scored_at, outcome (1, 0, void, not_triggered), note.
   trades.csv    what Jazib actually bought and sold (he reports them in chat).
   deposits.csv  money in, when he reports it.
@@ -255,6 +258,8 @@ def validate():
             bad.append(f"trades: {r.ticker} sold more than held on {r.date}")
         if r.call_id and r.call_id not in ids:
             bad.append(f"trades: unknown call {r.call_id}")
+        elif r.call_id and (calls[calls.supersedes == r.call_id].made_at.str[:10] <= r.date).any():
+            bad.append(f"trades: {r.date} {r.ticker} is linked to {r.call_id}, already superseded; link the open call")
     return bad
 
 
@@ -269,21 +274,27 @@ def main():
     t.add_argument("--fees", default="")
     t.add_argument("--call", default="")
     t.add_argument("--note", default="")
+    s = sub.add_parser("score")
+    s.add_argument("call_id")
+    s.add_argument("outcome")
+    s.add_argument("--note", default="")
     d = sub.add_parser("deposit")
     d.add_argument("date")
     d.add_argument("amount")
     d.add_argument("--note", default="")
     a = ap.parse_args()
-    target = L / ("trades.csv" if a.cmd == "trade" else "deposits.csv")
+    target = L / {"trade": "trades.csv", "score": "scores.csv"}.get(a.cmd, "deposits.csv")
     before = target.read_bytes() if target.exists() else None
     if a.cmd == "trade":
         append("trades", {"date": a.date, "ticker": a.ticker.upper(), "side": a.side, "qty": a.qty, "price": a.price,
                           "fees": a.fees, "call_id": a.call, "note": a.note})
+    elif a.cmd == "score":
+        append("scores", {"call_id": a.call_id, "scored_at": date.today().isoformat(), "outcome": a.outcome, "note": a.note})
     elif a.cmd == "deposit":
         append("deposits", {"date": a.date, "amount": a.amount, "note": a.note})
     bad = validate()
     if bad:
-        if a.cmd in ("trade", "deposit"):  # roll back the row just added
+        if a.cmd in ("trade", "deposit", "score"):  # roll back the row just added
             target.write_bytes(before) if before is not None else target.unlink()
             print("row not recorded:")
         print("\n".join(bad))

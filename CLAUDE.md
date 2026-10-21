@@ -8,7 +8,7 @@ This repo is the memory of a research programme on how money is made on the Paki
 
 **Before advising Jazib or starting research,** read knowledge/HOW_TO_THINK.md in full and knowledge/lessons.md. Do not launch large work before mirroring your understanding back to him and getting an explicit go; he said so, and HOW_TO_THINK section 8 explains why. Small reversible things (a price, a filing, a score) you just do.
 
-**During.** Every call or forecast becomes a row in ledger/calls.csv before its event; every outcome a row in ledger/scores.csv; every trade Jazib reports a row in ledger/trades.csv, and deposits in deposits.csv (use `scripts/ledger.py trade` or `deposit` for those two; a bad row is refused).
+**During.** Every call or forecast becomes a row in ledger/calls.csv before its event; every outcome a row in ledger/scores.csv; every trade Jazib reports a row in ledger/trades.csv, and deposits in deposits.csv (use `scripts/ledger.py trade`, `deposit` and `score`: each refuses a bad row and rebuilds the pages).
 
 **End (every session that changed anything).** Write journal/<date>.md: what happened, what was decided, why. A letter to Jazib goes in journal/<date>-picks-vN.md. Rebuild the pages from the ledger, edit the hand-written parts of STATE.md, log changed conclusions in DECISIONS.md, mistakes in knowledge/lessons.md, closed research in knowledge/BACKLOG.md. Run the doc check, which also checks the ledger. Commit and push.
 
