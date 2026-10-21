@@ -1,6 +1,6 @@
 # Red team of PICKS.md, 18 October 2026
 
-Evidence cutoff: Sunday 18 October, before the 19 October PSX open. I checked the named cards, `REPORT.md`, `strategy.md`, `tests/FACTS.md`, the frozen predictions and calendar, and sources cited below. Prices are PKR; card probabilities are unmeasured judgments.
+Evidence cutoff: Sunday 18 October, before the 19 October PSX open. I checked the named cards, `archive/REPORT_2026-10-18.md`, `strategy.md`, `tests/FACTS.md`, the frozen predictions and calendar, and sources cited below. Prices are PKR; card probabilities are unmeasured judgments.
 
 ## The core and the regime
 

@@ -44,17 +44,17 @@ What would change my mind. The breakout arm in the live register beating random 
 
 What it drives: every exit in the catalogue and the regime playbook.
 
-Strongest counterargument. Every stop size in the catalogue was chosen after seeing the path ("1.3 times the deepest pullback since the base, at most 40%", knowledge/CATALOGUE.md reflex step 6). It has never been run on losing breakouts, which are three quarters of all breakouts. On finished winners a 20% stop gave a median 1.01x with 49% losing (tests/winners_population.md, as quoted in knowledge/playbooks/astra_catalogue_review.md); wider stops on losers would lose more per trade. PSX price limits mean a stop can gap through two locked sessions. A wide stop plus the 5% loss budget means small positions, which conflicts with his wish to concentrate.
+Strongest counterargument. Every stop size in the catalogue was chosen after seeing the path ("1.3 times the deepest pullback since the base, at most 40%", knowledge/CATALOGUE.md reflex step 6). It has never been run on losing breakouts, which are three quarters of all breakouts. On finished winners a 20% stop gave a median 1.01x with 49% losing (tests/winners_population.md, as quoted in knowledge/reviews/astra_catalogue_review.md); wider stops on losers would lose more per trade. PSX price limits mean a stop can gap through two locked sessions. A wide stop plus the 5% loss budget means small positions, which conflicts with his wish to concentrate.
 
 What would change my mind. The pre-registered exit test on the full breakout population (TEACHER_NOTES section 8, item 2). Until it runs, any stop size is a guess with a reason.
 
 ## 2. Contradictions in the documents, and which to follow
 
-I checked these against the files on 21 Oct.
+I checked these against the files on 21 Oct. **Status after the 21 Oct cleanup:** the outdated wording below is fixed (LUCK removed from PLAYBOOK, PICKS v5, REGIME_TURN_PLAYBOOK; the handoff became knowledge/FINDINGS.md); leader sizing now defers to PLAYBOOK; the bill-income caveat is on the stop table; the breakout range is corrected. Still open: the cash cap after LUCK (a decision for Jazib, STATE.md section 2) and the research disagreements. The list is kept as written, so the reasoning stays visible.
 
 **Outdated wording (follow the newer statement):**
-- LUCK still appears as a core name in PLAYBOOK.md section A ("Currently LUCK, MEBL, MARI"), in PICKS.md's body (the LUCK pitch, and the Monday order line "LUCK 31 shares at limit Rs410"), in knowledge/REGIME_TURN_PLAYBOOK.md line 97, and in ORCHESTRATOR_HANDOFF.md section 5's table. The 21 Oct amendment at the top of PICKS.md, DECISIONS.md (21 Oct), CLAUDE.md and PROJECT_INSTRUCTIONS.md all exclude LUCK and the Lucky group. **Follow the exclusion.**
-- ORCHESTRATOR_HANDOFF.md section 5 still shows MARI at 16 shares and Rs10,000; PICKS.md (body) and the MARI card say a Rs5,000 starter with the rest at or below Rs540. **Follow PICKS.md and the card.**
+- LUCK still appears as a core name in PLAYBOOK.md section A ("Currently LUCK, MEBL, MARI"), in PICKS.md's body (the LUCK pitch, and the Monday order line "LUCK 31 shares at limit Rs410"), in knowledge/REGIME_TURN_PLAYBOOK.md line 97, and in knowledge/FINDINGS.md section 5's table. The 21 Oct amendment at the top of PICKS.md, DECISIONS.md (21 Oct), CLAUDE.md and PROJECT_INSTRUCTIONS.md all exclude LUCK and the Lucky group. **Follow the exclusion.**
+- knowledge/FINDINGS.md section 5 still shows MARI at 16 shares and Rs10,000; PICKS.md (body) and the MARI card say a Rs5,000 starter with the rest at or below Rs540. **Follow PICKS.md and the card.**
 - PICKS.md section 5 says "Monday 19 October"; Monday has passed, no trade is confirmed, and the chat on 21 Oct moved MEBL to "after the 22 Oct result if EPS is Rs11 or more". **Follow the latest dated instruction.**
 
 **Proposed policy choices that conflict with each other (unresolved; surface them to Jazib):**
@@ -74,7 +74,7 @@ I checked these against the files on 21 Oct.
 **Precedence when documents disagree:**
 1. Jazib's latest explicit statement in conversation, and the hard constraints (KMI only, no Lucky group, no invented numbers, Finqalab stocks only).
 2. The latest dated amendment in PICKS.md, then DECISIONS.md's latest entry, over any undated or older text.
-3. For a number: the test file in tests/ over any summary (FACTS.md, TEACHER_NOTES.md, ORCHESTRATOR_HANDOFF.md, this file).
+3. For a number: the test file in tests/ over any summary (FACTS.md, TEACHER_NOTES.md, knowledge/FINDINGS.md, this file).
 4. For catalogue rules: the status box and the Astra review over the rule text; every catalogue rule is a hypothesis.
 5. For operating rules (sizing, loss limits): PLAYBOOK.md over REGIME_TURN_PLAYBOOK.md and CATALOGUE.md.
 6. For turn signals only: REGIME_TURN_PLAYBOOK.md.

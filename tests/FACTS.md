@@ -74,7 +74,7 @@
 - Verdict: nothing ("Nothing.").
 - Biggest caveat: 4 episodes; 108 names chosen on today's liquidity; the T2 mean "comes mostly from Oct 2023 (+58.4)".
 
-## Sector ranking (sector_map.md, 17 Oct 2026)
+## Sector ranking (knowledge/sectors/README.md, 17 Oct 2026)
 
 | # | Sector | Catalysts next 3 months | 6m rel. to KMI, full / core (pts) | Valuation vs own history | Fit with a hike-pricing curve | Verdict |
 |---|---|---|---|---|---|---|

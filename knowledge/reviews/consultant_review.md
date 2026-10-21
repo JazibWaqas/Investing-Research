@@ -1,6 +1,6 @@
 # Consultant review of PICKS.md (18 Oct 2026, Claude Fable consultant, read-only pass)
 
-Read: CLAUDE.md, REPORT.md, PICKS.md, strategy.md, critic_review.md, tests/FACTS.md, tests/system_walkforward.md, lessons.md, DECISIONS.md, knowledge/sectors/islamic_banks_financials.md, and tests/out/walkforward_trades.csv. "Observed" means read in the repo or computed from the trade log; "reasoned" means inference.
+Read: CLAUDE.md, archive/REPORT_2026-10-18.md, PICKS.md, strategy.md, critic_review.md, tests/FACTS.md, tests/system_walkforward.md, lessons.md, DECISIONS.md, knowledge/sectors/islamic_banks_financials.md, and tests/out/walkforward_trades.csv. "Observed" means read in the repo or computed from the trade log; "reasoned" means inference.
 
 ## Verdict
 

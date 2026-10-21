@@ -1,4 +1,4 @@
-# RUNBOOK.md — the weekly loop (written 17 Oct 2026; revise as tests change)
+# RUNBOOK.md — the weekly loop (written 17 Oct 2026; revised 21 Oct 2026)
 
 Who runs it: the orchestrator (Claude chat) with network access runs steps 1 to 4. GPT (or any research chat) runs steps 5 to 7 from the files, and emails opportunities. Either can run step 8. Nothing here needs more than an hour a week.
 
@@ -24,10 +24,10 @@ Open `catalysts\frozen_predictions.csv`. For every row whose `event_date` has pa
 .venv\Scripts\python.exe scripts\tests\results_surprise_drift.py --screen     # ignored-quarter setups in the last 2 quarters
 .venv\Scripts\python.exe scripts\tests\insider_cluster_buying.py --screen     # sponsor and director buying clusters, last 90 days
 .venv\Scripts\python.exe scripts\sector_momentum.py                           # 6-month sector ranks
-.venv\Scripts\python.exe scripts\screen_breakout.py                           # the breakout sleeve: names above their 252-session high, ranked; fire count
+.venv\Scripts\python.exe scripts\screen_breakout.py                           # names above their 252-session high, ranked; fire count (candidates for the reflex)
 .venv\Scripts\python.exe scripts\daily_table.py && .venv\Scripts\python.exe scripts\engine.py --scan <today>   # rebuild the daily table (about 2 minutes) and list today's live situations with analogue odds
 ```
-Sleeve maintenance, every trading day or at least weekly: for each sleeve holding, compare the last close with 80% of the highest close since entry (adjusted closes); a close below it is a sell at the next session, no exceptions. On the deposit day, buy the top-ranked breakout name not already held (max 3), else send the ticket to the core.
+The standing breakout sleeve with its 20% trailing stop was dropped in PICKS v4 (DECISIONS.md, 19 Oct 2026). Breakout names are now candidates for the six-check reflex (PLAYBOOK.md section B); an opportunity position, once held, is exited only on the exit written at entry.
 (If a script has no `--screen` flag yet, run it and read the "live screen" section of its output.) Paste the three screens into the week's note. Only names that pass the base rates in `tests\` (hit rate above 55% and median above costs for that signal class) go to step 5.
 
 ## 4. Update the catalyst calendar (Claude)
@@ -40,7 +40,7 @@ For each candidate from step 3 or from a catalyst in step 4, write `knowledge\co
 
 ## 6. Decide and freeze (whoever holds the pen that week)
 
-Update `PICKS.md`: current positions, entry limits, the ranked watchlist with triggers. Every new buy, sell, or entry limit gets a row in `catalysts\frozen_predictions.csv` before the money moves (ticker, the price or EPS it depends on, the probability, the reasoning). The monthly Rs50k goes, on the same day each month, into the pick furthest below its target weight that still qualifies. Cash above 30% of the account for more than 4 weeks is a failure of the process, not prudence (lesson 13), unless the regime rule in `knowledge\playbooks\sector_rotation.md` says the market is in a hike-regime drawdown.
+Update `STATE.md` (holdings, decisions, pending events) and `PICKS.md` (plan, entry limits, the ranked watchlist with triggers). Every new buy, sell, or entry limit gets a row in `catalysts\frozen_predictions.csv` before the money moves (ticker, the price or EPS it depends on, the probability, the reasoning). The monthly Rs50k goes, on the same day each month, into the pick furthest below its target weight that still qualifies. Cash above 30% of the account for more than 4 weeks is a failure of the process, not prudence (lesson 13), unless the regime rule in `knowledge\playbooks\sector_rotation.md` says the market is in a hike-regime drawdown.
 
 ## 7. Email format for opportunities (GPT)
 

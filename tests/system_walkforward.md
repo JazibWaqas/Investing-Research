@@ -234,7 +234,7 @@ Yes, after costs and on the same survivor pool: S3 beats B0 by 35% and S2 by 9%.
 2. S3's margin is fragile. Its sector lists are in-sample, 88% of its profit is two stocks, and honest one-rule changes move it anywhere from 1.16x to 1.64x B0. It gave back most of its lead in 2026: 1.61x the KMI index on 31 Dec 2025, 1.25x on 16 Oct 2026, a -24.6% year so far against -3.5%.
 3. No stock-level signal survives a fair placebo. The ignored quarter fails; value picks add nothing reliable inside a sector; sponsor buying is untested.
 
-Would I bet the user's Rs50k a month on S3 as a system? **No.** I would bet it on staying fully invested in cap-weighted KMI exposure every month. That needs no skill and roughly matched B0 like for like. Lesson 13 says waiting costs more than any signal here earned. S3-style rotation would get at most a capped satellite, with a pre-registered review. That is what `knowledge/playbooks/strategy.md` sets out.
+Would I bet the user's Rs50k a month on S3 as a system? **No.** I would bet it on staying fully invested in cap-weighted KMI exposure every month. That needs no skill and roughly matched B0 like for like. Lesson 13 says waiting costs more than any signal here earned. S3-style rotation would get at most a capped satellite, with a pre-registered review. That is what `archive/strategy_2026-10-18.md` sets out.
 
 ### Audit housekeeping
 

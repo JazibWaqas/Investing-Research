@@ -1,6 +1,8 @@
-# ORCHESTRATOR_HANDOFF.md — what this session established, for the orchestrator
+# FINDINGS.md — what the research established, ranked, with every number's source
 
-Written 19 Oct 2026 by Claude Fable 5.1 at the end of a 30-hour research session (about 50 million subagent tokens across Haiku, Sonnet, Opus and Codex gpt-6). Every claim cites a repo file. Read PLAYBOOK.md and knowledge/HOW_TO_THINK.md with this. Data runs to the 16 Oct 2026 close; no results have landed since (EFERT and ATRL report 19 Oct).
+The canonical synthesis of the programme: how money is made on PSX, the 2026 retrospective, calibration, the regime, corrections to the seed findings, the machinery and the models. Written 19 Oct 2026 by Claude Fable 5.1 at the end of a 30-hour session (as the orchestrator handoff); made the canonical findings file on 21 Oct 2026, when the current picks, results and file map moved to PICKS.md, STATE.md and INDEX.md. Data runs to the 16 Oct 2026 close unless a line says otherwise. Section numbers are kept so older references still resolve.
+
+Precedence: for any number, the test file in tests/ outranks this summary. For what is live now, STATE.md and PICKS.md outrank sections 3 to 5. The strongest challenges to these findings are in gpt/EXAMINER_NOTES.md section 1; read them before acting on rank 1 or rank 3.
 
 ## 1. The model: how money is made on PSX, ranked
 
@@ -10,7 +12,7 @@ Ranking is by effect size, then reliability, then how early it is knowable. "Kno
 |---|---|---|---|---|---|
 | 1 | **Regime turns** (hike cycle ends, cut cycle begins, within ~3 months of a market low) | Largest: all 34 runs of 5x+ since 2016 were multi-year and 23 began within 3 months of a market low; KSE100 +40% and +49% in 120 sessions after the 2020 and 2024 first cuts | 4 real turns, 4 false bottoms; a 4-signal checklist separated them (3 to 4 present at real lows, 1 to 2 at false ones) | Weeks after the low, not before | tests/winners_population.md; tests/rate_cycle_episodes.md (first cut 120d median +39.8% vs placebo +7.9%, n_eff 3); knowledge/REGIME_TURN_PLAYBOOK.md |
 | 2 | **Staying invested in liquid KMI names** | KMI All Share total return 11.4%/yr 2017 to 2026, 2.66x on Rs50k/month deposits 2018 to 2026 (Rs14.1m on Rs5.3m) | High; drawdowns 40 to 60% | Always | data/macro/INDEX_NOTES.md; tests/system_walkforward.md |
-| 3 | **Confirmed trend with a sized exit** (buy at a 252-session high, trailing stop) | 2.5x to 3.3x on a fixed Rs50k in each of the three bull windows (2020-22, 2022-24, 2024-26); 0.8x to 1.1x in the two hike windows; 0.82x in the year to Oct 2026 | Held on two independent implementations, but one or two trades carry each window and a fixed 20% stop kept over half the gain in only 15 to 23% of winning runs | At the breakout, with about half the eventual gain still ahead (median, on winners only) | tests/oracle_and_good_case.md, tests/active_trading_codex.md, tests/rs50k_last_year.md, tests/winners_population.md |
+| 3 | **Confirmed trend with a sized exit** (buy at a 252-session high, trailing stop) | 2.1x to 3.3x on a fixed Rs50k in each of the three bull windows (2020-22, 2022-24, 2024-26), across the two implementations (HIGH52 made 2.09x in 2022-24); 0.8x to 1.1x in the two hike windows; 0.82x in the year to Oct 2026 | Held on two independent implementations, but one or two trades carry each window and a fixed 20% stop kept over half the gain in only 15 to 23% of winning runs | At the breakout, with about half the eventual gain still ahead (median, on winners only) | tests/oracle_and_good_case.md, tests/active_trading_codex.md, tests/rs50k_last_year.md, tests/winners_population.md |
 | 4 | **Sector and policy waves** (refiners 2026, OMC 2024, cement 2016-17) | 142 of 382 liquid big runs; the leader of a wave runs 2x to 5x | Visible in filings and prices; implementation of announced policy only 42% (62% with partial) | Weeks into the wave; the first signal was a strong quarter the price ignored (PRL 29 Apr 2026) | knowledge/CATALOGUE.md type 2; knowledge/playbooks/actors_and_incentives.md; knowledge/playbooks/catalyst_trade.md |
 | 5 | **Shock rebound** (geopolitical crash) | Index 5%+ below a shock's pre-event close: +4.2% median at 20 sessions, 78% win (random close +1.1%, 57%); geopolitical falls of 5%+ rebounded a median +27.8% at 60 sessions, 9 of 9 regained | 10 geopolitical events; day-1 repricing is the only headline type the market reprices | On the day | tests/noise_map_shock_rebound.md |
 | 6 | **Results jump with cash behind it, price confirming** | Gap up 5%+ on 2x volume with EPS +30%: 60-session median +16.6%, win 81%, n 37, but same-year random entries +10% (p 0.11) | Weak, 14 entry quarters | On the filing day | tests/results_gap_and_policy.md; knowledge/winners/_results_jumps.md |
@@ -32,7 +34,7 @@ Signals and their record elsewhere: (a) the "ignored strong quarter" (EPS more t
 
 Point-in-time replays (knowledge/playbooks/replay_exam.md, tests/replay_pilot_postmortem.md, tests/out/replay_pilot/, replay_2026/, replay_2026_v2/): invalid as a judgment test. The replay model (Sonnet 5.5, training cutoff June 2026) recalled the six months after 8 of 10 probe dates in detail (7 scored 3 of 3), so every date in our data is contaminated. Within that caveat: brief v1 (no investor posture stated) produced 20% average exposure, two entries in 15 dates of 2026, judgment-add +1.1% at 60 sessions and −5.4% at 120 (CI below zero), Brier 0.287 vs 0.250 for a coin. Brief v2 (posture stated, exposure reason required) produced 50 to 75% exposure, growth names in the core, four entries at 75% hit, book +2.8% vs KMI +1.2% and placebo +1.4% at 60 sessions, but the plain breakout rule won at 120 (+11.7% vs +4.4%) by holding the refiners, and exposure was higher before falls than otherwise. Lesson 23 in knowledge/lessons.md: given documents that say "no measured edge", a model holds cash; the brief shapes behaviour more than the data.
 
-Scored predictions: none yet. 42 rows are frozen in catalysts/frozen_predictions.csv: 27 on 19 to 29 Oct results and the MPC (frozen 17 Oct), 6 on the core buys and the breakout sleeve (18 Oct), 6 on PICKS v4 and the regime checklist (19 Oct), plus the orchestrator's register in seed/FORECAST_REGISTER.md. Three calibration rows bet the orchestrator's bands are too low: EFERT EPS above 4.74 (0.80), MEBL EPS above 12.74 (0.78 implied), OGDC EPS above 9.94 (0.82). Trust the probabilities as a reader's considered odds, not as calibrated frequencies, until catalysts/scorecard.md has 20 rows per class.
+Scored predictions (as of 19 Oct; the live record is catalysts/scorecard.md, which had 8 of 8 hits and Brier 0.092 on 21 Oct, mostly easy rows): 42 rows were frozen in catalysts/frozen_predictions.csv: 27 on 19 to 29 Oct results and the MPC (frozen 17 Oct), 6 on the core buys and the breakout sleeve (18 Oct), 6 on PICKS v4 and the regime checklist (19 Oct), plus the orchestrator's register in seed/FORECAST_REGISTER.md. Three calibration rows bet the orchestrator's bands are too low: EFERT EPS above 4.74 (0.80), MEBL EPS above 12.74 (0.78 implied), OGDC EPS above 9.94 (0.82). Trust the probabilities as a reader's considered odds, not as calibrated frequencies, until catalysts/scorecard.md has 20 rows per class.
 
 ## 4. The current regime
 
@@ -40,22 +42,13 @@ Policy rate 11.5% (hiked 27 Apr 2026; held 14 Sep, 7 of 10 votes); 6-month T-bil
 
 Regime label: TIGHT. The turn checklist reads 1 present (drain), 1 absent (oil), 2 unknown until about 10 Nov; the setup resembles the 14 Sep false bottom, not any of the four real lows.
 
-MPC 26 Oct call (frozen 17 Oct): hold 0.50, +50bp 0.38, +100bp 0.10, cut 0.02. Evidence each way: hold, because CPI fell and real rates are about +0.3; hike, because the bill prices it and 61% of brokers expect it (Topline survey, 17 Oct, cited in knowledge/playbooks/picks_redteam_codex.md); SBP's reaction function from 84 decisions: it hiked at a median real rate of −1.1% and never cut outside Covid with real rates under +4.7% (knowledge/playbooks/actors_and_incentives.md).
+MPC 26 Oct call (frozen 17 Oct): hold 0.50, +50bp 0.38, +100bp 0.10, cut 0.02. Evidence each way: hold, because CPI fell and real rates are about +0.3; hike, because the bill prices it and 61% of brokers expect it (Topline survey, 17 Oct, cited in knowledge/reviews/picks_redteam_codex.md); SBP's reaction function from 84 decisions: it hiked at a median real rate of −1.1% and never cut outside Covid with real rates under +4.7% (knowledge/playbooks/actors_and_incentives.md).
 
-Sector implication (sector_map.md, knowledge/playbooks/sector_rotation.md, tests/sector_momentum_regime.md): in hike windows E&P, fertilizer and Islamic banks held up best (regime tilt itself has no measured edge, placebo p 0.26); cement, autos, steel, textiles, pharma and chemicals lag; only about 4% of liquid names rose in the two previous hike bears (knowledge/situations/03 and 12). The rotation rule fires when CPI falls two prints and the 6-month bill sits below the policy rate at two auctions; it has not fired.
+Sector implication (knowledge/sectors/README.md, knowledge/playbooks/sector_rotation.md, tests/sector_momentum_regime.md): in hike windows E&P, fertilizer and Islamic banks held up best (regime tilt itself has no measured edge, placebo p 0.26); cement, autos, steel, textiles, pharma and chemicals lag; only about 4% of liquid names rose in the two previous hike bears (knowledge/situations/03 and 12). The rotation rule fires when CPI falls two prints and the 6-month bill sits below the policy rate at two auctions; it has not fired.
 
-## 5. Current picks and the comparison with the orchestrator's calls
+## 5. Current picks (moved)
 
-PICKS.md v4 (19 Oct), for Rs50,000 now and the monthly deposits:
-
-| Position | Size now | Entry | Exit | Catalysts | Probability |
-|---|---|---|---|---|---|
-| LUCK core | Rs12,500, 31 sh, limit Rs410 | Monday open | Written killer (PIA or GEPCO cheque, cement demand falling), KMI deletion; no price stop | Result late Oct; first rate cut (leader at both prior turns) | 12m total return positive 0.55; turn year +50% |
-| MEBL core | Rs12,500, 23 sh, limit Rs552 | Monday open | Shrink on the first rate cut of a cycle | Q3 result 22 Oct 11:00 (EPS 12.5 to 15 at 0.65, DPS 8+ at 0.60); MPC 26 Oct | 12m positive 0.55 |
-| MARI core | Rs10,000, 16 sh, limit Rs640 | Monday open | Oil collapse or higher state take | Q1 result late Oct (EPS about Rs17); gas circular-debt plan | 12m positive 0.55 |
-| Reserve | Rs10,000 now, 20% of each deposit | Only on a turn score of 3 of 4 | n/a | Checklist signals resolve about 10 Nov | No turn by 10 Nov: 0.75 |
-| ATRL opportunity | Rs5,000 to 10,000, conditional | Tue 20 Oct only if Mon close > Rs1,200 after result and diesel-cap decision | Close below Rs975 or first lower lock | Result 19 Oct 16:00; cap decision about 19 to 20 Oct | If entered, net gain 0.50 |
-| SAZEW trigger | up to Rs12,500 | Q1 EPS at or above Rs60 and no hike on 26 Oct | Stop 30% below entry | Result date not noticed yet | — |
+The live positions and triggers are in PICKS.md; open decisions and pending events in STATE.md. The 19 Oct table that stood here (v4, with LUCK) is in archive/picks/PICKS_v4.md. The comparison with the orchestrator's calls still holds and is kept below.
 
 Versus the orchestrator's calls (seed/PSX_STATE, seed/FORECAST_REGISTER.md):
 - **HUBC, OGDC, FFC (yield core):** disagree as the core for this investor. Sound businesses with no engine to double earnings (knowledge/companies/quality_scores.csv: FFC 14, OGDC and HUBC not scored higher; cards and red teams gave +2 to +3% expected returns, knowledge/companies/OGDC.md, FFC.md). Kept as paper positions for scoring. The orchestrator's OGDC entry at Rs285 and HUBC at Rs170 remain reasonable value entries; they are not growth.
@@ -66,9 +59,9 @@ Versus the orchestrator's calls (seed/PSX_STATE, seed/FORECAST_REGISTER.md):
 - **EPCL:** agree with the pass at the market price; the arithmetic is in knowledge/playbooks/deals.md (about 53% of a holding bought at Rs38.60 at full tender; complete-set base rate: buy after the offer, not the intention).
 - **PRL avoid:** agreed on fundamentals, and the frozen "EPS at or above Rs13 and flat-to-down over 5 sessions" call stands (we put 0.28 on the conjunction). But the retrospective shows PRL was the cleanest catchable move of 2026 on 9 Jul at Rs41.85, and the breakout rule held it; the avoid was right about value and wrong about the trade. At 4.2x its low it is late now.
 
-## 6. Results scored so far
+## 6. Results scored (moved)
 
-None. The first events are 19 Oct (EFERT 09:30, ATRL 16:00, MLCF EOGM), 20 Oct (PRL 15:00 board, first reaction session 21 Oct; EPCL), 22 Oct (MEBL 11:00, FABL 09:30), 26 Oct (MPC), 27 Oct (FCCL), 27 to 29 Oct (FFC, OGDC, MARI, LUCK, unconfirmed). Score per RUNBOOK.md step 2; the price-direction rows use the close of the fifth session after the release against the last close before it. The orchestrator's PRL conjunction and its EPS bands are in the same register, labelled "orchestrator", and will be scored alongside.
+Scored rows and the running Brier score are in catalysts/scorecard.md; what is still pending is in STATE.md.
 
 ## 7. Corrections to the orchestrator's findings
 
@@ -98,100 +91,13 @@ From a chat with web search only: reading PLAYBOOK.md, CATALOGUE.md, REGIME_TURN
 - **Opus 5.5:** earned its cost on the seed audit (found the XD bug, the double counting, the placebo), the test-design reviews, the walk-forward post-mortem, the exam design and the syntheses. Over-wrote length limits routinely.
 - **Fable (me) as orchestrator:** the failures were mine: wrong yardstick for the core, false precision, proactivity before alignment; the record is in knowledge/HOW_TO_THINK.md sections 3 and 6.
 - **Codex gpt-6-sol:** good for independent replication (active_trading_codex matched the Claude result) and web research with `-c 'tools.web_search=true'`; `--search` is not accepted by `codex exec`.
-- **GPT-6 Astra:** the best critic in the programme on two occasions (knowledge/playbooks/astra_peer_review.md, astra_catalogue_review.md); as a trader it hid in cash on the same bundle (data/asof/2026-10-16/REPLY_astra.json). Use it for critique, not calls. The user's plan limits make long Codex tasks risky.
+- **GPT-6 Astra:** the best critic in the programme on two occasions (knowledge/reviews/astra_peer_review.md, astra_catalogue_review.md); as a trader it hid in cash on the same bundle (data/asof/2026-10-16/REPLY_astra.json). Use it for critique, not calls. The user's plan limits make long Codex tasks risky.
 - **All models:** pretraining memory of 2019 to mid-2026 contaminates any historical judgment test (tests/replay_pilot_postmortem.md). Mechanical rules can be backtested; judgment only scored forward.
 
-## 10. Open questions, ranked by likely money impact
+## 10. Open questions (moved)
 
-1. **Is the turn checklist real?** Fitted to 8 dates. It decides when the reserve (the money that made every 5x run) goes in. Score it live from now; the next readings are 26 Oct, 2 Nov and about 10 Nov (knowledge/REGIME_TURN_PLAYBOOK.md section 6).
-2. **Does reading a cause add to the breakout rule?** The only question the live scorecard can answer; 20 weeks of frozen calls (catalysts/scorecard.md). Until then the plain rule is the challenger and it is hard to beat (tests/replay_2026_v2).
-3. **Exits.** The library says stops sized to each name beat fixed stops, measured on winners only (Astra's objection). Test the named exit rules on the full breakout population including losers, pre-registered (tests/winners_population.md, knowledge/playbooks/astra_catalogue_review.md).
-4. **Business-quality scores vs returns.** 20 names scored by a model from filings; untested against subsequent returns. Score the remaining liquid KMI names and test the top third vs bottom third over 2022 to 2026 with the records frozen at each year end.
-5. **Policy implementation odds** (42% as stated, 62% partial): the single most useful number for the catalyst layer, on 26 cases chosen by hand. Extend to a systematic list from the announcements and ECC records (knowledge/playbooks/actors_and_incentives.md).
-6. **Survivorship in the small-cap tail and the 55 listed names missing from the panel** (data/prices_listed_missing/, data/DELISTINGS_NOTES.md): zero effect on the liquid basket, unknown for any screen that reaches thin names.
-7. **Finqalab's commission rate:** unverified; the user must read it in the app (data/costs.md). It moves the break-even of every short trade.
+The ranked research backlog, merged from this section, TEACHER_NOTES section 8 and EXAMINER_NOTES, is knowledge/BACKLOG.md.
 
-## 11. File map
+## 11 and 12. File map (moved)
 
-See section 12 below, generated from `git ls-files` with one line per file or group and a tag. CORE files, the six that go into the orchestrator's project knowledge: PLAYBOOK.md, PICKS.md, knowledge/HOW_TO_THINK.md, knowledge/CATALOGUE.md, knowledge/REGIME_TURN_PLAYBOOK.md, and this file. REPORT.md and tests/FACTS.md are the first REFERENCE files to open when a number is needed.
-
-
-## 12. File map (2,436 tracked files; `git ls-files`, 19 Oct 2026)
-
-Tags: **CORE** goes into the orchestrator's project knowledge (six files); **REFERENCE** stays in the repo and is opened when needed; **ARCHIVE** is superseded, historical or raw output. data/raw/ (filings, PDFs) is gitignored and not in the repo.
-
-### Root
-
-| Path | What it is | Tag |
-|---|---|---|
-| PLAYBOOK.md | The operating rules on one page: the book, the six-check reflex, the regime-turn checklist, exits, the weekly loop, what not to do | CORE |
-| PICKS.md | v4 buy report (19 Oct): core LUCK, MEBL, MARI; reserve for the turn; one conditional opportunity; triggers; dates; plain language | CORE |
-| ORCHESTRATOR_HANDOFF.md | This file | CORE |
-| REPORT.md | The evidence-backed account of how money is made on PSX, 11 sections, every number from a test file | REFERENCE, first to open for a number |
-| knowledge/HOW_TO_THINK.md | How the investor thinks, how the research went wrong and was corrected, the thinking rules, the alignment questions, what each phase taught (13 sections) | CORE |
-| knowledge/CATALOGUE.md | The if-then casebook of nine situation types with paths, entry and exit hypotheses, failure twins and cases; read its status box first | CORE |
-| knowledge/REGIME_TURN_PLAYBOOK.md | Four real turns vs four false bottoms, the signal checklist, leader sequence, entry in thirds, exits, today's reading | CORE |
-| CLAUDE.md | Entry point and reading order for any model; rules; environment and the PSX API trick | REFERENCE |
-| AGENTS.md | Same brief for non-Claude agents | REFERENCE |
-| HANDOFF.md | Session state and continue points, dated updates to 19 Oct | REFERENCE |
-| RUNBOOK.md | The weekly loop step by step (refresh, score, scan, calendar, underwrite, freeze, email format, maintenance) | REFERENCE |
-| DECISIONS.md | Dated log of every course change with reason | REFERENCE |
-| sector_map.md | 16-sector ranking and verdicts, 17 Oct | REFERENCE |
-| PLAN.md | The original plan (17 Oct), superseded by HOW_TO_THINK | ARCHIVE |
-| .claude/skills/psx-weekly/SKILL.md; knowledge/SKILL_psx_weekly.md (identical copy) | The weekly judgment loop as a skill a chat can run | REFERENCE |
-
-### knowledge/
-
-| Path | What it is | Tag |
-|---|---|---|
-| knowledge/lessons.md | 25 lessons, each a mistake made and the rule it produced | REFERENCE, read before any analysis |
-| knowledge/QUESTIONS.md | 42 questions an experienced investor asks before a call, with evidence weights | REFERENCE |
-| knowledge/winners/ (49 cases + 6 syntheses `_*.md`) | Hindsight case studies of big runs by type; the syntheses hold each type's shared signature and rules | REFERENCE |
-| knowledge/regime_turns/ (4) | The 2019, 2020, 2022-23 and 2024 turns week by week, with the present read | REFERENCE |
-| knowledge/situations/ (12 cases + INDEX.md) | Dated point-in-time situation cases (2019 bottom to EPCL 2026) | REFERENCE |
-| knowledge/companies/ (13 cards, 20 `*_quality.md`, quality_scores.csv, QUALITY_README.md) | Underwriting cards with red-team sections; business-quality records and scores | REFERENCE |
-| knowledge/sectors/ (16 notes + _unresolved_gaps.md) | Sector levers, state, catalysts, exposed names, past episodes, with Codex gap resolutions | REFERENCE |
-| knowledge/playbooks/ (17) | strategy.md, strategy_candidates.md (pre-registered rules), active_trading.md, short_term.md, deals.md, holdco_discounts.md, sector_rotation.md, catalyst_trade.md (refiner retrospective), situation_engine.md, replay_exam.md, practitioner_signals.md, actors_and_incentives.md; reviews: critic_review.md (Codex), consultant_review.md (Fable), astra_peer_review.md, astra_catalogue_review.md, picks_redteam_codex.md | REFERENCE (reviews: REFERENCE, they changed decisions) |
-
-### tests/
-
-| Path | What it is | Tag |
-|---|---|---|
-| tests/FACTS.md | Headline numbers from all 19+ tests, verbatim, with verdict words | REFERENCE, first to open for a number |
-| tests/BASE_RATES.csv | 395 rows of measured odds by situation type and horizon | REFERENCE |
-| tests/*.md (30 write-ups) | One per test: seed_audit, refiner_steel_retrospective, sector_momentum_regime, commodity_pkr_sensitivity, flows_predict_sectors, rate_cycle_episodes, index_recomposition_events, calendar_effects, size_liquidity, value_timestamped, results_surprise_drift, insider_cluster_buying, dividend_runup_exdate, quality_within_sector, compounders, corporate_events, results_gap_and_policy, volume_ignition_upper_locks, noise_map_shock_rebound, winners_case_control, winners_population, winners_2026_postmortem, system_walkforward (with audit and rebench), fixed_capital_runs, oracle_and_good_case, active_trading_codex, rs50k_last_year, pattern_mining_daily, informed_capital, replay_pilot_postmortem | REFERENCE |
-| tests/out/ (103 raw outputs, incl. replay_pilot/, replay_2026/, replay_2026_v2/, engine scans) | Raw run output behind every write-up | ARCHIVE |
-
-### catalysts/
-
-| Path | What it is | Tag |
-|---|---|---|
-| catalysts/frozen_predictions.csv | 42 frozen calls with probabilities; append-only; outcome columns filled as events land | REFERENCE |
-| catalysts/scorecard.md | Brier scoring rules and the (empty) record | REFERENCE |
-| catalysts/catalyst_calendar.csv (126 rows), dividend_calendar.csv (69) | Dated events by sector and ticker; expected ex-dates and net amounts | REFERENCE |
-| catalysts/draft_predictions.csv | Drafts before freezing | ARCHIVE |
-
-### data/ and scripts/
-
-| Path | What it is | Tag |
-|---|---|---|
-| data/prices_raw/ (313), prices_delisted/ (315), prices_listed_missing/ (55) | Daily OHLCV from the PSX portal | REFERENCE |
-| data/panel_close*.parquet, panel_volume.parquet; data/corporate_actions.csv and notes | Price panels, raw and adjusted; the corporate-actions table | REFERENCE |
-| data/announcements.parquet (225,594 rows) | Timestamped PSX announcements 2005 to 2026 with classes | REFERENCE |
-| data/daily_table.parquet/ (10 partitions) + DAILY_TABLE_NOTES.md | 577,794 stock-days of features and forward paths | REFERENCE |
-| data/fundamentals/ | quarterly_eps.csv (129 names) and notes | REFERENCE |
-| data/macro/ (40 series + README, INDEX_NOTES) | Rates, bills, CPI, reserves, current account, FX, oil, commodities, indices (TR vs PR), NCCPL flows | REFERENCE |
-| data/index_changes.csv, index_recomp_log.csv, index_members/ (50), kmi_allshare_2026-06-05.csv, INDEX_DATA_NOTES.md | Index membership history | REFERENCE |
-| data/winners_library.csv (382 liquid runs), winners_library_thin.csv (1,376) | The winners population with path metrics | REFERENCE |
-| data/deals_history.csv, delistings.csv, insider_trades.csv (+ docs, universe), events_shocks*.csv, costs.md, symbols.csv, payouts_raw.csv | Supporting datasets with their notes | REFERENCE |
-| data/asof/ (42 date folders) | Point-in-time packs and bundles; REPLY*.json are replay outputs | REFERENCE (REPLY files ARCHIVE) |
-| data/intraday/ | Tick archive from the 16 Oct 2026 session | REFERENCE |
-| scripts/psx_api.py, prices.py, asof.py, replay_bundle.py, score_replay.py, daily_table.py, engine.py, walkforward.py, walkforward_rebench.py, screen_breakout.py, sector_momentum.py, collect_intraday.py, refresh_prices.py, fetch_*.py, macro_*.py, idx_*.py, build_*.py, survivorship.py | The pipeline (CLAUDE.md Environment lists the entry points) | REFERENCE |
-| scripts/tests/ (28), scripts/ca/ (9), scripts/codex/ (5) | One script per test; the corporate-actions pipeline; Codex's independent engines | REFERENCE |
-| scripts/audit/ (17), scripts/walkforward_v0.py, scripts/refetch_ids.py, scripts/insider_sample.py, insider_dl.py, _tmp_kmi.json, data/insider_trades_run1.csv, data/insider_pdf_reads.txt, picks/PICKS_v3.md | Seed-era audit scripts, earlier versions, one-off fixes | ARCHIVE |
-
-### seed/
-
-| Path | What it is | Tag |
-|---|---|---|
-| seed/CLAUDE.md, DATA_README.md, LESSONS.md, FORECAST_REGISTER.md, PSX_STATE (living state, read first).md, scripts/ (10), data/ (538) | The orchestrator's original brief, state, register, scripts and data, untouched | ARCHIVE (FORECAST_REGISTER.md stays referenced for scoring) |
+The map of every folder and live document is INDEX.md.

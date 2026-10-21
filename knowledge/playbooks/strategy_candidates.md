@@ -1,6 +1,6 @@
 # Strategy candidates for the walk-forward backtest (pre-registered)
 
-Frozen 2026-10-17, before any system backtest. Evidence: `tests/seed_audit.md`, `tests/out/sector_momentum_regime.txt`, `tests/calendar_effects.md`, the catalyst, rotation and practitioner playbooks, `sector_map.md`, `seed/PSX_STATE`. Implement exactly. Log any deviation in `DECISIONS.md` and report both the frozen and the deviating result. Nothing here changes after a result is seen.
+Frozen 2026-10-17, before any system backtest. Evidence: `tests/seed_audit.md`, `tests/out/sector_momentum_regime.txt`, `tests/calendar_effects.md`, the catalyst, rotation and practitioner playbooks, `knowledge/sectors/README.md`, `seed/PSX_STATE`. Implement exactly. Log any deviation in `DECISIONS.md` and report both the frozen and the deviating result. Nothing here changes after a result is seen.
 
 ## 0. Rules common to every strategy
 

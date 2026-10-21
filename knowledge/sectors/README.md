@@ -1,4 +1,4 @@
-# Sector map, 17 Oct 2026
+# Sector map, 17 Oct 2026 (knowledge/sectors/README.md; formerly the root sector map)
 
 Written 2026-10-17. Evidence: the sixteen notes in `knowledge/sectors/`, `knowledge/playbooks/catalyst_trade.md` and `practitioner_signals.md`, and `catalysts/catalyst_calendar.csv`. Momentum is computed here: equal-weight baskets of the KMI names each note lists, daily returns clipped at ±10% (this also neutralises most bonus gaps), 126 sessions from 13 Apr to 16 Oct 2026, against KMI All Share (+4.3% over the same window). Prices come from `seed/data/prices`, with `data/prices_raw` used where a seed file was missing (ATRL, OGDC, HUBC, ISL, BIPL and others). Script: `scripts/sector_momentum.py`. Price-only returns, so dividend payers (HUBC, PPL, FFC) are understated. Most notes ran out of web search, so broker research is largely absent. Treat the verdicts as judgment on documented evidence, not a backtested model.
 

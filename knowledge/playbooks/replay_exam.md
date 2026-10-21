@@ -108,7 +108,7 @@ The fields:
 
 ## 4. Harness, bundle and leak control
 
-**Harness.** `scripts/replay_run.py` makes one API call per date. The call has no tools, has the brief and bundle inlined, starts from a fresh context, and logs the model ID. Output goes to `data/replay/<T>.json`, append only. The fallback is a subagent allowed to read only `data/asof/<T>/`. If it reads anything else, the date is void and is re-run once.
+**Harness.** `scripts/replay_run.py` (planned; not in the repo) makes one API call per date. The call has no tools, has the brief and bundle inlined, starts from a fresh context, and logs the model ID. Output goes to `data/replay/<T>.json`, append only. The fallback is a subagent allowed to read only `data/asof/<T>/`. If it reads anything else, the date is void and is re-run once.
 
 **Bundle filter** (`scripts/replay_bundle.py`). Today's method files are full of outcomes from 2024 to 2026, so:
 - **`questions.md`**: from QUESTIONS.md, the item ID and the bold question only. Parentheticals naming a year or month are deleted. (B10 has "Feb 2026", and the why, data and [M] lines hold full-sample results.)
