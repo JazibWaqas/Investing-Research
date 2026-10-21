@@ -3,7 +3,8 @@
 1. In ChatGPT, create a Project named "PSX Research".
 2. Paste the whole of `gpt/PROJECT_INSTRUCTIONS.md` into the project's Instructions box.
 3. Upload these files as project knowledge, in this order of importance (the first eight are the must-haves if there is a file limit):
-   1. ORCHESTRATOR_HANDOFF.md — everything established, with sources
+   1. gpt/TEACHER_NOTES.md — the reasoning behind the documents: what was misunderstood, how PSX works causally, the discoveries graded by evidence strength, mistakes, how to think, where the framework is weak
+   2. ORCHESTRATOR_HANDOFF.md — everything established, with sources
    2. PLAYBOOK.md — the rules on one page
    3. PICKS.md — current positions, triggers, the 21 Oct LUCK amendment
    4. knowledge/HOW_TO_THINK.md — how you think, how the research went wrong and was corrected
