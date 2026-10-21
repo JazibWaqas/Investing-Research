@@ -167,7 +167,7 @@ The current trough is 13 Oct, KSE100 164,776: 12.9% under the 23 Jan peak of 189
 
 **What the playbook says to do now.**
 - This is not a regime turn yet. The setup looks like the 14 Sep false bottom: a hike regime, an oil shock that is still running, and a bill pricing a hike. It does not look like any of the four real lows.
-- Keep the `PICKS.md` v4 deposits as written: about Rs35,000 core (MEBL, MARI and the open slot; LUCK withdrawn 21 Oct, not eligible), Rs10,000 reserve, up to Rs5,000 for one conditional opportunity (ATRL this week only on its stated trigger).
+- Keep the `PICKS.md` deposits as written (version 5, 21 Oct): about 80% core (MEBL, MARI and the open slot; LUCK withdrawn, not eligible) and about 20% reserve. No opportunity qualifies today; the ATRL conditional entry did not trigger.
 - Do not commit any turn tranche (section 4) until the score reaches 3.
 - Do not sell the core on this pullback. From past knowable entries, the 25% index leash has not been reached.
 

@@ -122,7 +122,7 @@ Base rate, 11 completed offers 2021 to 2026: premium to pre-announcement price m
 | quality_within_sector | weak ("Weak, not proven.") | Top minus bottom median "+5.8", placebo "p = 0.054" | 26 formations, 3 annual episodes |
 | insider_cluster_buying (run 2) | not supported ("Still not supported.") | H1 cluster 63 sessions median "-0.4%", p "0.473" | 37 H1 cluster events, 17 symbols |
 | fixed_capital_runs | no 3x ("no pre-registered rule set would have") | S3 "1.36x" vs B1 "2.00x" from 1 Oct 2024; KMI TR "1.81x" | 6 start dates; 14 S3 trades |
-| oracle_and_good_case | nothing reached 3x; breakout "a hypothesis from five windows" | S4 "2.38x", S3 "2.12x" (literal window); oracle "265x" | 8 systems, 5 windows plus literal; 200 random paths |
+| oracle_and_good_case (its "S3" is the 52-week breakout rule, not the walk-forward's regime S3) | nothing reached 3x; breakout "a hypothesis from five windows" | S4 "2.38x", S3 "2.12x" (literal window); oracle "265x" | 8 systems, 5 windows plus literal; 200 random paths |
 | winners_case_control | not predictable ("does not support fast rotation") | Top-decile precision "5.82% (32 of 550)" vs base "4.51%"; placebo median "5.91%" | 129 events, 83 sector episodes |
 | active_trading_codex | suggestive | HIGH52 "2.62x" (2024-26), "3.34x" (2020-22), "0.89x" (2016-18) | 7 rules, 5 cohorts, 200 random paths |
 | system_walkforward post-mortem | "No" (S3 as a system); earnings signal "abandoned" | S3 "1.353" vs same-pool B0' | 132-name pool; 38 S2 satellite closed trades |
