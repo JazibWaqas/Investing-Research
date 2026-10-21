@@ -104,7 +104,7 @@ At Rs299.10 the budget buys 33 to 41 shares. Shown for 37 shares (Rs11,067), inc
 
 ## Red team (17 Oct 2026)
 
-Checked against data/prices_raw/OGDC.csv, data/announcements.parquet, data/fundamentals/quarterly_eps.csv, data/macro/brent.csv, tests/commodity_pkr_sensitivity.md and catalysts/frozen_predictions.csv.
+Checked against data/prices_raw/OGDC.csv, data/announcements.parquet, data/fundamentals/quarterly_eps.csv, data/macro/brent.csv, tests/commodity_pkr_sensitivity.md and ledger/calls.csv.
 
 **What held up.**
 - Share count (4,300.93m) and EPS basis match the data (StockAnalysis shows 4,301m; the four FY26 quarters sum to 56.35).

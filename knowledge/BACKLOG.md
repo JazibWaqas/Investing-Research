@@ -31,4 +31,4 @@ Tested adequately, with placebos; the answers are in tests/FACTS.md: value scree
 ## Done
 
 - 2026-10-19 | LUCK GEPCO exposure, MARI Brent sensitivity, reserve release rule | knowledge/companies/LUCK_gepco.md, knowledge/companies/MARI.md, PLAYBOOK.md section A
-- 2026-10-21 | First results scored (8 of 8, Brier 0.092) | catalysts/scorecard.md
+- 2026-10-21 | First results scored (8 of 8, Brier 0.092) | ledger/scorecard.md

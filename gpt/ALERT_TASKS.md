@@ -8,7 +8,7 @@ Search today's PSX market close (Business Recorder market wrap, Mettis, dps.psx.
 
 ## 2. Results watch — every trading day, 09:00 and 15:45 PKT
 
-Search dps.psx.com.pk announcements and the news for board meetings and financial results filed since the last check for: MEBL, LUCK, MARI, FABL, SAZEW, SYS, OGDC, FFC, PPL, ILP, FCCL, MLCF, DGKC, KOHC. For each result: EPS against the same quarter last year and against any frozen prediction in frozen_predictions.csv, the dividend, and whether it fires a killer or a trigger in PICKS.md. Score any frozen row that has landed.
+Search dps.psx.com.pk announcements and the news for board meetings and financial results filed since the last check for: MEBL, LUCK, MARI, FABL, SAZEW, SYS, OGDC, FFC, PPL, ILP, FCCL, MLCF, DGKC, KOHC. For each result: EPS against the same quarter last year and against any frozen prediction in ledger/calls.csv, the dividend, and whether it fires a killer or a trigger in PICKS.md. Score any frozen row that has landed.
 
 ## 3. Rate and regime check — Mondays 09:00 PKT, and the evening of every SBP rate decision
 

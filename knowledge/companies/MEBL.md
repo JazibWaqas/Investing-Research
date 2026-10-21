@@ -86,7 +86,7 @@ At Rs545.82: 22 shares = Rs12,008 (18 shares = Rs9,825). Net dividends over 12 m
 - data/payouts_raw.csv: dividends 70%, 70%, 70%, 70%, 75%, 80% (Feb 2025 to Aug 2026). The last six ex-dates are in seed corporate_actions.csv.
 - stockanalysis.com (accessed 17 Oct 2026): quote, statistics, quarterly income statement, balance sheet, ratios.
 - ProPakistani, 6 Aug 2026 (H1 PAT, AHL consolidated EPS 26.71); Topline 2Q preview Rs13.7 (via search).
-- Repo files: knowledge/sectors/islamic_banks_financials.md, tests/rate_cycle_episodes.md, catalysts/frozen_predictions.csv.
+- Repo files: knowledge/sectors/islamic_banks_financials.md, tests/rate_cycle_episodes.md, ledger/calls.csv.
 - **Unverified:** relative P/E history (seed, years not synchronised); KSE-100 forward P/E of about 7x; the cause of the Q4-25 EPS dip; all ex-dates after Nov 2026 and dividend amounts after the Q3 declaration; my CoE and g assumptions; no Q3 broker preview found.
 
 ## Red team (17 Oct 2026)

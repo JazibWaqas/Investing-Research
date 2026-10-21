@@ -137,7 +137,7 @@ All in the Claude repo session; the GPT project does not have these tools. Comma
 - **Backtests**: `scripts/walkforward.py` (monthly strategy engine, deposit schedule parameter), `scripts/tests/*.py` (one per test, pre-registration in each header), `scripts/codex/` (independent replication).
 - **Winners library**: `data/winners_library.csv` (382 liquid runs), `knowledge/winners/` (cases), `tests/winners_population.md`.
 - **Exam harness**: `scripts/asof.py DATE --check` (point-in-time pack), `scripts/replay_bundle.py DATE`, `scripts/score_replay.py --dates ...`. Only useful for dates after the model's training cutoff.
-- **Scorecard**: `catalysts/frozen_predictions.csv` (append-only) and `catalysts/scorecard.md`.
+- **Scorecard**: `ledger/calls.csv` (append-only) and `ledger/scorecard.md`.
 - **Intraday archive** `scripts/collect_intraday.py`: started 16 Oct 2026; same-day rules cannot be tested until months have accumulated.
 
 What these tools cannot answer: whether a specific move will continue (they give base rates, not forecasts), whether a policy will be implemented, anything needing intraday history before Oct 2026, anything about management quality beyond what filings say, and any judgment test on dates the model remembers.
@@ -178,7 +178,7 @@ Do not repeat: value screens, stock momentum, volume and lock rules, flow signal
 
 - **No trade has been confirmed.** Do not assume he executed anything.
 - **Current recommendation (PICKS.md v4 with the 21 Oct amendment):** MEBL after its 22 Oct 11:00 result if EPS is Rs11 or more (we froze Rs12.50 to 15 at 65% and a dividend of Rs8 or more at 60%); a MARI starter of about 8 shares now, the rest at Rs540 or below; LUCK withdrawn and its slot in the reserve; about 20% of each deposit as the turn reserve, with the release rule; triggers for SAZEW (EPS Rs60+ and no hike) and SYS (Rs100 or below); skip the refiners (late in stage, sold off on blowout results on 20 Oct, cause unverified).
-- **Scored so far (catalysts/scorecard.md):** 8 of 8 result and event calls held, Brier 0.092: EFERT consolidated EPS 7.07 and Rs5.50 dividend; ATRL EPS 174.89; PRL EPS 22.17, nil dividend; EPCL a loss of Rs1.45; MLCF's merger approved. The orchestrator's EFERT band (top case 4.74) was too low. The conditional ATRL entry did not trigger.
+- **Scored so far (ledger/scorecard.md):** 8 of 8 result and event calls held, Brier 0.092: EFERT consolidated EPS 7.07 and Rs5.50 dividend; ATRL EPS 174.89; PRL EPS 22.17, nil dividend; EPCL a loss of Rs1.45; MLCF's merger approved. The orchestrator's EFERT band (top case 4.74) was too low. The conditional ATRL entry did not trigger.
 - **Pending:** EFERT's price reaction (26 Oct close against Rs194.82), PRL's (28 Oct against Rs101.44, which also settles the orchestrator's "flat to down" call), MEBL 22 Oct, the MPC 26 Oct (we froze hold 0.50, +50bp 0.38, +100bp 0.10, cut 0.02), FFC, FCCL, OGDC 27 to 29 Oct, October CPI 2 Nov, the checklist's rupee and reserves signals about 10 Nov, the regime call "no turn by 10 Nov" at 75%.
 - **Still to verify:** Finqalab's commission; the refinery policy approval date (21 or 28 Jul); Sep CPI 10.3%; every GEPCO figure; why refiners fell on 20 Oct.
 - **Next actions:** score as events land; decide the MEBL buy after its result; after the MPC, re-run the regime read; score the cement names for the LUCK slot when Jazib asks.

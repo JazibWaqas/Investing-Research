@@ -19,7 +19,7 @@ Read, in this order:
 1. `knowledge\HOW_TO_THINK.md` sections 2 (the investor) and 6 (thinking rules).
 2. `knowledge\QUESTIONS.md` (A regime, B business, C situation, D self-check).
 3. The last two `data\asof\<date>\REPLY.json` files.
-4. `catalysts\frozen_predictions.csv`, open rows only (blank `outcome`).
+4. `PICKS.md` (the open calls, built from `ledger\calls.csv`) and the latest letter in `journal\`.
 5. `knowledge\companies\quality_scores.csv`, if it exists.
 
 Then build the pack. `<today>` is the session date, a trading day, as YYYY-MM-DD:
@@ -46,10 +46,10 @@ Additions from the Astra review (`knowledge\reviews\astra_peer_review.md`, secti
 
 Record the call:
 1. Write `data\asof\<today>\REPLY.json` (one JSON object, brief schema, nothing else).
-2. Append one row per decision to `catalysts\frozen_predictions.csv`, same columns as existing rows: ticker, event, prediction, probability, reasoning (plus `frozen_at`, `event_date`; leave outcome fields blank). Put the full model ID and the brief and bundler commit hashes in the first row's reasoning for the week.
+2. Append one row per decision to `ledger\calls.csv` (columns in `scripts\ledger.py`): a new id, `made_at`, `made_by` (full model ID), `kind` call or forecast, `ticker`, `action`, `event`, `event_date`, `prediction`, `probability`, the price, size and rupee upside and downside, `proves_wrong`, `reasoning`, the `journal` entry, and `supersedes` when it replaces an open call. Write the week's reasoning to `journal\<today>.md`; a letter to Jazib goes to `journal\<today>-picks-vN.md`. Then run `scripts\ledger.py build`.
 3. Add a prospectively defined candidate set: every screened name with any signal this week (screens.csv signals, insider clusters, ignored-quarter setups, upper-lock volume), each with a pass or act decision and a probability. This lets omissions be scored later against a list fixed in advance.
 
-Never edit `prediction`, `probability` or `reasoning` after freezing.
+Never edit or delete a ledger row. To change a call, add a row that supersedes it.
 
 ## 4. The conversation with Jazib
 
@@ -70,10 +70,10 @@ Every week:
 .venv\Scripts\python.exe -I scripts\score_replay.py --dates <comma list of every date older than 60 sessions>
 ```
 
-Also fill `outcome`, `scored_at`, `score_note` on matured rows (RUNBOOK.md step 2). Then update `catalysts\scorecard.md` with:
+Score matured rows by appending to `ledger\scores.csv` (RUNBOOK.md step 2) and rebuild; `ledger\scorecard.md` computes the Brier table. Add to its notes, by hand:
 - Brier score and hit rate, by category, with n;
 - judgment-add: the book against the plain S3 rule and against KMI TR, at 20, 60 and 120 sessions;
-- sit-out gap: return given up (or loss avoided) by holding less than the default exposure;
+- sit-out gap: return given up (or loss avoided) by holding cash, against the KMI All Share;
 - omissions: returns of candidate-set names the method passed on.
 
 State the sample thresholds from `tests\replay_pilot_postmortem.md` section 5 before any claim:

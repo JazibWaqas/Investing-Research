@@ -186,4 +186,4 @@ The current trough is 13 Oct, KSE100 164,776: 12.9% under the 23 Jan peak of 189
 - **Survivors.** Delisted losers are thin in the price panel, so group medians and the 2021 to 2023 damage are understated. Breadth uses 41 to 127 names.
 - **Hindsight.** A "real low" is real only because no lower close followed; live, you see a trough and a partial score.
 - **Data gaps.** Indexes are rupee total return (dollar returns were far worse in 2022 to 2023). USD/PKR ends 30 Sep 2026; September 2026 CPI is unverified; the Mar 2020 and Jul 2022 SLAs were added from the turn files; conventional banks are missing from group returns.
-- **Twelve-month results are in-sample.** The entry thirds and the 25% leash with a 200-day buy-back are hypotheses. They should be scored live in `catalysts/frozen_predictions.csv` before more money depends on them.
+- **Twelve-month results are in-sample.** The entry thirds and the 25% leash with a 200-day buy-back are hypotheses. They should be scored live in `ledger/calls.csv` before more money depends on them.

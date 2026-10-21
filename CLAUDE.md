@@ -4,13 +4,16 @@ This repo is the memory of a research programme on how money is made on the Paki
 
 ## 1. Session protocol
 
-**Start (ten minutes).** Read STATE.md (what is live, what Jazib must decide, what is pending), PLAYBOOK.md (the rules), PICKS.md (positions and triggers). For anything beyond a lookup, also read knowledge/FINDINGS.md (what the research established).
+**Start (ten minutes).** Read STATE.md (holdings, what Jazib must decide, what is pending), PLAYBOOK.md (how to decide), PICKS.md (the open calls) and the latest letter and entry in journal/. For anything beyond a lookup, also read knowledge/FINDINGS.md (what the research established).
 
 **Before advising Jazib or starting research,** read knowledge/HOW_TO_THINK.md in full and knowledge/lessons.md. Do not launch large work before mirroring your understanding back to him and getting an explicit go; he said so, and HOW_TO_THINK section 8 explains why. Small reversible things (a price, a filing, a score) you just do.
 
-**End (every session that changed anything).** Update STATE.md in place and add one line to its session log. Log any changed conclusion in DECISIONS.md, any mistake in knowledge/lessons.md, any closed research item in knowledge/BACKLOG.md. Run the doc check and fix what it reports. Commit and push.
+**During.** Every call or forecast becomes a row in ledger/calls.csv before its event; every outcome a row in ledger/scores.csv; every trade Jazib reports a row in ledger/trades.csv, and deposits in deposits.csv (use `scripts/ledger.py trade` or `deposit` for those two; a bad row is refused).
+
+**End (every session that changed anything).** Write journal/<date>.md: what happened, what was decided, why. A letter to Jazib goes in journal/<date>-picks-vN.md. Rebuild the pages from the ledger, edit the hand-written parts of STATE.md, log changed conclusions in DECISIONS.md, mistakes in knowledge/lessons.md, closed research in knowledge/BACKLOG.md. Run the doc check, which also checks the ledger. Commit and push.
 
 ```
+.venv\Scripts\python.exe -I -X utf8 scripts\ledger.py build
 .venv\Scripts\python.exe -I -X utf8 scripts\check_docs.py
 ```
 
@@ -20,7 +23,8 @@ INDEX.md maps every folder and live document. The layers, from most to least oft
 
 | Layer | Files | Changes |
 |---|---|---|
-| Now | STATE.md, PICKS.md | Every session |
+| Record | ledger/ (calls, scores, trades, deposits: append-only tables), journal/ (dated reasoning and letters, never edited after their day) | Append only |
+| Now | STATE.md (partly built), PICKS.md (built from the ledger) | Rebuilt every session |
 | Rules | PLAYBOOK.md, RUNBOOK.md, .claude/skills/psx-weekly/SKILL.md | When a test or Jazib changes them |
 | Knowledge | knowledge/FINDINGS.md, HOW_TO_THINK.md, CATALOGUE.md, REGIME_TURN_PLAYBOOK.md, QUESTIONS.md, lessons.md, BACKLOG.md, and the casebooks in knowledge/ subfolders | When evidence changes them |
 | Evidence | tests/ (write-ups, FACTS.md, BASE_RATES.csv), data/ notes, catalysts/ (frozen register, scorecard) | Append; never rewrite a result |
@@ -41,13 +45,14 @@ Do not reconcile conflicting claims silently. Follow this order and say which yo
 ## 4. Rules for anyone writing here
 
 - **No binding rules about what to buy or how much.** Jazib does not want them (21 Oct 2026). Write evidence as reference points and calls as judgments with odds. Do not turn a preference or a past result into a cap, split or trigger that decides for him.
-- **One home per fact.** Live state lives only in STATE.md and PICKS.md; a measured number only in its test file (summaries cite it); the way of deciding only in PLAYBOOK.md. Do not copy state into other files; point to it.
+- **Things that happen are rows; reasoning is prose.** Calls, outcomes, trades and deposits are rows in ledger/, never edited or deleted: a changed view is a new row that supersedes the old one. Pages that show the current state are built from the rows, never written by hand. Reasoning goes in the journal and in knowledge/.
+- **One home per fact.** Live state lives only in the ledger and the hand-written parts of STATE.md; a measured number only in its test file (summaries cite it); the way of deciding only in PLAYBOOK.md. Do not copy state into other files; point to it.
 - **Supersede by moving.** A replaced document goes to archive/ with its date in the name, the INDEX line updated, and a DECISIONS.md entry. Do not keep two live versions.
 - **New files are rare.** Prefer updating an existing file. A new live document needs a line in INDEX.md, or the doc check fails.
 - Point in time only. No lookahead. Results count from their announcement timestamp; after 15:30 PKT means the next session.
 - Report n, mean, median, win rate, worst case, independent episodes, and a placebo of random entries with the same exits. Never a mean alone. Costs 0.5% a round trip in liquid names, 1% under Rs20m a day (data/costs.md).
 - Never invent numbers. Write "unverified" or "not found". Cite source and date.
-- Freeze predictions before events in catalysts/frozen_predictions.csv with a probability; append only, never edit a frozen row; score in catalysts/scorecard.md.
+- Freeze every call and forecast in ledger/calls.csv with a probability before its event; score it in ledger/scores.csv; ledger/scorecard.md computes the record.
 - Consolidated EPS for groups. Adjust prices for bonus and split before returns (scripts/prices.py, method 'adjusted').
 - KSE100, KMI30 and KMI All Share are total-return indices; KSE30 and KSE100PR are price indices (data/macro/INDEX_NOTES.md).
 - Every knowledge file states its evidence and date at the top. Update in place.
@@ -57,7 +62,7 @@ Do not reconcile conflicting claims silently. Follow this order and say which yo
 ## 5. How the repo improves itself
 
 The loop that makes each session better than the last:
-1. **Calls are frozen and scored.** Every weekly call goes into the register with a probability; the scorecard shows which parts of the method work. Judgment is scored forward only; history cannot test it (tests/replay_pilot_postmortem.md).
+1. **Calls are frozen and scored.** Every call goes into ledger/calls.csv with a probability and its reasoning into the journal; the scorecard shows which parts of the method work. Judgment is scored forward only; history cannot test it (tests/replay_pilot_postmortem.md).
 2. **Misses become rules.** A wrong call or a broken assumption becomes a lesson (knowledge/lessons.md) with the question that would have caught it.
 3. **Questions become tests.** Open questions are ranked in knowledge/BACKLOG.md. Its protocol is: pre-register, run, propagate the verdict to FACTS, FINDINGS and PLAYBOOK, log the change, close the item.
 4. **Stronger models attack the conclusions.** When a new or stronger model takes over, its first large task (after Jazib's go) is an examination like gpt/EXAMINER_NOTES.md: challenge the five conclusions that would cost most if wrong, audit contradictions, and file the result in knowledge/reviews/. Disagreeing with this repo, with evidence, is the job, not a failure.

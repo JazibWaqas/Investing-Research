@@ -6,7 +6,8 @@ Checks, on live docs (tracked .md files outside archive/, seed/, data/asof/, tes
   1. every repo path a doc mentions (folder/file.ext, ../file.md, or a root doc name) exists;
   2. no live doc names a retired file (see RETIRED) without its new path;
   3. AGENTS.md points to CLAUDE.md, and the two psx-weekly skill copies are identical;
-  4. every live doc is listed in INDEX.md, by its path or by its folder.
+  4. every live doc is listed in INDEX.md, by its path or by its folder;
+  5. the ledger tables are valid and the pages built from them are current (scripts/ledger.py check).
 Exit code 1 if anything fails. Fix the doc, not the check, unless the check is wrong.
 """
 import re
@@ -15,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKIP = ("archive/", "seed/", "data/asof/", "tests/out/")
+SKIP = ("archive/", "seed/", "data/asof/", "tests/out/", "journal/")
 RETIRED = {  # old name -> where its content went
     "ORCHESTRATOR_HANDOFF.md": "knowledge/FINDINGS.md",
     "HANDOFF.md": "STATE.md",
@@ -23,6 +24,7 @@ RETIRED = {  # old name -> where its content went
     "PLAN.md": "archive/PLAN_2026-10-17.md",
     "sector_map.md": "knowledge/sectors/README.md",
     "SKILL_psx_weekly.md": ".claude/skills/psx-weekly/SKILL.md",
+    "frozen_predictions.csv": "ledger/calls.csv",
 }
 PATH_RE = re.compile(r"(?<![\w/.\-=])((?:\.\./|\./)*[\w.\-]+(?:/[\w.\-]+)+/?|[A-Z][A-Z_]+\.md)")
 # Paths named on purpose although they do not exist (a bug's missing file, a name a spec used).
@@ -99,6 +101,10 @@ def main():
         listed = doc in index or (parent not in ("", "knowledge/") and parent in index)
         if not listed:
             problems.append(f"INDEX.md: does not list {doc} or its folder")
+
+    led = subprocess.run([sys.executable, "-I", "-X", "utf8", str(ROOT / "scripts/ledger.py"), "check"], cwd=ROOT, capture_output=True, text=True)
+    if led.returncode:
+        problems += ["ledger: " + l for l in led.stdout.splitlines() if l.strip()]
 
     for p in problems:
         print(p)

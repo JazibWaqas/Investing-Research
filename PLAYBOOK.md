@@ -6,7 +6,7 @@ There is no fixed strategy. No allocation split, no standing reserve, no loss ca
 
 - **KMI All Share names only.** His religious line. Check membership on the date (data/kmi_allshare_2026-06-05.csv; recompositions in June and December).
 - **Lucky group names are allowed when they are worth it.** Holding LUCK, LCI or another Lucky company means a declaration through his father's employer. That is a real cost, so a Lucky name has to beat the best non-Lucky alternative clearly. His inside view of LUCK is information with a bias; name the bias when you use it.
-- **Every call carries odds,** frozen before the event in catalysts/frozen_predictions.csv and scored after. This is how the judgment earns trust. It is not a limit on what he buys.
+- **Every call carries odds,** frozen before the event in ledger/calls.csv and scored after. This is how the judgment earns trust. It is not a limit on what he buys.
 - **No invented numbers, no lookahead.** "Unverified" is an answer.
 
 ## His stance on risk (stated 21 Oct 2026)

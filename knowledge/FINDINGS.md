@@ -34,7 +34,7 @@ Signals and their record elsewhere: (a) the "ignored strong quarter" (EPS more t
 
 Point-in-time replays (knowledge/playbooks/replay_exam.md, tests/replay_pilot_postmortem.md, tests/out/replay_pilot/, replay_2026/, replay_2026_v2/): invalid as a judgment test. The replay model (Sonnet 5.5, training cutoff June 2026) recalled the six months after 8 of 10 probe dates in detail (7 scored 3 of 3), so every date in our data is contaminated. Within that caveat: brief v1 (no investor posture stated) produced 20% average exposure, two entries in 15 dates of 2026, judgment-add +1.1% at 60 sessions and −5.4% at 120 (CI below zero), Brier 0.287 vs 0.250 for a coin. Brief v2 (posture stated, exposure reason required) produced 50 to 75% exposure, growth names in the core, four entries at 75% hit, book +2.8% vs KMI +1.2% and placebo +1.4% at 60 sessions, but the plain breakout rule won at 120 (+11.7% vs +4.4%) by holding the refiners, and exposure was higher before falls than otherwise. Lesson 23 in knowledge/lessons.md: given documents that say "no measured edge", a model holds cash; the brief shapes behaviour more than the data.
 
-Scored predictions (as of 19 Oct; the live record is catalysts/scorecard.md, which had 8 of 8 hits and Brier 0.092 on 21 Oct, mostly easy rows): 42 rows were frozen in catalysts/frozen_predictions.csv: 27 on 19 to 29 Oct results and the MPC (frozen 17 Oct), 6 on the core buys and the breakout sleeve (18 Oct), 6 on PICKS v4 and the regime checklist (19 Oct), plus the orchestrator's register in seed/FORECAST_REGISTER.md. Three calibration rows bet the orchestrator's bands are too low: EFERT EPS above 4.74 (0.80), MEBL EPS above 12.74 (0.78 implied), OGDC EPS above 9.94 (0.82). Trust the probabilities as a reader's considered odds, not as calibrated frequencies, until catalysts/scorecard.md has 20 rows per class.
+Scored predictions (as of 19 Oct; the live record is ledger/scorecard.md, which had 8 of 8 hits and Brier 0.092 on 21 Oct, mostly easy rows): 42 rows were frozen in ledger/calls.csv: 27 on 19 to 29 Oct results and the MPC (frozen 17 Oct), 6 on the core buys and the breakout sleeve (18 Oct), 6 on PICKS v4 and the regime checklist (19 Oct), plus the orchestrator's register in seed/FORECAST_REGISTER.md. Three calibration rows bet the orchestrator's bands are too low: EFERT EPS above 4.74 (0.80), MEBL EPS above 12.74 (0.78 implied), OGDC EPS above 9.94 (0.82). Trust the probabilities as a reader's considered odds, not as calibrated frequencies, until ledger/scorecard.md has 20 rows per class.
 
 ## 4. The current regime
 
@@ -48,7 +48,7 @@ Sector implication (knowledge/sectors/README.md, knowledge/playbooks/sector_rota
 
 ## 5. Current picks (moved)
 
-The live positions and triggers are in PICKS.md; open decisions and pending events in STATE.md. The 19 Oct table that stood here (v4, with LUCK) is in archive/picks/PICKS_v4.md. The comparison with the orchestrator's calls still holds and is kept below.
+The live positions and triggers are in PICKS.md; open decisions and pending events in STATE.md. The 19 Oct table that stood here (v4, with LUCK) is in journal/2026-10-19-picks-v4.md. The comparison with the orchestrator's calls still holds and is kept below.
 
 Versus the orchestrator's calls (seed/PSX_STATE, seed/FORECAST_REGISTER.md):
 - **HUBC, OGDC, FFC (yield core):** disagree as the core for this investor. Sound businesses with no engine to double earnings (knowledge/companies/quality_scores.csv: FFC 14, OGDC and HUBC not scored higher; cards and red teams gave +2 to +3% expected returns, knowledge/companies/OGDC.md, FFC.md). Kept as paper positions for scoring. The orchestrator's OGDC entry at Rs285 and HUBC at Rs170 remain reasonable value entries; they are not growth.
@@ -61,7 +61,7 @@ Versus the orchestrator's calls (seed/PSX_STATE, seed/FORECAST_REGISTER.md):
 
 ## 6. Results scored (moved)
 
-Scored rows and the running Brier score are in catalysts/scorecard.md; what is still pending is in STATE.md.
+Scored rows and the running Brier score are in ledger/scorecard.md; what is still pending is in STATE.md.
 
 ## 7. Corrections to the orchestrator's findings
 

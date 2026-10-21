@@ -121,7 +121,7 @@ Unverified: Finqalab's minimum commission on Rs4,000 tickets; a fixed fee could 
 **PICKS.md: changes**
 
 - The 25% satellite becomes the breakout sleeve, with the rules above.
-- The four catalyst triggers (GHGL, NETSOL, PSO, EPCL post-offer) become frozen paper trades in `catalysts/frozen_predictions.csv`. They earn a sleeve slot only after ten scored calls beat their pool. They have no measured edge; the breakout has a weak, replicated one.
+- The four catalyst triggers (GHGL, NETSOL, PSO, EPCL post-offer) become frozen paper trades in `ledger/calls.csv`. They earn a sleeve slot only after ten scored calls beat their pool. They have no measured edge; the breakout has a weak, replicated one.
 - "No price stop-losses" becomes "no price stop-losses on the core". The Rs17.6m to Rs14.5m result was a stop on the value core, a different rule.
 - The decision in five lines states that the active quarter follows strength with stops and does not predict.
 

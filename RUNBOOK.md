@@ -16,7 +16,7 @@ The PSX portal needs the `X-Req-Id` header (CLAUDE.md, Environment). If every ca
 
 ## 2. Score what landed (Claude or GPT)
 
-Open `catalysts\frozen_predictions.csv`. For every row whose `event_date` has passed and `outcome` is blank: find the actual (PSX announcement PDF, or the close prices in `data\prices_raw`), write 1 or 0 in `outcome`, the date in `scored_at`, and the actual number in `score_note`. Never edit `prediction`, `probability` or `reasoning`. Then update the Brier table in `catalysts\scorecard.md`. A prediction class whose Brier score stays above 0.25 after 20 rows is worse than a coin flip: stop making that class of call.
+`scripts\ledger.py build` lists, in STATE.md, every open row past its `event_date`. For each: find the actual (PSX announcement PDF, or the close prices in `data\prices_raw`) and append a row to `ledger\scores.csv`: `call_id`, `scored_at`, `outcome` (1 or 0; `void` if withdrawn before entry; `not_triggered` if a conditional call never fired), and the actual number in `note`. Never edit a call row. Rebuild; `ledger\scorecard.md` recomputes the Brier table. A class of call whose Brier score stays above 0.25 after 20 rows is worse than a coin flip: say so and change how those calls are made.
 
 ## 3. Re-run the live screens (Claude)
 
@@ -40,7 +40,7 @@ For each candidate from step 3 or from a catalyst in step 4, write `knowledge\co
 
 ## 6. Decide and freeze (whoever holds the pen that week)
 
-Update `STATE.md` (holdings, decisions, pending events) and `PICKS.md` (plan, entry limits, the ranked watchlist with triggers). Every new buy, sell, or entry limit gets a row in `catalysts\frozen_predictions.csv` before the money moves (ticker, the price or EPS it depends on, the probability, the reasoning). The monthly Rs50k goes, on the same day each month, into the pick furthest below its target weight that still qualifies. Cash above 30% of the account for more than 4 weeks is a failure of the process, not prudence (lesson 13), unless the regime rule in `knowledge\playbooks\sector_rotation.md` says the market is in a hike-regime drawdown.
+Put PLAYBOOK.md's questions to every holding and every moving name. Each decision becomes a row in `ledger\calls.csv` before money moves (odds, rupee upside and downside on the size, what proves it wrong), with its reasoning in `journal\<today>.md`. When Jazib reports a trade, record it with `scripts\ledger.py trade`. Then `scripts\ledger.py build` rebuilds PICKS.md and the built parts of STATE.md; edit the rest of STATE.md by hand. There is no fixed split or cash limit: cash earns nothing in his account, so it has to beat the best alternative, and the reason goes in the journal.
 
 ## 7. Email format for opportunities (GPT)
 

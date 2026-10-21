@@ -1,0 +1,11 @@
+call_id,scored_at,outcome,note
+C0001,2026-10-21 11:30 PKT,1,"Consolidated Q3 EPS 7.07 (standalone 6.83), Q3-25 4.07; filing PSX doc 286023, 19 Oct 15:02."
+C0002,2026-10-21 11:30 PKT,1,Consolidated Q3 EPS 7.07; the orchestrator band (-1.06/1.66/4.74) was too low.
+C0003,2026-10-21 11:30 PKT,1,Interim DPS Rs5.50 (book closure 2-3 Nov; 9M dividends Rs9.25).
+C0005,2026-10-21 11:30 PKT,1,"Q1 FY27 EPS Rs22.17 (PAT Rs13.97bn) vs Rs1.61; filing doc 286225, 21 Oct 08:00."
+C0007,2026-10-21 11:30 PKT,1,Board recommended nil dividend.
+C0025,2026-10-21 11:30 PKT,1,Special resolutions adopted at the 19 Oct EOGM (doc 286112); PIOC certified resolutions doc 286117.
+C0026,2026-10-21 11:30 PKT,1,"Q1 FY27 EPS Rs174.89 (PAT Rs18.65bn) vs Rs13.62; filing doc 286077, 20 Oct 08:41."
+C0027,2026-10-21 11:30 PKT,1,"Q3 EPS loss Rs1.45 basic (doc 286227, 21 Oct 08:01)."
+C0041,2026-10-21 11:30 PKT,not_triggered,"Result was published 20 Oct 08:41, not before the Monday close; ATRL then closed 20 Oct at Rs1,190.74, below the Rs1,200 trigger (refiners fell: NRL -8.7%, PRL -6.8%; cause unverified). No entry."
+C0037,2026-10-21 12:00 PKT,void,No position taken; the 19 Oct LUCK row is void (never entered). Compliance: the investor's father works at Lucky Cement.

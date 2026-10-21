@@ -119,7 +119,7 @@ The base rates say not to trade these situations mechanically. They do not say y
 
 1. **At the close (after 15:30):** run `python scripts/engine.py --scan <date>`. Add any name you noticed yourself with `python scripts/engine.py SYMBOL <date>`.
 2. **Read the analogues** in the order in section 4: ep, widening, median against random, net, range.
-3. **Freeze a call before the next open** in `catalysts/frozen_predictions.csv`: name, direction, a 5-day range (start from the analogues' middle half and move it only with a written reason), your probability of being up at 5 days, and what you know that the engine does not.
+3. **Freeze a call before the next open** in `ledger/calls.csv`: name, direction, a 5-day range (start from the analogues' middle half and move it only with a written reason), your probability of being up at 5 days, and what you know that the engine does not.
 4. **Score at 1, 3 and 5 sessions:** inside the range or not, sign right or not, and your probability against the analogue win rate.
 5. **Weekly diagnosis (Saturday):** for every miss, write one cause: the data was wrong (as with STL), the situation had no analogue, news arrived, the market moved everything, or "unknown". Count how often your calls beat the engine's.
 6. **The gate:** no real money on a short-term call until about 20 scored calls show your probabilities beating the analogue base rate, after costs. Until then the money stays in the core and the breakout sleeve.

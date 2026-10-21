@@ -83,6 +83,6 @@ Relative returns are against the equal-weight market, computed from `seed/data/p
 ## 5. How to use this
 
 1. Each Monday, scan signals 1, 8 and 9 across the KMI universe. Read signals 2 to 7 for the sectors on the table above.
-2. A name with leg 1 goes on the loaded-spring list. Freeze a prediction in `catalysts/frozen_predictions.csv` with the leg 2 or leg 3 event you expect.
+2. A name with leg 1 goes on the loaded-spring list. Freeze a prediction in `ledger/calls.csv` with the leg 2 or leg 3 event you expect.
 3. Enter in a starter size when leg 2 or leg 3 fires. Add on volume ignition. Exit on a veto signal.
 4. Score every call. Measured odds should replace the 1-in-3 judgment once there are 10 or more episodes. The next tests to build are the sponsor-buy base rate and the ignored-quarter screen, which needs quarterly EPS history.

@@ -9,9 +9,9 @@ Every live document or folder, what it holds and when to open it. Start with CLA
 | CLAUDE.md | Entry point: session protocol, layer map, precedence, writing rules, self-improvement loop, models, environment, the investor | Always first (auto-loaded by Claude Code) |
 | AGENTS.md | Pointer to CLAUDE.md for non-Claude agents | Never needed by Claude |
 | INDEX.md | This map | Looking for anything |
-| STATE.md | What is live now: holdings, Jazib's open decisions, pending events and frozen rows, data freshness, session log | Every session, start and end |
+| STATE.md | What is live now: holdings (built), Jazib's open decisions, pending events (built), data freshness | Every session, start and end |
 | PLAYBOOK.md | How to decide: what does not change, his stance on risk, the questions for every decision, reference points from the evidence, what tends to go wrong. No fixed rules | Before any call |
-| PICKS.md | Version 6: the current calls with odds, upside against downside, what proves each wrong, a suggested book; plain language for Jazib | Before any call; when Jazib asks what to buy |
+| PICKS.md | The open calls and forecasts, built from ledger/calls.csv (do not edit) | Before any call |
 | DECISIONS.md | Dated log of every course change, with reason and author; append only | When asking why something is the way it is |
 | RUNBOOK.md | The weekly loop step by step | Running the weekly loop by hand |
 
@@ -43,14 +43,23 @@ Every live document or folder, what it holds and when to open it. Start with CLA
 | tests/ | One write-up per test (30), each naming its script in scripts/tests/ and raw output in tests/out/ | Checking a number or method at the source |
 | tests/out/ | Raw run outputs, replay packs, engine scans | Reproducing a write-up |
 
-## catalysts/: the forward record
+## ledger/ and journal/: the record
 
 | Path | What it is | Open when |
 |---|---|---|
-| catalysts/frozen_predictions.csv | Every frozen call with probability; append only; outcome columns filled as events land | Freezing or scoring a call |
-| catalysts/scorecard.md | Brier scoring rules and the record | Judging how good the calls are |
+| ledger/calls.csv | Every call and forecast ever made, with odds, rupee upside and downside, what proves it wrong, the journal link, and `supersedes`; append only | Making, changing or reading a call |
+| ledger/scores.csv | Outcomes of calls (1, 0, void, not_triggered); append only | Scoring |
+| ledger/trades.csv, ledger/deposits.csv | What Jazib actually bought, sold and put in, as he reports it | Recording a trade |
+| ledger/scorecard.md | Brier score and hit rate built from the tables, plus notes | Judging how good the calls are |
+| ledger/book_daily.csv | Built: the book's daily value against the same money in the KMI All Share | Asking how the money has done |
+| journal/ | One entry per session (`<date>.md`) and every letter to Jazib (`<date>-picks-vN.md`, all versions since 18 Oct); never edited after its day | Asking why something was decided |
+| scripts/ledger.py | Validates the tables, records trades and deposits, builds PICKS.md, the built sections of STATE.md, the scorecard and the daily book | Every session |
+
+## catalysts/: dated events
+
+| Path | What it is | Open when |
+|---|---|---|
 | catalysts/catalyst_calendar.csv, dividend_calendar.csv | Dated events by ticker | Planning the week |
-| catalysts/draft_predictions.csv | Drafts before freezing | Rarely |
 
 ## data/: datasets and their notes
 
@@ -94,5 +103,5 @@ The pipeline (entry points in CLAUDE.md section 7), scripts/tests/ (one script p
 | archive/PLAN_2026-10-17.md | The original plan (replaced by HOW_TO_THINK.md and BACKLOG.md) |
 | archive/REPORT_2026-10-18.md | The long-form account of what works (replaced by FINDINGS.md; some narrative detail only here) |
 | archive/strategy_2026-10-18.md | The 18 Oct strategy note (replaced by PLAYBOOK.md) |
-| archive/picks/ | PICKS v3 and v4 |
+| journal/ | PICKS v3 and v4 |
 | seed/ | The orchestrator's original brief, state, register (FORECAST_REGISTER.md, still scored), lessons, scripts and data (scripts read seed/data; do not move it) |
