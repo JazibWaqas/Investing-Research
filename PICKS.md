@@ -1,3 +1,5 @@
+> **21 Oct 2026 amendment:** LUCK is withdrawn. Jazib cannot hold it without a declaration (his father works at Lucky Cement), so no Lucky group name is eligible. LUCK's 35% core slot goes to the reserve until a replacement passes the checks; the cement exposure LUCK was meant to give at the turn will come from a non-Lucky cement name chosen at the turn. See the 21 Oct note at the end.
+
 # PICKS.md — what to consider buying, why, how much, and what it would do (version 4, 19 Oct 2026, 01:00 PKT; prices are 16 Oct closes)
 
 Written for Jazib, in plain language, with every technical term explained the first time it appears. Rests on the whole programme: the tests (tests/FACTS.md), the winners library and catalogue (knowledge/CATALOGUE.md, corrected after the Astra review), the business-quality scores (knowledge/companies/quality_scores.csv), the regime-turn playbook (knowledge/REGIME_TURN_PLAYBOOK.md), and the reviews of the earlier versions. Versions 1 to 3 are superseded (picks/PICKS_v3.md); their frozen rows stay in the register as paper calls.
@@ -67,3 +69,10 @@ What the whole book most likely does over the next 12 months with no turn: the c
 - About 10 Nov: the turn checklist's rupee and reserves signals resolve.
 
 Every call above is frozen in catalysts/frozen_predictions.csv with a probability and scored as it lands. The scorecard at twenty weeks tells us which parts of this are working.
+
+
+## 21 Oct 2026 note: what changes without LUCK
+
+- Core now: MEBL (after its 22 Oct result, if EPS is Rs11 or more) and MARI (starter now, the rest at Rs540 or below). LUCK's slot sits in the reserve.
+- Waiting until after the MEBL result (22 Oct) and the rate decision (26 Oct) costs little: in hike regimes the index has lost to T-bills, and a week of cash is a rounding error against years of deposits. The cost of sitting out comes from months of it, not days. Rule: by the 1 Nov deposit, at least half the money is in the core or in a named replacement.
+- Replacement candidates for the LUCK slot, to be checked before buying (business record, price, cash conversion): SYS at or below Rs100 (export growth, quality 14); a non-Lucky cement name at the turn (FCCL, MLCF after the PIOC merger, DGKC, KOHC; none scored yet); ILP (quality 14, apparel and denim capacity ramp, textiles at the bottom of the cycle).
