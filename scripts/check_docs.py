@@ -6,8 +6,7 @@ Checks, on live docs (tracked .md files outside archive/, seed/, data/asof/, tes
   1. every repo path a doc mentions (folder/file.ext, ../file.md, or a root doc name) exists;
   2. no live doc names a retired file (see RETIRED) without its new path;
   3. AGENTS.md points to CLAUDE.md, and the two psx-weekly skill copies are identical;
-  4. PICKS.md and STATE.md mention a Lucky group name only on lines that exclude it;
-  5. every live doc is listed in INDEX.md, by its path or by its folder.
+  4. every live doc is listed in INDEX.md, by its path or by its folder.
 Exit code 1 if anything fails. Fix the doc, not the check, unless the check is wrong.
 """
 import re
@@ -29,8 +28,6 @@ PATH_RE = re.compile(r"(?<![\w/.\-=])((?:\.\./|\./)*[\w.\-]+(?:/[\w.\-]+)+/?|[A-
 # Paths named on purpose although they do not exist (a bug's missing file, a name a spec used).
 ALLOW = {"data/prices_raw/HUBCXD.csv", "tests/value_pubdates.md", "scripts/replay_run.py"}
 EXT_OK = (".md", ".csv", ".py", ".json", ".parquet", ".txt", ".pdf")
-LUCKY = re.compile(r"\b(LUCK|LCI|Lucky)\b")
-EXCLUDES = re.compile(r"off-limits|exclud|withdrawn|not eligible|never|no Lucky|cannot|restriction|voided|removed|without", re.I)
 
 
 def tracked():
@@ -91,13 +88,9 @@ def main():
     if a.exists() and b.exists() and a.read_bytes() != b.read_bytes():
         problems.append("skill copies differ: copy .claude/skills/psx-weekly/SKILL.md over .agents/skills/psx-weekly/SKILL.md")
 
-    for doc in ("PICKS.md", "STATE.md"):
+    for doc in ("PICKS.md", "STATE.md", "INDEX.md"):
         if not (ROOT / doc).exists():
             problems.append(f"{doc}: missing")
-            continue
-        for n, line in enumerate((ROOT / doc).read_text(encoding="utf-8").splitlines(), 1):
-            if LUCKY.search(line) and not EXCLUDES.search(line):
-                problems.append(f"{doc}:{n}: Lucky group name on a line that does not exclude it")
 
     index = (ROOT / "INDEX.md").read_text(encoding="utf-8") if (ROOT / "INDEX.md").exists() else ""
     for doc in docs:

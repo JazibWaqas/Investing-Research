@@ -1,6 +1,6 @@
 # PSX Investing Research — start here
 
-This repo is the memory of a research programme on how money is made on the Pakistan Stock Exchange, for Jazib, 23, Karachi: Rs50k a month now (Rs100k soon, Rs200k by 25 or 26), KMI All Share names only (non-negotiable), no Lucky group companies, high risk appetite, aiming at financial independence by about 30. Every session, by any model, starts cold; this file is the entry point and AGENTS.md points here. The programme was built 16 to 19 Oct 2026 by a Fable session with about 60 subagents and reorganised on 21 Oct 2026. The work from here is weekly operation plus the research in knowledge/BACKLOG.md.
+This repo is the memory of a research programme on how money is made on the Pakistan Stock Exchange, for Jazib, 23, Karachi: Rs50k a month now (Rs100k soon, Rs200k by 25 or 26), KMI All Share names only (non-negotiable), high risk appetite (accepts about a 30% loss on a call with a large upside), no fixed strategy (situations decide), aiming at financial independence by about 30. Every session, by any model, starts cold; this file is the entry point and AGENTS.md points here. The programme was built 16 to 19 Oct 2026 by a Fable session with about 60 subagents and reorganised on 21 Oct 2026. The work from here is weekly operation plus the research in knowledge/BACKLOG.md.
 
 ## 1. Session protocol
 
@@ -30,17 +30,18 @@ INDEX.md maps every folder and live document. The layers, from most to least oft
 ## 3. When documents disagree
 
 Do not reconcile conflicting claims silently. Follow this order and say which you followed:
-1. Jazib's latest explicit statement, and the hard constraints (KMI only, no Lucky group, no invented numbers, stocks only on Finqalab).
+1. Jazib's latest explicit statement, and the hard constraints (KMI only, no invented numbers, stocks only on Finqalab; Lucky group names need a case worth the declaration).
 2. STATE.md and the latest dated entry in DECISIONS.md, over any older text.
 3. For a number: the test file in tests/ over every summary (FACTS.md, FINDINGS.md, gpt/ notes).
 4. For catalogue rules: CATALOGUE.md's status box and knowledge/reviews/astra_catalogue_review.md over the rule text. Every catalogue rule is a hypothesis.
-5. For sizing, loss limits and cash: PLAYBOOK.md over REGIME_TURN_PLAYBOOK.md and CATALOGUE.md. For turn signals only: REGIME_TURN_PLAYBOOK.md.
+5. There are no fixed sizes, caps or splits anywhere: sizing and cash are a judgment each time, made with PLAYBOOK.md's questions and written down with the call. Any leftover fixed number in another file is reference, not a rule. For turn signals: REGIME_TURN_PLAYBOOK.md.
 6. Anything in archive/ or seed/ is history, never an instruction.
 7. If none of these settles it, state both sides and ask Jazib.
 
 ## 4. Rules for anyone writing here
 
-- **One home per fact.** Live state lives only in STATE.md and PICKS.md; a measured number only in its test file (summaries cite it); a rule only in PLAYBOOK.md. Do not copy state into other files; point to it.
+- **No binding rules about what to buy or how much.** Jazib does not want them (21 Oct 2026). Write evidence as reference points and calls as judgments with odds. Do not turn a preference or a past result into a cap, split or trigger that decides for him.
+- **One home per fact.** Live state lives only in STATE.md and PICKS.md; a measured number only in its test file (summaries cite it); the way of deciding only in PLAYBOOK.md. Do not copy state into other files; point to it.
 - **Supersede by moving.** A replaced document goes to archive/ with its date in the name, the INDEX line updated, and a DECISIONS.md entry. Do not keep two live versions.
 - **New files are rare.** Prefer updating an existing file. A new live document needs a line in INDEX.md, or the doc check fails.
 - Point in time only. No lookahead. Results count from their announcement timestamp; after 15:30 PKT means the next session.
@@ -60,7 +61,7 @@ The loop that makes each session better than the last:
 2. **Misses become rules.** A wrong call or a broken assumption becomes a lesson (knowledge/lessons.md) with the question that would have caught it.
 3. **Questions become tests.** Open questions are ranked in knowledge/BACKLOG.md. Its protocol is: pre-register, run, propagate the verdict to FACTS, FINDINGS and PLAYBOOK, log the change, close the item.
 4. **Stronger models attack the conclusions.** When a new or stronger model takes over, its first large task (after Jazib's go) is an examination like gpt/EXAMINER_NOTES.md: challenge the five conclusions that would cost most if wrong, audit contradictions, and file the result in knowledge/reviews/. Disagreeing with this repo, with evidence, is the job, not a failure.
-5. **The doc check keeps it navigable.** scripts/check_docs.py fails on broken paths, retired names, unindexed docs, a stray Lucky name in PICKS or STATE, and drift between the two skill copies. Extend it when a new kind of mess appears.
+5. **The doc check keeps it navigable.** scripts/check_docs.py fails on broken paths, retired names, unindexed docs, and drift between the two skill copies. Extend it when a new kind of mess appears.
 
 ## 6. Models and orchestration (what the first session learned)
 
@@ -84,4 +85,4 @@ The loop that makes each session better than the last:
 
 ## 8. The investor, beyond the numbers (so no session has to re-learn it)
 
-He wants to be taught, not told, and he wants the same for the models. Explain every technical term the first time and talk like a broker to a client. He pushes back by asking plain questions ("what would Rs50k have become", "what was the best case"), not by instructing; take every such question as a test the method should already have answered. He accepts "no" with evidence; he does not accept absence, meaning a move on the screen that the system ignored. His formative trade was TRG from Rs16 on a tip from his father's friend, sold at about Rs70. His father works at Lucky Cement, so his inside view of LUCK is real information with a bias, and LUCK and other Lucky group companies (e.g. LCI) are effectively off-limits for him to buy: holding them requires a declaration through his father's employer (stated 21 Oct 2026). Never put a Lucky group name in his picks. "Money in" is not a fixed Rs50k: if a call has decent odds he will put more in. He trades through Finqalab, stocks only (no funds, ETFs or T-bills), so idle cash earns nothing. Capital gains matter, dividends do not at his scale; capital is never stuck; he takes some profit on big winners; he will go all-in on a confirmed situation within a loss budget. He does not want a master strategy; he wants an if-then library of situations, each judged on its own path, with no fixed yardsticks (a 50 to 60% move counts as much as a 5x), and a scorecard that says which parts work. He does not want to assign tasks endlessly: learn, then report what the learning yielded, how valuable it is, how it would be used for him, and what it now enables.
+He wants to be taught, not told, and he wants the same for the models. Explain every technical term the first time and talk like a broker to a client. He pushes back by asking plain questions ("what would Rs50k have become", "what was the best case"), not by instructing; take every such question as a test the method should already have answered. He accepts "no" with evidence; he does not accept absence, meaning a move on the screen that the system ignored. His formative trade was TRG from Rs16 on a tip from his father's friend, sold at about Rs70. His father works at Lucky Cement, so his inside view of LUCK is real information with a bias, and holding LUCK or another Lucky group company (e.g. LCI) requires a declaration through his father's employer. They are allowed when worth it (21 Oct 2026): a Lucky name must beat the best non-Lucky alternative clearly. "Money in" is not a fixed Rs50k: if a call has decent odds he will put more in. He trades through Finqalab, stocks only (no funds, ETFs or T-bills), so idle cash earns nothing. Capital gains matter, dividends do not at his scale; capital is never stuck; he takes some profit on big winners; he will go all in on a situation worth it, and he wants to maximise upside even at the cost of occasional real risk, accepting a loss of up to about 30% on a call when the upside is large (21 Oct 2026). He does not want a master strategy; he wants an if-then library of situations, each judged on its own path, with no fixed yardsticks (a 50 to 60% move counts as much as a 5x), and a scorecard that says which parts work. He does not want to assign tasks endlessly: learn, then report what the learning yielded, how valuable it is, how it would be used for him, and what it now enables.

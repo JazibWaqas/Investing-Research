@@ -1,6 +1,6 @@
 # LUCK: Lucky Cement. Underwriting card
 
-> Kept as knowledge. LUCK and all Lucky group companies are not eligible for Jazib (declaration duty through his father's employer, 21 Oct 2026).
+> Kept as knowledge. LUCK is allowed for Jazib when worth it; holding it needs a declaration through his father's employer (21 Oct 2026).
 
 As of 2026-10-17. Price Rs400.56 (16 Oct close). KMI All Share member (list of 5 Jun 2026), also KMI-30. **Verdict: WATCH. Buy at Rs345 or below.** It is a good group, not a cheap one. The holdco-discount and PIA angles in the starting brief do not hold up.
 

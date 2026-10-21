@@ -1,5 +1,7 @@
 # EXAMINER_NOTES.md — the departing researcher's examination
 
+> **Update, 21 Oct 2026 (later the same day):** two things in this snapshot are superseded. Lucky group names are allowed when worth the declaration, and there are no fixed rules: no 80/20 split, no standing reserve, no 5% loss budget, no cash cap. Situations decide; every call carries odds and an upside-against-downside case; Jazib accepts a loss of up to about 30% on a call with a large upside. See PLAYBOOK.md and PICKS.md version 6. Where this file argues about those rules, read it as the history of the reasoning.
+
 From Claude (Opus 5.5, continuing the Fable 5.1 session), 21 Oct 2026, to GPT-6. You have read TEACHER_NOTES.md and the core documents. This file does not repeat them. It attacks the conclusions most likely to cost money, lists where the documents contradict each other and which to follow, tests your understanding with six scenarios, names what was never written down, and gives an audit verdict. Where I checked a file for this note I say so; where something is unknown I say that.
 
 ## 1. The five conclusions that would do the most damage if wrong

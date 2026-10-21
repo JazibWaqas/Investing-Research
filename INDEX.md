@@ -10,8 +10,8 @@ Every live document or folder, what it holds and when to open it. Start with CLA
 | AGENTS.md | Pointer to CLAUDE.md for non-Claude agents | Never needed by Claude |
 | INDEX.md | This map | Looking for anything |
 | STATE.md | What is live now: holdings, Jazib's open decisions, pending events and frozen rows, data freshness, session log | Every session, start and end |
-| PLAYBOOK.md | The operating rules on one page: the book, the six-check reflex, the turn checklist, exits, the weekly loop, what not to do | Before any call |
-| PICKS.md | Version 5: core names with cases and killers, the open slot, the reserve, triggers, dates; plain language for Jazib | Before any call; when Jazib asks what to buy |
+| PLAYBOOK.md | How to decide: what does not change, his stance on risk, the questions for every decision, reference points from the evidence, what tends to go wrong. No fixed rules | Before any call |
+| PICKS.md | Version 6: the current calls with odds, upside against downside, what proves each wrong, a suggested book; plain language for Jazib | Before any call; when Jazib asks what to buy |
 | DECISIONS.md | Dated log of every course change, with reason and author; append only | When asking why something is the way it is |
 | RUNBOOK.md | The weekly loop step by step | Running the weekly loop by hand |
 
@@ -21,12 +21,12 @@ Every live document or folder, what it holds and when to open it. Start with CLA
 |---|---|---|
 | knowledge/FINDINGS.md | The canonical synthesis: mechanisms ranked by effect, the 2026 retrospective, calibration, the regime, corrections to the seed, the machine, the models | Catching up; any "what works" question |
 | knowledge/HOW_TO_THINK.md | How Jazib thinks, how the research went wrong and was corrected, thinking rules, alignment questions, what each phase taught | Before advising him or starting research |
-| knowledge/lessons.md | 25 mistakes, each with the rule it produced | Before any analysis |
+| knowledge/lessons.md | 26 mistakes, each with the rule it produced | Before any analysis |
 | knowledge/CATALOGUE.md | The if-then casebook of situation types: recognise, join, milk, leave; read its status box first (hypotheses, not a validated system) | Judging a moving stock |
 | knowledge/REGIME_TURN_PLAYBOOK.md | Four turns vs four false bottoms, the checklist, leader sequence, entry in thirds, exits, today's reading | Any rate decision, crash or rally |
 | knowledge/QUESTIONS.md | 42 questions an experienced investor asks before a call; scripts/replay_bundle.py reads it | Underwriting a name |
 | knowledge/BACKLOG.md | The ranked research backlog, its protocol, the do-not-repeat list, done items | Choosing research; closing a test |
-| knowledge/companies/ | Underwriting cards with red teams (`SYM.md`), business-quality records (`SYM_quality.md`), quality_scores.csv, QUALITY_README.md. LUCK cards are kept as knowledge; LUCK is not eligible for Jazib | Any single name |
+| knowledge/companies/ | Underwriting cards with red teams (`SYM.md`), business-quality records (`SYM_quality.md`), quality_scores.csv, QUALITY_README.md. LUCK is allowed when worth the declaration | Any single name |
 | knowledge/sectors/ | README.md (the 16-sector ranking and verdicts, 17 Oct) and one note per sector: levers, state, catalysts, names, past episodes; _unresolved_gaps.md | Any sector question |
 | knowledge/situations/ | 12 dated point-in-time cases (2017 bear to the 2026 EPCL takeover) and INDEX.md with machine rows | Comparing a live situation with the past |
 | knowledge/winners/ | 49 hindsight case studies of big runs and 6 syntheses (`_*.md`) by type | Studying what a winner looked like before it moved |

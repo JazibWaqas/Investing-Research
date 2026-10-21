@@ -81,7 +81,7 @@ Agreed in conversation, not yet built. It is a procedure of questions with a few
 - State the metric and the horizon it fits; never grade a multi-year compounder on twelve months. (The yield core.)
 - Separate skill from contributions and from luck. (The walk-forward.)
 - No count, percentage or limit without a source; label placeholders. (60/40.)
-- Nuance becomes a decision procedure of questions; rules are reserved for exits and loss budgets. (The breakout sleeve.)
+- Nuance becomes a decision procedure of questions; rules are reserved for exits and loss budgets. (The breakout sleeve.) Superseded 21 Oct 2026: no fixed loss budgets either; the downside is weighed per call (lessons.md 26).
 - The qualitative layer is mandatory and scored from the record: people, strategy, incentives, politics. (The cards.)
 - Before concluding, ask what an experienced person in this seat would consider obvious that you skipped, and what the data does not contain. (Business judgment, the actor map, the noise map, the balance of payments.)
 - Tag every result with its regime and weight evidence by its similarity to the present. (2024 to 2026 flatters everything.)

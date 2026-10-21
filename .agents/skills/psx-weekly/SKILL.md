@@ -33,15 +33,15 @@ Refresh data first if stale (RUNBOOK.md step 1). Read `data\asof\<today>\BUNDLE.
 
 ## 3. The call
 
-Follow the brief v2 in the bundle exactly: its forbidden list, the [P] risk budget (per entry size x (entry - stop) / entry <= 5, sum <= 10), the posture block, the schema and the citation rule. Every fact cites the pack; every mechanism cites a method file. Live, there is no future to leak, but still report anything you "remember" from outside the pack in `contamination_note`.
+Follow the brief v2 in the bundle exactly: its forbidden list, the posture block, the schema and the citation rule. Every fact cites the pack; every mechanism cites a method file. Live, there is no future to leak, but still report anything you "remember" from outside the pack in `contamination_note`.
 
-Additions from the Astra review (`knowledge\playbooks\astra_peer_review.md`, section c):
+Additions from the Astra review (`knowledge\reviews\astra_peer_review.md`, section c):
 
-- **State the investible default portfolio.** The current core at about 75% exposure. Cash is a competitor, not a refuge: any deviation from the default, cash included, must beat the next-best eligible use of capital on payoff, horizon and stressed loss. Do not force trades and do not invent precision to fit the posture.
+- **State the current book and what you would change.** There is no default split (PLAYBOOK.md, 21 Oct 2026); the situation decides, from all in to all out. Cash is a competitor, not a refuge: it earns nothing in his account, so holding it must beat the next-best use of the money on payoff, horizon and stressed loss. Do not force trades and do not invent precision to fit the posture.
 - **Cite base rates in three separate bins:** "not tested" (no measurement), "imprecisely estimated" (small n or wide interval; give n and median), and "evidence against" (measured and unfavourable). None means automatic cash, and none licenses an invented edge. Signals that share one cause count once.
 - **Every situation card has:** mechanism; what the price already implies; base-rate limits; confirming evidence; falsifier; entry valuation; execution constraint (liquidity, locks, gap risk); exit; and a decision (buy, add, hold, reduce, exit, pass) with an amount in rupees or percent and a reason.
 - **Every watch item names the observation** that converts it to an order (a print, a notification, a close above a level, a volume threshold).
-- **Size against stressed portfolio loss and correlated exposure** (same sector, same macro driver, same sponsor), not stop distance alone. Stops fail on gaps and upper or lower locks. State the stressed loss in percent of book.
+- **Size against stressed portfolio loss and correlated exposure** (same sector, same macro driver, same sponsor), not stop distance alone. Stops fail on gaps and upper or lower locks. State the stressed loss in rupees and in percent of book; he accepts about 30% on a call with a large upside (21 Oct 2026).
 - **Exits differ by type.** Compounders: exit on a broken thesis or a better use of capital, not on price noise. Shocks: exit into the rebound on a time and distance target. Deals: exit on the deal's terms, falsified by a regulatory or financing break. Momentum: trailing stop on closes.
 
 Record the call:

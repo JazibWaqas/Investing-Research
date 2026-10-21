@@ -12,7 +12,7 @@
    7. knowledge/HOW_TO_THINK.md — how you think, how the research went wrong and was corrected
    8. knowledge/CATALOGUE.md — the casebook of situation types
    9. knowledge/REGIME_TURN_PLAYBOOK.md — the turn checklist
-   10. knowledge/lessons.md — 25 mistakes and their rules
+   10. knowledge/lessons.md — 26 mistakes and their rules
    11. tests/FACTS.md — every test's headline numbers
    12. knowledge/BACKLOG.md — open research, and what not to repeat
    13. knowledge/QUESTIONS.md — the question list

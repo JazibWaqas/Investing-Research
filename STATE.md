@@ -7,15 +7,16 @@ The only file that says what is true today. Update it at the end of every sessio
 ## 1. The book
 
 - **Holdings: unknown.** No order from PICKS v4 or v5 is confirmed placed. Ask Jazib what he holds and at what prices before the next call; record it here.
-- **Plan:** PICKS.md version 5. Core MEBL (after the 22 Oct result, if EPS is Rs11 or more) and MARI (Rs5,000 starter; rest at or below Rs540); a 20% reserve for the regime turn; no opportunity position qualifies today.
+- **Calls:** PICKS.md version 6. MEBL after the 22 Oct result (EPS Rs11 or more); LUCK if the declaration is acceptable (the strongest turn name); MARI small now, more at or below Rs540; SAZEW on its result if no hike on 26 Oct. A suggested Rs50,000 book is in PICKS section 3; sizes are his call.
+- **How calls are made:** no fixed rules or splits (PLAYBOOK.md, rewritten 21 Oct). Situations decide; every call has odds and an upside-against-downside case in rupees. He accepts a loss of up to about 30% on a call with a large upside.
 - **Regime:** hike cycle, not a turn. Checklist: one signal present (drain), one absent (oil calm), two unknown until about 10 Nov (knowledge/REGIME_TURN_PLAYBOOK.md section 6).
 
 ## 2. Decisions only Jazib can make
 
-1. **The open core slot and the cash cap.** With LUCK withdrawn (not eligible), the first month would hold about 35 to 45% cash against PLAYBOOK's 25% cap. Options: put the slot into MEBL after its result; split it between MEBL and the reserve; or name a replacement first. Recommended: split between MEBL and the reserve so cash stays under 25%, then move it to a replacement once one is scored. Default if he does not answer by the 1 Nov deposit: the PICKS rule, at least half the money in the core.
-2. **Scope of the Lucky restriction.** LUCK and LCI are clear. Does it cover the other listed Yunus Brothers companies, such as the group's textile companies? KOHC is not a Yunus Brothers company.
-3. **Score the cement names and ILP for the open slot?** knowledge/BACKLOG.md item 3; offered 21 Oct, waiting for his yes.
-4. **Is the 20% reserve acceptable to him?** Never asked directly. The argument against it is in gpt/EXAMINER_NOTES.md section 1.1.
+1. **LUCK and the declaration.** Lucky group names are allowed when worth it (21 Oct). Is the declaration acceptable for a position of about Rs15,000, the size suggested in PICKS? If yes, re-freeze a LUCK row before buying (the 19 Oct row was voided).
+2. **The next deposit.** PICKS section 3 suggests MEBL, LUCK, MARI and Rs10,000 held to 26 Oct for SAZEW. His sizes go here once he decides.
+3. **Score the non-Lucky cement names and ILP?** knowledge/BACKLOG.md item 3; offered 21 Oct, waiting for his yes.
+4. **What the 30% means.** Taken as: he accepts losing up to about 30% of the money in a call when the upside is large. If he meant the whole book in a bad year, the suggested book already fits (about 22 to 25% in its bad case).
 5. **Finqalab's commission rate.** Unverified (data/costs.md); he can read it in the app.
 
 ## 3. Pending events and frozen rows
@@ -26,12 +27,12 @@ The only file that says what is true today. Update it at the end of every sessio
 | 26 Oct | EFERT five-session price row | Test close vs reference 194.82 |
 | 26 Oct | MPC decision | Hold 0.50, +50bp 0.38, +100bp 0.10, cut 0.02. Re-run the turn checklist that evening |
 | 27 Oct | FCCL result | Frozen EPS row; orchestrator band too |
-| 27 to 29 Oct | FFC, OGDC, MARI results | Frozen EPS rows; MARI result checks its killers |
+| 27 to 29 Oct | FFC, OGDC, MARI, LUCK results | Frozen EPS rows; the MARI and LUCK results check their killers |
 | 28 Oct | PRL five-session price row | Test close vs 20 Oct close 101.44; settles the orchestrator's "flat to down" leg |
-| 1 Nov | Deposit day | Open-slot rule (section 2, item 1) |
+| 1 Nov | Deposit day | Sizes per section 2, item 2 |
 | 2 Nov | October CPI | Frozen row; a second monthly fall starts the rotation rule |
 | About 10 Nov | Rupee and reserves signals | Frozen "no turn by 10 Nov" at 0.75 |
-| 19 Oct 2027 | Core v4 12-month rows | LUCK row voided 21 Oct by an appended row |
+| 19 Oct 2027 | Core v4 12-month rows (MEBL, MARI) | The LUCK row was voided on 21 Oct; re-freeze if he buys |
 
 Scored so far: 8 of 8, Brier 0.092, mostly easy rows (catalysts/scorecard.md). The ATRL conditional entry did not trigger.
 
@@ -50,6 +51,7 @@ Scored so far: 8 of 8, Brier 0.092, mostly easy rows (catalysts/scorecard.md). T
 
 ## 6. Session log (newest first; one line each)
 
+- 2026-10-21 | Opus 5.5 | Fixed rules removed at Jazib's request: PLAYBOOK rewritten as a decision guide (situations decide, odds on every call, upside against downside, about 30% downside accepted); PICKS v6 as calls with odds; Lucky group allowed when worth the declaration; caps and splits removed from the regime playbook, catalogue, skill and GPT pack.
 - 2026-10-21 | Opus 5.5 | Repo cleanup: root cut to the files every session needs; STATE.md, INDEX.md, knowledge/BACKLOG.md and scripts/check_docs.py added; ORCHESTRATOR_HANDOFF became knowledge/FINDINGS.md; superseded files to archive/; PICKS v5 without LUCK; stale LUCK and sizing conflicts fixed. See DECISIONS.md.
 - 2026-10-21 | Opus 5.5 | gpt/ pack: PROJECT_INSTRUCTIONS, ALERT_TASKS, TEACHER_NOTES, EXAMINER_NOTES.
 - 2026-10-21 | Opus 5.5 | LUCK and the Lucky group removed from eligibility; 19 to 21 Oct results scored.

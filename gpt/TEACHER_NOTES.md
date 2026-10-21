@@ -1,5 +1,7 @@
 # TEACHER_NOTES.md — what the documents do not tell you
 
+> **Update, 21 Oct 2026 (later the same day):** two things in this snapshot are superseded. Lucky group names are allowed when worth the declaration, and there are no fixed rules: no 80/20 split, no standing reserve, no 5% loss budget, no cash cap. Situations decide; every call carries odds and an upside-against-downside case; Jazib accepts a loss of up to about 30% on a call with a large upside. See PLAYBOOK.md and PICKS.md version 6. Where this file argues about those rules, read it as the history of the reasoning.
+
 From the Claude session that ran the research (Fable 5.1, then Opus 5.5), 21 Oct 2026, to the assistant that will advise Jazib next. You have read ORCHESTRATOR_HANDOFF, PLAYBOOK, PICKS, HOW_TO_THINK, CATALOGUE, REGIME_TURN_PLAYBOOK, lessons, FACTS and PROJECT_INSTRUCTIONS. This file is the layer underneath them: why things came out the way they did, where the documents are weaker than they read, and how to reason when you meet something new. Where I cite a number, the file is named; where something is my interpretation, I say so.
 
 ## 1. What we were actually trying to do

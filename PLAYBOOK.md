@@ -1,34 +1,48 @@
-# PLAYBOOK.md — the operating rules on one page (19 Oct 2026; revised 21 Oct)
+# PLAYBOOK.md — how to decide (rewritten 21 Oct 2026)
 
-What to do, in order, every week and whenever a stock moves. Evidence and reasoning are in knowledge/HOW_TO_THINK.md, knowledge/CATALOGUE.md and knowledge/REGIME_TURN_PLAYBOOK.md; this page is the procedure. Every number here is a policy choice unless a test file is cited. Where this page and REGIME_TURN_PLAYBOOK.md or CATALOGUE.md disagree on sizing, loss limits or cash, this page wins.
+There is no fixed strategy. No allocation split, no standing reserve, no loss cap, no "one position at a time". The situation decides, the way an owner decides about his own money. Sometimes the right answer is everything in one name, sometimes everything out, sometimes spread across many. This page is the way of thinking that makes that call well. It is not a rulebook. Every number on it is evidence from the past to weigh, never a limit. The version with fixed rules (19 Oct) is in git history and was dropped because Jazib said fixed rules are the one thing he did not want (DECISIONS.md, 21 Oct).
 
-## A. The book
+## What does not change
 
-- **Core, about 80% of each deposit:** three to five growing businesses chosen on the business record (knowledge/companies/quality_scores.csv), earnings growth and price paid, not yield. Currently MEBL and MARI with one slot open (PICKS.md v5); no Lucky group name is eligible. Bought every month, the name furthest below target gets the most. Held through falls while the business grows. Sold only on its written killer, a KMI All Share deletion notice, or a regime change that removes its sector (banks after the first cut).
-- **Reserve, about 20% of each deposit,** accumulated as cash for the regime turn (section C). Not deployed on anything else, with one release rule so it never becomes a standing cash drag: **if the turn checklist has not scored 3 of 4 within 12 months of the reserve's first deposit (i.e. by 19 Oct 2027), half of the accumulated reserve goes into the core on the next deposit day, and the reserve share of deposits drops from 20% to 10% until the checklist scores 2 or more; the remaining half keeps waiting. At no point may cash exceed 25% of the book.** Evidence for 12 months: the gap from the last false bottom to the real low was about 10 months in 2018 to 2019 (16 Oct 2018 to 16 Aug 2019) and 11 months in 2022 to 2023 (21 Jul 2022 to 23 Jun 2023), five weeks in 2020, and none in 2024; hike regimes themselves ran 24 months (2018 to 2019) and 27 months (2021 to 2023) (knowledge/regime_turns/, scripts/walkforward.py regime episodes). The current hike regime began Mar 2026, so a turn inside 12 months is the base case but not certain; half-release caps the cost of being wrong at about 10% of a year's deposits in cash.
-- **Opportunity, at most one position at a time,** entered only on a trigger from section B, with the exit and size written before the order.
+- **KMI All Share names only.** His religious line. Check membership on the date (data/kmi_allshare_2026-06-05.csv; recompositions in June and December).
+- **Lucky group names are allowed when they are worth it.** Holding LUCK, LCI or another Lucky company means a declaration through his father's employer. That is a real cost, so a Lucky name has to beat the best non-Lucky alternative clearly. His inside view of LUCK is information with a bias; name the bias when you use it.
+- **Every call carries odds,** frozen before the event in catalysts/frozen_predictions.csv and scored after. This is how the judgment earns trust. It is not a limit on what he buys.
+- **No invented numbers, no lookahead.** "Unverified" is an answer.
 
-## B. The reflex, when a name starts moving (six checks, in order)
+## His stance on risk (stated 21 Oct 2026)
 
-1. **Can I own it and get out?** KMI All Share member (data/kmi_allshare_2026-06-05.csv); median traded value above Rs5m a day; no pending deletion.
-2. **What is the regime?** 6-month T-bill vs policy rate, CPI direction, reserves, rupee (data/macro/). Hike regime: few names rise, expect idiosyncratic winners only. Cut regime: cyclicals and small caps run.
-3. **What is the cause, and which catalogue type?** Results jump with cash behind it; policy or sector wave; deal after the offer is published; regime turn; shock rebound; sponsor buying. "No visible cause" is an exclusion (knowledge/CATALOGUE.md, type 9). Run `scripts/engine.py --scan <date>` for the tag and the stage odds.
-4. **Where is the price in the move?** Below about 2x its 52-week low with a confirmed breakout: joinable. Above 4x: late; of 18 comparable runs only 2 went further (tests/out/engine_scan_tagged_2026-10-16.txt).
-5. **Can the profit become cash?** Receivables trend, operating cash flow vs profit, debt maturities, pending rights issues. Regulatory entitlement is not collection.
-6. **Write the exit and the size before buying.** Stop sized to the name's own worst pullback (25% for names that dip 15 to 23%, 30 to 40% for names that dip a third), or the type's event exit (offer document, deletion notice, exchange letter after a doubling, third limit-down after a blow-off). Loss at the stop at most 5% of the book; at most 15% of the book at risk across correlated positions; stops never widened; re-entry is a new decision. Size from stressed exit capacity (two locked sessions, a third of normal volume).
+Advice weighs upside against downside. He accepts a loss of up to about 30% on a call when the upside is large, and the upside he is after is open-ended. He wants to maximise upside even if that means taking the occasional real risk. He will put in more than the monthly deposit when the odds are good, and he takes some profit on big winners. Dividends do not matter at his size. Cash earns nothing in his account (stocks only on Finqalab), so cash is a position with a cost, held only when it beats every alternative.
 
-## C. The regime turn (where every 5x run began)
+## The questions, for every decision
 
-Checklist from knowledge/REGIME_TURN_PLAYBOOK.md, scored live: A oil calm (Brent not up 10%+ in 13 weeks); B drain (under 10% of liquid names at a 20-session low two sessions after the low); C rupee flat in the following four weeks; D reserves up in the following four weeks. Three of four present at every real low (2019, 2020, 2023, 2024) and at no false bottom. Confirmation within ten sessions: more than half of names above their 200-day average and about 13 liquid names at one-year highs. On a score of 3: a third of the reserve into the leaders (the first liquid KMI names to make new one-year highs after the low; they differed by cycle, cement was the common thread), a third at four weeks, a third at eight, within section B's loss limits; 25% trailing stop on index-led names, 30 to 40% on stock-specific ones, re-entry on the first close above the old high.
+Buy, add, hold, trim, sell everything, go to cash, go all in: the same questions.
 
-## D. The exits that kept the money (tests/winners_population.md, knowledge/CATALOGUE.md)
+1. **What is the situation?** What is moving and why: the dated cause (a result, a policy, a deal, a sponsor buying, a shock, a regime change), or none. Which type in knowledge/CATALOGUE.md it resembles. What regime we are in (policy rate against CPI, the 6-month bill against policy, reserves, rupee, oil; knowledge/REGIME_TURN_PLAYBOOK.md).
+2. **What did situations like this do before?** `scripts/engine.py SYMBOL DATE` for analogues, tests/BASE_RATES.csv, knowledge/winners/ and knowledge/situations/. Say how many independent episodes stand behind the odds, and whether they are measured, casebook (winners only) or judgment.
+3. **What is the upside and the downside, in rupees, on the size you are proposing?** A bad, normal and good case with a probability each. The question is the asymmetry: how much he can make against how much he can lose. A downside of up to about 30% is acceptable to him when the upside is several times larger.
+4. **How sure are you?** A probability, and why. What the price already assumes (if everyone expects it, it is in the price).
+5. **What would prove you wrong?** The observation, ideally dated: a result, a notification, a close below a level that breaks the story. Decide the exit now, for this case. A compounder exits on a broken business, a trade on a broken story or price, a deal on its terms, a shock rebound on time and distance.
+6. **Can he get in and out?** Traded value against the size; upper and lower locks; gaps through a stop. Thin names need a smaller size or a longer exit.
+7. **Compared with what?** Every rupee has an alternative: the best other call on the list, the existing holdings, the index, cash at zero. A new idea has to beat the weakest thing it would replace.
+8. **So how much?** Anywhere from nothing to everything. Size grows with the odds, the asymmetry and the quality of the evidence, and shrinks with correlation to what he already holds (same sector, same macro driver, same sponsor). Say the size, the rupees at risk if the downside happens, and that loss as a share of his whole book.
 
-A fixed 20% trailing stop kept more than half the gain in only 15 to 23% of winning runs. Stops matched to the name's own dips, and event exits, kept far more. Take a third off at +50% and +100% only on names whose type has a history of round-tripping (results jumps, thin names); let index-led and compounder runs ride on their wide stop. Both the profit-taking rule and the sized stops are untested on losing runs (knowledge/BACKLOG.md item 2).
+Write the answers down. The call, its probability and its exit go in the register before money moves.
 
-## E. The weekly loop (RUNBOOK.md; .claude/skills/psx-weekly/SKILL.md)
+## Reference points from the evidence (weigh them, do not obey them)
 
-Refresh data; score every frozen row whose event has passed (catalysts/frozen_predictions.csv, scorecard.md); rebuild the daily table and run the tagged scan; apply the reflex to each tagged name; freeze the week's call with probabilities; log Jazib's sizes; list every 20%+ mover the scan missed and diagnose. After 20 weeks, read the scorecard: calibration first, then the 20-session comparison against the plain breakout rule and the KMI All Share; the 60-session comparison needs about a year.
+- **Where the big money came from.** Every run of 5x or more since 2016 began at or near a regime turn, when a hike cycle ended and cuts began, usually within three months of a market low (tests/winners_population.md). The turn checklist that separated four real lows from four false bottoms is in knowledge/REGIME_TURN_PLAYBOOK.md; it is fitted to eight dates.
+- **Being invested.** The KMI All Share compounded at about 11.4% a year 2017 to 2026 with falls of 40 to 60% along the way (data/macro/INDEX_NOTES.md). In the two hike-cycle bears only about 4% of liquid stocks rose, and in 2021 to 2023 the median stock fell 52% (knowledge/situations/03).
+- **How far along a move is.** Below about 2x its 52-week low with a confirmed breakout, most of the run was still ahead for the winners; above 4x, 2 of 18 comparable runs went further (tests/out/engine_scan_tagged_2026-10-16.txt). Odds measured on winners only.
+- **Exits.** A fixed 20% trailing stop kept more than half the gain in only 15 to 23% of winning runs; wider stops matched to the stock's own dips kept far more, but that was measured on winners only (tests/winners_population.md). Price limits mean a stop can gap through locked sessions.
+- **Concentration and turnover.** Two names made 88% of the walk-forward's profit (tests/system_walkforward.md); turnover cost the equal-weight basket about 24 points (tests/size_liquidity.md).
+- **What has not worked** after costs, against random entries: value screens, stock momentum, volume spikes and lock chasing, flow signals, dividend run-ups, index-inclusion trades, insider clusters, calendar effects, and every 1-to-10-day trading rule (tests/FACTS.md). A rise on heavy volume with no visible cause had a negative base rate. Buying a result before the price reacts did not pay.
+- **Shock rebounds.** Geopolitical falls of 5% or more rebounded a median +27.8% at 60 sessions, 9 of 9 regained (tests/noise_map_shock_rebound.md).
+- **Costs.** About 0.5% a round trip in liquid names, 1% under Rs20m a day (data/costs.md).
 
-## F. What not to do (tests/FACTS.md)
+## What tends to go wrong (knowledge/lessons.md)
 
-No value screens, no stock momentum, no volume-spike or lock chasing, no flow signals, no dividend games, no index-inclusion trades, no daily trading (costs 0.5 to 1% a round trip eat every edge of that size), no buying a results filing before the price reacts, no thin names, no fixed 20% stops, no cash above the reserve without a reason that beats the core.
+Hiding in cash because the documents are full of "no edge"; answering a different question than the one he asked; hardening a preference into a rule; quoting a summary instead of the test file; trusting a story without cash behind the profit; using memory of 2019 to 2026 as if it were knowable then; staying silent about a move he can see.
+
+## The weekly loop
+
+RUNBOOK.md and `.claude/skills/psx-weekly/SKILL.md`: refresh data, score every frozen row whose event has passed, rebuild the daily table, run the tagged scan, put the questions above to every name that is moving and every holding, freeze the calls, update STATE.md, list every 20%+ mover the scan missed and say why.

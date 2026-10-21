@@ -1,65 +1,64 @@
-# PICKS.md — what to buy, why, how much, and what kills it (version 5, 21 Oct 2026)
+# PICKS.md — the current calls, with odds, upside and downside (version 6, 21 Oct 2026)
 
-Written for Jazib in plain language, every technical term explained the first time. Version 5 is version 4 (19 Oct, archive/picks/PICKS_v4.md) with LUCK withdrawn and the 21 Oct amendment folded in; the analysis of MEBL, MARI, the reserve and the triggers is unchanged. Prices are 20 Oct closes unless stated. Open decisions and pending events are in STATE.md; the rules behind every size are in PLAYBOOK.md. Superseded versions stay in archive/picks/; their frozen rows stay in the register as paper calls.
+Written for Jazib in plain language, every technical term explained the first time. These are calls, not allocations: each says what the situation is, the odds, what you can make against what you can lose, what would prove it wrong, and a suggested size with the reason. You decide the size; nothing here is a rule. How the calls are made is in PLAYBOOK.md; what is pending is in STATE.md. Prices are 20 Oct closes. Earlier versions are in archive/picks/ (v4 has the full LUCK case); their frozen rows stay in the register.
 
-Hard constraints: KMI All Share names only; no Lucky group company is eligible (LUCK, LCI and any other; holding one needs a declaration through his father's employer).
+## 1. The situation
 
-## 1. Where the market is, and what that decides
+The State Bank raised its policy rate (the interest rate it charges banks, which sets the cost of money for everyone) to 11.5% in April. The six-month Treasury bill (a government IOU; its yield is what the market expects rates to be) pays 12.4%, above the policy rate, so the market expects another hike. Inflation is 10.3% and flat. Oil is up about 50% in three months because the Strait of Hormuz is still disrupted. The KSE100 (the index of the 100 largest companies) closed at 165,152, below its January peak. The next rate decision is 26 October; 61% of brokers expect a hike (Topline survey, 17 Oct).
 
-The State Bank raised its policy rate (the interest rate it charges banks, which sets the cost of money for everyone) to 11.5% in April. The six-month Treasury bill (a government IOU; its yield is what the market thinks rates will be) pays 12.4%, above the policy rate, so the market expects another hike. Inflation is 10.3% and flat. Oil is up about 50% in three months because the Strait of Hormuz is still disrupted. The KSE100 (the index of the 100 largest companies) closed at 165,152 on 20 Oct, below its January peak, with few stocks above their 50-day average price. The next rate decision is 26 October; 61% of brokers expect a hike (Topline survey, 17 Oct).
+What that means: this is a hike regime, not a turn. In past hike regimes only about 4% of stocks rose; the money was made in a few names with their own story. Every run of 5x or more began at a turn, when cuts start, and the cyclicals (cement, autos) led those. So today's calls split into names that do well in this regime (MEBL), fair-priced growth (MARI), and the names that win when the turn comes (LUCK, SAZEW), bought early only if the price already pays you for the wait.
 
-The library of every big move since 2016 says two things about a market like this. In the two previous hike cycles only about 4% of stocks rose at all; the money was made in a handful of names with their own story. And every run of 5x or more began at a regime turn, when a hike cycle ends and a cut cycle starts, usually within three months of a market low. We are not at one: the checklist scores one signal present, one absent, two unknown until about 10 November. So the plan has three parts: a core bought every month regardless, a reserve that waits for the turn, and at most one opportunity at a time, sized small.
+## 2. The calls
 
-## 2. The core: buy every month, hold through falls
+**MEBL, Meezan Bank, Rs545. Call: buy after the 22 Oct result if quarterly EPS is Rs11 or more. Odds the 12-month return is positive: 0.55 (frozen 19 Oct).**
+The story: the largest Islamic bank, deposits growing 20 to 25% a year from a hundred-plus new branches a year, 34% return on equity (profit divided by the shareholders' money; 34% is exceptional), the best business record of the twenty scored (16 of 20). A hike widens its margin immediately because its deposits pay nothing. The catch is the price: 3.3 times book value (the shareholders' money on paper), the highest in the sector, so the gain must come from growth.
+Upside against downside per Rs10,000: bad year (cuts start, banks lag) about −Rs2,200; normal about +Rs1,000 plus dividends; good about +Rs2,500. Modest both ways: the steady name, not the big-upside one.
+Wrong if: EPS under Rs11 on 22 Oct (frozen: EPS Rs12.50 to 15 at 0.65; dividend Rs8 or more at 0.60), or the first rate cut of a cycle, after which Islamic banks lagged the market by about 48 points in six months both previous times (two episodes only).
 
-Businesses, not trades. You buy them because the business grows, and you hold them through a 40% fall if the business is still growing. Each month's deposit is split between them; the one furthest below its target share gets the most.
+**LUCK, Lucky Cement, Rs398. Call: worth owning if the declaration is a small hassle for you; it is the strongest turn name on the list. Odds the 12-month return is positive: 0.55 (v4 judgment; the frozen row was voided on 21 Oct, so re-freeze it if you buy).**
+The story: the cement leader that became a conglomerate (KIA cars, Lucky Electric power, LCI chemicals), run by a family that keeps building; business record 15 of 20; last quarter's profit up 29%. At 6.8 times earnings (price divided by a year's profit per share) and about 21% below its high, it is cheap because cement is out of favour while rates are high. It led the market when the first cut came in June 2024.
+Upside against downside per Rs10,000: bad year (rates stay high, soft demand) about −Rs2,200; normal about +Rs1,500; turn year (a first cut in 2027) about +Rs5,000. This is the best asymmetry on the list, and it is a bet on timing the turn within a year.
+The declaration cost: it is fixed, so it only makes sense for a position big enough to matter. Your inside view through your father is real information with a bias toward the company; say it out loud when it shapes a decision.
+Wrong if: a privatisation cheque above about Rs35bn for LUCK's share of the GEPCO bid (about two thirds of FY26 operating cash flow; the central case is about Rs12.5bn with a win probability near 15%, knowledge/companies/LUCK_gepco.md), cement demand falling, or a hike cycle that runs well into 2027. Results due late October.
 
-**MEBL, Meezan Bank, Rs545. Target share of the core: 35% (more if the open slot goes to it). Next order: after the 22 Oct result, Rs12,500, about 23 shares, limit about Rs555, only if quarterly EPS is Rs11 or more.**
-The story: the largest Islamic bank, growing deposits 20 to 25% a year by opening a hundred-plus branches a year, earning 34% on its equity (return on equity: profit divided by the shareholders' money in the business; 34% is exceptional). The best record of the twenty businesses scored, 16 of 20.
-Why now: a bank earns the gap between what it pays depositors and what it charges borrowers; Meezan's deposits pay nothing, so a rate hike widens that gap immediately. It is the one core name that does well in exactly the regime we are in. The price is the problem: 3.3 times book value (what the shareholders' money is worth on paper), the highest in the sector, so the gain has to come from growth, not a re-rating (the market paying a higher multiple for the same profit).
-What it could do on 23 shares in 12 months: bad year (a cut cycle starts, banks lag), Rs425, down Rs2,800; normal, Rs600, up Rs1,250 plus Rs580 of dividends after tax; good, Rs680, up Rs3,100. Frozen for the 22 Oct result: EPS Rs12.50 to 15 (65%), dividend Rs8 or more (60%).
-What kills it: the first rate cut of a cycle. Islamic banks lagged the market by about 48 points in the six months after both previous first cuts (two episodes only). That is the signal to cut MEBL to a smaller position, over several deposits rather than in one sale, and move the money to the cyclicals the turn favours.
+**MARI, Mari Energies, Rs628. Call: a small position now; a real one at or below Rs540. Odds the 12-month return is positive: 0.55 (frozen 19 Oct).**
+The story: the second-largest gas producer with new fields coming on (Spinwam, Shams, Lundali, Ghazij allocations); profit last quarter up 97%; business record 14 of 20, weak points a cut payout and ventures abroad. The full card (knowledge/companies/MARI.md) found that FY27 earnings barely move with oil (about Rs64 a share at $75 Brent, Rs67 at $125), so this is a volume story at a fair price, not an oil bet. Card values: bear Rs468, base Rs627, bull Rs819 (25/50/25), expected return about +4% at today's price.
+Upside against downside per Rs10,000: bad −Rs2,500; normal flat plus dividends; good +Rs3,000. At Rs540 the same cases become about −Rs1,300, +Rs1,600 and +Rs5,200, which is why the real buy is lower.
+Wrong if: gas curtailments (each 50 MMscfd of linked gas is about Rs10 of annual EPS), the Rs86bn of trade debts (Rs62bn overdue; a provisioning exemption expires 31 Dec 2026), or the state taking more per unit. Result due late October.
 
-**MARI, Mari Energies, Rs628. Target share: 30%, but only Rs5,000 now (about 8 shares); the rest at or below Rs540.**
-The story: the second-largest gas producer, new fields coming on (Spinwam from April, Shams from June, Lundali from September, Ghazij allocations building), oil at about $105. Profit last quarter was up 97% and the share has gone nowhere for three months. Scored 14 of 20; the weak points are a cut payout and money going to ventures abroad.
-What the full card found (knowledge/companies/MARI.md): about 72% of sales are oil-linked by formula, but the formula caps the benefit above $110 oil, and gas prices reset half-yearly on past oil prices, so FY27 earnings barely move with Brent: about Rs64 a share at $75 and Rs67 at $125; oil mostly hits FY28 (Rs60 to Rs73). That makes it a volume story at a fair price, not an oil bet. The card's values: bear Rs468, base Rs627, bull Rs819 (25/50/25), expected return about +4% at today's price; full position only at or below Rs540.
-What it could do on 8 shares: bad year (Iran deal, oil to $75, curtailments), Rs468, down Rs1,300; normal, Rs627, flat plus Rs170 of dividends; good (volumes plus a higher multiple), Rs819, up Rs1,500.
-What kills it: curtailments (each 50 MMscfd of linked gas is about Rs10 of annual EPS), the Rs86bn of trade debts (Rs62bn overdue, with a provisioning exemption that expires 31 Dec 2026), or the state taking more per unit.
+**SAZEW, Sazgar Engineering (Haval assembler), about Rs1,512. Call: buy on the result if EPS is Rs60 or more and the State Bank does not hike on 26 Oct.**
+Four times earnings, a plant three times current sales, and an autos name, so it is the other big-upside name for the turn. Red team expected −9% in a hike regime (knowledge/companies/SAZEW.md), which is why it waits for its result and the rate decision. Wrong if: a hike, or sales falling. Its dips run deep, so think in a 30% downside.
 
-**The open slot (35% of the core; LUCK withdrawn, not eligible).** Until a replacement passes the checks the money sits in the reserve, which pushes cash above the 25% cap in PLAYBOOK.md section A. This is an open decision for Jazib (STATE.md). Candidates to check first (business record, price, cash conversion): SYS at or below Rs100 (export growth, quality 14, at Rs115 now); a non-Lucky cement name for the turn (FCCL, MLCF after the PIOC merger, DGKC, KOHC; none scored yet); ILP (quality 14, apparel and denim capacity ramp, textiles at the bottom of the cycle). Rule: by the 1 Nov deposit, at least half the money is in the core or a named replacement.
+**Watch, with what turns each into a buy:**
+- SYS at or below Rs100 (now about Rs115), or its first close above its 50-day average after its result. The only export compounder; 23 times earnings with an unresolved AI-pricing fear.
+- A results jump (quarterly profit up 40%+ with cash flow to match) in a liquid KMI name where the price closes up 10% on the filing. The daily scan tags these.
+- Any name at a one-year high with a visible cause and still below about 2 times its low.
+- The non-Lucky cement names (FCCL, MLCF, DGKC, KOHC) and ILP are unscored; scoring them is knowledge/BACKLOG.md item 3.
 
-Not in the core, and why: SYS is the only export compounder but trades at 23 times earnings with an unresolved fear about AI pricing; it waits for a lower entry. FABL, OGDC, FFC and HUBC are sound but have no engine to double earnings; they were version 2's core and stay as paper positions for scoring.
+**Pass, with the reason:** the refiners (PRL is over 4 times its low; of 18 comparable runs only 2 went further); anything rising on heavy volume with no filing and no sector move; thin names under Rs5m a day; buying a result before seeing the price react. FABL, OGDC, FFC and HUBC are sound but have no engine to double earnings.
 
-## 3. The reserve: money that waits for the turn
+## 3. A suggested book for the next deposit, and why
 
-Twenty percent of every deposit is held back in the brokerage account as cash, because the library says the turn is where the 5x runs begin and the playbook says the first weeks of a turn are recognisable: oil calm, few stocks still making new lows, the rupee flat, reserves rising, then more than half of stocks above their 200-day average and about a dozen names at one-year highs. When the checklist scores three of four, a third of the reserve goes into the first liquid KMI names to make new one-year highs after the low (in past turns these differed by cycle; cement was the common thread), a third at four weeks, a third at eight. At Rs50,000 a month that is Rs10,000 a month. Release rule, so it never becomes dead cash: if the checklist has not scored 3 by 19 Oct 2027, half goes into the core and the reserve share drops to 10% until the checklist scores 2 (PLAYBOOK.md section A, with the evidence). The case against holding a reserve at all is in gpt/EXAMINER_NOTES.md section 1.1.
+Days of cash before two dated events (MEBL on 22 Oct, the rate decision on 26 Oct) cost almost nothing. Months of cash cost a lot. So: wait for those two events, then be invested. My suggestion for Rs50,000, which you should change if you see it differently:
 
-## 4. The opportunity: one at a time, small, with the exit written first
+| Name | Amount | Why |
+|---|---|---|
+| MEBL | about Rs20,000, after the result | Does well in this regime; the steady part |
+| LUCK | about Rs15,000, if the declaration is acceptable | Best upside if the turn comes inside a year; cheap now |
+| MARI | about Rs5,000 now, more at or below Rs540 | Fair price today; the real buy is lower |
+| Held for 26 Oct | about Rs10,000 | SAZEW if its trigger fires; otherwise into LUCK or MEBL that week |
 
-At most 5% of the whole book lost if the stop hits (a stop is a price at which you sell without discussion); exits frozen at entry and never widened; nothing with no visible cause.
+What that book does in rupees, roughly, over 12 months: in a bad year (hikes continue, cement and banks both soft) about −Rs11,000 to −Rs12,500, about 22 to 25% of the money, inside the 30% you said you can accept. In a normal year about +Rs5,000 plus dividends. In a turn year about +Rs8,000 to +Rs10,000 as built, because MEBL is the part that lags when cuts start; shifting MEBL money into the turn names early is what turns that into a big year. If the turn arrives, the move is to add to the turn names (LUCK, SAZEW, the first cement and auto names to make new highs) with new money and by trimming MEBL; knowledge/REGIME_TURN_PLAYBOOK.md describes how past turns unfolded.
 
-**Now: nothing qualifies.** The refiners are the only names near one-year highs and they are late: PRL is over 4 times its low (of 18 comparable runs only 2 went further). The ATRL conditional entry did not trigger (it closed Rs1,190.74 on 20 Oct, below the Rs1,200 trigger).
+Without LUCK, put its share into MEBL and SAZEW (if it triggers): the downside is similar and the turn upside smaller.
 
-**Triggers; each becomes an order only on the stated observation:**
-- SAZEW (Haval assembler, 4 times earnings, a plant three times current sales): buy if quarterly EPS prints at or above Rs60 and the State Bank does not hike on the 26th. Stop 30% below entry. The first name to own when the turn comes.
-- SYS at or below Rs100, or on the first close above its 50-day average after its quarterly result, whichever comes first.
-- A results jump (quarterly profit up 40%+ with cash flow to match, not one-off income) in a liquid KMI name where the price closes up 10% on the filing: join within three sessions, stop 25%. The daily scan tags these.
-- Any name at a one-year high with a visible cause and a stage below 2 times its low. The scan lists them.
+## 4. Dates
 
-**Exclusions, by evidence:** stocks rising on heavy volume with no filing and no sector move lose money for a small account; thin names under Rs5m a day of trading; anything already 4 times its low; buying a results filing before seeing the price react.
+- 22 Oct, 11:00: MEBL result.
+- 26 Oct: rate decision; EFERT five-session price row scored.
+- 27 to 29 Oct: FCCL, FFC, OGDC, MARI and LUCK results.
+- 28 Oct: PRL five-session price row scored.
+- 2 Nov: October inflation; two falls in a row would be the first rotation signal.
+- About 10 Nov: the rupee and reserves signals on the turn checklist resolve.
 
-## 5. What the book most likely does
-
-Over the next 12 months with no turn, the core tracks the market with a growth tilt, roughly −15% in a bad year to +25% in a good one, plus about 4% in dividends after tax. With a turn in the first half of 2027, the reserve and the cyclical names could add 30 to 60% from the low. A 10 to 15% monthly return does not exist in any year of the data except for one or two names a year that no rule or judgment caught in advance.
-
-## 6. Dates
-
-- 22 Oct, 11:00: MEBL result. EPS below Rs11 fires its killer: do not buy, pause adding.
-- 26 Oct: State Bank decision. Hike: core unchanged, MEBL benefits. Hold: SAZEW trigger half met. Cut: re-run the turn checklist that evening.
-- 26 Oct and 28 Oct: EFERT and PRL five-session price rows scored.
-- 27 to 29 Oct: FCCL, FFC, OGDC and MARI results.
-- 1 Nov: deposit day; the open-slot rule applies.
-- 2 Nov: October inflation. A second monthly fall starts the rotation rule.
-- About 10 Nov: the turn checklist's rupee and reserves signals resolve.
-
-Every call above is frozen in catalysts/frozen_predictions.csv with a probability and scored as it lands (catalysts/scorecard.md).
+Every call above that you act on gets frozen in catalysts/frozen_predictions.csv with its probability before the order, and is scored as it lands (catalysts/scorecard.md).
