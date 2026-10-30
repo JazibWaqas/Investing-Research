@@ -94,6 +94,7 @@ The pipeline (entry points in CLAUDE.md section 7), scripts/tests/ (one script p
 ## .claude/ and .agents/
 
 `.claude/skills/psx-weekly/SKILL.md` is the weekly loop as a skill (`/psx-weekly`); `.agents/skills/psx-weekly/SKILL.md` is an identical copy for other agents, kept in sync by the doc check.
+`.claude/skills/psx-weekly/jazib-learning/SKILL.md` is how to teach Jazib when he asks to learn something (applied first, failure mode first, no quizzes); load it for any "teach me" session.
 
 ## archive/ and seed/: history, never instructions
 
