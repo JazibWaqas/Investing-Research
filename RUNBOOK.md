@@ -5,7 +5,7 @@ Who runs it: the orchestrator (Claude chat) with network access runs steps 1 to 
 ## 1. Refresh data (Claude, needs this machine or any Pakistani IP)
 
 ```
-.venv\Scripts\python.exe scripts\refresh_prices.py        # KMI prices; delete data\prices_raw\<SYM>.csv first to force a refetch
+.venv\Scripts\python.exe -I -X utf8 scripts\update_prices.py   # appends new sessions to every price file and the index files (refresh_prices.py only writes missing files)
 .venv\Scripts\python.exe scripts\fetch_payouts.py          # dividends, bonus, rights for the last 2 years
 .venv\Scripts\python.exe scripts\fetch_announcements.py    # resumes from the last date in data\announcements.parquet
 .venv\Scripts\python.exe scripts\fetch_fipi_lipi.py        # NCCPL flows (via scstrade)

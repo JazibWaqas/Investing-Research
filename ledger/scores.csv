@@ -9,3 +9,19 @@ C0026,2026-10-21 11:30 PKT,1,"Q1 FY27 EPS Rs174.89 (PAT Rs18.65bn) vs Rs13.62; f
 C0027,2026-10-21 11:30 PKT,1,"Q3 EPS loss Rs1.45 basic (doc 286227, 21 Oct 08:01)."
 C0041,2026-10-21 11:30 PKT,not_triggered,"Result was published 20 Oct 08:41, not before the Monday close; ATRL then closed 20 Oct at Rs1,190.74, below the Rs1,200 trigger (refiners fell: NRL -8.7%, PRL -6.8%; cause unverified). No entry."
 C0037,2026-10-21 12:00 PKT,void,No position taken; the 19 Oct LUCK row is void (never entered). Compliance: the investor's father works at Lucky Cement.
+C0004,2026-10-30,0,EFERT 26 Oct close 190.41 vs ref 194.82 (lower)
+C0006,2026-10-30,1,PRL EPS 22.17 and 28 Oct close 94.16 vs 101.44: both legs held; the orchestrator's conjunction was right
+C0008,2026-10-30,0,PRL 28 Oct close 94.16 vs 101.44 (lower)
+C0009,2026-10-30,1,"Q3 standalone EPS 14.36 (consolidated 14.34), PSX doc 286477, 22 Oct 12:04"
+C0010,2026-10-30,0,EPS 14.36 above the orchestrator band 7.02-12.74 (band too low)
+C0011,2026-10-30,1,"Interim DPS Rs8.00, book closure notice doc 286843"
+C0012,2026-10-30,0,"MEBL 29 Oct close 526.08 vs 21 Oct 546.95 (lower, despite the beat)"
+C0013,2026-10-30,0,"FCCL 1QFY27 EPS 2.02, just above the 1.45-2.00 band; doc 287026"
+C0014,2026-10-30,1,No interim dividend with FCCL Q1
+C0016,2026-10-30,0,"FFC Q3 consolidated EPS 19.72 (standalone 15.51), above the 14-18 band; doc 287242"
+C0017,2026-10-30,0,"FFC interim DPS 18.50, above the 9.50-14.50 band"
+C0019,2026-10-30,1,"OGDC Q1 EPS 13.60 vs 8.91; basis per press (consolidated quoted), inside 11-14.50; doc 287865"
+C0020,2026-10-30,1,OGDC EPS 13.60 above 9.94; orchestrator band 8.08-9.94 too low
+C0021,2026-10-30,1,OGDC interim DPS Rs5.00
+C0023,2026-10-30,0,"MPC raised 50bp to 12% on 26 Oct (9-1 vote); we had hold 0.50, +50bp 0.38"
+C0047,2026-10-30,0,"SAZEW Q1 EPS 66.77 met the EPS leg (doc 27 Oct), but the MPC hiked, so the trigger did not fire"

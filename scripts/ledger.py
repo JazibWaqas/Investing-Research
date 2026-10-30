@@ -263,6 +263,22 @@ def validate():
     return bad
 
 
+def write_retry(p, txt, tries=5):
+    """Windows editors and watchers briefly lock files; write through a temp file and retry."""
+    import os
+    import time
+    tmp = p.with_suffix(p.suffix + ".tmp")
+    for i in range(tries):
+        try:
+            tmp.write_text(txt, encoding="utf-8", newline="\n")
+            os.replace(tmp, p)
+            return
+        except OSError:
+            if i == tries - 1:
+                raise
+            time.sleep(0.5 * (i + 1))
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -307,7 +323,7 @@ def main():
         print("ledger ok")
         return 0
     for p, txt in views().items():
-        p.write_text(txt, encoding="utf-8", newline="\n")
+        write_retry(p, txt)
     print("built PICKS.md, STATE.md blocks, ledger/scorecard.md, ledger/book_daily.csv")
     return 0
 
