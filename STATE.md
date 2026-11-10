@@ -28,7 +28,6 @@ Regime: hike cycle, deeper after the 26 Oct hike to 12% (next MPC 14 Dec). Brent
 | event date | id | ticker | event | odds |
 |---|---|---|---|---|
 | 2026-12-01 | C0065 | KSE100 | Index level on 1 Dec 2026 against the 23 Oct low | 0.92 |
-| 2026-12-14 | C0053 | SAZEW | Tranche 3 (around 14 Dec): buy about Rs15,000 if the MPC holds or cuts on 14 ... | 0.35 |
 | 2026-12-14 | C0066 | Policy rate | SBP MPC decision 14 Dec 2026 | 0.55 |
 <!-- /ledger:pending -->
 
