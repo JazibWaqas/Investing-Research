@@ -9,9 +9,9 @@ Brier score per row = (probability minus outcome) squared; lower is better, and 
 <!-- ledger:scores -->
 | rows | n | Brier | held | mean stated odds |
 |---|---|---|---|---|
-| all | 24 | 0.164 | 15 of 24 | 0.60 |
+| all | 31 | 0.180 | 22 of 31 | 0.59 |
 | call | 1 | 0.040 | 0 of 1 | 0.20 |
-| forecast | 23 | 0.170 | 15 of 23 | 0.62 |
+| forecast | 30 | 0.185 | 22 of 30 | 0.60 |
 
 | id | scored | ticker | prediction | odds | outcome | note |
 |---|---|---|---|---|---|---|
@@ -41,6 +41,13 @@ Brier score per row = (probability minus outcome) squared; lower is better, and 
 | C0021 | 2026-10-30 | OGDC | Interim DPS between Rs4.00 and Rs6.00 | 0.65 | 1 | OGDC interim DPS Rs5.00 |
 | C0023 | 2026-10-30 | Policy rate | Policy rate held at 11.5% | 0.5 | 0 | MPC raised 50bp to 12% on 26 Oct (9-1 vote); we had hold 0.50, +50bp 0.38 |
 | C0047 | 2026-10-30 | SAZEW | The trigger fires: Q1 FY27 EPS of Rs60 or more AND no hike on 26 Oct | 0.20 | 0 | SAZEW Q1 EPS 66.77 met the EPS leg (doc 27 Oct), but the MPC hiked, so the tr... |
+| C0015 | 2026-11-10 | FCCL | Price rule: close of 5th trading session after the release day (release day =... | 0.47 | 1 | FCCL 5th session (3 Nov) 54.46 vs 51.61 before the 27 Oct release |
+| C0018 | 2026-11-10 | FFC | Price rule: close of 5th trading session after the release day (release day =... | 0.45 | 1 | FFC 5th session (4 Nov) 581.02 vs 537.11 before the 28 Oct release |
+| C0022 | 2026-11-10 | OGDC | Price rule: close of 5th trading session after the release day (release day =... | 0.45 | 1 | OGDC 5th session (6 Nov) 312.89 vs 306.21 before the 30 Oct release |
+| C0024 | 2026-11-10 | KSE100 | KSE100 closes higher on the 5th session after 26 Oct (about 2 Nov) than on th... | 0.52 | 1 | KSE100 2 Nov close 166,564 vs 166,420 (16 Oct) |
+| C0054 | 2026-11-10 | CPI | Headline CPI year on year below 10.0% | 0.60 | 1 | PBS: October CPI 9.6% y/y (2 Nov release) |
+| C0057 | 2026-11-10 | TRANCHE2 | Signal (a) or (b) fires before 1 Dec | 0.45 | 1 | Signal (a) fired: CPI 9.6% and Brent about 92 by 10 Nov (Brent fell about 20%... |
+| C0042 | 2026-11-10 | REGIME | Checklist does NOT reach a score of 3 by 10 Nov 2026 (no turn) | 0.75 | 1 | Scored on the 23 Oct low: A failed (Brent up about 35% over 13 weeks), B fail... |
 <!-- /ledger:scores -->
 
 ## Notes that are not in the tables

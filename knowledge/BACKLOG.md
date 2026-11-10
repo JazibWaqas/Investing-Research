@@ -24,6 +24,8 @@ The one list of open research. Merged on 21 Oct 2026 from FINDINGS.md section 10
 10. **Dividends before Nov 2024,** reconstructed from announcements, so dividend carry and the walk-forward's total returns can be compared with the total-return indices properly.
 11. **Same-day questions,** only once the intraday archive (scripts/collect_intraday.py) has months of sessions.
 
+- **Shock-reversal entry.** When a fall of 5%+ is caused by an external shock (oil, war, Covid), does buying on the first 15%+ reversal of the shock variable beat buying on the checklist (3 of 4) or on the index crossing its 200-day? Pre-register on the 10 geopolitical events in tests/noise_map_shock_rebound.md plus the 2026 oil episode; placebo of random 15% oil falls. Prompted by lesson 27 (10 Nov 2026).
+
 ## Do not repeat
 
 Tested adequately, with placebos; the answers are in tests/FACTS.md: value screens, stock momentum, volume and upper-lock rules, investor-flow signals, index recomposition trades, dividend run-ups, calendar effects, insider cluster tests on the same data, the 40 daily rules, and any historical replay of a current model's judgment.
