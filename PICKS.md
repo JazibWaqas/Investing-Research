@@ -14,10 +14,10 @@ Built 2026-11-18. Each call's reasoning is in the journal entry it links; the la
 | C0088 | 2026-11-18 | SAZEW | buy_if | Buy 10 shares (about Rs12,000 to Rs15,000) only if one of: (a) a monthly sales filing shows four-wheelers a... | If bought: total return positive 6 months after the fill | 0.55 | 15000 | +6000 (Rs2,100, the card's bull case) | -4500 (Rs1,050, the card's cut level) | Gross margin under 20% in Q2; four-wheeler sales under 1,200 a month; the auto policy n... | journal/2026-11-17.md |
 | C0093 | 2026-11-18 | FCCL | buy | Core, held through dips: Rs15,000 (about 250 shares near Rs60). Exit only if the case breaks | Total return incl. net dividends positive 6 months from fill (score... | 0.65 | 15000 | +5250 (+35%, turn runs) | -3300 (-22%, turn fails) | Profit falling two quarters running; a new hike cycle with Brent above $110 | journal/2026-11-18.md |
 | C0094 | 2026-11-18 | OGDC | buy | Core: Rs15,000 (about 47 shares near Rs314). Exit only if the case breaks | Total return incl. net dividends positive 6 months from fill (score... | 0.70 | 15000 | +3000 (+20%) | -750 (-5%; an oil spike helps it) | Brent under $75 for a quarter; receivables rising sharply again; a production cut | journal/2026-11-18.md |
-| C0095 | 2026-11-18 | FFC | buy | Core: Rs10,000 (about 17 shares near Rs568). Exit only if the case breaks | Total return incl. net dividends positive 6 months from fill (score... | 0.70 | 10000 | +2000 (+20%) | -800 (-8%) | A gas-price increase not passed on; a dividend cut | journal/2026-11-18.md |
-| C0096 | 2026-11-18 | ILP | buy | Core: Rs10,000 (about 98 shares near Rs102). Exit only if the case breaks | Total return incl. net dividends positive 6 months from fill (score... | 0.62 | 10000 | +2500 (+25%) | -1500 (-15%) | Q2 EPS (late Feb) under Rs2.50; rupee appreciation squeezing margins; KMI deletion | journal/2026-11-18.md |
 | C0097 | 2026-11-18 | LUCK | pass | Not in the core |  |  |  |  |  |  | journal/2026-11-18.md |
 | C0098 | 2026-11-18 | PAEL | pass | Fails the 18 Nov checklist |  |  |  |  |  |  | journal/2026-11-18.md |
+| C0100 | 2026-11-18 | ILP | pass | Out of the core after reading the 1QFY27 report |  |  |  |  |  |  | journal/2026-11-18.md |
+| C0101 | 2026-11-18 | FFC | buy | Core, raised to Rs20,000 (about 35 shares near Rs568). Exit only if the case breaks | Total return incl. net dividends positive 6 months from fill | 0.72 | 20000 | +6000 (12-month best about +30%) | -2000 (12-month bad about -10% after dividends) | A gas-price increase not passed on; a dividend cut; urea offtake falling | journal/2026-11-18.md |
 
 ## Open forecasts, soonest first
 
@@ -33,4 +33,4 @@ Built 2026-11-18. Each call's reasoning is in the journal entry it links; the la
 
 ## Paper calls (never acted on; kept open so they are scored)
 
-C0028 FABL, C0030 OGDC, C0031 FFC, C0032 MEBL, C0034 PRL, C0099 PORTFOLIO
+C0028 FABL, C0030 OGDC, C0031 FFC, C0032 MEBL, C0034 PRL, C0102 PORTFOLIO
