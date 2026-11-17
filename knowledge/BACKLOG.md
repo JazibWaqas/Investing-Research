@@ -28,6 +28,8 @@ The one list of open research. Merged on 21 Oct 2026 from FINDINGS.md section 10
 
 - **Early-turn momentum days (opened 18 Nov 2026).** Exploratory check (journal/2026-11-17.md addendum 7) found volume-surge days pay only in the first weeks of real turns and lose in false ones, roughly matching the index. Pre-register: does a sector-cluster day (three or more names of one sector signalling together) in the first 30 sessions after a 200-day recross beat the index over 10 and 60 sessions, with a same-date placebo and the delisted names included?
 
+- **What predicts a double at a turn (opened 18 Nov 2026).** Exploratory check found profit growth, beta and momentum do not raise the doubling rate at the last four turns; re-ratings dominate. Pre-register with delisted names, a valuation feature (P/E against the stock's own five-year range), a "disliked" proxy (relative P/E, foreign selling, analyst absence) and placebo dates.
+
 ## Do not repeat
 
 Tested adequately, with placebos; the answers are in tests/FACTS.md: value screens, stock momentum, volume and upper-lock rules, investor-flow signals, index recomposition trades, dividend run-ups, calendar effects, insider cluster tests on the same data, the 40 daily rules, and any historical replay of a current model's judgment.

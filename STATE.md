@@ -16,7 +16,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 
 ## 2. Decisions only Jazib can make
 
-1. **The core (18 Nov, journal/2026-11-18.md):** FCCL Rs15,000 (C0093), OGDC Rs15,000 (C0094), FFC Rs20,000 (C0101), held through dips, exit only if a case breaks; ILP dropped after its report (C0100). High reward Rs25,000: GHNI Rs15,000 (C0103) and MLCF Rs10,000 (C0104), each with a 25% trailing exit; GAL and PPL passed. Report fills for `scripts/ledger.py trade`.
+1. **The core (18 Nov, journal/2026-11-18.md):** FCCL Rs15,000 (C0093), OGDC Rs15,000 (C0094), FFC Rs20,000 (C0101), held through dips, exit only if a case breaks; ILP dropped after its report (C0100). High reward Rs25,000, three re-rating stories: GHNI Rs10,000 (C0107), MLCF Rs7,500 (C0108), LUCK Rs7,500 (C0109), each with a 25% trailing exit; GAL and PPL passed. Report fills for `scripts/ledger.py trade`.
 2. **Run the exits.** Sell at a target (all, or half with the stop moved to cost); sell the morning after a close below a stop. Message on Brent above $105.
 3. **SAZEW only on company evidence** (C0088): four-wheeler sales above 1,600 a month, a hybrid concession in the auto policy, or Rs1,200 or below. The 1QFY27 report confirmed the Avoid (knowledge/companies/SAZEW.md).
 4. **Finqalab's commission rate.** Unverified (data/costs.md); he can read it on his first contract note.
