@@ -1,6 +1,6 @@
 # PICKS.md — the open calls (built from ledger/calls.csv by scripts/ledger.py; do not edit by hand)
 
-Built 2026-11-10. Each call's reasoning is in the journal entry it links; the latest letter to Jazib is journal/2026-11-10-picks-v8.md. To change a call, add a row to ledger/calls.csv that supersedes it, then run `scripts/ledger.py build`. Odds are the probability the call's prediction holds. Upside and downside are rupees on the suggested size.
+Built 2026-11-17. Each call's reasoning is in the journal entry it links; the latest letter to Jazib is journal/2026-11-17-picks-v9.md. To change a call, add a row to ledger/calls.csv that supersedes it, then run `scripts/ledger.py build`. Odds are the probability the call's prediction holds. Upside and downside are rupees on the suggested size.
 
 ## Live calls
 
@@ -8,14 +8,14 @@ Built 2026-11-10. Each call's reasoning is in the journal entry it links; the la
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | C0046 | 2026-10-21 | MARI | buy_if | PICKS v6: add at or below Rs540 | Total return incl. net dividends positive over 12 months from a fil... | 0.70 | 10000 | +5200 (bull Rs819) | -1300 (bear Rs468) | Same as C0045 | journal/2026-10-21-picks-v6.md |
 | C0048 | 2026-10-21 | SYS | watch | PICKS v6: buy at or below Rs100, or on its first close above the 50-day average after its quarterly result | SYS closes at or below Rs100 on some day by 31 Dec 2026 | 0.25 |  |  |  | A result that settles the AI-pricing fear and a run away from Rs100 (then re-judge the ... | journal/2026-10-21-picks-v6.md |
-| C0059 | 2026-11-10 | MEBL | buy | Buy now (10 or 11 Nov): Rs15,000, 27 shares, limit Rs570 | Total return incl. net dividends positive over 12 months from fill | 0.60 | 15000 | +3000 (Rs680) | -2500 (Rs470) | First cut of a cycle arriving fast (Islamic banks lagged after both previous first cuts... | journal/2026-11-10-picks-v8.md |
-| C0060 | 2026-11-10 | ILP | buy | Buy now: Rs15,000, 145 shares, limit Rs105 | Total return incl. net dividends positive over 12 months from fill | 0.60 | 15000 | +5000 (Rs140) | -3500 (Rs78) | Q2 EPS (due about late Feb) under Rs2.50; apparel capex slips; rupee appreciation squee... | journal/2026-11-10-picks-v8.md |
-| C0061 | 2026-11-10 | MARI | buy | Buy now: Rs10,000, 15 shares, limit Rs670 | Total return incl. net dividends positive over 12 months from fill | 0.55 | 10000 | +2500 (Rs830) | -2000 (Rs525) | Curtailments; the Rs86bn trade debts (provisioning exemption ends 31 Dec 2026); oil und... | journal/2026-11-10-picks-v8.md |
-| C0062 | 2026-11-10 | LUCK | buy_if | Buy now only if the declaration through his father's employer is acceptable: Rs10,000, 22 shares, limit Rs450 | Total return incl. net dividends positive over 12 months from fill | 0.60 | 10000 | +4000 (Rs620) | -2500 (Rs330) | A binding DISCO cheque (GEPCO or IESCO) above about Rs35bn for LUCK's share; cement des... | journal/2026-11-10-picks-v8.md |
-| C0063 | 2026-11-10 | MLCF | buy | Buy now: Rs10,000, 95 shares, limit Rs106 (the non-Lucky cement; if LUCK is also bought, both are held) | Total return incl. net dividends positive over 12 months from fill | 0.55 | 10000 | +4000 (Rs150) | -3000 (Rs75) | Cement despatches falling two months running; a December hike; coal above $150; Brent b... | journal/2026-11-10-picks-v8.md |
-| C0064 | 2026-11-10 | FCCL | buy | Optional opportunity position: Rs10,000, 160 shares, limit Rs62. Exit on a close 25% below its highest clos... | Total return positive at the written exit (close 25% below the high... | 0.55 | 10000 | +3500 (Rs82) | -2500 (the stop) | A close 25% below the high; despatches falling; a December hike | journal/2026-11-10-picks-v8.md |
-| C0068 | 2026-11-10 | SAZEW | buy | High-upside sleeve, buy now: Rs15,000, 10 shares, limit Rs1,500 | Total return incl. net dividends positive over 12 months from fill | 0.50 | 15000 | +6000 (card bull Rs2,100) | -4500 (Rs1,050, the card's cut level) | A December hike; monthly four-wheeler sales under 1,200 two months running; gross margi... | journal/2026-11-10.md |
-| C0069 | 2026-11-10 | PAEL | buy | High-upside sleeve, buy now: Rs15,000, 430 shares, limit Rs35 | Total return incl. net dividends positive over 12 months from fill | 0.55 | 15000 | +9000 (Rs55, +60%) | -4500 (Rs24, -30%) | Nine-month EPS growth turning negative; a December hike; transformer or appliance deman... | journal/2026-11-10.md |
+| C0071 | 2026-11-17 | LUCK | buy | Swing into the 14 Dec MPC: Rs25,000, 56 shares, limit Rs442. Target Rs490, stop a close below Rs400, time e... | Swing exit at a profit: touches Rs490 (sell) before any close below... | 0.55 | 24752 | +2688 (Rs490) | -2352 (Rs400) | A December hike; Brent back above $105; cement despatches falling in the November data | journal/2026-11-17-picks-v9.md |
+| C0072 | 2026-11-17 | MARI | buy | Swing: Rs20,000, 28 shares, limit Rs715 (pay up to Rs730 if unfilled in two sessions). Target Rs820, stop a... | Swing exit at a profit: touches Rs820 (sell) before any close below... | 0.50 | 20020 | +2940 (Rs820) | -1260 (Rs670) | The discovery spike fully retraced (close below Rs670); Phase 1B or a third party casti... | journal/2026-11-17-picks-v9.md |
+| C0073 | 2026-11-17 | FCCL | buy | Swing: Rs15,000, 250 shares, limit Rs60. Target Rs68, stop a close below Rs54, time exit 18 Dec | Swing exit at a profit: touches Rs68 (sell) before any close below ... | 0.55 | 15000 | +2000 (Rs68) | -1500 (Rs54) | A close below Rs54 (the 10-day low); a December hike | journal/2026-11-17-picks-v9.md |
+| C0074 | 2026-11-17 | PAEL | buy | Swing: Rs15,000, 420 shares, limit Rs35.80. Target Rs42, stop a close below Rs31.50, time exit 18 Dec | Swing exit at a profit: touches Rs42 (sell) before any close below ... | 0.50 | 15036 | +2604 (Rs42) | -1806 (Rs31.50) | A close below the 252-low (Rs31.81); a December hike | journal/2026-11-17-picks-v9.md |
+| C0075 | 2026-11-17 | SAZEW | buy_if | Buy 10 shares (Rs15,000) after the November CPI release (early Dec) if CPI is under 9.0% and Brent is under... | If bought: total return positive at the 18 Dec close | 0.50 | 15000 | +1500 (Rs1,650 by 18 Dec) | -1500 (Rs1,350) | A December hike; monthly four-wheeler sales under 1,200 | journal/2026-11-17-picks-v9.md |
+| C0076 | 2026-11-17 | MEBL | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
+| C0077 | 2026-11-17 | ILP | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
+| C0078 | 2026-11-17 | MLCF | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 
 ## Open forecasts, soonest first
 
@@ -31,4 +31,4 @@ Built 2026-11-10. Each call's reasoning is in the journal entry it links; the la
 
 ## Paper calls (never acted on; kept open so they are scored)
 
-C0028 FABL, C0030 OGDC, C0031 FFC, C0032 MEBL, C0034 PRL, C0070 PORTFOLIO
+C0028 FABL, C0030 OGDC, C0031 FFC, C0032 MEBL, C0034 PRL, C0079 PORTFOLIO
