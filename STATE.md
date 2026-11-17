@@ -16,7 +16,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 
 ## 2. Decisions only Jazib can make
 
-1. **Buy on 18 Nov** (journal/2026-11-17.md addendum 5): LUCK 56 at 442 long-term (C0089), FCCL 417 at 60 swing to Rs68, out below Rs54 by 18 Dec (C0090), PAEL 700 at 35.80 high-reward with a trailing exit (C0091). About Rs75,000. Report fills (name, shares, price, fees) for `scripts/ledger.py trade`.
+1. **Nothing is decided (18 Nov).** Jazib paused the plan: the 17 Nov recommendations (C0089 to C0092) moved with each of his messages (lesson 29). Decide in order with him: goal, market read, situation, researched shortlist, sizing, exits and horizon. No order until that is done.
 2. **Run the exits.** Sell at a target (all, or half with the stop moved to cost); sell the morning after a close below a stop. Message on Brent above $105.
 3. **SAZEW only on company evidence** (C0088): four-wheeler sales above 1,600 a month, a hybrid concession in the auto policy, or Rs1,200 or below. The 1QFY27 report confirmed the Avoid (knowledge/companies/SAZEW.md).
 4. **Finqalab's commission rate.** Unverified (data/costs.md); he can read it on his first contract note.
