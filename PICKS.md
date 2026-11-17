@@ -8,7 +8,6 @@ Built 2026-11-17. Each call's reasoning is in the journal entry it links; the la
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | C0046 | 2026-10-21 | MARI | buy_if | PICKS v6: add at or below Rs540 | Total return incl. net dividends positive over 12 months from a fil... | 0.70 | 10000 | +5200 (bull Rs819) | -1300 (bear Rs468) | Same as C0045 | journal/2026-10-21-picks-v6.md |
 | C0048 | 2026-10-21 | SYS | watch | PICKS v6: buy at or below Rs100, or on its first close above the 50-day average after its quarterly result | SYS closes at or below Rs100 on some day by 31 Dec 2026 | 0.25 |  |  |  | A result that settles the AI-pricing fear and a run away from Rs100 (then re-judge the ... | journal/2026-10-21-picks-v6.md |
-| C0071 | 2026-11-17 | LUCK | buy | Swing into the 14 Dec MPC: Rs25,000, 56 shares, limit Rs442. Target Rs490, stop a close below Rs400, time e... | Swing exit at a profit: touches Rs490 (sell) before any close below... | 0.55 | 24752 | +2688 (Rs490) | -2352 (Rs400) | A December hike; Brent back above $105; cement despatches falling in the November data | journal/2026-11-17-picks-v9.md |
 | C0072 | 2026-11-17 | MARI | buy | Swing: Rs20,000, 28 shares, limit Rs715 (pay up to Rs730 if unfilled in two sessions). Target Rs820, stop a... | Swing exit at a profit: touches Rs820 (sell) before any close below... | 0.50 | 20020 | +2940 (Rs820) | -1260 (Rs670) | The discovery spike fully retraced (close below Rs670); Phase 1B or a third party casti... | journal/2026-11-17-picks-v9.md |
 | C0073 | 2026-11-17 | FCCL | buy | Swing: Rs15,000, 250 shares, limit Rs60. Target Rs68, stop a close below Rs54, time exit 18 Dec | Swing exit at a profit: touches Rs68 (sell) before any close below ... | 0.55 | 15000 | +2000 (Rs68) | -1500 (Rs54) | A close below Rs54 (the 10-day low); a December hike | journal/2026-11-17-picks-v9.md |
 | C0074 | 2026-11-17 | PAEL | buy | Swing: Rs15,000, 420 shares, limit Rs35.80. Target Rs42, stop a close below Rs31.50, time exit 18 Dec | Swing exit at a profit: touches Rs42 (sell) before any close below ... | 0.50 | 15036 | +2604 (Rs42) | -1806 (Rs31.50) | A close below the 252-low (Rs31.81); a December hike | journal/2026-11-17-picks-v9.md |
@@ -16,6 +15,7 @@ Built 2026-11-17. Each call's reasoning is in the journal entry it links; the la
 | C0076 | 2026-11-17 | MEBL | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 | C0077 | 2026-11-17 | ILP | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 | C0078 | 2026-11-17 | MLCF | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
+| C0080 | 2026-11-17 | LUCK | buy | Long-term holding at Jazib's choice, not a swing: Rs25,000, 56 shares, limit Rs442. No price target; sell o... | Total return incl. net dividends positive over 12 months from fill | 0.60 | 24752 | +9968 (Rs620, the bull level in C0062) | -6272 (Rs330) | A binding DISCO cheque (GEPCO or IESCO) above about Rs35bn for LUCK's share; cement des... | journal/2026-11-17.md |
 
 ## Open forecasts, soonest first
 

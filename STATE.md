@@ -16,7 +16,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 
 ## 2. Decisions only Jazib can make
 
-1. **Buy on 18 Nov** (journal/2026-11-17-picks-v9.md): LUCK 56 at 442, MARI 28 at 715 (up to 730 after two sessions), FCCL 250 at 60, PAEL 420 at 35.80; about Rs75,000. Each has a target, a stop on the close and an 18 Dec time exit (C0071 to C0074). Report fills (name, shares, price, fees) for `scripts/ledger.py trade`.
+1. **Buy on 18 Nov** (journal/2026-11-17-picks-v9.md): LUCK 56 at 442 (long-term hold, C0080), MARI 28 at 715 (up to 730 after two sessions), FCCL 250 at 60, PAEL 420 at 35.80; about Rs75,000. Each has a target, a stop on the close and an 18 Dec time exit (C0071 to C0074). Report fills (name, shares, price, fees) for `scripts/ledger.py trade`.
 2. **Run the exits.** Sell at a target (all, or half with the stop moved to cost); sell the morning after a close below a stop. Message on Brent above $105.
 3. **SAZEW after the November CPI** (early Dec), if CPI is under 9% and Brent under $100 (C0075).
 4. **Finqalab's commission rate.** Unverified (data/costs.md); he can read it on his first contract note.
@@ -28,7 +28,6 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 |---|---|---|---|---|
 | 2026-12-01 | C0065 | KSE100 | Index level on 1 Dec 2026 against the 23 Oct low | 0.92 |
 | 2026-12-14 | C0066 | Policy rate | SBP MPC decision 14 Dec 2026 | 0.55 |
-| 2026-12-18 | C0071 | LUCK | Swing into the 14 Dec MPC: Rs25,000, 56 shares, limit Rs442. Target Rs490, st... | 0.55 |
 | 2026-12-18 | C0072 | MARI | Swing: Rs20,000, 28 shares, limit Rs715 (pay up to Rs730 if unfilled in two s... | 0.50 |
 | 2026-12-18 | C0073 | FCCL | Swing: Rs15,000, 250 shares, limit Rs60. Target Rs68, stop a close below Rs54... | 0.55 |
 | 2026-12-18 | C0074 | PAEL | Swing: Rs15,000, 420 shares, limit Rs35.80. Target Rs42, stop a close below R... | 0.50 |
