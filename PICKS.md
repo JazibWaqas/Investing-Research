@@ -8,7 +8,6 @@ Built 2026-11-17. Each call's reasoning is in the journal entry it links; the la
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | C0046 | 2026-10-21 | MARI | buy_if | PICKS v6: add at or below Rs540 | Total return incl. net dividends positive over 12 months from a fil... | 0.70 | 10000 | +5200 (bull Rs819) | -1300 (bear Rs468) | Same as C0045 | journal/2026-10-21-picks-v6.md |
 | C0048 | 2026-10-21 | SYS | watch | PICKS v6: buy at or below Rs100, or on its first close above the 50-day average after its quarterly result | SYS closes at or below Rs100 on some day by 31 Dec 2026 | 0.25 |  |  |  | A result that settles the AI-pricing fear and a run away from Rs100 (then re-judge the ... | journal/2026-10-21-picks-v6.md |
-| C0075 | 2026-11-17 | SAZEW | buy_if | Buy 10 shares (Rs15,000) after the November CPI release (early Dec) if CPI is under 9.0% and Brent is under... | If bought: total return positive at the 18 Dec close | 0.50 | 15000 | +1500 (Rs1,650 by 18 Dec) | -1500 (Rs1,350) | A December hike; monthly four-wheeler sales under 1,200 | journal/2026-11-17-picks-v9.md |
 | C0076 | 2026-11-17 | MEBL | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 | C0077 | 2026-11-17 | ILP | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 | C0078 | 2026-11-17 | MLCF | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
@@ -16,6 +15,7 @@ Built 2026-11-17. Each call's reasoning is in the journal entry it links; the la
 | C0083 | 2026-11-17 | MARI | pass | Out of the swing book after the deeper check |  |  |  |  |  |  | journal/2026-11-17.md |
 | C0085 | 2026-11-17 | LUCK | buy | Long-term holding: Rs30,000, 68 shares, limit Rs442. No price target; sell only if the case breaks or on a ... | Total return incl. net dividends positive over 12 months from fill | 0.60 | 30056 | +12104 (Rs620) | -7616 (Rs330) | A binding DISCO cheque above about Rs35bn for LUCK's share; cement despatches falling t... | journal/2026-11-17.md |
 | C0086 | 2026-11-17 | FCCL | buy | Swing: Rs35,000, 583 shares, limit Rs60. Target Rs68, stop a close below Rs54, time exit 18 Dec | Swing exit at a profit: touches Rs68 (sell) before any close below ... | 0.55 | 34980 | +4664 (Rs68) | -3498 (Rs54) | A close below Rs54; a December hike; north cement despatches falling again in November | journal/2026-11-17.md |
+| C0088 | 2026-11-18 | SAZEW | buy_if | Buy 10 shares (about Rs12,000 to Rs15,000) only if one of: (a) a monthly sales filing shows four-wheelers a... | If bought: total return positive 6 months after the fill | 0.55 | 15000 | +6000 (Rs2,100, the card's bull case) | -4500 (Rs1,050, the card's cut level) | Gross margin under 20% in Q2; four-wheeler sales under 1,200 a month; the auto policy n... | journal/2026-11-17.md |
 
 ## Open forecasts, soonest first
 

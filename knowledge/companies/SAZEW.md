@@ -1,5 +1,7 @@
 # SAZEW (Sazgar Engineering Works): underwriting card
 
+> **Update 18 Nov 2026 (Opus 5.5), after the 1QFY27 report (doc 287650).** Price Rs1,491.54 (17 Nov). Revenue Rs41.7bn (+23%, mix and three-wheelers); four-wheeler sales 3,137 (-12%) while industry car sales rose; prices held after the hybrid sales tax went to 18%, so the company absorbed it: gross margin 20.4% (25.2% a year earlier), just above kill trigger 1. EPS Rs66.77 (Rs73.07); interim dividend Rs5 (Rs15); finance cost Rs334m (Rs79m); diminishing musharakah Rs7.4bn (Rs5.2bn); cash Rs18.0bn; stock in trade Rs41.8bn. The directors warn that the July CBU duty cut and the delayed Auto Policy 2026-31 raise the risk of falling local production and closures. Annualised Q1 EPS about Rs267, 5.6x. The red team's base value of about Rs1,300 stands; **Avoid stands; buy only on the triggers in ledger call C0088.**
+
 Written 17 Oct 2026, before the Q1 FY27 result (no board notice yet; it must be filed by 30 Oct). Price Rs1,530.41 (close 16 Oct 2026, data/prices_raw/SAZEW.csv). KMI All Share member (data/kmi_allshare_2026-06-05.csv). **Verdict: AVOID at this price. A trailing P/E of 4 is cheap only on peak earnings, and those earnings are already falling. I would look again at Rs1,200, or sooner if the auto policy brings back the hybrid tax concession.** Expected 12-month return is about -4.5%, against 12.5% on a 12-month T-bill.
 
 ## The story

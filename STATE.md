@@ -18,7 +18,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 
 1. **Buy on 18 Nov** (journal/2026-11-17-picks-v9.md): LUCK 68 at 442 as a long-term hold (C0085); FCCL 583 at 60 (C0086) and PAEL 280 at 35.80 (C0082) as swings with a target, a stop on the close and an 18 Dec time exit; MARI dropped after the deeper check (C0083). About Rs75,000 (C0087). Report fills (name, shares, price, fees) for `scripts/ledger.py trade`.
 2. **Run the exits.** Sell at a target (all, or half with the stop moved to cost); sell the morning after a close below a stop. Message on Brent above $105.
-3. **SAZEW after the November CPI** (early Dec), if CPI is under 9% and Brent under $100 (C0075).
+3. **SAZEW only on company evidence** (C0088): four-wheeler sales above 1,600 a month, a hybrid concession in the auto policy, or Rs1,200 or below. The 1QFY27 report confirmed the Avoid (knowledge/companies/SAZEW.md).
 4. **Finqalab's commission rate.** Unverified (data/costs.md); he can read it on his first contract note.
 
 ## 3. Pending events (built)
@@ -28,7 +28,6 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 |---|---|---|---|---|
 | 2026-12-01 | C0065 | KSE100 | Index level on 1 Dec 2026 against the 23 Oct low | 0.92 |
 | 2026-12-14 | C0066 | Policy rate | SBP MPC decision 14 Dec 2026 | 0.55 |
-| 2026-12-18 | C0075 | SAZEW | Buy 10 shares (Rs15,000) after the November CPI release (early Dec) if CPI is... | 0.50 |
 | 2026-12-18 | C0076 | MEBL | Not in the swing book |  |
 | 2026-12-18 | C0077 | ILP | Not in the swing book |  |
 | 2026-12-18 | C0078 | MLCF | Not in the swing book |  |
