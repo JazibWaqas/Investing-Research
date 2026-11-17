@@ -26,6 +26,8 @@ The one list of open research. Merged on 21 Oct 2026 from FINDINGS.md section 10
 
 - **Shock-reversal entry.** When a fall of 5%+ is caused by an external shock (oil, war, Covid), does buying on the first 15%+ reversal of the shock variable beat buying on the checklist (3 of 4) or on the index crossing its 200-day? Pre-register on the 10 geopolitical events in tests/noise_map_shock_rebound.md plus the 2026 oil episode; placebo of random 15% oil falls. Prompted by lesson 27 (10 Nov 2026).
 
+- **Early-turn momentum days (opened 18 Nov 2026).** Exploratory check (journal/2026-11-17.md addendum 7) found volume-surge days pay only in the first weeks of real turns and lose in false ones, roughly matching the index. Pre-register: does a sector-cluster day (three or more names of one sector signalling together) in the first 30 sessions after a 200-day recross beat the index over 10 and 60 sessions, with a same-date placebo and the delisted names included?
+
 ## Do not repeat
 
 Tested adequately, with placebos; the answers are in tests/FACTS.md: value screens, stock momentum, volume and upper-lock rules, investor-flow signals, index recomposition trades, dividend run-ups, calendar effects, insider cluster tests on the same data, the 40 daily rules, and any historical replay of a current model's judgment.
