@@ -1,6 +1,6 @@
 # PICKS.md — the open calls (built from ledger/calls.csv by scripts/ledger.py; do not edit by hand)
 
-Built 2026-11-17. Each call's reasoning is in the journal entry it links; the latest letter to Jazib is journal/2026-11-17-picks-v9.md. To change a call, add a row to ledger/calls.csv that supersedes it, then run `scripts/ledger.py build`. Odds are the probability the call's prediction holds. Upside and downside are rupees on the suggested size.
+Built 2026-11-18. Each call's reasoning is in the journal entry it links; the latest letter to Jazib is journal/2026-11-17-picks-v9.md. To change a call, add a row to ledger/calls.csv that supersedes it, then run `scripts/ledger.py build`. Odds are the probability the call's prediction holds. Upside and downside are rupees on the suggested size.
 
 ## Live calls
 
