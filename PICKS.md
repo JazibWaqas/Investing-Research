@@ -12,10 +12,10 @@ Built 2026-11-17. Each call's reasoning is in the journal entry it links; the la
 | C0076 | 2026-11-17 | MEBL | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 | C0077 | 2026-11-17 | ILP | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
 | C0078 | 2026-11-17 | MLCF | pass | Not in the swing book |  |  |  |  |  |  | journal/2026-11-17-picks-v9.md |
-| C0080 | 2026-11-17 | LUCK | buy | Long-term holding at Jazib's choice, not a swing: Rs25,000, 56 shares, limit Rs442. No price target; sell o... | Total return incl. net dividends positive over 12 months from fill | 0.60 | 24752 | +9968 (Rs620, the bull level in C0062) | -6272 (Rs330) | A binding DISCO cheque (GEPCO or IESCO) above about Rs35bn for LUCK's share; cement des... | journal/2026-11-17.md |
-| C0081 | 2026-11-17 | FCCL | buy | Swing, sized up after the deeper check: Rs20,000, 333 shares, limit Rs60. Target Rs68, stop a close below R... | Swing exit at a profit: touches Rs68 (sell) before any close below ... | 0.55 | 19980 | +2664 (Rs68) | -1998 (Rs54) | A close below Rs54; a December hike; north cement despatches falling again in November | journal/2026-11-17.md |
 | C0082 | 2026-11-17 | PAEL | buy | Swing, sized down after the deeper check: Rs10,000, 280 shares, limit Rs35.80. Target Rs42, stop a close be... | Swing exit at a profit: touches Rs42 (sell) before any close below ... | 0.45 | 10024 | +1736 (Rs42) | -1204 (Rs31.50) | A close below Rs31.50; a December hike | journal/2026-11-17.md |
 | C0083 | 2026-11-17 | MARI | pass | Out of the swing book after the deeper check |  |  |  |  |  |  | journal/2026-11-17.md |
+| C0085 | 2026-11-17 | LUCK | buy | Long-term holding: Rs30,000, 68 shares, limit Rs442. No price target; sell only if the case breaks or on a ... | Total return incl. net dividends positive over 12 months from fill | 0.60 | 30056 | +12104 (Rs620) | -7616 (Rs330) | A binding DISCO cheque above about Rs35bn for LUCK's share; cement despatches falling t... | journal/2026-11-17.md |
+| C0086 | 2026-11-17 | FCCL | buy | Swing: Rs35,000, 583 shares, limit Rs60. Target Rs68, stop a close below Rs54, time exit 18 Dec | Swing exit at a profit: touches Rs68 (sell) before any close below ... | 0.55 | 34980 | +4664 (Rs68) | -3498 (Rs54) | A close below Rs54; a December hike; north cement despatches falling again in November | journal/2026-11-17.md |
 
 ## Open forecasts, soonest first
 
@@ -31,4 +31,4 @@ Built 2026-11-17. Each call's reasoning is in the journal entry it links; the la
 
 ## Paper calls (never acted on; kept open so they are scored)
 
-C0028 FABL, C0030 OGDC, C0031 FFC, C0032 MEBL, C0034 PRL, C0084 PORTFOLIO
+C0028 FABL, C0030 OGDC, C0031 FFC, C0032 MEBL, C0034 PRL, C0087 PORTFOLIO
