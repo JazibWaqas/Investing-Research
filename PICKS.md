@@ -20,8 +20,8 @@ Built 2026-11-18. Each call's reasoning is in the journal entry it links; the la
 | C0106 | 2026-11-18 | PPL | pass | OGDC preferred as the oil hedge |  |  |  |  |  |  | journal/2026-11-18.md |
 | C0107 | 2026-11-18 | GHNI | buy | High reward, resized: Rs10,000 (about 8 shares near Rs1,221). Exit on a close 25% below the highest close s... | Total return incl. net dividends positive 6 months from fill | 0.60 | 10000 | +7000 (best about +70%) | -2500 (the 25% exit) | Unit sales falling two quarters; CBU truck tariffs cut further; a new hike cycle | journal/2026-11-18.md |
 | C0109 | 2026-11-18 | LUCK | buy | High reward: Rs7,500 (about 17 shares near Rs440). Exit on a close 25% below the highest close since the fi... | Total return incl. net dividends positive 6 months from fill | 0.58 | 7500 | +3750 (best about +50%: cement re-rating plus a copper narrative) | -1875 (the 25% exit) | A binding DISCO cheque above about Rs35bn; NRL's resource estimate disappointing; a new... | journal/2026-11-18.md |
-| C0110 | 2026-11-19 | NETSOL | buy | High reward, replacing MLCF: Rs7,500 (about 64 shares near Rs117). Exit on a close 25% below the highest cl... | Total return incl. net dividends positive 6 months from fill | 0.55 | 7500 | +3750 (best about +50%) | -1875 (the 25% exit) | Buyback withdrawn or not executed; subscription and support revenue falling again; rupe... | journal/2026-11-18.md |
 | C0111 | 2026-11-19 | QTECH | pass | Avoid |  |  |  |  |  |  | journal/2026-11-18.md |
+| C0112 | 2026-11-19 | NETSOL | buy | High reward: Rs7,500 (about 64 shares near Rs117). Exit on a close 25% below the highest close since the fi... | Total return incl. net dividends positive 6 months from fill | 0.55 | 7500 | +3750 (best about +50%) | -1875 (the 25% exit) | Buyback withdrawn or not executed; subscription and support revenue falling again; rupe... | journal/2026-11-18.md |
 
 ## Open forecasts, soonest first
 
