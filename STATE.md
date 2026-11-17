@@ -29,11 +29,8 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 | 2026-12-01 | C0065 | KSE100 | Index level on 1 Dec 2026 against the 23 Oct low | 0.92 |
 | 2026-12-14 | C0066 | Policy rate | SBP MPC decision 14 Dec 2026 | 0.55 |
 | 2026-12-18 | C0076 | MEBL | Not in the swing book |  |
-| 2026-12-18 | C0077 | ILP | Not in the swing book |  |
 | 2026-12-18 | C0078 | MLCF | Not in the swing book |  |
 | 2026-12-18 | C0083 | MARI | Out of the swing book after the deeper check |  |
-| 2026-12-18 | C0090 | FCCL | The second Rs25,000: 417 shares, limit Rs60. Target Rs68, stop a close below ... | 0.55 |
-| 2026-12-18 | C0092 | PORTFOLIO | The 18 Nov book (LUCK 56 long-term, FCCL 417 swing, PAEL 700 high-reward) aga... | 0.50 |
 | 2026-12-31 | C0048 | SYS | PICKS v6: buy at or below Rs100, or on its first close above the 50-day avera... | 0.25 |
 <!-- /ledger:pending -->
 
