@@ -16,7 +16,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 
 ## 2. Decisions only Jazib can make
 
-1. **Buy on 18 Nov** (journal/2026-11-17-picks-v9.md): LUCK 68 at 442 as a long-term hold (C0085); FCCL 583 at 60 (C0086) and PAEL 280 at 35.80 (C0082) as swings with a target, a stop on the close and an 18 Dec time exit; MARI dropped after the deeper check (C0083). About Rs75,000 (C0087). Report fills (name, shares, price, fees) for `scripts/ledger.py trade`.
+1. **Buy on 18 Nov** (journal/2026-11-17.md addendum 5): LUCK 56 at 442 long-term (C0089), FCCL 417 at 60 swing to Rs68, out below Rs54 by 18 Dec (C0090), PAEL 700 at 35.80 high-reward with a trailing exit (C0091). About Rs75,000. Report fills (name, shares, price, fees) for `scripts/ledger.py trade`.
 2. **Run the exits.** Sell at a target (all, or half with the stop moved to cost); sell the morning after a close below a stop. Message on Brent above $105.
 3. **SAZEW only on company evidence** (C0088): four-wheeler sales above 1,600 a month, a hybrid concession in the auto policy, or Rs1,200 or below. The 1QFY27 report confirmed the Avoid (knowledge/companies/SAZEW.md).
 4. **Finqalab's commission rate.** Unverified (data/costs.md); he can read it on his first contract note.
@@ -31,10 +31,9 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 | 2026-12-18 | C0076 | MEBL | Not in the swing book |  |
 | 2026-12-18 | C0077 | ILP | Not in the swing book |  |
 | 2026-12-18 | C0078 | MLCF | Not in the swing book |  |
-| 2026-12-18 | C0082 | PAEL | Swing, sized down after the deeper check: Rs10,000, 280 shares, limit Rs35.80... | 0.45 |
 | 2026-12-18 | C0083 | MARI | Out of the swing book after the deeper check |  |
-| 2026-12-18 | C0086 | FCCL | Swing: Rs35,000, 583 shares, limit Rs60. Target Rs68, stop a close below Rs54... | 0.55 |
-| 2026-12-18 | C0087 | PORTFOLIO | The 18 Nov book (LUCK 68 long-term, FCCL 583, PAEL 280 at the limits) against... | 0.50 |
+| 2026-12-18 | C0090 | FCCL | The second Rs25,000: 417 shares, limit Rs60. Target Rs68, stop a close below ... | 0.55 |
+| 2026-12-18 | C0092 | PORTFOLIO | The 18 Nov book (LUCK 56 long-term, FCCL 417 swing, PAEL 700 high-reward) aga... | 0.50 |
 | 2026-12-31 | C0048 | SYS | PICKS v6: buy at or below Rs100, or on its first close above the 50-day avera... | 0.25 |
 <!-- /ledger:pending -->
 
