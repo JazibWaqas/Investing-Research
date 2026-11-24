@@ -7,7 +7,14 @@ The one page that says what is true today. Sections marked "built" are generated
 ## 1. The book (built)
 
 <!-- ledger:holdings -->
-No trades recorded. When Jazib reports a buy or sell, record it with `scripts/ledger.py trade DATE SYMBOL buy|sell QTY PRICE --fees F --call ID`, then rebuild.
+| ticker | shares | average cost | last close | value Rs | gain |
+|---|---|---|---|---|---|
+| FCCL | 250 | 59.82 | 59.82 (2026-11-17) | 14,955 | +0.0% |
+| FFC | 35 | 567.94 | 567.94 (2026-11-17) | 19,878 | +0.0% |
+| GHNI | 9 | 1,220.76 | 1,220.76 (2026-11-17) | 10,987 | +0.0% |
+| LUCK | 28 | 439.91 | 439.91 (2026-11-17) | 12,317 | +0.0% |
+| MLCF | 55 | 105.13 | 105.13 (2026-11-17) | 5,782 | +0.0% |
+| OGDC | 32 | 314.04 | 314.04 (2026-11-17) | 10,049 | +0.0% |
 <!-- /ledger:holdings -->
 
 How calls are made: no fixed rules or splits (PLAYBOOK.md). Situations decide; every call has odds and an upside-against-downside case in rupees; he accepts a loss of up to about 30% on a call with a large upside. The open calls are in PICKS.md; the latest letter to Jazib is journal/2026-11-17-picks-v9.md (a four-week swing book into the 14 Dec MPC, with targets, stops and an 18 Dec time exit).

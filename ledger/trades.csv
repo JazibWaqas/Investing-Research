@@ -1,1 +1,7 @@
 date,ticker,side,qty,price,fees,call_id,note
+2026-11-18,FCCL,buy,250,59.82,0,C0093,"As reported by Jazib 24 Nov; fill date not given (recorded as 18 Nov, the first session after the plan); fees not given (0 here)"
+2026-11-18,OGDC,buy,32,314.04,0,C0094,"As reported by Jazib 24 Nov; fill date not given (recorded as 18 Nov, the first session after the plan); fees not given (0 here)"
+2026-11-18,FFC,buy,35,567.94,0,C0101,"As reported by Jazib 24 Nov; fill date not given (recorded as 18 Nov, the first session after the plan); fees not given (0 here)"
+2026-11-18,GHNI,buy,9,1220.76,0,C0107,"As reported by Jazib 24 Nov; fill date not given (recorded as 18 Nov, the first session after the plan); fees not given (0 here)"
+2026-11-18,LUCK,buy,28,439.91,0,C0109,"As reported by Jazib 24 Nov; fill date not given (recorded as 18 Nov, the first session after the plan); fees not given (0 here)"
+2026-11-18,MLCF,buy,55,105.13,0,C0113,"As reported by Jazib 24 Nov; fill date not given (recorded as 18 Nov, the first session after the plan); fees not given (0 here)"
