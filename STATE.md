@@ -9,12 +9,14 @@ The one page that says what is true today. Sections marked "built" are generated
 <!-- ledger:holdings -->
 | ticker | shares | average cost | last close | value Rs | gain |
 |---|---|---|---|---|---|
-| FCCL | 250 | 59.82 | 59.82 (2026-11-17) | 14,955 | +0.0% |
-| FFC | 35 | 567.94 | 567.94 (2026-11-17) | 19,878 | +0.0% |
-| GHNI | 9 | 1,220.76 | 1,220.76 (2026-11-17) | 10,987 | +0.0% |
-| LUCK | 28 | 439.91 | 439.91 (2026-11-17) | 12,317 | +0.0% |
-| MLCF | 55 | 105.13 | 105.13 (2026-11-17) | 5,782 | +0.0% |
-| OGDC | 32 | 314.04 | 314.04 (2026-11-17) | 10,049 | +0.0% |
+| FCCL | 250 | 59.82 | 61.40 (2026-11-24) | 15,350 | +2.6% |
+| FFC | 35 | 567.94 | 572.50 (2026-11-24) | 20,038 | +0.8% |
+| GHNI | 9 | 1,220.76 | 1,188.00 (2026-11-24) | 10,692 | -2.7% |
+| LUCK | 28 | 439.91 | 435.50 (2026-11-24) | 12,194 | -1.0% |
+| MLCF | 55 | 105.13 | 108.86 (2026-11-24) | 5,987 | +3.5% |
+| OGDC | 32 | 314.04 | 312.00 (2026-11-24) | 9,984 | -0.6% |
+
+Book on 2026-11-24: value Rs100,276 (holdings Rs74,245, cash Rs26,031); the same money in the KMI All Share: Rs100,854. Daily history: ledger/book_daily.csv.
 <!-- /ledger:holdings -->
 
 How calls are made: no fixed rules or splits (PLAYBOOK.md). Situations decide; every call has odds and an upside-against-downside case in rupees; he accepts a loss of up to about 30% on a call with a large upside. The open calls are in PICKS.md; the latest letter to Jazib is journal/2026-11-17-picks-v9.md (a four-week swing book into the 14 Dec MPC, with targets, stops and an 18 Dec time exit).
