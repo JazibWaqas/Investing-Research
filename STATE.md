@@ -40,6 +40,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 | 2026-12-18 | C0076 | MEBL | Not in the swing book |  |
 | 2026-12-18 | C0083 | MARI | Out of the swing book after the deeper check |  |
 | 2026-12-31 | C0048 | SYS | PICKS v6: buy at or below Rs100, or on its first close above the 50-day avera... | 0.25 |
+| 2026-12-31 | C0116 | ENGROH | Buy Rs10,000 (about 33 shares) only if the 24 Nov board outcome is a value-ad... | 0.52 |
 <!-- /ledger:pending -->
 
 Also watch: November CPI (early Dec; SAZEW trigger); Brent above $105 (the swing setup failing); the 14 Dec MPC; the December KMI recomposition notice (late Nov). The record is in ledger/scorecard.md: 24 graded, 15 held, Brier 0.164.

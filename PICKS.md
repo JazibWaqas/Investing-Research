@@ -22,7 +22,8 @@ Built 2026-11-24. Each call's reasoning is in the journal entry it links; the la
 | C0109 | 2026-11-18 | LUCK | buy | High reward: Rs7,500 (about 17 shares near Rs440). Exit on a close 25% below the highest close since the fi... | Total return incl. net dividends positive 6 months from fill | 0.58 | 7500 | +3750 (best about +50%: cement re-rating plus a copper narrative) | -1875 (the 25% exit) | A binding DISCO cheque above about Rs35bn; NRL's resource estimate disappointing; a new... | journal/2026-11-18.md |
 | C0111 | 2026-11-19 | QTECH | pass | Avoid |  |  |  |  |  |  | journal/2026-11-18.md |
 | C0113 | 2026-11-19 | MLCF | buy | High reward: Rs7,500 (about 71 shares near Rs105). Exit on a close 25% below the highest close since the fi... | Total return incl. net dividends positive 6 months from fill | 0.55 | 7500 | +4650 (best about +62%) | -1875 (the 25% exit) | A hike; domestic despatches falling; finance cost not falling with rates | journal/2026-11-18.md |
-| C0114 | 2026-11-19 | NETSOL | pass | Not in the book; watch the buyback from 11 Dec 2026 and the next subscription revenue print |  |  |  |  |  |  | journal/2026-11-18.md |
+| C0115 | 2026-11-24 | NETSOL | buy | Short-term (weeks): Rs7,500 (about 64 shares near Rs116) before the buyback opens on 11 Dec. Sell at Rs128 ... | Exit above the fill (target, else the 15 Jan close, before any clos... | 0.52 | 7500 | +780 (Rs128) | -600 (Rs106.50) | Buyback not started by mid-December; subscription revenue falling again | journal/2026-11-24.md |
+| C0116 | 2026-11-24 | ENGROH | buy_if | Buy Rs10,000 (about 33 shares) only if the 24 Nov board outcome is a value-adding corporate action (restruc... | If bought: exit above the fill | 0.52 | 10000 | +1000 (+10%) | -600 (-6%) | An outcome that is neutral or dilutive (a rights issue, a large acquisition); the price... | journal/2026-11-24.md |
 
 ## Open forecasts, soonest first
 
