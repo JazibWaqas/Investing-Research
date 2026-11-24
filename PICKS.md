@@ -31,6 +31,7 @@ Built 2026-11-24. Each call's reasoning is in the journal entry it links; the la
 |---|---|---|---|---|---|
 | C0065 | 2026-12-01 | KSE100 | Index level on 1 Dec 2026 against the 23 Oct low | KSE100 closes on 1 Dec above 162,375 | 0.92 |
 | C0066 | 2026-12-14 | Policy rate | SBP MPC decision 14 Dec 2026 | Policy rate unchanged at 12% | 0.55 |
+| C0117 | 2026-12-22 | KSE100 | KSE100 close on 22 Dec 2026 | Above 185,000 (35%); between 172,000 and 185,000 (45%); below 172,000 (20%). Scored on the first ... | 0.35 |
 | C0029 | 2027-10-19 | FABL | Core buy vs paper MEBL | FABL total return beats MEBL total return over 12 months | 0.5 |
 | C0033 | 2027-10-19 | PORTFOLIO | Core 3 names vs KMI All Share TR | Equal-weight FABL+OGDC+FFC total return within +-5 pts of KMI All Share TR over 12 months | 0.5 |
 | C0035 | 2027-10-19 | SLEEVE | Breakout sleeve vs KMI All Share TR, first 12 months | Sleeve time-weighted return beats the KMI All Share total-return index over 12 months | 0.4 |

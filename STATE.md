@@ -39,6 +39,7 @@ Regime: policy rate 12% (next MPC 14 Dec; C0066 hold 0.55, cut 0.30, hike 0.15).
 | 2026-12-14 | C0066 | Policy rate | SBP MPC decision 14 Dec 2026 | 0.55 |
 | 2026-12-18 | C0076 | MEBL | Not in the swing book |  |
 | 2026-12-18 | C0083 | MARI | Out of the swing book after the deeper check |  |
+| 2026-12-22 | C0117 | KSE100 | KSE100 close on 22 Dec 2026 | 0.35 |
 | 2026-12-31 | C0048 | SYS | PICKS v6: buy at or below Rs100, or on its first close above the 50-day avera... | 0.25 |
 | 2026-12-31 | C0116 | ENGROH | Buy Rs10,000 (about 33 shares) only if the 24 Nov board outcome is a value-ad... | 0.52 |
 <!-- /ledger:pending -->
